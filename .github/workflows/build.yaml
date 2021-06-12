@@ -1,0 +1,33 @@
+name: build
+on: 
+  push:
+    branches: dlech
+
+jobs:
+  pywinrt:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        python-version: ['3.7', '3.8', '3.9']
+        architecture: ['x86', 'x64']
+        release-type: ['Release'] # no "Debug" - https://github.com/actions/setup-python/issues/86
+    name: Python ${{ matrix.python-version }} ${{ matrix.architecture }} ${{ matrix.release-type }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: ${{ matrix.architecture }}
+      - run: cd src/scripts/windows && ./vsdevcmd-build.cmd
+      - name: Generate and build
+        run: |
+          Import-Module "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
+          Enter-VsDevShell -VsInstallPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" -DevCmdArguments '-arch=${{ matrix.architecture }}'
+          cd src/package/pywinrt/projection
+          ./generate.ps1 -fullProjection
+          ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion ${{ matrix.python-version }}
+        shell: powershell
+      - uses: actions/upload-artifact@v2
+        with:
+          name: pywinrt_py${{ matrix.python-version }}_${{ matrix.architecture }}_${{ github.run_id }}
+          path: src/package/pywinrt/projection/pywinrt/
