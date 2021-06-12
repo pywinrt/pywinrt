@@ -310,6 +310,11 @@ namespace xlang
         return implements_interface(type, "Windows.Storage.Streams", "IBuffer");
     }
 
+    bool implements_imemorybufferreference(TypeDef const& type)
+    {
+        return implements_interface(type, "Windows.Foundation", "IMemoryBufferReference");
+    }
+
     bool implements_istringable(TypeDef const& type)
     {
         return implements_interface(type, "Windows.Foundation", "IStringable");

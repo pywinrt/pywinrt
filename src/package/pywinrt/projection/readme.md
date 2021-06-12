@@ -200,6 +200,11 @@ native Python classes to access the memory is significantly more efficient than 
 [IDataReader](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IDataReader)
 or [IDataWriter](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IDataWriter) classes.
 
+Memory buffers ([IMemoryBuffer](https://docs.microsoft.com/uwp/api/Windows.Foundation.IMemoryBuffer))
+may also be accessed using the CPython buffer protocol via an [IMemoryBufferReference](
+  https://docs.microsoft.com/uwp/api/Windows.Foundation.IMemoryBufferReference
+). Care should be taken since the underlying memory can be released.
+
 ### Collection Protocols
 
 WinRT and Python both have standard definitions of iterators, sequences and maps. Python/WinRT automatically

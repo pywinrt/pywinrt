@@ -245,7 +245,7 @@ struct winrt_type<%>
             type.TypeName(),
             bind<write_type_base>(type));
 
-        if (implements_ibuffer(type)) {
+        if (implements_ibuffer(type) || implements_imemorybufferreference(type)) {
             // workaround for https://bugs.python.org/issue40724
             w.write("#if PY_VERSION_HEX < 0x03090000\n");
             w.write("py::winrt_type<%>::python_type->tp_as_buffer = &_PyBufferProcs_@;\n",
@@ -979,12 +979,29 @@ return 0;
             w.write("}\n");
         }
 
-        if (implements_ibuffer(type))
+        if (implements_ibuffer(type) || implements_imemorybufferreference(type))
         {
             w.write("\nstatic int _get_buffer_@(%* self, Py_buffer* view, int flags) noexcept\n{\n", type.TypeName(), bind<write_pywrapper_type>(type));
             {
                 writer::indent_guard g{ w };
-                w.write("return PyBuffer_FillInfo(view, (PyObject*)self, (void*)self->obj.data(), (Py_ssize_t)self->obj.Length(), 0, flags);\n");
+                w.write("try\n");
+                w.write("{\n");
+                {
+                    writer::indent_guard gg{ w };
+                    w.write("return PyBuffer_FillInfo(view, (PyObject*)self, (void*)self->obj.data(), (Py_ssize_t)self->obj.@(), 0, flags);\n",
+                        implements_ibuffer(type) ? "Length" : "Capacity");
+                }
+                w.write("}\n");
+                w.write("catch (...)\n");
+                w.write("{\n");
+                {
+                    writer::indent_guard gg{ w };
+                    w.write("view->obj = nullptr;\n");
+                    // TODO: attach C++ exception info to Python exception
+                    w.write("PyErr_SetNone(PyExc_BufferError);\n");
+                    w.write("return -1;\n");
+                }
+                w.write("}\n");
             }
             w.write("}\n");
 
@@ -1245,7 +1262,7 @@ return 0;
             }
             w.write("{ Py_tp_getset, _getset_@ },\n", name);
 
-            if (implements_ibuffer(type))
+            if (implements_ibuffer(type) || implements_imemorybufferreference(type))
             {
                 // this slot was enabled in 3.9 - https://bugs.python.org/issue40724
                 w.write("#if PY_VERSION_HEX >= 0x03090000\n");
