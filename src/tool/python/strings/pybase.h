@@ -1273,6 +1273,13 @@ namespace py
                         cb.future(),
                         results.get()) };
                 }
+                else if (status == winrt::Windows::Foundation::AsyncStatus::Canceled)
+                {
+                    pyobj_handle cancel{ PyObject_GetAttrString(cb.future_type(), "cancel") };
+                    pyobj_handle handle{ PyObject_CallMethod(cb.loop(), "call_soon_threadsafe", "OO",
+                        cancel.get(),
+                        cb.future()) };
+                }
                 else
                 {
                     pyobj_handle set_exception{ PyObject_GetAttrString(cb.future_type(), "set_exception") };
