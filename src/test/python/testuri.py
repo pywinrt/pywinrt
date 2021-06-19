@@ -1,5 +1,6 @@
 import sys
 sys.path.append("./generated")
+sys.path.append("../../package/pywinrt/projection/pywinrt")
 
 import unittest
 
