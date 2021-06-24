@@ -96,11 +96,17 @@ PyObject* py::wrapped_instance(std::size_t key)
     //return it->second;
 }
 
-static PyObject* init_apartment(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept
 {
     try
     {
-        winrt::init_apartment();
+        auto type = PyLong_AsLong(type_obj);
+
+        if (type == -1 && PyErr_Occurred()) {
+            return nullptr;
+        }
+
+        winrt::init_apartment(static_cast<winrt::apartment_type>(type));
         Py_RETURN_NONE;
     }
     catch (...)
@@ -117,7 +123,7 @@ static PyObject* uninit_apartment(PyObject* /*unused*/, PyObject* /*unused*/) no
 }
 
 static PyMethodDef module_methods[]{
-    { "init_apartment", init_apartment, METH_NOARGS, "initialize the apartment" },
+    { "init_apartment", init_apartment, METH_O, "initialize the apartment" },
     { "uninit_apartment", uninit_apartment, METH_NOARGS, "uninitialize the apartment" },
     { nullptr }
 };
@@ -127,6 +133,14 @@ static int module_exec(PyObject* module) noexcept
     try
     {
         py::winrt_type<py::winrt_base>::python_type = py::register_python_type(module, _type_name_winrt_base, &winrt_base_type_spec, nullptr);
+
+        if (PyModule_AddIntConstant(module, "MTA", static_cast<long>(winrt::apartment_type::multi_threaded)) == -1) {
+            return -1;
+        }
+
+        if (PyModule_AddIntConstant(module, "STA", static_cast<long>(winrt::apartment_type::single_threaded)) == -1) {
+            return -1;
+        }
 
         return 0;
     }

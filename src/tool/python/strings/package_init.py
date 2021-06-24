@@ -1,5 +1,5 @@
 from . import _%
-_%.init_apartment()
+_%.init_apartment(_%.MTA)
 
 def _import_ns_module(ns):
     import importlib.machinery

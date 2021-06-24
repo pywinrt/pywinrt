@@ -3,7 +3,7 @@ sys.path.append("./generated")
 sys.path.append("../../package/pywinrt/projection/pywinrt")
 
 import _winrt
-_winrt.init_apartment()
+_winrt.init_apartment(_winrt.MTA)
 
 def import_ns(ns):
     import importlib.machinery
