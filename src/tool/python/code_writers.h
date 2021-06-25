@@ -468,6 +468,11 @@ self->obj%;
         }
     }
 
+    void write_get_param(writer& w, std::string const& paramName)
+    {
+        w.write("%.get()", paramName);
+    }
+
     void write_detach_param(writer& w, std::string const& paramName)
     {
         w.write("%.detach()", paramName);
@@ -475,7 +480,7 @@ self->obj%;
 
     void write_py_tuple_pack(writer& w, std::vector<std::string> const& params)
     {
-        w.write("PyTuple_Pack(%, %)", static_cast<int>(params.size()), bind_list<write_detach_param>(", ", params));
+        w.write("PyTuple_Pack(%, %)", static_cast<int>(params.size()), bind_list<write_get_param>(", ", params));
     }
 
     void write_method_body_contents(writer& w, TypeDef const& type, MethodDef const& method, bool put_property_method = false)
