@@ -233,9 +233,9 @@ namespace py
         {
             PyErr_SetString(PyExc_RuntimeError, winrt::to_string(e.message()).c_str());
         }
-        catch (std::bad_alloc const&)
+        catch (std::bad_alloc const& e)
         {
-            PyErr_SetNone(PyExc_MemoryError);
+            PyErr_SetString(PyExc_MemoryError, e.what());
         }
         catch (std::out_of_range const& e)
         {
