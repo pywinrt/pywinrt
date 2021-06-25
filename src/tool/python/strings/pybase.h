@@ -231,7 +231,7 @@ namespace py
         }
         catch (winrt::hresult_error const& e)
         {
-            PyErr_SetString(PyExc_RuntimeError, winrt::to_string(e.message()).c_str());
+            PyErr_SetFromWindowsErr(e.code());
         }
         catch (std::bad_alloc const& e)
         {
@@ -1186,6 +1186,24 @@ namespace py
         }
     }
 
+    template <typename Async>
+    PyObject* get_error(Async const& operation) noexcept
+    {
+        try
+        {
+            // Set error to get same behavior as non-async
+            PyErr_SetFromWindowsErr(operation.ErrorCode());
+            pyobj_handle type, value, trace;
+            PyErr_Fetch(type.put(), value.put(), trace.put());
+            return value.detach();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     struct completion_callback
     {
         completion_callback() noexcept = default;
@@ -1282,11 +1300,12 @@ namespace py
                 }
                 else
                 {
+                    pyobj_handle exc{ get_error(operation) };
                     pyobj_handle set_exception{ PyObject_GetAttrString(cb.future_type(), "set_exception") };
                     pyobj_handle handle{ PyObject_CallMethod(cb.loop(), "call_soon_threadsafe", "OOO",
                         set_exception.get(),
                         cb.future(),
-                        PyExc_RuntimeError) };
+                        exc.get()) };
                 }
             });
         }
