@@ -13,6 +13,7 @@
     <copyright>© Microsoft Corporation. All rights reserved.</copyright>
     <license type="file">LICENSE</license>
     <projectUrl>https://github.com/Microsoft/xlang/tree/master/src/package/pywinrt/tool</projectUrl>
+    <repository type="git" url="https://github.com/dlech/xlang.git" />
   </metadata>
   <files>
     <file src="..\LICENSE"/>

@@ -1,0 +1,15 @@
+name: publish_nuget
+on:
+  push:
+    tags: [pywinrt/nuget/v*]
+
+jobs:
+  build_and_publish:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          $version = $env:GITHUB_REF.Replace("refs/tags/pywinrt/nuget/v", "")
+          ./build_pywinrt_nuget.cmd "$version"
+          nuget source add -Username "dlech" -Password ${{ secrets.GITHUB_TOKEN }} -StorePasswordInClearText -Name github -Source "https://nuget.pkg.github.com/dlech/index.json"
+          nuget push "Microsoft.Windows.PyWinrt.$version.nupkg" -ApiKey "${{ secrets.GITHUB_TOKEN }}" -Source "github"
