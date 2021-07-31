@@ -1,4 +1,4 @@
-param ([switch]$clean, [switch]$fullProjection)
+param ([switch]$clean, [switch]$fullProjection, [switch]$useLocalPyWinRTNuget)
 
 $windows_sdk = '10.0.18362.0'
 $repoRootPath = (get-item $PSScriptRoot).parent.Parent.parent.Parent.FullName
@@ -10,15 +10,20 @@ if ($clean) {
     exit
 }
 
-$pywinrt_exe = Get-ChildItem $repoRootPath\_build\Windows\*\*\tool\python\pywinrt.exe | 
-Sort-Object -Descending | Select-Object -first 1
+if ($useLocalPyWinRTNuget) {
+    nuget install Microsoft.Windows.PyWinRT -Prerelease -DependencyVersion Ignore -ExcludeVersion -OutputDirectory "$repoRootPath/_build/tools" -Source "$repoRootPath"
+    $pywinrt_exe = "$repoRootPath/_build/tools/Microsoft.Windows.PyWinRT/bin/pywinrt.exe"
+} else {
+    $pywinrt_exe = Get-ChildItem $repoRootPath\_build\Windows\*\*\tool\python\pywinrt.exe | 
+    Sort-Object -Descending | Select-Object -first 1
+}
 
 if (-not $pywinrt_exe) {
     Write-Error "pywinrt not avaliable"
     exit
 }
 
-nuget install Microsoft.Windows.CppWinRT -ExcludeVersion -OutputDirectory "$repoRootPath/_build/tools"
+nuget install Microsoft.Windows.CppWinRT -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_build/tools"
 
 $cppwinrt_exe = "$repoRootPath/_build/tools/Microsoft.Windows.CppWinRT\bin\cppwinrt.exe"
 
