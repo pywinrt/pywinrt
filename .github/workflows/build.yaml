@@ -18,7 +18,7 @@ jobs:
     runs-on: windows-2019
     strategy:
       matrix:
-        python-version: ['3.7', '3.8', '3.9']
+        python-version: ['3.7', '3.8', '3.9', '3.10.0-rc.1']
         architecture: ['x86', 'x64']
         release-type: ['Release'] # no "Debug" - https://github.com/actions/setup-python/issues/86
     name: Python ${{ matrix.python-version }} ${{ matrix.architecture }} ${{ matrix.release-type }}
@@ -37,7 +37,8 @@ jobs:
           Enter-VsDevShell -VsInstallPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" -DevCmdArguments '-arch=${{ matrix.architecture }}'
           cd src/package/pywinrt/projection
           ./generate.ps1 -fullProjection -useLocalPyWinRTNuget
-          ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion ${{ matrix.python-version }}
+          $pythonVersion = python --version | select-string -Pattern "Python (\d\.\d+).*" | Select -Expand Matches | Select -Expand Groups | Where Name -eq 1 | Select -Expand Value
+          ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion $pythonVersion
         shell: powershell
       - uses: actions/upload-artifact@v2
         with:
