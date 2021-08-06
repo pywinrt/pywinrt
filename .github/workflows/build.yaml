@@ -37,8 +37,7 @@ jobs:
           Enter-VsDevShell -VsInstallPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" -DevCmdArguments '-arch=${{ matrix.architecture }}'
           cd src/package/pywinrt/projection
           ./generate.ps1 -fullProjection -useLocalPyWinRTNuget
-          $pythonVersion = python --version | select-string -Pattern "Python (\d\.\d+).*" | Select -Expand Matches | Select -Expand Groups | Where Name -eq 1 | Select -Expand Value
-          ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion $pythonVersion
+          ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion ${{ matrix.python-version }}
         shell: powershell
       - uses: actions/upload-artifact@v2
         with:
