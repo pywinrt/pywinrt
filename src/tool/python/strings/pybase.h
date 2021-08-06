@@ -1089,12 +1089,12 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            if (!PyList_Check(obj))
+            if (!PySequence_Check(obj))
             {
                 throw winrt::hresult_invalid_argument();
             }
 
-            Py_ssize_t list_size = PyList_Size(obj);
+            Py_ssize_t list_size = PySequence_Size(obj);
             if (list_size == -1)
             {
                 // TODO: propagate python error 
@@ -1105,15 +1105,14 @@ namespace py
 
             for (Py_ssize_t index = 0; index < list_size; index++)
             {
-                // PyList_GetItem returns a borrowed reference, so no RAII wrapper
-                PyObject* item = PyList_GetItem(obj, index);
-                if (item == nullptr)
+                pyobj_handle item { PySequence_GetItem(obj, index) };
+                if (!item)
                 {
                     // TODO: propagate python error 
                     throw winrt::hresult_invalid_argument();
                 }
 
-                items[static_cast<uint32_t>(index)] = converter<T>::convert_to(item);
+                items[static_cast<uint32_t>(index)] = converter<T>::convert_to(item.get());
             }
 
             return std::move(items);
