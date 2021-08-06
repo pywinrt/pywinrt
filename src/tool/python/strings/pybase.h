@@ -225,6 +225,13 @@ namespace py
 
     inline __declspec(noinline) void to_PyErr() noexcept
     {
+        if (PyErr_Occurred())
+        {
+            // A Python excpetion is already pending - don't overwrite it
+            return;
+        }
+
+        // otherwise convert C++ exception to Python exception
         try
         {
             throw;
@@ -379,6 +386,10 @@ namespace py
     {
         if (!obj)
         {
+            if (!PyErr_Occurred())
+            {
+                PyErr_SetString(PyExc_SystemError, "object is null");
+            }
             throw winrt::hresult_invalid_argument();
         }
     }
@@ -394,6 +405,7 @@ namespace py
 
         static T convert_to(PyObject* obj)
         {
+            PyErr_SetNone(PyExc_NotImplementedError);
             throw winrt::hresult_not_implemented();
         }
     };
@@ -870,6 +882,7 @@ namespace py
 
             if (Py_TYPE(obj) != get_python_type<T>())
             {
+                PyErr_SetString(PyExc_TypeError, "wrong type");
                 throw winrt::hresult_invalid_argument();
             }
 
@@ -911,7 +924,6 @@ namespace py
                 {
                     if (PyErr_Occurred())
                     {
-                        // TODO: propagate Python error
                         throw winrt::hresult_invalid_argument();
                     }
                     else
@@ -927,6 +939,10 @@ namespace py
             {
                 if (!_iterator)
                 {
+                    if (!PyErr_Occurred())
+                    {
+                        PyErr_SetString(PyExc_SystemError, "iterator is null");
+                    }
                     throw winrt::hresult_invalid_argument();
                 }
 
@@ -952,6 +968,7 @@ namespace py
             uint32_t GetMany(winrt::array_view<T> values)
             {
                 // TODO: implement GetMany
+                PyErr_SetNone(PyExc_NotImplementedError);
                 throw winrt::hresult_not_implemented();
             }
         };
@@ -1089,15 +1106,9 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            if (!PySequence_Check(obj))
-            {
-                throw winrt::hresult_invalid_argument();
-            }
-
             Py_ssize_t list_size = PySequence_Size(obj);
             if (list_size == -1)
             {
-                // TODO: propagate python error 
                 throw winrt::hresult_invalid_argument();
             }
 
@@ -1108,7 +1119,6 @@ namespace py
                 pyobj_handle item { PySequence_GetItem(obj, index) };
                 if (!item)
                 {
-                    // TODO: propagate python error 
                     throw winrt::hresult_invalid_argument();
                 }
 
