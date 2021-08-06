@@ -48,7 +48,10 @@ add_compile_options(/await /bigobj /GR- /permissive-)
 
 project(_winrt)
 
-find_package (Python3 ${PYTHON_VERSION} EXACT COMPONENTS Interpreter Development)
+# strip suffix to allow support for prerelease version
+string(REGEX MATCH "^[0-9]\\.[0-9]+(\\.[0-9]+)?" PYTHON_BASE_VERSION ${PYTHON_VERSION})
+
+find_package (Python3 ${PYTHON_BASE_VERSION} EXACT COMPONENTS Interpreter Development)
 
 Python3_add_library (_winrt MODULE ${sources})
 set_target_properties(_winrt PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG _winrt_d)
