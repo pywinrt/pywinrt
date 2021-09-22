@@ -13,5 +13,5 @@ def _import_ns_module(ns):
         module = importlib.util.module_from_spec(spec)
         loader.exec_module(module)
         return module
-    except:
+    except Exception:
         return None

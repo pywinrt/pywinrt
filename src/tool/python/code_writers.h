@@ -70,7 +70,7 @@ namespace pywinrt
 
     void write_python_import_namespace(writer& w, std::string_view const& ns)
     {
-        w.write("\ntry:\n    import %.%\nexcept:\n    pass\n", settings.module, bind<write_lower_case>(ns));
+        w.write("\ntry:\n    import %.%\nexcept Exception:\n    pass\n", settings.module, bind<write_lower_case>(ns));
     }
 
     void write_python_enum(writer& w, TypeDef const& type)
