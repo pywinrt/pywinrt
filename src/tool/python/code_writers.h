@@ -2166,12 +2166,34 @@ if (!return_value)
             [&](auto&& t) { w.write_python(t); });
     }
 
-    void write_python_param_typing(writer& w, method_signature::param_t param)
+    void write_method_in_param_typing(writer& w, method_signature::param_t const& param)
     {
-        w.write("%: %", bind<write_lower_snake_case>(param.first.Name()),
-            bind<write_python_type>(param.second->Type()));
-    }
+        switch (get_param_category(param))
+        {
+        // regular parameters are just `name: type`
+        case param_category::in:
+            w.write("%: %", bind<write_lower_snake_case>(param.first.Name()),
+                bind<write_python_type>(param.second->Type()));
+            break;
 
+        // array parameters accept any Python sequence-like object
+        case param_category::pass_array:
+            w.write("%: typing.Sequence[%]", bind<write_lower_snake_case>(param.first.Name()),
+                bind<write_python_type>(param.second->Type()));
+            break;
+
+        // fill array parameters just require the size of the array to be allocated
+        case param_category::fill_array:
+            w.write("%_size: int", bind<write_lower_snake_case>(param.first.Name()));
+            break;
+            
+        // this method only handles input parameters, receive arrays are output parameters
+        case param_category::out:
+        case param_category::receive_array:
+        default:
+            throw_invalid("invalid in param category");
+        }
+    }
 
     void write_python_typings(writer& w, TypeDef const& type)
     {
@@ -2190,10 +2212,9 @@ if (!return_value)
             {
                 method_signature signature{ method };
 
-                // TODO: handle input vs. output parameters
                 // TODO: add return type
                 w.write("def %(%):\n", bind<write_lower_snake_case>(method.Name()),
-                    bind_list<write_python_param_typing>(", ", signature.params()));
+                    bind_list<write_method_in_param_typing>(", ", filter_in_params(signature.params())));
                 {
                     writer::indent_guard g2{ w };
 

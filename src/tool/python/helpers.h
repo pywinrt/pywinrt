@@ -561,6 +561,20 @@ namespace xlang
         return std::count_if(params.begin(), params.end(), [](auto const& param) { return is_out_param(param); });
     }
 
+    auto filter_in_params(std::vector<method_signature::param_t> const& params)
+    {
+        std::vector<method_signature::param_t> out;
+        std::copy_if(begin(params), end(params), std::back_inserter(out), is_in_param);
+        return out;
+    }
+
+    auto filter_out_params(std::vector<method_signature::param_t> const& params)
+    {
+        std::vector<method_signature::param_t> out;
+        std::copy_if(begin(params), end(params), std::back_inserter(out), is_out_param);
+        return out;
+    }
+
     enum class argument_convention
     {
         no_args,
