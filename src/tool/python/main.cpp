@@ -141,6 +141,7 @@ Where <spec> is one or more of:
                 write_pch_h(src_dir);
                 write_pch_cpp(src_dir);
                 write_pybase_h(src_dir);
+                write_package_py_typed(module_dir);
                 write_package_dunder_init_py(module_dir);
                 write_module_cpp(src_dir);
             });
@@ -171,6 +172,7 @@ Where <spec> is one or more of:
                     auto namespaces = write_namespace_cpp(src_dir, ns, members);
                     write_namespace_h(src_dir, ns, namespaces, members);
                     write_namespace_dunder_init_py(ns_dir, settings.module, namespaces, ns, members);
+                    write_namespace_dunder_init_pyi(ns_dir, settings.module, namespaces, ns, members);
                 });
             }
 

@@ -165,6 +165,13 @@ namespace pywinrt
         w.flush_to_file(folder / "setup.py");
     }
 
+    inline void write_package_py_typed(stdfs::path const& folder)
+    {
+        writer w;
+
+        w.flush_to_file(folder / "py.typed");
+    }
+
     inline void write_package_dunder_init_py(stdfs::path const& folder)
     {
         writer w;
@@ -181,12 +188,13 @@ namespace pywinrt
         
         write_license(w, "#");
 
-        w.write("import typing, %\n", module_name);
-
         if (settings.filter.includes(members.enums))
         {
             w.write("import enum\n");
+            w.write("\n");
         }
+
+        w.write("import %\n", module_name);
 
         w.write("\n_ns_module = %._import_ns_module(\"%\")\n", module_name, ns);
 
@@ -198,5 +206,31 @@ namespace pywinrt
         settings.filter.bind_each<write_python_import_type>(members.interfaces)(w);
 
         w.flush_to_file(folder / "__init__.py");
+    }
+
+    inline void write_namespace_dunder_init_pyi(stdfs::path const& folder, std::string_view const& module_name, std::set<std::string> const& needed_namespaces, std::string_view const& ns, cache::namespace_members const& members)
+    {
+        writer w;
+        w.current_namespace = ns;
+
+        write_license(w, "#");
+
+        if (settings.filter.includes(members.enums))
+        {
+            w.write("import enum\n");
+        }
+
+        w.write("import typing\n");
+        w.write("import uuid\n"); // TODO: uuid is not always used
+        w.write("\n");
+
+        w.write_each<write_python_import_namespace>(needed_namespaces);
+        settings.filter.bind_each<write_python_enum>(members.enums)(w);
+        w.write("\n");
+        settings.filter.bind_each<write_python_typings>(members.structs)(w);
+        settings.filter.bind_each<write_python_typings>(members.classes)(w);
+        settings.filter.bind_each<write_python_typings>(members.interfaces)(w);
+
+        w.flush_to_file(folder / "__init__.pyi");
     }
 }

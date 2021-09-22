@@ -266,6 +266,21 @@ namespace pywinrt
             }
         }
 
+        void write_python(TypeRef const& type)
+        {
+            auto ns = type.TypeNamespace();
+            auto name = type.TypeName();
+
+            if (name == "Guid" && ns == "System")
+            {
+                write("uuid.UUID");
+            }
+            else
+            {
+                write_python(find_required(type));
+            }
+        }
+
         void register_type_namespace(std::string_view ns)
         {
             if (ns != current_namespace && ns != "System")
@@ -359,6 +374,28 @@ namespace pywinrt
             }
         }
 
+        void write_python(TypeDef const& type)
+        {
+            auto ns = type.TypeNamespace();
+            auto name = type.TypeName();
+
+            if (ns == current_namespace)
+            {
+                write("@", name);
+            }
+            else
+            {
+                write("winrt.");
+
+                for (auto c : ns)
+                {
+                    write(static_cast<char>(::tolower(c)));
+                }
+
+                write(".@", name);
+            }
+        }
+
         void write(coded_index<TypeDefOrRef> const& type)
         {
             switch (type.type())
@@ -377,9 +414,30 @@ namespace pywinrt
             }
         }
 
+        void write_python(coded_index<TypeDefOrRef> const& type)
+        {
+            switch (type.type())
+            {
+            case TypeDefOrRef::TypeDef:
+                write_python(type.TypeDef());
+                break;
+            case TypeDefOrRef::TypeRef:
+                write_python(type.TypeRef());
+                break;
+            case TypeDefOrRef::TypeSpec:
+                write_python(type.TypeSpec().Signature().GenericTypeInst());
+                break;
+            }
+        }
+
         void write(GenericTypeInstSig const& type)
         {
             write("%<%>", type.GenericType(), bind_list(", ", type.GenericArgs()));
+        }
+
+        void write_python(GenericTypeInstSig const& type)
+        {
+            write("%[%]", type.GenericType(), bind_list(", ", type.GenericArgs()));
         }
 
         static std::string_view get_cpp_type(ElementType type)
@@ -422,6 +480,39 @@ namespace pywinrt
         void write(ElementType type)
         {
             write(writer::get_cpp_type(type));
+        }
+
+        static std::string_view get_python_type(ElementType type)
+        {
+            switch (type)
+            {
+            case ElementType::Boolean:
+                return "bool";
+            case ElementType::Char:
+            case ElementType::I1:
+            case ElementType::U1:
+            case ElementType::I2:
+            case ElementType::U2:
+            case ElementType::I4:
+            case ElementType::U4:
+            case ElementType::I8:
+            case ElementType::U8:
+                return "int";
+            case ElementType::R4:
+            case ElementType::R8:
+                return "float";
+            case ElementType::String:
+                return "str";
+            case ElementType::Object:
+                return "winrt.windows.foundation.IInspectable";
+            default:
+                throw_invalid("element type not supported");
+            }
+        }
+
+        void write_python(ElementType type)
+        {
+            write("%", writer::get_python_type(type));
         }
 
         void write(GenericTypeIndex var)

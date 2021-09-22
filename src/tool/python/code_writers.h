@@ -2156,4 +2156,52 @@ if (!return_value)
         w.write("};\n");
     }
 #pragma endregion
+
+    void write_python_type(writer& w, TypeSig const& signature)
+    {
+        call(signature.Type(),
+            [&](ElementType t) { w.write_python(t); },
+            [&](GenericTypeIndex) { w.write("TODO"); },
+            [&](GenericMethodTypeIndex) { throw_invalid("Generic methods not supported"); },
+            [&](auto&& t) { w.write_python(t); });
+    }
+
+    void write_python_param_typing(writer& w, method_signature::param_t param)
+    {
+        w.write("%: %", bind<write_lower_snake_case>(param.first.Name()),
+            bind<write_python_type>(param.second->Type()));
+    }
+
+
+    void write_python_typings(writer& w, TypeDef const& type)
+    {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
+        w.write("class @:\n", type.TypeName());
+        {
+            writer::indent_guard g{ w };
+
+            w.write("...\n");
+            
+            enumerate_methods(w, type, [&](MethodDef const& method)
+            {
+                method_signature signature{ method };
+
+                // TODO: handle input vs. output parameters
+                // TODO: add return type
+                w.write("def %(%):\n", bind<write_lower_snake_case>(method.Name()),
+                    bind_list<write_python_param_typing>(", ", signature.params()));
+                {
+                    writer::indent_guard g2{ w };
+
+                    w.write("...\n");
+                }
+            });
+        }
+
+        w.write("\n");
+    }
 }
