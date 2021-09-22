@@ -208,7 +208,7 @@ namespace pywinrt
         w.flush_to_file(folder / "__init__.py");
     }
 
-    inline void write_namespace_dunder_init_pyi(stdfs::path const& folder, std::string_view const& module_name, std::set<std::string> const& needed_namespaces, std::string_view const& ns, cache::namespace_members const& members)
+    inline void write_namespace_dunder_init_pyi(stdfs::path const& folder, std::set<std::string> const& needed_namespaces, std::string_view const& ns, cache::namespace_members const& members)
     {
         writer w;
         w.current_namespace = ns;
