@@ -142,6 +142,7 @@ Where <spec> is one or more of:
                 write_pch_cpp(src_dir);
                 write_pybase_h(src_dir);
                 write_package_py_typed(module_dir);
+                write_winrt_pyi(module_dir);
                 write_package_dunder_init_py(module_dir);
                 write_module_cpp(src_dir);
             });

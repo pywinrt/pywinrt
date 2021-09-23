@@ -1,0 +1,3 @@
+
+class winrt_base:
+    ...

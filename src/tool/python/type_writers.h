@@ -523,7 +523,7 @@ namespace pywinrt
             case ElementType::String:
                 return "str";
             case ElementType::Object:
-                return "winrt.windows.foundation.IInspectable";
+                return "_winrt.winrt_base";
             default:
                 throw_invalid("element type not supported");
             }
@@ -567,12 +567,21 @@ namespace pywinrt
 
         void write_cpp_type_as_python_type(std::string const& type)
         {
-            // special case
+            // special cases
+
             if (type == "winrt::hstring")
             {
                 write("str");
                 return;
             }
+
+            if (type == "winrt::Windows::Foundation::IInspectable")
+            {
+                write("_winrt.winrt_base");
+                return;
+            }
+
+            // generic case
 
             auto angle_brace_index = type.find('<');
 

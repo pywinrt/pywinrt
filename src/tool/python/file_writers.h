@@ -172,6 +172,15 @@ namespace pywinrt
         w.flush_to_file(folder / "py.typed");
     }
 
+    inline void write_winrt_pyi(stdfs::path const& folder)
+    {
+        writer w;
+
+        write_license(w, "#");
+        w.write(strings::_winrt);
+        w.flush_to_file(folder / "_winrt.pyi");
+    }
+
     inline void write_package_dunder_init_py(stdfs::path const& folder)
     {
         writer w;
@@ -223,6 +232,8 @@ namespace pywinrt
         w.write("import typing\n");
         w.write("import uuid\n"); // TODO: uuid is not always used
         w.write("\n");
+
+        w.write("import @._winrt as _winrt", settings.module);
 
         w.write_each<write_python_import_namespace>(needed_namespaces);
         settings.filter.bind_each<write_python_enum>(members.enums)(w);
