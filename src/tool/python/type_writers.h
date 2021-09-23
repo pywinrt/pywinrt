@@ -437,7 +437,26 @@ namespace pywinrt
 
         void write_python(GenericTypeInstSig const& type)
         {
-            write("%[%]", type.GenericType(), bind_list(", ", type.GenericArgs()));
+            // TODO: figure out how to use bind<> here
+            // write("%[%]", bind<write_python>(type.GenericType()),
+            //      bind_list<write_python>(", ", type.GenericArgs()));
+
+            write_python(type.GenericType());
+            write("[");
+
+            auto count = type.GenericArgCount();
+
+            for (auto&& arg : type.GenericArgs())
+            {
+                write_python(arg);
+
+                if (--count)
+                {
+                    write(", ");
+                }
+            }
+
+            write("]");
         }
 
         static std::string_view get_cpp_type(ElementType type)
@@ -520,7 +539,146 @@ namespace pywinrt
             write(generic_param_stack.back()[var.index]);
         }
 
+        static void double_colon_to_dot(writer& w, std::string_view const& str)
+        {
+            auto prev_was_colon = false;
+
+            for (auto c : str)
+            {
+                if (c == ':')
+                {
+                    // two colons become one dot
+                    if (prev_was_colon)
+                    {
+                        prev_was_colon = false;
+                    }
+                    else
+                    {
+                        prev_was_colon = true;
+                        w.write('.');
+                    }
+                }
+                else
+                {
+                    w.write(c);
+                }
+            }
+        }
+
+        void write_cpp_type_as_python_type(std::string const& type)
+        {
+            // special case
+            if (type == "winrt::hstring")
+            {
+                write("str");
+                return;
+            }
+
+            auto angle_brace_index = type.find('<');
+
+            if (angle_brace_index == std::string::npos)
+            {
+                // if no angle brace, this is a normal (non-generic) type
+                auto last_colons_index = type.rfind("::");
+
+                if (last_colons_index == std::string::npos)
+                {
+                    // not a qualified type, just write the name
+                    write(type);
+                }
+                else
+                {
+                    // for qualified names, we have to convert :: to . and to lower case
+                    auto ns = write_temp("%", bind<double_colon_to_dot>(type.substr(0, last_colons_index + 2)));
+                    auto type_name = type.substr(last_colons_index + 2);
+
+                    // ns includes "winrt." prefix and "." suffix that current_namespace doesn't have
+                    if (ns.substr(6, ns.length() - 7) != current_namespace)
+                    {
+                        for (auto c : ns)
+                        {
+                            write(static_cast<char>(::tolower(c)));
+                        }
+                    }
+
+                    write(type_name);
+                }
+            }
+            else
+            {
+                // there is an angle brace, so this is a generic type
+
+                // write the generic type
+                write_cpp_type_as_python_type(type.substr(0, angle_brace_index));
+
+                // then the type parameters
+                write('[');
+
+                auto start_index = angle_brace_index + 1;
+                auto angle_brace_level = 1;
+
+                for (;;)
+                {
+                    auto count = 0;
+
+                    // there could be nested generics, so we have to do special
+                    // parsing to be sure we split strings in the right place
+                    for (auto c : type.substr(start_index))
+                    {
+                        if (c == '<')
+                        {
+                            angle_brace_level++;
+                        }
+                        else if (c == '>')
+                        {
+                            angle_brace_level--;
+                            if (angle_brace_level == 0)
+                            {
+                                // this was the last type parameter
+                                break;
+                            }
+                        }
+                        else if (c == ',')
+                        {
+                            if (angle_brace_level == 1)
+                            {
+                                // this is the end of a type parameter
+                                break;
+                            }
+                        }
+
+                        count++;
+                    }
+
+                    write_cpp_type_as_python_type(type.substr(start_index, count));
+
+                    if (angle_brace_level == 0)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        write(", ");
+                        // + 2 accounts for the ", " in the cpp type string
+                        start_index += count + 2;
+                    }
+                }
+
+                write(']');
+            }
+        }
+
+        void write_python(GenericTypeIndex var)
+        {
+            write_cpp_type_as_python_type(generic_param_stack.back()[var.index]);
+        }
+
         void write(GenericMethodTypeIndex)
+        {
+            throw_invalid("Generic methods not supported");
+        }
+
+        void write_python(GenericMethodTypeIndex)
         {
             throw_invalid("Generic methods not supported");
         }
@@ -531,6 +689,15 @@ namespace pywinrt
                 [&](auto&& type)
             {
                 write(type);
+            });
+        }
+
+        void write_python(TypeSig const& signature)
+        {
+            call(signature.Type(),
+                [&](auto&& type)
+            {
+                write_python(type);
             });
         }
 

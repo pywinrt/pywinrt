@@ -2161,7 +2161,7 @@ if (!return_value)
     {
         call(signature.Type(),
             [&](ElementType t) { w.write_python(t); },
-            [&](GenericTypeIndex) { w.write("TODO"); },
+            [&](GenericTypeIndex t) { w.write_python(t); },
             [&](GenericMethodTypeIndex) { throw_invalid("Generic methods not supported"); },
             [&](auto&& t) { w.write_python(t); });
     }
@@ -2195,6 +2195,63 @@ if (!return_value)
         }
     }
 
+    void write_method_out_param_typing(writer& w, method_signature::param_t const& param)
+    {
+        switch (get_param_category(param))
+        {
+        // regular parameters are just `type`
+        case param_category::out:
+            w.write("%", bind<write_python_type>(param.second->Type()));
+            break;
+
+        // array parameters return a Python list
+        case param_category::receive_array:
+        case param_category::fill_array:
+            w.write("typing.List[%]", bind<write_python_type>(param.second->Type()));
+            break;
+
+        // this method only handles ouput parameters
+        case param_category::in:
+        case param_category::pass_array:
+        default:
+            throw_invalid("invalid in param category");
+        }
+    }
+
+    void write_return_typing(writer& w, method_signature& signature)
+    {
+        if (count_out_param(signature.params()) == 0)
+        {
+            if (signature.return_signature())
+            {
+                w.write("%", bind<write_python_type>(signature.return_signature().Type()));
+            }
+            else
+            {
+                w.write("None");
+            }
+        }
+        else
+        {
+            if (signature.return_signature())
+            {
+                w.write("typing.Tuple[%, %]", bind<write_python_type>(signature.return_signature().Type()),
+                    bind_list<write_method_out_param_typing>(", ", filter_out_params(signature.params())));
+            }
+            else
+            {
+                if (count_out_param(signature.params()) == 1)
+                {
+                    w.write("%", bind<write_method_out_param_typing>(filter_out_params(signature.params())[0]));
+                }
+                else
+                {
+                    w.write("typing.Tuple[%]", bind_list<write_method_out_param_typing>(", ", filter_out_params(signature.params())));
+                }
+            }
+        }
+    }
+
     void write_python_typings(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
@@ -2202,7 +2259,25 @@ if (!return_value)
             return;
         }
 
-        w.write("class @:\n", type.TypeName());
+        auto guard{ w.push_generic_params(type.GenericParam()) };
+
+        if (is_ptype(type))
+        {
+            for (auto& type_param : type.GenericParam())
+            {
+                w.write("% = typing.TypeVar('%')\n\n", bind<write_template_arg_name>(type_param),
+                    bind<write_template_arg_name>(type_param));
+            }
+        }
+
+        w.write("class @", type.TypeName());
+        
+        if (is_ptype(type))
+        {
+            w.write("(typing.Generic[%])", bind_list<write_template_arg_name>(", ", type.GenericParam()));
+        }
+
+        w.write(":\n");
         {
             writer::indent_guard g{ w };
 
@@ -2212,9 +2287,9 @@ if (!return_value)
             {
                 method_signature signature{ method };
 
-                // TODO: add return type
-                w.write("def %(%):\n", bind<write_lower_snake_case>(method.Name()),
-                    bind_list<write_method_in_param_typing>(", ", filter_in_params(signature.params())));
+                w.write("def %(%) -> %:\n", bind<write_lower_snake_case>(method.Name()),
+                    bind_list<write_method_in_param_typing>(", ", filter_in_params(signature.params())),
+                    bind<write_return_typing>(signature));
                 {
                     writer::indent_guard g2{ w };
 
