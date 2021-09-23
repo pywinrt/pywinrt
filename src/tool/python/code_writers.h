@@ -14,7 +14,7 @@ namespace pywinrt
                 static const std::set<std::string_view> casing_exceptions = { "UInt", "IPAddress" };
 
                 auto sub = name.substr(i - 1);
-                if (sub[0] != '_' && std::none_of(casing_exceptions.begin(), casing_exceptions.end(), 
+                if (sub[0] != '_' && std::none_of(casing_exceptions.begin(), casing_exceptions.end(),
                     [&sub](std::string_view v) { return sub.substr(0, v.length()) == v; }))
                 {
                     w.write('_');
@@ -556,8 +556,8 @@ self->obj%;
         if (signature.return_signature() || is_constructor(method))
         {
             auto format = R"(py::pyobj_handle out_return_value{ py::convert(return_value) };
-if (!out_return_value) 
-{ 
+if (!out_return_value)
+{
     return nullptr;
 }
 )";
@@ -576,7 +576,7 @@ if (!out_return_value)
             auto out_param = w.write_temp("out%", sequence);
 
             auto format = R"(py::pyobj_handle %{ py::convert(param%) };
-if (!%) 
+if (!%)
 {
     return nullptr;
 }
@@ -788,9 +788,9 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
     {
         if (implements_iiterable(type))
         {
-            write_try_catch(w, [&](writer& w) 
-            { 
-                w.write("return py::convert(%First());\n", bind<write_method_invoke_context>(type, MethodDef{})); 
+            write_try_catch(w, [&](writer& w)
+            {
+                w.write("return py::convert(%First());\n", bind<write_method_invoke_context>(type, MethodDef{}));
             });
         }
         else if (implements_iiterator(type))
@@ -819,7 +819,7 @@ else
 {
     return nullptr;
 })";
-                w.write(format, 
+                w.write(format,
                     bind<write_method_invoke_context>(type, MethodDef{}),
                     bind<write_method_invoke_context>(type, MethodDef{}),
                     bind<write_method_invoke_context>(type, MethodDef{}));
@@ -828,16 +828,16 @@ else
 
     void write_seq_length_body(writer& w, TypeDef const& type)
     {
-        write_try_catch(w, [&](writer& w) 
-        { 
+        write_try_catch(w, [&](writer& w)
+        {
             w.write("return static_cast<Py_ssize_t>(%Size());\n", bind<write_method_invoke_context>(type, MethodDef{}));
         }, "-1");
     }
 
     void write_seq_item_body(writer& w, TypeDef const& type)
     {
-        write_try_catch(w, [&](writer& w) 
-        { 
+        write_try_catch(w, [&](writer& w)
+        {
             w.write("return py::convert(%GetAt(static_cast<uint32_t>(i)));\n", bind<write_method_invoke_context>(type, MethodDef{}));
         });
     }
@@ -864,8 +864,8 @@ return 0;
 
     void write_map_length_body(writer& w, TypeDef const& type)
     {
-        write_try_catch(w, [&](writer& w) 
-        { 
+        write_try_catch(w, [&](writer& w)
+        {
             w.write("return static_cast<Py_ssize_t>(%Size());\n", bind<write_method_invoke_context>(type, MethodDef{}));
         }, "-1");
     }
@@ -882,8 +882,8 @@ return 0;
             }
         });
 
-        write_try_catch(w, [&](writer& w) 
-        { 
+        write_try_catch(w, [&](writer& w)
+        {
             w.write("return py::convert(%Lookup(py::convert_to<%>(key)));\n", bind<write_method_invoke_context>(type, MethodDef{}), key_type);
         });
     }
@@ -912,10 +912,10 @@ return 0;
             w.write(format, key_type, bind<write_method_invoke_context>(type, MethodDef{}), bind<write_method_invoke_context>(type, MethodDef{}), value_type);
         }, "-1");
     }
-    
+
     void write_method_functions(writer& w, TypeDef const& type)
     {
-        // create a map of methods to determine overloads + ensure all overloads match instance/static 
+        // create a map of methods to determine overloads + ensure all overloads match instance/static
         std::map<std::string_view, bool> method_map{};
         enumerate_methods(w, type, [&](auto const& method)
         {
@@ -1207,7 +1207,7 @@ return 0;
         {
             auto setter = setter_name.empty() ? "nullptr" : w.write_temp("(setter)@_%", type.TypeName(), setter_name);
 
-            // TODO: remove const_cast once pywinrt is updated to target Python 3.7. 
+            // TODO: remove const_cast once pywinrt is updated to target Python 3.7.
             //       pywinrt currently targeting 3.6 because that's the version that ships with VS 2017 v15.8
             //       https://github.com/python/cpython/commit/007d7ff73f4e6e65cfafd512f9c23f7b7119b803
             w.write("{ const_cast<char*>(\"%\"), (getter)@_%, %, nullptr, nullptr },\n",
@@ -1366,7 +1366,7 @@ static PyType_Spec _type_spec_@ =
         if (is_exclusive_to(type)) return;
 
         auto guard{ w.push_generic_params(type.GenericParam()) };
-        
+
         w.write("\n// ----- @ % --------------------\n", type.TypeName(), bind<write_category>(type));
         write_winrt_type_name_constant(w, type);
         write_new_function(w, type);
@@ -1662,7 +1662,7 @@ struct pinterface_python_type<%<%>>
             // The declaration for event_token is baked into pybase.h to address ordering issues.
             return;
         }
-        
+
         w.write("template<>\nstruct converter<%>\n{\n", type);
         {
             writer::indent_guard g{ w };
@@ -1999,17 +1999,17 @@ if (!PyArg_ParseTupleAndKeywords(args, kwds, "%", const_cast<char**>(kwlist)%))
             writer::indent_guard g{ w };
 
             auto format = R"(throw_if_pyobj_null(obj);
-    
+
 if (Py_TYPE(obj) == py::get_python_type<%>())
 {
     return reinterpret_cast<py::winrt_struct_wrapper<%>*>(obj)->obj;
 }
-    
+
 if (!PyDict_Check(obj))
 {
     throw winrt::hresult_invalid_argument();
 }
-    
+
 )";
             w.write(format, type, type);
 
@@ -2104,7 +2104,7 @@ struct delegate_python_type<%%>
 
                 {
                     auto format = R"(py::delegate_callable _delegate{ callable };
-    
+
 return [delegate = std::move(_delegate)](%)
 {
 )";
@@ -2136,7 +2136,7 @@ return [delegate = std::move(_delegate)](%)
 
                     w.write(R"(py::pyobj_handle return_value{ PyObject_CallObject(delegate.callable(), args.get()) };
 
-if (!return_value) 
+if (!return_value)
 {
     PyErr_WriteUnraisable(delegate.callable());
     throw winrt::hresult_invalid_argument();
@@ -2186,7 +2186,7 @@ if (!return_value)
         case param_category::fill_array:
             w.write("%_size: int", bind<write_lower_snake_case>(param.first.Name()));
             break;
-            
+
         // this method only handles input parameters, receive arrays are output parameters
         case param_category::out:
         case param_category::receive_array:
@@ -2282,7 +2282,7 @@ if (!return_value)
             writer::indent_guard g{ w };
 
             w.write("...\n");
-            
+
             enumerate_methods(w, type, [&](MethodDef const& method)
             {
                 method_signature signature{ method };
