@@ -2252,6 +2252,26 @@ if (!return_value)
         }
     }
 
+    void write_python_base_classes(writer& w, TypeDef const& type)
+    {
+        w.write("_winrt.winrt_base");
+
+        if (!empty(type.InterfaceImpl()))
+        {
+            for (auto&& ii : type.InterfaceImpl())
+            {
+                w.write(", ");
+                w.write_python(ii.Interface());
+            }
+        }
+
+        if (is_ptype(type))
+        {
+            w.write(", ");
+            w.write("typing.Generic[%]", bind_list<write_template_arg_name>(", ", type.GenericParam()));
+        }
+    }
+
     void write_python_typings(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
@@ -2270,14 +2290,7 @@ if (!return_value)
             }
         }
 
-        w.write("class @", type.TypeName());
-        
-        if (is_ptype(type))
-        {
-            w.write("(typing.Generic[%])", bind_list<write_template_arg_name>(", ", type.GenericParam()));
-        }
-
-        w.write(":\n");
+        w.write("class @(%):\n", type.TypeName(), bind<write_python_base_classes>(type));
         {
             writer::indent_guard g{ w };
 
