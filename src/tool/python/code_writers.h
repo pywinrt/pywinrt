@@ -2330,17 +2330,29 @@ if (!return_value)
         auto ns = type.TypeNamespace();
         auto name = type.TypeName();
 
-        if (ns == "Windows.Foundation.Collections" && name == "IIterable`1")
+        if (ns == "Windows.Foundation" && (name == "IAsyncAction" || name == "IAsyncActionWithProgress`1"))
         {
-            w.write("typing.Iterable[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
+            w.write("typing.Awaitable[None], ");
+        }
+        else if (ns == "Windows.Foundation" && name == "IAsyncOperation`1")
+        {
+            w.write("typing.Awaitable[%], ", bind<write_template_arg_name>(type.GenericParam().first));
+        }
+        else if (ns == "Windows.Foundation" && name == "IAsyncOperationWithProgress`2")
+        {
+            w.write("typing.Awaitable[%], ", bind<write_template_arg_name>(type.GenericParam().second));
+        }
+        else if (ns == "Windows.Foundation.Collections" && name == "IIterable`1")
+        {
+            w.write("typing.Iterable[%], ", bind<write_template_arg_name>(type.GenericParam().first));
         }
         else if (ns == "Windows.Foundation.Collections" && name == "IIterator`1")
         {
-            w.write("typing.Iterator[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
+            w.write("typing.Iterator[%], ", bind<write_template_arg_name>(type.GenericParam().first));
         }
         else if (ns == "Windows.Foundation.Collections" && (name == "IVector`1" || name == "IVectorView`1"))
         {
-            w.write("typing.Sequence[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
+            w.write("typing.Sequence[%], ", bind<write_template_arg_name>(type.GenericParam().first));
         }
         else if (ns == "Windows.Foundation.Collections" && (name == "IMap`2" || name == "IMapView`2"))
         {
