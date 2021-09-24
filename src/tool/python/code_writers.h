@@ -2191,7 +2191,7 @@ if (!return_value)
             throw_invalid("invalid in param category");
         }
     }
-    
+
     /**
      * Writes the Python type of the parameter.
      */
@@ -2221,7 +2221,7 @@ if (!return_value)
             throw_invalid("invalid in param category");
         }
     }
-    
+
     /**
      * Writes the Python `name: type` of the parameter.
      */
@@ -2255,7 +2255,7 @@ if (!return_value)
 
     /**
      * Writes the return Python typing.
-     * 
+     *
      * If a method has out parameters, the return type is a tuple that includes
      * those types in addition to the return type.
      */
@@ -2434,7 +2434,7 @@ if (!return_value)
 
     /**
      * Writes a Python type alias for a .pyi file.
-     * 
+     *
      * This is used for creating a type alias for delagate types.
      */
     void write_python_type_alias(writer& w, TypeDef const& type)
@@ -2447,19 +2447,10 @@ if (!return_value)
         auto guard{ w.push_generic_params(type.GenericParam()) };
         write_python_type_vars(w, type);
 
-        // Delegates have two methods, a constructor and an invoke method.
-        for (auto&& method : type.MethodList())
-        {
-            if (is_constructor(method))
-            {
-                continue;
-            }
+        method_signature signature{ get_delegate_invoke(type) };
 
-            method_signature signature{ method };
-
-            w.write("@ = typing.Callable[[%], %]\n\n", type.TypeName(),
-                bind_list<write_method_in_param_typing>(", ", filter_in_params(signature.params())),
-                bind<write_return_typing>(signature));
-        }
+        w.write("@ = typing.Callable[[%], %]\n\n", type.TypeName(),
+            bind_list<write_method_in_param_typing>(", ", filter_in_params(signature.params())),
+            bind<write_return_typing>(signature));
     }
 }
