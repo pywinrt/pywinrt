@@ -2363,6 +2363,11 @@ if (!return_value)
             w.write("typing.Generic[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
         }
 
+        if (implements_iclosable(type))
+        {
+            w.write("typing.ContextManager[@], ", type.TypeName());
+        }
+
         w.write("_winrt.winrt_base");
     }
 
