@@ -2254,22 +2254,63 @@ if (!return_value)
 
     void write_python_base_classes(writer& w, TypeDef const& type)
     {
-        w.write("_winrt.winrt_base");
+        // specifying typing.Generic[T] is redundant when there is already
+        // another generic subclass
+        auto skip_generic = false;
 
         if (!empty(type.InterfaceImpl()))
         {
+            // FIXME: filter and sort interfaces
+            // This includes all interfaces, even "inheritied" ones. So, if e.g.
+            // IMap comes before IObservableMap, it causes a "Cannot create
+            // consistent method ordering" error in Pylance. So, we could either
+            // exclude interfaces that are inherited by other interfaces or
+            // make sure the order is correct.
             for (auto&& ii : type.InterfaceImpl())
             {
-                w.write(", ");
+                auto interface_type = get_typedef(ii.Interface());
+
+                if (is_exclusive_to(interface_type))
+                {
+                    // filter private interfaces, e.g. IBluetoothAdapter4
+                    continue;
+                }
+
+                if (is_ptype(interface_type))
+                {
+                    skip_generic = true;
+                }
+
                 w.write_python(ii.Interface());
+                w.write(", ");
             }
         }
 
-        if (is_ptype(type))
+        auto ns = type.TypeNamespace();
+        auto name = type.TypeName();
+
+        if (ns == "Windows.Foundation.Collections" && name == "IIterable`1")
         {
-            w.write(", ");
-            w.write("typing.Generic[%]", bind_list<write_template_arg_name>(", ", type.GenericParam()));
+            w.write("typing.Iterable[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
         }
+        else if (ns == "Windows.Foundation.Collections" && name == "IIterator`1")
+        {
+            w.write("typing.Iterator[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
+        }
+        else if (ns == "Windows.Foundation.Collections" && (name == "IVector`1" || name == "IVectorView`1"))
+        {
+            w.write("typing.Sequence[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
+        }
+        else if (ns == "Windows.Foundation.Collections" && (name == "IMap`2" || name == "IMapView`2"))
+        {
+            w.write("typing.Mapping[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
+        }
+        else if (!skip_generic && is_ptype(type))
+        {
+            w.write("typing.Generic[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
+        }
+
+        w.write("_winrt.winrt_base");
     }
 
     void write_python_typings(writer& w, TypeDef const& type)
