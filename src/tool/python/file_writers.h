@@ -241,6 +241,7 @@ namespace pywinrt
         settings.filter.bind_each<write_python_typings>(members.structs)(w);
         settings.filter.bind_each<write_python_typings>(members.classes)(w);
         settings.filter.bind_each<write_python_typings>(members.interfaces)(w);
+        settings.filter.bind_each<write_python_type_alias>(members.delegates)(w);
 
         w.flush_to_file(folder / "__init__.pyi");
     }

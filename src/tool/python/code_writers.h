@@ -2166,25 +2166,22 @@ if (!return_value)
             [&](auto&& t) { w.write_python(t); });
     }
 
-    void write_method_in_param_typing(writer& w, method_signature::param_t const& param)
+    /**
+     * Writes the name of the parameter in lower snake case.
+     */
+    void write_method_in_param_name(writer& w, method_signature::param_t const& param)
     {
         switch (get_param_category(param))
         {
-        // regular parameters are just `name: type`
+        // regular parameters are just `name`
         case param_category::in:
-            w.write("%: %", bind<write_lower_snake_case>(param.first.Name()),
-                bind<write_python_type>(param.second->Type()));
-            break;
-
-        // array parameters accept any Python sequence-like object
         case param_category::pass_array:
-            w.write("%: typing.Sequence[%]", bind<write_lower_snake_case>(param.first.Name()),
-                bind<write_python_type>(param.second->Type()));
+            w.write("%", bind<write_lower_snake_case>(param.first.Name()));
             break;
 
         // fill array parameters just require the size of the array to be allocated
         case param_category::fill_array:
-            w.write("%_size: int", bind<write_lower_snake_case>(param.first.Name()));
+            w.write("%_size", bind<write_lower_snake_case>(param.first.Name()));
             break;
 
         // this method only handles input parameters, receive arrays are output parameters
@@ -2193,6 +2190,44 @@ if (!return_value)
         default:
             throw_invalid("invalid in param category");
         }
+    }
+    
+    /**
+     * Writes the Python type of the parameter.
+     */
+    void write_method_in_param_typing(writer& w, method_signature::param_t const& param)
+    {
+        switch (get_param_category(param))
+        {
+        // regular parameters are just `name: type`
+        case param_category::in:
+            w.write("%", bind<write_python_type>(param.second->Type()));
+            break;
+
+        // array parameters accept any Python sequence-like object
+        case param_category::pass_array:
+            w.write("typing.Sequence[%]", bind<write_python_type>(param.second->Type()));
+            break;
+
+        // fill array parameters just require the size of the array to be allocated
+        case param_category::fill_array:
+            w.write("int");
+            break;
+
+        // this method only handles input parameters, receive arrays are output parameters
+        case param_category::out:
+        case param_category::receive_array:
+        default:
+            throw_invalid("invalid in param category");
+        }
+    }
+    
+    /**
+     * Writes the Python `name: type` of the parameter.
+     */
+    void write_method_in_param_name_and_typing(writer& w, method_signature::param_t const& param)
+    {
+        w.write("%: %", bind<write_method_in_param_name>(param), bind<write_method_in_param_typing>(param));
     }
 
     void write_method_out_param_typing(writer& w, method_signature::param_t const& param)
@@ -2218,6 +2253,12 @@ if (!return_value)
         }
     }
 
+    /**
+     * Writes the return Python typing.
+     * 
+     * If a method has out parameters, the return type is a tuple that includes
+     * those types in addition to the return type.
+     */
     void write_return_typing(writer& w, method_signature& signature)
     {
         if (count_out_param(signature.params()) == 0)
@@ -2313,15 +2354,11 @@ if (!return_value)
         w.write("_winrt.winrt_base");
     }
 
-    void write_python_typings(writer& w, TypeDef const& type)
+    /**
+     * Writes python TypeVar for generic type parameters
+     */
+    void write_python_type_vars(writer& w, TypeDef const& type)
     {
-        if (is_exclusive_to(type))
-        {
-            return;
-        }
-
-        auto guard{ w.push_generic_params(type.GenericParam()) };
-
         if (is_ptype(type))
         {
             for (auto& type_param : type.GenericParam())
@@ -2330,6 +2367,20 @@ if (!return_value)
                     bind<write_template_arg_name>(type_param));
             }
         }
+    }
+
+    /**
+     * Writes a Python class definition with type hints for a .pyi file.
+     */
+    void write_python_typings(writer& w, TypeDef const& type)
+    {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
+        auto guard{ w.push_generic_params(type.GenericParam()) };
+        write_python_type_vars(w, type);
 
         w.write("class @(%):\n", type.TypeName(), bind<write_python_base_classes>(type));
         {
@@ -2337,21 +2388,61 @@ if (!return_value)
 
             w.write("...\n");
 
-            enumerate_methods(w, type, [&](MethodDef const& method)
+            auto method_writer = [&](MethodDef const& method)
             {
                 method_signature signature{ method };
 
                 w.write("def %(%) -> %:\n", bind<write_lower_snake_case>(method.Name()),
-                    bind_list<write_method_in_param_typing>(", ", filter_in_params(signature.params())),
+                    bind_list<write_method_in_param_name_and_typing>(", ", filter_in_params(signature.params())),
                     bind<write_return_typing>(signature));
                 {
                     writer::indent_guard g2{ w };
 
                     w.write("...\n");
                 }
+            };
+
+            enumerate_methods(w, type, method_writer);
+
+            enumerate_events(w, type, [&](auto const& event)
+            {
+                auto&&[add_method, remove_method] = get_event_methods(event);
+                method_writer(add_method);
+                method_writer(remove_method);
             });
         }
 
         w.write("\n");
+    }
+
+    /**
+     * Writes a Python type alias for a .pyi file.
+     * 
+     * This is used for creating a type alias for delagate types.
+     */
+    void write_python_type_alias(writer& w, TypeDef const& type)
+    {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
+        auto guard{ w.push_generic_params(type.GenericParam()) };
+        write_python_type_vars(w, type);
+
+        // Delegates have two methods, a constructor and an invoke method.
+        for (auto&& method : type.MethodList())
+        {
+            if (is_constructor(method))
+            {
+                continue;
+            }
+
+            method_signature signature{ method };
+
+            w.write("@ = typing.Callable[[%], %]\n\n", type.TypeName(),
+                bind_list<write_method_in_param_typing>(", ", filter_in_params(signature.params())),
+                bind<write_return_typing>(signature));
+        }
     }
 }
