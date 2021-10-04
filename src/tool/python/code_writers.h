@@ -2405,6 +2405,14 @@ if (!return_value)
 
             w.write("...\n");
 
+            auto property_writer = [&](Property const&property)
+            {
+                w.write("%: %\n", bind<write_lower_snake_case>(property.Name()),
+                    bind<write_python_type>(property.Type().Type()));
+            };
+
+            enumerate_properties(w, type, property_writer);
+
             auto method_writer = [&](MethodDef const& method)
             {
                 method_signature signature{ method };
