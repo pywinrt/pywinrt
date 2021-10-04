@@ -57,7 +57,7 @@ namespace pywinrt
             w.write("'%/src/py.%.cpp', ", settings.module, ns);
         }
 
-        w.write("'%/src/_%.cpp'", settings.module, settings.module);
+        w.write("'%/src/_winrt.cpp'", settings.module);
     }
 
     void write_python_import_type(writer& w, TypeDef const& type)

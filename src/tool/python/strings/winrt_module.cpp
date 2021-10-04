@@ -55,7 +55,7 @@ static PyType_Slot winrt_base_type_slots[] =
 
 static PyType_Spec winrt_base_type_spec =
 {
-    "_%._winrt_base",
+    "_winrt._winrt_base",
     sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
     0,
     Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -156,11 +156,11 @@ static PyModuleDef_Slot module_slots[] = {
     {0, nullptr}
 };
 
-PyDoc_STRVAR(module_doc, "_%");
+PyDoc_STRVAR(module_doc, "_winrt");
 
 static PyModuleDef module_def = {
     PyModuleDef_HEAD_INIT,
-    "_%",
+    "_winrt",
     module_doc,
     0,
     module_methods,
@@ -171,7 +171,7 @@ static PyModuleDef module_def = {
 };
 
 PyMODINIT_FUNC
-PyInit__%(void) noexcept
+PyInit__winrt(void) noexcept
 {
     return PyModuleDef_Init(&module_def);
 }

@@ -139,14 +139,14 @@ namespace pywinrt
         return std::move(w.needed_namespaces);
     }
 
-    inline void write_module_cpp(stdfs::path const& folder)
+    inline void write_winrt_module_cpp(stdfs::path const& folder)
     {
         writer w;
 
         write_license(w);
-        w.write(strings::module_methods, settings.module, settings.module, settings.module, settings.module);
+        w.write(strings::winrt_module);
 
-        auto filename = w.write_temp("_%.cpp", settings.module);
+        auto filename = w.write_temp("_winrt.cpp");
         w.flush_to_file(folder / filename);
     }
 
@@ -186,7 +186,7 @@ namespace pywinrt
         writer w;
 
         write_license(w, "#");
-        w.write(strings::package_init, settings.module, settings.module, settings.module, settings.module, settings.module);
+        w.write(strings::package_init, settings.module);
         w.flush_to_file(folder / "__init__.py");
     }
 

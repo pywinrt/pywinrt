@@ -1,5 +1,5 @@
-from . import _%
-_%.init_apartment(_%.MTA)
+from . import _winrt
+_winrt.init_apartment(_winrt.MTA)
 
 def _import_ns_module(ns):
     import importlib.machinery
@@ -8,7 +8,7 @@ def _import_ns_module(ns):
     try:
         module_name = "_%_" + ns.replace('.', '_')
 
-        loader = importlib.machinery.ExtensionFileLoader(module_name, _%.__file__)
+        loader = importlib.machinery.ExtensionFileLoader(module_name, _winrt.__file__)
         spec = importlib.util.spec_from_loader(module_name, loader)
         module = importlib.util.module_from_spec(spec)
         loader.exec_module(module)
