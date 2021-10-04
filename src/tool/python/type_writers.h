@@ -385,7 +385,7 @@ namespace pywinrt
             }
             else
             {
-                write("winrt.");
+                write("%.", settings.module);
 
                 for (auto c : ns)
                 {
