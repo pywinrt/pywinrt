@@ -2017,16 +2017,17 @@ if (!PyDict_Check(obj))
 
             for (auto&& field : type.FieldList())
             {
-                w.write("\npy::pyobj_handle py_%{ PyDict_GetItemString(obj, \"%\") };\n", field.Name(), bind<write_lower_snake_case>(field.Name()));
+                // PyDict_GetItemString returns borrowed reference!
+                w.write("\nPyObject* py_% = PyDict_GetItemString(obj, \"%\");\n", field.Name(), bind<write_lower_snake_case>(field.Name()));
                 w.write("if (!py_%) { throw winrt::hresult_invalid_argument(); }\n", field.Name());
 
                 if (has_custom_conversion(type))
                 {
-                    w.write("custom_set(return_value, converter<%>::convert_to(py_%.get()));\n", field.Signature().Type(), field.Name());
+                    w.write("custom_set(return_value, converter<%>::convert_to(py_%));\n", field.Signature().Type(), field.Name());
                 }
                 else
                 {
-                    w.write("return_value.% = converter<%>::convert_to(py_%.get());\n", bind<write_struct_field_name>(field), field.Signature().Type(), field.Name());
+                    w.write("return_value.% = converter<%>::convert_to(py_%);\n", bind<write_struct_field_name>(field), field.Signature().Type(), field.Name());
                 }
             }
 
