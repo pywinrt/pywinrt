@@ -1,5 +1,4 @@
 from . import _winrt
-_winrt.init_apartment(_winrt.MTA)
 
 def _import_ns_module(ns):
     import importlib.machinery
