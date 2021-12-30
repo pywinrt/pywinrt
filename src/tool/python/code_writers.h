@@ -1807,7 +1807,7 @@ struct pinterface_python_type<%<%>>
             [](auto) { throw_invalid("invalid struct field type"); });
     }
 
-    void write_struct_field_initalizer(writer& w, Field const& field)
+    void write_struct_field_initializer(writer& w, Field const& field)
     {
         call(get_struct_field_semantics(field, false),
             [&](fundamental_type) { w.write("_%", field.Name()); },
@@ -1897,14 +1897,14 @@ if (!PyArg_ParseTupleAndKeywords(args, kwds, "%", const_cast<char**>(kwlist)%))
             if (has_custom_conversion(type))
             {
                 auto format = "% return_value{ };\ncustom_set(return_value, %);\nreturn py::convert(return_value);\n";
-                write_try_catch(w, [&](writer& w) { w.write(format, type, bind<write_struct_field_initalizer>(type.FieldList().first)); });
+                write_try_catch(w, [&](writer& w) { w.write(format, type, bind<write_struct_field_initializer>(type.FieldList().first)); });
             }
             else
             {
                 auto ref_captures = w.write_temp("%", bind_each<write_struct_field_ref_capture>(type.FieldList()));
                 auto format = "% return_value{ % };\nreturn py::convert(return_value);\n";
                 write_try_catch(w,
-                    [&](writer& w) { w.write(format, type, bind_list<write_struct_field_initalizer>(", ", type.FieldList())); },
+                    [&](writer& w) { w.write(format, type, bind_list<write_struct_field_initializer>(", ", type.FieldList())); },
                     "nullptr");
             }
         }
