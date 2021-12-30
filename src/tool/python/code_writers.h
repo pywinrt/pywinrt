@@ -1725,7 +1725,7 @@ struct pinterface_python_type<%<%>>
             [&]([[maybe_unused]] TypeDef const& type)
         {
             XLANG_ASSERT(get_category(type) == category::struct_type);
-            w.write("py::pyobj_handle");
+            w.write("PyObject*");
         },
             [](auto) { throw_invalid("invalid struct field type"); });
     }
@@ -1802,7 +1802,7 @@ struct pinterface_python_type<%<%>>
             [&]([[maybe_unused]] type_definition const& type)
         {
             XLANG_ASSERT(get_category(type) == category::struct_type);
-            w.write(", _%.put()", field.Name());
+            w.write(", &_%", field.Name());
         },
             [](auto) { throw_invalid("invalid struct field type"); });
     }
@@ -1821,7 +1821,7 @@ struct pinterface_python_type<%<%>>
                 w.write("static_cast<%>(_%)", type, field.Name());
                 break;
             case category::struct_type:
-                w.write("py::converter<%>::convert_to(_%.get())", type, field.Name());
+                w.write("py::converter<%>::convert_to(_%)", type, field.Name());
                 break;
             }
         },
