@@ -1264,7 +1264,7 @@ namespace py
             return nullptr;
         }
 
-        pyobj_handle loop{ PyObject_CallMethod(asyncio.get(), "get_event_loop", nullptr) };
+        pyobj_handle loop{ PyObject_CallMethod(asyncio.get(), "get_running_loop", nullptr) };
         if (!loop)
         {
             return nullptr;

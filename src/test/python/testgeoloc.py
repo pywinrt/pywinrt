@@ -8,7 +8,7 @@ import asyncio
 # async_test inspired by https://stackoverflow.com/a/23036785
 def async_test(test):
     def wrapper(*args, **kwargs):
-        original_loop = asyncio.get_event_loop()
+        original_loop = asyncio.get_running_loop()
         test_loop = asyncio.new_event_loop()
         asyncio.set_event_loop(test_loop)
         try:
