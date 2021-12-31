@@ -993,8 +993,8 @@ namespace py
         return {};
     }
 
-    // TODO: specalization for Python Sequence Protocol -> IVector[View]
-    // TODO: specalization for Python Mapping Protocol -> IMap[View]
+    // TODO: specialization for Python Sequence Protocol -> IVector[View]
+    // TODO: specialization for Python Mapping Protocol -> IMap[View]
 
     template <typename TItem>
     struct converter<winrt::Windows::Foundation::Collections::IIterable<TItem>>
