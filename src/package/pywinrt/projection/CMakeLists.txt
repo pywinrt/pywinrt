@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
 file(GLOB sources "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src/*.cpp")
-foreach(file ${sources})
-    message(${file})
-endforeach()
 
 file(GLOB headers RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
     "cppwinrt/*.h"
