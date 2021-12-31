@@ -5,6 +5,12 @@ foreach(file ${sources})
     message(${file})
 endforeach()
 
+file(GLOB headers RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
+    "cppwinrt/*.h"
+    "cppwinrt/impl/*.h"
+    "pywinrt/winrt/src/*.h"
+)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -20,32 +26,7 @@ find_package (Python3 ${PYTHON_BASE_VERSION} EXACT COMPONENTS Interpreter Develo
 
 Python3_add_library (_winrt MODULE ${sources})
 set_target_properties(_winrt PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG _winrt_d)
-target_precompile_headers(_winrt PRIVATE
-    <algorithm>
-    <array>
-    <atomic>
-    <charconv>
-    <chrono>
-    <cstddef>
-    <iterator>
-    <map>
-    <memory>
-    <optional>
-    <stdexcept>
-    <string_view>
-    <string>
-    <thread>
-    <tuple>
-    <type_traits>
-    <unordered_map>
-    <utility>
-    <vector>
-    <winrt/Windows.Foundation.h>
-    <Python.h>
-    <structmember.h>
-    [["pybase.h"]]
-    [["winrt/base.h"]]
-)
+target_precompile_headers(_winrt PRIVATE ${headers})
 target_include_directories(_winrt PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/cppwinrt" "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src")
 target_link_libraries(_winrt PRIVATE onecore)
 
