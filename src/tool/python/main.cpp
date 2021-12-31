@@ -138,8 +138,6 @@ Where <spec> is one or more of:
 
             group.add([&]
             {
-                write_pch_h(src_dir);
-                write_pch_cpp(src_dir);
                 write_pybase_h(src_dir);
                 write_package_py_typed(module_dir);
                 write_winrt_pyi(module_dir);

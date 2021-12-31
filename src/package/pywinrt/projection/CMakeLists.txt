@@ -1,39 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
-
-function(ADD_OBJECT_DEPENDS file dependency)
-    get_source_file_property(cur_obj_depends ${file} OBJECT_DEPENDS)
-    if (${cur_obj_depends} STREQUAL "NOTFOUND")
-        set(new_obj_depends "${pch_output_file_name}")
-    else()
-        set(new_obj_depends "${cur_obj_depends};${dependency}")
-    endif()
-    set_source_files_properties(${file}  PROPERTIES OBJECT_DEPENDS ${new_obj_depends})
-endfunction(ADD_OBJECT_DEPENDS)
-
-function(TARGET_CONFIG_MSVC_PCH target pch_cpp pch_header)
-
-    get_target_property(target_name ${target} NAME)
-    set(pch_output_file_name "${target_name}.pch")
-    set(pch_output_file "\"${CMAKE_CURRENT_BINARY_DIR}/${pch_output_file_name}\"")
-
-    get_target_property(sources ${target} SOURCES)
-    foreach(file ${sources})
-        get_filename_component(filename ${file} NAME)
-        if (${filename} STREQUAL ${pch_cpp})
-            set_source_files_properties(${file}
-                PROPERTIES
-                COMPILE_FLAGS " /Yc${pch_header} /Fp${pch_output_file}"
-                OBJECT_OUTPUTS ${pch_output_file_name})
-        else()
-            set_source_files_properties(${file} PROPERTIES COMPILE_FLAGS " /Yu${pch_header} /Fp${pch_output_file}")
-            ADD_OBJECT_DEPENDS(${file} ${pch_output_file_name})
-        endif()
-    endforeach()
-
-    set_target_properties(${target} PROPERTIES PCH_OUTPUT_FILE ${pch_output_file})
-    set_property(GLOBAL APPEND PROPERTY PCH_OUTPUT_FILES ${pch_output_file})
-
-endfunction(TARGET_CONFIG_MSVC_PCH)
+cmake_minimum_required(VERSION 3.16)
 
 file(GLOB sources "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src/*.cpp")
 foreach(file ${sources})
@@ -55,11 +20,34 @@ find_package (Python3 ${PYTHON_BASE_VERSION} EXACT COMPONENTS Interpreter Develo
 
 Python3_add_library (_winrt MODULE ${sources})
 set_target_properties(_winrt PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG _winrt_d)
-
+target_precompile_headers(_winrt PRIVATE
+    <algorithm>
+    <array>
+    <atomic>
+    <charconv>
+    <chrono>
+    <cstddef>
+    <iterator>
+    <map>
+    <memory>
+    <optional>
+    <stdexcept>
+    <string_view>
+    <string>
+    <thread>
+    <tuple>
+    <type_traits>
+    <unordered_map>
+    <utility>
+    <vector>
+    <winrt/Windows.Foundation.h>
+    <Python.h>
+    <structmember.h>
+    [["pybase.h"]]
+    [["winrt/base.h"]]
+)
 target_include_directories(_winrt PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/cppwinrt" "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src")
 target_link_libraries(_winrt PRIVATE onecore)
-
-TARGET_CONFIG_MSVC_PCH(_winrt pch.cpp pch.h)
 
 string(REPLACE "/MDd" "/MTd" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
 foreach(build_type RELEASE MINSIZEREL RELWITHDEBINFO)
