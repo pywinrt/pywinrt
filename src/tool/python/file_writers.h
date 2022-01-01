@@ -139,16 +139,6 @@ namespace pywinrt
         w.write("\"./%/src/py.%.cpp\"", settings.module, ns);
     }
 
-    
-    inline void write_setup_py(stdfs::path const& folder, std::vector<std::string> const& /*namespaces*/)
-    {
-        writer w;
-
-        write_license(w, "#");
-        w.write(strings::setup, settings.module, settings.module, settings.module);
-        w.flush_to_file(folder / "setup.py");
-    }
-
     inline void write_package_py_typed(stdfs::path const& folder)
     {
         writer w;

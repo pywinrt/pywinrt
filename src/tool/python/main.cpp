@@ -177,8 +177,6 @@ Where <spec> is one or more of:
 
             group.get();
 
-            write_setup_py(settings.output_folder, generated_namespaces);
-
             if (settings.verbose)
             {
                 w.write("time: %ms\n", get_elapsed_time(start));
