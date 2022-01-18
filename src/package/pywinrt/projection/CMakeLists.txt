@@ -34,10 +34,7 @@ if($ENV{CI})
     set_property(TARGET _winrt PROPERTY JOB_POOL_COMPILE compile_job)
 endif()
 
-string(REPLACE "/MDd" "/MTd" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
-foreach(build_type RELEASE MINSIZEREL RELWITHDEBINFO)
-    string(REPLACE "/MD" "/MT" CMAKE_CXX_FLAGS_${build_type} "${CMAKE_CXX_FLAGS_${build_type}}")
-endforeach()
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 string(REGEX REPLACE "/GR" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 # TODO: re-enable /GL and /LTCG when we get a bigger build machine
