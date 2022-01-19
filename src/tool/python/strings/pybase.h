@@ -714,14 +714,7 @@ namespace py
                 return nullptr;
             }
 
-            auto result = PyDict_SetItemString(kwargs.get(),
-#if PY_LITTLE_ENDIAN
-                "bytes_le",
-#else
-                "bytes",
-#endif
-                valueAsBytes.get());
-
+            auto result = PyDict_SetItemString(kwargs.get(), "bytes_le", valueAsBytes.get());
             if (result == -1)
             {
                 return nullptr;
@@ -734,12 +727,7 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            pyobj_handle bytes { PyObject_GetAttrString(obj,
-#if PY_LITTLE_ENDIAN
-                "bytes_le") };
-#else
-                "bytes") };
-#endif
+            pyobj_handle bytes{ PyObject_GetAttrString(obj, "bytes_le") };
             if (!bytes)
             {
                 throw winrt::hresult_invalid_argument();
