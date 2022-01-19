@@ -849,11 +849,46 @@ namespace pywinrt
     {
         enumerate_required_types(w, type, [&](TypeDef const& required_type)
         {
+            // map of overloads by number of parameters
+            std::map<std::string_view, std::map<int, std::vector<MethodDef>>> overloads;
+
             for (auto&& method : required_type.MethodList())
             {
-                if (is_constructor(method) || method.SpecialName()) continue;
+                if (is_constructor(method) || method.SpecialName())
+                {
+                    continue;
+                }
 
-                func(method);
+                method_signature signature{ method };
+                auto arg_count = count_in_param(signature.params());
+                overloads[method.Name()][arg_count].push_back(method);
+            }
+
+            for (auto o : overloads)
+            {
+                for (auto oo : o.second)
+                {
+                    // if there are multiple overloads with the same number of
+                    // arguments, we need to use the default overload
+                    // https://devblogs.microsoft.com/oldnewthing/20210528-00/?p=105259
+                    auto default_overload = std::find_if(oo.second.begin(), oo.second.end(), [](auto m)
+                    {
+                        for (auto a : m.CustomAttribute())
+                        {
+                            if (a.TypeNamespaceAndName().second == "DefaultOverloadAttribute")
+                            {
+                                return true;
+                            }
+                        }
+
+                        return false;
+                    });
+
+                    // if there was no default, just use the first (and hopefully only) overload
+                    auto i = default_overload == oo.second.end() ? 0 : std::distance(oo.second.begin(), default_overload);
+
+                    func(oo.second.at(i));
+                }
             }
         });
     }
