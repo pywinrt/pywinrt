@@ -406,7 +406,7 @@ self->obj%;
             w.write("% % { % };\n", param.second->Type(), bind<write_param_name>(param), bind<write_out_param_init>(param));
             break;
         case param_category::pass_array:
-            w.write("auto % = py::convert_to<winrt::com_array<%>>(%);\n",
+            w.write("auto % = py::convert_to<winrt::array_view<%>>(%);\n",
                 bind<write_param_name>(param),
                 param.second->Type(),
                 bind<write_convert_to_params>(method, sequence));

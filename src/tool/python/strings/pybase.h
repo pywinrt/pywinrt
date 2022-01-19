@@ -1071,6 +1071,79 @@ namespace py
         }
     };
 
+    /**
+     * A wrapper around the Python buffer protocol that implements winrt::array_view.
+     */
+    template <typename T>
+    struct pybuf_view : winrt::array_view<T>
+    {
+        using typename winrt::array_view<T>::value_type;
+        using typename winrt::array_view<T>::pointer;
+
+        pybuf_view(pybuf_view const&) = delete;
+        pybuf_view& operator=(pybuf_view const&) = delete;
+
+        pybuf_view() = delete;
+
+        pybuf_view(PyObject* obj)
+        {
+            // this is assuming array_view is always treated as read-only
+            if (PyObject_GetBuffer(obj, &view, PyBUF_SIMPLE) == -1)
+            {
+                throw winrt::hresult_invalid_argument();
+            }
+
+            // we don't allow data with the wrong item size
+            if (view.itemsize != sizeof(value_type))
+            {
+                pyobj_handle msg{PyUnicode_FromFormat(
+                    "itemsize is incorrect, expecting %zu but was %zi",
+                    sizeof(value_type),
+                    view.itemsize)};
+                PyErr_SetObject(PyExc_TypeError, msg.get());
+                PyBuffer_Release(&view);
+
+                throw winrt::hresult_invalid_argument();
+            }
+
+            this->m_data = reinterpret_cast<pointer>(view.buf);
+            this->m_size = view.len / view.itemsize;
+        }
+
+        ~pybuf_view()
+        {
+            PyBuffer_Release(&view);
+        }
+
+        private:
+            Py_buffer view;
+    };
+
+    template <typename T>
+    struct converter<winrt::array_view<T>>
+    {
+        static PyObject* convert(winrt::array_view<T> const& instance) noexcept
+        {
+            PyErr_SetNone(PyExc_NotImplementedError);
+            return nullptr;
+        }
+
+        static winrt::array_view<T> convert_to(PyObject* obj)
+        {
+            throw_if_pyobj_null(obj);
+
+            // For fundamental C++ types, use buffer protocol, i.e. bytearray,
+            // array, etc. are used without copying data.
+            if (std::is_fundamental_v<T> && PyObject_CheckBuffer(obj))
+            {
+                return std::move(pybuf_view<T>{obj});
+            }
+
+            // Other types require marshalling from Python to COM array.
+            return converter<winrt::com_array<T>>::convert_to(obj);
+        }
+    };
+
     template <typename T>
     struct converter<winrt::com_array<T>>
     {

@@ -2,6 +2,7 @@ import sys
 sys.path.append("./generated")
 sys.path.append("../../package/pywinrt/projection/pywinrt")
 
+from array import array
 from uuid import UUID
 
 import unittest
@@ -128,12 +129,84 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(s.height, 8)
 
     def test_create_uint8_array(self):
-        o = wf.PropertyValue.create_uint8_array([1,2,3,4,5])
+        o = wf.PropertyValue.create_uint8_array(array('B', [1, 2, 3, 4, 5]))
         ipv = wf.IPropertyValue._from(o)
         self.assertEqual(ipv.type, wf.PropertyType.UINT8_ARRAY)
         a = ipv.get_uint8_array()
         self.assertEqual(len(a), 5)
-        for x in range(0,5):
+        for x in range(5):
+            self.assertEqual(a[x], x+1)
+
+    def test_create_int16_array(self):
+        o = wf.PropertyValue.create_int16_array(array('h', [1, 2, 3, 4, 5]))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.INT16_ARRAY)
+        a = ipv.get_int16_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], x+1)
+
+    def test_create_uint16_array(self):
+        o = wf.PropertyValue.create_uint16_array(array('H', [1, 2, 3, 4, 5]))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.UINT16_ARRAY)
+        a = ipv.get_uint16_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], x+1)
+
+    def test_create_int32_array(self):
+        o = wf.PropertyValue.create_int32_array(array('i', [1, 2, 3, 4, 5]))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.INT32_ARRAY)
+        a = ipv.get_int32_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], x+1)
+
+    def test_create_uint32_array(self):
+        o = wf.PropertyValue.create_uint32_array(array('I', [1, 2, 3, 4, 5]))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.UINT32_ARRAY)
+        a = ipv.get_uint32_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], x+1)
+
+    def test_create_int64_array(self):
+        o = wf.PropertyValue.create_int64_array(array('q', [1, 2, 3, 4, 5]))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.INT64_ARRAY)
+        a = ipv.get_int64_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], x+1)
+
+    def test_create_uint64_array(self):
+        o = wf.PropertyValue.create_uint64_array(array('Q', [1, 2, 3, 4, 5]))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.UINT64_ARRAY)
+        a = ipv.get_uint64_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], x+1)
+
+    def test_create_double_array(self):
+        o = wf.PropertyValue.create_double_array(array('d', [1, 2, 3, 4, 5]))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.DOUBLE_ARRAY)
+        a = ipv.get_double_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], x+1)
+
+    def test_create_single_array(self):
+        o = wf.PropertyValue.create_single_array(array('f', [1, 2, 3, 4, 5]))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.SINGLE_ARRAY)
+        a = ipv.get_single_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
             self.assertEqual(a[x], x+1)
 
 if __name__ == '__main__':
