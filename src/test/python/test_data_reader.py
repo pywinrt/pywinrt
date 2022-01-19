@@ -1,9 +1,5 @@
 import struct
-import sys
 import unittest
-
-sys.path.append("./generated")
-sys.path.append("../../package/pywinrt/projection/pywinrt")
 
 import winrt.windows.storage.streams as wss
 

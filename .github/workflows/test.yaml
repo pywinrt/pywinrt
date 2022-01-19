@@ -1,0 +1,33 @@
+name: test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        python-version: ['3.7', '3.8', '3.9', '3.10']
+        architecture: ['x86', 'x64']
+        release-type: ['Release'] # no "Debug" - https://github.com/actions/setup-python/issues/86
+    name: Python ${{ matrix.python-version }} ${{ matrix.architecture }} ${{ matrix.release-type }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: ${{ matrix.architecture }}
+      - name: Build pywinrt
+        run: |
+          cd src/scripts/windows
+          ./vsdevcmd-build.cmd
+      - name: Generate and build
+        run: |
+          Import-Module "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
+          Enter-VsDevShell -VsInstallPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" -DevCmdArguments '-arch=${{ matrix.architecture }}'
+          cd src/package/pywinrt/projection
+          ./generate.ps1
+          ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion ${{ matrix.python-version }}
+        shell: powershell
+      - name: Run tests
+        env:
+          PYTHONPATH: ./src/package/pywinrt/projection/pywinrt
+        run: python -m unittest discover --start-directory src/test/python

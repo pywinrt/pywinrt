@@ -1,9 +1,7 @@
-import sys
-sys.path.append("./generated")
-sys.path.append("../../package/pywinrt/projection/pywinrt")
 
-import unittest
 import asyncio
+import os
+import unittest
 
 def async_test(test):
     def wrapper(*args, **kwargs):
@@ -12,6 +10,8 @@ def async_test(test):
 
 import winrt.windows.devices.geolocation as wdg
 import winrt.windows.foundation as wf
+
+ON_CI = os.environ.get("CI")
 
 class TestGeolocation(unittest.TestCase):
 
@@ -57,6 +57,7 @@ class TestGeolocation(unittest.TestCase):
         self.assertAlmostEqual(se.latitude, basic_pos1.latitude)
         self.assertAlmostEqual(se.longitude, basic_pos1.longitude)
 
+    @unittest.skipIf(ON_CI, "Geolocation service not available on CI")
     def test_GetGeopositionAsync(self):
         """test async method using IAsyncOperation Completed callback"""
         import threading
@@ -84,6 +85,7 @@ class TestGeolocation(unittest.TestCase):
 
         self.assertTrue(complete_event.wait(10))
 
+    @unittest.skipIf(ON_CI, "Geolocation service not available on CI")
     @async_test
     async def test_GetGeopositionAsync_await(self):
         """test async method by directly awaiting IAsyncOperation"""

@@ -1,11 +1,8 @@
-import sys
-sys.path.append("./generated")
-sys.path.append("../../package/pywinrt/projection/pywinrt")
 
+import unittest
 from array import array
 from uuid import UUID
 
-import unittest
 
 import winrt.windows.foundation as wf
 
