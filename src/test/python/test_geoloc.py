@@ -5,17 +5,9 @@ sys.path.append("../../package/pywinrt/projection/pywinrt")
 import unittest
 import asyncio
 
-# async_test inspired by https://stackoverflow.com/a/23036785
 def async_test(test):
     def wrapper(*args, **kwargs):
-        original_loop = asyncio.get_running_loop()
-        test_loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(test_loop)
-        try:
-            test_loop.run_until_complete(test(*args, **kwargs))
-        finally:
-            test_loop.close()
-            asyncio.set_event_loop(original_loop)
+        asyncio.run(test(*args, **kwargs))
     return wrapper
 
 import winrt.windows.devices.geolocation as wdg
@@ -90,7 +82,7 @@ class TestGeolocation(unittest.TestCase):
         op = locator.get_geoposition_async()
         op.completed = callback
 
-        self.assertTrue(complete_event.wait(5))
+        self.assertTrue(complete_event.wait(10))
 
     @async_test
     async def test_GetGeopositionAsync_await(self):
