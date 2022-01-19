@@ -96,17 +96,17 @@ class TestJson(unittest.TestCase):
 
     def test_JsonArray_get_boolean(self):
         a = wdj.JsonArray.parse("[true, [], false]")
-        with self.assertRaises(RuntimeError):
+        with self.assertRaises(OSError):
             v1 = a.get_boolean()
 
     def test_JsonArray_get_number(self):
         a = wdj.JsonArray.parse("[true, [], false]")
-        with self.assertRaises(RuntimeError):
+        with self.assertRaises(OSError):
             v1 = a.get_number()
 
     def test_JsonArray_get_string(self):
         a = wdj.JsonArray.parse("[true, [], false]")
-        with self.assertRaises(RuntimeError):
+        with self.assertRaises(OSError):
             v1 = a.get_string()
 
     def test_JsonArray_get_array_at(self):
@@ -117,7 +117,7 @@ class TestJson(unittest.TestCase):
 
     def test_JsonArray_get_object(self):
         a = wdj.JsonArray.parse("[true, {}, false]")
-        with self.assertRaises(RuntimeError):
+        with self.assertRaises(OSError):
             v1 = a.get_object()
 
     def test_JsonArray_get_object_at(self):
