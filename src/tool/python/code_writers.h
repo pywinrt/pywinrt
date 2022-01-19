@@ -406,16 +406,10 @@ self->obj%;
             w.write("% % { % };\n", param.second->Type(), bind<write_param_name>(param), bind<write_out_param_init>(param));
             break;
         case param_category::pass_array:
-            w.write("auto _% = py::convert_to<winrt::com_array<%>>(%);\n",
+            w.write("auto % = py::convert_to<winrt::com_array<%>>(%);\n",
                 bind<write_param_name>(param),
                 param.second->Type(),
                 bind<write_convert_to_params>(method, sequence));
-            w.write("auto % = winrt::array_view<const %>(_%.data(), _%.data() + _%.size());\n",
-                bind<write_param_name>(param),
-                param.second->Type(),
-                bind<write_param_name>(param),
-                bind<write_param_name>(param),
-                bind<write_param_name>(param));
             break;
         case param_category::fill_array:
             w.write("auto %_count = py::convert_to<winrt::com_array<%>::size_type>(%);\n",
