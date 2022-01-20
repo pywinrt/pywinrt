@@ -2341,45 +2341,9 @@ if (!return_value)
             }
         }
 
-        auto ns = type.TypeNamespace();
-        auto name = type.TypeName();
-
-        if (ns == "Windows.Foundation" && (name == "IAsyncAction" || name == "IAsyncActionWithProgress`1"))
-        {
-            w.write("typing.Awaitable[None], ");
-        }
-        else if (ns == "Windows.Foundation" && name == "IAsyncOperation`1")
-        {
-            w.write("typing.Awaitable[%], ", bind<write_template_arg_name>(type.GenericParam().first));
-        }
-        else if (ns == "Windows.Foundation" && name == "IAsyncOperationWithProgress`2")
-        {
-            w.write("typing.Awaitable[%], ", bind<write_template_arg_name>(type.GenericParam().second));
-        }
-        else if (ns == "Windows.Foundation.Collections" && name == "IIterable`1")
-        {
-            w.write("typing.Iterable[%], ", bind<write_template_arg_name>(type.GenericParam().first));
-        }
-        else if (ns == "Windows.Foundation.Collections" && name == "IIterator`1")
-        {
-            w.write("typing.Iterator[%], ", bind<write_template_arg_name>(type.GenericParam().first));
-        }
-        else if (ns == "Windows.Foundation.Collections" && (name == "IVector`1" || name == "IVectorView`1"))
-        {
-            w.write("typing.Sequence[%], ", bind<write_template_arg_name>(type.GenericParam().first));
-        }
-        else if (ns == "Windows.Foundation.Collections" && (name == "IMap`2" || name == "IMapView`2"))
-        {
-            w.write("typing.Mapping[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
-        }
-        else if (!skip_generic && is_ptype(type))
+        if (!skip_generic && is_ptype(type))
         {
             w.write("typing.Generic[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
-        }
-
-        if (implements_iclosable(type))
-        {
-            w.write("typing.ContextManager[@], ", type.TypeName());
         }
 
         w.write("_winrt.winrt_base");
@@ -2413,11 +2377,89 @@ if (!return_value)
         auto guard{ w.push_generic_params(type.GenericParam()) };
         write_python_type_vars(w, type);
 
+        auto ns = type.TypeNamespace();
+        auto name = type.TypeName();
+
+        if (ns == "Windows.Foundation" && name == "IClosable")
+        {
+            w.write("Self = typing.TypeVar('Self')\n\n");
+        }
+
         w.write("class @(%):\n", type.TypeName(), bind<write_python_base_classes>(type));
         {
             writer::indent_guard g{ w };
 
             w.write("...\n");
+
+            // Write special methods.
+            // TODO: this should use the implements_x helpers but we need to
+            // figure out how to get the generic type args from each interface
+
+            if (ns == "Windows.Foundation")
+            {
+                if (name == "IAsyncAction" || name == "IAsyncActionWithProgress`1")
+                {
+                    w.write("def __await__(self) -> typing.Generator[typing.Any, None, None]: ...\n");
+                }
+                else if (name == "IAsyncOperation`1")
+                {
+                    w.write("def __await__(self) -> typing.Generator[typing.Any, None, %]: ...\n", bind<write_template_arg_name>(type.GenericParam().first));
+                }
+                else if (name == "IAsyncOperationWithProgress`2")
+                {
+                    w.write("def __await__(self) -> typing.Generator[typing.Any, None, %]: ...\n", bind<write_template_arg_name>(type.GenericParam().first));
+                }
+                else if (name == "IClosable")
+                {
+                    w.write("def __enter__(self: Self) -> Self: ...\n");
+                    w.write("def __exit__(self, __exc_type: typing.Type[BaseException] | None, __exc_value: BaseException | None, __traceback: typing.TracebackType | None) -> bool | None: ...\n");
+                }
+                else if (name == "IStringable")
+                {
+                    w.write("def __str__(self) -> str: ...\n");
+                }
+            }
+            else if (ns == "Windows.Foundation.Collections")
+            {
+                if (name == "IIterable`1")
+                {
+                    w.write("def __iter__(self) -> typing.Iterator[%]: ...\n", bind<write_template_arg_name>(type.GenericParam().first));
+                }
+                else if (name == "IIterator`1")
+                {
+                    w.write("def __iter__(self) -> typing.Iterator[%]: ...\n", bind<write_template_arg_name>(type.GenericParam().first));
+                    w.write("def __next__(self) -> %: ...\n", bind<write_template_arg_name>(type.GenericParam().first));
+                }
+                else if (name == "IMap`2" || name == "IMapView`2")
+                {
+                    w.write("def __len__(self) -> int: ...\n");
+                    w.write("def __getitem__(self, key: %) -> %: ...\n",
+                        bind<write_template_arg_name>(type.GenericParam().first),
+                        bind<write_template_arg_name>(std::next(type.GenericParam().first)));
+
+                    if (name == "IMap`2")
+                    {
+                        w.write("def __setitem__(self, key: %, value: %) -> None: ...\n",
+                            bind<write_template_arg_name>(type.GenericParam().first),
+                            bind<write_template_arg_name>(std::next(type.GenericParam().first)));
+                        w.write("def __delitem__(self, key: %) -> None: ...\n",
+                            bind<write_template_arg_name>(type.GenericParam().first));
+                    }
+                }
+                else if (name == "IVector`1" || name == "IVectorView`1")
+                {
+                    w.write("def __len__(self) -> int: ...\n");
+                    w.write("def __getitem__(self, index: int) -> %: ...\n",
+                        bind<write_template_arg_name>(type.GenericParam().first));
+
+                    if (name == "IVector`1")
+                    {
+                        w.write("def __setitem__(self, index: int, value: %) -> None: ...\n",
+                            bind<write_template_arg_name>(type.GenericParam().first));
+                        w.write("def __delitem__(self, index: int) -> None: ...\n");
+                    }
+                }
+            }
 
             auto property_writer = [&](Property const&property)
             {
