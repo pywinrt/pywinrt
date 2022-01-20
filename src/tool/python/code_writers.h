@@ -2196,7 +2196,26 @@ if (!return_value)
         {
         // regular parameters are just `name: type`
         case param_category::in:
-            w.write("%", bind<write_python_type>(param.second->Type()));
+            call(param.second->Type().Type(),
+                [&](GenericTypeInstSig const& type)
+                {
+                    auto name = get_type_namespace_and_name(type.GenericType());
+
+                    // Special case for w.f.IIterable since it accepts any Python iterable
+                    if (name.first == "Windows.Foundation.Collections" && name.second == "IIterable`1")
+                    {
+                        w.write("typing.Iterable[%]", bind_list<write_python_type>(", ", type.GenericArgs()));
+                    }
+                    else
+                    {
+                        w.write_python(type);
+                    }
+                },
+                [&](auto)
+                {
+                    w.write("%", bind<write_python_type>(param.second->Type()));
+                }
+            );
             break;
 
         // array parameters accept any Python sequence-like object

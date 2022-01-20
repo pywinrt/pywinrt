@@ -385,12 +385,6 @@ namespace pywinrt
                 return;
             }
 
-            // special case for IITerable since is accepts any Python iterable
-            if (ns == "Windows.Foundation.Collections" && name == "IIterable`1") {
-                write("typing.Iterable");
-                return;
-            }
-
             if (ns == current_namespace)
             {
                 write("@", name);
