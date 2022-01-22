@@ -1,4 +1,5 @@
 #include "pybase.h"
+#include <Shobjidl.h>
 #include <winrt/base.h>
 
 PyObject* create_python_type(PyType_Spec* type_spec, PyObject* base_type) noexcept
@@ -122,9 +123,35 @@ static PyObject* uninit_apartment(PyObject* /*unused*/, PyObject* /*unused*/) no
     Py_RETURN_NONE;
 }
 
+static PyObject* initialize_with_window(PyObject* /*unused*/, PyObject* args) noexcept
+{
+    PyObject *obj;
+    Py_ssize_t hwnd;
+
+    if (!PyArg_ParseTuple(args, "On", &obj, &hwnd))
+    {
+        return nullptr;
+    }
+
+    try
+    {
+        auto winrt_obj = py::convert_to<winrt::Windows::Foundation::IInspectable>(obj);
+        winrt_obj.as<IInitializeWithWindow>()->Initialize(reinterpret_cast<HWND>(hwnd));
+    }
+    catch (...)
+    {
+        py::to_PyErr();
+        return nullptr;
+    }
+
+    Py_RETURN_NONE;
+}
+
 static PyMethodDef module_methods[]{
     { "init_apartment", init_apartment, METH_O, "initialize the apartment" },
     { "uninit_apartment", uninit_apartment, METH_NOARGS, "uninitialize the apartment" },
+    { "initialize_with_window", initialize_with_window, METH_VARARGS,
+        "interop function to invoke IInitializeWithWindow::Initialize on an object" },
     { nullptr }
 };
 
