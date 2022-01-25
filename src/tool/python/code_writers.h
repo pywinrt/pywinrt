@@ -1219,12 +1219,10 @@ return 0;
     {
         auto write_row = [&](std::string_view field_name, std::string_view getter_name, std::string_view setter_name)
         {
-            auto setter = setter_name.empty() ? "nullptr" : w.write_temp("(setter)@_%", type.TypeName(), setter_name);
+            auto setter = setter_name.empty() ? "nullptr" :
+                w.write_temp("reinterpret_cast<setter>(@_%)", type.TypeName(), setter_name);
 
-            // TODO: remove const_cast once pywinrt is updated to target Python 3.7.
-            //       pywinrt currently targeting 3.6 because that's the version that ships with VS 2017 v15.8
-            //       https://github.com/python/cpython/commit/007d7ff73f4e6e65cfafd512f9c23f7b7119b803
-            w.write("{ const_cast<char*>(\"%\"), (getter)@_%, %, nullptr, nullptr },\n",
+            w.write("{ \"%\", reinterpret_cast<getter>(@_%), %, nullptr, nullptr },\n",
                 bind<write_lower_snake_case>(field_name),
                 type.TypeName(), getter_name,
                 setter);
