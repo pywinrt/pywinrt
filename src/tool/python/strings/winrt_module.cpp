@@ -152,7 +152,7 @@ static PyMethodDef module_methods[]{
     { "uninit_apartment", uninit_apartment, METH_NOARGS, "uninitialize the apartment" },
     { "initialize_with_window", initialize_with_window, METH_VARARGS,
         "interop function to invoke IInitializeWithWindow::Initialize on an object" },
-    { nullptr }
+    { }
 };
 
 static int module_exec(PyObject* module) noexcept

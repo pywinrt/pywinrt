@@ -1209,7 +1209,7 @@ return 0;
                 w.write("#endif\n");
             }
 
-            w.write("{ nullptr }\n");
+            w.write("{ }\n");
         }
 
         w.write("};\n");
@@ -1253,7 +1253,7 @@ return 0;
                     }
                 });
             }
-            w.write("{ nullptr }\n");
+            w.write("{ }\n");
         }
         w.write("};\n");
     }
