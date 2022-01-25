@@ -968,12 +968,25 @@ return 0;
 
         if (implements_iclosable(type))
         {
-            w.write(strings::enter_function, type.TypeName(), bind<write_pywrapper_type>(type));
-
-            w.write("\nstatic PyObject* _exit_@(%* self) noexcept\n{\n", type.TypeName(), bind<write_pywrapper_type>(type));
+            w.write("\nstatic PyObject* _enter_@(%* self) noexcept\n",
+                type.TypeName(), bind<write_pywrapper_type>(type));
+            w.write("{\n");
             {
                 writer::indent_guard g{ w };
-                write_try_catch(w, [](auto& w) { w.write("self->obj.Close();\nPy_RETURN_FALSE;\n"); });
+                w.write("Py_INCREF(self);\n");
+                w.write("return reinterpret_cast<PyObject*>(self);\n");
+            }
+            w.write("}\n");
+
+            w.write("\nstatic PyObject* _exit_@(%* self) noexcept\n",
+                type.TypeName(), bind<write_pywrapper_type>(type));
+            w.write("{\n");
+            {
+                writer::indent_guard g{ w };
+                write_try_catch(w, [](auto& w) { 
+                    w.write("self->obj.Close();\n");
+                    w.write("Py_RETURN_FALSE;\n");
+                });
             }
             w.write("}\n");
         }

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.12)
 project(xlang)
 
 if (${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.13")
@@ -48,7 +48,7 @@ endfunction(TARGET_CONFIG_MSVC_PCH)
 
 function(GENERATE_STRING_LITERAL_FILES glob_expression output_filename namespace target)
 
-    file(GLOB input_files "${glob_expression}")
+    file(GLOB input_files CONFIGURE_DEPENDS "${glob_expression}")
 
     set(out_h   "${PROJECT_BINARY_DIR}/${output_filename}.h")
     set(out_cpp "${PROJECT_BINARY_DIR}/${output_filename}.cpp")
