@@ -28,39 +28,39 @@ PyTypeObject* py::register_python_type(PyObject* module, const char* const type_
     return reinterpret_cast<PyTypeObject*>(type_object.detach());
 }
 
-PyTypeObject* py::winrt_type<py::winrt_base>::python_type;
-constexpr const char* const _type_name_winrt_base = "winrt_base";
+PyTypeObject* py::winrt_type<py::Object>::python_type;
+constexpr const char* const _type_name_Object = "Object";
 
-PyDoc_STRVAR(winrt_base_doc, "base class for wrapped WinRT object instances.");
+PyDoc_STRVAR(Object_doc, "base class for wrapped WinRT object instances.");
 
-static PyObject* winrt_base_new(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+static PyObject* Object_new(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
 {
-    py::set_invalid_activation_error(_type_name_winrt_base);
+    py::set_invalid_activation_error(_type_name_Object);
     return nullptr;
 }
 
-static void winrt_base_dealloc(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self)
+static void Object_dealloc(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self)
 {
     // auto hash_value = std::hash<winrt::Windows::Foundation::IInspectable>{}(self->obj);
     // py::wrapped_instance(hash_value, nullptr);
     self->obj = nullptr;
 }
 
-static PyType_Slot winrt_base_type_slots[] =
+static PyType_Slot Object_type_slots[] =
 {
-    { Py_tp_new, winrt_base_new },
-    { Py_tp_dealloc, winrt_base_dealloc },
-    { Py_tp_doc, (void*)winrt_base_doc},
+    { Py_tp_new, Object_new },
+    { Py_tp_dealloc, Object_dealloc },
+    { Py_tp_doc, const_cast<char*>(Object_doc) },
     { 0, nullptr },
 };
 
-static PyType_Spec winrt_base_type_spec =
+static PyType_Spec Object_type_spec =
 {
-    "_winrt._winrt_base",
+    "_winrt.Object",
     sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
     0,
     Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-    winrt_base_type_slots
+    Object_type_slots
 };
 
 std::unordered_map<std::size_t, PyObject*> instance_map{};
@@ -159,7 +159,7 @@ static int module_exec(PyObject* module) noexcept
 {
     try
     {
-        py::winrt_type<py::winrt_base>::python_type = py::register_python_type(module, _type_name_winrt_base, &winrt_base_type_spec, nullptr);
+        py::winrt_type<py::Object>::python_type = py::register_python_type(module, _type_name_Object, &Object_type_spec, nullptr);
 
         if (PyModule_AddIntConstant(module, "MTA", static_cast<long>(winrt::apartment_type::multi_threaded)) == -1) {
             return -1;

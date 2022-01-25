@@ -262,7 +262,7 @@ struct winrt_type<%>
             writer::indent_guard g{ w };
             write_try_catch(w, [&](auto& w)
                 {
-                    w.write("py::pyobj_handle bases { PyTuple_Pack(1, py::winrt_type<py::winrt_base>::python_type) };\n\n");
+                    w.write("py::pyobj_handle bases { PyTuple_Pack(1, py::winrt_type<py::Object>::python_type) };\n\n");
                     settings.filter.bind_each<write_ns_module_exec_init_python_type>(members.classes)(w);
                     settings.filter.bind_each<write_ns_module_exec_init_python_type>(members.interfaces)(w);
                     settings.filter.bind_each<write_ns_module_exec_init_python_type>(members.structs)(w);
@@ -2364,7 +2364,7 @@ if (!return_value)
             w.write("typing.Generic[%], ", bind_list<write_template_arg_name>(", ", type.GenericParam()));
         }
 
-        w.write("_winrt.winrt_base");
+        w.write("_winrt.Object");
     }
 
     /**

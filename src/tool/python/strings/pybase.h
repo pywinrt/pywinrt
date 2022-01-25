@@ -154,7 +154,7 @@ namespace py
         return wrapper->get_unknown(wrapper).as<To>();
     }
 
-    struct winrt_base;
+    struct Object;
 
     template<typename T>
     struct winrt_type
@@ -166,7 +166,7 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt_base>
+    struct winrt_type<Object>
     {
         static PyTypeObject* python_type;
     };
@@ -752,14 +752,14 @@ namespace py
     {
         static PyObject* convert(winrt::Windows::Foundation::IInspectable const& value) noexcept
         {
-            return wrap<winrt::Windows::Foundation::IInspectable>(value, winrt_type<winrt_base>::python_type);
+            return wrap<winrt::Windows::Foundation::IInspectable>(value, winrt_type<Object>::python_type);
         }
 
         static winrt::Windows::Foundation::IInspectable convert_to(PyObject* obj)
         {
             throw_if_pyobj_null(obj);
 
-            if (PyObject_IsInstance(obj, reinterpret_cast<PyObject*>(winrt_type<winrt_base>::python_type)))
+            if (PyObject_IsInstance(obj, reinterpret_cast<PyObject*>(winrt_type<Object>::python_type)))
             {
                 auto wrapper = reinterpret_cast<winrt_wrapper_base*>(obj);
                 return as<winrt::Windows::Foundation::IInspectable>(wrapper);
@@ -972,7 +972,7 @@ namespace py
             return reinterpret_cast<winrt_wrapper<T>*>(obj)->obj;
         }
 
-        if (PyObject_IsInstance(obj, reinterpret_cast<PyObject*>(winrt_type<winrt_base>::python_type)))
+        if (PyObject_IsInstance(obj, reinterpret_cast<PyObject*>(winrt_type<Object>::python_type)))
         {
             auto wrapper = reinterpret_cast<winrt_wrapper_base*>(obj);
             return as<T>(wrapper);
