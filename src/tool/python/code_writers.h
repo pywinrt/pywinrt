@@ -2243,7 +2243,7 @@ if (!return_value)
 
         // fill array parameters just require the size of the array to be allocated
         case param_category::fill_array:
-            w.write("int");
+            w.write("_winrt.UInt32");
             break;
 
         // this method only handles input parameters, receive arrays are output parameters

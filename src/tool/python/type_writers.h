@@ -512,20 +512,29 @@ namespace pywinrt
             switch (type)
             {
             case ElementType::Boolean:
-                return "bool";
+                return "_winrt.Boolean";
             case ElementType::Char:
+                return "_winrt.Char16";
             case ElementType::I1:
+                return "_winrt.Int8";
             case ElementType::U1:
+                return "_winrt.UInt8";
             case ElementType::I2:
+                return "_winrt.Int16";
             case ElementType::U2:
+                return "_winrt.UInt16";
             case ElementType::I4:
+                return "_winrt.Int32";
             case ElementType::U4:
+                return "_winrt.UInt32";
             case ElementType::I8:
+                return "_winrt.Int64";
             case ElementType::U8:
-                return "int";
+                return "_winrt.UInt64";
             case ElementType::R4:
+                return "_winrt.Single";
             case ElementType::R8:
-                return "float";
+                return "_winrt.Double";
             case ElementType::String:
                 return "str";
             case ElementType::Object:
