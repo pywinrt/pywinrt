@@ -203,6 +203,8 @@ namespace pywinrt
             w.write("import enum\n");
         }
 
+        w.write("import sys\n");
+        w.write("import types\n");
         w.write("import typing\n");
         w.write("import uuid\n"); // TODO: uuid is not always used
         w.write("\n");

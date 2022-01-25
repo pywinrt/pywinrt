@@ -1189,6 +1189,13 @@ return 0;
                 w.write("{ \"__exit__\",  (PyCFunction)_exit_@, METH_VARARGS, nullptr },\n", type.TypeName());
             }
 
+            if (is_ptype(type))
+            {
+                w.write("#if PY_VERSION_HEX >= 0x03090000\n");
+                w.write("{ \"__class_getitem__\", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR(\"See PEP 585\") },\n");
+                w.write("#endif\n");
+            }
+
             w.write("{ nullptr }\n");
         }
 
@@ -2392,6 +2399,16 @@ if (!return_value)
             w.write("...\n");
 
             // Write special methods.
+
+            if (is_ptype(type))
+            {
+                w.write("if sys.version_info >= (3, 9):\n");
+                {
+                    writer::indent_guard gg{ w };
+                    w.write("def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...\n");
+                }
+            }
+
             // TODO: this should use the implements_x helpers but we need to
             // figure out how to get the generic type args from each interface
 
