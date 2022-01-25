@@ -987,7 +987,7 @@ return 0;
                 w.write("{\n");
                 {
                     writer::indent_guard gg{ w };
-                    w.write("return PyBuffer_FillInfo(view, (PyObject*)self, (void*)self->obj.data(), (Py_ssize_t)self->obj.@(), 0, flags);\n",
+                    w.write("return PyBuffer_FillInfo(view, reinterpret_cast<PyObject*>(self), reinterpret_cast<void*>(self->obj.data()), static_cast<Py_ssize_t>(self->obj.@()), 0, flags);\n",
                         implements_ibuffer(type) ? "Length" : "Capacity");
                 }
                 w.write("}\n");
@@ -1006,7 +1006,7 @@ return 0;
 
             // workaround for https://bugs.python.org/issue40724
             w.write("\n#if PY_VERSION_HEX < 0x03090000\n");
-            w.write("static PyBufferProcs _PyBufferProcs_@ = { (getbufferproc)_get_buffer_@, (releasebufferproc)NULL };\n", type.TypeName(), type.TypeName());
+            w.write("static PyBufferProcs _PyBufferProcs_@ = { reinterpret_cast<getbufferproc>(_get_buffer_@), reinterpret_cast<releasebufferproc>(nullptr) };\n", type.TypeName(), type.TypeName());
             w.write("#endif\n");
         }
 
@@ -1134,7 +1134,7 @@ return 0;
                 ? " | METH_STATIC"
                 : "";
 
-            w.write("{ \"%\", (PyCFunction)@_%, %%, nullptr },\n",
+            w.write("{ \"%\", reinterpret_cast<PyCFunction>(@_%), %%, nullptr },\n",
                 bind<write_lower_snake_case>(method.Name()),
                 type.TypeName(), method.Name(),
                 argument_convention_flag,
@@ -1180,13 +1180,13 @@ return 0;
             // TODO: support _from for ptypes
             if (!(is_ptype(type) || is_static_class(type)))
             {
-                w.write("{ \"_from\", (PyCFunction)_from_@, METH_O | METH_STATIC, nullptr },\n", type.TypeName());
+                w.write("{ \"_from\", reinterpret_cast<PyCFunction>(_from_@), METH_O | METH_STATIC, nullptr },\n", type.TypeName());
             }
 
             if (implements_iclosable(type))
             {
-                w.write("{ \"__enter__\", (PyCFunction)_enter_@, METH_NOARGS, nullptr },\n", type.TypeName());
-                w.write("{ \"__exit__\",  (PyCFunction)_exit_@, METH_VARARGS, nullptr },\n", type.TypeName());
+                w.write("{ \"__enter__\", reinterpret_cast<PyCFunction>(_enter_@), METH_NOARGS, nullptr },\n", type.TypeName());
+                w.write("{ \"__exit__\",  reinterpret_cast<PyCFunction>(_exit_@), METH_VARARGS, nullptr },\n", type.TypeName());
             }
 
             if (is_ptype(type))
@@ -1282,7 +1282,7 @@ return 0;
             }
             if (implements_iasync(type))
             {
-                w.write("{ Py_am_await, (unaryfunc)_await_@ },\n", name);
+                w.write("{ Py_am_await, reinterpret_cast<unaryfunc>(_await_@) },\n", name);
             }
             if (implements_iiterable(type) || implements_iiterator(type))
             {

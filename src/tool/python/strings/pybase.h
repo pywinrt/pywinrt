@@ -1308,7 +1308,7 @@ namespace py
 
         PyObject* future_type() const noexcept
         {
-            return (PyObject*)Py_TYPE(_future);
+            return reinterpret_cast<PyObject*>(Py_TYPE(_future));
         }
 
     private:
