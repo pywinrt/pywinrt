@@ -1,0 +1,22 @@
+---
+BasedOnStyle: Microsoft
+UseTab: Never
+IndentWidth: 4
+---
+Language: Cpp
+Standard: c++17
+BreakBeforeBraces: Allman
+AllowShortIfStatementsOnASingleLine: false
+IndentCaseLabels: false
+ColumnLimit: 88
+NamespaceIndentation: All
+PointerAlignment: Left
+AllowShortLambdasOnASingleLine: false
+AlignAfterOpenBracket: AlwaysBreak
+BinPackArguments: false
+BinPackParameters: false
+SpaceAfterTemplateKeyword: false
+BreakBeforeBinaryOperators: true
+BreakStringLiterals: false
+AlwaysBreakTemplateDeclarations: Yes
+SortIncludes: false

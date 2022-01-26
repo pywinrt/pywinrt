@@ -8,7 +8,7 @@ namespace pywinrt
     using namespace xlang::meta::reader;
     using namespace xlang::text;
 
-    template <typename First, typename...Rest>
+    template<typename First, typename... Rest>
     auto get_impl_name(First const& first, Rest const&... rest)
     {
         std::string result;
@@ -38,9 +38,9 @@ namespace pywinrt
 
         struct generic_param_guard
         {
-            explicit generic_param_guard(writer* arg = nullptr)
-                : owner(arg)
-            {}
+            explicit generic_param_guard(writer* arg = nullptr) : owner(arg)
+            {
+            }
 
             ~generic_param_guard()
             {
@@ -50,8 +50,7 @@ namespace pywinrt
                 }
             }
 
-            generic_param_guard(generic_param_guard && other)
-                : owner(other.owner)
+            generic_param_guard(generic_param_guard&& other) : owner(other.owner)
             {
                 owner = nullptr;
             }
@@ -66,22 +65,23 @@ namespace pywinrt
             writer* owner;
         };
 
-        [[nodiscard]] auto push_generic_params(std::pair<GenericParam, GenericParam>&& params)
+        [[nodiscard]] auto push_generic_params(
+            std::pair<GenericParam, GenericParam>&& params)
         {
             if (empty(params))
             {
-                return generic_param_guard{ nullptr };
+                return generic_param_guard{nullptr};
             }
 
             std::vector<std::string> names;
 
             for (auto&& param : params)
             {
-                names.push_back(std::string{ param.Name() });
+                names.push_back(std::string{param.Name()});
             }
 
             generic_param_stack.push_back(std::move(names));
-            return generic_param_guard{ this };
+            return generic_param_guard{this};
         }
 
         [[nodiscard]] auto push_generic_params(GenericTypeInstSig const& signature)
@@ -94,14 +94,15 @@ namespace pywinrt
             }
 
             generic_param_stack.push_back(std::move(names));
-            return generic_param_guard{ this };
+            return generic_param_guard{this};
         }
 
-        [[nodiscard]] auto push_generic_params(std::vector<type_semantics> const& type_arguments)
+        [[nodiscard]] auto push_generic_params(
+            std::vector<type_semantics> const& type_arguments)
         {
             if (type_arguments.size() == 0)
             {
-                return generic_param_guard{ nullptr };
+                return generic_param_guard{nullptr};
             }
 
             std::vector<std::string> names;
@@ -113,7 +114,7 @@ namespace pywinrt
             }
 
             generic_param_stack.push_back(std::move(names));
-            return generic_param_guard{ this };
+            return generic_param_guard{this};
         }
 
 #pragma endregion
@@ -292,7 +293,7 @@ namespace pywinrt
         void register_type_namespace(GenericTypeInstSig const& t)
         {
             register_type_namespace(t.GenericType());
-            for(auto&& type_arg : t.GenericArgs())
+            for (auto&& type_arg : t.GenericArgs())
             {
                 register_type_namespace(type_arg);
             }
@@ -309,12 +310,12 @@ namespace pywinrt
             case TypeDefOrRef::TypeRef:
             {
                 auto tr = type.TypeRef();
-                if (tr.TypeName() != "Guid" || tr.TypeNamespace() != "System" )
+                if (tr.TypeName() != "Guid" || tr.TypeNamespace() != "System")
                 {
                     register_type_namespace(type.TypeRef().TypeNamespace());
                 }
             }
-                break;
+            break;
 
             case TypeDefOrRef::TypeSpec:
                 register_type_namespace(type.TypeSpec().Signature().GenericTypeInst());
@@ -324,11 +325,22 @@ namespace pywinrt
 
         void register_type_namespace(TypeSig const& type)
         {
-            call(type.Type(),
-                [&](ElementType) {},
-                [&](GenericTypeIndex) {},
-                [&](GenericMethodTypeIndex) { throw_invalid("Generic methods not supported"); },
-                [&](auto&& t) { register_type_namespace(t); });
+            call(
+                type.Type(),
+                [&](ElementType)
+                {
+                },
+                [&](GenericTypeIndex)
+                {
+                },
+                [&](GenericMethodTypeIndex)
+                {
+                    throw_invalid("Generic methods not supported");
+                },
+                [&](auto&& t)
+                {
+                    register_type_namespace(t);
+                });
         }
 
         void write(TypeDef const& type)
@@ -353,15 +365,15 @@ namespace pywinrt
             {
                 if (ns == "Windows.Foundation.Numerics")
                 {
-                    static const std::map<std::string_view, std::string_view> custom_numerics = {
-                        { "Matrix3x2", "float3x2" },
-                        { "Matrix4x4", "float4x4" },
-                        { "Plane", "plane" },
-                        { "Quaternion", "quaternion" },
-                        { "Vector2", "float2"},
-                        { "Vector3", "float3" },
-                        { "Vector4", "float4" }
-                    };
+                    static const std::map<std::string_view, std::string_view>
+                        custom_numerics
+                        = {{"Matrix3x2", "float3x2"},
+                           {"Matrix4x4", "float4x4"},
+                           {"Plane", "plane"},
+                           {"Quaternion", "quaternion"},
+                           {"Vector2", "float2"},
+                           {"Vector3", "float3"},
+                           {"Vector4", "float4"}};
 
                     auto custom_numeric = custom_numerics.find(name);
                     if (custom_numeric != custom_numerics.end())
@@ -380,7 +392,8 @@ namespace pywinrt
             auto name = type.TypeName();
 
             // special case for IReference since the type is not used directly
-            if (ns == "Windows.Foundation" && name == "IReference`1") {
+            if (ns == "Windows.Foundation" && name == "IReference`1")
+            {
                 write("typing.Optional");
                 return;
             }
@@ -613,10 +626,14 @@ namespace pywinrt
                 else
                 {
                     // for qualified names, we have to convert :: to . and to lower case
-                    auto ns = write_temp("%", bind<double_colon_to_dot>(type.substr(0, last_colons_index + 2)));
+                    auto ns = write_temp(
+                        "%",
+                        bind<double_colon_to_dot>(
+                            type.substr(0, last_colons_index + 2)));
                     auto type_name = type.substr(last_colons_index + 2);
 
-                    // ns includes "winrt." prefix and "." suffix that current_namespace doesn't have
+                    // ns includes "winrt." prefix and "." suffix that current_namespace
+                    // doesn't have
                     if (ns.substr(6, ns.length() - 7) != current_namespace)
                     {
                         for (auto c : ns)
@@ -709,20 +726,22 @@ namespace pywinrt
 
         void write(TypeSig const& signature)
         {
-            call(signature.Type(),
+            call(
+                signature.Type(),
                 [&](auto&& type)
-            {
-                write(type);
-            });
+                {
+                    write(type);
+                });
         }
 
         void write_python(TypeSig const& signature)
         {
-            call(signature.Type(),
+            call(
+                signature.Type(),
                 [&](auto&& type)
-            {
-                write_python(type);
-            });
+                {
+                    write_python(type);
+                });
         }
 
         void write(fundamental_type type)
@@ -788,16 +807,20 @@ namespace pywinrt
 
         void write(type_semantics semantics)
         {
-            call(semantics,
-                [&](auto&& type) { write(type); });
+            call(
+                semantics,
+                [&](auto&& type)
+                {
+                    write(type);
+                });
         }
     };
 
     struct separator
     {
         writer& w;
-        std::string_view _separator{ ", " };
-        bool first{ true };
+        std::string_view _separator{", "};
+        bool first{true};
 
         void operator()()
         {
@@ -812,22 +835,32 @@ namespace pywinrt
         }
     };
 
-    template <typename F>
+    template<typename F>
     void enumerate_required_types(writer& w, TypeDef const& type, F func)
     {
         std::set<TypeDef> types;
 
-        auto enumerate_types_impl = [&](type_semantics const& semantics, auto const& lambda) -> void
+        auto enumerate_types_impl
+            = [&](type_semantics const& semantics, auto const& lambda) -> void
         {
             auto type = get_typedef(semantics);
             auto generic_args = std::visit(
                 impl::overloaded{
-                    [](type_definition) -> std::vector<type_semantics> { return {}; },
-                    [](generic_type_instance type_instance) { return type_instance.generic_args; },
-                    [](auto) -> std::vector<type_semantics> { throw_invalid("type doesn't contain typedef"); }
-                }, semantics);
+                    [](type_definition) -> std::vector<type_semantics>
+                    {
+                        return {};
+                    },
+                    [](generic_type_instance type_instance)
+                    {
+                        return type_instance.generic_args;
+                    },
+                    [](auto) -> std::vector<type_semantics>
+                    {
+                        throw_invalid("type doesn't contain typedef");
+                    }},
+                semantics);
 
-            auto guard{ w.push_generic_params(generic_args) };
+            auto guard{w.push_generic_params(generic_args)};
 
             if (!contains(types, type))
             {
@@ -847,76 +880,94 @@ namespace pywinrt
         enumerate_types_impl(type, enumerate_types_impl);
     }
 
-    template <typename F>
+    template<typename F>
     void enumerate_methods(writer& w, TypeDef const& type, F func)
     {
-        enumerate_required_types(w, type, [&](TypeDef const& required_type)
-        {
-            // map of overloads by number of parameters
-            std::map<std::string_view, std::map<int, std::vector<MethodDef>>> overloads;
-
-            for (auto&& method : required_type.MethodList())
+        enumerate_required_types(
+            w,
+            type,
+            [&](TypeDef const& required_type)
             {
-                if (is_constructor(method) || method.SpecialName())
-                {
-                    continue;
-                }
+                // map of overloads by number of parameters
+                std::map<std::string_view, std::map<int, std::vector<MethodDef>>>
+                    overloads;
 
-                method_signature signature{ method };
-                auto arg_count = count_in_param(signature.params());
-                overloads[method.Name()][arg_count].push_back(method);
-            }
-
-            for (auto o : overloads)
-            {
-                for (auto oo : o.second)
+                for (auto&& method : required_type.MethodList())
                 {
-                    // if there are multiple overloads with the same number of
-                    // arguments, we need to use the default overload
-                    // https://devblogs.microsoft.com/oldnewthing/20210528-00/?p=105259
-                    auto default_overload = std::find_if(oo.second.begin(), oo.second.end(), [](auto m)
+                    if (is_constructor(method) || method.SpecialName())
                     {
-                        for (auto a : m.CustomAttribute())
-                        {
-                            if (a.TypeNamespaceAndName().second == "DefaultOverloadAttribute")
-                            {
-                                return true;
-                            }
-                        }
+                        continue;
+                    }
 
-                        return false;
-                    });
-
-                    // if there was no default, just use the first (and hopefully only) overload
-                    auto i = default_overload == oo.second.end() ? 0 : std::distance(oo.second.begin(), default_overload);
-
-                    func(oo.second.at(i));
+                    method_signature signature{method};
+                    auto arg_count = count_in_param(signature.params());
+                    overloads[method.Name()][arg_count].push_back(method);
                 }
-            }
-        });
+
+                for (auto o : overloads)
+                {
+                    for (auto oo : o.second)
+                    {
+                        // if there are multiple overloads with the same number of
+                        // arguments, we need to use the default overload
+                        // https://devblogs.microsoft.com/oldnewthing/20210528-00/?p=105259
+                        auto default_overload = std::find_if(
+                            oo.second.begin(),
+                            oo.second.end(),
+                            [](auto m)
+                            {
+                                for (auto a : m.CustomAttribute())
+                                {
+                                    if (a.TypeNamespaceAndName().second
+                                        == "DefaultOverloadAttribute")
+                                    {
+                                        return true;
+                                    }
+                                }
+
+                                return false;
+                            });
+
+                        // if there was no default, just use the first (and hopefully
+                        // only) overload
+                        auto i
+                            = default_overload == oo.second.end()
+                                  ? 0
+                                  : std::distance(oo.second.begin(), default_overload);
+
+                        func(oo.second.at(i));
+                    }
+                }
+            });
     }
 
-    template <typename F>
+    template<typename F>
     void enumerate_properties(writer& w, TypeDef const& type, F func)
     {
-        enumerate_required_types(w, type, [&](TypeDef const& required_type)
-        {
-            for (auto&& prop : required_type.PropertyList())
+        enumerate_required_types(
+            w,
+            type,
+            [&](TypeDef const& required_type)
             {
-                func(prop);
-            }
-        });
+                for (auto&& prop : required_type.PropertyList())
+                {
+                    func(prop);
+                }
+            });
     }
 
-    template <typename F>
+    template<typename F>
     void enumerate_events(writer& w, TypeDef const& type, F func)
     {
-        enumerate_required_types(w, type, [&](TypeDef const& required_type)
-        {
-            for (auto&& evt : required_type.EventList())
+        enumerate_required_types(
+            w,
+            type,
+            [&](TypeDef const& required_type)
             {
-                func(evt);
-            }
-        });
+                for (auto&& evt : required_type.EventList())
+                {
+                    func(evt);
+                }
+            });
     }
-}
+} // namespace pywinrt

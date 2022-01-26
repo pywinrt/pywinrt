@@ -7,7 +7,7 @@ namespace pywinrt
         std::set<std::string> input;
 
         std::filesystem::path output_folder;
-        std::string module{ "pyrt" };
+        std::string module{"pyrt"};
         bool verbose{};
 
         std::set<std::string> include;
@@ -16,4 +16,4 @@ namespace pywinrt
     };
 
     extern settings_type settings;
-}
+} // namespace pywinrt

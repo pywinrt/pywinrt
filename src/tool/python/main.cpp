@@ -13,29 +13,43 @@ namespace pywinrt
 
     settings_type settings;
 
-    struct usage_exception {};
-
-    static constexpr cmd::option options[]
+    struct usage_exception
     {
-        { "input", 0, cmd::option::no_max, "<spec>", "Windows metadata to include in projection" },
-        { "output", 0, 1, "<path>", "Location of generated projection" },
-        { "include", 0, cmd::option::no_max, "<prefix>", "One or more prefixes to include in projection" },
-        { "exclude", 0, cmd::option::no_max, "<prefix>", "One or more prefixes to exclude from projection" },
-        { "verbose", 0, 0, {}, "Show detailed progress information" },
-        { "module", 0, 1, "<name>", "Name of generated projection. Defaults to winrt."},
-        { "help", 0, cmd::option::no_max, {}, "Show detailed help" },
+    };
+
+    static constexpr cmd::option options[]{
+        {"input",
+         0,
+         cmd::option::no_max,
+         "<spec>",
+         "Windows metadata to include in projection"},
+        {"output", 0, 1, "<path>", "Location of generated projection"},
+        {"include",
+         0,
+         cmd::option::no_max,
+         "<prefix>",
+         "One or more prefixes to include in projection"},
+        {"exclude",
+         0,
+         cmd::option::no_max,
+         "<prefix>",
+         "One or more prefixes to exclude from projection"},
+        {"verbose", 0, 0, {}, "Show detailed progress information"},
+        {"module", 0, 1, "<name>", "Name of generated projection. Defaults to winrt."},
+        {"help", 0, cmd::option::no_max, {}, "Show detailed help"},
     };
 
     static void print_usage(writer& w)
     {
-        static auto printColumns = [](writer& w, std::string_view const& col1, std::string_view const& col2)
+        static auto printColumns
+            = [](writer& w, std::string_view const& col1, std::string_view const& col2)
         {
             w.write_printf("  %-20s%s\n", col1.data(), col2.data());
         };
 
         static auto printOption = [](writer& w, cmd::option const& opt)
         {
-            if(opt.desc.empty())
+            if (opt.desc.empty())
             {
                 return;
             }
@@ -64,7 +78,7 @@ Where <spec> is one or more of:
 
     void process_args(int const argc, char** argv)
     {
-        cmd::reader args{ argc, argv, options };
+        cmd::reader args{argc, argv, options};
 
         if (!args || args.exists("help"))
         {
@@ -75,12 +89,12 @@ Where <spec> is one or more of:
         settings.module = args.value("module", "winrt");
         settings.input = args.files("input", database::is_database);
 
-        for (auto && include : args.values("include"))
+        for (auto&& include : args.values("include"))
         {
             settings.include.insert(include);
         }
 
-        for (auto && exclude : args.values("exclude"))
+        for (auto&& exclude : args.values("exclude"))
         {
             settings.exclude.insert(exclude);
         }
@@ -98,12 +112,9 @@ Where <spec> is one or more of:
 
     bool has_projected_types(cache::namespace_members const& members)
     {
-        return
-            !members.interfaces.empty() ||
-            !members.classes.empty() ||
-            !members.enums.empty() ||
-            !members.structs.empty() ||
-            !members.delegates.empty();
+        return !members.interfaces.empty() || !members.classes.empty()
+               || !members.enums.empty() || !members.structs.empty()
+               || !members.delegates.empty();
     }
 
     int run(int const argc, char** argv)
@@ -115,8 +126,8 @@ Where <spec> is one or more of:
         {
             auto start = get_start_time();
             process_args(argc, argv);
-            cache c{ get_files_to_cache() };
-            settings.filter = { settings.include, settings.exclude };
+            cache c{get_files_to_cache()};
+            settings.filter = {settings.include, settings.exclude};
 
             if (settings.verbose)
             {
@@ -136,18 +147,19 @@ Where <spec> is one or more of:
             auto src_dir = module_dir / "src";
             create_directories(src_dir);
 
-            group.add([&]
-            {
-                write_pybase_h(src_dir);
-                write_package_py_typed(module_dir);
-                write_winrt_pyi(module_dir);
-                write_package_dunder_init_py(module_dir);
-                write_winrt_module_cpp(src_dir);
-            });
+            group.add(
+                [&]
+                {
+                    write_pybase_h(src_dir);
+                    write_package_py_typed(module_dir);
+                    write_winrt_pyi(module_dir);
+                    write_package_dunder_init_py(module_dir);
+                    write_winrt_module_cpp(src_dir);
+                });
 
             std::vector<std::string> generated_namespaces{};
 
-            for (auto&&[ns, members] : c.namespaces())
+            for (auto&& [ns, members] : c.namespaces())
             {
                 if (!has_projected_types(members) || !settings.filter.includes(members))
                 {
@@ -159,20 +171,30 @@ Where <spec> is one or more of:
                 auto ns_dir = module_dir;
                 for (auto&& ns_segment : get_dotted_name_segments(ns))
                 {
-                    std::string segment{ ns_segment };
-                    std::transform(segment.begin(), segment.end(), segment.begin(), [](char c) {return static_cast<char>(::tolower(c)); });
+                    std::string segment{ns_segment};
+                    std::transform(
+                        segment.begin(),
+                        segment.end(),
+                        segment.begin(),
+                        [](char c)
+                        {
+                            return static_cast<char>(::tolower(c));
+                        });
                     ns_dir /= segment;
                 }
-                
+
                 create_directories(ns_dir);
 
-                group.add([&src_dir, ns_dir, ns = ns, members = members]
-                {
-                    auto namespaces = write_namespace_cpp(src_dir, ns, members);
-                    write_namespace_h(src_dir, ns, namespaces, members);
-                    write_namespace_dunder_init_py(ns_dir, settings.module, namespaces, ns, members);
-                    write_namespace_dunder_init_pyi(ns_dir, namespaces, ns, members);
-                });
+                group.add(
+                    [&src_dir, ns_dir, ns = ns, members = members]
+                    {
+                        auto namespaces = write_namespace_cpp(src_dir, ns, members);
+                        write_namespace_h(src_dir, ns, namespaces, members);
+                        write_namespace_dunder_init_py(
+                            ns_dir, settings.module, namespaces, ns, members);
+                        write_namespace_dunder_init_pyi(
+                            ns_dir, namespaces, ns, members);
+                    });
             }
 
             group.get();
@@ -195,7 +217,7 @@ Where <spec> is one or more of:
         w.flush_to_console();
         return result;
     }
-}
+} // namespace pywinrt
 
 int main(int const argc, char** argv)
 {

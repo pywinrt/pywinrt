@@ -12,7 +12,11 @@ namespace pywinrt
         w.flush_to_file(folder / "pybase.h");
     }
 
-    inline void write_namespace_h(stdfs::path const& folder, std::string_view const& ns, std::set<std::string> const& needed_namespaces, cache::namespace_members const& members)
+    inline void write_namespace_h(
+        stdfs::path const& folder,
+        std::string_view const& ns,
+        std::set<std::string> const& needed_namespaces,
+        cache::namespace_members const& members)
     {
         writer w;
         w.current_namespace = ns;
@@ -28,35 +32,41 @@ namespace pywinrt
 
         w.write("\nnamespace py::proj::%\n{", bind_list("::", segments));
         {
-            writer::indent_guard g{ w };
+            writer::indent_guard g{w};
             settings.filter.bind_each<write_pinterface_decl>(members.interfaces)(w);
         }
         w.write("}\n");
 
         w.write("\nnamespace py::impl::%\n{", bind_list("::", segments));
         {
-            writer::indent_guard g{ w };
-            settings.filter.bind_each<write_delegate_callable_wrapper>(members.delegates)(w);
+            writer::indent_guard g{w};
+            settings.filter.bind_each<write_delegate_callable_wrapper>(
+                members.delegates)(w);
             settings.filter.bind_each<write_pinterface_impl>(members.interfaces)(w);
         }
         w.write("}\n");
 
         w.write("\nnamespace py::wrapper::%\n{\n", bind_list("::", segments));
         {
-            writer::indent_guard g{ w };
+            writer::indent_guard g{w};
             settings.filter.bind_each<write_python_wrapper_alias>(members.classes)(w);
-            settings.filter.bind_each<write_python_wrapper_alias>(members.interfaces)(w);
+            settings.filter.bind_each<write_python_wrapper_alias>(members.interfaces)(
+                w);
             settings.filter.bind_each<write_python_wrapper_alias>(members.structs)(w);
         }
         w.write("}\n");
 
         w.write("\nnamespace py\n{\n");
         {
-            writer::indent_guard g{ w };
-            settings.filter.bind_each<write_get_python_type_specialization>(members.classes)(w);
-            settings.filter.bind_each<write_get_python_type_specialization>(members.interfaces)(w);
-            settings.filter.bind_each<write_get_python_type_specialization>(members.structs)(w);
-            settings.filter.bind_each<write_pinterface_type_mapper>(members.interfaces)(w);
+            writer::indent_guard g{w};
+            settings.filter.bind_each<write_get_python_type_specialization>(
+                members.classes)(w);
+            settings.filter.bind_each<write_get_python_type_specialization>(
+                members.interfaces)(w);
+            settings.filter.bind_each<write_get_python_type_specialization>(
+                members.structs)(w);
+            settings.filter.bind_each<write_pinterface_type_mapper>(members.interfaces)(
+                w);
             settings.filter.bind_each<write_delegate_type_mapper>(members.delegates)(w);
             settings.filter.bind_each<write_struct_converter_decl>(members.structs)(w);
         }
@@ -85,7 +95,10 @@ namespace pywinrt
         w.flush_to_file(folder / filename);
     }
 
-    inline auto write_namespace_cpp(stdfs::path const& folder, std::string_view const& ns, cache::namespace_members const& members)
+    inline auto write_namespace_cpp(
+        stdfs::path const& folder,
+        std::string_view const& ns,
+        cache::namespace_members const& members)
     {
         writer w;
         w.current_namespace = ns;
@@ -95,9 +108,12 @@ namespace pywinrt
         w.write("#include \"pybase.h\"\n");
         w.write("#include \"py.%.h\"\n", ns);
 
-        settings.filter.bind_each<write_winrt_type_specialization_storage>(members.classes)(w);
-        settings.filter.bind_each<write_winrt_type_specialization_storage>(members.interfaces)(w);
-        settings.filter.bind_each<write_winrt_type_specialization_storage>(members.structs)(w);
+        settings.filter.bind_each<write_winrt_type_specialization_storage>(
+            members.classes)(w);
+        settings.filter.bind_each<write_winrt_type_specialization_storage>(
+            members.interfaces)(w);
+        settings.filter.bind_each<write_winrt_type_specialization_storage>(
+            members.structs)(w);
 
         if (ns == "Windows.Foundation")
         {
@@ -108,7 +124,7 @@ namespace pywinrt
         auto segments = get_dotted_name_segments(ns);
         w.write("\n\nnamespace py::cpp::%\n{", bind_list("::", segments));
         {
-            writer::indent_guard g{ w };
+            writer::indent_guard g{w};
 
             settings.filter.bind_each<write_inspectable_type>(members.classes)(w);
             settings.filter.bind_each<write_inspectable_type>(members.interfaces)(w);
@@ -164,11 +180,16 @@ namespace pywinrt
         w.flush_to_file(folder / "__init__.py");
     }
 
-    inline void write_namespace_dunder_init_py(stdfs::path const& folder, std::string_view const& module_name, std::set<std::string> const& needed_namespaces, std::string_view const& ns, cache::namespace_members const& members)
+    inline void write_namespace_dunder_init_py(
+        stdfs::path const& folder,
+        std::string_view const& module_name,
+        std::set<std::string> const& needed_namespaces,
+        std::string_view const& ns,
+        cache::namespace_members const& members)
     {
         writer w;
         w.current_namespace = ns;
-        
+
         write_license(w, "#");
 
         if (settings.filter.includes(members.enums))
@@ -191,7 +212,11 @@ namespace pywinrt
         w.flush_to_file(folder / "__init__.py");
     }
 
-    inline void write_namespace_dunder_init_pyi(stdfs::path const& folder, std::set<std::string> const& needed_namespaces, std::string_view const& ns, cache::namespace_members const& members)
+    inline void write_namespace_dunder_init_pyi(
+        stdfs::path const& folder,
+        std::set<std::string> const& needed_namespaces,
+        std::string_view const& ns,
+        cache::namespace_members const& members)
     {
         writer w;
         w.current_namespace = ns;
@@ -221,4 +246,4 @@ namespace pywinrt
 
         w.flush_to_file(folder / "__init__.pyi");
     }
-}
+} // namespace pywinrt

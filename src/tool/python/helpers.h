@@ -9,9 +9,12 @@ namespace xlang
         return std::chrono::high_resolution_clock::now();
     }
 
-    inline auto get_elapsed_time(std::chrono::time_point<std::chrono::high_resolution_clock> const& start)
+    inline auto get_elapsed_time(
+        std::chrono::time_point<std::chrono::high_resolution_clock> const& start)
     {
-        return std::chrono::duration_cast<std::chrono::duration<int64_t, std::milli>>(std::chrono::high_resolution_clock::now() - start).count();
+        return std::chrono::duration_cast<std::chrono::duration<int64_t, std::milli>>(
+                   std::chrono::high_resolution_clock::now() - start)
+            .count();
     }
 
     auto get_dotted_name_segments(std::string_view ns)
@@ -36,12 +39,15 @@ namespace xlang
 
     bool is_exclusive_to(TypeDef const& type)
     {
-        return get_category(type) == category::interface_type && get_attribute(type, "Windows.Foundation.Metadata", "ExclusiveToAttribute");
+        return get_category(type) == category::interface_type
+               && get_attribute(
+                   type, "Windows.Foundation.Metadata", "ExclusiveToAttribute");
     }
 
     bool is_flags_enum(TypeDef const& type)
     {
-        return get_category(type) == category::enum_type && get_attribute(type, "System", "FlagsAttribute");
+        return get_category(type) == category::enum_type
+               && get_attribute(type, "System", "FlagsAttribute");
     }
 
     bool is_ptype(TypeDef const& type)
@@ -72,8 +78,12 @@ namespace xlang
     };
 
     struct generic_type_instance;
-    struct object_type {};
-    struct guid_type {};
+    struct object_type
+    {
+    };
+    struct guid_type
+    {
+    };
     using type_definition = TypeDef;
     using generic_type_index = GenericTypeIndex;
 
@@ -105,10 +115,11 @@ namespace xlang
                 return find_required(type.GenericType().TypeRef());
             }
 
-            throw_invalid("invalid TypeDefOrRef value for GenericTypeInstSig.GenericType");
+            throw_invalid(
+                "invalid TypeDefOrRef value for GenericTypeInstSig.GenericType");
         };
 
-        auto gti = generic_type_instance{ generic_type_helper() };
+        auto gti = generic_type_instance{generic_type_helper()};
 
         for (auto&& arg : type.GenericArgs())
         {
@@ -143,69 +154,84 @@ namespace xlang
 
     namespace impl
     {
-        template<class... Ts> struct overloaded : Ts... { using Ts::operator()...; };
-        template<class... Ts> overloaded(Ts...)->overloaded<Ts...>;
-    }
+        template<class... Ts>
+        struct overloaded : Ts...
+        {
+            using Ts::operator()...;
+        };
+        template<class... Ts>
+        overloaded(Ts...) -> overloaded<Ts...>;
+    } // namespace impl
 
     type_semantics get_type_semantics(TypeSig const& signature)
     {
         return std::visit(
             impl::overloaded{
-            [](ElementType type) -> type_semantics
-        {
-            switch (type)
-            {
-            case ElementType::Boolean:
-                return fundamental_type::Boolean;
-            case ElementType::Char:
-                return fundamental_type::Char;
-            case ElementType::I1:
-                return fundamental_type::Int8;
-            case ElementType::U1:
-                return fundamental_type::UInt8;
-            case ElementType::I2:
-                return fundamental_type::Int16;
-            case ElementType::U2:
-                return fundamental_type::UInt16;
-            case ElementType::I4:
-                return fundamental_type::Int32;
-            case ElementType::U4:
-                return fundamental_type::UInt32;
-            case ElementType::I8:
-                return fundamental_type::Int64;
-            case ElementType::U8:
-                return fundamental_type::UInt64;
-            case ElementType::R4:
-                return fundamental_type::Float;
-            case ElementType::R8:
-                return fundamental_type::Double;
-            case ElementType::String:
-                return fundamental_type::String;
-            case ElementType::Object:
-                return object_type{};
-            }
-            throw_invalid("element type not supported");
-        },
-            [](coded_index<TypeDefOrRef> type) -> type_semantics
-        {
-            return get_type_semantics(type);
-        },
-            [](GenericTypeIndex var) -> type_semantics { return generic_type_index{ var.index }; },
-            [](GenericTypeInstSig sig) -> type_semantics { return get_type_semantics(sig); },
-            [](GenericMethodTypeIndex) -> type_semantics { throw_invalid("Generic methods not supported"); }
-            }, signature.Type());
+                [](ElementType type) -> type_semantics
+                {
+                    switch (type)
+                    {
+                    case ElementType::Boolean:
+                        return fundamental_type::Boolean;
+                    case ElementType::Char:
+                        return fundamental_type::Char;
+                    case ElementType::I1:
+                        return fundamental_type::Int8;
+                    case ElementType::U1:
+                        return fundamental_type::UInt8;
+                    case ElementType::I2:
+                        return fundamental_type::Int16;
+                    case ElementType::U2:
+                        return fundamental_type::UInt16;
+                    case ElementType::I4:
+                        return fundamental_type::Int32;
+                    case ElementType::U4:
+                        return fundamental_type::UInt32;
+                    case ElementType::I8:
+                        return fundamental_type::Int64;
+                    case ElementType::U8:
+                        return fundamental_type::UInt64;
+                    case ElementType::R4:
+                        return fundamental_type::Float;
+                    case ElementType::R8:
+                        return fundamental_type::Double;
+                    case ElementType::String:
+                        return fundamental_type::String;
+                    case ElementType::Object:
+                        return object_type{};
+                    }
+                    throw_invalid("element type not supported");
+                },
+                [](coded_index<TypeDefOrRef> type) -> type_semantics
+                {
+                    return get_type_semantics(type);
+                },
+                [](GenericTypeIndex var) -> type_semantics
+                {
+                    return generic_type_index{var.index};
+                },
+                [](GenericTypeInstSig sig) -> type_semantics
+                {
+                    return get_type_semantics(sig);
+                },
+                [](GenericMethodTypeIndex) -> type_semantics
+                {
+                    throw_invalid("Generic methods not supported");
+                }},
+            signature.Type());
     }
 
     struct method_signature
     {
         using param_t = std::pair<Param, ParamSig const*>;
 
-        explicit method_signature(MethodDef const& method) :
-            m_method(method.Signature())
+        explicit method_signature(MethodDef const& method)
+            : m_method(method.Signature())
         {
             auto params = method.ParamList();
 
-            if (m_method.ReturnType() && params.first != params.second && params.first.Sequence() == 0)
+            if (m_method.ReturnType() && params.first != params.second
+                && params.first.Sequence() == 0)
             {
                 m_return = params.first;
                 ++params.first;
@@ -253,8 +279,7 @@ namespace xlang
             return !m_params.empty();
         }
 
-    private:
-
+      private:
         MethodDefSig m_method;
         std::vector<param_t> m_params;
         Param m_return;
@@ -264,10 +289,19 @@ namespace xlang
     {
         return std::visit(
             impl::overloaded{
-                [](type_definition type) { return type; },
-                [](generic_type_instance type_instance) { return type_instance.generic_type; },
-                [](auto) -> TypeDef { throw_invalid("type doesn't contain typedef"); }
-            }, semantics);
+                [](type_definition type)
+                {
+                    return type;
+                },
+                [](generic_type_instance type_instance)
+                {
+                    return type_instance.generic_type;
+                },
+                [](auto) -> TypeDef
+                {
+                    throw_invalid("type doesn't contain typedef");
+                }},
+            semantics);
     };
 
     TypeDef get_typedef(coded_index<TypeDefOrRef> const& type)
@@ -275,9 +309,13 @@ namespace xlang
         return get_typedef(get_type_semantics(type));
     };
 
-    bool implements_interface(TypeDef const& type, std::string_view const& ns, std::string_view const& name)
+    bool implements_interface(
+        TypeDef const& type, std::string_view const& ns, std::string_view const& name)
     {
-        auto type_name_matches = [&ns, &name](TypeDef const& td) { return td.TypeNamespace() == ns && td.TypeName() == name; };
+        auto type_name_matches = [&ns, &name](TypeDef const& td)
+        {
+            return td.TypeNamespace() == ns && td.TypeName() == name;
+        };
 
         if (get_category(type) == category::interface_type && type_name_matches(type))
             return true;
@@ -292,9 +330,11 @@ namespace xlang
         return false;
     }
 
-    bool implements_interface(TypeDef const& type, std::vector<std::tuple<std::string_view, std::string_view>> names)
+    bool implements_interface(
+        TypeDef const& type,
+        std::vector<std::tuple<std::string_view, std::string_view>> names)
     {
-        for (auto&&[ns, name] : names)
+        for (auto&& [ns, name] : names)
         {
             if (implements_interface(type, ns, name))
             {
@@ -312,7 +352,8 @@ namespace xlang
 
     bool implements_imemorybufferreference(TypeDef const& type)
     {
-        return implements_interface(type, "Windows.Foundation", "IMemoryBufferReference");
+        return implements_interface(
+            type, "Windows.Foundation", "IMemoryBufferReference");
     }
 
     bool implements_istringable(TypeDef const& type)
@@ -327,32 +368,38 @@ namespace xlang
 
     bool implements_iasync(TypeDef const& type)
     {
-        return get_category(type) == category::interface_type &&
-            implements_interface(type, {
-                std::make_tuple("Windows.Foundation", "IAsyncAction"),
-                std::make_tuple("Windows.Foundation", "IAsyncActionWithProgress`1"),
-                std::make_tuple("Windows.Foundation", "IAsyncOperation`1"),
-                std::make_tuple("Windows.Foundation", "IAsyncOperationWithProgress`2") });
+        return get_category(type) == category::interface_type
+               && implements_interface(
+                   type,
+                   {std::make_tuple("Windows.Foundation", "IAsyncAction"),
+                    std::make_tuple("Windows.Foundation", "IAsyncActionWithProgress`1"),
+                    std::make_tuple("Windows.Foundation", "IAsyncOperation`1"),
+                    std::make_tuple(
+                        "Windows.Foundation", "IAsyncOperationWithProgress`2")});
     }
 
     bool implements_iiterable(TypeDef const& type)
     {
-        return implements_interface(type, "Windows.Foundation.Collections", "IIterable`1");
+        return implements_interface(
+            type, "Windows.Foundation.Collections", "IIterable`1");
     }
 
     bool implements_iiterator(TypeDef const& type)
     {
-        return implements_interface(type, "Windows.Foundation.Collections", "IIterator`1");
+        return implements_interface(
+            type, "Windows.Foundation.Collections", "IIterator`1");
     }
 
     bool implements_ivector(TypeDef const& type)
     {
-        return implements_interface(type, "Windows.Foundation.Collections", "IVector`1");
+        return implements_interface(
+            type, "Windows.Foundation.Collections", "IVector`1");
     }
 
     bool implements_ivectorview(TypeDef const& type)
     {
-        return implements_interface(type, "Windows.Foundation.Collections", "IVectorView`1");
+        return implements_interface(
+            type, "Windows.Foundation.Collections", "IVectorView`1");
     }
 
     bool implements_imap(TypeDef const& type)
@@ -362,7 +409,8 @@ namespace xlang
 
     bool implements_imapview(TypeDef const& type)
     {
-        return implements_interface(type, "Windows.Foundation.Collections", "IMapView`2");
+        return implements_interface(
+            type, "Windows.Foundation.Collections", "IMapView`2");
     }
 
     bool implements_sequence(TypeDef const& type)
@@ -535,7 +583,8 @@ namespace xlang
     {
         auto category = get_param_category(param);
 
-        return (category == param_category::in
+        return (
+            category == param_category::in
             || category == param_category::pass_array
             // Note, fill array acts as in and out param in Python
             || category == param_category::fill_array);
@@ -545,7 +594,8 @@ namespace xlang
     {
         auto category = get_param_category(param);
 
-        return (category == param_category::out
+        return (
+            category == param_category::out
             || category == param_category::receive_array
             // Note, fill array acts as in and out param in Python
             || category == param_category::fill_array);
@@ -553,12 +603,24 @@ namespace xlang
 
     auto count_in_param(std::vector<method_signature::param_t> const& params)
     {
-        return std::count_if(params.begin(), params.end(), [](auto const& param) { return is_in_param(param); });
+        return std::count_if(
+            params.begin(),
+            params.end(),
+            [](auto const& param)
+            {
+                return is_in_param(param);
+            });
     }
 
     auto count_out_param(std::vector<method_signature::param_t> const& params)
     {
-        return std::count_if(params.begin(), params.end(), [](auto const& param) { return is_out_param(param); });
+        return std::count_if(
+            params.begin(),
+            params.end(),
+            [](auto const& param)
+            {
+                return is_out_param(param);
+            });
     }
 
     auto filter_in_params(std::vector<method_signature::param_t> const& params)
@@ -586,11 +648,12 @@ namespace xlang
     {
         if (is_constructor(method))
         {
-            return empty(method.ParamList()) ? argument_convention::no_args : argument_convention::variable_args;
+            return empty(method.ParamList()) ? argument_convention::no_args
+                                             : argument_convention::variable_args;
         }
         else if (method.SpecialName())
         {
-            method_signature signature{ method };
+            method_signature signature{method};
 
             if (signature.has_params())
             {
@@ -608,46 +671,54 @@ namespace xlang
         }
     }
 
-    type_semantics get_struct_field_semantics(Field const& field, bool convert_enum_to_underlying)
+    type_semantics get_struct_field_semantics(
+        Field const& field, bool convert_enum_to_underlying)
     {
-        return std::visit(impl::overloaded
-        {
-            [&](type_definition const& type) -> type_semantics
-            {
-                auto category = get_category(type);
-                XLANG_ASSERT(category == category::enum_type || category == category::struct_type);
-
-                if ((category == category::enum_type) && convert_enum_to_underlying)
+        return std::visit(
+            impl::overloaded{
+                [&](type_definition const& type) -> type_semantics
                 {
-                    if (is_flags_enum(type))
-                    {
-                        return fundamental_type::UInt32;
-                    }
-                    else
-                    {
-                        return fundamental_type::Int32;
-                    }
-                }
+                    auto category = get_category(type);
+                    XLANG_ASSERT(
+                        category == category::enum_type
+                        || category == category::struct_type);
 
-                return type;
-            },
-            [](generic_type_instance const& gti) -> type_semantics
-            {
-                XLANG_ASSERT((gti.generic_type.TypeNamespace() == "Windows.Foundation")
-                    && (gti.generic_type.TypeName() == "IReference`1")
-                    && gti.generic_args.size() == 1);
+                    if ((category == category::enum_type) && convert_enum_to_underlying)
+                    {
+                        if (is_flags_enum(type))
+                        {
+                            return fundamental_type::UInt32;
+                        }
+                        else
+                        {
+                            return fundamental_type::Int32;
+                        }
+                    }
 
-                return gti.generic_args[0];
-            },
-            [](auto v) -> type_semantics { return v; }
-        }, get_type_semantics(field.Signature().Type()));
+                    return type;
+                },
+                [](generic_type_instance const& gti) -> type_semantics
+                {
+                    XLANG_ASSERT(
+                        (gti.generic_type.TypeNamespace() == "Windows.Foundation")
+                        && (gti.generic_type.TypeName() == "IReference`1")
+                        && gti.generic_args.size() == 1);
+
+                    return gti.generic_args[0];
+                },
+                [](auto v) -> type_semantics
+                {
+                    return v;
+                }},
+            get_type_semantics(field.Signature().Type()));
     }
 
     bool is_customized_struct(TypeDef const& type)
     {
         if (type.TypeNamespace() == "Windows.Foundation")
         {
-            static const std::set<std::string_view> custom_structs = { "DateTime", "EventRegistrationToken", "HResult", "TimeSpan" };
+            static const std::set<std::string_view> custom_structs
+                = {"DateTime", "EventRegistrationToken", "HResult", "TimeSpan"};
 
             return custom_structs.find(type.TypeName()) != custom_structs.end();
         }
@@ -658,9 +729,8 @@ namespace xlang
     bool has_dealloc(TypeDef const& type)
     {
         auto category = get_category(type);
-        return category == category::struct_type ||
-            category == category::interface_type ||
-            (category == category::class_type && !type.Flags().Abstract());
+        return category == category::struct_type || category == category::interface_type
+               || (category == category::class_type && !type.Flags().Abstract());
     }
 
     bool is_default_constructable(TypeDef const& type)
@@ -681,14 +751,16 @@ namespace xlang
 
     bool implements_sequence_protocol(TypeDef const& type)
     {
-        return implements_interface(type, "Windows.Foundation.Collections", "IVector`1") 
-            || implements_interface(type, "Windows.Foundation.Collections", "IVectorView`1");
+        return implements_interface(type, "Windows.Foundation.Collections", "IVector`1")
+               || implements_interface(
+                   type, "Windows.Foundation.Collections", "IVectorView`1");
     }
 
     bool implements_mapping_protocol(TypeDef const& type)
     {
         return implements_interface(type, "Windows.Foundation.Collections", "IMap`2")
-            || implements_interface(type, "Windows.Foundation.Collections", "IMapView`2");
+               || implements_interface(
+                   type, "Windows.Foundation.Collections", "IMapView`2");
     }
 
     bool has_dunder_str_method(TypeDef const& type)
@@ -703,7 +775,8 @@ namespace xlang
 
     bool has_custom_conversion(TypeDef const& type)
     {
-        static const std::set<std::string_view> custom_converters = { "DateTime", "EventRegistrationToken", "HResult", "TimeSpan" };
+        static const std::set<std::string_view> custom_converters
+            = {"DateTime", "EventRegistrationToken", "HResult", "TimeSpan"};
         if (type.TypeNamespace() == "Windows.Foundation")
         {
             return custom_converters.find(type.TypeName()) != custom_converters.end();
@@ -717,4 +790,4 @@ namespace xlang
     {
         return set.find(value) != set.end();
     }
-}
+} // namespace xlang
