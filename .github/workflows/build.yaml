@@ -8,7 +8,7 @@ jobs:
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
-      - run: ./build_pywinrt_nuget.cmd
+      - run: ./scripts/build_pywinrt_nuget.cmd
       - uses: actions/upload-artifact@v2
         with:
           name: pywinrt_nuget_${{ github.run_id }}
