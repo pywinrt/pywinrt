@@ -5,7 +5,7 @@ if (${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.13")
     cmake_policy(SET CMP0076 NEW)
 endif()
 
-set(XLANG_SCRIPTS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/scripts")
+set(XLANG_SCRIPTS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../scripts")
 
 if(NOT DEFINED XLANG_BUILD_VERSION)
 set(XLANG_BUILD_VERSION "0.0.0")
@@ -87,10 +87,6 @@ function(RPATH_ORIGIN target)
         endif()
     endif()
 endfunction()
-
-
-add_custom_target(scorch COMMAND ${CMAKE_COMMAND} \"-Dfolder=${CMAKE_CURRENT_BINARY_DIR}\" -P \"${XLANG_SCRIPTS_PATH}/scorch.cmake\")
-set_target_properties(scorch PROPERTIES EXCLUDE_FROM_ALL TRUE)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
