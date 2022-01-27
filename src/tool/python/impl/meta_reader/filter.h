@@ -5,24 +5,27 @@ namespace xlang::meta::reader
     {
         filter() noexcept = default;
 
-        template <typename T>
+        template<typename T>
         filter(T const& includes, T const& excludes)
         {
             for (auto&& include : includes)
             {
-                m_rules.push_back({ include, true });
+                m_rules.push_back({include, true});
             }
 
             for (auto&& exclude : excludes)
             {
-                m_rules.push_back({ exclude, false });
+                m_rules.push_back({exclude, false});
             }
 
-            std::sort(m_rules.begin(), m_rules.end(), [](auto const& lhs, auto const& rhs)
-            {
-                auto size_compare = int(lhs.first.size()) - int(rhs.first.size());
-                return (size_compare > 0) || ((size_compare == 0) && !lhs.second);
-            });
+            std::sort(
+                m_rules.begin(),
+                m_rules.end(),
+                [](auto const& lhs, auto const& rhs)
+                {
+                    auto size_compare = int(lhs.first.size()) - int(rhs.first.size());
+                    return (size_compare > 0) || ((size_compare == 0) && !lhs.second);
+                });
         }
 
         bool includes(TypeDef const& type) const
@@ -72,7 +75,7 @@ namespace xlang::meta::reader
             return false;
         }
 
-        template <auto F>
+        template<auto F>
         auto bind_each(std::vector<TypeDef> const& types) const
         {
             return [&](auto& writer)
@@ -92,9 +95,10 @@ namespace xlang::meta::reader
             return m_rules.empty();
         }
 
-    private:
-
-        bool includes(std::string_view const& type_namespace, std::string_view const& type_name) const noexcept
+      private:
+        bool includes(
+            std::string_view const& type_namespace,
+            std::string_view const& type_name) const noexcept
         {
             if (m_rules.empty())
             {
@@ -112,7 +116,10 @@ namespace xlang::meta::reader
             return false;
         }
 
-        static bool match(std::string_view const& type_namespace, std::string_view const& type_name, std::string_view const& match) noexcept
+        static bool match(
+            std::string_view const& type_namespace,
+            std::string_view const& type_name,
+            std::string_view const& match) noexcept
         {
             if (match.size() <= type_namespace.size())
             {
@@ -134,4 +141,4 @@ namespace xlang::meta::reader
 
         std::vector<std::pair<std::string, bool>> m_rules;
     };
-}
+} // namespace xlang::meta::reader

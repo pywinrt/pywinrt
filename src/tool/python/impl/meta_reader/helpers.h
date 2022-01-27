@@ -1,13 +1,13 @@
 
 namespace xlang::meta::reader
 {
-    template <typename T>
+    template<typename T>
     bool empty(std::pair<T, T> const& range) noexcept
     {
         return range.first == range.second;
     }
 
-    template <typename T>
+    template<typename T>
     std::size_t size(std::pair<T, T> const& range) noexcept
     {
         return range.second - range.first;
@@ -15,12 +15,14 @@ namespace xlang::meta::reader
 
     inline auto find(TypeRef const& type)
     {
-        return type.get_database().get_cache().find(type.TypeNamespace(), type.TypeName());
+        return type.get_database().get_cache().find(
+            type.TypeNamespace(), type.TypeName());
     }
 
     inline auto find_required(TypeRef const& type)
     {
-        return type.get_database().get_cache().find_required(type.TypeNamespace(), type.TypeName());
+        return type.get_database().get_cache().find_required(
+            type.TypeNamespace(), type.TypeName());
     }
 
     inline TypeDef find_required(coded_index<TypeDefOrRef> const& type)
@@ -44,7 +46,8 @@ namespace xlang::meta::reader
     {
         auto is_type_const = [](auto&& type)
         {
-            return type.TypeNamespace() == "System.Runtime.CompilerServices" && type.TypeName() == "IsConst";
+            return type.TypeNamespace() == "System.Runtime.CompilerServices"
+                   && type.TypeName() == "IsConst";
         };
 
         for (auto const& cmod : param.CustomMod())
@@ -69,4 +72,4 @@ namespace xlang::meta::reader
 
         return false;
     };
-}
+} // namespace xlang::meta::reader

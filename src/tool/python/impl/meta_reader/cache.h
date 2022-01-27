@@ -26,9 +26,9 @@ namespace xlang::meta::reader
                 }
             }
 
-            for (auto&&[namespace_name, members] : m_namespaces)
+            for (auto&& [namespace_name, members] : m_namespaces)
             {
-                for (auto&&[name, type] : members.types)
+                for (auto&& [name, type] : members.types)
                 {
                     switch (get_category(type))
                     {
@@ -47,7 +47,10 @@ namespace xlang::meta::reader
                         members.enums.push_back(type);
                         continue;
                     case category::struct_type:
-                        if (get_attribute(type, "Windows.Foundation.Metadata"sv, "ApiContractAttribute"sv))
+                        if (get_attribute(
+                                type,
+                                "Windows.Foundation.Metadata"sv,
+                                "ApiContractAttribute"sv))
                         {
                             members.contracts.push_back(type);
                             continue;
@@ -62,11 +65,13 @@ namespace xlang::meta::reader
             }
         }
 
-        explicit cache(std::string const& file) : cache{ std::vector<std::string>{ file } }
+        explicit cache(std::string const& file) : cache{std::vector<std::string>{file}}
         {
         }
 
-        TypeDef find(std::string_view const& type_namespace, std::string_view const& type_name) const noexcept
+        TypeDef find(
+            std::string_view const& type_namespace,
+            std::string_view const& type_name) const noexcept
         {
             auto ns = m_namespaces.find(type_namespace);
 
@@ -91,19 +96,25 @@ namespace xlang::meta::reader
 
             if (pos == std::string_view::npos)
             {
-                throw_invalid("Type '", type_string, "' is missing a namespace qualifier");
+                throw_invalid(
+                    "Type '", type_string, "' is missing a namespace qualifier");
             }
 
-            return find(type_string.substr(0, pos), type_string.substr(pos + 1, type_string.size()));
+            return find(
+                type_string.substr(0, pos),
+                type_string.substr(pos + 1, type_string.size()));
         }
 
-        TypeDef find_required(std::string_view const& type_namespace, std::string_view const& type_name) const
+        TypeDef find_required(
+            std::string_view const& type_namespace,
+            std::string_view const& type_name) const
         {
             auto definition = find(type_namespace, type_name);
-            
+
             if (!definition)
             {
-                throw_invalid("Type '", type_namespace, ".", type_name, "' could not be found");
+                throw_invalid(
+                    "Type '", type_namespace, ".", type_name, "' could not be found");
             }
 
             return definition;
@@ -115,10 +126,13 @@ namespace xlang::meta::reader
 
             if (pos == std::string_view::npos)
             {
-                throw_invalid("Type '", type_string, "' is missing a namespace qualifier");
+                throw_invalid(
+                    "Type '", type_string, "' is missing a namespace qualifier");
             }
 
-            return find_required(type_string.substr(0, pos), type_string.substr(pos + 1, type_string.size()));
+            return find_required(
+                type_string.substr(0, pos),
+                type_string.substr(pos + 1, type_string.size()));
         }
 
         auto const& databases() const noexcept
@@ -142,7 +156,10 @@ namespace xlang::meta::reader
 
             auto remove = [&](auto&& collection, auto&& name)
             {
-                auto pos = std::find_if(collection.begin(), collection.end(), [&](auto&& type)
+                auto pos = std::find_if(
+                    collection.begin(),
+                    collection.end(),
+                    [&](auto&& type)
                     {
                         return type.TypeName() == name;
                     });
@@ -172,11 +189,11 @@ namespace xlang::meta::reader
             std::vector<TypeDef> contracts;
         };
 
-        using namespace_type = std::pair<std::string_view const, namespace_members> const&;
+        using namespace_type
+            = std::pair<std::string_view const, namespace_members> const&;
 
-    private:
-
+      private:
         std::list<database> m_databases;
         std::map<std::string_view, namespace_members> m_namespaces;
     };
-}
+} // namespace xlang::meta::reader

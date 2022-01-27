@@ -1,10 +1,11 @@
 namespace xlang::impl
 {
-    template <typename T>
+    template<typename T>
     struct AttributesBase
     {
         T value;
-    protected:
+
+      protected:
         constexpr T get_mask(T mask) const noexcept
         {
             return value & mask;
@@ -13,14 +14,14 @@ namespace xlang::impl
         {
             value = (value & ~mask) | (arg & mask);
         }
-        template <typename U>
+        template<typename U>
         constexpr U get_enum(T mask) const noexcept
         {
             static_assert(std::is_enum_v<U>);
             static_assert(std::is_same_v<T, std::underlying_type_t<U>>);
             return static_cast<U>(get_mask(mask));
         }
-        template <typename U>
+        template<typename U>
         void set_enum(U arg, T mask) noexcept
         {
             static_assert(std::is_enum_v<U>);
@@ -36,7 +37,7 @@ namespace xlang::impl
             set_mask(arg << bit, 1 << bit);
         }
     };
-}
+} // namespace xlang::impl
 
 namespace xlang::meta::reader
 {
@@ -51,8 +52,8 @@ namespace xlang::meta::reader
             set_bit(arg, WindowsRuntime_bit);
         }
 
-    private:
-        static constexpr int WindowsRuntime_bit{ 9 };
+      private:
+        static constexpr int WindowsRuntime_bit{9};
     };
 
     struct EventAttributes : impl::AttributesBase<uint16_t>
@@ -74,9 +75,9 @@ namespace xlang::meta::reader
             set_bit(arg, RTSpecialName_bit);
         }
 
-    private:
-        static constexpr int SpecialName_bit{ 9 };
-        static constexpr int RTSpecialName_bit{ 10 };
+      private:
+        static constexpr int SpecialName_bit{9};
+        static constexpr int RTSpecialName_bit{10};
     };
 
     struct FieldAttributes : impl::AttributesBase<uint16_t>
@@ -130,18 +131,18 @@ namespace xlang::meta::reader
             return get_bit(HasFieldRVA_bit);
         }
 
-    private:
-        static constexpr uint16_t Access_mask{ 0x0007 };
-        static constexpr int Static_bit{ 4 };
-        static constexpr int InitOnly_bit{ 5 };
-        static constexpr int Literal_bit{ 6 };
-        static constexpr int NotSerialized_bit{ 7 };
-        static constexpr int SpecialName_bit{ 9 };
-        static constexpr int PInvokeImpl_bit{ 13 };
-        static constexpr int RTSpecialName_bit{ 10 };
-        static constexpr int HasFieldMarshal_bit{ 12 };
-        static constexpr int HasDefault_bit{ 15 };
-        static constexpr int HasFieldRVA_bit{ 8 };
+      private:
+        static constexpr uint16_t Access_mask{0x0007};
+        static constexpr int Static_bit{4};
+        static constexpr int InitOnly_bit{5};
+        static constexpr int Literal_bit{6};
+        static constexpr int NotSerialized_bit{7};
+        static constexpr int SpecialName_bit{9};
+        static constexpr int PInvokeImpl_bit{13};
+        static constexpr int RTSpecialName_bit{10};
+        static constexpr int HasFieldMarshal_bit{12};
+        static constexpr int HasDefault_bit{15};
+        static constexpr int HasFieldRVA_bit{8};
     };
 
     struct GenericParamAttributes : impl::AttributesBase<uint16_t>
@@ -163,9 +164,9 @@ namespace xlang::meta::reader
             set_enum(arg, SpecialConstraint_mask);
         }
 
-    private:
-        static constexpr uint16_t Variance_mask{ 0x0003 };
-        static constexpr uint16_t SpecialConstraint_mask{ 0x001c };
+      private:
+        static constexpr uint16_t Variance_mask{0x0003};
+        static constexpr uint16_t SpecialConstraint_mask{0x001c};
     };
 
     struct MethodAttributes : impl::AttributesBase<uint16_t>
@@ -283,21 +284,21 @@ namespace xlang::meta::reader
             set_bit(arg, RequireSecObject_bit);
         }
 
-    private:
-        static constexpr uint16_t Access_mask{ 0x0007 };
-        static constexpr int Static_bit{ 4 };
-        static constexpr int Final_bit{ 5 };
-        static constexpr int Virtual_bit{ 6 };
-        static constexpr int HideBySig_bit{ 7 };
-        static constexpr uint16_t VtableLayout_mask{ 0x0100 };
-        static constexpr int Strict_bit{ 9 };
-        static constexpr int Abstract_bit{ 10 };
-        static constexpr int SpecialName_bit{ 11 };
-        static constexpr int PInvokeImpl_bit{ 13 };
-        static constexpr int UnmanagedExport_bit{ 3 };
-        static constexpr int RTSpecialName_bit{ 12 };
-        static constexpr int HasSecurity_bit{ 14 };
-        static constexpr int RequireSecObject_bit{ 15 };
+      private:
+        static constexpr uint16_t Access_mask{0x0007};
+        static constexpr int Static_bit{4};
+        static constexpr int Final_bit{5};
+        static constexpr int Virtual_bit{6};
+        static constexpr int HideBySig_bit{7};
+        static constexpr uint16_t VtableLayout_mask{0x0100};
+        static constexpr int Strict_bit{9};
+        static constexpr int Abstract_bit{10};
+        static constexpr int SpecialName_bit{11};
+        static constexpr int PInvokeImpl_bit{13};
+        static constexpr int UnmanagedExport_bit{3};
+        static constexpr int RTSpecialName_bit{12};
+        static constexpr int HasSecurity_bit{14};
+        static constexpr int RequireSecObject_bit{15};
     };
 
     struct MethodImplAttributes : impl::AttributesBase<uint16_t>
@@ -367,16 +368,19 @@ namespace xlang::meta::reader
             set_bit(arg, NoOptimization_bit);
         }
 
-    private:
-        static constexpr uint16_t CodeType_mask{ 0x0003 };
-        static constexpr uint16_t Managed_mask{ 0x0004 };
-        static constexpr int ForwardRef_bit{ 4 }; // Method is defined; used primarily in merge scenarios
-        static constexpr int PreserveSig_bit{ 7 }; // Reserved
-        static constexpr int InternalCall_bit{ 12 }; // Reserved
-        static constexpr int Synchronized_bit{ 5 }; // Method is single threaded through the body
-        static constexpr int NoInlining_bit{ 3 }; // Method cannot be inlined
-        static constexpr int NoOptimization_bit{ 6 }; // Method will not be optimized when generatinv native code
-        static constexpr uint16_t MaxMethodImplVal{ 0xffff }; // Range check value
+      private:
+        static constexpr uint16_t CodeType_mask{0x0003};
+        static constexpr uint16_t Managed_mask{0x0004};
+        static constexpr int ForwardRef_bit{
+            4}; // Method is defined; used primarily in merge scenarios
+        static constexpr int PreserveSig_bit{7};   // Reserved
+        static constexpr int InternalCall_bit{12}; // Reserved
+        static constexpr int Synchronized_bit{
+            5}; // Method is single threaded through the body
+        static constexpr int NoInlining_bit{3}; // Method cannot be inlined
+        static constexpr int NoOptimization_bit{
+            6}; // Method will not be optimized when generatinv native code
+        static constexpr uint16_t MaxMethodImplVal{0xffff}; // Range check value
     };
 
     struct MethodSemanticsAttributes : impl::AttributesBase<uint16_t>
@@ -430,13 +434,13 @@ namespace xlang::meta::reader
             set_bit(arg, Fire_bit);
         }
 
-    private:
-        static constexpr int Setter_bit{ 0 };
-        static constexpr int Getter_bit{ 1 };
-        static constexpr int Other_bit{ 2 };
-        static constexpr int AddOn_bit{ 3 };
-        static constexpr int RemoveOn_bit{ 4 };
-        static constexpr int Fire_bit{ 5 };
+      private:
+        static constexpr int Setter_bit{0};
+        static constexpr int Getter_bit{1};
+        static constexpr int Other_bit{2};
+        static constexpr int AddOn_bit{3};
+        static constexpr int RemoveOn_bit{4};
+        static constexpr int Fire_bit{5};
     };
 
     struct ParamAttributes : impl::AttributesBase<uint16_t>
@@ -482,13 +486,13 @@ namespace xlang::meta::reader
             set_bit(arg, HasFieldMarshal_bit);
         }
 
-    private:
-        static constexpr int In_bit{ 0 };
-        static constexpr int Out_bit{ 1 };
-        static constexpr int Optional_bit{ 4 };
-        static constexpr int HasDefault_bit{ 12 };
-        static constexpr int HasFieldMarshal_bit{ 13 };
-        static constexpr uint16_t Unused_mask{ 0xcfe0 };
+      private:
+        static constexpr int In_bit{0};
+        static constexpr int Out_bit{1};
+        static constexpr int Optional_bit{4};
+        static constexpr int HasDefault_bit{12};
+        static constexpr int HasFieldMarshal_bit{13};
+        static constexpr uint16_t Unused_mask{0xcfe0};
     };
 
     struct PropertyAttributes : impl::AttributesBase<uint16_t>
@@ -518,11 +522,11 @@ namespace xlang::meta::reader
             set_bit(arg, HasDefault_bit);
         }
 
-    private:
-        static constexpr int SpecialName_bit{ 9 };
-        static constexpr int RTSpecialName_bit{ 10 };
-        static constexpr int HasDefault_bit{ 12 };
-        static constexpr uint16_t Unused_mask{ 0xe9ff };
+      private:
+        static constexpr int SpecialName_bit{9};
+        static constexpr int RTSpecialName_bit{10};
+        static constexpr int HasDefault_bit{12};
+        static constexpr uint16_t Unused_mask{0xe9ff};
     };
 
     struct TypeAttributes : impl::AttributesBase<uint32_t>
@@ -640,20 +644,20 @@ namespace xlang::meta::reader
             set_bit(arg, IsTypeForwarder_bit);
         }
 
-    private:
-        static constexpr uint32_t Visibility_mask{ 0x00000007 };
-        static constexpr uint32_t Layout_mask{ 0x00000018 };
-        static constexpr uint32_t Semantics_mask{ 0x00000020 };
-        static constexpr int Abstract_bit{ 7 };
-        static constexpr int Sealed_bit{ 8 };
-        static constexpr int SpecialName_bit{ 10 };
-        static constexpr int Import_bit{ 12 };
-        static constexpr int Serializable_bit{ 13 };
-        static constexpr int WindowsRuntime_bit{ 14 };
-        static constexpr uint32_t StringFormat_mask{ 0x00030000 };
-        static constexpr int BeforeFieldInit_bit{ 20 };
-        static constexpr int RTSpecialName_bit{ 11 };
-        static constexpr int HasSecurity_bit{ 18 };
-        static constexpr int IsTypeForwarder_bit{ 21 };
+      private:
+        static constexpr uint32_t Visibility_mask{0x00000007};
+        static constexpr uint32_t Layout_mask{0x00000018};
+        static constexpr uint32_t Semantics_mask{0x00000020};
+        static constexpr int Abstract_bit{7};
+        static constexpr int Sealed_bit{8};
+        static constexpr int SpecialName_bit{10};
+        static constexpr int Import_bit{12};
+        static constexpr int Serializable_bit{13};
+        static constexpr int WindowsRuntime_bit{14};
+        static constexpr uint32_t StringFormat_mask{0x00030000};
+        static constexpr int BeforeFieldInit_bit{20};
+        static constexpr int RTSpecialName_bit{11};
+        static constexpr int HasSecurity_bit{18};
+        static constexpr int IsTypeForwarder_bit{21};
     };
-}
+} // namespace xlang::meta::reader

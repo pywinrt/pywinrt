@@ -11,22 +11,23 @@ namespace xlang::meta::reader
             case MemberRefParent::TypeDef:
             {
                 auto const& def = member_parent.TypeDef();
-                return std::pair{ def.TypeNamespace(), def.TypeName() };
+                return std::pair{def.TypeNamespace(), def.TypeName()};
             }
 
             case MemberRefParent::TypeRef:
             {
                 auto const& ref = member_parent.TypeRef();
-                return std::pair{ ref.TypeNamespace(), ref.TypeName() };
+                return std::pair{ref.TypeNamespace(), ref.TypeName()};
             }
             default:
-                throw_invalid("A CustomAttribute MemberRef should only be a TypeDef or TypeRef");
+                throw_invalid(
+                    "A CustomAttribute MemberRef should only be a TypeDef or TypeRef");
             }
         }
         else
         {
             auto const& def = Type().MethodDef().Parent();
-            return std::pair{ def.TypeNamespace(), def.TypeName() };
+            return std::pair{def.TypeNamespace(), def.TypeName()};
         }
     }
 
@@ -40,40 +41,69 @@ namespace xlang::meta::reader
         struct EnumValue
         {
             EnumDefinition type;
-            using value_type = std::variant<bool, char16_t, uint8_t, int8_t, uint16_t, int16_t, uint32_t, int32_t, uint64_t, int64_t>;
+            using value_type = std::variant<
+                bool,
+                char16_t,
+                uint8_t,
+                int8_t,
+                uint16_t,
+                int16_t,
+                uint32_t,
+                int32_t,
+                uint64_t,
+                int64_t>;
             value_type value;
 
             bool equals_enumerator(std::string_view const& name) const
             {
                 auto field = type.get_enumerator(name);
-                auto constant_value = std::visit([](auto&& v) { return Constant::constant_type{ v }; }, value);
+                auto constant_value = std::visit(
+                    [](auto&& v)
+                    {
+                        return Constant::constant_type{v};
+                    },
+                    value);
                 return field.Constant().Value() == constant_value;
             }
         };
 
-        using value_type = std::variant<bool, char16_t, uint8_t, int8_t, uint16_t, int16_t, uint32_t, int32_t, uint64_t, int64_t, float, double, std::string_view, SystemType, EnumValue>;
+        using value_type = std::variant<
+            bool,
+            char16_t,
+            uint8_t,
+            int8_t,
+            uint16_t,
+            int16_t,
+            uint32_t,
+            int32_t,
+            uint64_t,
+            int64_t,
+            float,
+            double,
+            std::string_view,
+            SystemType,
+            EnumValue>;
 
         ElemSig(database const& db, ParamSig const& param, byte_view& data)
-            : value{ read_element(db, param, data) }
+            : value{read_element(db, param, data)}
         {
         }
 
-        ElemSig(SystemType type)
-            : value(type)
+        ElemSig(SystemType type) : value(type)
         {
         }
 
         ElemSig(EnumDefinition const& enum_def, byte_view& data)
-            : value{ EnumValue{enum_def, read_enum(enum_def.m_underlying_type, data) } }
+            : value{EnumValue{enum_def, read_enum(enum_def.m_underlying_type, data)}}
         {
         }
 
-        ElemSig(ElementType type, byte_view& data)
-            : value{ read_primitive(type, data) }
+        ElemSig(ElementType type, byte_view& data) : value{read_primitive(type, data)}
         {
         }
 
-        static value_type read_element(database const& db, ParamSig const& param, byte_view& data)
+        static value_type read_element(
+            database const& db, ParamSig const& param, byte_view& data)
         {
             auto const& type = param.Type().Type();
             if (auto element_type = std::get_if<ElementType>(&type))
@@ -82,10 +112,14 @@ namespace xlang::meta::reader
             }
             else if (auto type_index = std::get_if<coded_index<TypeDefOrRef>>(&type))
             {
-                if ((type_index->type() == TypeDefOrRef::TypeRef && type_index->TypeRef().TypeNamespace() == "System" && type_index->TypeRef().TypeName() == "Type") ||
-                    (type_index->type() == TypeDefOrRef::TypeDef && type_index->TypeDef().TypeNamespace() == "System" && type_index->TypeDef().TypeName() == "Type"))
+                if ((type_index->type() == TypeDefOrRef::TypeRef
+                     && type_index->TypeRef().TypeNamespace() == "System"
+                     && type_index->TypeRef().TypeName() == "Type")
+                    || (type_index->type() == TypeDefOrRef::TypeDef
+                        && type_index->TypeDef().TypeNamespace() == "System"
+                        && type_index->TypeDef().TypeName() == "Type"))
                 {
-                    return SystemType{ read<std::string_view>(data) };
+                    return SystemType{read<std::string_view>(data)};
                 }
                 else
                 {
@@ -97,19 +131,23 @@ namespace xlang::meta::reader
                             return type_index->TypeDef();
                         }
                         auto const& typeref = type_index->TypeRef();
-                        return db.get_cache().find_required(typeref.TypeNamespace(), typeref.TypeName());
+                        return db.get_cache().find_required(
+                            typeref.TypeNamespace(), typeref.TypeName());
                     };
                     TypeDef const& enum_type = resolve_type();
                     if (!enum_type.is_enum())
                     {
-                        throw_invalid("CustomAttribute params that are TypeDefOrRef must be an enum or System.Type");
+                        throw_invalid(
+                            "CustomAttribute params that are TypeDefOrRef must be an enum or System.Type");
                     }
 
                     auto const& enum_def = enum_type.get_enum_definition();
-                    return EnumValue{ enum_def, read_enum(enum_def.m_underlying_type, data) };
+                    return EnumValue{
+                        enum_def, read_enum(enum_def.m_underlying_type, data)};
                 }
             }
-            throw_invalid("Custom attribute params must be primitives, enums, or System.Type");
+            throw_invalid(
+                "Custom attribute params must be primitives, enums, or System.Type");
         }
 
         static value_type read_primitive(ElementType type, byte_view& data)
@@ -207,22 +245,26 @@ namespace xlang::meta::reader
         using value_type = std::variant<ElemSig, std::vector<ElemSig>>;
 
         FixedArgSig(database const& db, ParamSig const& ctor_param, byte_view& data)
-            : value{ read_arg(db, ctor_param, data) }
-        {}
+            : value{read_arg(db, ctor_param, data)}
+        {
+        }
 
-        FixedArgSig(ElemSig::SystemType type)
-            : value{ ElemSig{type} }
-        {}
+        FixedArgSig(ElemSig::SystemType type) : value{ElemSig{type}}
+        {
+        }
 
         FixedArgSig(EnumDefinition const& enum_def, byte_view& data)
-            : value{ ElemSig{ enum_def, data } }
-        {}
+            : value{ElemSig{enum_def, data}}
+        {
+        }
 
         FixedArgSig(ElementType type, bool is_array, byte_view& data)
-            : value{ read_arg(type, is_array, data) }
-        {}
+            : value{read_arg(type, is_array, data)}
+        {
+        }
 
-        static value_type read_arg(database const& db, ParamSig const& ctor_param, byte_view& data)
+        static value_type read_arg(
+            database const& db, ParamSig const& ctor_param, byte_view& data)
         {
             auto const& type_sig = ctor_param.Type();
             if (type_sig.is_szarray())
@@ -245,7 +287,7 @@ namespace xlang::meta::reader
             }
             else
             {
-                return ElemSig{ db, ctor_param, data };
+                return ElemSig{db, ctor_param, data};
             }
         }
 
@@ -271,7 +313,7 @@ namespace xlang::meta::reader
             }
             else
             {
-                return ElemSig{ type, data };
+                return ElemSig{type, data};
             }
         }
 
@@ -280,18 +322,19 @@ namespace xlang::meta::reader
 
     struct NamedArgSig
     {
-        NamedArgSig(database const& db, byte_view& data)
-            : value{ parse_value(db, data) }
-        {}
+        NamedArgSig(database const& db, byte_view& data) : value{parse_value(db, data)}
+        {
+        }
 
         std::string_view name;
         FixedArgSig value;
 
-    private:
+      private:
         FixedArgSig parse_value(database const& db, byte_view& data)
         {
             auto const field_or_prop = read<ElementType>(data);
-            if (field_or_prop != ElementType::Field && field_or_prop != ElementType::Property)
+            if (field_or_prop != ElementType::Field
+                && field_or_prop != ElementType::Property)
             {
                 throw_invalid("NamedArg must be either FIELD or PROPERTY");
             }
@@ -301,7 +344,7 @@ namespace xlang::meta::reader
             {
             case ElementType::Type:
                 name = read<std::string_view>(data);
-                return FixedArgSig{ ElemSig::SystemType{read<std::string_view>(data)} };
+                return FixedArgSig{ElemSig::SystemType{read<std::string_view>(data)}};
 
             case ElementType::Enum:
             {
@@ -310,14 +353,16 @@ namespace xlang::meta::reader
                 auto type_def = db.get_cache().find(type_string);
                 if (!type_def)
                 {
-                    throw_invalid("CustomAttribute named param referenced unresolved enum type");
+                    throw_invalid(
+                        "CustomAttribute named param referenced unresolved enum type");
                 }
                 if (!type_def.is_enum())
                 {
-                    throw_invalid("CustomAttribute named param referenced non-enum type");
+                    throw_invalid(
+                        "CustomAttribute named param referenced non-enum type");
                 }
 
-                return FixedArgSig{ type_def.get_enum_definition(), data };
+                return FixedArgSig{type_def.get_enum_definition(), data};
             }
 
             default:
@@ -329,10 +374,11 @@ namespace xlang::meta::reader
                 }
                 if (type < ElementType::Boolean || ElementType::String < type)
                 {
-                    throw_invalid("CustomAttribute named param must be a primitive, System.Type, or an Enum");
+                    throw_invalid(
+                        "CustomAttribute named param must be a primitive, System.Type, or an Enum");
                 }
                 name = read<std::string_view>(data);
-                return FixedArgSig{ type, is_array, data };
+                return FixedArgSig{type, is_array, data};
             }
             }
         }
@@ -340,7 +386,8 @@ namespace xlang::meta::reader
 
     struct CustomAttributeSig
     {
-        CustomAttributeSig(table_base const* table, byte_view& data, MethodDefSig const& ctor)
+        CustomAttributeSig(
+            table_base const* table, byte_view& data, MethodDefSig const& ctor)
         {
             database const& db = table->get_database();
             auto const prolog = read<uint16_t>(data);
@@ -351,7 +398,7 @@ namespace xlang::meta::reader
 
             for (auto const& param : ctor.Params())
             {
-                m_fixed_args.push_back(FixedArgSig{ db, param, data });
+                m_fixed_args.push_back(FixedArgSig{db, param, data});
             }
 
             const auto num_named_args = read<uint16_t>(data);
@@ -367,10 +414,16 @@ namespace xlang::meta::reader
             }
         }
 
-        std::vector<FixedArgSig> const& FixedArgs() const noexcept { return m_fixed_args; }
-        std::vector<NamedArgSig> const& NamedArgs() const noexcept { return m_named_args; }
+        std::vector<FixedArgSig> const& FixedArgs() const noexcept
+        {
+            return m_fixed_args;
+        }
+        std::vector<NamedArgSig> const& NamedArgs() const noexcept
+        {
+            return m_named_args;
+        }
 
-    private:
+      private:
         std::vector<FixedArgSig> m_fixed_args;
         std::vector<NamedArgSig> m_named_args;
     };
@@ -378,8 +431,10 @@ namespace xlang::meta::reader
     inline auto CustomAttribute::Value() const
     {
         auto const ctor = Type();
-        MethodDefSig const& method_sig = ctor.type() == CustomAttributeType::MemberRef ? ctor.MemberRef().MethodSignature() : ctor.MethodDef().Signature();
+        MethodDefSig const& method_sig = ctor.type() == CustomAttributeType::MemberRef
+                                             ? ctor.MemberRef().MethodSignature()
+                                             : ctor.MethodDef().Signature();
         auto cursor = get_blob(2);
-        return CustomAttributeSig{ get_table(), cursor, method_sig };
+        return CustomAttributeSig{get_table(), cursor, method_sig};
     }
-}
+} // namespace xlang::meta::reader

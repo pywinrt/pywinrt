@@ -22,7 +22,7 @@ namespace xlang::impl
         uint16_t e_oemid;
         uint16_t e_oeminfo;
         uint16_t e_res2[10];
-        int32_t  e_lfanew;
+        int32_t e_lfanew;
     };
 
     struct image_file_header
@@ -125,7 +125,8 @@ namespace xlang::impl
         image_optional_header32plus OptionalHeader;
     };
 
-    struct image_section_header {
+    struct image_section_header
+    {
         uint8_t Name[8]; // IMAGE_SIZEOF_SHORT_NAME
         union
         {
@@ -161,4 +162,4 @@ namespace xlang::impl
         image_data_directory ExportAddressTableJumps;
         image_data_directory ManagedNativeHeader;
     };
-}
+} // namespace xlang::impl

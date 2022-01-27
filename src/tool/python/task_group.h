@@ -19,7 +19,7 @@ namespace xlang
             }
         }
 
-        template <typename T>
+        template<typename T>
         void add(T&& callback)
         {
 #if defined(XLANG_DEBUG)
@@ -44,8 +44,7 @@ namespace xlang
             }
         }
 
-    private:
-
+      private:
         std::vector<std::future<void>> m_tasks;
     };
-}
+} // namespace xlang

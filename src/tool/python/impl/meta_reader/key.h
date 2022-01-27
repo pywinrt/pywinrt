@@ -1,8 +1,8 @@
 
 namespace xlang::meta::reader
 {
-    template <typename T>
-    template <typename Row>
+    template<typename T>
+    template<typename Row>
     Row index_base<T>::get_row() const
     {
         XLANG_ASSERT(type() == (index_tag_v<T, Row>));
@@ -121,8 +121,7 @@ namespace xlang::meta::reader
 
     struct EnumDefinition
     {
-        explicit EnumDefinition(TypeDef const& type)
-            : m_typedef(type)
+        explicit EnumDefinition(TypeDef const& type) : m_typedef(type)
         {
             XLANG_ASSERT(type.is_enum());
             for (auto field : type.FieldList())
@@ -130,8 +129,11 @@ namespace xlang::meta::reader
                 if (!field.Flags().Literal() && !field.Flags().Static())
                 {
                     XLANG_ASSERT(m_underlying_type == ElementType::End);
-                    m_underlying_type = std::get<ElementType>(field.Signature().Type().Type());
-                    XLANG_ASSERT(ElementType::Boolean <= m_underlying_type && m_underlying_type <= ElementType::U8);
+                    m_underlying_type
+                        = std::get<ElementType>(field.Signature().Type().Type());
+                    XLANG_ASSERT(
+                        ElementType::Boolean <= m_underlying_type
+                        && m_underlying_type <= ElementType::U8);
                 }
             }
         }
@@ -140,10 +142,13 @@ namespace xlang::meta::reader
         {
             auto fields = m_typedef.FieldList();
 
-            auto field = std::find_if(begin(fields), end(fields), [&](auto&& field)
-            {
-                return field.Name() == name;
-            });
+            auto field = std::find_if(
+                begin(fields),
+                end(fields),
+                [&](auto&& field)
+                {
+                    return field.Name() == name;
+                });
 
             XLANG_ASSERT(field != end(fields));
             return field;
@@ -151,16 +156,18 @@ namespace xlang::meta::reader
 
         TypeDef m_typedef;
         ElementType m_underlying_type{};
-    
     };
 
     inline auto TypeDef::get_enum_definition() const
     {
-        return EnumDefinition{ *this };
+        return EnumDefinition{*this};
     }
 
-    template <typename T>
-    CustomAttribute get_attribute(T const& row, std::string_view const& type_namespace, std::string_view const& type_name)
+    template<typename T>
+    CustomAttribute get_attribute(
+        T const& row,
+        std::string_view const& type_namespace,
+        std::string_view const& type_name)
     {
         for (auto&& attribute : row.CustomAttribute())
         {
@@ -174,4 +181,4 @@ namespace xlang::meta::reader
 
         return {};
     }
-}
+} // namespace xlang::meta::reader

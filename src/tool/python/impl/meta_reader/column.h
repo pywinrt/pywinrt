@@ -1,8 +1,8 @@
 
 namespace xlang::meta::reader
 {
-    template <typename Row>
-    template <typename T>
+    template<typename Row>
+    template<typename T>
     auto row_base<Row>::get_list(uint32_t const column) const
     {
         auto const& my_table = get_database().template get_table<Row>();
@@ -12,20 +12,21 @@ namespace xlang::meta::reader
         auto last = target_table.end();
         if (index() + 1 < my_table.size())
         {
-            last = target_table.begin() + my_table[index() + 1].template get_value<uint32_t>(column) - 1;
+            last = target_table.begin()
+                   + my_table[index() + 1].template get_value<uint32_t>(column) - 1;
         }
-        return std::pair{ first, last };
+        return std::pair{first, last};
     }
 
-    template <typename Row>
-    template <typename T>
+    template<typename Row>
+    template<typename T>
     auto row_base<Row>::get_target_row(uint32_t const column) const
     {
         return get_database().template get_table<T>()[get_value<uint32_t>(column) - 1];
     }
 
-    template <typename Row>
-    template <typename T, uint32_t ParentColumn>
+    template<typename Row>
+    template<typename T, uint32_t ParentColumn>
     auto row_base<Row>::get_parent_row() const
     {
         struct compare
@@ -57,12 +58,14 @@ namespace xlang::meta::reader
     {
         struct compare
         {
-            bool operator()(uint32_t const left, reader::InterfaceImpl const& right) noexcept
+            bool operator()(
+                uint32_t const left, reader::InterfaceImpl const& right) noexcept
             {
                 return left < right.get_value<uint32_t>(0);
             }
 
-            bool operator()(reader::InterfaceImpl const& left, uint32_t const right) noexcept
+            bool operator()(
+                reader::InterfaceImpl const& left, uint32_t const right) noexcept
             {
                 return left.get_value<uint32_t>(0) < right;
             }
@@ -113,7 +116,9 @@ namespace xlang::meta::reader
 
     inline auto Property::MethodSemantic() const
     {
-        return equal_range(get_database().get_table<reader::MethodSemantics>(), coded_index<HasSemantics>());
+        return equal_range(
+            get_database().get_table<reader::MethodSemantics>(),
+            coded_index<HasSemantics>());
     }
 
     inline auto Property::Parent() const
@@ -138,7 +143,9 @@ namespace xlang::meta::reader
 
     inline auto Event::MethodSemantic() const
     {
-        return equal_range(get_database().get_table<reader::MethodSemantics>(), coded_index<HasSemantics>());
+        return equal_range(
+            get_database().get_table<reader::MethodSemantics>(),
+            coded_index<HasSemantics>());
     }
 
     inline auto Event::Parent() const
@@ -150,14 +157,17 @@ namespace xlang::meta::reader
     {
         auto const& map = get_database().get_table<PropertyMap>();
         auto index = this->index() + 1;
-        auto iter = std::find_if(map.begin(), map.end(), [index](PropertyMap const& elem)
-        {
-            return elem.get_value<uint32_t>(0) == index;
-        });
+        auto iter = std::find_if(
+            map.begin(),
+            map.end(),
+            [index](PropertyMap const& elem)
+            {
+                return elem.get_value<uint32_t>(0) == index;
+            });
         if (iter == map.end())
         {
             auto const& props = get_database().get_table<Property>();
-            return std::pair{ props.end(), props.end() };
+            return std::pair{props.end(), props.end()};
         }
         else
         {
@@ -169,14 +179,17 @@ namespace xlang::meta::reader
     {
         auto const& map = get_database().get_table<EventMap>();
         auto index = this->index() + 1;
-        auto iter = std::find_if(map.begin(), map.end(), [index](EventMap const& elem)
-        {
-            return elem.get_value<uint32_t>(0) == index;
-        });
+        auto iter = std::find_if(
+            map.begin(),
+            map.end(),
+            [index](EventMap const& elem)
+            {
+                return elem.get_value<uint32_t>(0) == index;
+            });
         if (iter == map.end())
         {
             auto const& props = get_database().get_table<Event>();
-            return std::pair{ props.end(), props.end() };
+            return std::pair{props.end(), props.end()};
         }
         else
         {
@@ -197,12 +210,14 @@ namespace xlang::meta::reader
                 return lhs < rhs.get_value<uint32_t>(1);
             }
         };
-        return equal_range(get_database().get_table<MethodImpl>(), index() + 1, compare{});
+        return equal_range(
+            get_database().get_table<MethodImpl>(), index() + 1, compare{});
     }
 
     inline auto Field::Constant() const
     {
-        auto const range = equal_range(get_database().Constant, coded_index<HasConstant>());
+        auto const range
+            = equal_range(get_database().Constant, coded_index<HasConstant>());
         reader::Constant result;
         if (range.second != range.first)
         {
@@ -214,7 +229,8 @@ namespace xlang::meta::reader
 
     inline auto Param::Constant() const
     {
-        auto const range = equal_range(get_database().Constant, coded_index<HasConstant>());
+        auto const range
+            = equal_range(get_database().Constant, coded_index<HasConstant>());
         reader::Constant result;
         if (range.second != range.first)
         {
@@ -226,7 +242,8 @@ namespace xlang::meta::reader
 
     inline auto Property::Constant() const
     {
-        auto const range = equal_range(get_database().Constant, coded_index<HasConstant>());
+        auto const range
+            = equal_range(get_database().Constant, coded_index<HasConstant>());
         reader::Constant result;
         if (range.second != range.first)
         {
@@ -365,107 +382,149 @@ namespace xlang::meta::reader
 
     inline auto MethodDef::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto Field::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto TypeRef::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto TypeDef::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto Param::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto InterfaceImpl::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto MemberRef::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto Module::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto Property::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto Event::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto StandAloneSig::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto ModuleRef::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto TypeSpec::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto Assembly::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto AssemblyRef::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto File::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto ExportedType::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto ManifestResource::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto GenericParam::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto GenericParamConstraint::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     inline auto MethodSpec::CustomAttribute() const
     {
-        return equal_range(get_database().get_table<reader::CustomAttribute>(), coded_index<HasCustomAttribute>());
+        return equal_range(
+            get_database().get_table<reader::CustomAttribute>(),
+            coded_index<HasCustomAttribute>());
     }
 
     struct AssemblyVersion
@@ -479,13 +538,21 @@ namespace xlang::meta::reader
     inline auto Assembly::Version() const
     {
         auto const temp = get_value<uint64_t>(1);
-        return AssemblyVersion{ static_cast<uint16_t>(temp & 0xffff), static_cast<uint16_t>((temp >> 16) & 0xffff), static_cast<uint16_t>((temp >> 32) & 0xffff), static_cast<uint16_t>((temp >> 48) & 0xffff) };
+        return AssemblyVersion{
+            static_cast<uint16_t>(temp & 0xffff),
+            static_cast<uint16_t>((temp >> 16) & 0xffff),
+            static_cast<uint16_t>((temp >> 32) & 0xffff),
+            static_cast<uint16_t>((temp >> 48) & 0xffff)};
     }
 
     inline auto AssemblyRef::Version() const
     {
         auto const temp = get_value<uint64_t>(0);
-        return AssemblyVersion{ static_cast<uint16_t>(temp & 0xffff), static_cast<uint16_t>((temp >> 16) & 0xffff), static_cast<uint16_t>((temp >> 32) & 0xffff), static_cast<uint16_t>((temp >> 48) & 0xffff) };
+        return AssemblyVersion{
+            static_cast<uint16_t>(temp & 0xffff),
+            static_cast<uint16_t>((temp >> 16) & 0xffff),
+            static_cast<uint16_t>((temp >> 32) & 0xffff),
+            static_cast<uint16_t>((temp >> 48) & 0xffff)};
     }
 
     inline auto AssemblyRefOS::AssemblyRef() const
@@ -502,4 +569,4 @@ namespace xlang::meta::reader
     {
         return get_target_row<TypeDef>(2);
     }
-}
+} // namespace xlang::meta::reader

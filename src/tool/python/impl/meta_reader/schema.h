@@ -48,7 +48,7 @@ namespace xlang::meta::reader
 
         auto Flags() const
         {
-            return TypeAttributes{{ get_value<uint32_t>(0) }};
+            return TypeAttributes{{get_value<uint32_t>(0)}};
         }
 
         auto TypeName() const
@@ -91,12 +91,12 @@ namespace xlang::meta::reader
 
         auto ImplFlags() const
         {
-            return MethodImplAttributes{{ get_value<uint16_t>(1) }};
+            return MethodImplAttributes{{get_value<uint16_t>(1)}};
         }
 
         auto Flags() const
         {
-            return MethodAttributes{{ get_value<uint16_t>(2) }};
+            return MethodAttributes{{get_value<uint16_t>(2)}};
         }
 
         auto Name() const
@@ -107,7 +107,7 @@ namespace xlang::meta::reader
         MethodDefSig Signature() const
         {
             auto cursor = get_blob(4);
-            return{ get_table(), cursor };
+            return {get_table(), cursor};
         }
 
         auto ParamList() const;
@@ -138,7 +138,7 @@ namespace xlang::meta::reader
         MethodDefSig MethodSignature() const
         {
             auto cursor = get_blob(2);
-            return{ get_table(), cursor };
+            return {get_table(), cursor};
         }
 
         auto CustomAttribute() const;
@@ -162,7 +162,7 @@ namespace xlang::meta::reader
 
         auto Flags() const
         {
-            return FieldAttributes{{ get_value<uint16_t>(0) }};
+            return FieldAttributes{{get_value<uint16_t>(0)}};
         }
 
         auto Name() const
@@ -173,7 +173,7 @@ namespace xlang::meta::reader
         auto Signature() const
         {
             auto cursor = get_blob(2);
-            return FieldSig{ get_table(), cursor };
+            return FieldSig{get_table(), cursor};
         }
 
         auto CustomAttribute() const;
@@ -187,7 +187,7 @@ namespace xlang::meta::reader
 
         auto Flags() const
         {
-            return ParamAttributes{{ get_value<uint16_t>(0) }};
+            return ParamAttributes{{get_value<uint16_t>(0)}};
         }
 
         auto Sequence() const
@@ -222,7 +222,21 @@ namespace xlang::meta::reader
     {
         using row_base::row_base;
 
-        using constant_type = std::variant<bool, char16_t, int8_t, uint8_t, int16_t, uint16_t, int32_t, uint32_t, int64_t, uint64_t, float, double, std::string_view, std::nullptr_t>;
+        using constant_type = std::variant<
+            bool,
+            char16_t,
+            int8_t,
+            uint8_t,
+            int16_t,
+            uint16_t,
+            int32_t,
+            uint32_t,
+            int64_t,
+            uint64_t,
+            float,
+            double,
+            std::string_view,
+            std::nullptr_t>;
 
         auto Type() const
         {
@@ -264,7 +278,7 @@ namespace xlang::meta::reader
         TypeSpecSig Signature() const
         {
             auto cursor = get_blob(0);
-            return{ get_table(), cursor };
+            return {get_table(), cursor};
         }
 
         auto CustomAttribute() const;
@@ -318,7 +332,7 @@ namespace xlang::meta::reader
 
         auto EventFlags() const
         {
-            return EventAttributes{{ get_value<uint16_t>(0) }};
+            return EventAttributes{{get_value<uint16_t>(0)}};
         }
 
         auto Name() const
@@ -350,7 +364,7 @@ namespace xlang::meta::reader
 
         auto Flags() const
         {
-            return PropertyAttributes{{ get_value<uint16_t>(0) }};
+            return PropertyAttributes{{get_value<uint16_t>(0)}};
         }
 
         auto Name() const
@@ -361,7 +375,7 @@ namespace xlang::meta::reader
         PropertySig Type() const
         {
             auto cursor = get_blob(2);
-            return{ get_table(), cursor };
+            return {get_table(), cursor};
         }
 
         auto MethodSemantic() const;
@@ -376,7 +390,7 @@ namespace xlang::meta::reader
 
         auto Semantic() const
         {
-            return MethodSemanticsAttributes{{ get_value<uint16_t>(0) }};
+            return MethodSemanticsAttributes{{get_value<uint16_t>(0)}};
         }
 
         auto Method() const;
@@ -434,7 +448,7 @@ namespace xlang::meta::reader
 
         auto Flags() const
         {
-            return AssemblyAttributes{{ get_value<uint32_t>(2) }};
+            return AssemblyAttributes{{get_value<uint32_t>(2)}};
         }
 
         auto PublicKey() const
@@ -493,7 +507,7 @@ namespace xlang::meta::reader
 
         auto Flags() const
         {
-            return AssemblyAttributes{{ get_value<uint32_t>(1) }};
+            return AssemblyAttributes{{get_value<uint32_t>(1)}};
         }
 
         auto PublicKeyOrToken() const
@@ -590,7 +604,7 @@ namespace xlang::meta::reader
 
         auto Flags() const
         {
-            return GenericParamAttributes{{ get_value<uint16_t>(1) }};
+            return GenericParamAttributes{{get_value<uint16_t>(1)}};
         }
 
         auto Owner() const
@@ -620,43 +634,53 @@ namespace xlang::meta::reader
         auto CustomAttribute() const;
     };
 
-    inline bool operator<(coded_index<HasCustomAttribute> const& left, CustomAttribute const& right) noexcept
+    inline bool operator<(
+        coded_index<HasCustomAttribute> const& left,
+        CustomAttribute const& right) noexcept
     {
         return left < right.Parent();
     }
 
-    inline bool operator<(CustomAttribute const& left, coded_index<HasCustomAttribute> const& right) noexcept
+    inline bool operator<(
+        CustomAttribute const& left,
+        coded_index<HasCustomAttribute> const& right) noexcept
     {
         return left.Parent() < right;
     }
 
-    inline bool operator<(coded_index<TypeOrMethodDef> const& left, GenericParam const& right) noexcept
+    inline bool operator<(
+        coded_index<TypeOrMethodDef> const& left, GenericParam const& right) noexcept
     {
         return left < right.Owner();
     }
 
-    inline bool operator<(GenericParam const& left, coded_index<TypeOrMethodDef> const& right) noexcept
+    inline bool operator<(
+        GenericParam const& left, coded_index<TypeOrMethodDef> const& right) noexcept
     {
         return left.Owner() < right;
     }
 
-    inline bool operator<(coded_index<HasConstant> const& left, Constant const& right) noexcept
+    inline bool operator<(
+        coded_index<HasConstant> const& left, Constant const& right) noexcept
     {
         return left < right.Parent();
     }
 
-    inline bool operator<(Constant const& left, coded_index<HasConstant> const& right) noexcept
+    inline bool operator<(
+        Constant const& left, coded_index<HasConstant> const& right) noexcept
     {
         return left.Parent() < right;
     }
 
-    inline bool operator<(coded_index<HasSemantics> const& left, MethodSemantics const& right) noexcept
+    inline bool operator<(
+        coded_index<HasSemantics> const& left, MethodSemantics const& right) noexcept
     {
         return left < right.Association();
     }
 
-    inline bool operator<(MethodSemantics const& left, coded_index<HasSemantics> const& right) noexcept
+    inline bool operator<(
+        MethodSemantics const& left, coded_index<HasSemantics> const& right) noexcept
     {
         return left.Association() < right;
     }
-}
+} // namespace xlang::meta::reader

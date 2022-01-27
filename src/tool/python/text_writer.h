@@ -4,7 +4,7 @@
 
 namespace xlang::text
 {
-    template <typename T>
+    template<typename T>
     struct writer_base
     {
         writer_base(writer_base const&) = delete;
@@ -15,7 +15,7 @@ namespace xlang::text
             m_first.reserve(16 * 1024);
         }
 
-        template <typename... Args>
+        template<typename... Args>
         void write(std::string_view const& value, Args const&... args)
         {
 #if defined(XLANG_DEBUG)
@@ -26,7 +26,7 @@ namespace xlang::text
             write_segment(value, args...);
         }
 
-        template <typename... Args>
+        template<typename... Args>
         std::string write_temp(std::string_view const& value, Args const&... args)
         {
 #if defined(XLANG_DEBUG)
@@ -38,7 +38,7 @@ namespace xlang::text
             XLANG_ASSERT(count_placeholders(value) == sizeof...(Args));
             write_segment(value, args...);
 
-            std::string result{ m_first.data() + size, m_first.size() - size };
+            std::string result{m_first.data() + size, m_first.size() - size};
             m_first.resize(size);
 
 #if defined(XLANG_DEBUG)
@@ -86,7 +86,7 @@ namespace xlang::text
             write(value);
         }
 
-        template <typename F, typename = std::enable_if_t<std::is_invocable_v<F, T&>>>
+        template<typename F, typename = std::enable_if_t<std::is_invocable_v<F, T&>>>
         void write(F const& f)
         {
             f(*static_cast<T*>(this));
@@ -112,7 +112,7 @@ namespace xlang::text
             write(std::to_string(value));
         }
 
-        template <typename... Args>
+        template<typename... Args>
         void write_printf(char const* format, Args const&... args)
         {
             char buffer[128];
@@ -121,10 +121,10 @@ namespace xlang::text
 #else
             size_t const size = snprintf(buffer, sizeof(buffer), format, args...);
 #endif
-            write(std::string_view{ buffer, size });
+            write(std::string_view{buffer, size});
         }
 
-        template <auto F, typename List, typename... Args>
+        template<auto F, typename List, typename... Args>
         void write_each(List const& list, Args const&... args)
         {
             for (auto&& item : list)
@@ -150,7 +150,7 @@ namespace xlang::text
         {
             if (!file_equal(filename))
             {
-                std::ofstream file{ filename, std::ios::out | std::ios::binary };
+                std::ofstream file{filename, std::ios::out | std::ios::binary};
                 file.write(m_first.data(), m_first.size());
                 file.write(m_second.data(), m_second.size());
             }
@@ -186,28 +186,36 @@ namespace xlang::text
                 return false;
             }
 
-            meta::reader::file_view file{ filename };
+            meta::reader::file_view file{filename};
 
             if (file.size() != m_first.size() + m_second.size())
             {
                 return false;
             }
 
-            if (!std::equal(m_first.begin(), m_first.end(), file.begin(), file.begin() + m_first.size()))
+            if (!std::equal(
+                    m_first.begin(),
+                    m_first.end(),
+                    file.begin(),
+                    file.begin() + m_first.size()))
             {
                 return false;
             }
 
-            return std::equal(m_second.begin(), m_second.end(), file.begin() + m_first.size(), file.end());
+            return std::equal(
+                m_second.begin(),
+                m_second.end(),
+                file.begin() + m_first.size(),
+                file.end());
         }
 
 #if defined(XLANG_DEBUG)
         bool debug_trace{};
 #endif
 
-    private:
-
-        static constexpr uint32_t count_placeholders(std::string_view const& format) noexcept
+      private:
+        static constexpr uint32_t count_placeholders(
+            std::string_view const& format) noexcept
         {
             uint32_t count{};
             bool escape{};
@@ -250,8 +258,9 @@ namespace xlang::text
             write_segment(value.substr(offset + 2));
         }
 
-        template <typename First, typename... Rest>
-        void write_segment(std::string_view const& value, First const& first, Rest const&... rest)
+        template<typename First, typename... Rest>
+        void write_segment(
+            std::string_view const& value, First const& first, Rest const&... rest)
         {
             auto offset = value.find_first_of("^%@");
             XLANG_ASSERT(offset != std::string_view::npos);
@@ -290,13 +299,13 @@ namespace xlang::text
         std::vector<char> m_first;
     };
 
-
-    template <typename T>
+    template<typename T>
     struct indented_writer_base : writer_base<T>
     {
         struct indent_guard
         {
-            indent_guard(indented_writer_base<T>& w, int32_t offset = 1) noexcept : m_writer(w), m_offset(offset)
+            indent_guard(indented_writer_base<T>& w, int32_t offset = 1) noexcept
+                : m_writer(w), m_offset(offset)
             {
                 m_writer.m_indent += m_offset;
             }
@@ -306,11 +315,10 @@ namespace xlang::text
                 m_writer.m_indent -= m_offset;
             }
 
-        private:
+          private:
             indented_writer_base<T>& m_writer;
             int32_t m_offset{};
         };
-
 
         void write_indent()
         {
@@ -322,7 +330,7 @@ namespace xlang::text
 
         void write_impl(std::string_view const& value)
         {
-            std::string_view::size_type current_pos{ 0 };
+            std::string_view::size_type current_pos{0};
             auto on_new_line = writer_base<T>::back() == '\n';
 
             while (true)
@@ -369,8 +377,8 @@ namespace xlang::text
             writer_base<T>::write_impl(value);
         }
 
-        template <typename... Args>
-        std::string write_temp(std::string_view const& value, Args const& ... args)
+        template<typename... Args>
+        std::string write_temp(std::string_view const& value, Args const&... args)
         {
             auto restore_indent = m_indent;
             m_indent = 0;
@@ -385,8 +393,7 @@ namespace xlang::text
         int32_t m_indent{};
     };
 
-
-    template <auto F, typename... Args>
+    template<auto F, typename... Args>
     auto bind(Args&&... args)
     {
         return [&](auto& writer)
@@ -395,7 +402,7 @@ namespace xlang::text
         };
     }
 
-    template <typename F, typename... Args>
+    template<typename F, typename... Args>
     auto bind(F fwrite, Args const&... args)
     {
         return [&, fwrite](auto& writer)
@@ -404,7 +411,7 @@ namespace xlang::text
         };
     }
 
-    template <auto F, typename List, typename... Args>
+    template<auto F, typename List, typename... Args>
     auto bind_each(List const& list, Args const&... args)
     {
         return [&](auto& writer)
@@ -416,7 +423,7 @@ namespace xlang::text
         };
     }
 
-    template <typename List, typename... Args>
+    template<typename List, typename... Args>
     auto bind_each(List const& list, Args const&... args)
     {
         return [&](auto& writer)
@@ -428,7 +435,7 @@ namespace xlang::text
         };
     }
 
-    template <typename F, typename List, typename... Args>
+    template<typename F, typename List, typename... Args>
     auto bind_each(F fwrite, List const& list, Args const&... args)
     {
         return [&, fwrite](auto& writer)
@@ -440,12 +447,13 @@ namespace xlang::text
         };
     }
 
-    template <auto F, typename T, typename... Args>
-    auto bind_list(std::string_view const& delimiter, T const& list, Args const&... args)
+    template<auto F, typename T, typename... Args>
+    auto bind_list(
+        std::string_view const& delimiter, T const& list, Args const&... args)
     {
         return [&](auto& writer)
         {
-            bool first{ true };
+            bool first{true};
 
             for (auto&& item : list)
             {
@@ -463,12 +471,12 @@ namespace xlang::text
         };
     }
 
-    template <typename T>
+    template<typename T>
     auto bind_list(std::string_view const& delimiter, T const& list)
     {
         return [&](auto& writer)
         {
-            bool first{ true };
+            bool first{true};
 
             for (auto&& item : list)
             {
@@ -485,4 +493,4 @@ namespace xlang::text
             }
         };
     }
-}
+} // namespace xlang::text

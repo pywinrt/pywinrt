@@ -19,7 +19,7 @@ namespace xlang::impl
         }
     };
 
-    template <typename T>
+    template<typename T>
     struct com_ptr
     {
         T* ptr{};
@@ -59,16 +59,12 @@ namespace xlang::impl
     {
         com_ptr<IStream> stream;
 
-        check_xml(SHCreateStreamOnFileW(
-            xml_path.c_str(),
-            STGM_READ, &stream.ptr));
+        check_xml(SHCreateStreamOnFileW(xml_path.c_str(), STGM_READ, &stream.ptr));
 
         com_ptr<IXmlReader> reader;
 
         check_xml(CreateXmlReader(
-            __uuidof(IXmlReader),
-            reinterpret_cast<void**>(&reader.ptr),
-            nullptr));
+            __uuidof(IXmlReader), reinterpret_cast<void**>(&reader.ptr), nullptr));
 
         check_xml(reader->SetInput(stream.ptr));
         XmlNodeType node_type = XmlNodeType_None;
@@ -80,7 +76,7 @@ namespace xlang::impl
                 continue;
             }
 
-            wchar_t const* value{ nullptr };
+            wchar_t const* value{nullptr};
             check_xml(reader->GetLocalName(&value, nullptr));
 
             if (0 != wcscmp(value, L"ApiContract"))
@@ -113,17 +109,18 @@ namespace xlang::impl
     {
         HKEY key;
 
-        if (0 != RegOpenKeyExW(
-            HKEY_LOCAL_MACHINE,
-            L"SOFTWARE\\Microsoft\\Windows Kits\\Installed Roots",
-            0,
-            KEY_READ,
-            &key))
+        if (0
+            != RegOpenKeyExW(
+                HKEY_LOCAL_MACHINE,
+                L"SOFTWARE\\Microsoft\\Windows Kits\\Installed Roots",
+                0,
+                KEY_READ,
+                &key))
         {
             throw_invalid("Could not find the Windows SDK in the registry");
         }
 
-        return { key };
+        return {key};
     }
 
     inline std::filesystem::path get_sdk_path()
@@ -132,13 +129,9 @@ namespace xlang::impl
 
         DWORD path_size = 0;
 
-        if (0 != RegQueryValueExW(
-            key.handle,
-            L"KitsRoot10",
-            nullptr,
-            nullptr,
-            nullptr,
-            &path_size))
+        if (0
+            != RegQueryValueExW(
+                key.handle, L"KitsRoot10", nullptr, nullptr, nullptr, &path_size))
         {
             throw_invalid("Could not find the Windows SDK path in the registry");
         }
@@ -163,7 +156,8 @@ namespace xlang::impl
 
         while (true)
         {
-            actual_size = GetModuleFileNameA(nullptr, path.data(), 1 + static_cast<uint32_t>(path.size()));
+            actual_size = GetModuleFileNameA(
+                nullptr, path.data(), 1 + static_cast<uint32_t>(path.size()));
 
             if (actual_size < 1 + path.size())
             {
@@ -202,7 +196,12 @@ namespace xlang::impl
         std::array<unsigned long, 4> version_parts{};
         std::string result;
 
-        while (0 == RegEnumKeyA(key.handle, index++, subkey.data(), static_cast<uint32_t>(subkey.size())))
+        while (0
+               == RegEnumKeyA(
+                   key.handle,
+                   index++,
+                   subkey.data(),
+                   static_cast<uint32_t>(subkey.size())))
         {
             if (!std::regex_match(subkey.data(), match, rx))
             {
@@ -218,7 +217,7 @@ namespace xlang::impl
             char* next_part = subkey.data();
             bool force_newer = false;
 
-            for (size_t i = 0; ; ++i)
+            for (size_t i = 0;; ++i)
             {
                 auto version_part = strtoul(next_part, &next_part, 10);
 
@@ -256,6 +255,6 @@ namespace xlang::impl
 
         return result;
     }
-}
+} // namespace xlang::impl
 
 #endif

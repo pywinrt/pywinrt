@@ -9,18 +9,18 @@ namespace xlang::cmd
     {
         static constexpr uint32_t no_min = 0;
         static constexpr uint32_t no_max = std::numeric_limits<uint32_t>::max();
-        
+
         std::string_view name;
-        uint32_t min{ no_min };
-        uint32_t max{ no_max };
+        uint32_t min{no_min};
+        uint32_t max{no_max};
         std::string_view arg{};
         std::string_view desc{};
     };
 
     struct reader
     {
-        template <typename C, typename V, size_t numOptions>
-        reader(C const argc, V const argv, const option(& options)[numOptions])
+        template<typename C, typename V, size_t numOptions>
+        reader(C const argc, V const argv, const option (&options)[numOptions])
         {
 #ifdef XLANG_DEBUG
             {
@@ -39,7 +39,7 @@ namespace xlang::cmd
                 return;
             }
 
-            auto last{ std::end(options) };
+            auto last{std::end(options)};
 
             for (C i = 1; i < argc; ++i)
             {
@@ -49,7 +49,8 @@ namespace xlang::cmd
             for (auto&& option : options)
             {
                 auto args = m_options.find(option.name);
-                std::size_t const count = args == m_options.end() ? 0 : args->second.size();
+                std::size_t const count
+                    = args == m_options.end() ? 0 : args->second.size();
 
                 if (option.min == 0 && option.max == 0 && count > 0)
                 {
@@ -57,15 +58,30 @@ namespace xlang::cmd
                 }
                 else if (option.max == option.min && count != option.max)
                 {
-                    throw_invalid("Option '", option.name, "' requires exactly ", std::to_string(option.max), " value(s)");
+                    throw_invalid(
+                        "Option '",
+                        option.name,
+                        "' requires exactly ",
+                        std::to_string(option.max),
+                        " value(s)");
                 }
                 else if (count < option.min)
                 {
-                    throw_invalid("Option '", option.name, "' requires at least ", std::to_string(option.min), " value(s)");
+                    throw_invalid(
+                        "Option '",
+                        option.name,
+                        "' requires at least ",
+                        std::to_string(option.min),
+                        " value(s)");
                 }
                 else if (count > option.max)
                 {
-                    throw_invalid("Option '", option.name, "' accepts at most ", std::to_string(option.max), " value(s)");
+                    throw_invalid(
+                        "Option '",
+                        option.name,
+                        "' accepts at most ",
+                        std::to_string(option.max),
+                        " value(s)");
                 }
             }
         }
@@ -93,19 +109,21 @@ namespace xlang::cmd
             return result->second;
         }
 
-        auto value(std::string_view const& name, std::string_view const& default_value = {}) const
+        auto value(
+            std::string_view const& name,
+            std::string_view const& default_value = {}) const
         {
             auto result = m_options.find(name);
 
             if (result == m_options.end() || result->second.empty())
             {
-                return std::string{ default_value };
+                return std::string{default_value};
             }
 
             return result->second.front();
         }
 
-        template <typename F>
+        template<typename F>
         auto files(std::string_view const& name, F directory_filter) const
         {
             std::set<std::string> files;
@@ -144,9 +162,15 @@ namespace xlang::cmd
                 {
                     std::array<char, MAX_PATH> local{};
 #ifdef _WIN64
-                    ExpandEnvironmentStringsA("%windir%\\System32\\WinMetadata", local.data(), static_cast<DWORD>(local.size()));
+                    ExpandEnvironmentStringsA(
+                        "%windir%\\System32\\WinMetadata",
+                        local.data(),
+                        static_cast<DWORD>(local.size()));
 #else
-                    ExpandEnvironmentStringsA("%windir%\\SysNative\\WinMetadata", local.data(), static_cast<DWORD>(local.size()));
+                    ExpandEnvironmentStringsA(
+                        "%windir%\\SysNative\\WinMetadata",
+                        local.data(),
+                        static_cast<DWORD>(local.size()));
 #endif
                     add_directory(local.data());
                     continue;
@@ -184,12 +208,14 @@ namespace xlang::cmd
                         continue;
                     }
 
-                    for (auto&& item : std::filesystem::directory_iterator(sdk_path / L"Extension SDKs"))
+                    for (auto&& item : std::filesystem::directory_iterator(
+                             sdk_path / L"Extension SDKs"))
                     {
                         xml_path = item.path() / sdk_version;
                         xml_path /= L"SDKManifest.xml";
 
-                        impl::add_files_from_xml(files, sdk_version, xml_path, sdk_path);
+                        impl::add_files_from_xml(
+                            files, sdk_version, xml_path, sdk_path);
                     }
 
                     continue;
@@ -203,15 +229,20 @@ namespace xlang::cmd
 
         auto files(std::string_view const& name) const
         {
-            return files(name, [](auto&&) {return true; });
+            return files(
+                name,
+                [](auto&&)
+                {
+                    return true;
+                });
         }
 
-    private:
-
+      private:
         template<typename O>
         auto find(O const& options, std::string_view const& arg)
         {
-            for (auto current = std::begin(options); current != std::end(options); ++current)
+            for (auto current = std::begin(options); current != std::end(options);
+                 ++current)
             {
                 if (starts_with(current->name, arg))
                 {
@@ -250,19 +281,27 @@ namespace xlang::cmd
             }
             else
             {
-                m_options[last->name].push_back(std::string{ arg });
+                m_options[last->name].push_back(std::string{arg});
             }
         }
 
         template<typename O, typename L>
-        void extract_response_file(std::string_view const& arg, O const& options, L& last)
+        void extract_response_file(
+            std::string_view const& arg, O const& options, L& last)
         {
-            std::filesystem::path response_path{ std::string{ arg } };
+            std::filesystem::path response_path{std::string{arg}};
             std::string extension = response_path.extension().generic_string();
-            std::transform(extension.begin(), extension.end(), extension.begin(),
-                [](auto c) { return static_cast<unsigned char>(::tolower(c)); });
+            std::transform(
+                extension.begin(),
+                extension.end(),
+                extension.begin(),
+                [](auto c)
+                {
+                    return static_cast<unsigned char>(::tolower(c));
+                });
 
-            // Check if misuse of @ prefix, so if directory or metadata file instead of response file.
+            // Check if misuse of @ prefix, so if directory or metadata file instead of
+            // response file.
             if (is_directory(response_path) || extension == ".winmd")
             {
                 throw_invalid("'@' is reserved for response files");
@@ -283,8 +322,9 @@ namespace xlang::cmd
             }
         }
 
-        template <typename Character>
-        static void parse_command_line(Character* cmdstart, std::vector<std::string>& argv, size_t* argument_count)
+        template<typename Character>
+        static void parse_command_line(
+            Character* cmdstart, std::vector<std::string>& argv, size_t* argument_count)
         {
 
             std::string arg;
@@ -373,4 +413,4 @@ namespace xlang::cmd
             }
         }
     };
-}
+} // namespace xlang::cmd

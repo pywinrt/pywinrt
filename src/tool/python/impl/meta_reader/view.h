@@ -1,32 +1,33 @@
 
 namespace xlang::meta::reader
 {
-    template <typename T>
+    template<typename T>
     auto const& begin(std::pair<T, T> const& values) noexcept
     {
         return values.first;
     }
 
-    template <typename T>
+    template<typename T>
     auto const& end(std::pair<T, T> const& values) noexcept
     {
         return values.second;
     }
 
-    template <typename T>
+    template<typename T>
     auto distance(std::pair<T, T> const& values) noexcept
     {
         return values.second - values.first;
     }
 
-    template <typename Container, typename T>
+    template<typename Container, typename T>
     auto equal_range(Container const& container, T const& value) noexcept
     {
         return std::equal_range(container.begin(), container.end(), value);
     }
 
-    template <typename Container, typename T, typename Compare>
-    auto equal_range(Container const& container, T const& value, Compare compare) noexcept
+    template<typename Container, typename T, typename Compare>
+    auto equal_range(
+        Container const& container, T const& value, Compare compare) noexcept
     {
         return std::equal_range(container.begin(), container.end(), value, compare);
     }
@@ -40,9 +41,9 @@ namespace xlang::meta::reader
         byte_view(byte_view const&) noexcept = default;
         byte_view& operator=(byte_view const&) noexcept = default;
 
-        byte_view(byte_view&& other) noexcept :
-            m_first(std::exchange(other.m_first, {})),
-            m_last(std::exchange(other.m_last, {}))
+        byte_view(byte_view&& other) noexcept
+            : m_first(std::exchange(other.m_first, {})),
+              m_last(std::exchange(other.m_last, {}))
         {
         }
 
@@ -53,9 +54,8 @@ namespace xlang::meta::reader
             return *this;
         }
 
-        byte_view(uint8_t const* const first, uint8_t const* const last) noexcept :
-            m_first(first),
-            m_last(last)
+        byte_view(uint8_t const* const first, uint8_t const* const last) noexcept
+            : m_first(first), m_last(last)
         {
         }
 
@@ -82,16 +82,16 @@ namespace xlang::meta::reader
         byte_view seek(uint32_t const offset) const
         {
             check_available(offset);
-            return{ m_first + offset, m_last };
+            return {m_first + offset, m_last};
         }
 
         byte_view sub(uint32_t const offset, uint32_t const size) const
         {
             check_available(offset + size);
-            return{ m_first + offset, m_first + offset + size };
+            return {m_first + offset, m_first + offset + size};
         }
 
-        template <typename T>
+        template<typename T>
         T const& as(uint32_t const offset = 0) const
         {
             check_available(offset + sizeof(T));
@@ -109,24 +109,23 @@ namespace xlang::meta::reader
             }
             else if (length == 0xff)
             {
-                return { nullptr, 0 };
+                return {nullptr, 0};
             }
             else
             {
                 check_available(offset + 1 + length);
-                return { reinterpret_cast<char const*>(m_first + offset + 1), length };
+                return {reinterpret_cast<char const*>(m_first + offset + 1), length};
             }
         }
 
-        template <typename T>
+        template<typename T>
         auto as_array(uint32_t const offset, uint32_t const count) const
         {
             check_available(offset + count * sizeof(T));
             return reinterpret_cast<T const*>(m_first + offset);
         }
 
-    private:
-
+      private:
         void check_available(uint32_t const offset) const
         {
             if (m_first + offset > m_last)
@@ -146,11 +145,13 @@ namespace xlang::meta::reader
         file_view(file_view&&) noexcept = default;
         file_view& operator=(file_view&&) noexcept = default;
 
-        file_view(std::string_view const& path) : byte_view{ open_file(path) }, m_backed_by_file{ true }
+        file_view(std::string_view const& path)
+            : byte_view{open_file(path)}, m_backed_by_file{true}
         {
         }
 
-        file_view(uint8_t const* const first, uint8_t const* const last) noexcept : byte_view{ first, last }, m_backed_by_file{ false }
+        file_view(uint8_t const* const first, uint8_t const* const last) noexcept
+            : byte_view{first, last}, m_backed_by_file{false}
         {
         }
 
@@ -161,13 +162,13 @@ namespace xlang::meta::reader
 #if XLANG_PLATFORM_WINDOWS
                 UnmapViewOfFile(begin());
 #else
-                munmap(const_cast<void*>(reinterpret_cast<void const*>(begin())), size());
+                munmap(
+                    const_cast<void*>(reinterpret_cast<void const*>(begin())), size());
 #endif
             }
         }
 
-    private:
-
+      private:
         bool m_backed_by_file;
 
 #if XLANG_PLATFORM_WINDOWS
@@ -199,7 +200,7 @@ namespace xlang::meta::reader
             static constexpr handle_type INVALID_HANDLE_VALUE = -1;
 #endif
 
-            handle_type value{ INVALID_HANDLE_VALUE };
+            handle_type value{INVALID_HANDLE_VALUE};
 
             ~file_handle() noexcept
             {
@@ -225,9 +226,11 @@ namespace xlang::meta::reader
             auto input = c_str(path);
 
             auto const input_length = static_cast<uint32_t>(path.length() + 1);
-            int buffer_length = MultiByteToWideChar(CP_UTF8, 0, input, input_length, 0, 0);
+            int buffer_length
+                = MultiByteToWideChar(CP_UTF8, 0, input, input_length, 0, 0);
             std::vector<wchar_t> output = std::vector<wchar_t>(buffer_length);
-            int result = MultiByteToWideChar(CP_UTF8, 0, input, input_length, output.data(), buffer_length);
+            int result = MultiByteToWideChar(
+                CP_UTF8, 0, input, input_length, output.data(), buffer_length);
 
             if (result == 0)
             {
@@ -242,7 +245,8 @@ namespace xlang::meta::reader
                 }
             }
 
-            file_handle file{ CreateFile2(output.data(), GENERIC_READ, FILE_SHARE_READ, OPEN_EXISTING, nullptr) };
+            file_handle file{CreateFile2(
+                output.data(), GENERIC_READ, FILE_SHARE_READ, OPEN_EXISTING, nullptr)};
 
             if (!file)
             {
@@ -254,20 +258,22 @@ namespace xlang::meta::reader
 
             if (!size.QuadPart)
             {
-                return{};
+                return {};
             }
 
-            handle mapping{ CreateFileMappingW(file.value, nullptr, PAGE_READONLY, 0, 0, nullptr) };
+            handle mapping{
+                CreateFileMappingW(file.value, nullptr, PAGE_READONLY, 0, 0, nullptr)};
 
             if (!mapping)
             {
                 throw_invalid("Could not open file '", path, "'");
             }
 
-            auto const first{ static_cast<uint8_t const*>(MapViewOfFile(mapping.value, FILE_MAP_READ, 0, 0, 0)) };
-            return{ first, first + size.QuadPart };
+            auto const first{static_cast<uint8_t const*>(
+                MapViewOfFile(mapping.value, FILE_MAP_READ, 0, 0, 0))};
+            return {first, first + size.QuadPart};
 #else
-            file_handle file{ open(c_str(path), O_RDONLY, 0) };
+            file_handle file{open(c_str(path), O_RDONLY, 0)};
             if (!file)
             {
                 throw_invalid("Could not open file '", path, "'");
@@ -281,17 +287,23 @@ namespace xlang::meta::reader
             }
             if (!st.st_size)
             {
-                return{};
+                return {};
             }
 
-            auto const first = static_cast<uint8_t const*>(mmap(nullptr, st.st_size, PROT_READ, MAP_PRIVATE | MAP_POPULATE, file.value, 0));
+            auto const first = static_cast<uint8_t const*>(mmap(
+                nullptr,
+                st.st_size,
+                PROT_READ,
+                MAP_PRIVATE | MAP_POPULATE,
+                file.value,
+                0));
             if (first == MAP_FAILED)
             {
                 throw_invalid("Could not open file '", path, "'");
             }
 
-            return{ first, first + st.st_size };
+            return {first, first + st.st_size};
 #endif
         }
     };
-}
+} // namespace xlang::meta::reader

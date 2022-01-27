@@ -1,10 +1,12 @@
 
 namespace xlang::meta::reader
 {
-    template <typename T>
-    struct coded_index_bits : std::integral_constant<uint32_t, 0> {};
+    template<typename T>
+    struct coded_index_bits : std::integral_constant<uint32_t, 0>
+    {
+    };
 
-    template <typename T>
+    template<typename T>
     inline constexpr uint32_t coded_index_bits_v = coded_index_bits<T>::value;
 
     enum class TypeDefOrRef : uint32_t
@@ -13,8 +15,10 @@ namespace xlang::meta::reader
         TypeRef,
         TypeSpec,
     };
-    template <>
-    struct coded_index_bits<TypeDefOrRef> : std::integral_constant<uint32_t, 2> {};
+    template<>
+    struct coded_index_bits<TypeDefOrRef> : std::integral_constant<uint32_t, 2>
+    {
+    };
 
     enum class HasConstant : uint32_t
     {
@@ -22,8 +26,10 @@ namespace xlang::meta::reader
         Param,
         Property,
     };
-    template <>
-    struct coded_index_bits<HasConstant> : std::integral_constant<uint32_t, 2> {};
+    template<>
+    struct coded_index_bits<HasConstant> : std::integral_constant<uint32_t, 2>
+    {
+    };
 
     enum class HasCustomAttribute : uint32_t
     {
@@ -50,16 +56,20 @@ namespace xlang::meta::reader
         GenericParamConstraint,
         MethodSpec,
     };
-    template <>
-    struct coded_index_bits<HasCustomAttribute> : std::integral_constant<uint32_t, 5> {};
+    template<>
+    struct coded_index_bits<HasCustomAttribute> : std::integral_constant<uint32_t, 5>
+    {
+    };
 
     enum class HasFieldMarshal : uint32_t
     {
         Field,
         Param,
     };
-    template <>
-    struct coded_index_bits<HasFieldMarshal> : std::integral_constant<uint32_t, 1> {};
+    template<>
+    struct coded_index_bits<HasFieldMarshal> : std::integral_constant<uint32_t, 1>
+    {
+    };
 
     enum class HasDeclSecurity : uint32_t
     {
@@ -67,8 +77,10 @@ namespace xlang::meta::reader
         MethodDef,
         Assembly,
     };
-    template <>
-    struct coded_index_bits<HasDeclSecurity> : std::integral_constant<uint32_t, 2> {};
+    template<>
+    struct coded_index_bits<HasDeclSecurity> : std::integral_constant<uint32_t, 2>
+    {
+    };
 
     enum class MemberRefParent : uint32_t
     {
@@ -78,32 +90,40 @@ namespace xlang::meta::reader
         MethodDef,
         TypeSpec,
     };
-    template <>
-    struct coded_index_bits<MemberRefParent> : std::integral_constant<uint32_t, 3> {};
+    template<>
+    struct coded_index_bits<MemberRefParent> : std::integral_constant<uint32_t, 3>
+    {
+    };
 
     enum class HasSemantics : uint32_t
     {
         Event,
         Property,
     };
-    template <>
-    struct coded_index_bits<HasSemantics> : std::integral_constant<uint32_t, 1> {};
+    template<>
+    struct coded_index_bits<HasSemantics> : std::integral_constant<uint32_t, 1>
+    {
+    };
 
     enum class MethodDefOrRef : uint32_t
     {
         MethodDef,
         MemberRef,
     };
-    template <>
-    struct coded_index_bits<MethodDefOrRef> : std::integral_constant<uint32_t, 1> {};
+    template<>
+    struct coded_index_bits<MethodDefOrRef> : std::integral_constant<uint32_t, 1>
+    {
+    };
 
     enum class MemberForwarded : uint32_t
     {
         Field,
         MethodDef,
     };
-    template <>
-    struct coded_index_bits<MemberForwarded> : std::integral_constant<uint32_t, 1> {};
+    template<>
+    struct coded_index_bits<MemberForwarded> : std::integral_constant<uint32_t, 1>
+    {
+    };
 
     enum class Implementation : uint32_t
     {
@@ -111,16 +131,20 @@ namespace xlang::meta::reader
         AssemblyRef,
         ExportedType,
     };
-    template <>
-    struct coded_index_bits<Implementation> : std::integral_constant<uint32_t, 2> {};
+    template<>
+    struct coded_index_bits<Implementation> : std::integral_constant<uint32_t, 2>
+    {
+    };
 
     enum class CustomAttributeType : uint32_t
     {
         MethodDef = 2,
         MemberRef,
     };
-    template <>
-    struct coded_index_bits<CustomAttributeType> : std::integral_constant<uint32_t, 3> {};
+    template<>
+    struct coded_index_bits<CustomAttributeType> : std::integral_constant<uint32_t, 3>
+    {
+    };
 
     enum class ResolutionScope : uint32_t
     {
@@ -129,25 +153,30 @@ namespace xlang::meta::reader
         AssemblyRef,
         TypeRef,
     };
-    template <>
-    struct coded_index_bits<ResolutionScope> : std::integral_constant<uint32_t, 2> {};
+    template<>
+    struct coded_index_bits<ResolutionScope> : std::integral_constant<uint32_t, 2>
+    {
+    };
 
     enum class TypeOrMethodDef : uint32_t
     {
         TypeDef,
         MethodDef,
     };
-    template <>
-    struct coded_index_bits<TypeOrMethodDef> : std::integral_constant<uint32_t, 1> {};
+    template<>
+    struct coded_index_bits<TypeOrMethodDef> : std::integral_constant<uint32_t, 1>
+    {
+    };
 
     enum class MemberAccess : uint16_t
     {
         CompilerControlled = 0x0000, // Member not referenceable
         Private = 0x0001,
-        FamAndAssem = 0x0002,        // Accessible by subtypes only in this Assembly
-        Assembly = 0x0003,           // Accessible by anyone in this Assembly
-        Family = 0x0004,             // aka Protected
-        FamOrAssem = 0x0005,         // Accessible by subtypes anywhere, plus anyone in this Assembly
+        FamAndAssem = 0x0002, // Accessible by subtypes only in this Assembly
+        Assembly = 0x0003,    // Accessible by anyone in this Assembly
+        Family = 0x0004,      // aka Protected
+        FamOrAssem
+            = 0x0005, // Accessible by subtypes anywhere, plus anyone in this Assembly
         Public = 0x0006,
     };
 
@@ -256,11 +285,12 @@ namespace xlang::meta::reader
         R8 = 0x0d,
         String = 0x0e,
 
-        Ptr = 0x0f, // Followed by TypeSig
-        ByRef = 0x10, // Followed by TypeSig
+        Ptr = 0x0f,       // Followed by TypeSig
+        ByRef = 0x10,     // Followed by TypeSig
         ValueType = 0x11, // Followed by TypeDef or TypeRef
-        Class = 0x12, // Followed by TypeDef or TypeRef
-        Var = 0x13, // Generic parameter in a type definition, represented as unsigned integer
+        Class = 0x12,     // Followed by TypeDef or TypeRef
+        Var = 0x13, // Generic parameter in a type definition, represented as unsigned
+                    // integer
         Array = 0x14,
         GenericInst = 0x15,
         TypedByRef = 0x16,
@@ -268,12 +298,13 @@ namespace xlang::meta::reader
         I = 0x18, // System.IntPtr
         U = 0x19, // System.UIntPtr
 
-        FnPtr = 0x1b, // Followed by full method signature
+        FnPtr = 0x1b,  // Followed by full method signature
         Object = 0x1c, // System.Object
         SZArray = 0x1d,
-        MVar = 0x1e, // Generic parameter in a method definition, represented as unsigned integer
+        MVar = 0x1e,     // Generic parameter in a method definition, represented as
+                         // unsigned integer
         CModReqd = 0x1f, // Required modifier, followed by a TypeDef or TypeRef
-        CModOpt = 0x20, // Optional modifier, followed by a TypeDef or TypeRef
+        CModOpt = 0x20,  // Optional modifier, followed by a TypeDef or TypeRef
         Internal = 0x21,
 
         Modifier = 0x40, // Or'd with folowing element types
@@ -281,11 +312,11 @@ namespace xlang::meta::reader
 
         Pinned = 0x45,
 
-        Type = 0x50, // System.Type
+        Type = 0x50,         // System.Type
         TaggedObject = 0x51, // Boxed object (in custom attributes)
-        Field = 0x53, // Custom attribute field
-        Property = 0x54, // Custom attribute property
-        Enum = 0x55, // Custom attribute enum
+        Field = 0x53,        // Custom attribute field
+        Property = 0x54,     // Custom attribute property
+        Enum = 0x55,         // Custom attribute enum
     };
 
     enum class CallingConvention : uint8_t
@@ -312,18 +343,19 @@ namespace xlang::meta::reader
 
     enum class AssemblyFlags : uint32_t
     {
-        PublicKey = 0x0001, // The assembly reference holds the full (unhashed) public key
+        PublicKey
+            = 0x0001, // The assembly reference holds the full (unhashed) public key
         Retargetable = 0x0100,
         WindowsRuntime = 0x0200,
         DisableJITcompileOptimizer = 0x4000,
         EnableJITcompileTracking = 0x8000,
     };
 
-    template <typename T>
+    template<typename T>
     constexpr inline T enum_mask(T value, T mask) noexcept
     {
         static_assert(std::is_enum_v<T>);
         using val = std::underlying_type_t<T>;
         return static_cast<T>(static_cast<val>(value) & static_cast<val>(mask));
     }
-}
+} // namespace xlang::meta::reader

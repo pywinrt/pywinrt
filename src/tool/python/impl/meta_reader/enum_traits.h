@@ -11,7 +11,7 @@ namespace xlang::meta::reader
     struct MemberRef;
     struct Constant;
     struct CustomAttribute;
-    struct FieldMarshal;
+    struct FieldMarshal; 
     struct DeclSecurity;
     struct ClassLayout;
     struct FieldLayout;
