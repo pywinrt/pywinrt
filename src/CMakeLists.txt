@@ -65,73 +65,37 @@ function(GENERATE_STRING_LITERAL_FILES glob_expression output_filename namespace
 
 endfunction()
 
-function(CONSUME_PAL target)
-    add_custom_command(TARGET ${target} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        $<TARGET_FILE:pal>
-        $<TARGET_FILE_DIR:${target}>
-    )
-
-    target_link_libraries(${target} pal)
-endfunction()
-
-# set test_platform linker flags to look for .so files in the current directory
-# adapted from https://serverfault.com/a/926072
-function(RPATH_ORIGIN target)
-    if (NOT WIN32)
-        get_target_property(RPATH_ORIGIN_temp_link_flags ${target} LINK_FLAGS)
-        if (RPATH_ORIGIN_temp_link_flags MATCHES "NOTFOUND$")
-            set_target_properties(${target} PROPERTIES LINK_FLAGS "-Wl,-rpath='$ORIGIN'")
-        else()
-            set_target_properties(${target} PROPERTIES LINK_FLAGS "${RPATH_ORIGIN_temp_link_flags} -Wl,-rpath='$ORIGIN'")
-        endif()
-    endif()
-endfunction()
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-if (MSVC)
-    # change the warning level to 4
-    string(REGEX REPLACE "/W[0-4]" "/W4" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+# change the warning level to 4
+string(REGEX REPLACE "/W[0-4]" "/W4" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
-    # change from dynamic to static CRT
-    string(REPLACE "/MDd" "/MTd" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
-    foreach(build_type RELEASE MINSIZEREL RELWITHDEBINFO)
-        string(REPLACE "/MD" "/MT" CMAKE_CXX_FLAGS_${build_type} "${CMAKE_CXX_FLAGS_${build_type}}")
-        string(APPEND CMAKE_CXX_FLAGS_${build_type} " /GL")
+# change from dynamic to static CRT
+string(REPLACE "/MDd" "/MTd" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+foreach(build_type RELEASE MINSIZEREL RELWITHDEBINFO)
+    string(REPLACE "/MD" "/MT" CMAKE_CXX_FLAGS_${build_type} "${CMAKE_CXX_FLAGS_${build_type}}")
+    string(APPEND CMAKE_CXX_FLAGS_${build_type} " /GL")
 
-        # /GL requires /LTCG
-        string(APPEND CMAKE_EXE_LINKER_FLAGS_${build_type} " /LTCG")
+    # /GL requires /LTCG
+    string(APPEND CMAKE_EXE_LINKER_FLAGS_${build_type} " /LTCG")
 
-        # TODO: replacing /INCREMENTAL leaves ":NO" on the command line, which screws up the link
-        #       Figure out the best way to make these changes to the build and linker flags
-        # string(REPLACE "/INCREMENTAL" "" CMAKE_EXE_LINKER_FLAGS_${build_type} "${CMAKE_EXE_LINKER_FLAGS_${build_type}}")
-        # string(APPEND CMAKE_EXE_LINKER_FLAGS_${build_type} " /LTCG:INCREMENTAL /OPT:REF")
-    endforeach()
+    # TODO: replacing /INCREMENTAL leaves ":NO" on the command line, which screws up the link
+    #       Figure out the best way to make these changes to the build and linker flags
+    # string(REPLACE "/INCREMENTAL" "" CMAKE_EXE_LINKER_FLAGS_${build_type} "${CMAKE_EXE_LINKER_FLAGS_${build_type}}")
+    # string(APPEND CMAKE_EXE_LINKER_FLAGS_${build_type} " /LTCG:INCREMENTAL /OPT:REF")
+endforeach()
 
-    # Always generate symbols for release builds
-    string(APPEND CMAKE_CXX_FLAGS_RELEASE " /Zi")
-    string(APPEND CMAKE_SHARED_LINKER_FLAGS_RELEASE " /DEBUG /OPT:REF /OPT:ICF /MAP")
-    string(APPEND CMAKE_EXE_LINKER_FLAGS_RELEASE " /DEBUG /OPT:REF /OPT:ICF /MAP")
+# Always generate symbols for release builds
+string(APPEND CMAKE_CXX_FLAGS_RELEASE " /Zi")
+string(APPEND CMAKE_SHARED_LINKER_FLAGS_RELEASE " /DEBUG /OPT:REF /OPT:ICF /MAP")
+string(APPEND CMAKE_EXE_LINKER_FLAGS_RELEASE " /DEBUG /OPT:REF /OPT:ICF /MAP")
 
-    if (CMAKE_CXX_COMPILER MATCHES "clang-cl")
-        add_compile_options(-Wno-delete-non-virtual-dtor -mcx16 -fno-delayed-template-parsing -Xclang -fcoroutines-ts)
-    else()
-        add_compile_options(/permissive- /await)
-    endif()
+add_compile_options(/permissive- /await)
 
-    # Explicitly configure _DEBUG preprocessor macro
-    string(APPEND CMAKE_CXX_FLAGS_DEBUG " /D_DEBUG")
-else()
-    add_compile_options(-stdlib=libc++)
+# Explicitly configure _DEBUG preprocessor macro
+string(APPEND CMAKE_CXX_FLAGS_DEBUG " /D_DEBUG")
 
-    # Add _DEBUG preprocessor macro for compatibility with MSVC
-    string(APPEND CMAKE_CXX_FLAGS_DEBUG " -D_DEBUG")
-endif()
-
-if (WIN32)
-    add_definitions(-DNOMINMAX)
-endif()
+add_definitions(-DNOMINMAX)
 
 add_subdirectory(tool)
