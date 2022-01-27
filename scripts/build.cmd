@@ -27,7 +27,7 @@ goto :init
     set "BUILD_VERSION=0.0.0"
     set "BUILD_TARGET="
 
-    pushd %~dp0..\..\..\
+    pushd %~dp0..\
     set "REPO_ROOT_PATH=%CD%"
     popd
 
