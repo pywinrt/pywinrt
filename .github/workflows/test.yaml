@@ -27,5 +27,5 @@ jobs:
         shell: powershell
       - name: Run tests
         env:
-          PYTHONPATH: ./src/package/pywinrt/projection/pywinrt
-        run: python -m unittest discover --start-directory src/test/python
+          PYTHONPATH: src/package/pywinrt/projection/pywinrt
+        run: python -m unittest
