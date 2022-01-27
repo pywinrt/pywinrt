@@ -2183,6 +2183,72 @@ struct pinterface_python_type<%<%>>
             });
     }
 
+    /**
+     * Writes the Python type name for a struct field.
+     * @param [in]  w       The writer.
+     * @param [in]  field   The field metadata.
+     */
+    void write_struct_field_python_type(writer& w, Field const& field)
+    {
+        call(
+            get_struct_field_semantics(field, false),
+            [&](fundamental_type type)
+            {
+                switch (type)
+                {
+                case fundamental_type::Boolean:
+                    w.write("_winrt.Boolean");
+                    break;
+                case fundamental_type::Char:
+                    w.write("_winrt.Char16");
+                    break;
+                case fundamental_type::Int8:
+                    w.write("_winrt.Int8");
+                    break;
+                case fundamental_type::UInt8:
+                    w.write("_winrt.UInt8");
+                    break;
+                case fundamental_type::Int16:
+                    w.write("_winrt.Int16");
+                    break;
+                case fundamental_type::UInt16:
+                    w.write("_winrt.UInt16");
+                    break;
+                case fundamental_type::Int32:
+                    w.write("_winrt.Int32");
+                    break;
+                case fundamental_type::UInt32:
+                    w.write("_winrt.UInt32");
+                    break;
+                case fundamental_type::Int64:
+                    w.write("_winrt.Int64");
+                    break;
+                case fundamental_type::UInt64:
+                    w.write("_winrt.UInt64");
+                    break;
+                case fundamental_type::Float:
+                    w.write("_winrt.Single");
+                    break;
+                case fundamental_type::Double:
+                    w.write("_winrt.Double");
+                    break;
+                case fundamental_type::String:
+                    w.write("str");
+                    break;
+                default:
+                    throw_invalid("invalid fundamental type");
+                }
+            },
+            [&]([[maybe_unused]] TypeDef const& type)
+            {
+                w.write_python(type);
+            },
+            [](auto)
+            {
+                throw_invalid("invalid struct field type");
+            });
+    }
+
     void write_struct_field_keyword(writer& w, Field const& field)
     {
         w.write("\"%\", ", bind<write_lower_snake_case>(field.Name()));
@@ -2994,9 +3060,51 @@ if (!return_value)
     }
 
     /**
-     * Writes a Python class definition with type hints for a .pyi file.
+     * Writes a Python attribute type hint for a field.
+     * @param [in]  w       The writer.
+     * @param [in]  field   The field metadata.
      */
-    void write_python_typings(writer& w, TypeDef const& type)
+    void write_struct_field_parameter_typing(writer& w, Field const& field)
+    {
+        w.write(
+            "%: %",
+            bind<write_lower_snake_case>(field.Name()),
+            bind<write_struct_field_python_type>(field));
+    }
+
+    /**
+     * Writes a Python class definition for a struct with type hints for a .pyi file.
+     * @param [in]  w       The writer.
+     * @param [in]  type    The type metadata.
+     */
+    void write_python_typing_for_struct(writer& w, TypeDef const& type)
+    {
+        w.write("class @:\n", type.TypeName());
+        {
+            writer::indent_guard g{w};
+
+            for (auto&& f : type.FieldList())
+            {
+                w.write(
+                    "%: %\n",
+                    bind<write_lower_snake_case>(f.Name()),
+                    bind<write_struct_field_python_type>(f));
+            }
+
+            w.write(
+                "def __init__(self, %) -> None: ...\n",
+                bind_list<write_struct_field_parameter_typing>(", ", type.FieldList()));
+        }
+        w.write("\n");
+    }
+
+    /**
+     * Writes a Python class definition for a class or interface with type hints for a
+     * .pyi file.
+     * @param [in]  w       The writer.
+     * @param [in]  type    The type metadata.
+     */
+    void write_python_typing_for_object(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
         {

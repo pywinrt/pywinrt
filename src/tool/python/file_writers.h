@@ -233,15 +233,15 @@ namespace pywinrt
         w.write("import typing\n");
         w.write("import uuid\n"); // TODO: uuid is not always used
         w.write("\n");
-
-        w.write("import @._winrt as _winrt", settings.module);
+        w.write("import @._winrt as _winrt\n", settings.module);
 
         w.write_each<write_python_import_namespace>(needed_namespaces);
         settings.filter.bind_each<write_python_enum>(members.enums)(w);
         w.write("\n");
-        settings.filter.bind_each<write_python_typings>(members.structs)(w);
-        settings.filter.bind_each<write_python_typings>(members.classes)(w);
-        settings.filter.bind_each<write_python_typings>(members.interfaces)(w);
+        settings.filter.bind_each<write_python_typing_for_struct>(members.structs)(w);
+        settings.filter.bind_each<write_python_typing_for_object>(members.classes)(w);
+        settings.filter.bind_each<write_python_typing_for_object>(members.interfaces)(
+            w);
         settings.filter.bind_each<write_python_type_alias>(members.delegates)(w);
 
         w.flush_to_file(folder / "__init__.pyi");
