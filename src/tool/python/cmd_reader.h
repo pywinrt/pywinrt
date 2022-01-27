@@ -1,6 +1,6 @@
 #pragma once
 
-#include "impl/base.h"
+#include "impl/pywinrt_base.h"
 #include "impl/cmd_reader_windows.h"
 
 namespace pywinrt::cmd

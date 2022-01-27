@@ -4,7 +4,7 @@ namespace pywinrt
 {
     using namespace std::literals;
     using namespace std::filesystem;
-    using namespace pywinrt::meta::reader;
+    using namespace winmd::reader;
     using namespace pywinrt::text;
 
     template<typename First, typename... Rest>
@@ -178,9 +178,54 @@ namespace pywinrt
             write_printf("%f", value);
         }
 
-        void write_value(std::string_view value)
+        void write_value(std::u16string_view value)
         {
-            write("\"%\"", value);
+            static_assert(sizeof(std::u16string_view::value_type) == sizeof(WCHAR));
+            static_assert(sizeof(std::string_view::value_type) == sizeof(CHAR));
+
+            auto input = reinterpret_cast<WCHAR const*>(value.data());
+            auto input_length = static_cast<int>(value.size());
+
+            auto required_size = WideCharToMultiByte(
+                CP_UTF8,
+                WC_ERR_INVALID_CHARS,
+                input,
+                input_length,
+                nullptr,
+                0,
+                nullptr,
+                nullptr);
+
+            auto buffer = std::make_unique<CHAR[]>(required_size);
+
+            auto result = WideCharToMultiByte(
+                CP_UTF8,
+                WC_ERR_INVALID_CHARS,
+                input,
+                input_length,
+                buffer.get(),
+                required_size,
+                nullptr,
+                nullptr);
+
+            if (result == 0)
+            {
+                switch (GetLastError())
+                {
+                case ERROR_INSUFFICIENT_BUFFER:
+                    throw_invalid("Insufficient buffer size");
+
+                case ERROR_NO_UNICODE_TRANSLATION:
+                    throw_invalid("Untranslatable string");
+
+                default:
+                    throw("WideCharToMultiByte failed");
+                }
+            }
+
+            std::string_view converted_value{buffer.get()};
+
+            write("\"%\"", converted_value);
         }
 
         void write(Constant const& value)

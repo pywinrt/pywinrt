@@ -1,6 +1,6 @@
 #pragma once
 
-#include "impl/base.h"
+#include "impl/pywinrt_base.h"
 
 namespace pywinrt::text
 {
@@ -186,7 +186,7 @@ namespace pywinrt::text
                 return false;
             }
 
-            meta::reader::file_view file{filename};
+            winmd::reader::file_view file{filename};
 
             if (file.size() != m_first.size() + m_second.size())
             {

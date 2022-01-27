@@ -2,7 +2,7 @@
 
 namespace pywinrt
 {
-    using namespace meta::reader;
+    using namespace winmd::reader;
 
     inline auto get_start_time()
     {

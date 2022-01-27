@@ -1,6 +1,6 @@
 #pragma once
 
-#include "impl/base.h"
+#include "impl/pywinrt_base.h"
 
 namespace pywinrt
 {
