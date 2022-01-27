@@ -57,7 +57,7 @@ static PyType_Slot Object_type_slots[] = {
     {Py_tp_new, Object_new},
     {Py_tp_dealloc, Object_dealloc},
     {Py_tp_doc, const_cast<char*>(Object_doc)},
-    {0, nullptr},
+    {},
 };
 
 static PyType_Spec Object_type_spec
@@ -104,15 +104,15 @@ PyObject* py::wrapped_instance(std::size_t key)
 
 static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept
 {
+    auto type = PyLong_AsLong(type_obj);
+
+    if (type == -1 && PyErr_Occurred())
+    {
+        return nullptr;
+    }
+
     try
     {
-        auto type = PyLong_AsLong(type_obj);
-
-        if (type == -1 && PyErr_Occurred())
-        {
-            return nullptr;
-        }
-
         winrt::init_apartment(static_cast<winrt::apartment_type>(type));
         Py_RETURN_NONE;
     }
@@ -164,23 +164,20 @@ static PyMethodDef module_methods[]{
 
 static int module_exec(PyObject* module) noexcept
 {
+    static const auto kMTA = static_cast<long>(winrt::apartment_type::multi_threaded);
+    static const auto kSTA = static_cast<long>(winrt::apartment_type::single_threaded);
+
     try
     {
         py::winrt_type<py::Object>::python_type = py::register_python_type(
             module, _type_name_Object, &Object_type_spec, nullptr);
 
-        if (PyModule_AddIntConstant(
-                module, "MTA", static_cast<long>(winrt::apartment_type::multi_threaded))
-            == -1)
+        if (PyModule_AddIntConstant(module, "MTA", kMTA) == -1)
         {
             return -1;
         }
 
-        if (PyModule_AddIntConstant(
-                module,
-                "STA",
-                static_cast<long>(winrt::apartment_type::single_threaded))
-            == -1)
+        if (PyModule_AddIntConstant(module, "STA", kSTA) == -1)
         {
             return -1;
         }
@@ -194,7 +191,7 @@ static int module_exec(PyObject* module) noexcept
     }
 }
 
-static PyModuleDef_Slot module_slots[] = {{Py_mod_exec, module_exec}, {0, nullptr}};
+static PyModuleDef_Slot module_slots[] = {{Py_mod_exec, module_exec}, {}};
 
 PyDoc_STRVAR(module_doc, "_winrt");
 

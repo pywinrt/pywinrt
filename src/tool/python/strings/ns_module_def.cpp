@@ -1,5 +1,5 @@
 
-static PyModuleDef_Slot module_slots[] = {{Py_mod_exec, module_exec}, {0, nullptr}};
+static PyModuleDef_Slot module_slots[] = {{Py_mod_exec, module_exec}, {}};
 
 PyDoc_STRVAR(module_doc, "%");
 
