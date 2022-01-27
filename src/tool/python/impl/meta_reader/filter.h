@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     struct filter
     {
@@ -141,4 +141,4 @@ namespace xlang::meta::reader
 
         std::vector<std::pair<std::string, bool>> m_rules;
     };
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

@@ -41,7 +41,7 @@
 #define XLANG_ASSERT(expression) ((void)0)
 #endif
 
-namespace xlang
+namespace pywinrt
 {
     using namespace std::literals;
 
@@ -86,4 +86,4 @@ namespace xlang
         return std::visit(
             visit_overload<C...>{std::forward<C>(call)...}, std::forward<V>(variant));
     }
-} // namespace xlang
+} // namespace pywinrt

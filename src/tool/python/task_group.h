@@ -2,7 +2,7 @@
 
 #include "impl/base.h"
 
-namespace xlang
+namespace pywinrt
 {
     struct task_group
     {
@@ -47,4 +47,4 @@ namespace xlang
       private:
         std::vector<std::future<void>> m_tasks;
     };
-} // namespace xlang
+} // namespace pywinrt

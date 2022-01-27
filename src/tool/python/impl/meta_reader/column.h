@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     template<typename Row>
     template<typename T>
@@ -569,4 +569,4 @@ namespace xlang::meta::reader
     {
         return get_target_row<TypeDef>(2);
     }
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

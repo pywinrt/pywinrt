@@ -1,4 +1,4 @@
-namespace xlang::impl
+namespace pywinrt::impl
 {
     template<typename T>
     struct AttributesBase
@@ -37,9 +37,9 @@ namespace xlang::impl
             set_mask(arg << bit, 1 << bit);
         }
     };
-} // namespace xlang::impl
+} // namespace pywinrt::impl
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     struct AssemblyAttributes : impl::AttributesBase<uint32_t>
     {
@@ -660,4 +660,4 @@ namespace xlang::meta::reader
         static constexpr int HasSecurity_bit{18};
         static constexpr int IsTypeForwarder_bit{21};
     };
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

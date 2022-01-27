@@ -3,7 +3,7 @@
 #include "impl/base.h"
 #include "impl/cmd_reader_windows.h"
 
-namespace xlang::cmd
+namespace pywinrt::cmd
 {
     struct option
     {
@@ -413,4 +413,4 @@ namespace xlang::cmd
             }
         }
     };
-} // namespace xlang::cmd
+} // namespace pywinrt::cmd

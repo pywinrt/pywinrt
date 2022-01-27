@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     struct cache
     {
@@ -196,4 +196,4 @@ namespace xlang::meta::reader
         std::list<database> m_databases;
         std::map<std::string_view, namespace_members> m_namespaces;
     };
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

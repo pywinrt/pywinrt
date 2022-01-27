@@ -1,6 +1,6 @@
 #pragma once
 
-namespace xlang::impl
+namespace pywinrt::impl
 {
     struct image_dos_header
     {
@@ -162,4 +162,4 @@ namespace xlang::impl
         image_data_directory ExportAddressTableJumps;
         image_data_directory ManagedNativeHeader;
     };
-} // namespace xlang::impl
+} // namespace pywinrt::impl

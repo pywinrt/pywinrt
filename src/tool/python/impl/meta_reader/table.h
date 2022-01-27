@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     struct database;
     struct cache;
@@ -441,4 +441,4 @@ namespace xlang::meta::reader
             return {this, row};
         }
     };
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

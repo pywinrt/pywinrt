@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     template<typename T>
     bool empty(std::pair<T, T> const& range) noexcept
@@ -72,4 +72,4 @@ namespace xlang::meta::reader
 
         return false;
     };
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

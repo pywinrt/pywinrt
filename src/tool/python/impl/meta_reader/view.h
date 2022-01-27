@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     template<typename T>
     auto const& begin(std::pair<T, T> const& values) noexcept
@@ -306,4 +306,4 @@ namespace xlang::meta::reader
 #endif
         }
     };
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

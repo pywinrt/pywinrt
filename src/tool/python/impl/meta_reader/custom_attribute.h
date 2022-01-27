@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     inline auto CustomAttribute::TypeNamespaceAndName() const
     {
@@ -437,4 +437,4 @@ namespace xlang::meta::reader
         auto cursor = get_blob(2);
         return CustomAttributeSig{get_table(), cursor, method_sig};
     }
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

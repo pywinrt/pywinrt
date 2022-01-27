@@ -1,5 +1,5 @@
 
-namespace xlang::impl
+namespace pywinrt::impl
 {
     constexpr uint8_t bits_needed(uint32_t value) noexcept
     {
@@ -19,9 +19,9 @@ namespace xlang::impl
     static_assert(bits_needed(4) == 2);
     static_assert(bits_needed(5) == 3);
     static_assert(bits_needed(22) == 5);
-} // namespace xlang::impl
+} // namespace pywinrt::impl
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     struct cache;
 
@@ -905,4 +905,4 @@ namespace xlang::meta::reader
     {
         return GenericParamConstraint;
     }
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

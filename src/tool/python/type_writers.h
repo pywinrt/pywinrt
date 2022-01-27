@@ -4,9 +4,8 @@ namespace pywinrt
 {
     using namespace std::literals;
     using namespace std::filesystem;
-    using namespace xlang;
-    using namespace xlang::meta::reader;
-    using namespace xlang::text;
+    using namespace pywinrt::meta::reader;
+    using namespace pywinrt::text;
 
     template<typename First, typename... Rest>
     auto get_impl_name(First const& first, Rest const&... rest)

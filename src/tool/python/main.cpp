@@ -9,8 +9,6 @@
 
 namespace pywinrt
 {
-    using namespace xlang;
-
     settings_type settings;
 
     struct usage_exception

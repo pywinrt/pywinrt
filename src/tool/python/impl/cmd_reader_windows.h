@@ -1,7 +1,7 @@
 
 #if XLANG_PLATFORM_WINDOWS
 
-namespace xlang::impl
+namespace pywinrt::impl
 {
     struct registry_key
     {
@@ -255,6 +255,6 @@ namespace xlang::impl
 
         return result;
     }
-} // namespace xlang::impl
+} // namespace pywinrt::impl
 
 #endif

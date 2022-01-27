@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     template<typename T>
     struct coded_index_bits : std::integral_constant<uint32_t, 0>
@@ -358,4 +358,4 @@ namespace xlang::meta::reader
         using val = std::underlying_type_t<T>;
         return static_cast<T>(static_cast<val>(value) & static_cast<val>(mask));
     }
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

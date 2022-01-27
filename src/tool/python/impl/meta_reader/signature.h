@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     inline uint32_t uncompress_unsigned(byte_view& cursor)
     {
@@ -516,4 +516,4 @@ namespace xlang::meta::reader
             break;
         }
     }
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

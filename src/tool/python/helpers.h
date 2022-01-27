@@ -1,6 +1,6 @@
 #pragma once
 
-namespace xlang
+namespace pywinrt
 {
     using namespace meta::reader;
 
@@ -790,4 +790,4 @@ namespace xlang
     {
         return set.find(value) != set.end();
     }
-} // namespace xlang
+} // namespace pywinrt

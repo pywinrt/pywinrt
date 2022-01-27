@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     inline std::pair<std::string_view, std::string_view> get_type_namespace_and_name(
         coded_index<TypeDefOrRef> const& type)
@@ -70,4 +70,4 @@ namespace xlang::meta::reader
 
         return category::class_type;
     }
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

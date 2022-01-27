@@ -2,7 +2,7 @@
 
 #include "impl/base.h"
 
-namespace xlang::text
+namespace pywinrt::text
 {
     template<typename T>
     struct writer_base
@@ -493,4 +493,4 @@ namespace xlang::text
             }
         };
     }
-} // namespace xlang::text
+} // namespace pywinrt::text

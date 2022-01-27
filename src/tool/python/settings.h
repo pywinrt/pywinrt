@@ -12,7 +12,7 @@ namespace pywinrt
 
         std::set<std::string> include;
         std::set<std::string> exclude;
-        xlang::meta::reader::filter filter;
+        pywinrt::meta::reader::filter filter;
     };
 
     extern settings_type settings;

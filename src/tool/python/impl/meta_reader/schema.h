@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     struct TypeRef : row_base<TypeRef>
     {
@@ -683,4 +683,4 @@ namespace xlang::meta::reader
     {
         return left.Association() < right;
     }
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader

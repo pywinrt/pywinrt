@@ -1,5 +1,5 @@
 
-namespace xlang::meta::reader
+namespace pywinrt::meta::reader
 {
     template<>
     struct typed_index<CustomAttributeType> : index_base<CustomAttributeType>
@@ -59,4 +59,4 @@ namespace xlang::meta::reader
         TypeSpec TypeSpec() const;
         auto CustomAttribute() const;
     };
-} // namespace xlang::meta::reader
+} // namespace pywinrt::meta::reader
