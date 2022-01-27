@@ -6,7 +6,6 @@ if (${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.13")
 endif()
 
 set(XLANG_SCRIPTS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/scripts")
-set(XLANG_LIBRARY_PATH "${CMAKE_CURRENT_SOURCE_DIR}/library")
 
 if(NOT DEFINED XLANG_BUILD_VERSION)
 set(XLANG_BUILD_VERSION "0.0.0")
@@ -140,7 +139,5 @@ if (WIN32)
 endif()
 
 add_subdirectory(tool)
-add_subdirectory(foundation)
-add_subdirectory(platform)
 add_subdirectory(test)
 add_subdirectory(package EXCLUDE_FROM_ALL)
