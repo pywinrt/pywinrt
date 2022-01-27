@@ -140,4 +140,3 @@ endif()
 
 add_subdirectory(tool)
 add_subdirectory(test)
-add_subdirectory(package EXCLUDE_FROM_ALL)

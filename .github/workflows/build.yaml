@@ -12,7 +12,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: pywinrt_nuget_${{ github.run_id }}
-          path: Microsoft.Windows.PyWinRT.*.nupkg
+          path: PyWinRT.*.nupkg
   projection:
     needs: pywinrt
     runs-on: windows-2019
