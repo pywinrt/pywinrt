@@ -3133,11 +3133,13 @@ if (!return_value)
 
             auto method_writer = [&](MethodDef const& method)
             {
+                auto name = is_constructor(method) ? "__init__" : method.Name();
                 method_signature signature{method};
 
                 w.write(
-                    "def %(%) -> %:\n",
-                    bind<write_lower_snake_case>(method.Name()),
+                    "def %(@%) -> %:\n",
+                    bind<write_lower_snake_case>(name),
+                    is_constructor(method) ? "self, " : "",
                     bind_list<write_method_in_param_name_and_typing>(
                         ", ", filter_in_params(signature.params())),
                     bind<write_return_typing>(signature));
@@ -3147,6 +3149,11 @@ if (!return_value)
                     w.write("...\n");
                 }
             };
+
+            for (auto&& c : get_constructors(type))
+            {
+                method_writer(c);
+            }
 
             enumerate_methods(w, type, method_writer);
 
