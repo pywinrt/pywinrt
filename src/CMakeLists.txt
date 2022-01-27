@@ -1,9 +1,5 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.15)
 project(xlang)
-
-if (${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.13")
-    cmake_policy(SET CMP0076 NEW)
-endif()
 
 set(XLANG_SCRIPTS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../scripts")
 
@@ -71,20 +67,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # change the warning level to 4
 string(REGEX REPLACE "/W[0-4]" "/W4" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
-# change from dynamic to static CRT
-string(REPLACE "/MDd" "/MTd" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
-foreach(build_type RELEASE MINSIZEREL RELWITHDEBINFO)
-    string(REPLACE "/MD" "/MT" CMAKE_CXX_FLAGS_${build_type} "${CMAKE_CXX_FLAGS_${build_type}}")
-    string(APPEND CMAKE_CXX_FLAGS_${build_type} " /GL")
-
-    # /GL requires /LTCG
-    string(APPEND CMAKE_EXE_LINKER_FLAGS_${build_type} " /LTCG")
-
-    # TODO: replacing /INCREMENTAL leaves ":NO" on the command line, which screws up the link
-    #       Figure out the best way to make these changes to the build and linker flags
-    # string(REPLACE "/INCREMENTAL" "" CMAKE_EXE_LINKER_FLAGS_${build_type} "${CMAKE_EXE_LINKER_FLAGS_${build_type}}")
-    # string(APPEND CMAKE_EXE_LINKER_FLAGS_${build_type} " /LTCG:INCREMENTAL /OPT:REF")
-endforeach()
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 # Always generate symbols for release builds
 string(APPEND CMAKE_CXX_FLAGS_RELEASE " /Zi")
