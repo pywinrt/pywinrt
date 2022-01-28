@@ -3244,18 +3244,24 @@ if (!return_value)
                 auto name = is_constructor(method) ? "__init__" : method.Name();
                 method_signature signature{method};
 
+                // REVISIT: not all methods have overloads
+                w.write("@typing.overload\n");
+
+                if (is_static(method))
+                {
+                    w.write("@staticmethod\n");
+                }
+
+                // TODO: add trailing ", /" (PEP 570) to the parameters when we drop
+                // support for Python 3.7
                 w.write(
-                    "def %(@%) -> %:\n",
+                    "def %(@%) -> %: ...\n",
                     bind<write_lower_snake_case>(name),
-                    is_constructor(method) ? "self, " : "",
+                    is_static(method) ? ""
+                                      : (signature.has_params() ? "self, " : "self"),
                     bind_list<write_method_in_param_name_and_typing>(
                         ", ", filter_in_params(signature.params())),
                     bind<write_return_typing>(signature));
-                {
-                    writer::indent_guard g2{w};
-
-                    w.write("...\n");
-                }
             };
 
             for (auto&& c : get_constructors(type))

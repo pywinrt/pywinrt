@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Changed
+- Improved type hints.
+
 ## [v1.0.0-beta.1] - 2022-01-27
 
 ### Added
