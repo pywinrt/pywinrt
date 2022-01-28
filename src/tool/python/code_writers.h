@@ -3127,8 +3127,6 @@ if (!return_value)
         {
             writer::indent_guard g{w};
 
-            w.write("...\n");
-
             // write attributes
 
             auto property_writer = [&](Property const& property)
