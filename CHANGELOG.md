@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Added `__contains__` special method for map types.
+
 ### Changed
 - Improved type hints.
 

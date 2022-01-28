@@ -1,15 +1,11 @@
 
-import asyncio
 import os
 import unittest
 
-def async_test(test):
-    def wrapper(*args, **kwargs):
-        asyncio.run(test(*args, **kwargs))
-    return wrapper
-
 import winrt.windows.devices.geolocation as wdg
 import winrt.windows.foundation as wf
+
+from ._util import async_test
 
 ON_CI = os.environ.get("CI")
 

@@ -1031,6 +1031,34 @@ return 0;
             "-1");
     }
 
+    void write_map_contains_body(writer& w, TypeDef const& type)
+    {
+        std::string key_type{};
+        enumerate_methods(
+            w,
+            type,
+            [&](MethodDef const& method)
+            {
+                if (method.Name() == "HasKey")
+                {
+                    method_signature signature{method};
+                    key_type
+                        = w.write_temp("%", signature.params().at(0).second->Type());
+                }
+            });
+
+        write_try_catch(
+            w,
+            [&](writer& w)
+            {
+                w.write(
+                    "return static_cast<int>(%HasKey(py::convert_to<%>(key)));\n",
+                    bind<write_method_invoke_context>(type, MethodDef{}),
+                    key_type);
+            },
+            "-1");
+    }
+
     void write_map_length_body(writer& w, TypeDef const& type)
     {
         write_try_catch(
@@ -1391,6 +1419,20 @@ return 0;
         if (implements_mapping(type))
         {
             w.write(
+                "\nstatic int _map_contains_@(%* self, PyObject* key) noexcept\n{\n",
+                type.TypeName(),
+                bind<write_pywrapper_type>(type));
+            {
+                write_ptype_body(
+                    "map_contains(key)",
+                    [&](auto& w)
+                    {
+                        write_map_contains_body(w, type);
+                    });
+            }
+            w.write("}\n");
+
+            w.write(
                 "\nstatic Py_ssize_t _map_length_@(%* self) noexcept\n{\n",
                 type.TypeName(),
                 bind<write_pywrapper_type>(type));
@@ -1668,6 +1710,7 @@ return 0;
             }
             if (implements_mapping(type))
             {
+                w.write("{ Py_sq_contains, _map_contains_@ },\n", name);
                 w.write("{ Py_mp_length, _map_length_@ },\n", name);
                 w.write("{ Py_mp_subscript, _map_subscript_@ },\n", name);
 
@@ -1676,7 +1719,7 @@ return 0;
                     w.write("{ Py_mp_ass_subscript, _map_assign_@ },\n", name);
                 }
             }
-            w.write("{ 0, nullptr },\n");
+            w.write("{ },\n");
         }
         w.write("};\n");
     }
@@ -1865,6 +1908,7 @@ struct pinterface_python_type<%<%>>
 
             if (implements_mapping(type))
             {
+                w.write("virtual int map_contains(PyObject* key) noexcept = 0;\n");
                 w.write("virtual Py_ssize_t map_length() noexcept = 0;\n");
                 w.write(
                     "virtual PyObject* map_subscript(PyObject* key) noexcept = 0;\n");
@@ -2060,6 +2104,13 @@ struct pinterface_python_type<%<%>>
 
             if (implements_mapping(type))
             {
+                w.write("int map_contains(PyObject* key) noexcept override\n{\n");
+                {
+                    writer::indent_guard gg{w};
+                    write_map_contains_body(w, type);
+                }
+                w.write("}\n");
+
                 w.write("Py_ssize_t map_length() noexcept override\n{\n");
                 {
                     writer::indent_guard gg{w};
@@ -3203,6 +3254,9 @@ if (!return_value)
                 }
                 else if (name == "IMap`2" || name == "IMapView`2")
                 {
+                    w.write(
+                        "def __contains__(self, key: %) -> bool:...\n",
+                        bind<write_template_arg_name>(type.GenericParam().first));
                     w.write("def __len__(self) -> int: ...\n");
                     w.write(
                         "def __getitem__(self, key: %) -> %: ...\n",
