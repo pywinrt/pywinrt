@@ -3229,6 +3229,12 @@ if (!return_value)
                 }
             }
 
+            if (!is_ptype(type) || is_static_class(type))
+            {
+                w.write("@staticmethod\n");
+                w.write("def _from(obj: _winrt.Object) -> @: ...\n", type.TypeName());
+            }
+
             auto property_writer = [&](Property const& property)
             {
                 w.write(
