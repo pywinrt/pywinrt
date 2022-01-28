@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [v1.0.0-beta.1] - 2022-01-27
+
 ### Added
 - Added this changelog.
 - Implemented Python buffer protocol for `IBuffer` and `IMemoryBufferReference`.
@@ -29,5 +31,6 @@
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/7efce99b1115ddc50f6dbfbc163841a57596c2ec...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.1...HEAD
+[v1.0.0-beta.1]: https://github.com/pywinrt/pywinrt/compare/7efce99b1115ddc50f6dbfbc163841a57596c2ec...v1.0.0-beta.1
 <!-- 7efce99b1115ddc50f6dbfbc163841a57596c2ec is last release of PyWinRT from xlang project -->
