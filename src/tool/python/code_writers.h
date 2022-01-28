@@ -3129,6 +3129,18 @@ if (!return_value)
 
             w.write("...\n");
 
+            // write attributes
+
+            auto property_writer = [&](Property const& property)
+            {
+                w.write(
+                    "%: %\n",
+                    bind<write_lower_snake_case>(property.Name()),
+                    bind<write_python_type>(property.Type().Type()));
+            };
+
+            enumerate_properties(w, type, property_writer);
+
             // Write special methods.
 
             if (is_ptype(type))
@@ -3235,15 +3247,7 @@ if (!return_value)
                 w.write("def _from(obj: _winrt.Object) -> @: ...\n", type.TypeName());
             }
 
-            auto property_writer = [&](Property const& property)
-            {
-                w.write(
-                    "%: %\n",
-                    bind<write_lower_snake_case>(property.Name()),
-                    bind<write_python_type>(property.Type().Type()));
-            };
-
-            enumerate_properties(w, type, property_writer);
+            // write regular methods
 
             auto method_writer = [&](MethodDef const& method)
             {
