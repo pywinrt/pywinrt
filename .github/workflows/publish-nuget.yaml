@@ -11,4 +11,4 @@ jobs:
       - run: |
           $version = $env:GITHUB_REF.Replace("refs/tags/v", "")
           ./scripts/build_pywinrt_nuget.cmd "$version"
-          nuget push "PyWinRT.$version.nupkg" -ApiKey "${{ secrets.NUGET_API_KEY }}"
+          nuget push "PyWinRT.$version.nupkg" -ApiKey "${{ secrets.NUGET_API_KEY }}" -Source 'https://api.nuget.org/v3/index.json'
