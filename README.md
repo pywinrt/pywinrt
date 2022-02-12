@@ -9,4 +9,5 @@ Windows SDK and with custom components.
 
 ### Projects that use PyWinRT
 
+- [python-winsdk](https://github.com/pywinrt/python-winsdk): Full Windows SDK bindings.
 - [bleak-winrt](https://github.com/dlech/bleak-winrt): Provides bindings for `Windows.Devices.Bluetooth`.
