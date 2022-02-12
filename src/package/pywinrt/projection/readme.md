@@ -121,6 +121,12 @@ Event callbacks will be called on a background WinRT thread. Consider using
 
 [call_soon_threadsafe]: https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.call_soon_threadsafe
 
+Also note that since events are called from non-Python theads, all event handlers
+must be removed before the Python runtime shuts down. Otherwise there is a chance
+that an event callback could be called after the Python runtime exits but while the
+process is still running. This is probably mostly harmless, but will cause a crash
+with an error message as the program exits.
+
 ```python
 import asyncio
 
