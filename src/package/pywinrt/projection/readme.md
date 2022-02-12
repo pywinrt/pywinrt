@@ -18,7 +18,7 @@ Python/WinRT can be installed from the [Python Package Index](https://pypi.org/)
 pip is on the path, Python/WinRT can be installed from the command line with the following command:
 
 ``` shell
-> pip install winrt
+> pip install winsdk
 ```
 
 You can test that Python/WinRT is installed correctly by launching Python and running the following
@@ -26,7 +26,7 @@ snippet of Python code. It should print "https://github.com/Microsoft/xlang/tree
 to the console.
 
 ``` python
-import winrt.windows.foundation as wf
+import winsdk.windows.foundation as wf
 u = wf.Uri("https://github.com/")
 u2 = u.combine_uri("Microsoft/xlang/tree/master/src/tool/python")
 print(str(u2))
@@ -51,9 +51,9 @@ with the `winrt` package name. For example, the
 WinRT namespace is projected as `winrt.windows.devices.geolocation` in Python.
 
 Importing a WinRT namespace module will automatically import namespace modules containing dependent
-types, but will not automatically import child namespace modules. For example `winrt.windows.devices.geolocation`
-will automatically import `winrt.windows.foundation` and `winrt.windows.foundation.collections` but
-will not automatically import ``winrt.windows.devices.geolocation.geofencing`.
+types, but will not automatically import child namespace modules. For example `winsdk.windows.devices.geolocation`
+will automatically import `winsdk.windows.foundation` and `winsdk.windows.foundation.collections` but
+will not automatically import ``winsdk.windows.devices.geolocation.geofencing`.
 
 ### Class Members
 
@@ -101,7 +101,7 @@ they can be called using the await keyword from inside a Python
 [coroutine function](https://docs.python.org/3/reference/compound_stmts.html#async-def). For example:
 
 ``` python
-import winrt.windows.devices.geolocation as wdg
+import winsdk.windows.devices.geolocation as wdg
 
 async def get_current_latitude():
     locator = wdg.Geolocator()
@@ -130,7 +130,7 @@ with an error message as the program exits.
 ```python
 import asyncio
 
-from winrt.windows.devices.bluetooth.advertisement import BluetoothLEAdvertisementWatcher
+from winsdk.windows.devices.bluetooth.advertisement import BluetoothLEAdvertisementWatcher
 
 
 async def scan():
