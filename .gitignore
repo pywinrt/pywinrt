@@ -299,9 +299,10 @@ paket-files/
 # CodeRush
 .cr/
 
-# Python Tools for Visual Studio (PTVS)
+# Python
 __pycache__/
 *.pyc
+.venv/
 
 # Cake - Uncomment if you are using it
 # tools/**
