@@ -4,11 +4,15 @@
 
 ## [Unreleased]
 
+### Changed
+- Type hints for reference types are now all `typing.Optional` (issue#7).
+
 ### Fixed
 - Fixed identifiers conflicting with Python keywords ([issue#6]).
 - Fixed broken version comparison in `_winrt.pyi`.
 
 [issue#6]: https://github.com/pywinrt/pywinrt/issues/6
+[issue#7]: https://github.com/pywinrt/pywinrt/issues/7
 
 ## [v1.0.0-beta.2] - 2022-02-12
 

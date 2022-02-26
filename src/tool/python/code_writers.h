@@ -2893,23 +2893,76 @@ if (!return_value)
 
     void write_python_type(writer& w, TypeSig const& signature)
     {
+        // The type metadata doesn't have nullable annotations, so we have to
+        // assume that every reference type is nullable (typing.Optional).
+        // https://github.com/microsoft/xlang/issues/716
+
         call(
             signature.Type(),
             [&](ElementType t)
             {
+                bool is_reference_type = t == ElementType::Object;
+
+                if (is_reference_type)
+                {
+                    w.write("typing.Optional[");
+                }
+
                 w.write_python(t);
+
+                if (is_reference_type)
+                {
+                    w.write("]");
+                }
             },
             [&](GenericTypeIndex t)
             {
+                w.write("typing.Optional[");
                 w.write_python(t);
+                w.write("]");
+            },
+            [&](GenericTypeInstSig t)
+            {
+                w.write("typing.Optional[");
+                w.write_python(t);
+                w.write("]");
             },
             [&](GenericMethodTypeIndex)
             {
                 throw_invalid("Generic methods not supported");
             },
-            [&](auto&& t)
+            [&](coded_index<TypeDefOrRef> t)
             {
+                auto is_reference_type = call(
+                    get_type_semantics(t),
+                    [&](type_definition type)
+                    {
+                        auto category = get_category(type);
+
+                        return category == category::interface_type
+                               || category == category::class_type
+                               || category == category::delegate_type;
+                    },
+                    [](object_type)
+                    {
+                        return true;
+                    },
+                    [](auto&&)
+                    {
+                        return false;
+                    });
+
+                if (is_reference_type)
+                {
+                    w.write("typing.Optional[");
+                }
+
                 w.write_python(t);
+
+                if (is_reference_type)
+                {
+                    w.write("]");
+                }
             });
     }
 
