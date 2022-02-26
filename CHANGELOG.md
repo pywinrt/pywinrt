@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed identifiers conflicting with Python keywords ([issue#6]).
+
+[issue#6]: https://github.com/pywinrt/pywinrt/issues/6
+
 ## [v1.0.0-beta.2] - 2022-02-12
 
 ### Added

@@ -54,6 +54,34 @@ namespace pywinrt
             });
     }
 
+    /**
+     * Converts @p name to lower_snake_case and adds a trailing underscore if
+     * @p name is a Python keyword.
+     *
+     * https://docs.python.org/3/reference/lexical_analysis.html#keywords
+     */
+    void write_lower_snake_case_python_identifier(
+        writer& w, std::string_view const& name)
+    {
+        auto identifier = w.write_temp("%", bind<write_lower_snake_case>(name));
+
+        w.write(identifier);
+
+        std::vector<std::string> keywords{
+            "and",      "as",       "assert", "async", "await",  "break",  "class",
+            "continue", "def",      "del",    "elif",  "else",   "except", "finally",
+            "for",      "from",     "global", "if",    "import", "in",     "is",
+            "lambda",   "nonlocal", "not",    "or",    "pass",   "raise",  "return",
+            "try",      "while",    "with",   "yield",
+        };
+
+        // add trailing underscore to avoid keyword clashes
+        if (std::find(keywords.begin(), keywords.end(), identifier) != keywords.end())
+        {
+            w.write("_");
+        }
+    }
+
     void write_lower_case(writer& w, std::string_view const& ns)
     {
         for (auto c : ns)
@@ -1206,7 +1234,8 @@ return 0;
                     [&](writer& w)
                     {
                         auto format
-                            = "auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);\nreturn py::convert(return_value.as<%>());\n";
+                            = "auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);\nreturn "
+                              "py::convert(return_value.as<%>());\n";
                         w.write(format, type);
                     });
             }
@@ -1258,7 +1287,8 @@ return 0;
                 {
                     writer::indent_guard gg{w};
                     w.write(
-                        "return PyBuffer_FillInfo(view, reinterpret_cast<PyObject*>(self), reinterpret_cast<void*>(self->obj.data()), static_cast<Py_ssize_t>(self->obj.@()), 0, flags);\n",
+                        "return PyBuffer_FillInfo(view, reinterpret_cast<PyObject*>(self), "
+                        "reinterpret_cast<void*>(self->obj.data()), static_cast<Py_ssize_t>(self->obj.@()), 0, flags);\n",
                         implements_ibuffer(type) ? "Length" : "Capacity");
                 }
                 w.write("}\n");
@@ -1278,7 +1308,8 @@ return 0;
             // workaround for https://bugs.python.org/issue40724
             w.write("\n#if PY_VERSION_HEX < 0x03090000\n");
             w.write(
-                "static PyBufferProcs _PyBufferProcs_@ = { reinterpret_cast<getbufferproc>(_get_buffer_@), reinterpret_cast<releasebufferproc>(nullptr) };\n",
+                "static PyBufferProcs _PyBufferProcs_@ = { reinterpret_cast<getbufferproc>(_get_buffer_@), "
+                "reinterpret_cast<releasebufferproc>(nullptr) };\n",
                 type.TypeName(),
                 type.TypeName());
             w.write("#endif\n");
@@ -1504,7 +1535,7 @@ return 0;
 
             w.write(
                 "{ \"%\", reinterpret_cast<PyCFunction>(@_%), %%, nullptr },\n",
-                bind<write_lower_snake_case>(method.Name()),
+                bind<write_lower_snake_case_python_identifier>(method.Name()),
                 type.TypeName(),
                 method.Name(),
                 argument_convention_flag,
@@ -1603,7 +1634,7 @@ return 0;
 
             w.write(
                 "{ \"%\", reinterpret_cast<getter>(@_%), %, nullptr, nullptr },\n",
-                bind<write_lower_snake_case>(field_name),
+                bind<write_lower_snake_case_python_identifier>(field_name),
                 type.TypeName(),
                 getter_name,
                 setter);
@@ -2302,7 +2333,8 @@ struct pinterface_python_type<%<%>>
 
     void write_struct_field_keyword(writer& w, Field const& field)
     {
-        w.write("\"%\", ", bind<write_lower_snake_case>(field.Name()));
+        w.write(
+            "\"%\", ", bind<write_lower_snake_case_python_identifier>(field.Name()));
     }
 
     void write_struct_field_format(writer& w, Field const& field)
@@ -2692,7 +2724,7 @@ if (!PyDict_Check(obj))
                 w.write(
                     "\nPyObject* py_% = PyDict_GetItemString(obj, \"%\");\n",
                     field.Name(),
-                    bind<write_lower_snake_case>(field.Name()));
+                    bind<write_lower_snake_case_python_identifier>(field.Name()));
                 w.write(
                     "if (!py_%) { throw winrt::hresult_invalid_argument(); }\n",
                     field.Name());
@@ -2891,7 +2923,9 @@ if (!return_value)
         // regular parameters are just `name`
         case param_category::in:
         case param_category::pass_array:
-            w.write("%", bind<write_lower_snake_case>(param.first.Name()));
+            w.write(
+                "%",
+                bind<write_lower_snake_case_python_identifier>(param.first.Name()));
             break;
 
         // fill array parameters just require the size of the array to be allocated
@@ -3119,7 +3153,7 @@ if (!return_value)
     {
         w.write(
             "%: %",
-            bind<write_lower_snake_case>(field.Name()),
+            bind<write_lower_snake_case_python_identifier>(field.Name()),
             bind<write_struct_field_python_type>(field));
     }
 
@@ -3138,7 +3172,7 @@ if (!return_value)
             {
                 w.write(
                     "%: %\n",
-                    bind<write_lower_snake_case>(f.Name()),
+                    bind<write_lower_snake_case_python_identifier>(f.Name()),
                     bind<write_struct_field_python_type>(f));
             }
 
@@ -3184,7 +3218,7 @@ if (!return_value)
             {
                 w.write(
                     "%: %\n",
-                    bind<write_lower_snake_case>(property.Name()),
+                    bind<write_lower_snake_case_python_identifier>(property.Name()),
                     bind<write_python_type>(property.Type().Type()));
             };
 
@@ -3228,7 +3262,8 @@ if (!return_value)
                 {
                     w.write("def __enter__(self: Self) -> Self: ...\n");
                     w.write(
-                        "def __exit__(self, __exc_type: typing.Type[BaseException] | None, __exc_value: BaseException | None, __traceback: typing.TracebackType | None) -> bool | None: ...\n");
+                        "def __exit__(self, __exc_type: typing.Type[BaseException] | None, __exc_value: BaseException "
+                        "| None, __traceback: typing.TracebackType | None) -> bool | None: ...\n");
                 }
                 else if (name == "IStringable")
                 {
@@ -3318,7 +3353,7 @@ if (!return_value)
                 // support for Python 3.7
                 w.write(
                     "def %(@%) -> %: ...\n",
-                    bind<write_lower_snake_case>(name),
+                    bind<write_lower_snake_case_python_identifier>(name),
                     is_static(method) ? ""
                                       : (signature.has_params() ? "self, " : "self"),
                     bind_list<write_method_in_param_name_and_typing>(
