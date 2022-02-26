@@ -6,6 +6,7 @@
 
 ### Fixed
 - Fixed identifiers conflicting with Python keywords ([issue#6]).
+- Fixed broken version comparison in `_winrt.pyi`.
 
 [issue#6]: https://github.com/pywinrt/pywinrt/issues/6
 

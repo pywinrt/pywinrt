@@ -1,7 +1,7 @@
 
 import sys
 
-if sys.version >= (3, 9):
+if sys.version_info >= (3, 9):
     from typing import Annotated
     # type aliases with struct format string annotation
     Boolean = Annotated[bool, "?"]
