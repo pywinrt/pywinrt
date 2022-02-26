@@ -138,7 +138,7 @@ namespace pywinrt
         case TypeDefOrRef::TypeRef:
         {
             auto type_ref = type.TypeRef();
-            if (type_ref.TypeName() == "Guid" && type_ref.TypeNamespace() == "System")
+            if (type_ref.TypeNamespace() == "System" && type_ref.TypeName() == "Guid")
             {
                 return guid_type{};
             }

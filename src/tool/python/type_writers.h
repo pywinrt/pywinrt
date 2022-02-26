@@ -301,7 +301,7 @@ namespace pywinrt
             auto ns = type.TypeNamespace();
             auto name = type.TypeName();
 
-            if (name == "Guid" && ns == "System")
+            if (ns == "System" && name == "Guid")
             {
                 write("winrt::guid");
             }
@@ -316,7 +316,7 @@ namespace pywinrt
             auto ns = type.TypeNamespace();
             auto name = type.TypeName();
 
-            if (name == "Guid" && ns == "System")
+            if (ns == "System" && name == "Guid")
             {
                 write("uuid.UUID");
             }
@@ -354,7 +354,7 @@ namespace pywinrt
             case TypeDefOrRef::TypeRef:
             {
                 auto tr = type.TypeRef();
-                if (tr.TypeName() != "Guid" || tr.TypeNamespace() != "System")
+                if (tr.TypeNamespace() != "System" || tr.TypeName() != "Guid")
                 {
                     register_type_namespace(type.TypeRef().TypeNamespace());
                 }
