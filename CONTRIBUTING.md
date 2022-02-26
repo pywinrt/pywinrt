@@ -33,7 +33,7 @@ build uses the debug configuration, so that means we _must_ use `python_d.exe`
 instead of `python.exe`. You can use `py -0p` to find the Python installation
 path if Python is not in `PATH` already.
 
-    $env:PYTHONPATH=src\package\pywinrt\projection\pywinrt
+    $env:PYTHONPATH="src\package\pywinrt\projection\pywinrt"
     python_d.exe -m unittest
 
 ## Building the Nuget package
