@@ -924,6 +924,14 @@ namespace pywinrt
         enumerate_types_impl(type, enumerate_types_impl);
     }
 
+    /**
+     * Calls @p func on all methods in @p type.
+     *
+     * @param [in]  w       A writer.
+     * @param [in]  type    The type that contains the methods.
+     * @param [in]  func    A function that takes two args, the MethodDef and
+     *                      a boolean indicating if the method is overloaded.
+     */
     template<typename F>
     void enumerate_methods(writer& w, TypeDef const& type, F func)
     {
@@ -979,7 +987,7 @@ namespace pywinrt
                                   ? 0
                                   : std::distance(oo.second.begin(), default_overload);
 
-                        func(oo.second.at(i));
+                        func(oo.second.at(i), o.second.size() > 1);
                     }
                 }
             });

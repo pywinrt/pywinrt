@@ -823,7 +823,7 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
         enumerate_methods(
             w,
             type,
-            [&](auto const& method)
+            [&](auto const& method, bool is_overloaded)
             {
                 if (method.Name() == method_name)
                 {
@@ -1034,7 +1034,7 @@ else
         enumerate_methods(
             w,
             type,
-            [&](MethodDef const& method)
+            [&](MethodDef const& method, bool is_overloaded)
             {
                 if (method.Name() == "GetAt")
                 {
@@ -1065,7 +1065,7 @@ return 0;
         enumerate_methods(
             w,
             type,
-            [&](MethodDef const& method)
+            [&](MethodDef const& method, bool is_overloaded)
             {
                 if (method.Name() == "HasKey")
                 {
@@ -1106,7 +1106,7 @@ return 0;
         enumerate_methods(
             w,
             type,
-            [&](MethodDef const& method)
+            [&](MethodDef const& method, bool is_overloaded)
             {
                 if (method.Name() == "Lookup")
                 {
@@ -1133,7 +1133,7 @@ return 0;
         enumerate_methods(
             w,
             type,
-            [&](MethodDef const& method)
+            [&](MethodDef const& method, bool is_overloaded)
             {
                 if (method.Name() == "Lookup")
                 {
@@ -1171,7 +1171,7 @@ return 0;
         enumerate_methods(
             w,
             type,
-            [&](auto const& method)
+            [&](auto const& method, bool is_overloaded)
             {
                 XLANG_ASSERT(
                     contains(method_map, method.Name())
@@ -1550,7 +1550,7 @@ return 0;
             enumerate_methods(
                 w,
                 type,
-                [&](auto const& method)
+                [&](auto const& method, bool is_overloaded)
                 {
                     if (!contains(method_names, method.Name()))
                     {
@@ -1869,7 +1869,7 @@ struct pinterface_python_type<%<%>>
             enumerate_methods(
                 w,
                 type,
-                [&](auto const& method)
+                [&](auto const& method, bool is_overloaded)
                 {
                     if (!contains(method_names, method.Name()))
                     {
@@ -1985,7 +1985,7 @@ struct pinterface_python_type<%<%>>
             enumerate_methods(
                 w,
                 type,
-                [&](auto const& method)
+                [&](auto const& method, bool is_overloaded)
                 {
                     method_names.insert(method.Name());
                 });
@@ -3389,13 +3389,15 @@ if (!return_value)
 
             // write regular methods
 
-            auto method_writer = [&](MethodDef const& method)
+            auto method_writer = [&](MethodDef const& method, bool is_overloaded)
             {
                 auto name = is_constructor(method) ? "__init__" : method.Name();
                 method_signature signature{method};
 
-                // REVISIT: not all methods have overloads
-                w.write("@typing.overload\n");
+                if (is_overloaded)
+                {
+                    w.write("@typing.overload\n");
+                }
 
                 if (is_static(method))
                 {
@@ -3414,9 +3416,11 @@ if (!return_value)
                     bind<write_return_typing>(signature));
             };
 
-            for (auto&& c : get_constructors(type))
+            auto constructors = get_constructors(type);
+
+            for (auto&& c : constructors)
             {
-                method_writer(c);
+                method_writer(c, constructors.size() > 1);
             }
 
             enumerate_methods(w, type, method_writer);
@@ -3427,8 +3431,8 @@ if (!return_value)
                 [&](auto const& event)
                 {
                     auto&& [add_method, remove_method] = get_event_methods(event);
-                    method_writer(add_method);
-                    method_writer(remove_method);
+                    method_writer(add_method, false);
+                    method_writer(remove_method, false);
                 });
         }
 
