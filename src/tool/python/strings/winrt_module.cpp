@@ -142,7 +142,13 @@ static PyObject* initialize_with_window(PyObject* /*unused*/, PyObject* args) no
     try
     {
         auto winrt_obj = py::convert_to<winrt::Windows::Foundation::IInspectable>(obj);
-        winrt_obj.as<IInitializeWithWindow>()->Initialize(reinterpret_cast<HWND>(hwnd));
+        auto result = winrt_obj.as<IInitializeWithWindow>()->Initialize(
+            reinterpret_cast<HWND>(hwnd));
+
+        if (result != S_OK)
+        {
+            winrt::throw_hresult(result);
+        }
     }
     catch (...)
     {

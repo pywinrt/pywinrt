@@ -11,6 +11,7 @@
 - Fixed identifiers conflicting with Python keywords ([issue#6]).
 - Fixed broken version comparison in `_winrt.pyi`.
 - Fixed `@typing.overload` used on methods that are not overloaded.
+- Fixed not throwing error if `initialize_with_window()` fails.
 
 [issue#6]: https://github.com/pywinrt/pywinrt/issues/6
 [issue#7]: https://github.com/pywinrt/pywinrt/issues/7
