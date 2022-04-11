@@ -12,7 +12,7 @@
 ## [v1.0.0-beta.3] - 2022-04-09
 
 ### Changed
-- Type hints for reference types are now all `typing.Optional` (issue#7).
+- Type hints for reference types are now all `typing.Optional` ([issue#7]).
 
 ### Fixed
 - Fixed identifiers conflicting with Python keywords ([issue#6]).
