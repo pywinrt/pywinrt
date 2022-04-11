@@ -2891,6 +2891,27 @@ if (!return_value)
     }
 #pragma endregion
 
+    /**
+     * Writes the Python type.
+     *
+     * This does not wrap reference types in typing.Optional.
+     *
+     * @param w The writer.
+     * @param type The type.
+     */
+    void write_python(writer& w, coded_index<TypeDefOrRef> const& type)
+    {
+        w.write_python(type);
+    }
+
+    /**
+     * Writes the Python type signature for a parameter or return type.
+     *
+     * This will wrap reference types in typing.Optional.
+     *
+     * @param w The writer.
+     * @param signature The type signature.
+     */
     void write_python_type(writer& w, TypeSig const& signature)
     {
         // The type metadata doesn't have nullable annotations, so we have to
@@ -3150,46 +3171,55 @@ if (!return_value)
 
     void write_python_base_classes(writer& w, TypeDef const& type)
     {
-        // specifying typing.Generic[T] is redundant when there is already
-        // another generic subclass
-        auto skip_generic = false;
-
-        if (!empty(type.InterfaceImpl()))
+        // We are using PEP 544 for interfaces.
+        if (get_category(type) == category::interface_type)
         {
-            // FIXME: filter and sort interfaces
-            // This includes all interfaces, even "inheritied" ones. So, if e.g.
-            // IMap comes before IObservableMap, it causes a "Cannot create
-            // consistent method ordering" error in Pylance. So, we could either
-            // exclude interfaces that are inherited by other interfaces or
-            // make sure the order is correct.
-            for (auto&& ii : type.InterfaceImpl())
+            w.write("typing.Protocol");
+
+            if (is_ptype(type))
             {
-                auto interface_type = get_typedef(ii.Interface());
+                w.write(
+                    "[%]",
+                    bind_list<write_template_arg_name>(", ", type.GenericParam()));
+            }
 
-                if (is_exclusive_to(interface_type))
+            // REVISIT: Consider adding required interfaces similar to implemented
+            // interfaces for classes. We would need to create our own subtype
+            // of typing.Protocol to support this.
+        }
+        else
+        {
+            if (is_ptype(type))
+            {
+                w.write(
+                    "typing.Generic[%], ",
+                    bind_list<write_template_arg_name>(", ", type.GenericParam()));
+            }
+
+            w.write("_winrt.Object");
+
+            // list implemented/required interfaces as kwarg
+            if (!empty(type.InterfaceImpl()))
+            {
+                std::vector<std::string> interfaces;
+
+                for (auto&& ii : type.InterfaceImpl())
                 {
-                    // filter private interfaces, e.g. IBluetoothAdapter4
-                    continue;
+                    auto interface_type = get_typedef(ii.Interface());
+
+                    if (is_exclusive_to(interface_type))
+                    {
+                        // filter private interfaces, e.g. IBluetoothAdapter4
+                        continue;
+                    }
+
+                    interfaces.push_back(
+                        w.write_temp("%", bind<write_python>(ii.Interface())));
                 }
 
-                if (is_ptype(interface_type))
-                {
-                    skip_generic = true;
-                }
-
-                w.write_python(ii.Interface());
-                w.write(", ");
+                w.write(", interfaces=[%]", bind_list(", ", interfaces));
             }
         }
-
-        if (!skip_generic && is_ptype(type))
-        {
-            w.write(
-                "typing.Generic[%], ",
-                bind_list<write_template_arg_name>(", ", type.GenericParam()));
-        }
-
-        w.write("_winrt.Object");
     }
 
     /**

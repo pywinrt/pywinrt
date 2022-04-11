@@ -1,5 +1,6 @@
 
 import sys
+from typing import Iterable, Optional
 
 if sys.version_info >= (3, 9):
     from typing import Annotated
@@ -38,4 +39,5 @@ def uninit_apartment() -> None: ...
 def initialize_with_window(obj: Object, hwnd: int) -> None: ...
 
 class Object:
-    ...
+    @classmethod
+    def __init_subclass__(cls, /, interfaces: Optional[Iterable[type]] = None, **kwargs) -> None: ...
