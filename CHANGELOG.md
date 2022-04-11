@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Changed
+- Changed async operation interface types to never be `typing.Optional` ([issue#11]).
+
+[issue#11]: https://github.com/pywinrt/pywinrt/issues/11
 
 ## [v1.0.0-beta.3] - 2022-04-09
 

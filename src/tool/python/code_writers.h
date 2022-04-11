@@ -2923,9 +2923,21 @@ if (!return_value)
             },
             [&](GenericTypeInstSig t)
             {
-                w.write("typing.Optional[");
+                // type metadata does not contain nullability info, so we try
+                // some heuristics to make our best guess
+                auto is_nullable = !implements_iasync(get_typedef(t.GenericType()));
+
+                if (is_nullable)
+                {
+                    w.write("typing.Optional[");
+                }
+
                 w.write_python(t);
-                w.write("]");
+
+                if (is_nullable)
+                {
+                    w.write("]");
+                }
             },
             [&](GenericMethodTypeIndex)
             {
