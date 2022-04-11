@@ -16,12 +16,6 @@ class TestJson(unittest.TestCase):
         a = wdj.JsonArray()
         self.assertEqual(str(a), "[]")
 
-    def test_JsonArray_parse(self):
-        a = wdj.JsonArray.parse("[1,2,3,4,5]")
-        self.assertEqual(a.size, 5)
-        for x in range(0,4):
-            self.assertEqual(a.get_number_at(x), x+1)
-
     def test_JsonArray_seq_len(self):
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
         self.assertEqual(len(a), 5)
@@ -105,12 +99,6 @@ class TestJson(unittest.TestCase):
         a = wdj.JsonArray.parse("[true, [], false]")
         with self.assertRaises(OSError):
             v1 = a.get_string()
-
-    def test_JsonArray_get_array_at(self):
-        a = wdj.JsonArray.parse("[true, [], false]")
-        v1 = a.get_array_at(1)
-        self.assertEqual(v1.size, 0)
-        self.assertEqual(v1.value_type, wdj.JsonValueType.ARRAY)
 
     def test_JsonArray_get_object(self):
         a = wdj.JsonArray.parse("[true, {}, false]")
