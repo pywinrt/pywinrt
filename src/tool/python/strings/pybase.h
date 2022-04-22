@@ -225,7 +225,15 @@ namespace py
         PyObject* module,
         const char* const type_name,
         PyType_Spec* type_spec,
-        PyObject* base_type);
+        PyObject* base_type) noexcept;
+
+    /**
+     * Thrown when a Python exception is pending (i.e. PyErr_Occurred() returns
+     * non-NULL).
+     */
+    struct python_exception
+    {
+    };
 
     inline __declspec(noinline) void set_invalid_activation_error(
         const char* const type_name)
@@ -423,7 +431,7 @@ namespace py
             {
                 PyErr_SetString(PyExc_SystemError, "object is null");
             }
-            throw winrt::hresult_invalid_argument();
+            throw python_exception();
         }
     }
 
@@ -439,7 +447,7 @@ namespace py
         static T convert_to(PyObject* obj)
         {
             PyErr_SetNone(PyExc_NotImplementedError);
-            throw winrt::hresult_not_implemented();
+            throw python_exception();
         }
     };
 
@@ -459,7 +467,7 @@ namespace py
 
             if (result == -1)
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             return result > 0;
@@ -482,12 +490,13 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             if (result < INT8_MIN || result > INT8_MAX)
             {
-                throw winrt::hresult_invalid_argument();
+                PyErr_SetString(PyExc_OverflowError, "does not fit in int8_t");
+                throw python_exception();
             }
 
             return static_cast<int8_t>(result);
@@ -510,12 +519,13 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             if (result < 0 || result > UINT8_MAX)
             {
-                throw winrt::hresult_invalid_argument();
+                PyErr_SetString(PyExc_OverflowError, "does not fit in uint8_t");
+                throw python_exception();
             }
 
             return static_cast<uint8_t>(result);
@@ -538,12 +548,13 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             if (result < INT16_MIN || result > INT16_MAX)
             {
-                throw winrt::hresult_invalid_argument();
+                PyErr_SetString(PyExc_OverflowError, "does not fit in int16_t");
+                throw python_exception();
             }
 
             return static_cast<int16_t>(result);
@@ -566,12 +577,13 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             if (result < 0 || result > UINT16_MAX)
             {
-                throw winrt::hresult_invalid_argument();
+                PyErr_SetString(PyExc_OverflowError, "does not fit in uint16_t");
+                throw python_exception();
             }
 
             return static_cast<uint16_t>(result);
@@ -594,7 +606,7 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             return result;
@@ -617,7 +629,7 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             return result;
@@ -640,7 +652,7 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             return result;
@@ -663,7 +675,7 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             return result;
@@ -686,7 +698,7 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             return static_cast<float>(result);
@@ -709,7 +721,7 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             return result;
@@ -765,16 +777,21 @@ namespace py
             pyobj_handle bytes{PyObject_GetAttrString(obj, "bytes_le")};
             if (!bytes)
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             winrt::guid result;
             char* buffer;
             Py_ssize_t size;
-            if (PyBytes_AsStringAndSize(bytes.get(), &buffer, &size) == -1
-                || size != sizeof(result))
+            if (PyBytes_AsStringAndSize(bytes.get(), &buffer, &size) == -1)
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
+            }
+
+            if (size != sizeof(result))
+            {
+                PyErr_SetString(PyExc_ValueError, "bytes_le is wrong size");
+                throw python_exception();
             }
 
             memcpy(&result, buffer, size);
@@ -797,14 +814,22 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            if (PyObject_IsInstance(
-                    obj, reinterpret_cast<PyObject*>(winrt_type<Object>::python_type)))
+            int result = PyObject_IsInstance(
+                obj, reinterpret_cast<PyObject*>(winrt_type<Object>::python_type));
+
+            if (result == -1)
             {
-                auto wrapper = reinterpret_cast<winrt_wrapper_base*>(obj);
-                return as<winrt::Windows::Foundation::IInspectable>(wrapper);
+                throw python_exception();
             }
 
-            throw winrt::hresult_invalid_argument();
+            if (result == 0)
+            {
+                PyErr_SetString(PyExc_TypeError, "not a _winrt.Object");
+                throw python_exception();
+            }
+
+            auto wrapper = reinterpret_cast<winrt_wrapper_base*>(obj);
+            return as<winrt::Windows::Foundation::IInspectable>(wrapper);
         }
     };
 
@@ -819,10 +844,13 @@ namespace py
 
             Py_ssize_t py_size;
             buffer = PyUnicode_AsWideCharString(obj, &py_size);
-            if (buffer != nullptr)
+
+            if (!buffer)
             {
-                size = static_cast<std::wstring_view::size_type>(py_size);
+                throw python_exception();
             }
+
+            size = static_cast<std::wstring_view::size_type>(py_size);
         }
 
         pystring(pystring& other) = delete;
@@ -870,11 +898,6 @@ namespace py
         {
             pystringview str{obj};
 
-            if (!str)
-            {
-                throw winrt::hresult_invalid_argument();
-            }
-
             return str;
         }
     };
@@ -911,7 +934,7 @@ namespace py
             if (Py_TYPE(obj) != get_python_type<T>())
             {
                 PyErr_SetString(PyExc_TypeError, "wrong type");
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             return reinterpret_cast<winrt_wrapper<T>*>(obj)->obj;
@@ -947,7 +970,12 @@ namespace py
             {
                 if (!iterator)
                 {
-                    throw winrt::hresult_invalid_argument();
+                    if (!PyErr_Occurred())
+                    {
+                        PyErr_SetString(PyExc_SystemError, "iterator is null");
+                    }
+
+                    throw python_exception();
                 }
 
                 pyobj_handle next{PyIter_Next(iterator.get())};
@@ -955,7 +983,7 @@ namespace py
                 {
                     if (PyErr_Occurred())
                     {
-                        throw winrt::hresult_invalid_argument();
+                        throw python_exception();
                     }
                     else
                     {
@@ -975,7 +1003,8 @@ namespace py
                     {
                         PyErr_SetString(PyExc_SystemError, "iterator is null");
                     }
-                    throw winrt::hresult_invalid_argument();
+
+                    throw python_exception();
                 }
 
                 _current_value = get_next(_iterator);
@@ -1001,7 +1030,7 @@ namespace py
             {
                 // TODO: implement GetMany
                 PyErr_SetNone(PyExc_NotImplementedError);
-                throw winrt::hresult_not_implemented();
+                throw python_exception();
             }
         };
     };
@@ -1047,12 +1076,13 @@ namespace py
             }
 
             pyobj_handle iterator{PyObject_GetIter(obj)};
-            if (iterator)
+
+            if (!iterator)
             {
-                return winrt::make<python_iterable<TItem>>(obj);
+                throw python_exception();
             }
 
-            throw winrt::hresult_invalid_argument();
+            return winrt::make<python_iterable<TItem>>(obj);
         }
     };
 
@@ -1090,12 +1120,19 @@ namespace py
 
         static auto convert_to(PyObject* obj)
         {
-            if (auto result = convert_interface_to<T>(obj))
+            auto result = convert_interface_to<T>(obj);
+
+            if (!result)
             {
-                return result.value();
+                if (!PyErr_Occurred())
+                {
+                    PyErr_SetString(PyExc_TypeError, "convert_to returned null");
+                }
+
+                throw python_exception();
             }
 
-            throw winrt::hresult_invalid_argument();
+            return result.value();
         }
     };
 
@@ -1138,7 +1175,7 @@ namespace py
             // this is assuming array_view is always treated as read-only
             if (PyObject_GetBuffer(obj, &view, PyBUF_SIMPLE) == -1)
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             // we don't allow data with the wrong item size
@@ -1151,7 +1188,7 @@ namespace py
                 PyErr_SetObject(PyExc_TypeError, msg.get());
                 PyBuffer_Release(&view);
 
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             this->m_data = reinterpret_cast<pointer>(view.buf);
@@ -1228,9 +1265,10 @@ namespace py
             throw_if_pyobj_null(obj);
 
             Py_ssize_t list_size = PySequence_Size(obj);
+
             if (list_size == -1)
             {
-                throw winrt::hresult_invalid_argument();
+                throw python_exception();
             }
 
             winrt::com_array<T> items(
@@ -1239,9 +1277,10 @@ namespace py
             for (Py_ssize_t index = 0; index < list_size; index++)
             {
                 pyobj_handle item{PySequence_GetItem(obj, index)};
+
                 if (!item)
                 {
-                    throw winrt::hresult_invalid_argument();
+                    throw python_exception();
                 }
 
                 items[static_cast<uint32_t>(index)]

@@ -7,6 +7,7 @@
 ### Changed
 - Changed async operation interface types to never be `typing.Optional` ([issue#11]).
 - Interface type hints are now `typing.Protocol`.
+- Improved exception raising.
 
 [issue#11]: https://github.com/pywinrt/pywinrt/issues/11
 

@@ -2710,11 +2710,12 @@ if (Py_TYPE(obj) == py::get_python_type<%>())
 
 if (!PyDict_Check(obj))
 {
-    throw winrt::hresult_invalid_argument();
+    PyErr_SetString(PyExc_TypeError, "expecting % or dict");
+    throw python_exception();
 }
 
 )";
-            w.write(format, type, type);
+            w.write(format, type, type, type);
 
             w.write("% return_value{};\n", type);
 
@@ -2725,9 +2726,15 @@ if (!PyDict_Check(obj))
                     "\nPyObject* py_% = PyDict_GetItemString(obj, \"%\");\n",
                     field.Name(),
                     bind<write_lower_snake_case_python_identifier>(field.Name()));
-                w.write(
-                    "if (!py_%) { throw winrt::hresult_invalid_argument(); }\n",
-                    field.Name());
+                w.write("if (!py_%) {\n", field.Name());
+
+                {
+                    writer::indent_guard gg{w};
+                    w.write("PyErr_SetString(PyExc_KeyError, \"%\");\n", field.Name());
+                    w.write("throw python_exception();\n");
+                }
+
+                w.write("}\n");
 
                 if (has_custom_conversion(type))
                 {
@@ -2859,6 +2866,14 @@ return [delegate = std::move(_delegate)](%)
                         w.write(
                             "\npy::pyobj_handle args{ % };\n",
                             bind<write_py_tuple_pack>(tuple_params));
+
+                        w.write("\nif (!args) {\n");
+                        {
+                            writer::indent_guard gggg{w};
+                            w.write("PyErr_WriteUnraisable(delegate.callable());\n");
+                            w.write("throw winrt::hresult_error();\n");
+                        }
+                        w.write("}\n\n");
                     }
                     else
                     {
@@ -2871,7 +2886,7 @@ return [delegate = std::move(_delegate)](%)
 if (!return_value)
 {
     PyErr_WriteUnraisable(delegate.callable());
-    throw winrt::hresult_invalid_argument();
+    throw winrt::hresult_error();
 }
 )");
 

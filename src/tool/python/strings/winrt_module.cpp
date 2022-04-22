@@ -2,33 +2,34 @@
 #include <Shobjidl.h>
 #include <winrt/base.h>
 
-PyObject* create_python_type(PyType_Spec* type_spec, PyObject* base_type) noexcept
-{
-    if (base_type != nullptr)
-    {
-        return PyType_FromSpecWithBases(type_spec, base_type);
-    }
-    else
-    {
-        return PyType_FromSpec(type_spec);
-    }
-}
-
+/**
+ * Adds a Python type to a Python module.
+ *
+ * @param module The module to add the type to.
+ * @param type_name A valid Python identifier.
+ * @param type_spec The Python type spec.
+ * @param base_type The base type, a tuple of base types or nullptr to use the base
+ * slot.
+ * @returns A new reference to the type object or nullptr on error.
+ */
 PyTypeObject* py::register_python_type(
     PyObject* module,
     const char* const type_name,
     PyType_Spec* type_spec,
-    PyObject* base_type)
+    PyObject* base_type) noexcept
 {
-    py::pyobj_handle type_object{create_python_type(type_spec, base_type)};
+    py::pyobj_handle type_object{PyType_FromSpecWithBases(type_spec, base_type)};
+
     if (!type_object)
     {
-        throw winrt::hresult_error();
+        return nullptr;
     }
-    if (PyModule_AddObject(module, type_name, type_object.get()) != 0)
+
+    if (PyModule_AddObject(module, type_name, type_object.get()) == -1)
     {
-        throw winrt::hresult_error();
+        return nullptr;
     }
+
     return reinterpret_cast<PyTypeObject*>(type_object.detach());
 }
 
@@ -177,6 +178,11 @@ static int module_exec(PyObject* module) noexcept
     {
         py::winrt_type<py::Object>::python_type = py::register_python_type(
             module, _type_name_Object, &Object_type_spec, nullptr);
+
+        if (!py::winrt_type<py::Object>::python_type)
+        {
+            return -1;
+        }
 
         if (PyModule_AddIntConstant(module, "MTA", kMTA) == -1)
         {

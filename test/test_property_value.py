@@ -15,42 +15,56 @@ class TestPropertyValue(unittest.TestCase):
         ipv = wf.IPropertyValue._from(o)
         self.assertEqual(ipv.type, wf.PropertyType.UINT8)
         self.assertTrue(ipv.get_uint8(), 250)
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint8(2**8))
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint8(-1))
 
     def test_create_int16(self):
-       o = wf.PropertyValue.create_int16(-32000)
-       ipv = wf.IPropertyValue._from(o)
-       self.assertEqual(ipv.type, wf.PropertyType.INT16)
-       self.assertTrue(ipv.get_int16(), -32000)
+        o = wf.PropertyValue.create_int16(-32000)
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.INT16)
+        self.assertTrue(ipv.get_int16(), -32000)
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_int16(2**15))
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_int16(-(2**15 + 1)))
 
     def test_create_uint16(self):
-       o = wf.PropertyValue.create_uint16(65000)
-       ipv = wf.IPropertyValue._from(o)
-       self.assertEqual(ipv.type, wf.PropertyType.UINT16)
-       self.assertTrue(ipv.get_uint16(), 65000)
+        o = wf.PropertyValue.create_uint16(65000)
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.UINT16)
+        self.assertTrue(ipv.get_uint16(), 65000)
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint16(2**16))
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint16(-1))
 
     def test_create_int32(self):
-       o = wf.PropertyValue.create_int32(-2147483640)
-       ipv = wf.IPropertyValue._from(o)
-       self.assertEqual(ipv.type, wf.PropertyType.INT32)
-       self.assertTrue(ipv.get_int32(), -2147483640)
+        o = wf.PropertyValue.create_int32(-2147483640)
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.INT32)
+        self.assertTrue(ipv.get_int32(), -2147483640)
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_int32(2**31))
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_int32(-(2**31 + 1)))
 
     def test_create_uint32(self):
-       o = wf.PropertyValue.create_uint32(4294967290)
-       ipv = wf.IPropertyValue._from(o)
-       self.assertEqual(ipv.type, wf.PropertyType.UINT32)
-       self.assertTrue(ipv.get_uint32(), 4294967290)
+        o = wf.PropertyValue.create_uint32(4294967290)
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.UINT32)
+        self.assertTrue(ipv.get_uint32(), 4294967290)
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint32(2**32))
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint32(-1))
 
     def test_create_int64(self):
-       o = wf.PropertyValue.create_int64(-9223372036854775800)
-       ipv = wf.IPropertyValue._from(o)
-       self.assertEqual(ipv.type, wf.PropertyType.INT64)
-       self.assertTrue(ipv.get_int64(), -9223372036854775800)
+        o = wf.PropertyValue.create_int64(-9223372036854775800)
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.INT64)
+        self.assertTrue(ipv.get_int64(), -9223372036854775800)
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_int32(2**63))
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_int32(-(2**63 + 1)))
 
     def test_create_uint64(self):
-       o = wf.PropertyValue.create_uint64(18446744073709551610)
-       ipv = wf.IPropertyValue._from(o)
-       self.assertEqual(ipv.type, wf.PropertyType.UINT64)
-       self.assertTrue(ipv.get_uint64(), 18446744073709551610)
+        o = wf.PropertyValue.create_uint64(18446744073709551610)
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.UINT64)
+        self.assertTrue(ipv.get_uint64(), 18446744073709551610)
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint64(2**64))
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint64(-1))
 
     def test_create_single(self):
         o = wf.PropertyValue.create_single(3.14)
@@ -106,6 +120,9 @@ class TestPropertyValue(unittest.TestCase):
         s = ipv.get_point()
         self.assertEqual(s.x, 2)
         self.assertEqual(s.y, 4)
+        wf.PropertyValue.create_point({"x": 2, "y": 4})
+        self.assertRaises(KeyError, lambda: wf.PropertyValue.create_point({"x": 2}))
+        self.assertRaises(KeyError, lambda: wf.PropertyValue.create_point({"y": 2}))
 
     def test_create_Size(self):
         o = wf.PropertyValue.create_size(wf.Size(2, 4))
