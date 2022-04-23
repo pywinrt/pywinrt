@@ -10,6 +10,8 @@ This tool is used in conjunction with [cppwinrt](https://github.com/microsoft/cp
 to generate Python bindings for Windows Runtime APIs. It can be used with the
 Windows SDK and with custom components.
 
+A pre-compiled binary version of the PyWinRT tool is available via [nuget](https://www.nuget.org/packages/PyWinRT).
+
 ### Projects that use PyWinRT
 
 - [python-winsdk](https://github.com/pywinrt/python-winsdk): Full Windows SDK bindings.
