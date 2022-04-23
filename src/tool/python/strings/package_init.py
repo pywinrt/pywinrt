@@ -5,7 +5,7 @@ def _import_ns_module(ns):
     import importlib.util
 
     try:
-        module_name = "_%_" + ns.replace('.', '_')
+        module_name = f"_%_{ns.replace('.', '_')}"
 
         loader = importlib.machinery.ExtensionFileLoader(module_name, _winrt.__file__)
         spec = importlib.util.spec_from_loader(module_name, loader)
