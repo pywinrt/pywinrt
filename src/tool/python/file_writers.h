@@ -59,6 +59,9 @@ namespace pywinrt
         w.write("\nnamespace py\n{\n");
         {
             writer::indent_guard g{w};
+
+            settings.filter.bind_each<write_get_py_type_specialization>(members.enums)(
+                w);
             settings.filter.bind_each<write_get_python_type_specialization>(
                 members.classes)(w);
             settings.filter.bind_each<write_get_python_type_specialization>(
@@ -108,6 +111,8 @@ namespace pywinrt
         w.write("#include \"pybase.h\"\n");
         w.write("#include \"py.%.h\"\n", ns);
 
+        settings.filter.bind_each<write_py_type_specialization_storage>(members.enums)(
+            w);
         settings.filter.bind_each<write_winrt_type_specialization_storage>(
             members.classes)(w);
         settings.filter.bind_each<write_winrt_type_specialization_storage>(
@@ -126,6 +131,8 @@ namespace pywinrt
         {
             writer::indent_guard g{w};
 
+            settings.filter.bind_each<write_py_type_registration_method>(members.enums)(
+                w);
             settings.filter.bind_each<write_inspectable_type>(members.classes)(w);
             settings.filter.bind_each<write_inspectable_type>(members.interfaces)(w);
             settings.filter.bind_each<write_struct>(members.structs)(w);

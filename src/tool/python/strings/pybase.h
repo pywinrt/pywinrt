@@ -176,6 +176,33 @@ namespace py
 
     struct Object;
 
+    /**
+     * Type registration for pure Python types.
+     */
+    template<typename T>
+    struct py_type
+    {
+        static PyObject* get_python_type()
+        {
+            return nullptr;
+        }
+    };
+
+    /**
+     * Gets the registered pure Python type for @p T.
+     *
+     * @returns A borrowed reference to the type or nullptr if the type was not
+     * registered.
+     */
+    template<typename T>
+    PyObject* get_py_type()
+    {
+        return py_type<T>::get_python_type();
+    }
+
+    /**
+     * Type registration for binary extension types.
+     */
     template<typename T>
     struct winrt_type
     {
@@ -185,12 +212,21 @@ namespace py
         }
     };
 
+    /**
+     * Type registration for the base `_winrt.Object` Python type.
+     */
     template<>
     struct winrt_type<Object>
     {
         static PyTypeObject* python_type;
     };
 
+    /**
+     * Gets the registered binary extension type for @p T.
+     *
+     * @returns A borrowed reference to the type or nullptr if the type was not
+     * registered.
+     */
     template<typename T>
     PyTypeObject* get_python_type()
     {
@@ -299,6 +335,42 @@ namespace py
     inline auto get_instance_hash(T const& instance)
     {
         return std::hash<winrt::Windows::Foundation::IUnknown>{}(instance);
+    }
+
+    /**
+     * Converts a Python integer object to a Python Enum object.
+     *
+     * This is the equivelent of calling `Enum(value)` in Python.
+     *
+     * @param value The value object.
+     * @returns A new reference to the Enum object or nullptr on error.
+     */
+    template<typename T>
+    PyObject* wrap_enum(PyObject* value) noexcept
+    {
+        PyObject* type_object = get_py_type<T>();
+
+        if (!type_object)
+        {
+            PyErr_SetString(PyExc_RuntimeError, "enum type has not been registered");
+            return nullptr;
+        }
+
+        pyobj_handle args{PyTuple_Pack(1, value)};
+
+        if (!args)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle obj{PyObject_Call(type_object, args.get(), nullptr)};
+
+        if (!obj)
+        {
+            return nullptr;
+        }
+
+        return obj.detach();
     }
 
     template<typename T>
@@ -908,7 +980,9 @@ namespace py
         static PyObject* convert(T instance) noexcept
         {
             using enum_type = std::underlying_type_t<T>;
-            return converter<enum_type>::convert(static_cast<enum_type>(instance));
+            pyobj_handle value{
+                converter<enum_type>::convert(static_cast<enum_type>(instance))};
+            return wrap_enum<T>(value.get());
         }
 
         static auto convert_to(PyObject* obj)

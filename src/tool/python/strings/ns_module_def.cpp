@@ -8,7 +8,7 @@ static PyModuleDef module_def
        "%",
        module_doc,
        0,
-       nullptr,
+       module_methods,
        module_slots,
        nullptr,
        nullptr,

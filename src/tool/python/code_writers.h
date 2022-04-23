@@ -147,6 +147,8 @@ namespace pywinrt
                 }
             }
         }
+
+        w.write("\n_ns_module._register_%(%)\n", type.TypeName(), type.TypeName());
     }
 
     void write_include(writer& w, std::string_view const& ns)
@@ -250,6 +252,24 @@ catch (...)
         }
     }
 
+    void write_get_py_type_specialization(writer& w, TypeDef const& type)
+    {
+        if (is_exclusive_to(type))
+            return;
+
+        auto format = R"(template<>
+struct py_type<%>
+{
+    static PyObject* python_type;
+    static PyObject* get_python_type() {
+        return python_type;
+    }
+};
+
+)";
+        w.write(format, bind<write_python_wrapper_template_type>(type));
+    }
+
     void write_get_python_type_specialization(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
@@ -306,6 +326,36 @@ struct winrt_type<%>
         else
         {
             w.write("nullptr");
+        }
+    }
+
+    /**
+     * Writes a module method table item for a pure Python type registration method.
+     */
+    void write_ns_module_register_py_type_method_def(writer& w, TypeDef const& type)
+    {
+        w.write(
+            "{\"_register_%\", register_%, METH_O, \"registers type\"},\n",
+            type.TypeName(),
+            type.TypeName());
+    }
+
+    /**
+     * Writes the module method table for the namespace module.
+     * @param w The writer.
+     * @param members The namespace module members.
+     */
+    void write_ns_module_method_table(
+        writer& w, cache::namespace_members const& members)
+    {
+        w.write("static PyMethodDef module_methods[] = {\n");
+        {
+            writer::indent_guard g{w};
+
+            settings.filter.bind_each<write_ns_module_register_py_type_method_def>(
+                members.enums)(w);
+
+            w.write("{}};\n\n");
         }
     }
 
@@ -369,6 +419,7 @@ struct winrt_type<%>
     {
         w.write("\n// ----- % Initialization --------------------\n", ns);
 
+        write_ns_module_method_table(w, members);
         write_ns_module_exec_func(w, members);
         w.write(strings::ns_module_def, ns, bind<write_ns_module_name>(ns));
     }
@@ -384,6 +435,19 @@ PyInit_% (void) noexcept
 )";
         auto segments = get_dotted_name_segments(ns);
         w.write(format, bind<write_ns_module_name>(ns), bind_list("::", segments));
+    }
+
+    /**
+     * Writes code for pure Python type registration storage.
+     */
+    void write_py_type_specialization_storage(writer& w, TypeDef const& type)
+    {
+        if (!is_exclusive_to(type))
+        {
+            w.write(
+                "\nPyObject* py::py_type<%>::python_type;",
+                bind<write_python_wrapper_template_type>(type));
+        }
     }
 
     void write_winrt_type_specialization_storage(writer& w, TypeDef const& type)
@@ -1802,6 +1866,49 @@ static PyType_Spec _type_spec_@ =
             w.write("struct");
             break;
         }
+    }
+
+    /**
+     * Writes an pure Python type registration method.
+     */
+    void write_py_type_registration_method(writer& w, TypeDef const& type)
+    {
+        w.write(
+            "\nstatic PyObject* register_%(PyObject* /* unused */, PyObject* type_obj) {\n",
+            type.TypeName());
+        {
+            writer::indent_guard g{w};
+
+            auto python_type = w.write_temp(
+                "py::py_type<%>::python_type",
+                bind<write_python_wrapper_template_type>(type));
+
+            w.write("if (%) {\n", python_type);
+            {
+                writer::indent_guard gg{w};
+
+                w.write(
+                    "PyErr_SetString(PyExc_RuntimeError, \"type has already been registered\");\n");
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n");
+
+            w.write("\nif (!PyType_Check(type_obj)) {\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write(
+                    "PyErr_SetString(PyExc_TypeError, \"argument is not a type\");\n");
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n");
+
+            w.write("\nPy_INCREF(type_obj);\n");
+            w.write("% = type_obj;\n", python_type);
+
+            w.write("\nPy_RETURN_NONE;\n");
+        }
+        w.write("}\n");
     }
 
     void write_inspectable_type(writer& w, TypeDef const& type)
