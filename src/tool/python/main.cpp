@@ -192,6 +192,19 @@ Where <spec> is one or more of:
                             ns_dir, settings.module, namespaces, ns, members);
                         write_namespace_dunder_init_pyi(
                             ns_dir, namespaces, ns, members);
+
+                        // special case for adding additional
+                        // Windows.Graphics.Capture.Interop module (the interop
+                        // namespace doesn't have metadata to automatically generate it)
+                        if (ns == "Windows.Graphics.Capture")
+                        {
+                            auto interop_dir = ns_dir / "interop";
+                            create_directories(interop_dir);
+
+                            write_windows_graphics_capture_interop_cpp(src_dir);
+                            write_windows_graphics_capture_interop_py(interop_dir);
+                            write_windows_graphics_capture_interop_pyi(interop_dir);
+                        }
                     });
             }
 

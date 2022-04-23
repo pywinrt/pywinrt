@@ -1,0 +1,107 @@
+
+#include <windows.graphics.capture.interop.h>
+#include <windows.graphics.capture.h>
+#include <winrt/Windows.Graphics.Capture.h>
+
+#include "pybase.h"
+
+#include <stdio.h>
+
+static PyObject* create_for_monitor(PyObject* /*unused*/, PyObject* window_obj) noexcept
+{
+    try
+    {
+        auto hmonitor = PyLong_AsVoidPtr(window_obj);
+
+        if (!hmonitor && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        auto activation_factory = winrt::get_activation_factory<
+            winrt::Windows::Graphics::Capture::GraphicsCaptureItem>();
+        auto interop_factory = activation_factory.as<IGraphicsCaptureItemInterop>();
+        winrt::Windows::Graphics::Capture::GraphicsCaptureItem item = {nullptr};
+        auto result = interop_factory->CreateForMonitor(
+            reinterpret_cast<HMONITOR>(hmonitor),
+            winrt::guid_of<winrt::Windows::Graphics::Capture::IGraphicsCaptureItem>(),
+            reinterpret_cast<void**>(winrt::put_abi(item)));
+
+        if (result < 0) {
+            winrt::throw_hresult(result);
+        }
+
+        return py::convert(item);
+    }
+    catch (...)
+    {
+        py::to_PyErr();
+        return nullptr;
+    }
+}
+
+static PyObject* create_for_window(PyObject* /*unused*/, PyObject* window_obj) noexcept
+{
+    try
+    {
+        auto hwnd = PyLong_AsVoidPtr(window_obj);
+
+        if (!hwnd && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        // https://github.com/microsoft/Windows.UI.Composition-Win32-Samples/blob/a59e7586c0bd1a967e1e25f6ca0363e20151afe5/cpp/ScreenCaptureforHWND/ScreenCaptureforHWND/capture.interop.h#L11
+        auto activation_factory = winrt::get_activation_factory<
+            winrt::Windows::Graphics::Capture::GraphicsCaptureItem>();
+        auto interop_factory = activation_factory.as<IGraphicsCaptureItemInterop>();
+        winrt::Windows::Graphics::Capture::GraphicsCaptureItem item = {nullptr};
+        auto result = interop_factory->CreateForWindow(
+            reinterpret_cast<HWND>(hwnd),
+            winrt::guid_of<winrt::Windows::Graphics::Capture::IGraphicsCaptureItem>(),
+            reinterpret_cast<void**>(winrt::put_abi(item)));
+
+        if (result < 0) {
+            winrt::throw_hresult(result);
+        }
+
+        return py::convert(item);
+    }
+    catch (...)
+    {
+        py::to_PyErr();
+        return nullptr;
+    }
+}
+
+static PyMethodDef module_methods[]{
+    {"create_for_monitor",
+     create_for_monitor,
+     METH_O,
+     "Targets a monitor(s) for the creation of a graphics capture item."},
+    {"create_for_window",
+     create_for_window,
+     METH_O,
+     "Targets a single window for the creation of a graphics capture item."},
+    {}};
+
+PyDoc_STRVAR(
+    module_doc,
+    "APIs for desktop interop with the Windows.Graphics.Capture namespace.");
+
+static PyModuleDef module_def
+    = {PyModuleDef_HEAD_INIT,
+       "_%_Windows_Graphics_Capture_Interop",
+       module_doc,
+       0,
+       module_methods,
+       nullptr,
+       nullptr,
+       nullptr,
+       nullptr};
+
+PyMODINIT_FUNC
+PyInit__%_Windows_Graphics_Capture_Interop (void) noexcept
+{
+    return PyModuleDef_Init(&module_def);
+}

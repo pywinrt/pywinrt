@@ -4,12 +4,17 @@
 
 ## [Unreleased]
 
+### Added
+- Added special case for `Windows.Graphics.Capture` to include additional
+  `Interop` namespace ([winsdk#5]).
+
 ### Changed
 - Changed async operation interface types to never be `typing.Optional` ([issue#11]).
 - Interface type hints are now `typing.Protocol`.
 - Improved exception raising.
 
 [issue#11]: https://github.com/pywinrt/pywinrt/issues/11
+[winsdk#5]: https://github.com/pywinrt/python-winsdk/issues/5
 
 ## [v1.0.0-beta.3] - 2022-04-09
 

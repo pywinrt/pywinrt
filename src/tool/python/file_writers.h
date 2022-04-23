@@ -246,4 +246,51 @@ namespace pywinrt
 
         w.flush_to_file(folder / "__init__.pyi");
     }
+
+    /**
+     * Writes the Windows.Graphics.Capture.Interop module source code file.
+     * @param folder The destination folder. This folder must already exist.
+     */
+    inline void write_windows_graphics_capture_interop_cpp(stdfs::path const& folder)
+    {
+        writer w;
+
+        write_license(w, "//");
+        w.write(
+            strings::windows_graphics_capture_interop_cpp,
+            settings.module,
+            settings.module);
+        w.flush_to_file(folder / "py.Windows.Graphics.Capture.Interop.cpp");
+    }
+
+    /**
+     * Writes the Windows.Graphics.Capture.Interop module `__init__.py` file.
+     * @param folder The destination folder. This folder must already exist.
+     */
+    inline void write_windows_graphics_capture_interop_py(stdfs::path const& folder)
+    {
+        writer w;
+
+        write_license(w, "#");
+        w.write(
+            strings::windows_graphics_capture_interop_py,
+            settings.module,
+            settings.module,
+            settings.module);
+        w.flush_to_file(folder / "__init__.py");
+    }
+
+    /**
+     * Writes the Windows.Graphics.Capture.Interop module `__init__.pyi` file.
+     * @param folder The destination folder. This folder must already exist.
+     */
+    inline void write_windows_graphics_capture_interop_pyi(stdfs::path const& folder)
+    {
+        writer w;
+
+        write_license(w, "#");
+        w.write(strings::windows_graphics_capture_interop_pyi);
+        w.flush_to_file(folder / "__init__.pyi");
+    }
+
 } // namespace pywinrt
