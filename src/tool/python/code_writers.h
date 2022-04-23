@@ -3232,7 +3232,10 @@ if (!return_value)
                         w.write_temp("%", bind<write_python>(ii.Interface())));
                 }
 
-                w.write(", interfaces=[%]", bind_list(", ", interfaces));
+                if (!interfaces.empty())
+                {
+                    w.write(", interfaces=[%]", bind_list(", ", interfaces));
+                }
             }
         }
     }

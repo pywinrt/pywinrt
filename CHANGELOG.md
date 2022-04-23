@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Changed
+- Don't emit empty `interfaces` in type hints.
+
 ## [v1.0.0-beta.4] - 2022-04-23
 
 ### Added
