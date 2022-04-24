@@ -158,8 +158,14 @@ namespace pywinrt
                 }
             }
         }
+    }
 
-        w.write("\n_ns_module._register_%(%)\n", type.TypeName(), type.TypeName());
+    /**
+     * Writes a method call to register a pure Python type.
+     */
+    void write_py_type_registration(writer& w, TypeDef const& type)
+    {
+        w.write("_ns_module._register_%(%)\n", type.TypeName(), type.TypeName());
     }
 
     void write_include(writer& w, std::string_view const& ns)

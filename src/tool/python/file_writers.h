@@ -211,6 +211,8 @@ namespace pywinrt
         w.write_each<write_python_try_import_namespace>(needed_namespaces);
         settings.filter.bind_each<write_python_enum>(members.enums)(w);
         w.write("\n");
+        settings.filter.bind_each<write_py_type_registration>(members.enums)(w);
+        w.write("\n");
         settings.filter.bind_each<write_python_import_type>(members.structs)(w);
         settings.filter.bind_each<write_python_import_type>(members.classes)(w);
         settings.filter.bind_each<write_python_import_type>(members.interfaces)(w);
