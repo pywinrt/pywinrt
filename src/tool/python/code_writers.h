@@ -119,10 +119,21 @@ namespace pywinrt
         }
     }
 
+    /**
+     * Writes a Python import statement.
+     */
     void write_python_import_namespace(writer& w, std::string_view const& ns)
     {
+        w.write("import %.%\n", settings.module, bind<write_lower_case>(ns));
+    }
+
+    /**
+     * Writes a Python import statement surrounded by try/except.
+     */
+    void write_python_try_import_namespace(writer& w, std::string_view const& ns)
+    {
         w.write(
-            "\ntry:\n    import %.%\nexcept Exception:\n    pass\n",
+            "\ntry:\n    import %.%\nexcept ImportError:\n    pass\n",
             settings.module,
             bind<write_lower_case>(ns));
     }

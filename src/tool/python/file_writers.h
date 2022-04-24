@@ -208,7 +208,7 @@ namespace pywinrt
 
         w.write("\n_ns_module = %._import_ns_module(\"%\")\n", module_name, ns);
 
-        w.write_each<write_python_import_namespace>(needed_namespaces);
+        w.write_each<write_python_try_import_namespace>(needed_namespaces);
         settings.filter.bind_each<write_python_enum>(members.enums)(w);
         w.write("\n");
         settings.filter.bind_each<write_python_import_type>(members.structs)(w);

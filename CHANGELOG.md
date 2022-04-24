@@ -6,6 +6,7 @@
 
 ### Changed
 - Don't emit empty `interfaces` in type hints.
+- Don't `try/except` imports in `.pyi` files.
 
 ### Fixed
 - Fixed support for sub-interpreters.
