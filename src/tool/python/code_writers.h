@@ -3720,6 +3720,16 @@ if (!return_value)
                 w.write("def __exit__(self, *args) -> None: ...\n");
             }
 
+            if (implements_istringable(type))
+            {
+                w.write("def __str__(self) -> str: ...\n");
+            }
+
+            if (implements_ibuffer(type) || implements_imemorybufferreference(type))
+            {
+                w.write("def __bytes__(self) -> bytes: ...\n");
+            }
+
             if (ns == "Windows.Foundation")
             {
                 if (name == "IAsyncAction" || name == "IAsyncActionWithProgress`1")
@@ -3738,10 +3748,6 @@ if (!return_value)
                     w.write(
                         "def __await__(self) -> typing.Generator[typing.Any, None, %]: ...\n",
                         bind<write_template_arg_name>(type.GenericParam().first));
-                }
-                else if (name == "IStringable")
-                {
-                    w.write("def __str__(self) -> str: ...\n");
                 }
             }
             else if (ns == "Windows.Foundation.Collections")
