@@ -8,7 +8,9 @@ import winrt.windows.foundation as wf
 
 class TestPropertyValue(unittest.TestCase):
 
-    # TODO: CreateEmpty seems to be failing @ the C++/WinRT layer. 
+    def test_create_empty(self):
+        o = wf.PropertyValue.create_empty()
+        self.assertIsNone(o)
 
     def test_create_uint8(self):
         o = wf.PropertyValue.create_uint8(250)
