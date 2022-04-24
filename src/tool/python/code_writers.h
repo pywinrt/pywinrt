@@ -3548,11 +3548,9 @@ if (!return_value)
 
             if (is_ptype(type))
             {
-                auto delimeter = w.write_temp(", @.", type.TypeName());
                 w.write(
-                    "[@.%]",
-                    type.TypeName(),
-                    bind_list<write_template_arg_name>(delimeter, type.GenericParam()));
+                    "[%]",
+                    bind_list<write_template_arg_name>(", ", type.GenericParam()));
             }
 
             // REVISIT: Consider adding required interfaces similar to implemented
@@ -3563,11 +3561,9 @@ if (!return_value)
         {
             if (is_ptype(type))
             {
-                auto delimeter = w.write_temp(", @.", type.TypeName());
                 w.write(
-                    "typing.Generic[@.%], ",
-                    type.TypeName(),
-                    bind_list<write_template_arg_name>(delimeter, type.GenericParam()));
+                    "typing.Generic[%], ",
+                    bind_list<write_template_arg_name>(", ", type.GenericParam()));
             }
 
             w.write("_winrt.Object");
@@ -3600,19 +3596,61 @@ if (!return_value)
     }
 
     /**
-     * Writes python TypeVar for generic type parameters
+     * Writes de-duplicated Python TypeVars for generic type parameters.
+     *
+     * Note: only interfaces and delegates currently can be parameterized.
+     *
+     * @param w The writer
+     * @param interfaces The list of interfaces.
+     * @param delegates The list of delegates.
      */
-    void write_python_type_vars(writer& w, TypeDef const& type)
+    void write_python_type_vars(
+        writer& w,
+        std::vector<TypeDef> const& interfaces,
+        std::vector<TypeDef> const& delegates)
     {
-        if (is_ptype(type))
+        std::set<std::string> params;
+
+        // filter function to add generic type params only if they are not
+        // excluded, private or non-generic
+        auto add_param = [&w, &params](TypeDef const& type)
         {
+            if (!settings.filter.includes(type))
+            {
+                return;
+            }
+
+            if (is_exclusive_to(type))
+            {
+                return;
+            }
+
+            if (!is_ptype(type))
+            {
+                return;
+            }
+
             for (auto& type_param : type.GenericParam())
             {
-                w.write(
-                    "% = typing.TypeVar('%')\n",
-                    bind<write_template_arg_name>(type_param),
-                    bind<write_template_arg_name>(type_param));
+                params.insert(w.write_temp(type_param.Name()));
             }
+        };
+
+        for (auto&& type : interfaces)
+        {
+            add_param(type);
+        }
+
+        for (auto&& type : delegates)
+        {
+            add_param(type);
+        }
+
+        w.write("Self = typing.TypeVar('Self')\n");
+
+        for (auto& type_param : params)
+        {
+            w.write("@ = typing.TypeVar('@')\n", type_param, type_param);
         }
     }
 
@@ -3677,15 +3715,6 @@ if (!return_value)
             "class @(%):\n", type.TypeName(), bind<write_python_base_classes>(type));
         {
             writer::indent_guard g{w};
-
-            // write TypeVars
-
-            if (implements_iclosable(type))
-            {
-                w.write("Self = typing.TypeVar('Self')\n");
-            }
-
-            write_python_type_vars(w, type);
 
             // write attributes
 
