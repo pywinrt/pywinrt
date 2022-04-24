@@ -7,6 +7,9 @@
 ### Changed
 - Don't emit empty `interfaces` in type hints.
 
+### Fixed
+- Fixed support for sub-interpreters.
+
 ## [v1.0.0-beta.4] - 2022-04-23
 
 ### Added

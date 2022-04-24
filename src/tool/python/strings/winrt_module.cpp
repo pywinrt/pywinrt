@@ -2,6 +2,11 @@
 #include <Shobjidl.h>
 #include <winrt/base.h>
 
+struct module_state
+{
+    PyTypeObject* Object_type;
+};
+
 /**
  * Adds a Python type to a Python module.
  *
@@ -10,7 +15,7 @@
  * @param type_spec The Python type spec.
  * @param base_type The base type, a tuple of base types or nullptr to use the base
  * slot.
- * @returns A new reference to the type object or nullptr on error.
+ * @returns A borrowed reference to the type object or nullptr on error.
  */
 PyTypeObject* py::register_python_type(
     PyObject* module,
@@ -25,6 +30,7 @@ PyTypeObject* py::register_python_type(
         return nullptr;
     }
 
+    // steals ref to type_object on success!
     if (PyModule_AddObject(module, type_name, type_object.get()) == -1)
     {
         return nullptr;
@@ -33,7 +39,6 @@ PyTypeObject* py::register_python_type(
     return reinterpret_cast<PyTypeObject*>(type_object.detach());
 }
 
-PyTypeObject* py::winrt_type<py::Object>::python_type;
 constexpr const char* const _type_name_Object = "Object";
 
 PyDoc_STRVAR(Object_doc, "base class for wrapped WinRT object instances.");
@@ -160,6 +165,8 @@ static PyObject* initialize_with_window(PyObject* /*unused*/, PyObject* args) no
     Py_RETURN_NONE;
 }
 
+PyDoc_STRVAR(module_doc, "_winrt");
+
 static PyMethodDef module_methods[]{
     {"init_apartment", init_apartment, METH_O, "initialize the apartment"},
     {"uninit_apartment", uninit_apartment, METH_NOARGS, "uninitialize the apartment"},
@@ -169,56 +176,87 @@ static PyMethodDef module_methods[]{
      "interop function to invoke IInitializeWithWindow::Initialize on an object"},
     {}};
 
-static int module_exec(PyObject* module) noexcept
+static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
 {
-    static const auto kMTA = static_cast<long>(winrt::apartment_type::multi_threaded);
-    static const auto kSTA = static_cast<long>(winrt::apartment_type::single_threaded);
+    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
+    assert(state);
 
-    try
-    {
-        py::winrt_type<py::Object>::python_type = py::register_python_type(
-            module, _type_name_Object, &Object_type_spec, nullptr);
+    Py_VISIT(state->Object_type);
 
-        if (!py::winrt_type<py::Object>::python_type)
-        {
-            return -1;
-        }
-
-        if (PyModule_AddIntConstant(module, "MTA", kMTA) == -1)
-        {
-            return -1;
-        }
-
-        if (PyModule_AddIntConstant(module, "STA", kSTA) == -1)
-        {
-            return -1;
-        }
-
-        return 0;
-    }
-    catch (...)
-    {
-        py::to_PyErr();
-        return -1;
-    }
+    return 0;
 }
 
-static PyModuleDef_Slot module_slots[] = {{Py_mod_exec, module_exec}, {}};
+static int module_clear(PyObject* module) noexcept
+{
+    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
+    assert(state);
 
-PyDoc_STRVAR(module_doc, "_winrt");
+    Py_CLEAR(state->Object_type);
+
+    return 0;
+}
 
 static PyModuleDef module_def
     = {PyModuleDef_HEAD_INIT,
        "_winrt",
        module_doc,
-       0,
+       sizeof(module_state),
        module_methods,
-       module_slots,
        nullptr,
-       nullptr,
+       module_traverse,
+       module_clear,
        nullptr};
 
 PyMODINIT_FUNC PyInit__winrt(void) noexcept
 {
-    return PyModuleDef_Init(&module_def);
+    static const auto kMTA = static_cast<long>(winrt::apartment_type::multi_threaded);
+    static const auto kSTA = static_cast<long>(winrt::apartment_type::single_threaded);
+
+    py::pyobj_handle module{PyModule_Create(&module_def)};
+
+    if (!module)
+    {
+        return nullptr;
+    }
+
+    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
+    assert(state);
+
+    state->Object_type = py::register_python_type(
+        module.get(), _type_name_Object, &Object_type_spec, nullptr);
+
+    if (!state->Object_type)
+    {
+        return nullptr;
+    }
+
+    Py_INCREF(state->Object_type);
+
+    if (PyModule_AddIntConstant(module.get(), "MTA", kMTA) == -1)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddIntConstant(module.get(), "STA", kSTA) == -1)
+    {
+        return nullptr;
+    }
+
+    return module.detach();
+}
+
+PyTypeObject* py::winrt_type<py::Object>::get_python_type() noexcept
+{
+    PyObject* module = PyState_FindModule(&module_def);
+
+    if (!module)
+    {
+        PyErr_SetString(PyExc_RuntimeError, "could not find _winrt module");
+        return nullptr;
+    }
+
+    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
+    assert(state);
+
+    return state->Object_type;
 }

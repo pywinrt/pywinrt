@@ -60,13 +60,13 @@ namespace pywinrt
         {
             writer::indent_guard g{w};
 
-            settings.filter.bind_each<write_get_py_type_specialization>(members.enums)(
-                w);
-            settings.filter.bind_each<write_get_python_type_specialization>(
+            settings.filter.bind_each<write_py_type_specialization_struct>(
+                members.enums)(w);
+            settings.filter.bind_each<write_python_type_specialization_struct>(
                 members.classes)(w);
-            settings.filter.bind_each<write_get_python_type_specialization>(
+            settings.filter.bind_each<write_python_type_specialization_struct>(
                 members.interfaces)(w);
-            settings.filter.bind_each<write_get_python_type_specialization>(
+            settings.filter.bind_each<write_python_type_specialization_struct>(
                 members.structs)(w);
             settings.filter.bind_each<write_pinterface_type_mapper>(members.interfaces)(
                 w);
@@ -111,15 +111,6 @@ namespace pywinrt
         w.write("#include \"pybase.h\"\n");
         w.write("#include \"py.%.h\"\n", ns);
 
-        settings.filter.bind_each<write_py_type_specialization_storage>(members.enums)(
-            w);
-        settings.filter.bind_each<write_winrt_type_specialization_storage>(
-            members.classes)(w);
-        settings.filter.bind_each<write_winrt_type_specialization_storage>(
-            members.interfaces)(w);
-        settings.filter.bind_each<write_winrt_type_specialization_storage>(
-            members.structs)(w);
-
         if (ns == "Windows.Foundation")
         {
             w.write(strings::custom_struct_convert);
@@ -131,6 +122,8 @@ namespace pywinrt
         {
             writer::indent_guard g{w};
 
+            write_namespace_module_state_struct(w, members);
+
             settings.filter.bind_each<write_py_type_registration_method>(members.enums)(
                 w);
             settings.filter.bind_each<write_inspectable_type>(members.classes)(w);
@@ -140,7 +133,13 @@ namespace pywinrt
         }
         w.write("} // py::cpp::%\n", bind_list("::", segments));
 
-        write_namespace_module_init_function(w, ns);
+        write_namespace_module_init_function(w, ns, members);
+
+        settings.filter.bind_each<write_get_py_type_definition>(members.enums)(w);
+        settings.filter.bind_each<write_get_python_type_definition>(members.classes)(w);
+        settings.filter.bind_each<write_get_python_type_definition>(members.interfaces)(
+            w);
+        settings.filter.bind_each<write_get_python_type_definition>(members.structs)(w);
 
         w.flush_to_file(folder / filename);
         return std::move(w.needed_namespaces);

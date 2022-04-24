@@ -174,7 +174,9 @@ namespace py
         return wrapper->get_unknown(wrapper).as<To>();
     }
 
-    struct Object;
+    struct Object
+    {
+    };
 
     /**
      * Type registration for pure Python types.
@@ -182,8 +184,9 @@ namespace py
     template<typename T>
     struct py_type
     {
-        static PyObject* get_python_type()
+        static PyObject* get_python_type() noexcept
         {
+            PyErr_SetNone(PyExc_NotImplementedError);
             return nullptr;
         }
     };
@@ -195,7 +198,7 @@ namespace py
      * registered.
      */
     template<typename T>
-    PyObject* get_py_type()
+    PyObject* get_py_type() noexcept
     {
         return py_type<T>::get_python_type();
     }
@@ -206,8 +209,9 @@ namespace py
     template<typename T>
     struct winrt_type
     {
-        static PyTypeObject* get_python_type()
+        static PyTypeObject* get_python_type() noexcept
         {
+            PyErr_SetNone(PyExc_NotImplementedError);
             return nullptr;
         }
     };
@@ -218,7 +222,7 @@ namespace py
     template<>
     struct winrt_type<Object>
     {
-        static PyTypeObject* python_type;
+        static PyTypeObject* get_python_type() noexcept;
     };
 
     /**
@@ -228,7 +232,7 @@ namespace py
      * registered.
      */
     template<typename T>
-    PyTypeObject* get_python_type()
+    PyTypeObject* get_python_type() noexcept
     {
         if constexpr (is_pinterface_category_v<T>)
         {
@@ -440,16 +444,15 @@ namespace py
 
         using ptype = pinterface_python_type<T>;
 
-        PyTypeObject* type_object = get_python_type<T>();
+        auto type = get_python_type<T>();
 
-        if (!type_object)
+        if (!type)
         {
-            PyErr_SetNone(PyExc_NotImplementedError);
             return nullptr;
         }
 
         auto py_instance
-            = PyObject_New(py::winrt_pinterface_wrapper<ptype::abstract>, type_object);
+            = PyObject_New(py::winrt_pinterface_wrapper<ptype::abstract>, type);
 
         if (!py_instance)
         {
@@ -479,7 +482,14 @@ namespace py
 
         if constexpr (is_class_category_v<T> || is_interface_category_v<T>)
         {
-            return wrap<T>(instance, get_python_type<T>());
+            auto type = get_python_type<T>();
+
+            if (!type)
+            {
+                return nullptr;
+            }
+
+            return wrap<T>(instance, type);
         }
         else
         {
@@ -878,16 +888,29 @@ namespace py
         static PyObject* convert(
             winrt::Windows::Foundation::IInspectable const& value) noexcept
         {
-            return wrap<winrt::Windows::Foundation::IInspectable>(
-                value, winrt_type<Object>::python_type);
+            auto object_type = get_python_type<Object>();
+
+            if (!object_type)
+            {
+                return nullptr;
+            }
+
+            return wrap<winrt::Windows::Foundation::IInspectable>(value, object_type);
         }
 
         static winrt::Windows::Foundation::IInspectable convert_to(PyObject* obj)
         {
             throw_if_pyobj_null(obj);
 
-            int result = PyObject_IsInstance(
-                obj, reinterpret_cast<PyObject*>(winrt_type<Object>::python_type));
+            auto object_type = get_python_type<Object>();
+
+            if (!object_type)
+            {
+                throw python_exception();
+            }
+
+            auto result
+                = PyObject_IsInstance(obj, reinterpret_cast<PyObject*>(object_type));
 
             if (result == -1)
             {
@@ -1005,7 +1028,14 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            if (Py_TYPE(obj) != get_python_type<T>())
+            auto type = get_python_type<T>();
+
+            if (!type)
+            {
+                throw python_exception();
+            }
+
+            if (Py_TYPE(obj) != type)
             {
                 PyErr_SetString(PyExc_TypeError, "wrong type");
                 throw python_exception();
@@ -1114,19 +1144,40 @@ namespace py
     {
         throw_if_pyobj_null(obj);
 
-        if (Py_TYPE(obj) == get_python_type<T>())
+        auto type = get_python_type<T>();
+
+        if (!type)
+        {
+            throw python_exception();
+        }
+
+        if (Py_TYPE(obj) == type)
         {
             return reinterpret_cast<winrt_wrapper<T>*>(obj)->obj;
         }
 
-        if (PyObject_IsInstance(
-                obj, reinterpret_cast<PyObject*>(winrt_type<Object>::python_type)))
+        auto object_type = get_python_type<Object>();
+
+        if (!object_type)
         {
-            auto wrapper = reinterpret_cast<winrt_wrapper_base*>(obj);
-            return as<T>(wrapper);
+            throw python_exception();
         }
 
-        return {};
+        auto result
+            = PyObject_IsInstance(obj, reinterpret_cast<PyObject*>(object_type));
+
+        if (result == -1)
+        {
+            throw python_exception();
+        }
+
+        if (result == 0)
+        {
+            return {};
+        }
+
+        auto wrapper = reinterpret_cast<winrt_wrapper_base*>(obj);
+        return as<T>(wrapper);
     }
 
     // TODO: specialization for Python Sequence Protocol -> IVector[View]

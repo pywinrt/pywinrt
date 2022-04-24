@@ -252,38 +252,130 @@ catch (...)
         }
     }
 
-    void write_get_py_type_specialization(writer& w, TypeDef const& type)
+    /**
+     * Writes the pure Python type specialization struct.
+     */
+    void write_py_type_specialization_struct(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
+        {
             return;
+        }
 
-        auto format = R"(template<>
+        auto format = R"(
+template<>
 struct py_type<%>
 {
-    static PyObject* python_type;
-    static PyObject* get_python_type() {
-        return python_type;
-    }
+    static PyObject* get_python_type() noexcept;
 };
-
 )";
         w.write(format, bind<write_python_wrapper_template_type>(type));
     }
 
-    void write_get_python_type_specialization(writer& w, TypeDef const& type)
+    /**
+     * Writes the pure Python type getter function implemenation.
+     */
+    void write_get_py_type_definition(writer& w, TypeDef const& type)
+    {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
+        auto format = R"(
+PyObject* py::py_type<%>::get_python_type() noexcept {
+    using namespace py::cpp::%;
+
+    PyObject* module = PyState_FindModule(&module_def);
+
+    if (!module) {
+        PyErr_SetString(PyExc_RuntimeError, "could not find module for %");
+        return nullptr;
+    }
+
+    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
+    assert(state);
+
+    auto python_type = state->type_@;
+
+    if (!python_type) {
+        PyErr_SetString(PyExc_RuntimeError, "type % is not registered");
+        return nullptr;
+    }
+
+    return python_type;
+}
+)";
+
+        w.write(
+            format,
+            bind<write_python_wrapper_template_type>(type),
+            bind<write_type_namespace>(type),
+            bind<write_type_namespace>(type),
+            type.TypeName(),
+            bind<write_python_wrapper_template_type>(type));
+    }
+
+    /**
+     * Writes the binary extension Python type specialization struct.
+     */
+    void write_python_type_specialization_struct(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
             return;
 
-        auto format = R"(template<>
+        auto format = R"(
+template<>
 struct winrt_type<%>
 {
-    static PyTypeObject* python_type;
-    static PyTypeObject* get_python_type() { return python_type; }
+    static PyTypeObject* get_python_type() noexcept;
 };
-
 )";
         w.write(format, bind<write_python_wrapper_template_type>(type));
+    }
+
+    /**
+     * Writes the binary extension Python type getter function implemenation.
+     */
+    void write_get_python_type_definition(writer& w, TypeDef const& type)
+    {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
+        auto format = R"(
+PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
+    using namespace py::cpp::%;
+
+    PyObject* module = PyState_FindModule(&module_def);
+
+    if (!module) {
+        PyErr_SetString(PyExc_RuntimeError, "could not find module for %");
+        return nullptr;
+    }
+
+    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
+    assert(state);
+
+    auto python_type = state->type_@;
+
+    if (!python_type) {
+        PyErr_SetString(PyExc_RuntimeError, "type % is not registered");
+        return nullptr;
+    }
+
+    return python_type;
+}
+)";
+
+        w.write(
+            format,
+            bind<write_python_wrapper_template_type>(type),
+            bind<write_type_namespace>(type),
+            bind<write_type_namespace>(type),
+            type.TypeName(),
+            bind<write_python_wrapper_template_type>(type));
     }
 
     void write_python_wrapper_type(writer& w, TypeDef const& type)
@@ -359,53 +451,42 @@ struct winrt_type<%>
         }
     }
 
-    void write_ns_module_exec_init_python_type(writer& w, TypeDef const& type)
+    /**
+     * Writes the type initialization for a binary extension Python type inside
+     * the module init function.
+     */
+    void write_ns_module_init_python_type(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
             return;
 
         w.write(
-            "py::winrt_type<%>::python_type = py::register_python_type(module, _type_name_@, &_type_spec_@, %);\n",
-            bind<write_python_wrapper_template_type>(type),
+            "state->type_@ = py::register_python_type(module.get(), type_name_@, &type_spec_@, %);\n",
+            type.TypeName(),
             type.TypeName(),
             type.TypeName(),
             bind<write_type_base>(type));
+
+        w.write("if (!state->type_@)\n{\n", type.TypeName());
+        {
+            writer::indent_guard g{w};
+
+            w.write("return nullptr;\n");
+        }
+        w.write("}\n\n");
+
+        w.write("Py_INCREF(state->type_@);\n\n", type.TypeName());
 
         if (implements_ibuffer(type) || implements_imemorybufferreference(type))
         {
             // workaround for https://bugs.python.org/issue40724
             w.write("#if PY_VERSION_HEX < 0x03090000\n");
             w.write(
-                "py::winrt_type<%>::python_type->tp_as_buffer = &_PyBufferProcs_@;\n",
-                bind<write_python_wrapper_template_type>(type),
+                "state->type_@->tp_as_buffer = &_PyBufferProcs_@;\n",
+                type.TypeName(),
                 type.TypeName());
-            w.write("#endif\n");
+            w.write("#endif\n\n");
         }
-    }
-
-    void write_ns_module_exec_func(writer& w, cache::namespace_members const& members)
-    {
-        w.write("static int module_exec(PyObject* module) noexcept\n{\n");
-        {
-            writer::indent_guard g{w};
-            write_try_catch(
-                w,
-                [&](auto& w)
-                {
-                    w.write(
-                        "py::pyobj_handle bases { PyTuple_Pack(1, py::winrt_type<py::Object>::python_type) };\n\n");
-                    settings.filter.bind_each<write_ns_module_exec_init_python_type>(
-                        members.classes)(w);
-                    settings.filter.bind_each<write_ns_module_exec_init_python_type>(
-                        members.interfaces)(w);
-                    settings.filter.bind_each<write_ns_module_exec_init_python_type>(
-                        members.structs)(w);
-                    w.write("\nreturn 0;\n");
-                },
-                "-1");
-        }
-
-        w.write("}\n");
     }
 
     void write_ns_module_name(writer& w, std::string_view const& ns)
@@ -414,56 +495,231 @@ struct winrt_type<%>
         w.write("_%_%", settings.module, bind_list("_", segments));
     }
 
+    /**
+     * Writes a struct field to hold a pointer to a pure Python type.
+     */
+    void write_ns_module_py_type_member(writer& w, TypeDef const& type)
+    {
+        w.write("PyObject* type_@;\n", type.TypeName());
+    }
+
+    /**
+     * Writes a struct field to hold a pointer to a binary extension Python type.
+     */
+    void write_ns_module_python_type_member(writer& w, TypeDef const& type)
+    {
+        w.write("PyTypeObject* type_@;\n", type.TypeName());
+    }
+
+    /**
+     * Writes the struct defintion for the namespace module state.
+     */
+    void write_namespace_module_state_struct(
+        writer& w, cache::namespace_members const& members)
+    {
+        w.write("\nstruct module_state\n{\n");
+        {
+            writer::indent_guard g{w};
+
+            settings.filter.bind_each<write_ns_module_py_type_member>(members.enums)(w);
+            settings.filter.bind_each<write_ns_module_python_type_member>(
+                members.classes)(w);
+            settings.filter.bind_each<write_ns_module_python_type_member>(
+                members.interfaces)(w);
+            settings.filter.bind_each<write_ns_module_python_type_member>(
+                members.structs)(w);
+        }
+        w.write("};\n");
+    }
+
+    /**
+     * Writes the namespace module doc string definition.
+     */
+    void write_ns_module_doc_string(writer& w, std::string_view const& ns)
+    {
+        w.write("PyDoc_STRVAR(module_doc, \"@\");\n\n", ns);
+    }
+
+    /**
+     * Writes one visit statement for a namespace  module traverse function.
+     */
+    void write_ns_module_visit_member(writer& w, TypeDef const& type)
+    {
+        w.write("Py_VISIT(state->type_@);\n", type.TypeName());
+    }
+
+    /**
+     * Writes the namespace module traverse function for use in PyModuleDef.m_traverse.
+     */
+    void write_ns_module_traverse_func(
+        writer& w, cache::namespace_members const& members)
+    {
+        w.write(
+            "\nstatic int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept\n{\n");
+        {
+            writer::indent_guard g{w};
+
+            w.write(
+                "auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));\n\n");
+
+            w.write("if (!state)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return 0;\n");
+            }
+            w.write("}\n\n");
+
+            settings.filter.bind_each<write_ns_module_visit_member>(members.enums)(w);
+            settings.filter.bind_each<write_ns_module_visit_member>(members.classes)(w);
+            settings.filter.bind_each<write_ns_module_visit_member>(members.interfaces)(
+                w);
+            settings.filter.bind_each<write_ns_module_visit_member>(members.structs)(w);
+
+            w.write("\nreturn 0;\n");
+        }
+        w.write("}\n");
+    }
+
+    /**
+     * Writes one clear statement for a namespace module clear function.
+     */
+    void write_ns_module_clear_member(writer& w, TypeDef const& type)
+    {
+        w.write("Py_CLEAR(state->type_@);\n", type.TypeName());
+    }
+
+    /**
+     * Writes the namespace module clear function for use in PyModuleDef.m_clear.
+     */
+    void write_ns_module_clear_func(writer& w, cache::namespace_members const& members)
+    {
+        w.write("\nstatic int module_clear(PyObject* module) noexcept\n{\n");
+        {
+            writer::indent_guard g{w};
+
+            w.write(
+                "auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));\n\n");
+
+            w.write("if (!state)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return 0;\n");
+            }
+            w.write("}\n\n");
+
+            settings.filter.bind_each<write_ns_module_clear_member>(members.enums)(w);
+            settings.filter.bind_each<write_ns_module_clear_member>(members.classes)(w);
+            settings.filter.bind_each<write_ns_module_clear_member>(members.interfaces)(
+                w);
+            settings.filter.bind_each<write_ns_module_clear_member>(members.structs)(w);
+
+            w.write("\nreturn 0;\n");
+        }
+        w.write("}\n\n");
+    }
+
+    /**
+     * Writes the namespace module definition structure.
+     */
+    void write_ns_module_def_struct(writer& w, std::string_view const& ns)
+    {
+        auto format = R"(
+static PyModuleDef module_def
+    = {PyModuleDef_HEAD_INIT,
+       "%",
+       module_doc,
+       sizeof(module_state),
+       module_methods,
+       nullptr,
+       module_traverse,
+       module_clear,
+       nullptr};
+
+)";
+
+        w.write(format, bind<write_ns_module_name>(ns));
+    }
+
+    /**
+     * Writes all namespace initialization members except for the public init function.
+     */
     void write_namespace_initialization(
         writer& w, std::string_view const& ns, cache::namespace_members const& members)
     {
         w.write("\n// ----- % Initialization --------------------\n", ns);
 
+        write_ns_module_doc_string(w, ns);
         write_ns_module_method_table(w, members);
-        write_ns_module_exec_func(w, members);
-        w.write(strings::ns_module_def, ns, bind<write_ns_module_name>(ns));
-    }
-
-    void write_namespace_module_init_function(writer& w, std::string_view const& ns)
-    {
-        auto format = R"(
-PyMODINIT_FUNC
-PyInit_% (void) noexcept
-{
-    return PyModuleDef_Init(&py::cpp::%::module_def);
-}
-)";
-        auto segments = get_dotted_name_segments(ns);
-        w.write(format, bind<write_ns_module_name>(ns), bind_list("::", segments));
+        write_ns_module_traverse_func(w, members);
+        write_ns_module_clear_func(w, members);
+        write_ns_module_def_struct(w, ns);
     }
 
     /**
-     * Writes code for pure Python type registration storage.
+     * Writes the namespace module PyMODINIT_FUNC function delecaration.
      */
-    void write_py_type_specialization_storage(writer& w, TypeDef const& type)
+    void write_namespace_module_init_function(
+        writer& w, std::string_view const& ns, cache::namespace_members const& members)
     {
-        if (!is_exclusive_to(type))
+        w.write(
+            "\nPyMODINIT_FUNC PyInit_%(void) noexcept\n{\n",
+            bind<write_ns_module_name>(ns));
         {
-            w.write(
-                "\nPyObject* py::py_type<%>::python_type;",
-                bind<write_python_wrapper_template_type>(type));
-        }
-    }
+            writer::indent_guard g{w};
 
-    void write_winrt_type_specialization_storage(writer& w, TypeDef const& type)
-    {
-        if (!is_exclusive_to(type))
-        {
+            auto segments = get_dotted_name_segments(ns);
+            w.write("using namespace py::cpp::%;\n\n", bind_list("::", segments));
+
+            w.write("py::pyobj_handle module{PyModule_Create(&module_def)};\n\n");
+
+            w.write("if (!module)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write("auto object_type = py::get_python_type<py::Object>();\n");
+            w.write("if (!object_type)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write("py::pyobj_handle bases {PyTuple_Pack(1, object_type)};\n\n");
+
+            w.write("if (!bases)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
             w.write(
-                "\nPyTypeObject* py::winrt_type<%>::python_type;",
-                bind<write_python_wrapper_template_type>(type));
+                "auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));\n");
+            w.write("assert(state);\n\n");
+
+            settings.filter.bind_each<write_ns_module_init_python_type>(
+                members.classes)(w);
+            settings.filter.bind_each<write_ns_module_init_python_type>(
+                members.interfaces)(w);
+            settings.filter.bind_each<write_ns_module_init_python_type>(
+                members.structs)(w);
+            w.write("\nreturn module.detach();\n");
         }
+        w.write("}\n");
     }
 
     void write_winrt_type_name_constant(writer& w, TypeDef const& type)
     {
         w.write(
-            "constexpr const char* const _type_name_@ = \"@\";\n",
+            "constexpr const char* const type_name_@ = \"@\";\n",
             type.TypeName(),
             type.TypeName());
     }
@@ -798,8 +1054,9 @@ if (!%)
             if (is_static_class(type) || constructors.size() == 0)
             {
                 w.write(
-                    "py::set_invalid_activation_error(_type_name_@);\nreturn nullptr;\n",
+                    "py::set_invalid_activation_error(type_name_@);\n",
                     type.TypeName());
+                w.write("return nullptr;\n");
             }
             else
             {
@@ -866,7 +1123,7 @@ Py_ssize_t arg_count = PyTuple_Size(args);
             auto format = R"(
 static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */)
 {
-    py::set_invalid_activation_error(_type_name_@);
+    py::set_invalid_activation_error(type_name_@);
     return nullptr;
 }
 )";
@@ -1827,7 +2084,7 @@ return 0;
                   : w.write_temp("sizeof(%)", bind<write_pywrapper_type>(type));
 
         auto format = R"(
-static PyType_Spec _type_spec_@ =
+static PyType_Spec type_spec_@ =
 {
     "%.@",
     %,
@@ -1874,16 +2131,17 @@ static PyType_Spec _type_spec_@ =
     void write_py_type_registration_method(writer& w, TypeDef const& type)
     {
         w.write(
-            "\nstatic PyObject* register_%(PyObject* /* unused */, PyObject* type_obj) {\n",
+            "\nstatic PyObject* register_%(PyObject* module, PyObject* type)\n{\n",
             type.TypeName());
         {
             writer::indent_guard g{w};
 
-            auto python_type = w.write_temp(
-                "py::py_type<%>::python_type",
-                bind<write_python_wrapper_template_type>(type));
+            w.write(
+                "auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));\n");
 
-            w.write("if (%) {\n", python_type);
+            w.write("assert(state);\n\n");
+
+            w.write("if (state->type_@)\n{\n", type.TypeName());
             {
                 writer::indent_guard gg{w};
 
@@ -1891,9 +2149,9 @@ static PyType_Spec _type_spec_@ =
                     "PyErr_SetString(PyExc_RuntimeError, \"type has already been registered\");\n");
                 w.write("return nullptr;\n");
             }
-            w.write("}\n");
+            w.write("}\n\n");
 
-            w.write("\nif (!PyType_Check(type_obj)) {\n");
+            w.write("if (!PyType_Check(type))\n{\n");
             {
                 writer::indent_guard gg{w};
 
@@ -1901,10 +2159,10 @@ static PyType_Spec _type_spec_@ =
                     "PyErr_SetString(PyExc_TypeError, \"argument is not a type\");\n");
                 w.write("return nullptr;\n");
             }
-            w.write("}\n");
+            w.write("}\n\n");
 
-            w.write("\nPy_INCREF(type_obj);\n");
-            w.write("% = type_obj;\n", python_type);
+            w.write("state->type_@ = type;\n", type.TypeName());
+            w.write("Py_INCREF(state->type_@);\n\n", type.TypeName());
 
             w.write("\nPy_RETURN_NONE;\n");
         }
@@ -2799,8 +3057,16 @@ if (!PyArg_ParseTupleAndKeywords(args, kwds, "%", const_cast<char**>(kwlist)%))
             type);
         {
             writer::indent_guard g{w};
-            w.write(
-                "return py::wrap_struct(instance, py::get_python_type<%>());\n", type);
+
+            w.write("auto type = py::get_python_type<%>();\n", type);
+            w.write("if (!type)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+            w.write("return py::wrap_struct(instance, type);\n");
         }
         w.write("}\n");
 
@@ -2810,7 +3076,13 @@ if (!PyArg_ParseTupleAndKeywords(args, kwds, "%", const_cast<char**>(kwlist)%))
 
             auto format = R"(throw_if_pyobj_null(obj);
 
-if (Py_TYPE(obj) == py::get_python_type<%>())
+auto type =  py::get_python_type<%>();
+
+if (!type) {
+    throw python_exception();
+}
+
+if (Py_TYPE(obj) == type)
 {
     return reinterpret_cast<py::winrt_struct_wrapper<%>*>(obj)->obj;
 }
