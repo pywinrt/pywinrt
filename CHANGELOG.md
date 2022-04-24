@@ -7,7 +7,7 @@
 ### Changed
 - Don't emit empty `interfaces` in type hints.
 - Don't `try/except` imports in `.pyi` files.
-- Moved generic param types inside of class definitions ([issue#12]).
+- Moved generic param types inside of class definitions ([pywinrt#12]).
 
 ### Fixed
 - Fixed support for sub-interpreters.
@@ -16,7 +16,7 @@
 ### Removed
 - Removed implicit dict to struct conversion.
 
-[issue#12]: https://github.com/pywinrt/pywinrt/issues/12
+[pywinrt#12]: https://github.com/pywinrt/pywinrt/issues/12
 
 ## [v1.0.0-beta.4] - 2022-04-23
 
@@ -25,26 +25,26 @@
   `Interop` namespace ([winsdk#5]).
 
 ### Changed
-- Changed async operation interface types to never be `typing.Optional` ([issue#11]).
+- Changed async operation interface types to never be `typing.Optional` ([pywinrt#11]).
 - Interface type hints are now `typing.Protocol`.
 - Improved exception raising.
 
-[issue#11]: https://github.com/pywinrt/pywinrt/issues/11
+[pywinrt#11]: https://github.com/pywinrt/pywinrt/issues/11
 [winsdk#5]: https://github.com/pywinrt/python-winsdk/issues/5
 
 ## [v1.0.0-beta.3] - 2022-04-09
 
 ### Changed
-- Type hints for reference types are now all `typing.Optional` ([issue#7]).
+- Type hints for reference types are now all `typing.Optional` ([pywinrt#7]).
 
 ### Fixed
-- Fixed identifiers conflicting with Python keywords ([issue#6]).
+- Fixed identifiers conflicting with Python keywords ([pywinrt#6]).
 - Fixed broken version comparison in `_winrt.pyi`.
 - Fixed `@typing.overload` used on methods that are not overloaded.
 - Fixed not throwing error if `initialize_with_window()` fails.
 
-[issue#6]: https://github.com/pywinrt/pywinrt/issues/6
-[issue#7]: https://github.com/pywinrt/pywinrt/issues/7
+[pywinrt#6]: https://github.com/pywinrt/pywinrt/issues/6
+[pywinrt#7]: https://github.com/pywinrt/pywinrt/issues/7
 
 ## [v1.0.0-beta.2] - 2022-02-12
 
