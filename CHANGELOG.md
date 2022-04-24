@@ -10,6 +10,7 @@
 
 ### Fixed
 - Fixed support for sub-interpreters.
+- Fixed `__enter__` and `__exit__` type hints for types that implement `IClosable`.
 
 ### Removed
 - Removed implicit dict to struct conversion.

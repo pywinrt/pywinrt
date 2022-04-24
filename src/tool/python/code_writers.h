@@ -3669,15 +3669,17 @@ if (!return_value)
         auto ns = type.TypeNamespace();
         auto name = type.TypeName();
 
-        if (ns == "Windows.Foundation" && name == "IClosable")
-        {
-            w.write("Self = typing.TypeVar('Self')\n\n");
-        }
-
         w.write(
             "class @(%):\n", type.TypeName(), bind<write_python_base_classes>(type));
         {
             writer::indent_guard g{w};
+
+            // write TypeVars
+
+            if (implements_iclosable(type))
+            {
+                w.write("Self = typing.TypeVar('Self')\n");
+            }
 
             // write attributes
 
@@ -3706,6 +3708,12 @@ if (!return_value)
             // TODO: this should use the implements_x helpers but we need to
             // figure out how to get the generic type args from each interface
 
+            if (implements_iclosable(type))
+            {
+                w.write("def __enter__(self: Self) -> Self: ...\n");
+                w.write("def __exit__(self, *args) -> None: ...\n");
+            }
+
             if (ns == "Windows.Foundation")
             {
                 if (name == "IAsyncAction" || name == "IAsyncActionWithProgress`1")
@@ -3724,13 +3732,6 @@ if (!return_value)
                     w.write(
                         "def __await__(self) -> typing.Generator[typing.Any, None, %]: ...\n",
                         bind<write_template_arg_name>(type.GenericParam().first));
-                }
-                else if (name == "IClosable")
-                {
-                    w.write("def __enter__(self: Self) -> Self: ...\n");
-                    w.write(
-                        "def __exit__(self, __exc_type: typing.Type[BaseException] | None, __exc_value: BaseException "
-                        "| None, __traceback: typing.TracebackType | None) -> bool | None: ...\n");
                 }
                 else if (name == "IStringable")
                 {
