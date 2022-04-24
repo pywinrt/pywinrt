@@ -3540,9 +3540,8 @@ if (!return_value)
 
     void write_python_base_classes(writer& w, TypeDef const& type)
     {
-        // We are using PEP 544 for interfaces and delegates.
-        if (get_category(type) == category::interface_type
-            || get_category(type) == category::delegate_type)
+        // We are using PEP 544 for interfaces.
+        if (get_category(type) == category::interface_type)
         {
             w.write("typing.Protocol");
 
@@ -3730,7 +3729,7 @@ if (!return_value)
 
             // Write special methods.
 
-            if (is_ptype(type) && get_category(type) != category::delegate_type)
+            if (is_ptype(type))
             {
                 w.write("if sys.version_info >= (3, 9):\n");
                 {
@@ -3837,8 +3836,7 @@ if (!return_value)
                 }
             }
 
-            if ((!is_ptype(type) || is_static_class(type))
-                && get_category(type) != category::delegate_type)
+            if (!is_ptype(type) || is_static_class(type))
             {
                 w.write("@staticmethod\n");
                 w.write("def _from(obj: _winrt.Object) -> @: ...\n", type.TypeName());
@@ -3848,9 +3846,7 @@ if (!return_value)
 
             auto method_writer = [&](MethodDef const& method, bool is_overloaded)
             {
-                auto name = is_invoke(method)
-                                ? "__call__"
-                                : (is_constructor(method) ? "__init__" : method.Name());
+                auto name = is_constructor(method) ? "__init__" : method.Name();
                 method_signature signature{method};
 
                 if (is_overloaded)
@@ -3877,33 +3873,50 @@ if (!return_value)
                     bind<write_return_typing>(signature));
             };
 
-            if (get_category(type) == category::delegate_type)
-            {
-                method_writer(get_delegate_invoke(type), false);
-            }
-            else
-            {
-                auto constructors = get_constructors(type);
+            auto constructors = get_constructors(type);
 
-                for (auto&& c : constructors)
+            for (auto&& c : constructors)
+            {
+                method_writer(c, constructors.size() > 1);
+            }
+
+            enumerate_methods(w, type, method_writer);
+
+            enumerate_events(
+                w,
+                type,
+                [&](auto const& event)
                 {
-                    method_writer(c, constructors.size() > 1);
-                }
-
-                enumerate_methods(w, type, method_writer);
-
-                enumerate_events(
-                    w,
-                    type,
-                    [&](auto const& event)
-                    {
-                        auto&& [add_method, remove_method] = get_event_methods(event);
-                        method_writer(add_method, false);
-                        method_writer(remove_method, false);
-                    });
-            }
+                    auto&& [add_method, remove_method] = get_event_methods(event);
+                    method_writer(add_method, false);
+                    method_writer(remove_method, false);
+                });
         }
 
         w.write("\n");
+    }
+
+    /**
+     * Writes a Python type alias for a .pyi file.
+     *
+     * This is used for creating a type alias for delagate types.
+     */
+    void write_python_type_alias(writer& w, TypeDef const& type)
+    {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
+        auto guard{w.push_generic_params(type.GenericParam())};
+
+        method_signature signature{get_delegate_invoke(type)};
+
+        w.write(
+            "@ = typing.Callable[[%], %]\n\n",
+            type.TypeName(),
+            bind_list<write_method_in_param_typing>(
+                ", ", filter_in_params(signature.params())),
+            bind<write_return_typing>(signature));
     }
 } // namespace pywinrt

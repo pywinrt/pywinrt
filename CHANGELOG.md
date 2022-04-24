@@ -7,11 +7,11 @@
 ### Changed
 - Don't emit empty `interfaces` in type hints.
 - Don't `try/except` imports in `.pyi` files.
-- Moved generic param types inside of class definitions ([pywinrt#12]).
 
 ### Fixed
 - Fixed support for sub-interpreters.
 - Fixed `__enter__` and `__exit__` type hints for types that implement `IClosable`.
+- Fixed duplicate `TypeVar` definitions ([pywinrt#12]).
 
 ### Removed
 - Removed implicit dict to struct conversion.
