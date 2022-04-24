@@ -423,13 +423,26 @@ namespace pywinrt
         return implements_imap(type) || implements_imapview(type);
     }
 
+    /**
+     * Tests if @p method is an "Invoke" special method.
+     * @param method The method to test.
+     * @returns true if @p method is an "Invoke" special method, otherwise false.
+     */
+    inline bool is_invoke(MethodDef const& method)
+    {
+        return method.SpecialName() && method.Name() == "Invoke";
+    }
+
+    /**
+     * Gets the "Invoke" special method for a delegate type.
+     */
     auto get_delegate_invoke(TypeDef const& type)
     {
         XLANG_ASSERT(get_category(type) == category::delegate_type);
 
         for (auto&& method : type.MethodList())
         {
-            if (method.SpecialName() && (method.Name() == "Invoke"))
+            if (is_invoke(method))
             {
                 return method;
             }

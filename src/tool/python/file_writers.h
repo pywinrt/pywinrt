@@ -250,7 +250,7 @@ namespace pywinrt
         settings.filter.bind_each<write_python_typing_for_object>(members.classes)(w);
         settings.filter.bind_each<write_python_typing_for_object>(members.interfaces)(
             w);
-        settings.filter.bind_each<write_python_type_alias>(members.delegates)(w);
+        settings.filter.bind_each<write_python_typing_for_object>(members.delegates)(w);
 
         w.flush_to_file(folder / "__init__.pyi");
     }

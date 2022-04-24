@@ -7,6 +7,7 @@
 ### Changed
 - Don't emit empty `interfaces` in type hints.
 - Don't `try/except` imports in `.pyi` files.
+- Moved generic param types inside of class definitions ([issue#12]).
 
 ### Fixed
 - Fixed support for sub-interpreters.
@@ -14,6 +15,8 @@
 
 ### Removed
 - Removed implicit dict to struct conversion.
+
+[issue#12]: https://github.com/pywinrt/pywinrt/issues/12
 
 ## [v1.0.0-beta.4] - 2022-04-23
 
