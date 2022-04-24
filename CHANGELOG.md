@@ -11,6 +11,9 @@
 ### Fixed
 - Fixed support for sub-interpreters.
 
+### Removed
+- Removed implicit dict to struct conversion.
+
 ## [v1.0.0-beta.4] - 2022-04-23
 
 ### Added

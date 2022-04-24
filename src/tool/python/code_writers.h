@@ -3104,52 +3104,10 @@ if (Py_TYPE(obj) == type)
     return reinterpret_cast<py::winrt_struct_wrapper<%>*>(obj)->obj;
 }
 
-if (!PyDict_Check(obj))
-{
-    PyErr_SetString(PyExc_TypeError, "expecting % or dict");
-    throw python_exception();
-}
-
+PyErr_SetString(PyExc_TypeError, "expecting %");
+throw python_exception();
 )";
             w.write(format, type, type, type);
-
-            w.write("% return_value{};\n", type);
-
-            for (auto&& field : type.FieldList())
-            {
-                // PyDict_GetItemString returns borrowed reference!
-                w.write(
-                    "\nPyObject* py_% = PyDict_GetItemString(obj, \"%\");\n",
-                    field.Name(),
-                    bind<write_lower_snake_case_python_identifier>(field.Name()));
-                w.write("if (!py_%) {\n", field.Name());
-
-                {
-                    writer::indent_guard gg{w};
-                    w.write("PyErr_SetString(PyExc_KeyError, \"%\");\n", field.Name());
-                    w.write("throw python_exception();\n");
-                }
-
-                w.write("}\n");
-
-                if (has_custom_conversion(type))
-                {
-                    w.write(
-                        "custom_set(return_value, converter<%>::convert_to(py_%));\n",
-                        field.Signature().Type(),
-                        field.Name());
-                }
-                else
-                {
-                    w.write(
-                        "return_value.% = converter<%>::convert_to(py_%);\n",
-                        bind<write_struct_field_name>(field),
-                        field.Signature().Type(),
-                        field.Name());
-                }
-            }
-
-            w.write("\nreturn return_value;\n");
         }
         w.write("}");
     }

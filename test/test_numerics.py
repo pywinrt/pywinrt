@@ -22,12 +22,6 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(r.numerator, 3)
         self.assertEqual(r.denominator, 6)
 
-    def test_struct_ctor_dict(self):
-        r = wfn.Rational({"denominator":2, "numerator":4})
-
-        self.assertEqual(r.numerator, 4)
-        self.assertEqual(r.denominator, 2)
-
     def test_vec3(self):
         v = wfn.Vector3(1.0, 2.0, 3.0)
 
@@ -45,14 +39,5 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(n.z, 3.0)
         self.assertEqual(p.d, 4.0)
     
-    def test_plane_dict(self):
-        p = wfn.Plane({"x":1.0, "y":2.0, "z":3.0}, 4.0)
-        n = p.normal
-
-        self.assertEqual(n.x, 1.0)
-        self.assertEqual(n.y, 2.0)
-        self.assertEqual(n.z, 3.0)
-        self.assertEqual(p.d, 4.0)
-
 if __name__ == '__main__':
     unittest.main()

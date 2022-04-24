@@ -30,16 +30,6 @@ class TestGeolocation(unittest.TestCase):
         for x in ["latitude", "longitude", "altitude"]:
             self.assertEqual(getattr(basic_pos, x), getattr(center, x))
 
-    def test_struct_from_dict(self):
-        basic_pos = {"latitude": 47.1, "longitude": -122.1, "altitude": 0.0}
-
-        geocircle = wdg.Geocircle(basic_pos, 10)
-        center = geocircle.center
-
-        self.assertEqual(10, geocircle.radius)
-        for x in ["latitude", "longitude", "altitude"]:
-            self.assertEqual(basic_pos[x], getattr(center, x))
-
     def test_iiterable_wraping(self):
         basic_pos1 = wdg.BasicGeoposition(47.1, -122.1, 0.0)
         basic_pos2 = wdg.BasicGeoposition(47.2, -122.2, 0.0)

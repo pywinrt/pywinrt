@@ -120,9 +120,6 @@ class TestPropertyValue(unittest.TestCase):
         s = ipv.get_point()
         self.assertEqual(s.x, 2)
         self.assertEqual(s.y, 4)
-        wf.PropertyValue.create_point({"x": 2, "y": 4})
-        self.assertRaises(KeyError, lambda: wf.PropertyValue.create_point({"x": 2}))
-        self.assertRaises(KeyError, lambda: wf.PropertyValue.create_point({"y": 2}))
 
     def test_create_Size(self):
         o = wf.PropertyValue.create_size(wf.Size(2, 4))
