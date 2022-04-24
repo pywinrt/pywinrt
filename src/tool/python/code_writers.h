@@ -3839,8 +3839,10 @@ if (!return_value)
                 w.write(
                     "def %(@%) -> %: ...\n",
                     bind<write_lower_snake_case_python_identifier>(name),
-                    is_static(method) ? ""
-                                      : (signature.has_params() ? "self, " : "self"),
+                    is_static(method)
+                        ? ""
+                        : ((count_in_param(signature.params()) > 0) ? "self, "
+                                                                    : "self"),
                     bind_list<write_method_in_param_name_and_typing>(
                         ", ", filter_in_params(signature.params())),
                     bind<write_return_typing>(signature));
