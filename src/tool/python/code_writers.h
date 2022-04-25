@@ -3540,56 +3540,37 @@ if (!return_value)
 
     void write_python_base_classes(writer& w, TypeDef const& type)
     {
-        // We are using PEP 544 for interfaces.
-        if (get_category(type) == category::interface_type)
+        if (is_ptype(type))
         {
-            w.write("typing.Protocol");
-
-            if (is_ptype(type))
-            {
-                w.write(
-                    "[%]",
-                    bind_list<write_template_arg_name>(", ", type.GenericParam()));
-            }
-
-            // REVISIT: Consider adding required interfaces similar to implemented
-            // interfaces for classes. We would need to create our own subtype
-            // of typing.Protocol to support this.
+            w.write(
+                "typing.Generic[%], ",
+                bind_list<write_template_arg_name>(", ", type.GenericParam()));
         }
-        else
+
+        w.write("_winrt.Object");
+
+        // list implemented/required interfaces as kwarg
+        if (!empty(type.InterfaceImpl()))
         {
-            if (is_ptype(type))
+            std::vector<std::string> interfaces;
+
+            for (auto&& ii : type.InterfaceImpl())
             {
-                w.write(
-                    "typing.Generic[%], ",
-                    bind_list<write_template_arg_name>(", ", type.GenericParam()));
+                auto interface_type = get_typedef(ii.Interface());
+
+                if (is_exclusive_to(interface_type))
+                {
+                    // filter private interfaces, e.g. IBluetoothAdapter4
+                    continue;
+                }
+
+                interfaces.push_back(
+                    w.write_temp("%", bind<write_python>(ii.Interface())));
             }
 
-            w.write("_winrt.Object");
-
-            // list implemented/required interfaces as kwarg
-            if (!empty(type.InterfaceImpl()))
+            if (!interfaces.empty())
             {
-                std::vector<std::string> interfaces;
-
-                for (auto&& ii : type.InterfaceImpl())
-                {
-                    auto interface_type = get_typedef(ii.Interface());
-
-                    if (is_exclusive_to(interface_type))
-                    {
-                        // filter private interfaces, e.g. IBluetoothAdapter4
-                        continue;
-                    }
-
-                    interfaces.push_back(
-                        w.write_temp("%", bind<write_python>(ii.Interface())));
-                }
-
-                if (!interfaces.empty())
-                {
-                    w.write(", interfaces=[%]", bind_list(", ", interfaces));
-                }
+                w.write(", interfaces=[%]", bind_list(", ", interfaces));
             }
         }
     }

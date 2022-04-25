@@ -15,6 +15,7 @@
 
 ### Removed
 - Removed implicit dict to struct conversion.
+- Removed use of `typing.Protocol`.
 
 [pywinrt#12]: https://github.com/pywinrt/pywinrt/issues/12
 
