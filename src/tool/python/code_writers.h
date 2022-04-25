@@ -517,6 +517,11 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
      */
     void write_ns_module_py_type_member(writer& w, TypeDef const& type)
     {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
         w.write("PyObject* type_@;\n", type.TypeName());
     }
 
@@ -525,6 +530,11 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
      */
     void write_ns_module_python_type_member(writer& w, TypeDef const& type)
     {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
         w.write("PyTypeObject* type_@;\n", type.TypeName());
     }
 
@@ -562,6 +572,11 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
      */
     void write_ns_module_visit_member(writer& w, TypeDef const& type)
     {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
         w.write("Py_VISIT(state->type_@);\n", type.TypeName());
     }
 
@@ -603,6 +618,11 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
      */
     void write_ns_module_clear_member(writer& w, TypeDef const& type)
     {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
         w.write("Py_CLEAR(state->type_@);\n", type.TypeName());
     }
 
