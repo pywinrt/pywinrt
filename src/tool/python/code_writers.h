@@ -3389,6 +3389,42 @@ if (!return_value)
     }
 
     /**
+     * Writes the Python type signature for a parameter or return type.
+     *
+     * @param w The writer.
+     * @param signature The type signature.
+     */
+    void write_nonnullable_python_type(writer& w, TypeSig const& signature)
+    {
+        // The type metadata doesn't have nullable annotations, so we have to
+        // assume that every reference type is nullable (typing.Optional).
+        // https://github.com/microsoft/xlang/issues/716
+
+        call(
+            signature.Type(),
+            [&](ElementType t)
+            {
+                w.write_python(t);
+            },
+            [&](GenericTypeIndex t)
+            {
+                w.write_python(t);
+            },
+            [&](GenericTypeInstSig t)
+            {
+                w.write_python(t);
+            },
+            [&](GenericMethodTypeIndex)
+            {
+                throw_invalid("Generic methods not supported");
+            },
+            [&](coded_index<TypeDefOrRef> t)
+            {
+                w.write_python(t);
+            });
+    }
+
+    /**
      * Writes the name of the parameter in lower snake case.
      */
     void write_method_in_param_name(writer& w, method_signature::param_t const& param)
@@ -3439,7 +3475,7 @@ if (!return_value)
                     {
                         w.write(
                             "typing.Iterable[%]",
-                            bind_list<write_nullable_python_type>(
+                            bind_list<write_nonnullable_python_type>(
                                 ", ", type.GenericArgs()));
                     }
                     else
@@ -3458,7 +3494,7 @@ if (!return_value)
         case param_category::pass_array:
             w.write(
                 "typing.Sequence[%]",
-                bind<write_nullable_python_type>(param.second->Type()));
+                bind<write_nonnullable_python_type>(param.second->Type()));
             break;
 
         // fill array parameters just require the size of the array to be allocated
@@ -3502,7 +3538,7 @@ if (!return_value)
         case param_category::fill_array:
             w.write(
                 "typing.List[%]",
-                bind<write_nullable_python_type>(param.second->Type()));
+                bind<write_nonnullable_python_type>(param.second->Type()));
             break;
 
         // this method only handles ouput parameters
