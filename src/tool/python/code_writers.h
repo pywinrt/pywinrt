@@ -3301,7 +3301,7 @@ if (!return_value)
      * @param w The writer.
      * @param signature The type signature.
      */
-    void write_python_type(writer& w, TypeSig const& signature)
+    void write_nullable_python_type(writer& w, TypeSig const& signature)
     {
         // The type metadata doesn't have nullable annotations, so we have to
         // assume that every reference type is nullable (typing.Optional).
@@ -3439,7 +3439,8 @@ if (!return_value)
                     {
                         w.write(
                             "typing.Iterable[%]",
-                            bind_list<write_python_type>(", ", type.GenericArgs()));
+                            bind_list<write_nullable_python_type>(
+                                ", ", type.GenericArgs()));
                     }
                     else
                     {
@@ -3448,14 +3449,16 @@ if (!return_value)
                 },
                 [&](auto)
                 {
-                    w.write("%", bind<write_python_type>(param.second->Type()));
+                    w.write(
+                        "%", bind<write_nullable_python_type>(param.second->Type()));
                 });
             break;
 
         // array parameters accept any Python sequence-like object
         case param_category::pass_array:
             w.write(
-                "typing.Sequence[%]", bind<write_python_type>(param.second->Type()));
+                "typing.Sequence[%]",
+                bind<write_nullable_python_type>(param.second->Type()));
             break;
 
         // fill array parameters just require the size of the array to be allocated
@@ -3491,13 +3494,15 @@ if (!return_value)
         {
         // regular parameters are just `type`
         case param_category::out:
-            w.write("%", bind<write_python_type>(param.second->Type()));
+            w.write("%", bind<write_nullable_python_type>(param.second->Type()));
             break;
 
         // array parameters return a Python list
         case param_category::receive_array:
         case param_category::fill_array:
-            w.write("typing.List[%]", bind<write_python_type>(param.second->Type()));
+            w.write(
+                "typing.List[%]",
+                bind<write_nullable_python_type>(param.second->Type()));
             break;
 
         // this method only handles ouput parameters
@@ -3521,7 +3526,9 @@ if (!return_value)
             if (signature.return_signature())
             {
                 w.write(
-                    "%", bind<write_python_type>(signature.return_signature().Type()));
+                    "%",
+                    bind<write_nullable_python_type>(
+                        signature.return_signature().Type()));
             }
             else
             {
@@ -3534,7 +3541,8 @@ if (!return_value)
             {
                 w.write(
                     "typing.Tuple[%, %]",
-                    bind<write_python_type>(signature.return_signature().Type()),
+                    bind<write_nullable_python_type>(
+                        signature.return_signature().Type()),
                     bind_list<write_method_out_param_typing>(
                         ", ", filter_out_params(signature.params())));
             }
@@ -3723,7 +3731,7 @@ if (!return_value)
                 w.write(
                     "%: %\n",
                     bind<write_lower_snake_case_python_identifier>(property.Name()),
-                    bind<write_python_type>(property.Type().Type()));
+                    bind<write_nullable_python_type>(property.Type().Type()));
             };
 
             enumerate_properties(w, type, property_writer);
