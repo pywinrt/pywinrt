@@ -778,17 +778,19 @@ static PyModuleDef module_def
         {
             writer::indent_guard g{w};
 
-            auto format = R"(auto hash_value = %;
-py::wrapped_instance(hash_value, nullptr);
-self->obj%;
-)";
+            w.write("auto tp = Py_TYPE(self);\n");
 
-            w.write(
-                format,
-                is_ptype(type)
-                    ? "self->obj->hash()"
-                    : "std::hash<winrt::Windows::Foundation::IInspectable>{}(self->obj)",
-                is_ptype(type) ? ".reset()" : " = nullptr");
+            if (is_ptype(type))
+            {
+                w.write("self->obj.reset();\n");
+            }
+            else
+            {
+                w.write("self->obj = nullptr;\n");
+            }
+
+            w.write("tp->tp_free(self);\n");
+            w.write("Py_DECREF(tp);\n");
         }
         w.write("}\n");
     }

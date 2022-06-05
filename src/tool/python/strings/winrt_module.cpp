@@ -53,10 +53,10 @@ static PyObject* Object_new(
 static void Object_dealloc(
     py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self)
 {
-    // auto hash_value =
-    // std::hash<winrt::Windows::Foundation::IInspectable>{}(self->obj);
-    // py::wrapped_instance(hash_value, nullptr);
+    auto tp = Py_TYPE(self);
     self->obj = nullptr;
+    tp->tp_free(self);
+    Py_DECREF(tp);
 }
 
 static PyType_Slot Object_type_slots[] = {

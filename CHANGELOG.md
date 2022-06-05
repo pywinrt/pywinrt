@@ -14,6 +14,7 @@
 - Fixed `__enter__` and `__exit__` type hints for types that implement `IClosable`.
 - Fixed duplicate `TypeVar` definitions ([pywinrt#12]).
 - Fixed type hints for iterators/iterables/mappings.
+- Fixed leaks in object deallocation.
 
 ### Removed
 - Removed implicit dict to struct conversion.
