@@ -3803,6 +3803,45 @@ if (!return_value)
                 w.write("def __bytes__(self) -> bytes: ...\n");
             }
 
+            if (implements_mapping(type))
+            {
+                // TODO
+            }
+            else if (implements_iiterable(type))
+            {
+                enumerate_methods(
+                    w,
+                    type,
+                    [&](MethodDef const& method, bool is_overloaded)
+                    {
+                        if (method.Name() == "First")
+                        {
+                            auto return_type = method.Signature().ReturnType().Type();
+
+                            w.write(
+                                "def __iter__(self) -> %: ...\n",
+                                bind<write_nonnullable_python_type>(return_type));
+                        }
+                    });
+            }
+            else if (implements_iiterator(type))
+            {
+                enumerate_properties(
+                    w,
+                    type,
+                    [&](Property const& prop)
+                    {
+                        if (prop.Name() == "Current")
+                        {
+                            w.write("def __iter__(self: Self) -> Self: ...\n");
+                            w.write(
+                                "def __next__(self) -> %: ...\n",
+                                bind<write_nonnullable_python_type>(
+                                    prop.Type().Type()));
+                        }
+                    });
+            }
+
             if (ns == "Windows.Foundation")
             {
                 if (name == "IAsyncAction" || name == "IAsyncActionWithProgress`1")
@@ -3825,22 +3864,7 @@ if (!return_value)
             }
             else if (ns == "Windows.Foundation.Collections")
             {
-                if (name == "IIterable`1")
-                {
-                    w.write(
-                        "def __iter__(self) -> typing.Iterator[%]: ...\n",
-                        bind<write_template_arg_name>(type.GenericParam().first));
-                }
-                else if (name == "IIterator`1")
-                {
-                    w.write(
-                        "def __iter__(self) -> typing.Iterator[%]: ...\n",
-                        bind<write_template_arg_name>(type.GenericParam().first));
-                    w.write(
-                        "def __next__(self) -> %: ...\n",
-                        bind<write_template_arg_name>(type.GenericParam().first));
-                }
-                else if (name == "IMap`2" || name == "IMapView`2")
+                if (name == "IMap`2" || name == "IMapView`2")
                 {
                     w.write(
                         "def __contains__(self, key: %) -> bool:...\n",
