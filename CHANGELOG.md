@@ -13,7 +13,7 @@
 - Fixed support for sub-interpreters.
 - Fixed `__enter__` and `__exit__` type hints for types that implement `IClosable`.
 - Fixed duplicate `TypeVar` definitions ([pywinrt#12]).
-- Fixed type hints for iterators/iterables.
+- Fixed type hints for iterators/iterables/mappings.
 
 ### Removed
 - Removed implicit dict to struct conversion.

@@ -3805,7 +3805,61 @@ if (!return_value)
 
             if (implements_mapping(type))
             {
-                // TODO
+                w.write("def __len__(self) -> int: ...\n");
+
+                enumerate_methods(
+                    w,
+                    type,
+                    [&](MethodDef const& method, bool is_overloaded)
+                    {
+                        if (method.Name() == "Lookup")
+                        {
+                            auto key_type = method.Signature().Params().first->Type();
+                            auto value_type = method.Signature().ReturnType().Type();
+
+                            w.write(
+                                "def __getitem__(self, key: %) -> %: ...\n",
+                                bind<write_nonnullable_python_type>(key_type),
+                                bind<write_nonnullable_python_type>(value_type));
+                        }
+                        else if (method.Name() == "Insert")
+                        {
+                            auto key_type = method.Signature().Params().first->Type();
+                            auto value_type
+                                = (method.Signature().Params().first + 1)->Type();
+
+                            w.write(
+                                "def __setitem__(self, key: %, value: %) -> None: ...\n",
+                                bind<write_nonnullable_python_type>(key_type),
+                                bind<write_nonnullable_python_type>(value_type));
+                        }
+                        else if (method.Name() == "Remove")
+                        {
+                            auto key_type = method.Signature().Params().first->Type();
+
+                            w.write(
+                                "def __delitem__(self, key: %) -> None: ...\n",
+                                bind<write_nonnullable_python_type>(key_type));
+                        }
+                        else if (method.Name() == "HasKey")
+                        {
+                            auto parameter_type
+                                = method.Signature().Params().first->Type();
+
+                            w.write(
+                                "def __contains__(self, key: %) -> bool:...\n",
+                                bind<write_nonnullable_python_type>(parameter_type));
+                        }
+                        else if (method.Name() == "First")
+                        {
+                            // FIXME: the iterator should return only the keys
+                            auto return_type = method.Signature().ReturnType().Type();
+
+                            w.write(
+                                "def __iter__(self) -> %: ...\n",
+                                bind<write_nonnullable_python_type>(return_type));
+                        }
+                    });
             }
             else if (implements_iiterable(type))
             {
@@ -3864,31 +3918,7 @@ if (!return_value)
             }
             else if (ns == "Windows.Foundation.Collections")
             {
-                if (name == "IMap`2" || name == "IMapView`2")
-                {
-                    w.write(
-                        "def __contains__(self, key: %) -> bool:...\n",
-                        bind<write_template_arg_name>(type.GenericParam().first));
-                    w.write("def __len__(self) -> int: ...\n");
-                    w.write(
-                        "def __getitem__(self, key: %) -> %: ...\n",
-                        bind<write_template_arg_name>(type.GenericParam().first),
-                        bind<write_template_arg_name>(
-                            std::next(type.GenericParam().first)));
-
-                    if (name == "IMap`2")
-                    {
-                        w.write(
-                            "def __setitem__(self, key: %, value: %) -> None: ...\n",
-                            bind<write_template_arg_name>(type.GenericParam().first),
-                            bind<write_template_arg_name>(
-                                std::next(type.GenericParam().first)));
-                        w.write(
-                            "def __delitem__(self, key: %) -> None: ...\n",
-                            bind<write_template_arg_name>(type.GenericParam().first));
-                    }
-                }
-                else if (name == "IVector`1" || name == "IVectorView`1")
+                if (name == "IVector`1" || name == "IVectorView`1")
                 {
                     w.write("def __len__(self) -> int: ...\n");
                     w.write(
