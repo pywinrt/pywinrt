@@ -152,6 +152,7 @@ Where <spec> is one or more of:
                     write_package_py_typed(module_dir);
                     write_winrt_pyi(module_dir);
                     write_package_dunder_init_py(module_dir);
+                    write_runtime_cpp(src_dir);
                     write_winrt_module_cpp(src_dir);
                 });
 
