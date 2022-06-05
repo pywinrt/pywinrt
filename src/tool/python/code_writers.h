@@ -2267,7 +2267,6 @@ struct pinterface_python_type<%<%>>
             w.write("virtual ~@() {};\n", type.TypeName());
             w.write(
                 "virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;\n");
-            w.write("virtual std::size_t hash() noexcept = 0;\n");
 
             std::set<std::string_view> method_names{};
             enumerate_methods(
@@ -2382,8 +2381,6 @@ struct pinterface_python_type<%<%>>
                 bind_list<write_template_arg_name>(", ", type.GenericParam()));
             w.write(
                 "winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }\n");
-            w.write(
-                "std::size_t hash() noexcept override { return py::get_instance_hash(_obj); }\n");
 
             std::set<std::string_view> method_names{};
             enumerate_methods(

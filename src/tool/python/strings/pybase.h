@@ -332,15 +332,6 @@ namespace py
         }
     }
 
-    void wrapped_instance(std::size_t key, PyObject* obj);
-    PyObject* wrapped_instance(std::size_t key);
-
-    template<typename T>
-    inline auto get_instance_hash(T const& instance)
-    {
-        return std::hash<winrt::Windows::Foundation::IUnknown>{}(instance);
-    }
-
     /**
      * Converts a Python integer object to a Python Enum object.
      *
@@ -428,9 +419,6 @@ namespace py
         std::memset(&(py_instance->obj), 0, sizeof(py_instance->obj));
         py_instance->obj = instance;
 
-        wrapped_instance(
-            get_instance_hash(instance), reinterpret_cast<PyObject*>(py_instance));
-
         return reinterpret_cast<PyObject*>(py_instance);
     }
 
@@ -465,9 +453,6 @@ namespace py
             = &winrt_pinterface_wrapper<ptype::abstract>::fetch_unknown;
         std::memset(&(py_instance->obj), 0, sizeof(py_instance->obj));
         py_instance->obj = std::make_unique<ptype::concrete>(instance);
-
-        wrapped_instance(
-            get_instance_hash(instance), reinterpret_cast<PyObject*>(py_instance));
 
         return reinterpret_cast<PyObject*>(py_instance);
     }
