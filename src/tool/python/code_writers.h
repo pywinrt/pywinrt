@@ -3938,12 +3938,8 @@ if (!return_value)
                         }
                         else if (method.Name() == "HasKey")
                         {
-                            auto parameter_type
-                                = method.Signature().Params().first->Type();
-
                             w.write(
-                                "def __contains__(self, key: %) -> bool:...\n",
-                                bind<write_nonnullable_python_type>(parameter_type));
+                                "def __contains__(self, key: object) -> bool:...\n");
                         }
                         else if (method.Name() == "First")
                         {
