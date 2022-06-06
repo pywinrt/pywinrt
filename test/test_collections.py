@@ -1,4 +1,3 @@
-
 import asyncio
 import collections.abc
 import unittest
@@ -7,8 +6,8 @@ import winrt.windows.foundation.collections as wfc
 
 from ._util import async_test
 
-class TestCollections(unittest.TestCase):
 
+class TestCollections(unittest.TestCase):
     def test_stringmap(self):
         m = wfc.StringMap()
         m.insert("hello", "world")
@@ -54,20 +53,43 @@ class TestCollections(unittest.TestCase):
         self.assertNotIn("hello", m)
         self.assertIsNone(m.get("hello"))
 
+        m.update(hello="world")
+        self.assertEqual(m["hello"], "world")
+        self.assertTrue(m)
+        
+        m.clear()
+        self.assertFalse(m)
+
+        m.update({"hello": "world"})
+        self.assertEqual(m.pop("hello"), "world")
+
+        with self.assertRaises(KeyError):
+            m.pop("hello")
+
+        self.assertEqual(m.setdefault("hello", "world"), "world")
+        self.assertEqual(m.setdefault("hello", "other"), "world")
+
+        self.assertEqual(m.popitem(), ("hello", "world"))
+
+        with self.assertRaises(KeyError):
+            m.popitem()
+
     @async_test
     async def test_stringmap_changed_event(self):
         loop = asyncio.get_running_loop()
         future = loop.create_future()
 
-        def on_map_changed(sender: wfc.IMap, args: wfc.IMapChangedEventArgs): 
+        def on_map_changed(sender: wfc.IMap, args: wfc.IMapChangedEventArgs):
             try:
-                self.assertEqual(args.collection_change, wfc.CollectionChange.ITEM_INSERTED)
+                self.assertEqual(
+                    args.collection_change, wfc.CollectionChange.ITEM_INSERTED
+                )
                 self.assertEqual(args.key, "dr")
 
                 self.assertEqual(sender.size, 2)
                 self.assertTrue(sender.has_key("dr"))
                 self.assertTrue(sender.has_key("hello"))
-            
+
                 loop.call_soon_threadsafe(future.set_result, True)
             except Exception as ex:
                 loop.call_soon_threadsafe(future.set_exception, ex)
@@ -82,5 +104,5 @@ class TestCollections(unittest.TestCase):
         self.assertTrue(called)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

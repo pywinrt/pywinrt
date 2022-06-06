@@ -430,7 +430,11 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
     {
         if (has_dealloc(type))
         {
-            if (implements_mapping(type))
+            if (implements_imap(type))
+            {
+                w.write("mutable_mapping_bases.get()");
+            }
+            else if (implements_imapview(type))
             {
                 w.write("mapping_bases.get()");
             }
@@ -769,6 +773,27 @@ static PyModuleDef module_def
                 "py::pyobj_handle mapping_bases{PyTuple_Pack(2, object_type, mapping_type.get())};\n\n");
 
             w.write("if (!mapping_bases)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write(
+                "py::pyobj_handle mutable_mapping_type{PyObject_GetAttrString(collections_abc_module.get(), \"MutableMapping\")};\n\n");
+            w.write("if (!mutable_mapping_type)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write(
+                "py::pyobj_handle mutable_mapping_bases{PyTuple_Pack(2, object_type, mutable_mapping_type.get())};\n\n");
+
+            w.write("if (!mutable_mapping_bases)\n{\n");
             {
                 writer::indent_guard gg{w};
 
@@ -3723,7 +3748,14 @@ if (!return_value)
                     }
                 });
 
-            w.write(", typing.Mapping%", type_args);
+            if (implements_imap(type))
+            {
+                w.write(", typing.MutableMapping%", type_args);
+            }
+            else
+            {
+                w.write(", typing.Mapping%", type_args);
+            }
         }
 
         if (is_ptype(type))
