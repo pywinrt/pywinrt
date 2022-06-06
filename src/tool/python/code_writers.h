@@ -3732,31 +3732,6 @@ if (!return_value)
                 ", typing.Generic[%]",
                 bind_list<write_template_arg_name>(", ", type.GenericParam()));
         }
-
-        // list implemented/required interfaces as kwarg
-        if (!empty(type.InterfaceImpl()))
-        {
-            std::vector<std::string> interfaces;
-
-            for (auto&& ii : type.InterfaceImpl())
-            {
-                auto interface_type = get_typedef(ii.Interface());
-
-                if (is_exclusive_to(interface_type))
-                {
-                    // filter private interfaces, e.g. IBluetoothAdapter4
-                    continue;
-                }
-
-                interfaces.push_back(
-                    w.write_temp("%", bind<write_python>(ii.Interface())));
-            }
-
-            if (!interfaces.empty())
-            {
-                w.write(", interfaces=[%]", bind_list(", ", interfaces));
-            }
-        }
     }
 
     /**
