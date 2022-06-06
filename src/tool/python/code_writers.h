@@ -430,7 +430,14 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
     {
         if (has_dealloc(type))
         {
-            w.write("bases.get()");
+            if (implements_mapping(type))
+            {
+                w.write("mapping_bases.get()");
+            }
+            else
+            {
+                w.write("bases.get()");
+            }
         }
         else
         {
@@ -728,9 +735,40 @@ static PyModuleDef module_def
             }
             w.write("}\n\n");
 
-            w.write("py::pyobj_handle bases {PyTuple_Pack(1, object_type)};\n\n");
+            w.write("py::pyobj_handle bases{PyTuple_Pack(1, object_type)};\n\n");
 
             w.write("if (!bases)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write(
+                "py::pyobj_handle collections_abc_module{PyImport_ImportModule(\"collections.abc\")};\n\n");
+            w.write("if (!collections_abc_module)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write(
+                "py::pyobj_handle mapping_type{PyObject_GetAttrString(collections_abc_module.get(), \"Mapping\")};\n\n");
+            w.write("if (!mapping_type)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write(
+                "py::pyobj_handle mapping_bases{PyTuple_Pack(2, object_type, mapping_type.get())};\n\n");
+
+            w.write("if (!mapping_bases)\n{\n");
             {
                 writer::indent_guard gg{w};
 
@@ -1312,9 +1350,27 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
         w.write("}\n");
     }
 
+    /**
+     * Writes the body of the tp_iter slot for the __iter__ special method.
+     */
     void write_dunder_iter_body(writer& w, TypeDef const& type)
     {
-        if (implements_iiterable(type))
+        if (implements_mapping(type))
+        {
+            // Mappings are a special case since WinRT iterates `KeyValuePair`s
+            // while Python iterates only keys. So we have to wrap the iterator
+            // in a helper class to get only the keys.
+            write_try_catch(
+                w,
+                [&](writer& w)
+                {
+                    w.write(
+                        "py::pyobj_handle iter{py::convert(%First())};\n",
+                        bind<write_method_invoke_context>(type, MethodDef{}));
+                    w.write("return py::wrap_mapping_iter(iter.get());\n");
+                });
+        }
+        else if (implements_iiterable(type))
         {
             write_try_catch(
                 w,
@@ -1327,7 +1383,6 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
         }
         else if (implements_iiterator(type))
         {
-            XLANG_ASSERT(!implements_iiterable(type));
             w.write(
                 "return reinterpret_cast<PyObject*>(%);\n",
                 is_ptype(type) ? "this" : "self");
@@ -1460,6 +1515,9 @@ return 0;
             "-1");
     }
 
+    /**
+     * Writes the body of the mp_subscript slot for the __getitem__ special method.
+     */
     void write_map_subscript_body(writer& w, TypeDef const& type)
     {
         std::string key_type{};
@@ -1480,13 +1538,30 @@ return 0;
             w,
             [&](writer& w)
             {
+                // we use the CppWinRT extension TryLookup so we can raise
+                // KeyError on failure.
                 w.write(
-                    "return py::convert(%Lookup(py::convert_to<%>(key)));\n",
+                    "auto value = %TryLookup(py::convert_to<%>(key));\n",
                     bind<write_method_invoke_context>(type, MethodDef{}),
                     key_type);
+
+                w.write("\nif (!value) {\n");
+                {
+                    writer::indent_guard g{w};
+
+                    w.write("PyErr_SetObject(PyExc_KeyError, key);\n");
+                    w.write("return nullptr;\n");
+                }
+                w.write("}\n\n");
+
+                w.write("return py::convert(value);\n");
             });
     }
 
+    /**
+     * Writes the body of the mp_ass_subscript slot for the __setitem__ and __delitem__
+     * special methods.
+     */
     void write_map_assign_body(writer& w, TypeDef const& type)
     {
         std::string key_type, value_type{};
@@ -1508,17 +1583,35 @@ return 0;
             w,
             [&](writer& w)
             {
-                auto format = R"(auto _key = py::convert_to<%>(key);
-if (value == nullptr) { %Remove(_key); }
-else { %Insert(_key, py::convert_to<%>(value)); }
-return 0;
-)";
+                w.write("auto _key = py::convert_to<%>(key);\n", key_type);
+
+                // null value indicates this is del rather than assign
+                w.write("\nif (value == nullptr) {\n");
+                {
+                    writer::indent_guard g{w};
+
+                    // we use the CppWinRT extension TryRemove so we can raise
+                    // KeyError on failure.
+                    w.write(
+                        "if (!%TryRemove(_key)) {\n",
+                        bind<write_method_invoke_context>(type, MethodDef{}));
+                    {
+                        writer::indent_guard gg{w};
+
+                        w.write("PyErr_SetObject(PyExc_KeyError, key);\n");
+                        w.write("return -1;\n");
+                    }
+                    w.write("}\n\n");
+                    w.write("return 0;\n");
+                }
+                w.write("}\n\n");
+
                 w.write(
-                    format,
-                    key_type,
-                    bind<write_method_invoke_context>(type, MethodDef{}),
+                    "%Insert(_key, py::convert_to<%>(value));\n",
                     bind<write_method_invoke_context>(type, MethodDef{}),
                     value_type);
+
+                w.write("\nreturn 0;\n");
             },
             "-1");
     }
@@ -3601,16 +3694,44 @@ if (!return_value)
         }
     }
 
+    /**
+     * Writes the list of Python base classes for a WinRT runtime class or
+     * interface type declaration.
+     */
     void write_python_base_classes(writer& w, TypeDef const& type)
     {
+        w.write("_winrt.Object");
+
+        if (implements_mapping(type))
+        {
+            std::string type_args{};
+
+            enumerate_methods(
+                w,
+                type,
+                [&](MethodDef const& method, bool is_overloaded)
+                {
+                    if (method.Name() == "Lookup")
+                    {
+                        auto key_type = method.Signature().Params().first->Type();
+                        auto value_type = method.Signature().ReturnType().Type();
+
+                        type_args = w.write_temp(
+                            "[%, %]",
+                            bind<write_nonnullable_python_type>(key_type),
+                            bind<write_nonnullable_python_type>(value_type));
+                    }
+                });
+
+            w.write(", typing.Mapping%", type_args);
+        }
+
         if (is_ptype(type))
         {
             w.write(
-                "typing.Generic[%], ",
+                ", typing.Generic[%]",
                 bind_list<write_template_arg_name>(", ", type.GenericParam()));
         }
-
-        w.write("_winrt.Object");
 
         // list implemented/required interfaces as kwarg
         if (!empty(type.InterfaceImpl()))
@@ -3851,12 +3972,23 @@ if (!return_value)
                         }
                         else if (method.Name() == "First")
                         {
-                            // FIXME: the iterator should return only the keys
-                            auto return_type = method.Signature().ReturnType().Type();
+                            auto return_type = w.write_temp(
+                                "%",
+                                bind<write_nonnullable_python_type>(
+                                    method.Signature().ReturnType().Type()));
+
+                            // try to scrape the key type out of the full
+                            // IIterable[KeyValuePair[K, V]] type
+
+                            auto type_args
+                                = return_type.substr(return_type.find_last_of('[') + 1);
+
+                            auto key_type
+                                = type_args.substr(0, type_args.find_first_of(','));
 
                             w.write(
-                                "def __iter__(self) -> %: ...\n",
-                                bind<write_nonnullable_python_type>(return_type));
+                                "def __iter__(self) -> typing.Iterator[%]: ...\n",
+                                key_type);
                         }
                     });
             }

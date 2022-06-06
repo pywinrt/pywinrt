@@ -33,3 +33,29 @@ PyTypeObject* py::register_python_type(
 
     return reinterpret_cast<PyTypeObject*>(type_object.detach());
 }
+
+/**
+ * Wraps a WinRT KeyValuePair iterator in a Python type that iterates the
+ * keys only to be consistent with the Python mapping protocol.
+ * @param iter The mapping iterator returned from the First() method.
+ * @return A new reference to a new object that wraps @p iter.
+ */
+PyObject* py::wrap_mapping_iter(PyObject* iter) noexcept
+{
+    auto mapping_iter_type = py::get_python_type<py::MappingIter>();
+
+    if (!mapping_iter_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle wrapper{
+        PyObject_CallOneArg(reinterpret_cast<PyObject*>(mapping_iter_type), iter)};
+
+    if (!wrapper)
+    {
+        return nullptr;
+    }
+
+    return wrapper.detach();
+}

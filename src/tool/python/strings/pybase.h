@@ -174,8 +174,51 @@ namespace py
         return wrapper->get_unknown(wrapper).as<To>();
     }
 
+    /**
+     * Type registration for binary extension types.
+     */
+    template<typename T>
+    struct winrt_type
+    {
+        static PyTypeObject* get_python_type() noexcept
+        {
+            PyErr_SetNone(PyExc_NotImplementedError);
+            return nullptr;
+        }
+    };
+
+    /**
+     * Empty type for getting `_winrt.Object` Python type via
+     * `get_python_type<py::Object>()`.
+     */
     struct Object
     {
+    };
+
+    /**
+     * Type registration for the base `_winrt.Object` Python type.
+     */
+    template<>
+    struct winrt_type<Object>
+    {
+        static PyTypeObject* get_python_type() noexcept;
+    };
+
+    /**
+     * Empty type for getting `_winrt.MappingIter` Python type via
+     * `get_python_type<py::MappingIter>()`.
+     */
+    struct MappingIter
+    {
+    };
+
+    /**
+     * Type registration for the base `_winrt.MappingIter` Python type.
+     */
+    template<>
+    struct winrt_type<MappingIter>
+    {
+        static PyTypeObject* get_python_type() noexcept;
     };
 
     /**
@@ -202,28 +245,6 @@ namespace py
     {
         return py_type<T>::get_python_type();
     }
-
-    /**
-     * Type registration for binary extension types.
-     */
-    template<typename T>
-    struct winrt_type
-    {
-        static PyTypeObject* get_python_type() noexcept
-        {
-            PyErr_SetNone(PyExc_NotImplementedError);
-            return nullptr;
-        }
-    };
-
-    /**
-     * Type registration for the base `_winrt.Object` Python type.
-     */
-    template<>
-    struct winrt_type<Object>
-    {
-        static PyTypeObject* get_python_type() noexcept;
-    };
 
     /**
      * Gets the registered binary extension type for @p T.
@@ -261,11 +282,17 @@ namespace py
 
     using pyobj_handle = winrt::handle_type<pyobj_ptr_traits>;
 
+    // BEGIN: methods defined in runtime.cpp
+
     PyTypeObject* register_python_type(
         PyObject* module,
         const char* const type_name,
         PyType_Spec* type_spec,
         PyObject* base_type) noexcept;
+
+    PyObject* wrap_mapping_iter(PyObject* iter) noexcept;
+
+    // END: methods defined in runtime.cpp
 
     /**
      * Thrown when a Python exception is pending (i.e. PyErr_Occurred() returns
@@ -1422,6 +1449,32 @@ namespace py
             if (obj == Py_None)
             {
                 return nullptr;
+            }
+
+            return converter<T>::convert_to(obj);
+        }
+    };
+
+    template<typename T>
+    struct converter<std::optional<T>>
+    {
+        static PyObject* convert(std::optional<T> const& reference) noexcept
+        {
+            if (!reference)
+            {
+                Py_RETURN_NONE;
+            }
+
+            return converter<T>::convert(reference.value());
+        }
+
+        static std::optional<T> convert_to(PyObject* obj)
+        {
+            throw_if_pyobj_null(obj);
+
+            if (obj == Py_None)
+            {
+                return {};
             }
 
             return converter<T>::convert_to(obj);

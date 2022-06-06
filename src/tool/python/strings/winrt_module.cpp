@@ -7,7 +7,10 @@ namespace py::cpp::_winrt
     struct module_state
     {
         PyTypeObject* Object_type;
+        PyTypeObject* MappingIter_type;
     };
+
+    // BEGIN: class _winrt.Object:
 
     constexpr const char* const _type_name_Object = "Object";
 
@@ -44,6 +47,114 @@ namespace py::cpp::_winrt
            0,
            Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
            Object_type_slots};
+
+    // END: class _winrt.Object:
+
+    // BEGIN: class _winrt.MappingIter:
+
+    // This class is used to wrap the iterator returned by IMap/IMapView so
+    // that it returns only the key instead of a KeyValuePair. This is done
+    // to be consistent with the Python mapping protocol.
+    //
+    // In Python it would look something like this:
+    //
+    //  class MappingIter:
+    //      def  __init__(self, base_iter):
+    //          self._iter = iter(base_iter)
+    //
+    //      def __iter__(self):
+    //          return self
+    //
+    //      def __next__(self):
+    //          return next(self._iter)
+    //
+
+    struct MappingIter_object
+    {
+        PyObject_HEAD;
+        PyObject* _iter;
+    };
+
+    static PyMemberDef MappingIter_members[]
+        = {{"_iter",
+            T_OBJECT_EX,
+            offsetof(MappingIter_object, _iter),
+            0,
+            PyDoc_STR("base KeyValuePair iterator")},
+           {}};
+
+    static int MappingIter_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        // borrowed ref
+        auto base_iter = PyTuple_GetItem(args, 0);
+
+        if (!base_iter)
+        {
+            return -1;
+        }
+
+        if (!PyIter_Check(base_iter))
+        {
+            PyErr_SetString(PyExc_TypeError, "expecting an iterator");
+            return -1;
+        }
+
+        if (PyObject_SetAttrString(self, "_iter", base_iter) == -1)
+        {
+            return -1;
+        }
+
+        return 0;
+    }
+
+    static PyObject* MappingIter_iternext(PyObject* self) noexcept
+    {
+        // new reference
+        py::pyobj_handle base_iter{PyObject_GetAttrString(self, "_iter")};
+
+        if (!base_iter)
+        {
+            return nullptr;
+        }
+
+        // new reference
+        py::pyobj_handle next{PyIter_Next(base_iter.get())};
+
+        if (!next)
+        {
+            return nullptr;
+        }
+
+        // new reference
+        py::pyobj_handle key{PyObject_GetAttrString(next.get(), "key")};
+
+        if (!key)
+        {
+            return nullptr;
+        }
+
+        return key.detach();
+    }
+
+    PyDoc_STRVAR(MappingIter_doc, "Utility class for wrapping KeyValuePair iterators.");
+
+    static PyType_Slot MappingIter_type_slots[] = {
+        {Py_tp_members, MappingIter_members},
+        {Py_tp_init, MappingIter_init},
+        {Py_tp_iter, PyObject_SelfIter},
+        {Py_tp_iternext, MappingIter_iternext},
+        {Py_tp_doc, const_cast<char*>(MappingIter_doc)},
+        {},
+    };
+
+    static PyType_Spec MappingIter_type_spec
+        = {"_winrt.MappingIter",
+           sizeof(MappingIter_object),
+           0,
+           Py_TPFLAGS_DEFAULT,
+           MappingIter_type_slots};
+
+    // END: class _winrt.MappingIter:
 
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept
     {
@@ -125,6 +236,7 @@ namespace py::cpp::_winrt
         assert(state);
 
         Py_VISIT(state->Object_type);
+        Py_VISIT(state->MappingIter_type);
 
         return 0;
     }
@@ -135,6 +247,7 @@ namespace py::cpp::_winrt
         assert(state);
 
         Py_CLEAR(state->Object_type);
+        Py_CLEAR(state->MappingIter_type);
 
         return 0;
     }
@@ -177,6 +290,16 @@ namespace py::cpp::_winrt
 
         Py_INCREF(state->Object_type);
 
+        state->MappingIter_type = py::register_python_type(
+            module.get(), "MappingIter", &MappingIter_type_spec, nullptr);
+
+        if (!state->MappingIter_type)
+        {
+            return nullptr;
+        }
+
+        Py_INCREF(state->MappingIter_type);
+
         if (PyModule_AddIntConstant(module.get(), "MTA", kMTA) == -1)
         {
             return nullptr;
@@ -199,7 +322,7 @@ PyMODINIT_FUNC PyInit__winrt(void) noexcept
 PyTypeObject* py::winrt_type<py::Object>::get_python_type() noexcept
 {
     // borrowed ref
-    PyObject* module = PyState_FindModule(&py::cpp::_winrt::module_def);
+    auto module = PyState_FindModule(&py::cpp::_winrt::module_def);
 
     if (!module)
     {
@@ -212,4 +335,22 @@ PyTypeObject* py::winrt_type<py::Object>::get_python_type() noexcept
     assert(state);
 
     return state->Object_type;
+}
+
+PyTypeObject* py::winrt_type<py::MappingIter>::get_python_type() noexcept
+{
+    // borrowed ref
+    auto module = PyState_FindModule(&py::cpp::_winrt::module_def);
+
+    if (!module)
+    {
+        PyErr_SetString(PyExc_RuntimeError, "could not find _winrt module");
+        return nullptr;
+    }
+
+    auto state
+        = reinterpret_cast<py::cpp::_winrt::module_state*>(PyModule_GetState(module));
+    assert(state);
+
+    return state->MappingIter_type;
 }

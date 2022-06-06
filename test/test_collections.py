@@ -1,5 +1,6 @@
 
 import asyncio
+import collections.abc
 import unittest
 
 import winrt.windows.foundation.collections as wfc
@@ -18,18 +19,40 @@ class TestCollections(unittest.TestCase):
         self.assertEqual(m.lookup("hello"), "world")
 
         m.remove("hello")
-        self.assertRaises(OSError, lambda: m.lookup("hello"))
+
+        self.assertFalse(m.has_key("hello"))
+
+        with self.assertRaises(OSError):
+            m.lookup("hello")
+
+        with self.assertRaises(OSError):
+            m.remove("hello")
 
     def test_stringmap_is_mapping(self):
         m = wfc.StringMap()
+
+        self.assertIsInstance(m, collections.abc.Mapping)
+
         m["hello"] = "world"
 
         self.assertEqual(len(m), 1)
         self.assertEqual(m["hello"], "world")
         self.assertIn("hello", m)
+        self.assertEqual(m.get("hello"), "world")
+        self.assertIn("hello", m.keys())
+        self.assertIn("world", m.values())
+        self.assertIn(("hello", "world"), m.items())
 
         del m["hello"]
+
+        with self.assertRaises(KeyError):
+            m["hello"]
+
+        with self.assertRaises(KeyError):
+            del m["hello"]
+
         self.assertNotIn("hello", m)
+        self.assertIsNone(m.get("hello"))
 
     @async_test
     async def test_stringmap_changed_event(self):
