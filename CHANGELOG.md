@@ -5,7 +5,7 @@
 ## [Unreleased]
 
 ### Changed
-- Don't emit empty `interfaces` in type hints.
+- Don't emit `interfaces` in type hints.
 - Don't `try/except` imports in `.pyi` files.
 - Don't use `typing.Optional` in generic type parameters.
 - Fully implement mapping protocol for `IMap`/`IMapView`.
