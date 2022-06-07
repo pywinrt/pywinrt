@@ -1,6 +1,6 @@
 param ([switch]$clean, [switch]$fullProjection, [switch]$useLocalPyWinRTNuget)
 
-$windows_sdk = '10.0.22621.0+'
+$windows_sdk = 'sdk+'
 $repoRootPath = (get-item $PSScriptRoot).parent.Parent.parent.Parent.FullName
 $projectionPath = "$PSScriptRoot"
 
