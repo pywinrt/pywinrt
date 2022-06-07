@@ -49,8 +49,13 @@ PyObject* py::wrap_mapping_iter(PyObject* iter) noexcept
         return nullptr;
     }
 
+#if PY_VERSION_HEX >= 0x03090000
     py::pyobj_handle wrapper{
         PyObject_CallOneArg(reinterpret_cast<PyObject*>(mapping_iter_type), iter)};
+#else
+    py::pyobj_handle wrapper{PyObject_CallFunctionObjArgs(
+        reinterpret_cast<PyObject*>(mapping_iter_type), iter, nullptr)};
+#endif
 
     if (!wrapper)
     {
