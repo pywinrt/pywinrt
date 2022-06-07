@@ -28,4 +28,4 @@ jobs:
       - name: Run tests
         env:
           PYTHONPATH: src/package/pywinrt/projection/pywinrt
-        run: python -m unittest
+        run: python -m unittest -v
