@@ -14,7 +14,7 @@ if ($useLocalPyWinRTNuget) {
     nuget install PyWinRT -Prerelease -DependencyVersion Ignore -ExcludeVersion -OutputDirectory "$repoRootPath/_build/tools" -Source "$repoRootPath"
     $pywinrt_exe = "$repoRootPath/_build/tools/PyWinRT/bin/pywinrt.exe"
 } else {
-    $pywinrt_exe = Get-ChildItem $repoRootPath\_build\Windows\*\*\tool\python\pywinrt.exe | 
+    $pywinrt_exe = Get-ChildItem $repoRootPath\_build\Windows\*\*\pywinrt\pywinrt.exe | 
     Sort-Object -Descending | Select-Object -first 1
 }
 

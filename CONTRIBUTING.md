@@ -10,7 +10,7 @@ Otherwise you can run:
 
     .\scripts\build.cmd
 
-The resulting executable will be `_build\Windows\x86\Debug\tool\python\pywinrt.exe`.
+The resulting executable will be `_build\Windows\x86\Debug\pywinrt\pywinrt.exe`.
 
 
 ## Generating a projection

@@ -81,4 +81,4 @@ string(APPEND CMAKE_CXX_FLAGS_DEBUG " /D_DEBUG")
 
 add_definitions(-DNOMINMAX)
 
-add_subdirectory(tool)
+add_subdirectory(pywinrt)
