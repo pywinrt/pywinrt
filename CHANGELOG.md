@@ -17,6 +17,7 @@
 - Fixed duplicate `TypeVar` definitions ([pywinrt#12]).
 - Fixed type hints for iterators/iterables/sequences/mappings.
 - Fixed leaks in object deallocation.
+- Fixed including Windows SDK extensions.
 
 ### Removed
 - Removed implicit dict to struct conversion.
