@@ -8,13 +8,14 @@
 - Don't emit `interfaces` in type hints.
 - Don't `try/except` imports in `.pyi` files.
 - Don't use `typing.Optional` in generic type parameters.
+- Fully implement sequence protocol for `IVector`/`IVectorView`.
 - Fully implement mapping protocol for `IMap`/`IMapView`.
 
 ### Fixed
 - Fixed support for sub-interpreters.
 - Fixed `__enter__` and `__exit__` type hints for types that implement `IClosable`.
 - Fixed duplicate `TypeVar` definitions ([pywinrt#12]).
-- Fixed type hints for iterators/iterables/mappings.
+- Fixed type hints for iterators/iterables/sequences/mappings.
 - Fixed leaks in object deallocation.
 
 ### Removed

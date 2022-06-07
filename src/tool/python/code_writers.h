@@ -438,6 +438,14 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
             {
                 w.write("mapping_bases.get()");
             }
+            else if (implements_ivector(type))
+            {
+                w.write("mutable_sequence_bases.get()");
+            }
+            else if (implements_ivectorview(type))
+            {
+                w.write("sequence_bases.get()");
+            }
             else
             {
                 w.write("bases.get()");
@@ -752,6 +760,48 @@ static PyModuleDef module_def
             w.write(
                 "py::pyobj_handle collections_abc_module{PyImport_ImportModule(\"collections.abc\")};\n\n");
             w.write("if (!collections_abc_module)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write(
+                "py::pyobj_handle sequence_type{PyObject_GetAttrString(collections_abc_module.get(), \"Sequence\")};\n\n");
+            w.write("if (!sequence_type)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write(
+                "py::pyobj_handle sequence_bases{PyTuple_Pack(2, object_type, sequence_type.get())};\n\n");
+
+            w.write("if (!sequence_bases)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write(
+                "py::pyobj_handle mutable_sequence_type{PyObject_GetAttrString(collections_abc_module.get(), \"MutableSequence\")};\n\n");
+            w.write("if (!mutable_sequence_type)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write(
+                "py::pyobj_handle mutable_sequence_bases{PyTuple_Pack(2, object_type, mutable_sequence_type.get())};\n\n");
+
+            w.write("if (!mutable_sequence_bases)\n{\n");
             {
                 writer::indent_guard gg{w};
 
@@ -1923,6 +1973,17 @@ return 0;
                 }
                 w.write("}\n");
             }
+
+            // alias InsertAt to insert for Python sequence protocol
+            w.write(
+                "\nstatic PyObject* @_get_insert(PyObject* self) noexcept\n{\n",
+                type.TypeName());
+            {
+                writer::indent_guard g{w};
+
+                w.write("return PyObject_GetAttrString(self, \"insert_at\");\n");
+            }
+            w.write("}\n");
         }
 
         if (implements_mapping(type))
@@ -2155,6 +2216,12 @@ return 0;
                         }
                     });
             }
+
+            if (implements_ivector(type))
+            {
+                write_row("insert", "get_insert", "");
+            }
+
             w.write("{ }\n");
         }
         w.write("};\n");
@@ -3757,6 +3824,33 @@ if (!return_value)
                 w.write(", typing.Mapping%", type_args);
             }
         }
+        else if (implements_sequence(type))
+        {
+            std::string type_args{};
+
+            enumerate_methods(
+                w,
+                type,
+                [&](MethodDef const& method, bool is_overloaded)
+                {
+                    if (method.Name() == "GetAt")
+                    {
+                        auto value_type = method.Signature().ReturnType().Type();
+
+                        type_args = w.write_temp(
+                            "[%]", bind<write_nonnullable_python_type>(value_type));
+                    }
+                });
+
+            if (implements_ivector(type))
+            {
+                w.write(", typing.MutableSequence%", type_args);
+            }
+            else
+            {
+                w.write(", typing.Sequence%", type_args);
+            }
+        }
 
         if (is_ptype(type))
         {
@@ -3995,6 +4089,62 @@ if (!return_value)
                         }
                     });
             }
+            else if (implements_sequence(type))
+            {
+                w.write("def __len__(self) -> int: ...\n");
+
+                enumerate_methods(
+                    w,
+                    type,
+                    [&](MethodDef const& method, bool is_overloaded)
+                    {
+                        if (method.Name() == "InsertAt")
+                        {
+                            auto value_type
+                                = (method.Signature().Params().first + 1)->Type();
+
+                            w.write(
+                                "def insert(self, index: int, value: %) -> None: ...\n",
+                                bind<write_nonnullable_python_type>(value_type));
+                        }
+                        else if (method.Name() == "GetAt")
+                        {
+                            auto value_type = method.Signature().ReturnType().Type();
+
+                            w.write("@typing.overload\n");
+                            w.write(
+                                "def __getitem__(self, index: int) -> %: ...\n",
+                                bind<write_nonnullable_python_type>(value_type));
+                            w.write("@typing.overload\n");
+                            w.write(
+                                "def __getitem__(self, index: slice) -> typing.%Sequence[%]: ...\n",
+                                implements_ivector(type) ? "Mutable" : "",
+                                bind<write_nonnullable_python_type>(value_type));
+                        }
+                        else if (method.Name() == "SetAt")
+                        {
+                            auto value_type
+                                = (method.Signature().Params().first + 1)->Type();
+
+                            w.write("@typing.overload\n");
+                            w.write(
+                                "def __setitem__(self, index: int, value: %) -> None: ...\n",
+                                bind<write_nonnullable_python_type>(value_type));
+                            w.write("@typing.overload\n");
+                            w.write(
+                                "def __setitem__(self, index: slice, value: typing.Iterable[%]) -> None: ...\n",
+                                bind<write_nonnullable_python_type>(value_type));
+                        }
+                        else if (method.Name() == "RemoveAt")
+                        {
+                            w.write("@typing.overload\n");
+                            w.write("def __delitem__(self, index: int) -> None: ...\n");
+                            w.write("@typing.overload\n");
+                            w.write(
+                                "def __delitem__(self, index: slice) -> None: ...\n");
+                        }
+                    });
+            }
             else if (implements_iiterable(type))
             {
                 enumerate_methods(
@@ -4048,24 +4198,6 @@ if (!return_value)
                     w.write(
                         "def __await__(self) -> typing.Generator[typing.Any, None, %]: ...\n",
                         bind<write_template_arg_name>(type.GenericParam().first));
-                }
-            }
-            else if (ns == "Windows.Foundation.Collections")
-            {
-                if (name == "IVector`1" || name == "IVectorView`1")
-                {
-                    w.write("def __len__(self) -> int: ...\n");
-                    w.write(
-                        "def __getitem__(self, index: int) -> %: ...\n",
-                        bind<write_template_arg_name>(type.GenericParam().first));
-
-                    if (name == "IVector`1")
-                    {
-                        w.write(
-                            "def __setitem__(self, index: int, value: %) -> None: ...\n",
-                            bind<write_template_arg_name>(type.GenericParam().first));
-                        w.write("def __delitem__(self, index: int) -> None: ...\n");
-                    }
                 }
             }
 
