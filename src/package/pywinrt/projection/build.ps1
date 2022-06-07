@@ -3,7 +3,7 @@ param (
     [string]$buildType = "Debug",
 
     [Parameter(Mandatory=$false)]
-    [string]$pythonVersion = "3.9"
+    [string]$pythonVersion = "3.7"
 )
 
 $repoRootPath = (get-item $PSScriptRoot).parent.Parent.parent.Parent.FullName.Replace('\', '/')
