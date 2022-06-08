@@ -1,5 +1,20 @@
 name: test
-on: [push, pull_request]
+on: 
+  push:
+    tags-ignore:
+      - v*
+    paths:
+      - .github/workflows/test.yaml
+      - scripts/**
+      - src/**
+      - test/**
+  pull_request:
+    paths:
+      - .github/workflows/test.yaml
+      - scripts/**
+      - src/**
+      - test/**
+
 jobs:
   test:
     runs-on: windows-2019
