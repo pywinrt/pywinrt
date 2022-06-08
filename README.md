@@ -1,3 +1,5 @@
+<image src="nuget/icon.png" style="float: right;" />
+
 ## PyWinRT
 
 PyWinRT is a community-supported fork of the `pywinrt` tool from the Microsoft
