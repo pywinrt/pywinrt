@@ -4,8 +4,9 @@
 
 ## [Unreleased]
 
+## [v1.0.0-beta.5] - 2022-06-07
+
 ### Changed
-- Don't emit `interfaces` in type hints.
 - Don't `try/except` imports in `.pyi` files.
 - Don't use `typing.Optional` in generic type parameters.
 - Fully implement sequence protocol for `IVector`/`IVectorView`.
@@ -22,6 +23,7 @@
 ### Removed
 - Removed implicit dict to struct conversion.
 - Removed use of `typing.Protocol`.
+- Removed `interfaces` kwarg in type hints.
 
 [pywinrt#12]: https://github.com/pywinrt/pywinrt/issues/12
 
@@ -88,7 +90,8 @@
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.4...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.5...HEAD
+[v1.0.0-beta.5]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.4...v1.0.0-beta.5
 [v1.0.0-beta.4]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.3...v1.0.0-beta.4
 [v1.0.0-beta.3]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.2...v1.0.0-beta.3
 [v1.0.0-beta.2]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.1...v1.0.0-beta.2
