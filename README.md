@@ -1,4 +1,4 @@
-<image src="nuget/icon.png" style="float: right;" />
+<image src="nuget/icon.png" align="right" />
 
 ## PyWinRT
 
