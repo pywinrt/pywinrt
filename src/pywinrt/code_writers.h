@@ -4075,13 +4075,17 @@ if (!return_value)
                                     method.Signature().ReturnType().Type()));
 
                             // try to scrape the key type out of the full
-                            // IIterable[KeyValuePair[K, V]] type
+                            // IIterable[IKeyValuePair[K, V]] type
 
-                            auto type_args
-                                = return_type.substr(return_type.find_last_of('[') + 1);
+                            auto iter_type_args = return_type.substr(
+                                return_type.find_first_of('[') + 1);
 
-                            auto key_type
-                                = type_args.substr(0, type_args.find_first_of(','));
+                            auto kvp_type_args = iter_type_args.substr(
+                                iter_type_args.find_first_of('[') + 1);
+
+                            // REVISIT: this won't work if the key is generic
+                            auto key_type = kvp_type_args.substr(
+                                0, kvp_type_args.find_first_of(','));
 
                             w.write(
                                 "def __iter__(self) -> typing.Iterator[%]: ...\n",
