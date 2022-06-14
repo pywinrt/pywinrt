@@ -1,5 +1,6 @@
 
 import sys
+import uuid
 
 if sys.version_info >= (3, 9):
     from typing import Annotated
@@ -29,6 +30,9 @@ else:
     Double = float
 
 Char16 = UInt16  # Char16 also implies valid UTF-16 codepoint
+
+# WinRT GUIDs are marshaled to Python UUIDs
+Guid = uuid.UUID
 
 MTA: int
 STA: int

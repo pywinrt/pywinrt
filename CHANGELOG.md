@@ -6,6 +6,7 @@
 
 ### Fixed
 - Fixed syntax error in type hints for map with generic value type.
+- Fixed type hints for GUIDs.
 
 ## [v1.0.0-beta.5] - 2022-06-07
 
