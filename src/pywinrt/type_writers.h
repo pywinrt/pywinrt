@@ -946,8 +946,9 @@ namespace pywinrt
 
                 for (auto&& method : required_type.MethodList())
                 {
-                    if (is_constructor(method) || method.SpecialName())
+                    if (method.SpecialName())
                     {
+                        // skip .ctor, get_/put_ and add_/remove_ methods
                         continue;
                     }
 
