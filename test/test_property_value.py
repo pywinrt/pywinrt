@@ -1,6 +1,7 @@
 
 import unittest
 from array import array
+from datetime import datetime, timezone
 from uuid import UUID
 
 
@@ -97,10 +98,11 @@ class TestPropertyValue(unittest.TestCase):
     # # TODO: CreateInspectable
 
     def test_create_datetime(self):
-        o = wf.PropertyValue.create_date_time(wf.DateTime(0))
+        now = datetime.now(timezone.utc)
+        o = wf.PropertyValue.create_date_time(now)
         ipv = wf.IPropertyValue._from(o)
         self.assertEqual(ipv.type, wf.PropertyType.DATE_TIME)
-        self.assertEqual(ipv.get_date_time().universal_time, 0)
+        self.assertEqual(ipv.get_date_time(), now)
 
     def test_create_TimeSpan(self):
         o = wf.PropertyValue.create_time_span(wf.TimeSpan(0))

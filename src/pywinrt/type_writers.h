@@ -435,11 +435,20 @@ namespace pywinrt
             auto ns = type.TypeNamespace();
             auto name = type.TypeName();
 
-            // special case for IReference since the type is not used directly
-            if (ns == "Windows.Foundation" && name == "IReference`1")
+            if (ns == "Windows.Foundation")
             {
-                write("typing.Optional");
-                return;
+                // special case for IReference since the type is not used directly
+                if (name == "IReference`1")
+                {
+                    write("typing.Optional");
+                    return;
+                }
+
+                if (name == "DateTime")
+                {
+                    write("datetime.datetime");
+                    return;
+                }
             }
 
             if (ns == current_namespace)

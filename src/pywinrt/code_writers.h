@@ -113,10 +113,17 @@ namespace pywinrt
 
     void write_python_import_type(writer& w, TypeDef const& type)
     {
-        if (!is_exclusive_to(type))
+        if (is_exclusive_to(type))
         {
-            w.write("@ = _ns_module.@\n", type.TypeName(), type.TypeName());
+            return;
         }
+
+        if (is_customized_struct(type))
+        {
+            return;
+        }
+
+        w.write("@ = _ns_module.@\n", type.TypeName(), type.TypeName());
     }
 
     /**
@@ -339,7 +346,14 @@ PyObject* py::py_type<%>::get_python_type() noexcept {
     void write_python_type_specialization_struct(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
+        {
             return;
+        }
+
+        if (is_customized_struct(type))
+        {
+            return;
+        }
 
         auto format = R"(
 template<>
@@ -357,6 +371,11 @@ struct winrt_type<%>
     void write_get_python_type_definition(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
+        {
+            return;
+        }
+
+        if (is_customized_struct(type))
         {
             return;
         }
@@ -417,7 +436,14 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
     void write_python_wrapper_alias(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
+        {
             return;
+        }
+
+        if (is_customized_struct(type))
+        {
+            return;
+        }
 
         w.write(
             "using @ = py::%<%>;\n",
@@ -494,7 +520,14 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
     void write_ns_module_init_python_type(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
+        {
             return;
+        }
+
+        if (is_customized_struct(type))
+        {
+            return;
+        }
 
         w.write(
             "state->type_@ = py::register_python_type(module.get(), type_name_@, &type_spec_@, %);\n",
@@ -554,6 +587,11 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
             return;
         }
 
+        if (is_customized_struct(type))
+        {
+            return;
+        }
+
         w.write("PyTypeObject* type_@;\n", type.TypeName());
     }
 
@@ -592,6 +630,11 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
     void write_ns_module_visit_member(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
+        {
+            return;
+        }
+
+        if (is_customized_struct(type))
         {
             return;
         }
@@ -638,6 +681,11 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
     void write_ns_module_clear_member(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
+        {
+            return;
+        }
+
+        if (is_customized_struct(type))
         {
             return;
         }
@@ -2768,6 +2816,11 @@ struct pinterface_python_type<%<%>>
 
     void write_struct_converter_decl(writer& w, TypeDef const& type)
     {
+        if (is_customized_struct(type))
+        {
+            return;
+        }
+
         auto ns = type.TypeNamespace();
         auto name = type.TypeName();
         if ((ns == "Windows.Foundation") && (name == "EventRegistrationToken"))
@@ -3272,6 +3325,11 @@ if (!PyArg_ParseTupleAndKeywords(args, kwds, "%", const_cast<char**>(kwlist)%))
 
     void write_struct_convert_functions(writer& w, TypeDef const& type)
     {
+        if (is_customized_struct(type))
+        {
+            return;
+        }
+
         w.write(
             "\n\nPyObject* py::converter<%>::convert(% instance) noexcept\n{\n",
             type,
@@ -3318,6 +3376,11 @@ throw python_exception();
 
     void write_struct(writer& w, TypeDef const& type)
     {
+        if (is_customized_struct(type))
+        {
+            return;
+        }
+
         auto guard{w.push_generic_params(type.GenericParam())};
 
         w.write("\n// ----- % struct --------------------\n", type.TypeName());
@@ -3939,6 +4002,11 @@ if (!return_value)
      */
     void write_python_typing_for_struct(writer& w, TypeDef const& type)
     {
+        if (is_customized_struct(type))
+        {
+            return;
+        }
+
         w.write("class @:\n", type.TypeName());
         {
             writer::indent_guard g{w};

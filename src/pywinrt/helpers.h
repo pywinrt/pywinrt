@@ -713,12 +713,15 @@ namespace pywinrt
             get_type_semantics(field.Signature().Type()));
     }
 
+    /**
+     * Indicates that C++/WinRT treats @p type as a different struct than
+     * direct bindings.
+     */
     bool is_customized_struct(TypeDef const& type)
     {
         if (type.TypeNamespace() == "Windows.Foundation")
         {
-            static const std::set<std::string_view> custom_structs
-                = {"DateTime", "EventRegistrationToken", "HResult", "TimeSpan"};
+            static const std::set<std::string_view> custom_structs = {"DateTime"};
 
             return custom_structs.find(type.TypeName()) != custom_structs.end();
         }
@@ -736,7 +739,7 @@ namespace pywinrt
     bool has_custom_conversion(TypeDef const& type)
     {
         static const std::set<std::string_view> custom_converters
-            = {"DateTime", "EventRegistrationToken", "HResult", "TimeSpan"};
+            = {"EventRegistrationToken", "HResult", "TimeSpan"};
         if (type.TypeNamespace() == "Windows.Foundation")
         {
             return custom_converters.find(type.TypeName()) != custom_converters.end();

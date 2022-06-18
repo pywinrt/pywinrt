@@ -1,16 +1,5 @@
 
 
-static int64_t custom_get(winrt::Windows::Foundation::DateTime const& instance)
-{
-    return instance.time_since_epoch().count();
-}
-
-static void custom_set(winrt::Windows::Foundation::DateTime& instance, int64_t value)
-{
-    instance = winrt::Windows::Foundation::DateTime{
-        winrt::Windows::Foundation::TimeSpan{value}};
-}
-
 static int64_t custom_get(winrt::Windows::Foundation::TimeSpan const& instance)
 {
     return instance.count();

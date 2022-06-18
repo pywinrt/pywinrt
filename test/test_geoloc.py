@@ -1,4 +1,5 @@
 
+from datetime import datetime
 import os
 import unittest
 
@@ -57,7 +58,7 @@ class TestGeolocation(unittest.TestCase):
             self.assertEqual(type(pos), wdg.Geoposition)
 
             coord = pos.coordinate
-            self.assertEqual(type(coord.timestamp.universal_time), int)
+            self.assertIsInstance(coord.timestamp, datetime)
 
             basic_pos = coord.point.position
             lat = basic_pos.latitude
@@ -81,7 +82,7 @@ class TestGeolocation(unittest.TestCase):
         self.assertEqual(type(pos), wdg.Geoposition)
 
         coord = pos.coordinate
-        self.assertEqual(type(coord.timestamp.universal_time), int)
+        self.assertIsInstance(coord.timestamp, datetime)
 
         basic_pos = coord.point.position
         lat = basic_pos.latitude

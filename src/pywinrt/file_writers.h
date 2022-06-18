@@ -247,6 +247,7 @@ namespace pywinrt
             w.write("import enum\n");
         }
 
+        w.write("import datetime\n");
         w.write("import sys\n");
         w.write("import types\n");
         w.write("import typing\n");

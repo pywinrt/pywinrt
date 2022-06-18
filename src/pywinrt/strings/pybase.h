@@ -2,6 +2,7 @@
 
 // These two headers are part of the Python C Extension API
 #include <Python.h>
+#include <datetime.h>
 #include <structmember.h>
 
 #include <winrt/Windows.Foundation.h>
@@ -903,6 +904,90 @@ namespace py
             memcpy(&result, buffer, size);
 
             return result;
+        }
+    };
+
+    /**
+     * winrt::Windows::Foundation::DateTime is a specialized type that is an
+     * alias for std::chrono::time_point in C++/WinRT and is converted to/from
+     * datetime.datetime in Python.
+     */
+    template<>
+    struct converter<winrt::Windows::Foundation::DateTime>
+    {
+        static PyObject* convert(winrt::Windows::Foundation::DateTime value) noexcept
+        {
+            try
+            {
+                // FIXME: where can we put this so it only imports once?
+                PyDateTime_IMPORT;
+
+                // new reference
+                pyobj_handle args{Py_BuildValue(
+                    "(dO)",
+                    // Python uses "system"/POSIX epoch while WinRT uses win32 FILETIME
+                    // epoch.
+                    std::chrono::duration<double>(
+                        winrt::clock::to_sys(value).time_since_epoch())
+                        .count(),
+                    PyDateTime_TimeZone_UTC)};
+                if (!args)
+                {
+                    return nullptr;
+                }
+
+                return PyDateTime_FromTimestamp(args.get());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+
+        static winrt::Windows::Foundation::DateTime convert_to(PyObject* obj)
+        {
+            throw_if_pyobj_null(obj);
+
+            // FIXME: where can we put this so it only imports once?
+            PyDateTime_IMPORT;
+
+            if (!PyDateTime_Check(obj))
+            {
+                PyErr_SetString(PyExc_TypeError, "requires datetime.datetime object");
+                throw python_exception();
+            }
+
+            // WinRT works in UTC, so ensure correct time zone. Also works
+            // for "naive" datetime.
+
+            // new reference
+            pyobj_handle utc{
+                PyObject_CallMethod(obj, "astimezone", "O", PyDateTime_TimeZone_UTC)};
+            if (!utc)
+            {
+                throw python_exception();
+            }
+
+            // new reference
+            pyobj_handle timestamp{PyObject_CallMethod(utc.get(), "timestamp", NULL)};
+            if (!timestamp)
+            {
+                throw python_exception();
+            }
+
+            auto value = PyFloat_AsDouble(timestamp.get());
+            if (value == -1.0 && PyErr_Occurred())
+            {
+                throw python_exception();
+            }
+
+            // Python uses "system"/POSIX epoch while WinRT uses win32 FILETIME epoch.
+            return winrt::clock::from_sys(std::chrono::time_point<
+                                          std::chrono::system_clock,
+                                          winrt::Windows::Foundation::TimeSpan>{
+                std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(
+                    std::chrono::duration<double>(value))});
         }
     };
 

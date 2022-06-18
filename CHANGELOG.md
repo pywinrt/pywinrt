@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Changed
+- `Windows.Foundation.DateTime` is now converted to/from `datetime.datetime`.
+
 ### Fixed
 - Fixed syntax error in type hints for map with generic value type.
 - Fixed type hints for GUIDs.
