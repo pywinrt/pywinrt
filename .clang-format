@@ -4,7 +4,7 @@ UseTab: Never
 IndentWidth: 4
 ---
 Language: Cpp
-Standard: c++17
+Standard: c++20
 BreakBeforeBraces: Allman
 AllowShortIfStatementsOnASingleLine: false
 IndentCaseLabels: false
