@@ -733,46 +733,6 @@ namespace pywinrt
                || (category == category::class_type && !type.Flags().Abstract());
     }
 
-    bool is_default_constructable(TypeDef const& type)
-    {
-        if (get_category(type) == category::class_type)
-        {
-            for (auto&& method : type.MethodList())
-            {
-                if (is_constructor(method) && empty(method.ParamList()))
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
-
-    bool implements_sequence_protocol(TypeDef const& type)
-    {
-        return implements_interface(type, "Windows.Foundation.Collections", "IVector`1")
-               || implements_interface(
-                   type, "Windows.Foundation.Collections", "IVectorView`1");
-    }
-
-    bool implements_mapping_protocol(TypeDef const& type)
-    {
-        return implements_interface(type, "Windows.Foundation.Collections", "IMap`2")
-               || implements_interface(
-                   type, "Windows.Foundation.Collections", "IMapView`2");
-    }
-
-    bool has_dunder_str_method(TypeDef const& type)
-    {
-        return implements_interface(type, "Windows.Foundation", "IStringable");
-    }
-
-    bool has_dunder_len_method(TypeDef const& type)
-    {
-        return implements_mapping_protocol(type) || implements_sequence_protocol(type);
-    }
-
     bool has_custom_conversion(TypeDef const& type)
     {
         static const std::set<std::string_view> custom_converters
