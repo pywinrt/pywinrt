@@ -1,7 +1,7 @@
 
 import unittest
 from array import array
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from uuid import UUID
 
 
@@ -105,10 +105,11 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(ipv.get_date_time(), now)
 
     def test_create_TimeSpan(self):
-        o = wf.PropertyValue.create_time_span(wf.TimeSpan(0))
+        td = timedelta(days=-1, seconds=2, microseconds=3)
+        o = wf.PropertyValue.create_time_span(td)
         ipv = wf.IPropertyValue._from(o)
         self.assertEqual(ipv.type, wf.PropertyType.TIME_SPAN)
-        self.assertEqual(ipv.get_time_span().duration, 0)        
+        self.assertEqual(ipv.get_time_span(), td)
 
     def test_create_Guid(self):
         u = UUID('01234567-89ab-cdef-0123456789abcdef')

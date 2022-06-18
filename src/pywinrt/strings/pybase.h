@@ -991,6 +991,60 @@ namespace py
         }
     };
 
+    /**
+     * winrt::Windows::Foundation::TimeSpan is a specialized type that is an
+     * alias for std::chrono::duration in C++/WinRT and is converted to/from
+     * datetime.timedelta in Python.
+     */
+    template<>
+    struct converter<winrt::Windows::Foundation::TimeSpan>
+    {
+        static PyObject* convert(winrt::Windows::Foundation::TimeSpan value) noexcept
+        {
+            try
+            {
+                // FIXME: where can we put this so it only imports once?
+                PyDateTime_IMPORT;
+
+                auto days = std::chrono::duration_cast<std::chrono::days>(value);
+                auto seconds
+                    = std::chrono::duration_cast<std::chrono::seconds>(value - days);
+                auto microseconds
+                    = std::chrono::duration_cast<std::chrono::microseconds>(
+                        value - seconds - days);
+
+                return PyDelta_FromDSU(
+                    static_cast<int>(days.count()),
+                    static_cast<int>(seconds.count()),
+                    static_cast<int>(microseconds.count()));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+
+        static winrt::Windows::Foundation::TimeSpan convert_to(PyObject* obj)
+        {
+            throw_if_pyobj_null(obj);
+
+            // FIXME: where can we put this so it only imports once?
+            PyDateTime_IMPORT;
+
+            if (!PyDelta_Check(obj))
+            {
+                PyErr_SetString(PyExc_TypeError, "requires datetime.timedelta object");
+                throw python_exception();
+            }
+
+            return std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(
+                std::chrono::days(PyDateTime_DELTA_GET_DAYS(obj))
+                + std::chrono::seconds(PyDateTime_DELTA_GET_SECONDS(obj))
+                + std::chrono::microseconds(PyDateTime_DELTA_GET_MICROSECONDS(obj)));
+        }
+    };
+
     template<>
     struct converter<winrt::Windows::Foundation::IInspectable>
     {

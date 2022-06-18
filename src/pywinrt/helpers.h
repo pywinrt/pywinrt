@@ -721,7 +721,8 @@ namespace pywinrt
     {
         if (type.TypeNamespace() == "Windows.Foundation")
         {
-            static const std::set<std::string_view> custom_structs = {"DateTime"};
+            static const std::set<std::string_view> custom_structs
+                = {"DateTime", "TimeSpan"};
 
             return custom_structs.find(type.TypeName()) != custom_structs.end();
         }
@@ -739,7 +740,7 @@ namespace pywinrt
     bool has_custom_conversion(TypeDef const& type)
     {
         static const std::set<std::string_view> custom_converters
-            = {"EventRegistrationToken", "HResult", "TimeSpan"};
+            = {"EventRegistrationToken", "HResult"};
         if (type.TypeNamespace() == "Windows.Foundation")
         {
             return custom_converters.find(type.TypeName()) != custom_converters.end();

@@ -6,6 +6,7 @@
 
 ### Changed
 - `Windows.Foundation.DateTime` is now converted to/from `datetime.datetime`.
+- `Windows.Foundation.TimeSpan` is now converted to/from `datetime.timedelta`.
 
 ### Fixed
 - Fixed syntax error in type hints for map with generic value type.

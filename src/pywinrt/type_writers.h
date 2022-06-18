@@ -449,6 +449,12 @@ namespace pywinrt
                     write("datetime.datetime");
                     return;
                 }
+
+                if (name == "TimeSpan")
+                {
+                    write("datetime.timedelta");
+                    return;
+                }
             }
 
             if (ns == current_namespace)

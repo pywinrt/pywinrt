@@ -1,15 +1,5 @@
 
 
-static int64_t custom_get(winrt::Windows::Foundation::TimeSpan const& instance)
-{
-    return instance.count();
-}
-
-static void custom_set(winrt::Windows::Foundation::TimeSpan& instance, int64_t value)
-{
-    instance = winrt::Windows::Foundation::TimeSpan{value};
-}
-
 static int64_t custom_get(winrt::event_token const& instance)
 {
     return instance.value;
