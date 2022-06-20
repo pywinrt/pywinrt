@@ -1006,7 +1006,10 @@ namespace py
                 // FIXME: where can we put this so it only imports once?
                 PyDateTime_IMPORT;
 
-                auto days = std::chrono::duration_cast<std::chrono::days>(value);
+                // REVISIT: the commented code can be used in c++20
+                // auto days = std::chrono::duration_cast<std::chrono::days>(value);
+                auto days = std::chrono::duration_cast<
+                    std::chrono::duration<int64_t, std::ratio<86400>>>(value);
                 auto seconds
                     = std::chrono::duration_cast<std::chrono::seconds>(value - days);
                 auto microseconds
@@ -1039,7 +1042,10 @@ namespace py
             }
 
             return std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(
-                std::chrono::days(PyDateTime_DELTA_GET_DAYS(obj))
+                // REVISIT: the commented code can be used in c++20
+                // std::chrono::days(PyDateTime_DELTA_GET_DAYS(obj))
+                std::chrono::duration<int64_t, std::ratio<86400>>(
+                    PyDateTime_DELTA_GET_DAYS(obj))
                 + std::chrono::seconds(PyDateTime_DELTA_GET_SECONDS(obj))
                 + std::chrono::microseconds(PyDateTime_DELTA_GET_MICROSECONDS(obj)));
         }

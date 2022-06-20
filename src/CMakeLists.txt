@@ -61,7 +61,7 @@ function(GENERATE_STRING_LITERAL_FILES glob_expression output_filename namespace
 
 endfunction()
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # change the warning level to 4
