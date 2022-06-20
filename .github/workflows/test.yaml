@@ -14,7 +14,7 @@ on:
 
 jobs:
   test:
-    runs-on: windows-2019
+    runs-on: windows-2022
     strategy:
       matrix:
         python-version: ['3.7', '3.8', '3.9', '3.10']
@@ -31,8 +31,8 @@ jobs:
         run: ./scripts/vsdevcmd-build.cmd
       - name: Generate and build
         run: |
-          Import-Module "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
-          Enter-VsDevShell -VsInstallPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" -DevCmdArguments '-arch=${{ matrix.architecture }}'
+          Import-Module "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
+          Enter-VsDevShell -VsInstallPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" -DevCmdArguments '-arch=${{ matrix.architecture }}'
           cd src/package/pywinrt/projection
           ./generate.ps1
           ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion ${{ matrix.python-version }}
@@ -42,7 +42,7 @@ jobs:
           PYTHONPATH: src/package/pywinrt/projection/pywinrt
         run: python -m unittest -v
   lint:
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v2
       - name: Build pywinrt

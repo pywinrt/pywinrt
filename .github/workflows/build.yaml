@@ -5,7 +5,7 @@ on:
 
 jobs:
   pywinrt:
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v2
       - run: ./scripts/build_pywinrt_nuget.cmd
@@ -15,7 +15,7 @@ jobs:
           path: PyWinRT.*.nupkg
   projection:
     needs: pywinrt
-    runs-on: windows-2019
+    runs-on: windows-2022
     strategy:
       matrix:
         python-version: ['3.7', '3.8', '3.9', '3.10']
@@ -33,8 +33,8 @@ jobs:
           name: pywinrt_nuget_${{ github.run_id }}
       - name: Generate and build
         run: |
-          Import-Module "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
-          Enter-VsDevShell -VsInstallPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" -DevCmdArguments '-arch=${{ matrix.architecture }}'
+          Import-Module "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
+          Enter-VsDevShell -VsInstallPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" -DevCmdArguments '-arch=${{ matrix.architecture }}'
           cd src/package/pywinrt/projection
           ./generate.ps1 -fullProjection -useLocalPyWinRTNuget
           ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion ${{ matrix.python-version }}
