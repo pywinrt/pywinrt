@@ -44,3 +44,16 @@ jobs:
         env:
           PYTHONPATH: src/package/pywinrt/projection/pywinrt
         run: python -m unittest -v
+  lint:
+    runs-on: windows-2019
+    steps:
+      - name: Build pywinrt
+        run: ./scripts/vsdevcmd-build.cmd
+      - name: Generate full projection
+        run: |
+          cd src/package/pywinrt/projection
+          ./generate -fullProjection
+      - name: Run mypy
+        run: 
+          cd src/package/pywinrt/projection
+          pipx run mypy
