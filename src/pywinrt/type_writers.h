@@ -1003,7 +1003,7 @@ namespace pywinrt
                                   ? 0
                                   : std::distance(oo.second.begin(), default_overload);
 
-                        func(oo.second.at(i), o.second.size() > 1);
+                        func(oo.second.at(i));
                     }
                 }
             });
@@ -1038,4 +1038,49 @@ namespace pywinrt
                 }
             });
     }
+
+    /**
+     * Tests if a method has any overloads.
+     * @param w Required for generic arg context.
+     * @param type The type that contains the method.
+     * @param name The name of the method to test.
+     * @returns True if there are overloads, otherwise false.
+     */
+    bool is_method_overloaded(
+        writer& w, TypeDef const& type, std::string_view const& name)
+    {
+        auto guard{w.push_generic_params(type.GenericParam())};
+
+        auto count = 0;
+
+        if (name == ".ctor")
+        {
+            // REVISIT: this may return incorrect result if all constructors
+            // have the same number of arguments and there is more than one
+            // constructor
+            count = std::count_if(
+                type.MethodList().first,
+                type.MethodList().second,
+                [](auto&& method)
+                {
+                    return method.Name() == ".ctor";
+                });
+        }
+        else
+        {
+            enumerate_methods(
+                w,
+                type,
+                [&](MethodDef const& method)
+                {
+                    if (method.Name() == name)
+                    {
+                        count++;
+                    }
+                });
+        }
+
+        return count > 1;
+    }
+
 } // namespace pywinrt
