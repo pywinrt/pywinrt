@@ -52,6 +52,6 @@ jobs:
           cd src/package/pywinrt/projection
           ./generate -fullProjection
       - name: Run mypy
-        run: 
+        run: |
           cd src/package/pywinrt/projection
-          pipx run mypy
+          pipx run mypy -p winrt
