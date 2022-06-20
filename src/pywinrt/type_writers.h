@@ -950,15 +950,15 @@ namespace pywinrt
     template<typename F>
     void enumerate_methods(writer& w, TypeDef const& type, F func)
     {
+        std::set<std::string_view> method_names{};
+
+        // collect all unique method names
+
         enumerate_required_types(
             w,
             type,
             [&](TypeDef const& required_type)
             {
-                // map of overloads by number of parameters
-                std::map<std::string_view, std::map<int, std::vector<MethodDef>>>
-                    overloads;
-
                 for (auto&& method : required_type.MethodList())
                 {
                     if (method.SpecialName())
@@ -967,21 +967,44 @@ namespace pywinrt
                         continue;
                     }
 
-                    method_signature signature{method};
-                    auto arg_count = count_in_param(signature.params());
-                    overloads[method.Name()][arg_count].push_back(method);
+                    method_names.insert(method.Name());
                 }
+            });
 
-                for (auto o : overloads)
+        // call callback for each method with overloads grouped together
+        // REVISIT: this doesn't handle the case if an interface has an overload
+        // with the same number of parameters as a required interface
+
+        for (auto&& method_name : method_names)
+        {
+            enumerate_required_types(
+                w,
+                type,
+                [&](TypeDef const& required_type)
                 {
-                    for (auto oo : o.second)
+                    // map of overloads by number of parameters
+                    std::map<int, std::vector<MethodDef>> overloads;
+
+                    for (auto&& method : required_type.MethodList())
+                    {
+                        if (method.Name() != method_name)
+                        {
+                            continue;
+                        }
+
+                        method_signature signature{method};
+                        auto arg_count = count_in_param(signature.params());
+                        overloads[arg_count].push_back(method);
+                    }
+
+                    for (auto o : overloads)
                     {
                         // if there are multiple overloads with the same number of
                         // arguments, we need to use the default overload
                         // https://devblogs.microsoft.com/oldnewthing/20210528-00/?p=105259
                         auto default_overload = std::find_if(
-                            oo.second.begin(),
-                            oo.second.end(),
+                            o.second.begin(),
+                            o.second.end(),
                             [](auto m)
                             {
                                 for (auto a : m.CustomAttribute())
@@ -996,17 +1019,17 @@ namespace pywinrt
                                 return false;
                             });
 
-                        // if there was no default, just use the first (and hopefully
-                        // only) overload
+                        // if there was no default, just use the first (and
+                        // hopefully only) overload
                         auto i
-                            = default_overload == oo.second.end()
+                            = default_overload == o.second.end()
                                   ? 0
-                                  : std::distance(oo.second.begin(), default_overload);
+                                  : std::distance(o.second.begin(), default_overload);
 
-                        func(oo.second.at(i));
+                        func(o.second.at(i));
                     }
-                }
-            });
+                });
+        }
     }
 
     template<typename F>
