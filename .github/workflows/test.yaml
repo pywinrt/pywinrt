@@ -2,12 +2,9 @@ name: test
 on: 
   push:
     tags-ignore:
-      - v*
-    paths:
-      - .github/workflows/test.yaml
-      - scripts/**
-      - src/**
-      - test/**
+      - "*"
+    branches:
+      - main
   pull_request:
     paths:
       - .github/workflows/test.yaml
