@@ -258,7 +258,8 @@ namespace py
     {
         if constexpr (is_pinterface_category_v<T>)
         {
-            return winrt_type<pinterface_python_type<T>::abstract>::get_python_type();
+            return winrt_type<
+                typename pinterface_python_type<T>::abstract>::get_python_type();
         }
         else
         {
@@ -475,8 +476,8 @@ namespace py
             return nullptr;
         }
 
-        auto py_instance
-            = PyObject_New(py::winrt_pinterface_wrapper<ptype::abstract>, type);
+        auto py_instance = PyObject_New(
+            py::winrt_pinterface_wrapper<typename ptype::abstract>, type);
 
         if (!py_instance)
         {
@@ -486,9 +487,9 @@ namespace py
         // PyObject_New doesn't call type's constructor, so manually initialize the
         // wrapper's fields
         py_instance->get_unknown
-            = &winrt_pinterface_wrapper<ptype::abstract>::fetch_unknown;
+            = &winrt_pinterface_wrapper<typename ptype::abstract>::fetch_unknown;
         std::memset(&(py_instance->obj), 0, sizeof(py_instance->obj));
-        py_instance->obj = std::make_unique<ptype::concrete>(instance);
+        py_instance->obj = std::make_unique<typename ptype::concrete>(instance);
 
 #if PY_VERSION_HEX < 0x03080000
         Py_INCREF(type);
@@ -518,7 +519,9 @@ namespace py
         }
         else
         {
-            if constexpr (std::is_same_v<pinterface_python_type<T>::abstract, void>)
+            if constexpr (std::is_same_v<
+                              typename pinterface_python_type<T>::abstract,
+                              void>)
             {
                 PyErr_SetNone(PyExc_NotImplementedError);
                 return nullptr;
