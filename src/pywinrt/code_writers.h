@@ -3996,8 +3996,10 @@ if (!return_value)
             }
 
             w.write(
-                "def __init__(self, %) -> None: ...\n",
-                bind_list<write_struct_field_parameter_typing>(", ", type.FieldList()));
+                "def __new__(cls: typing.Type[%], %) -> %: ...\n",
+                type.TypeName(),
+                bind_list<write_struct_field_parameter_typing>(", ", type.FieldList()),
+                type.TypeName());
         }
         w.write("\n");
     }
@@ -4259,7 +4261,6 @@ if (!return_value)
 
             auto method_writer = [&](MethodDef const& method)
             {
-                auto name = is_constructor(method) ? "__init__" : method.Name();
                 method_signature signature{method};
 
                 if (is_method_overloaded(w, type, method.Name()))
@@ -4272,18 +4273,35 @@ if (!return_value)
                     w.write("@staticmethod\n");
                 }
 
+                // seperator between cls/self and the rest of the args
+                auto first_seperator
+                    = !is_static(method) && count_in_param(signature.params()) > 0
+                          ? ", "
+                          : "";
+
                 // TODO: add trailing ", /" (PEP 570) to the parameters when we drop
                 // support for Python 3.7
-                w.write(
-                    "def %(@%) -> %: ...\n",
-                    bind<write_lower_snake_case_python_identifier>(name),
-                    is_static(method)
-                        ? ""
-                        : ((count_in_param(signature.params()) > 0) ? "self, "
-                                                                    : "self"),
-                    bind_list<write_method_in_param_name_and_typing>(
-                        ", ", filter_in_params(signature.params())),
-                    bind<write_return_typing>(signature));
+                if (is_constructor(method))
+                {
+                    w.write(
+                        "def __new__(cls: typing.Type[%]%%) -> %:...\n",
+                        type.TypeName(),
+                        first_seperator,
+                        bind_list<write_method_in_param_name_and_typing>(
+                            ", ", filter_in_params(signature.params())),
+                        type.TypeName());
+                }
+                else
+                {
+                    w.write(
+                        "def %(%%%) -> %: ...\n",
+                        bind<write_lower_snake_case_python_identifier>(method.Name()),
+                        is_static(method) ? "" : "self",
+                        first_seperator,
+                        bind_list<write_method_in_param_name_and_typing>(
+                            ", ", filter_in_params(signature.params())),
+                        bind<write_return_typing>(signature));
+                }
             };
 
             auto constructors = get_constructors(type);

@@ -7,6 +7,7 @@
 ### Changed
 - `Windows.Foundation.DateTime` is now converted to/from `datetime.datetime`.
 - `Windows.Foundation.TimeSpan` is now converted to/from `datetime.timedelta`.
+- Type hints now use `__new__` instead of `__init__`.
 
 ### Fixed
 - Fixed syntax error in type hints for map with generic value type.
