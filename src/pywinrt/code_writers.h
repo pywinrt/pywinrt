@@ -3133,30 +3133,6 @@ if ((tuple_size == 0) && (kwds == nullptr))
                             type);
                     });
             }
-            w.write(R"(}
-
-if ((tuple_size == 1) && (kwds == nullptr))
-{
-)");
-            {
-                writer::indent_guard gg{w};
-                w.write(R"(auto arg = PyTuple_GetItem(args, 0);
-if (PyDict_Check(arg))
-{
-)");
-                {
-                    writer::indent_guard ggg{w};
-                    write_try_catch(
-                        w,
-                        [&](writer& w)
-                        {
-                            w.write(
-                                "auto return_value = py::convert_to<%>(arg);\nreturn py::convert(return_value);\n",
-                                type);
-                        });
-                }
-                w.write("}\n");
-            }
             w.write("}\n\n");
 
             for (auto&& field : type.FieldList())
