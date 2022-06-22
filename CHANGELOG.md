@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [v1.0.0-beta.6] - 2022-06-21
+
 ### Changed
 - `Windows.Foundation.DateTime` is now converted to/from `datetime.datetime`.
 - `Windows.Foundation.TimeSpan` is now converted to/from `datetime.timedelta`.
@@ -100,7 +102,8 @@
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.5...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.6...HEAD
+[v1.0.0-beta.6]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.5...v1.0.0-beta.6
 [v1.0.0-beta.5]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.4...v1.0.0-beta.5
 [v1.0.0-beta.4]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.3...v1.0.0-beta.4
 [v1.0.0-beta.3]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.2...v1.0.0-beta.3
