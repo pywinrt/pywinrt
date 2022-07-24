@@ -219,7 +219,7 @@ catch (...)
     {
         w.write(R"(if (arg == nullptr)
 {
-    PyErr_SetString(PyExc_TypeError, "property delete not supported");
+    PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
     return -1;
 }
 

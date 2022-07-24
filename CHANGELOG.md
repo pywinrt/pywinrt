@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Changed
+- Attempting to delete attributes now returns `AttributeError` instead of `TypeError`.
+
 ## [v1.0.0-beta.6] - 2022-06-21
 
 ### Changed
