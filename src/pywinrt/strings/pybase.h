@@ -6,6 +6,7 @@
 #include <structmember.h>
 
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Metadata.h>
 
 namespace py
 {

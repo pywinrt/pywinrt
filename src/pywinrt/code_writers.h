@@ -1355,6 +1355,22 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
                         "if (arg_count == %)\n{\n", count_in_param(signature.params()));
                     {
                         writer::indent_guard g{w};
+
+                        w.write(
+                            "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"%.%\", L\"%\", %))\n{\n",
+                            method.Parent().TypeNamespace(),
+                            method.Parent().TypeName(),
+                            method.Name(),
+                            count_in_param(signature.params()));
+                        {
+                            writer::indent_guard gg{w};
+                            w.write(
+                                "PyErr_SetString(PyExc_AttributeError, \"method % args is not available in this version of Windows\");\n",
+                                count_in_param(signature.params()));
+                            w.write("return nullptr;\n");
+                        }
+                        w.write("}\n\n");
+
                         write_try_catch(
                             w,
                             [&](writer& w)
@@ -1374,8 +1390,19 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
 )");
     }
 
+    /**
+     * Writes the Python descriptor (PyGetSetDef) getter implementation for a winrt
+     * property getter.
+     * @param w The writer.
+     * @param t The type that contains the property.
+     * @param method The getter method metadata.
+     * @param prop_name The name of the winrt property.
+     */
     void write_get_property_function(
-        writer& w, TypeDef const& type, MethodDef const& method)
+        writer& w,
+        TypeDef const& type,
+        MethodDef const& method,
+        std::string_view const& prop_name)
     {
         w.write(
             "\nstatic PyObject* @_%(%, void* /*unused*/) noexcept\n{\n",
@@ -1384,6 +1411,19 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
             bind<write_method_self_param>(type, is_static(method)));
         {
             writer::indent_guard g{w};
+
+                        w.write(
+                "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"%.%\", L\"%\"))\n{\n",
+                method.Parent().TypeNamespace(),
+                method.Parent().TypeName(),
+                prop_name);
+            {
+                writer::indent_guard gg{w};
+                w.write(
+                    "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");\n");
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
 
             if (is_ptype(type))
             {
@@ -1402,8 +1442,19 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
         w.write("}\n");
     }
 
+    /**
+     * Writes the Python descriptor (PyGetSetDef) setter implementation for a winrt
+     * property setter.
+     * @param w The writer.
+     * @param t The type that contains the property.
+     * @param method The setter method metadata.
+     * @param prop_name The name of the winrt property.
+     */
     void write_put_property_function(
-        writer& w, TypeDef const& type, MethodDef const& method)
+        writer& w,
+        TypeDef const& type,
+        MethodDef const& method,
+        std::string_view const& prop_name)
     {
         if (!method)
             return;
@@ -1418,6 +1469,29 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
             bind<write_method_self_param>(type, is_static(method)));
         {
             writer::indent_guard g{w};
+
+            w.write(
+                "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"%.%\", L\"%\"))\n{\n",
+                method.Parent().TypeNamespace(),
+                method.Parent().TypeName(),
+                prop_name);
+            {
+                writer::indent_guard gg{w};
+                w.write(
+                    "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");\n");
+
+                if (is_static(method))
+                {
+                    // static properties are implemented as methods
+                    w.write("return nullptr;\n");
+                }
+                else
+                {
+                    w.write("return -1;\n");
+                }
+            }
+            w.write("}\n\n");
+
             if (is_ptype(type))
             {
                 w.write("return self->obj->%(arg);\n", method.Name());
@@ -1447,7 +1521,18 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
         w.write("}\n");
     }
 
-    void write_event_function(writer& w, TypeDef const& type, MethodDef const& method)
+    /**
+     * Writes the Python add/remove method implementation for a winrt event.
+     * @param w The writer.
+     * @param t The type that contains the event.
+     * @param method The add or remove method metadata.
+     * @param prop_name The name of the winrt event.
+     */
+    void write_event_function(
+        writer& w,
+        TypeDef const& type,
+        MethodDef const& method,
+        std::string_view const& event_name)
     {
         w.write(
             "\nstatic PyObject* @_%(%, PyObject* arg) noexcept\n{\n",
@@ -1456,6 +1541,20 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
             bind<write_method_self_param>(type, is_static(method)));
         {
             writer::indent_guard g{w};
+
+            w.write(
+                "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"%.%\", L\"%\"))\n{\n",
+                method.Parent().TypeNamespace(),
+                method.Parent().TypeName(),
+                event_name);
+            {
+                writer::indent_guard gg{w};
+                w.write(
+                    "PyErr_SetString(PyExc_AttributeError, \"event is not available in this version of Windows\");\n");
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
             if (is_ptype(type))
             {
                 w.write("return self->obj->%(arg);\n", method.Name());
@@ -1784,8 +1883,8 @@ return 0;
             [&](auto const& prop)
             {
                 auto&& [get_method, put_method] = get_property_methods(prop);
-                write_get_property_function(w, type, get_method);
-                write_put_property_function(w, type, put_method);
+                write_get_property_function(w, type, get_method, prop.Name());
+                write_put_property_function(w, type, put_method, prop.Name());
             });
 
         enumerate_events(
@@ -1794,8 +1893,8 @@ return 0;
             [&](auto const& evt)
             {
                 auto&& [add_method, remove_method] = get_event_methods(evt);
-                write_event_function(w, type, add_method);
-                write_event_function(w, type, remove_method);
+                write_event_function(w, type, add_method, evt.Name());
+                write_event_function(w, type, remove_method, evt.Name());
             });
 
         if (!(is_ptype(type) || is_static_class(type)))
