@@ -18,13 +18,13 @@ jobs:
     runs-on: windows-2022
     strategy:
       matrix:
-        python-version: ['3.7', '3.8', '3.9', '3.10']
+        python-version: ['3.7', '3.8', '3.9', '3.10', '3.11.0-rc.1']
         architecture: ['x86', 'x64']
         release-type: ['Release'] # no "Debug" - https://github.com/actions/setup-python/issues/86
     name: Python ${{ matrix.python-version }} ${{ matrix.architecture }} ${{ matrix.release-type }}
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
           architecture: ${{ matrix.architecture }}
