@@ -113,7 +113,7 @@
 - Removed selecting apartment thread type during module init.
 
 [Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.7...HEAD
-[v1.0.0-beta.6]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.6...v1.0.0-beta.7
+[v1.0.0-beta.7]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.6...v1.0.0-beta.7
 [v1.0.0-beta.6]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.5...v1.0.0-beta.6
 [v1.0.0-beta.5]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.4...v1.0.0-beta.5
 [v1.0.0-beta.4]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.3...v1.0.0-beta.4
