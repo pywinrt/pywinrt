@@ -29,7 +29,7 @@ namespace pywinrt
             if (new_pos == std::string_view::npos)
             {
                 segments.push_back(ns.substr(pos));
-                return std::move(segments);
+                return segments;
             }
 
             segments.push_back(ns.substr(pos, new_pos - pos));
@@ -455,7 +455,7 @@ namespace pywinrt
             }
         }
 
-        return std::move(ctors);
+        return ctors;
     }
 
     inline bool is_static(MethodDef const& method)
