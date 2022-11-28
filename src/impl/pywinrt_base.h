@@ -1,22 +1,8 @@
 #pragma once
 
-#if defined(_WIN32)
-#define XLANG_PLATFORM_WINDOWS 1
-#else
-#define XLANG_PLATFORM_WINDOWS 0
-#endif
-
-#if XLANG_PLATFORM_WINDOWS
 #include <windows.h>
 #include <shlwapi.h>
 #include <xmllite.h>
-#else
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <sys/mman.h>
-#include <unistd.h>
-#endif
-
 #include <stdexcept>
 #include <assert.h>
 #include <array>

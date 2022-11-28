@@ -116,11 +116,7 @@ namespace pywinrt::text
         void write_printf(char const* format, Args const&... args)
         {
             char buffer[128];
-#if XLANG_PLATFORM_WINDOWS
             size_t const size = sprintf_s(buffer, format, args...);
-#else
-            size_t const size = snprintf(buffer, sizeof(buffer), format, args...);
-#endif
             write(std::string_view{buffer, size});
         }
 
