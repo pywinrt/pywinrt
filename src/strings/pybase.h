@@ -1585,7 +1585,7 @@ namespace py
                     = converter<T>::convert_to(item.get());
             }
 
-            return std::move(items);
+            return items;
         }
     };
 
