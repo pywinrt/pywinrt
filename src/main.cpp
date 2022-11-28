@@ -71,7 +71,7 @@ Where <spec> is one or more of:
   sdk[+]              Current version of Windows SDK [with extensions]
   10.0.12345.0[+]     Specific version of Windows SDK [with extensions]
 )";
-        w.write(format, XLANG_VERSION_STRING, bind_each(printOption, options));
+        w.write(format, PYWINRT_VERSION_STRING, bind_each(printOption, options));
     }
 
     void process_args(int const argc, char** argv)

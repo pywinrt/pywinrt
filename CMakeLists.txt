@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.15)
-project(xlang)
+project(pywinrt)
 
-set(XLANG_SCRIPTS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/scripts")
+set(PYWINRT_SCRIPTS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/scripts")
 
-if(NOT DEFINED XLANG_BUILD_VERSION)
-set(XLANG_BUILD_VERSION "0.0.0")
+if(NOT DEFINED PYWINRT_BUILD_VERSION)
+set(PYWINRT_BUILD_VERSION "0.0.0")
 endif()
 
 function(ADD_OBJECT_DEPENDS file dependency)
@@ -52,7 +52,7 @@ function(GENERATE_STRING_LITERAL_FILES glob_expression output_filename namespace
     add_custom_command(
         OUTPUT  ${output_files}
         DEPENDS ${input_files}
-        COMMAND ${CMAKE_COMMAND} \"-Dglob_expression=${glob_expression}\" \"-Dout_h=${out_h}\" \"-Dout_cpp=${out_cpp}\" \"-Dnamespace=${namespace}\" -P \"${XLANG_SCRIPTS_PATH}/genStringLiteralFiles.cmake\"
+        COMMAND ${CMAKE_COMMAND} \"-Dglob_expression=${glob_expression}\" \"-Dout_h=${out_h}\" \"-Dout_cpp=${out_cpp}\" \"-Dnamespace=${namespace}\" -P \"${PYWINRT_SCRIPTS_PATH}/genStringLiteralFiles.cmake\"
     )
 
     set(gen_target_name "generated_${target}_${output_filename}")
