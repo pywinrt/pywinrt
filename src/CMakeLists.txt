@@ -1,84 +1,18 @@
-cmake_minimum_required(VERSION 3.15)
-project(xlang)
+project(pywinrt)
 
-set(XLANG_SCRIPTS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../scripts")
+add_executable(pywinrt)
+target_sources(pywinrt PUBLIC main.cpp pch.cpp "${PROJECT_BINARY_DIR}/strings.cpp")
+target_include_directories(pywinrt PUBLIC ${PROJECT_BINARY_DIR} ${PROJECT_SOURCE_DIR})
+target_compile_definitions(pywinrt PUBLIC "XLANG_VERSION_STRING=\"${XLANG_BUILD_VERSION}\"")
 
-if(NOT DEFINED XLANG_BUILD_VERSION)
-set(XLANG_BUILD_VERSION "0.0.0")
-endif()
+find_program(NUGET_EXE NAMES nuget)
+exec_program(${NUGET_EXE} ARGS install "Microsoft.Windows.WinMD" -Version "1.0.210629.2" -ExcludeVersion -OutputDirectory "${CMAKE_BINARY_DIR}/_packages")
+target_include_directories(pywinrt PRIVATE "${CMAKE_BINARY_DIR}/_packages/Microsoft.Windows.WinMD")
 
-function(ADD_OBJECT_DEPENDS file dependency)
-    get_source_file_property(cur_obj_depends ${file} OBJECT_DEPENDS)
-    if (${cur_obj_depends} STREQUAL "NOTFOUND")
-        set(new_obj_depends "${pch_output_file_name}")
-    else()
-        set(new_obj_depends "${cur_obj_depends};${dependency}")
-    endif()
-    set_source_files_properties(${file}  PROPERTIES OBJECT_DEPENDS ${new_obj_depends})
-endfunction(ADD_OBJECT_DEPENDS)
+GENERATE_STRING_LITERAL_FILES("${PROJECT_SOURCE_DIR}/strings/*" "strings" "pywinrt::strings" pywinrt)
 
-function(TARGET_CONFIG_MSVC_PCH target pch_cpp pch_header)
+TARGET_CONFIG_MSVC_PCH(pywinrt pch.cpp pch.h)
+target_compile_options(pywinrt PUBLIC /await)
+target_link_libraries(pywinrt windowsapp ole32 shlwapi)
 
-    get_target_property(target_name ${target} NAME)
-    set(pch_output_file_name "${target_name}.pch")
-    set(pch_output_file "\"${CMAKE_CURRENT_BINARY_DIR}/${pch_output_file_name}\"")
-
-    get_target_property(sources ${target} SOURCES)
-    foreach(file ${sources})
-        if (${file} STREQUAL ${pch_cpp})
-            set_source_files_properties(${file}
-                PROPERTIES
-                COMPILE_FLAGS " /Yc${pch_header} /Fp${pch_output_file}"
-                OBJECT_OUTPUTS ${pch_output_file_name})
-        else()
-            set_source_files_properties(${file} PROPERTIES COMPILE_FLAGS " /Yu${pch_header} /Fp${pch_output_file}")
-            ADD_OBJECT_DEPENDS(${file} ${pch_output_file_name})
-        endif()
-    endforeach()
-
-    set_target_properties(${target} PROPERTIES PCH_OUTPUT_FILE ${pch_output_file})
-    set_property(GLOBAL APPEND PROPERTY PCH_OUTPUT_FILES ${pch_output_file})
-
-endfunction(TARGET_CONFIG_MSVC_PCH)
-
-function(GENERATE_STRING_LITERAL_FILES glob_expression output_filename namespace target)
-
-    file(GLOB input_files CONFIGURE_DEPENDS "${glob_expression}")
-
-    set(out_h   "${PROJECT_BINARY_DIR}/${output_filename}.h")
-    set(out_cpp "${PROJECT_BINARY_DIR}/${output_filename}.cpp")
-    set(output_files ${out_h} ${out_cpp})
-
-    add_custom_command(
-        OUTPUT  ${output_files}
-        DEPENDS ${input_files}
-        COMMAND ${CMAKE_COMMAND} \"-Dglob_expression=${glob_expression}\" \"-Dout_h=${out_h}\" \"-Dout_cpp=${out_cpp}\" \"-Dnamespace=${namespace}\" -P \"${XLANG_SCRIPTS_PATH}/genStringLiteralFiles.cmake\"
-    )
-
-    set(gen_target_name "generated_${target}_${output_filename}")
-    add_custom_target(${gen_target_name} DEPENDS ${output_files})
-    add_dependencies(${target} ${gen_target_name})
-
-endfunction()
-
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# change the warning level to 4
-string(REGEX REPLACE "/W[0-4]" "/W4" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-
-# Always generate symbols for release builds
-string(APPEND CMAKE_CXX_FLAGS_RELEASE " /Zi")
-string(APPEND CMAKE_SHARED_LINKER_FLAGS_RELEASE " /DEBUG /OPT:REF /OPT:ICF /MAP")
-string(APPEND CMAKE_EXE_LINKER_FLAGS_RELEASE " /DEBUG /OPT:REF /OPT:ICF /MAP")
-
-add_compile_options(/permissive- /await)
-
-# Explicitly configure _DEBUG preprocessor macro
-string(APPEND CMAKE_CXX_FLAGS_DEBUG " /D_DEBUG")
-
-add_definitions(-DNOMINMAX)
-
-add_subdirectory(pywinrt)
+set_target_properties(pywinrt PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
