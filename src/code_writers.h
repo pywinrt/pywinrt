@@ -5,7 +5,7 @@ namespace pywinrt
     template<typename F>
     void write_snake_case(writer& w, std::string_view const& name, F case_func)
     {
-        XLANG_ASSERT(name.size() > 0);
+        assert(name.size() > 0);
 
         for (std::string_view::size_type i = 0; i < name.size(); i++)
         {
@@ -101,7 +101,7 @@ namespace pywinrt
     void write_python_setup_filenames(
         writer& w, std::vector<std::string> const& namespaces)
     {
-        XLANG_ASSERT(namespaces.size() > 0);
+        assert(namespaces.size() > 0);
 
         for (auto&& ns : namespaces)
         {
@@ -1120,7 +1120,7 @@ static PyModuleDef module_def
         MethodDef const& method,
         bool put_property_method = false)
     {
-        XLANG_ASSERT(!is_constructor(method));
+        assert(!is_constructor(method));
 
         auto write_void_return
             = [](writer& w, MethodDef const& method, bool set_property_method)
@@ -1611,7 +1611,7 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
         }
         else
         {
-            XLANG_ASSERT(false);
+            assert(false);
         }
     }
 
@@ -1848,7 +1848,7 @@ return 0;
             type,
             [&](auto const& method)
             {
-                XLANG_ASSERT(
+                assert(
                     contains(method_map, method.Name())
                         ? method_map[method.Name()] == is_static(method)
                         : true);
@@ -2994,7 +2994,7 @@ struct pinterface_python_type<%<%>>
             },
             [&]([[maybe_unused]] TypeDef const& type)
             {
-                XLANG_ASSERT(get_category(type) == category::struct_type);
+                assert(get_category(type) == category::struct_type);
                 w.write("PyObject*");
             },
             [](auto)
@@ -3132,7 +3132,7 @@ struct pinterface_python_type<%<%>>
             },
             [&]([[maybe_unused]] type_definition const& type)
             {
-                XLANG_ASSERT(get_category(type) == category::struct_type);
+                assert(get_category(type) == category::struct_type);
                 w.write("O");
             },
             [](auto)
@@ -3151,7 +3151,7 @@ struct pinterface_python_type<%<%>>
             },
             [&]([[maybe_unused]] type_definition const& type)
             {
-                XLANG_ASSERT(get_category(type) == category::struct_type);
+                assert(get_category(type) == category::struct_type);
                 w.write(", &_%", field.Name());
             },
             [](auto)
@@ -3171,7 +3171,7 @@ struct pinterface_python_type<%<%>>
             [&](type_definition const& type)
             {
                 auto category = get_category(type);
-                XLANG_ASSERT(
+                assert(
                     (category == category::struct_type)
                     || (category == category::enum_type));
                 switch (category)
@@ -3199,7 +3199,7 @@ struct pinterface_python_type<%<%>>
             },
             [&]([[maybe_unused]] TypeDef const& type)
             {
-                XLANG_ASSERT(get_category(type) == category::struct_type);
+                assert(get_category(type) == category::struct_type);
                 w.write(", &_%", field.Name());
             },
             [](auto)

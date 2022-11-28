@@ -36,9 +36,6 @@
 
 #if defined(_DEBUG)
 #define XLANG_DEBUG
-#define XLANG_ASSERT assert
-#else
-#define XLANG_ASSERT(expression) ((void)0)
 #endif
 
 namespace pywinrt

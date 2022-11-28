@@ -425,7 +425,7 @@ namespace pywinrt
 
     auto get_delegate_invoke(TypeDef const& type)
     {
-        XLANG_ASSERT(get_category(type) == category::delegate_type);
+        assert(get_category(type) == category::delegate_type);
 
         for (auto&& method : type.MethodList())
         {
@@ -485,11 +485,11 @@ namespace pywinrt
             }
         }
 
-        XLANG_ASSERT(get_method);
+        assert(get_method);
 
         if (set_method)
         {
-            XLANG_ASSERT(get_method.Flags().Static() == set_method.Flags().Static());
+            assert(get_method.Flags().Static() == set_method.Flags().Static());
         }
 
         return std::make_tuple(get_method, set_method);
@@ -517,9 +517,9 @@ namespace pywinrt
             }
         }
 
-        XLANG_ASSERT(add_method);
-        XLANG_ASSERT(remove_method);
-        XLANG_ASSERT(add_method.Flags().Static() == remove_method.Flags().Static());
+        assert(add_method);
+        assert(remove_method);
+        assert(add_method.Flags().Static() == remove_method.Flags().Static());
 
         return std::make_tuple(add_method, remove_method);
     }
@@ -543,12 +543,12 @@ namespace pywinrt
             }
             else if (param.second->ByRef())
             {
-                XLANG_ASSERT(param.first.Flags().Out());
+                assert(param.first.Flags().Out());
                 return param_category::receive_array;
             }
             else
             {
-                XLANG_ASSERT(param.first.Flags().Out());
+                assert(param.first.Flags().Out());
                 return param_category::fill_array;
             }
         }
@@ -556,12 +556,12 @@ namespace pywinrt
         {
             if (param.first.Flags().In())
             {
-                XLANG_ASSERT(!param.first.Flags().Out());
+                assert(!param.first.Flags().Out());
                 return param_category::in;
             }
             else
             {
-                XLANG_ASSERT(param.first.Flags().Out());
+                assert(param.first.Flags().Out());
                 return param_category::out;
             }
         }
@@ -657,7 +657,7 @@ namespace pywinrt
 
             if (signature.has_params())
             {
-                XLANG_ASSERT(signature.params().size() == 1);
+                assert(signature.params().size() == 1);
                 return argument_convention::single_arg;
             }
             else
@@ -679,7 +679,7 @@ namespace pywinrt
                 [&](type_definition const& type) -> type_semantics
                 {
                     auto category = get_category(type);
-                    XLANG_ASSERT(
+                    assert(
                         category == category::enum_type
                         || category == category::struct_type);
 
@@ -699,7 +699,7 @@ namespace pywinrt
                 },
                 [](generic_type_instance const& gti) -> type_semantics
                 {
-                    XLANG_ASSERT(
+                    assert(
                         (gti.generic_type.TypeNamespace() == "Windows.Foundation")
                         && (gti.generic_type.TypeName() == "IReference`1")
                         && gti.generic_args.size() == 1);

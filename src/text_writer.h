@@ -21,7 +21,7 @@ namespace pywinrt::text
 #if defined(XLANG_DEBUG)
             auto expected = count_placeholders(value);
             auto actual = sizeof...(Args);
-            XLANG_ASSERT(expected == actual);
+            assert(expected == actual);
 #endif
             write_segment(value, args...);
         }
@@ -35,7 +35,7 @@ namespace pywinrt::text
 #endif
             auto const size = m_first.size();
 
-            XLANG_ASSERT(count_placeholders(value) == sizeof...(Args));
+            assert(count_placeholders(value) == sizeof...(Args));
             write_segment(value, args...);
 
             std::string result{m_first.data() + size, m_first.size() - size};
@@ -252,7 +252,7 @@ namespace pywinrt::text
 
             write(value.substr(0, offset));
 
-            XLANG_ASSERT(offset != value.size() - 1);
+            assert(offset != value.size() - 1);
 
             write(value[offset + 1]);
             write_segment(value.substr(offset + 2));
@@ -263,12 +263,12 @@ namespace pywinrt::text
             std::string_view const& value, First const& first, Rest const&... rest)
         {
             auto offset = value.find_first_of("^%@");
-            XLANG_ASSERT(offset != std::string_view::npos);
+            assert(offset != std::string_view::npos);
             write(value.substr(0, offset));
 
             if (value[offset] == '^')
             {
-                XLANG_ASSERT(offset != value.size() - 1);
+                assert(offset != value.size() - 1);
 
                 write(value[offset + 1]);
                 write_segment(value.substr(offset + 2), first, rest...);
@@ -287,7 +287,7 @@ namespace pywinrt::text
                     }
                     else
                     {
-                        XLANG_ASSERT(false); // '@' placeholders are only for text.
+                        assert(false); // '@' placeholders are only for text.
                     }
                 }
 
