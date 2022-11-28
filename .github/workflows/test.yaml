@@ -31,13 +31,13 @@ jobs:
         run: |
           Import-Module "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
           Enter-VsDevShell -VsInstallPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" -DevCmdArguments '-arch=${{ matrix.architecture }}'
-          cd src/package/pywinrt/projection
+          cd projection
           ./generate.ps1
           ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion ${{ matrix.python-version }}
         shell: powershell
       - name: Run tests
         env:
-          PYTHONPATH: src/package/pywinrt/projection/pywinrt
+          PYTHONPATH: projection/pywinrt
         run: python -m unittest -v
   lint:
     runs-on: windows-2022
@@ -47,9 +47,9 @@ jobs:
         run: ./scripts/vsdevcmd-build.cmd
       - name: Generate full projection
         run: |
-          cd src/package/pywinrt/projection
+          cd projection
           ./generate -fullProjection
       - name: Run mypy
         run: |
-          cd src/package/pywinrt/projection
+          cd projection
           pipx run mypy -p winrt

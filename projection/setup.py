@@ -44,7 +44,7 @@ print(str(u2))
 ```
 
 For more information on accessing Windows Runtime APIs from Python, please visit
-[Python/WinRT's homepage](https://github.com/Microsoft/xlang/tree/master/src/package/pywinrt/projection). 
+[Python/WinRT's homepage](https://github.com/Microsoft/xlang/tree/master/projection). 
 
 For an end-to-end sample of using Python/WinRT, please see the
 [WinML Tutorial](https://github.com/Microsoft/xlang/tree/master/samples/python/winml_tutorial)
@@ -59,7 +59,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     license="MIT",
     author='Microsoft Corporation',
-    url="https://github.com/Microsoft/xlang/tree/master/src/package/pywinrt/projection",
+    url="https://github.com/Microsoft/xlang/tree/master/projection",
     classifiers=[
             'Development Status :: 4 - Beta',
             'Environment :: Win32 (MS Windows)',

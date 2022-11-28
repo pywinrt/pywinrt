@@ -9,7 +9,7 @@ param (
     [string]$compiler = "cl.exe"
 )
 
-$repoRootPath = (get-item $PSScriptRoot).parent.Parent.parent.Parent.FullName.Replace('\', '/')
+$repoRootPath = (get-item $PSScriptRoot).Parent.FullName.Replace('\', '/')
 $sourcePath = $PSScriptRoot.Replace('\', '/')
 $buildPath = "$repoRootPath/_build/py-projection/$env:VSCMD_ARG_TGT_ARCH-$buildType"
 
