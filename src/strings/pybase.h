@@ -1470,6 +1470,8 @@ namespace py
 
         pybuf_view(PyObject* obj)
         {
+            throw_if_pyobj_null(obj);
+
             // this is assuming array_view is always treated as read-only
             if (PyObject_GetBuffer(obj, &view, PyBUF_SIMPLE) == -1)
             {
