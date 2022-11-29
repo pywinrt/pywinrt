@@ -2502,7 +2502,7 @@ static PyType_Spec type_spec_@ =
     void write_py_type_registration_method(writer& w, TypeDef const& type)
     {
         w.write(
-            "\nstatic PyObject* register_%(PyObject* module, PyObject* type)\n{\n",
+            "\nstatic PyObject* register_%(PyObject* module, PyObject* type) noexcept\n{\n",
             type.TypeName());
         {
             writer::indent_guard g{w};
