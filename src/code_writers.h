@@ -931,7 +931,7 @@ static PyModuleDef module_def
         }
 
         w.write(
-            "\nstatic void _dealloc_@(%* self)\n{\n",
+            "\nstatic void _dealloc_@(%* self) noexcept\n{\n",
             type.TypeName(),
             bind<write_pywrapper_type>(type));
 
