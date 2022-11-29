@@ -297,7 +297,7 @@ struct py_type<%>
     }
 
     /**
-     * Writes the pure Python type getter function implemenation.
+     * Writes the pure Python type getter function implementation.
      */
     void write_get_py_type_definition(writer& w, TypeDef const& type)
     {
