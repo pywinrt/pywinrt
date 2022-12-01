@@ -1321,7 +1321,7 @@ Py_ssize_t arg_count = PyTuple_Size(args);
         if (category == category::interface_type)
         {
             auto format = R"(
-static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */)
+static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
 {
     py::set_invalid_activation_error(type_name_@);
     return nullptr;
