@@ -184,7 +184,10 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept
         {
-            PyErr_SetNone(PyExc_NotImplementedError);
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::winrt_type<%s>::get_python_type() is not implemented",
+                typeid(T).name());
             return nullptr;
         }
     };
@@ -231,7 +234,10 @@ namespace py
     {
         static PyObject* get_python_type() noexcept
         {
-            PyErr_SetNone(PyExc_NotImplementedError);
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::py_type<%s>::get_python_type() is not implemented",
+                typeid(T).name());
             return nullptr;
         }
     };
@@ -403,7 +409,10 @@ namespace py
     {
         if (!type_object)
         {
-            PyErr_SetNone(PyExc_NotImplementedError);
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::wrap_struct(%s instance, PyTypeObject* type_object == nullptr) is not implemented",
+                typeid(T).name());
             return nullptr;
         }
 
@@ -436,7 +445,10 @@ namespace py
 
         if (!type_object)
         {
-            PyErr_SetNone(PyExc_NotImplementedError);
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::wrap(%s instance, PyTypeObject* type_object == nullptr) is not implemented",
+                typeid(T).name());
             return nullptr;
         }
 
@@ -524,7 +536,10 @@ namespace py
                               typename pinterface_python_type<T>::abstract,
                               void>)
             {
-                PyErr_SetNone(PyExc_NotImplementedError);
+                PyErr_Format(
+                    PyExc_NotImplementedError,
+                    "py::wrap(%s instance) is not implemented",
+                    typeid(T).name());
                 return nullptr;
             }
             else
@@ -551,13 +566,19 @@ namespace py
     {
         static PyObject* convert(T value) noexcept
         {
-            PyErr_SetNone(PyExc_NotImplementedError);
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::converter<%s>::convert() is not implemented",
+                typeid(T).name());
             return nullptr;
         }
 
         static T convert_to(PyObject* obj)
         {
-            PyErr_SetNone(PyExc_NotImplementedError);
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::converter<%s>::convert_to() is not implemented",
+                typeid(T).name());
             throw python_exception();
         }
     };
@@ -1306,7 +1327,10 @@ namespace py
             uint32_t GetMany(winrt::array_view<T> values)
             {
                 // TODO: implement GetMany
-                PyErr_SetNone(PyExc_NotImplementedError);
+                PyErr_Format(
+                    PyExc_NotImplementedError,
+                    "py::python_iterable<%s>::iter::GetMany() is not implemented",
+                    typeid(T).name());
                 throw python_exception();
             }
         };
@@ -1443,7 +1467,10 @@ namespace py
         static PyObject* convert(T const& instance) noexcept
         {
             // TODO: support converting delegates
-            PyErr_SetNone(PyExc_NotImplementedError);
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::converter<%s>::convert() is not implemented for delegates",
+                typeid(T).name());
             return nullptr;
         }
 
@@ -1509,7 +1536,10 @@ namespace py
     {
         static PyObject* convert(winrt::array_view<T> const& instance) noexcept
         {
-            PyErr_SetNone(PyExc_NotImplementedError);
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::converter<%s>::convert() is not implemented for winrt::array_view",
+                typeid(T).name());
             return nullptr;
         }
 

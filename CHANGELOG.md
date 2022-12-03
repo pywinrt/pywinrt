@@ -4,6 +4,14 @@
 
 ## [Unreleased]
 
+### Changed
+- Provide useful error message when `NotImplementedError` is raised.
+- Use `PyType_FromModuleAndSpec` in Python >= 3.9.
+- Provide useful error message when NotImplementedError is raised.
+
+### Fixed
+- Fixed checking wrong number of input parameters on methods with array parameters.
+
 ## [v1.0.0-beta.7] - 2022-09-09
 
 ### Changed
