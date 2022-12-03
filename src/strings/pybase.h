@@ -1483,21 +1483,22 @@ namespace py
     };
 
     template<typename T>
-    struct is_specalized_interface : std::false_type
+    struct is_specialized_interface : std::false_type
     {
     };
 
     template<typename T>
-    inline constexpr bool is_specalized_interface_v = is_specalized_interface<T>::value;
+    inline constexpr bool is_specialized_interface_v
+        = is_specialized_interface<T>::value;
 
     template<typename TItem>
-    struct is_specalized_interface<
+    struct is_specialized_interface<
         winrt::Windows::Foundation::Collections::IIterable<TItem>> : std::true_type
     {
     };
 
     template<typename T>
-    struct is_specalized_interface<winrt::Windows::Foundation::IReference<T>>
+    struct is_specialized_interface<winrt::Windows::Foundation::IReference<T>>
         : std::true_type
     {
     };
@@ -1507,7 +1508,7 @@ namespace py
         T,
         typename std::enable_if_t<(
             is_interface_category_v<
-                T> || is_pinterface_category_v<T>)&&!is_specalized_interface_v<T>>>
+                T> || is_pinterface_category_v<T>)&&!is_specialized_interface_v<T>>>
     {
         static PyObject* convert(T const& instance) noexcept
         {
