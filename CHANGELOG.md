@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Added new `Array` type for wrapping COM arrays.
+
 ### Changed
 - Provide useful error message when `NotImplementedError` is raised.
 - Use `PyType_FromModuleAndSpec` in Python >= 3.9.

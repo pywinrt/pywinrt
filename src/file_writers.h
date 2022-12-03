@@ -167,6 +167,17 @@ namespace pywinrt
         w.flush_to_file(folder / filename);
     }
 
+    inline void write_winrt_array_cpp(stdfs::path const& folder)
+    {
+        writer w;
+
+        write_license(w);
+        w.write(strings::winrt_array);
+
+        auto filename = w.write_temp("_winrt_array.cpp");
+        w.flush_to_file(folder / filename);
+    }
+
     void write_namespace_cpp_filename(writer& w, std::string const& ns)
     {
         w.write("\"./%/src/py.%.cpp\"", settings.module, ns);

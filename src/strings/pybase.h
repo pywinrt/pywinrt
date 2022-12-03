@@ -210,6 +210,80 @@ namespace py
     };
 
     /**
+     * Type for getting `_winrt.Array` Python type via
+     * `get_python_type<py::Array>()`.
+     */
+    struct Array
+    {
+        /**
+         * Allocates a new array.
+         * @param [in]  size    The number of elements in the array.
+         * @returns @c true on success, otherwise sets Python error and returns
+         * @c false.
+         */
+        virtual bool Alloc(uint32_t size) noexcept = 0;
+
+        /**
+         * Gets the Py_buffer format string for this array type.
+         *
+         * The format string must be compatible with the struct module.
+         */
+        virtual const char* Format() noexcept = 0;
+
+        /**
+         * Gets the number of elements in the array.
+         */
+        virtual uint32_t Size() noexcept = 0;
+
+        /**
+         * Gets the size of a single element in bytes for this array type.
+         */
+        virtual size_t ValueSize() noexcept = 0;
+
+        /**
+         * Gets a pointer to the array buffer.
+         */
+        virtual void* Data() noexcept = 0;
+
+        /**
+         * Gets the item a @p index and converts it to a Python object.
+         * @param [in]  index   The index of the item in the array.
+         * @returns A new reference to a Python object or sets Python error and returns
+         * @c nullptr on failure.
+         */
+        virtual PyObject* At(uint32_t index) noexcept = 0;
+
+        /**
+         * Converts @p item to a WinRT object and stores it in the array.
+         * @param [in]  index   The index of the item in the array.
+         * @param [in]  item    The Python object to convert and store.
+         * @returns @c true on success, otherwise sets Python error and returns
+         * @c false.
+         */
+        virtual bool Set(uint32_t index, PyObject* item) noexcept = 0;
+    };
+
+    /**
+     * Type registration for the base `_winrt.Array` Python type.
+     */
+    template<>
+    struct winrt_type<Array>
+    {
+        static PyTypeObject* get_python_type() noexcept;
+    };
+
+    /**
+     * A type that always evaluates to false.
+     *
+     * This is useful for static_assert() in template functions to catch
+     * unsupported types.
+     */
+    template<typename T>
+    struct false_type : std::false_type
+    {
+    };
+
+    /**
      * Empty type for getting `_winrt.MappingIter` Python type via
      * `get_python_type<py::MappingIter>()`.
      */
@@ -1867,5 +1941,182 @@ namespace py
     {
         static PyObject* convert(winrt::event_token instance) noexcept;
         static winrt::event_token convert_to(PyObject* obj);
+    };
+
+    template<typename T>
+    struct ComArray : Array
+    {
+        winrt::com_array<T> array;
+
+        bool Alloc(uint32_t size) noexcept override
+        {
+            try
+            {
+                array = winrt::com_array<T>(size);
+                return true;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return false;
+            }
+        }
+
+        const char* Format() noexcept override
+        {
+            if constexpr (std::is_fundamental_v<T>)
+            {
+                if constexpr (std::is_same_v<T, bool>)
+                {
+                    return "?";
+                }
+                else if constexpr (std::is_same_v<T, char16_t>)
+                {
+                    return "u";
+                }
+                else if constexpr (std::is_same_v<T, int8_t>)
+                {
+                    return "b";
+                }
+                else if constexpr (std::is_same_v<T, uint8_t>)
+                {
+                    return "B";
+                }
+                else if constexpr (std::is_same_v<T, int16_t>)
+                {
+                    return "h";
+                }
+                else if constexpr (std::is_same_v<T, uint16_t>)
+                {
+                    return "H";
+                }
+                else if constexpr (std::is_same_v<T, int32_t>)
+                {
+                    return "i";
+                }
+                else if constexpr (std::is_same_v<T, uint32_t>)
+                {
+                    return "I";
+                }
+                else if constexpr (std::is_same_v<T, int64_t>)
+                {
+                    return "q";
+                }
+                else if constexpr (std::is_same_v<T, uint64_t>)
+                {
+                    return "Q";
+                }
+                else if constexpr (std::is_same_v<T, float>)
+                {
+                    return "f";
+                }
+                else if constexpr (std::is_same_v<T, double>)
+                {
+                    return "d";
+                }
+                else
+                {
+                    static_assert(false_type<T>, "unsupported fundamental type");
+                }
+            }
+            else
+            {
+                if constexpr (std::is_same_v<T, winrt::hstring>)
+                {
+                    static_assert(
+                        sizeof(winrt::hstring) == sizeof(void*),
+                        "assumption that hstring is pointer may not be correct");
+                    return "P";
+                }
+                else if constexpr (std::is_same_v<T, winrt::guid>)
+                {
+                    static_assert(sizeof(winrt::guid) == 16);
+                    return "16B";
+                }
+                else if constexpr (std::is_same_v<
+                                       T,
+                                       winrt::Windows::Foundation::DateTime>)
+                {
+                    static_assert(
+                        sizeof(winrt::Windows::Foundation::DateTime)
+                        == sizeof(int64_t));
+                    return "q";
+                }
+                else if constexpr (std::is_same_v<
+                                       T,
+                                       winrt::Windows::Foundation::TimeSpan>)
+                {
+                    static_assert(
+                        sizeof(winrt::Windows::Foundation::TimeSpan)
+                        == sizeof(int64_t));
+                    return "q";
+                }
+                else if constexpr (std::is_same_v<T, winrt::Windows::Foundation::Point>)
+                {
+                    static_assert(
+                        sizeof(winrt::Windows::Foundation::Point) == 2 * sizeof(float));
+                    return "2f";
+                }
+                else if constexpr (std::is_same_v<T, winrt::Windows::Foundation::Size>)
+                {
+                    static_assert(
+                        sizeof(winrt::Windows::Foundation::Size) == 2 * sizeof(float));
+                    return "2f";
+                }
+                else if constexpr (std::is_same_v<T, winrt::Windows::Foundation::Rect>)
+                {
+                    static_assert(
+                        sizeof(winrt::Windows::Foundation::Rect) == 4 * sizeof(float));
+                    return "4f";
+                }
+                else
+                {
+                    // NULL means bytes
+                    return nullptr;
+                }
+            }
+        }
+
+        uint32_t Size() noexcept override
+        {
+            return array.size();
+        }
+
+        size_t ValueSize() noexcept override
+        {
+            return sizeof(winrt::com_array<T>::value_type);
+        }
+
+        void* Data() noexcept override
+        {
+            return array.data();
+        }
+
+        PyObject* At(uint32_t index) noexcept override
+        {
+            try
+            {
+                return convert<T>(array.at(index));
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return nullptr;
+            }
+        }
+
+        bool Set(uint32_t index, PyObject* item) noexcept override
+        {
+            try
+            {
+                array[index] = convert_to<T>(item);
+                return true;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return false;
+            }
+        }
     };
 } // namespace py

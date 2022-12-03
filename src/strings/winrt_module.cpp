@@ -7,6 +7,7 @@ namespace py::cpp::_winrt
     struct module_state
     {
         PyTypeObject* Object_type;
+        PyTypeObject* Array_type;
         PyTypeObject* MappingIter_type;
     };
 
@@ -49,6 +50,15 @@ namespace py::cpp::_winrt
            Object_type_slots};
 
     // END: class _winrt.Object:
+
+    // BEGIN: class _winrt.Array:
+
+    extern PyType_Spec Array_type_spec;
+#if PY_VERSION_HEX < 0x03090000
+    extern PyBufferProcs Array_buffer_procs;
+#endif
+
+    // END: class _winrt.Array:
 
     // BEGIN: class _winrt.MappingIter:
 
@@ -236,6 +246,7 @@ namespace py::cpp::_winrt
         assert(state);
 
         Py_VISIT(state->Object_type);
+        Py_VISIT(state->Array_type);
         Py_VISIT(state->MappingIter_type);
 
         return 0;
@@ -247,6 +258,7 @@ namespace py::cpp::_winrt
         assert(state);
 
         Py_CLEAR(state->Object_type);
+        Py_CLEAR(state->Array_type);
         Py_CLEAR(state->MappingIter_type);
 
         return 0;
@@ -289,6 +301,20 @@ namespace py::cpp::_winrt
         }
 
         Py_INCREF(state->Object_type);
+
+        state->Array_type = py::register_python_type(
+            module.get(), "Array", &Array_type_spec, nullptr);
+
+        if (!state->Array_type)
+        {
+            return nullptr;
+        }
+
+        Py_INCREF(state->Array_type);
+
+#if PY_VERSION_HEX < 0x03090000
+        state->Array_type->tp_as_buffer = &Array_buffer_procs;
+#endif
 
         state->MappingIter_type = py::register_python_type(
             module.get(), "MappingIter", &MappingIter_type_spec, nullptr);
@@ -335,6 +361,24 @@ PyTypeObject* py::winrt_type<py::Object>::get_python_type() noexcept
     assert(state);
 
     return state->Object_type;
+}
+
+PyTypeObject* py::winrt_type<py::Array>::get_python_type() noexcept
+{
+    // borrowed ref
+    auto module = PyState_FindModule(&py::cpp::_winrt::module_def);
+
+    if (!module)
+    {
+        PyErr_SetString(PyExc_RuntimeError, "could not find _winrt module");
+        return nullptr;
+    }
+
+    auto state
+        = reinterpret_cast<py::cpp::_winrt::module_state*>(PyModule_GetState(module));
+    assert(state);
+
+    return state->Array_type;
 }
 
 PyTypeObject* py::winrt_type<py::MappingIter>::get_python_type() noexcept

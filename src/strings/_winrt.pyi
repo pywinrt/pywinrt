@@ -1,9 +1,11 @@
-
+import array
+import typing
 import sys
 import uuid
 
 if sys.version_info >= (3, 9):
     from typing import Annotated
+
     # type aliases with struct format string annotation
     Boolean = Annotated[bool, "?"]
     Int8 = Annotated[int, "b"]
@@ -41,5 +43,25 @@ def init_apartment(apartment_type: int) -> None: ...
 def uninit_apartment() -> None: ...
 def initialize_with_window(obj: Object, hwnd: int) -> None: ...
 
-class Object:
-    pass
+class Object: ...
+
+_Self = typing.TypeVar("_Self")
+_T = typing.TypeVar("_T")
+
+class Array(typing.Generic[_T]):
+    @typing.overload
+    def __new__(cls: _Self, __type: typing.Union[_T, str], __size: int, /) -> _Self: ...
+    @typing.overload
+    def __new__(cls: _Self, __type: typing.Union[_T, str], __initializer: memoryview, /) -> _Self: ...
+    @typing.overload
+    def __new__(cls: _Self, __type: str, __initializer: array.array, /) -> _Self: ...
+    @typing.overload
+    def __new__(cls: _Self, __type: typing.Union[_T, str], __initializer: Array[_T], /) -> _Self: ...
+    @typing.overload
+    def __new__(cls: _Self, __type: typing.Union[_T, str], __initializer: typing.List[_T], /) -> _Self: ...
+    @typing.overload
+    def __new__(
+        cls: _Self, __type: typing.Union[_T, str], __initializer: typing.Tuple[_T], /
+    ) -> _Self: ...
+    def __len__(self) -> int: ...
+    def __getitem__(self, __i: typing.SupportsIndex) -> _T: ...

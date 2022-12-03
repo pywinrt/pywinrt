@@ -154,6 +154,7 @@ Where <spec> is one or more of:
                     write_package_dunder_init_py(module_dir);
                     write_runtime_cpp(src_dir);
                     write_winrt_module_cpp(src_dir);
+                    write_winrt_array_cpp(src_dir);
                 });
 
             std::vector<std::string> generated_namespaces{};
