@@ -943,11 +943,11 @@ static PyModuleDef module_def
 
             if (is_ptype(type))
             {
-                w.write("self->obj.reset();\n");
+                w.write("self->obj.~unique_ptr();\n");
             }
             else
             {
-                w.write("self->obj = nullptr;\n");
+                w.write("self->obj.~@();\n", type.TypeName());
             }
 
             w.write("tp->tp_free(self);\n");

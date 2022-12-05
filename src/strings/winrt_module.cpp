@@ -30,7 +30,7 @@ namespace py::cpp::_winrt
         py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self)
     {
         auto tp = Py_TYPE(self);
-        self->obj = nullptr;
+        self->obj.~IInspectable();
         tp->tp_free(self);
         Py_DECREF(tp);
     }
