@@ -18,7 +18,14 @@ PyTypeObject* py::register_python_type(
     PyType_Spec* type_spec,
     PyObject* base_type) noexcept
 {
-    py::pyobj_handle type_object{PyType_FromSpecWithBases(type_spec, base_type)};
+    py::pyobj_handle type_object
+    {
+#if PY_HEX_VERSION >= 0x03090000
+        PyType_FromModuleAndSpec(module, type_spec, base_type)
+#else
+        PyType_FromSpecWithBases(type_spec, base_type)
+#endif
+    };
 
     if (!type_object)
     {
