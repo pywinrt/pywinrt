@@ -544,8 +544,6 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
         }
         w.write("}\n\n");
 
-        w.write("Py_INCREF(state->type_@);\n\n", type.TypeName());
-
         if (implements_ibuffer(type) || implements_imemorybufferreference(type))
         {
             // workaround for https://bugs.python.org/issue40724

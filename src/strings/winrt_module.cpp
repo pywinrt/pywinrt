@@ -300,8 +300,6 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
-        Py_INCREF(state->Object_type);
-
         state->Array_type = py::register_python_type(
             module.get(), "Array", &Array_type_spec, nullptr);
 
@@ -309,8 +307,6 @@ namespace py::cpp::_winrt
         {
             return nullptr;
         }
-
-        Py_INCREF(state->Array_type);
 
 #if PY_VERSION_HEX < 0x03090000
         state->Array_type->tp_as_buffer = &Array_buffer_procs;
@@ -323,8 +319,6 @@ namespace py::cpp::_winrt
         {
             return nullptr;
         }
-
-        Py_INCREF(state->MappingIter_type);
 
         if (PyModule_AddIntConstant(module.get(), "MTA", kMTA) == -1)
         {

@@ -10,7 +10,7 @@
  * @param type_spec The Python type spec.
  * @param base_type The base type, a tuple of base types or nullptr to use the base
  * slot.
- * @returns A borrowed reference to the type object or nullptr on error.
+ * @returns A new reference to the type object or nullptr on error.
  */
 PyTypeObject* py::register_python_type(
     PyObject* module,
@@ -32,11 +32,20 @@ PyTypeObject* py::register_python_type(
         return nullptr;
     }
 
-    // steals ref to type_object on success!
-    if (PyModule_AddObject(module, type_name, type_object.get()) == -1)
+#if PY_HEX_VERSION >= 0x03100000
+    if (PyModule_AddObjectRef(module, type_name, type_object.get()) == -1)
     {
         return nullptr;
     }
+#else
+    // steals ref to type_object on success!
+    Py_INCREF(type_object.get());
+    if (PyModule_AddObject(module, type_name, type_object.get()) == -1)
+    {
+        Py_DECREF(type_object.get());
+        return nullptr;
+    }
+#endif
 
     return reinterpret_cast<PyTypeObject*>(type_object.detach());
 }
