@@ -993,7 +993,7 @@ namespace pywinrt
                         }
 
                         method_signature signature{method};
-                        auto arg_count = count_in_param(signature.params());
+                        auto arg_count = count_py_in_param(signature.params());
                         overloads[arg_count].push_back(method);
                     }
 

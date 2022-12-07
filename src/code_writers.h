@@ -1149,7 +1149,7 @@ static PyModuleDef module_def
         }
 
         // Invoke member - simplified code path for methods w/ no out params
-        if (count_out_param(signature.params()) == 0)
+        if (count_py_out_param(signature.params()) == 0)
         {
             if (signature.return_signature())
             {
@@ -1206,7 +1206,7 @@ if (!out_return_value)
 
         for (auto&& param : signature.params())
         {
-            if (!is_out_param(param))
+            if (!is_py_out_param(param))
             {
                 continue;
             }
@@ -1274,7 +1274,8 @@ Py_ssize_t arg_count = PyTuple_Size(args);
 
                     s();
                     w.write(
-                        "if (arg_count == %)\n{\n", count_in_param(signature.params()));
+                        "if (arg_count == %)\n{\n",
+                        count_py_in_param(signature.params()));
                     {
                         writer::indent_guard g2{w};
                         write_try_catch(
@@ -1350,7 +1351,8 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
 
                     s();
                     w.write(
-                        "if (arg_count == %)\n{\n", count_in_param(signature.params()));
+                        "if (arg_count == %)\n{\n",
+                        count_py_in_param(signature.params()));
                     {
                         writer::indent_guard g{w};
 
@@ -3877,7 +3879,7 @@ if (!return_value)
      */
     void write_return_typing(writer& w, method_signature& signature)
     {
-        if (count_out_param(signature.params()) == 0)
+        if (count_py_out_param(signature.params()) == 0)
         {
             if (signature.return_signature())
             {
@@ -3900,23 +3902,23 @@ if (!return_value)
                     bind<write_nullable_python_type>(
                         signature.return_signature().Type()),
                     bind_list<write_method_out_param_typing>(
-                        ", ", filter_out_params(signature.params())));
+                        ", ", filter_py_out_params(signature.params())));
             }
             else
             {
-                if (count_out_param(signature.params()) == 1)
+                if (count_py_out_param(signature.params()) == 1)
                 {
                     w.write(
                         "%",
                         bind<write_method_out_param_typing>(
-                            filter_out_params(signature.params())[0]));
+                            filter_py_out_params(signature.params())[0]));
                 }
                 else
                 {
                     w.write(
                         "typing.Tuple[%]",
                         bind_list<write_method_out_param_typing>(
-                            ", ", filter_out_params(signature.params())));
+                            ", ", filter_py_out_params(signature.params())));
                 }
             }
         }
@@ -4372,7 +4374,7 @@ if (!return_value)
 
                 // seperator between cls/self and the rest of the args
                 auto first_seperator
-                    = !is_static(method) && count_in_param(signature.params()) > 0
+                    = !is_static(method) && count_py_in_param(signature.params()) > 0
                           ? ", "
                           : "";
 
@@ -4385,7 +4387,7 @@ if (!return_value)
                         type.TypeName(),
                         first_seperator,
                         bind_list<write_method_in_param_name_and_typing>(
-                            ", ", filter_in_params(signature.params())),
+                            ", ", filter_py_in_params(signature.params())),
                         type.TypeName());
                 }
                 else
@@ -4396,7 +4398,7 @@ if (!return_value)
                         is_static(method) ? "" : "self",
                         first_seperator,
                         bind_list<write_method_in_param_name_and_typing>(
-                            ", ", filter_in_params(signature.params())),
+                            ", ", filter_py_in_params(signature.params())),
                         bind<write_return_typing>(signature));
                 }
             };
@@ -4444,7 +4446,7 @@ if (!return_value)
             "@ = typing.Callable[[%], %]\n\n",
             type.TypeName(),
             bind_list<write_method_in_param_typing>(
-                ", ", filter_in_params(signature.params())),
+                ", ", filter_py_in_params(signature.params())),
             bind<write_return_typing>(signature));
     }
 } // namespace pywinrt

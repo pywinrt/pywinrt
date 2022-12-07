@@ -579,28 +579,28 @@ namespace pywinrt
         }
     }
 
+    /**
+     * Tests if @p param is an input parameter.
+     *
+     * This matches WinRT input parameters and pass arrays.
+     *
+     * @param [in]  param   The parameter to test.
+     * @returns @c true if the parameter matches, otherwise @c false.
+     */
     bool is_in_param(method_signature::param_t const& param)
     {
         auto category = get_param_category(param);
 
         return (
-            category == param_category::in
-            || category == param_category::pass_array
-            // Note, fill array acts as in and out param in Python
-            || category == param_category::fill_array);
+            category == param_category::in || category == param_category::pass_array);
     }
 
-    bool is_out_param(method_signature::param_t const& param)
-    {
-        auto category = get_param_category(param);
-
-        return (
-            category == param_category::out
-            || category == param_category::receive_array
-            // Note, fill array acts as in and out param in Python
-            || category == param_category::fill_array);
-    }
-
+    /**
+     * Counts the number of WinRT input parameters for @p params of a method.
+     *
+     * @param [in]  params  The parameters to test.
+     * @returns The number of parameters that match.
+     */
     auto count_in_param(std::vector<method_signature::param_t> const& params)
     {
         return std::count_if(
@@ -612,28 +612,112 @@ namespace pywinrt
             });
     }
 
-    auto count_out_param(std::vector<method_signature::param_t> const& params)
+    /**
+     * Tests if @p param should be treated as an input parameter in Python.
+     *
+     * This matches WinRT input parameters, pass arrays and fill arrays.
+     *
+     * @param [in]  param   The parameter to test.
+     * @returns @c true if the parameter matches, otherwise @c false.
+     */
+    bool is_py_in_param(method_signature::param_t const& param)
+    {
+        auto category = get_param_category(param);
+
+        return (
+            category == param_category::in
+            || category == param_category::pass_array
+            // Note, fill array acts as in and out param in Python
+            || category == param_category::fill_array);
+    }
+
+    /**
+     * Tests if @p param should be treated as an output parameter (part of
+     * return tuple) in Python.
+     *
+     * This matches WinRT output parameters, receive arrays and fill arrays.
+     *
+     * @param [in]  param   The parameter to test.
+     * @returns @c true if the parameter matches, otherwise @c false.
+     */
+    bool is_py_out_param(method_signature::param_t const& param)
+    {
+        auto category = get_param_category(param);
+
+        return (
+            category == param_category::out
+            || category == param_category::receive_array
+            // Note, fill array acts as in and out param in Python
+            || category == param_category::fill_array);
+    }
+
+    /**
+     * Counts the number of Python input parameters for @p params of a method.
+     *
+     * This matches WinRT input parameters, pass arrays and fill arrays.
+     *
+     * @param [in]  params  The parameters to test.
+     * @returns The number of parameters that match.
+     */
+    auto count_py_in_param(std::vector<method_signature::param_t> const& params)
     {
         return std::count_if(
             params.begin(),
             params.end(),
             [](auto const& param)
             {
-                return is_out_param(param);
+                return is_py_in_param(param);
             });
     }
 
-    auto filter_in_params(std::vector<method_signature::param_t> const& params)
+    /**
+     * Counts the number of Python output parameters for @p params of a method.
+     *
+     * This matches WinRT output parameters, receive arrays and fill arrays.
+     *
+     * @param [in]  params  The parameters to test.
+     * @returns The number of parameters that match.
+     */
+    auto count_py_out_param(std::vector<method_signature::param_t> const& params)
+    {
+        return std::count_if(
+            params.begin(),
+            params.end(),
+            [](auto const& param)
+            {
+                return is_py_out_param(param);
+            });
+    }
+
+    /**
+     * Filters Python input parameters from @p params of a method.
+     *
+     * This matches WinRT input parameters, pass arrays and fill arrays.
+     *
+     * @param [in]  params  The parameters to filter.
+     * @returns A new vector containing only matching parameters.
+     */
+    auto filter_py_in_params(std::vector<method_signature::param_t> const& params)
     {
         std::vector<method_signature::param_t> out;
-        std::copy_if(begin(params), end(params), std::back_inserter(out), is_in_param);
+        std::copy_if(
+            begin(params), end(params), std::back_inserter(out), is_py_in_param);
         return out;
     }
 
-    auto filter_out_params(std::vector<method_signature::param_t> const& params)
+    /**
+     * Filters Python output parameters from @p params of a method.
+     *
+     * This matches WinRT output parameters, receive arrays and fill arrays.
+     *
+     * @param [in]  params  The parameters to filter.
+     * @returns A new vector containing only matching parameters.
+     */
+    auto filter_py_out_params(std::vector<method_signature::param_t> const& params)
     {
         std::vector<method_signature::param_t> out;
-        std::copy_if(begin(params), end(params), std::back_inserter(out), is_out_param);
+        std::copy_if(
+            begin(params), end(params), std::back_inserter(out), is_py_out_param);
         return out;
     }
 
