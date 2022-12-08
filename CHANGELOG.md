@@ -10,8 +10,7 @@
 ### Changed
 - Provide useful error message when `NotImplementedError` is raised.
 - Use `PyType_FromModuleAndSpec` in Python >= 3.9.
-- Provide useful error message when NotImplementedError is raised.
-- Use `PyType_FromModuleAndSpec` in Python >= 3.9.
+- `datetime` conversion now uses Windows API instead Python APIs with float.
 
 ### Fixed
 - Fixed checking wrong number of input parameters on methods with array parameters.

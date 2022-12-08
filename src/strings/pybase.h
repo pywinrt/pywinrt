@@ -5,6 +5,8 @@
 #include <datetime.h>
 #include <structmember.h>
 
+#include <windows.h>
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Metadata.h>
 
@@ -1018,24 +1020,34 @@ namespace py
         {
             try
             {
+                FILETIME ft = winrt::clock::to_FILETIME(value);
+                SYSTEMTIME st;
+
+                if (!FileTimeToSystemTime(&ft, &st))
+                {
+                    winrt::throw_last_error();
+                }
+
+                auto microseconds
+                    = std::chrono::time_point_cast<std::chrono::microseconds>(value)
+                          .time_since_epoch()
+                          .count()
+                      % 1000;
+
                 // FIXME: where can we put this so it only imports once?
                 PyDateTime_IMPORT;
 
                 // new reference
-                pyobj_handle args{Py_BuildValue(
-                    "(dO)",
-                    // Python uses "system"/POSIX epoch while WinRT uses win32 FILETIME
-                    // epoch.
-                    std::chrono::duration<double>(
-                        winrt::clock::to_sys(value).time_since_epoch())
-                        .count(),
-                    PyDateTime_TimeZone_UTC)};
-                if (!args)
-                {
-                    return nullptr;
-                }
-
-                return PyDateTime_FromTimestamp(args.get());
+                return PyDateTimeAPI->DateTime_FromDateAndTime(
+                    st.wYear,
+                    st.wMonth,
+                    st.wDay,
+                    st.wHour,
+                    st.wMinute,
+                    st.wSecond,
+                    st.wMilliseconds * 1000 + microseconds,
+                    PyDateTime_TimeZone_UTC,
+                    PyDateTimeAPI->DateTimeType);
             }
             catch (...)
             {
@@ -1068,25 +1080,31 @@ namespace py
                 throw python_exception();
             }
 
-            // new reference
-            pyobj_handle timestamp{PyObject_CallMethod(utc.get(), "timestamp", NULL)};
-            if (!timestamp)
+            SYSTEMTIME st;
+            st.wYear = PyDateTime_GET_YEAR(utc.get());
+            st.wMonth = PyDateTime_GET_MONTH(utc.get());
+            st.wDay = PyDateTime_GET_DAY(utc.get());
+            st.wHour = PyDateTime_DATE_GET_HOUR(utc.get());
+            st.wMinute = PyDateTime_DATE_GET_MINUTE(utc.get());
+            st.wSecond = PyDateTime_DATE_GET_SECOND(utc.get());
+            st.wMilliseconds = PyDateTime_DATE_GET_MICROSECOND(utc.get()) / 1000;
+
+            FILETIME ft;
+
+            if (!SystemTimeToFileTime(&st, &ft))
             {
-                throw python_exception();
+                winrt::throw_last_error();
             }
 
-            auto value = PyFloat_AsDouble(timestamp.get());
-            if (value == -1.0 && PyErr_Occurred())
-            {
-                throw python_exception();
-            }
+            auto value = winrt::clock::from_FILETIME(ft);
 
-            // Python uses "system"/POSIX epoch while WinRT uses win32 FILETIME epoch.
-            return winrt::clock::from_sys(std::chrono::time_point<
-                                          std::chrono::system_clock,
-                                          winrt::Windows::Foundation::TimeSpan>{
-                std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(
-                    std::chrono::duration<double>(value))});
+            auto microseconds = PyDateTime_DATE_GET_MICROSECOND(utc.get()) % 1000;
+
+            value += std::chrono::duration_cast<
+                winrt::Windows::Foundation::DateTime::duration>(
+                std::chrono::microseconds{microseconds});
+
+            return value;
         }
     };
 
