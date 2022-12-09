@@ -2049,8 +2049,7 @@ namespace py
                 }
                 else if constexpr (std::is_same_v<T, winrt::guid>)
                 {
-                    static_assert(sizeof(winrt::guid) == 16);
-                    return "16B";
+                    return "T{I2HQ}";
                 }
                 else if constexpr (std::is_same_v<
                                        T,

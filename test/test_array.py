@@ -164,7 +164,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.shape, (3,))
             self.assertEqual(m.strides, (16,))
             self.assertEqual(m.itemsize, 16)
-            self.assertEqual(m.format, "16B")
+            self.assertEqual(m.format, "T{I2HQ}")
             self.assertTrue(m.c_contiguous)
 
     def test_windows_foundation_datetime(self):
