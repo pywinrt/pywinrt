@@ -1283,6 +1283,31 @@ namespace py
         }
     };
 
+    template<>
+    struct converter<char16_t>
+    {
+        static PyObject* convert(char16_t value) noexcept
+        {
+            return PyUnicode_FromWideChar(reinterpret_cast<const wchar_t*>(&value), 1);
+        }
+
+        static char16_t convert_to(PyObject* obj)
+        {
+            pystringview str{obj};
+
+            if (str.length() != 1)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "expected a character, but string of length %d found",
+                    str.length());
+                throw python_exception();
+            }
+
+            return str[0];
+        }
+    };
+
     template<typename T>
     struct converter<T, typename std::enable_if_t<is_enum_category_v<T>>>
     {

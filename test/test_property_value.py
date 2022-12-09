@@ -81,7 +81,11 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(ipv.type, wf.PropertyType.DOUBLE)
         self.assertEqual(ipv.get_double(), 3.14)
 
-    # # TODO: CreateChar16
+    def test_create_char16(self):
+        o = wf.PropertyValue.create_char16("c")
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.CHAR16)
+        self.assertEqual(ipv.get_char16(), "c")
 
     def test_create_boolean(self):
        o = wf.PropertyValue.create_boolean(True)
@@ -224,6 +228,15 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(len(a), 5)
         for x in range(5):
             self.assertEqual(a[x], x+1)
+
+    def test_create_char16_array(self):
+        o = wf.PropertyValue.create_char16_array(array('u', ["A", "B", "C", "D", "E"]))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.CHAR16_ARRAY)
+        a = ipv.get_char16_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], chr(x + ord("A")))
 
 if __name__ == '__main__':
     unittest.main()

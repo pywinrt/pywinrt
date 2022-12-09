@@ -138,11 +138,25 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "Q")
             self.assertTrue(m.c_contiguous)
 
-    def test_string(self):
-        a = Array(str, ["A", "B", "C"])
+    def test_char(self):
+        a = Array("u", ["A", "B", "\u1234"])
 
         self.assertEqual(len(a), 3)
-        self.assertEqual(list(a), ["A", "B", "C"])
+        self.assertEqual(list(a), ["A", "B", "\u1234"])
+
+        with memoryview(a) as m:
+            self.assertEqual(m.ndim, 1)
+            self.assertEqual(m.shape, (3,))
+            self.assertEqual(m.strides, (2,))
+            self.assertEqual(m.itemsize, 2)
+            self.assertEqual(m.format, "u")
+            self.assertTrue(m.c_contiguous)
+
+    def test_string(self):
+        a = Array(str, ["A", "B", "CDE"])
+
+        self.assertEqual(len(a), 3)
+        self.assertEqual(list(a), ["A", "B", "CDE"])
 
         with memoryview(a) as m:
             self.assertEqual(m.ndim, 1)

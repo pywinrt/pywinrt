@@ -93,6 +93,11 @@ namespace py::cpp::_winrt
                 reinterpret_cast<Array*>(self.get())->array
                     = std::make_unique<py::ComArray<double>>();
             }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "u") == 0)
+            {
+                reinterpret_cast<Array*>(self.get())->array
+                    = std::make_unique<py::ComArray<char16_t>>();
+            }
             else
             {
                 PyErr_SetString(PyExc_ValueError, "unsupported format string");
