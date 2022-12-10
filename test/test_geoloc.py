@@ -1,5 +1,5 @@
-
 from datetime import datetime
+from concurrent.futures import Future, wait
 import os
 import unittest
 
@@ -10,8 +10,8 @@ from ._util import async_test
 
 ON_CI = os.environ.get("CI")
 
-class TestGeolocation(unittest.TestCase):
 
+class TestGeolocation(unittest.TestCase):
     def test_pinterface_qi(self):
         locator = wdg.Geolocator()
         op = locator.get_geoposition_async()
@@ -19,7 +19,7 @@ class TestGeolocation(unittest.TestCase):
         op.cancel()
 
     def test_struct_ctor(self):
-        basic_pos = wdg.BasicGeoposition(latitude = 47.1, longitude = -122.1, altitude = 0.0)
+        basic_pos = wdg.BasicGeoposition(latitude=47.1, longitude=-122.1, altitude=0.0)
         self.assertEqual(basic_pos.latitude, 47.1)
         self.assertEqual(basic_pos.longitude, -122.1)
         self.assertEqual(basic_pos.altitude, 0.0)
@@ -31,7 +31,7 @@ class TestGeolocation(unittest.TestCase):
         for x in ["latitude", "longitude", "altitude"]:
             self.assertEqual(getattr(basic_pos, x), getattr(center, x))
 
-    def test_iiterable_wraping(self):
+    def test_iiterable_wrapping(self):
         basic_pos1 = wdg.BasicGeoposition(47.1, -122.1, 0.0)
         basic_pos2 = wdg.BasicGeoposition(47.2, -122.2, 0.0)
 
@@ -47,30 +47,37 @@ class TestGeolocation(unittest.TestCase):
     @unittest.skipIf(ON_CI, "Geolocation service not available on CI")
     def test_GetGeopositionAsync(self):
         """test async method using IAsyncOperation Completed callback"""
-        import threading
+        op_future = Future()
 
-        complete_event = threading.Event()
-
-        def callback(operation, status):
-            self.assertEqual(status, 1)
-            pos = operation.get_results()
-
-            self.assertEqual(type(pos), wdg.Geoposition)
-
-            coord = pos.coordinate
-            self.assertIsInstance(coord.timestamp, datetime)
-
-            basic_pos = coord.point.position
-            lat = basic_pos.latitude
-            self.assertEqual(type(lat), float)
-
-            complete_event.set()
+        def callback(operation: wf.IAsyncOperation, status: wf.AsyncStatus):
+            if status == wf.AsyncStatus.COMPLETED:
+                op_future.set_result(operation.get_results())
+            elif status == wf.AsyncStatus.CANCELED:
+                op_future.cancel()
+            elif status == wf.AsyncStatus.ERROR:
+                op_future.set_exception(OSError(operation.error_code.value))
 
         locator = wdg.Geolocator()
+
+        assert op_future.set_running_or_notify_cancel()
         op = locator.get_geoposition_async()
         op.completed = callback
 
-        self.assertTrue(complete_event.wait(10))
+        done, not_done = wait([op_future], 10)
+
+        assert len(done) == 1
+        assert not any(not_done)
+
+        pos: wdg.Geoposition = op_future.result()
+
+        self.assertEqual(type(pos), wdg.Geoposition)
+
+        coord = pos.coordinate
+        self.assertIsInstance(coord.timestamp, datetime)
+
+        basic_pos = coord.point.position
+        lat = basic_pos.latitude
+        self.assertEqual(type(lat), float)
 
     @unittest.skipIf(ON_CI, "Geolocation service not available on CI")
     @async_test
@@ -89,5 +96,5 @@ class TestGeolocation(unittest.TestCase):
         self.assertEqual(type(lat), float)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
