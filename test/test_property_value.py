@@ -2,9 +2,9 @@
 import unittest
 from array import array
 from datetime import datetime, timedelta, timezone
-from uuid import UUID
+from uuid import UUID, uuid4
 
-
+from winrt import Array
 import winrt.windows.foundation as wf
 
 class TestPropertyValue(unittest.TestCase):
@@ -237,6 +237,37 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(len(a), 5)
         for x in range(5):
             self.assertEqual(a[x], chr(x + ord("A")))
+
+    def test_create_guid_array(self):
+        uuids = [uuid4() for _ in range(5)]
+        o = wf.PropertyValue.create_guid_array(Array(UUID, uuids))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.GUID_ARRAY)
+        a = ipv.get_guid_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], uuids[x])
+
+    def test_create_date_time_array(self):
+        now = [datetime.now(timezone.utc) for _ in range(5)]
+        o = wf.PropertyValue.create_date_time_array(Array(datetime, now))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.DATE_TIME_ARRAY)
+        a = ipv.get_date_time_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], now[x])
+
+    def test_create_time_span_array(self):
+        times = [timedelta(x) for x in range(5)]
+        o = wf.PropertyValue.create_time_span_array(Array(timedelta, times))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.TIME_SPAN_ARRAY)
+        a = ipv.get_time_span_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x], times[x])
+
 
 if __name__ == '__main__':
     unittest.main()
