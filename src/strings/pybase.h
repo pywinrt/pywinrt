@@ -2066,7 +2066,7 @@ namespace py
                 }
                 else if constexpr (std::is_same_v<T, winrt::guid>)
                 {
-                    return "T{I2HQ}";
+                    return "T{I2H8B}";
                 }
                 else if constexpr (std::is_same_v<
                                        T,

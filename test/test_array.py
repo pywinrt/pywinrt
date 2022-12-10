@@ -167,7 +167,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_guid(self):
-        actual = [uuid.uuid4(), uuid.uuid4(), uuid.uuid4()]
+        actual = [uuid.UUID("00112233-4455-6677-8899-AABBCCDDEEFF"), uuid.uuid4(), uuid.uuid4()]
         a = Array(uuid.UUID, actual)
 
         self.assertEqual(len(a), 3)
@@ -178,8 +178,10 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.shape, (3,))
             self.assertEqual(m.strides, (16,))
             self.assertEqual(m.itemsize, 16)
-            self.assertEqual(m.format, "T{I2HQ}")
+            self.assertEqual(m.format, "T{I2H8B}")
             self.assertTrue(m.c_contiguous)
+
+            self.assertEqual(m[0:1].hex(), "33221100554477668899aabbccddeeff")
 
     def test_windows_foundation_datetime(self):
         actual = [
