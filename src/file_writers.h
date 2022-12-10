@@ -263,7 +263,6 @@ namespace pywinrt
         w.write("import types\n");
         w.write("import typing\n");
         w.write("\n");
-        w.write("import @._winrt as _winrt\n", settings.module);
         w.write("import @.system\n", settings.module);
 
         w.write_each<write_python_import_namespace>(needed_namespaces);

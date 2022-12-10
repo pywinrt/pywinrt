@@ -4,7 +4,7 @@ import sys
 from types import ModuleType
 import uuid
 
-from .._winrt import __file__ as _winrt_file, Array as Array
+from .._winrt import __file__ as _winrt_file, Array as Array, Object as Object
 
 
 def _import_ns_module(ns: str) -> ModuleType:

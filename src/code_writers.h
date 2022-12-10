@@ -3931,7 +3931,7 @@ if (!return_value)
      */
     void write_python_base_classes(writer& w, TypeDef const& type)
     {
-        w.write("_winrt.Object");
+        w.write("%.system.Object", settings.module);
 
         if (implements_mapping(type))
         {
@@ -4354,7 +4354,10 @@ if (!return_value)
             if (!is_ptype(type) || is_static_class(type))
             {
                 w.write("@staticmethod\n");
-                w.write("def _from(obj: _winrt.Object) -> @: ...\n", type.TypeName());
+                w.write(
+                    "def _from(obj: %.system.Object) -> @: ...\n",
+                    settings.module,
+                    type.TypeName());
             }
 
             // write regular methods

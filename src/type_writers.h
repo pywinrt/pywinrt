@@ -610,7 +610,7 @@ namespace pywinrt
             case ElementType::String:
                 return "str";
             case ElementType::Object:
-                return "_winrt.Object";
+                return settings.module + ".system.Object";
             default:
                 throw_invalid("element type not supported");
             }
@@ -664,7 +664,7 @@ namespace pywinrt
 
             if (type == "winrt::Windows::Foundation::IInspectable")
             {
-                write("_winrt.Object");
+                write("%.system.Object", settings.module);
                 return;
             }
 

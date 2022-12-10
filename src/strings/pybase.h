@@ -1205,7 +1205,7 @@ namespace py
 
             if (result == 0)
             {
-                PyErr_SetString(PyExc_TypeError, "not a _winrt.Object");
+                PyErr_SetString(PyExc_TypeError, "not a System.Object");
                 throw python_exception();
             }
 
