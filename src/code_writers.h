@@ -3856,11 +3856,12 @@ if (!return_value)
             w.write("%", bind<write_nullable_python_type>(param.second->Type()));
             break;
 
-        // array parameters return a Python list
+        // array parameters return a System.Array
         case param_category::receive_array:
         case param_category::fill_array:
             w.write(
-                "typing.List[%]",
+                "%.system.Array[%]",
+                settings.module,
                 bind<write_nonnullable_python_type>(param.second->Type()));
             break;
 

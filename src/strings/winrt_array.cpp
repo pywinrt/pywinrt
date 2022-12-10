@@ -3,6 +3,9 @@
 
 namespace py::cpp::_winrt
 {
+    /**
+     * Python wrapper around System.Array type.
+     */
     struct Array
     {
         PyObject_HEAD;
@@ -13,10 +16,13 @@ namespace py::cpp::_winrt
 
     PyDoc_STRVAR(Array_doc, "class for wrapped COM array instances");
 
-    static PyObject* Array_tp_new(
-        PyTypeObject* subtype, PyObject* args, PyObject* kwds) noexcept
+    /**
+     * Allocates memory for a new System.Array object.
+     * @param [in]  subtype The type to use for allocation.
+     */
+    static PyObject* Array_Alloc(PyTypeObject* subtype)
     {
-        pyobj_handle self{subtype->tp_alloc(subtype, 0)};
+        auto self = subtype->tp_alloc(subtype, 0);
 
         if (!self)
         {
@@ -24,7 +30,46 @@ namespace py::cpp::_winrt
         }
 
         // call C++ constructors on memory allocated from CPython heap
-        new (&reinterpret_cast<Array*>(self.get())->array) std::unique_ptr<py::Array>{};
+        new (&reinterpret_cast<Array*>(self)->array) std::unique_ptr<py::Array>{};
+
+        return self;
+    }
+
+    /**
+     * Creates a new System.Array object from @p array.
+     * @param [in]  array   A WinRT array such as a COM array.
+     * @returns The new Python wrapper object or @c nullptr on error.
+     */
+    PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept
+    {
+        auto type = get_python_type<py::Array>();
+
+        if (!type)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle self{Array_Alloc(type)};
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        reinterpret_cast<Array*>(self.get())->array = std::move(array);
+
+        return self.detach();
+    }
+
+    static PyObject* Array_tp_new(
+        PyTypeObject* subtype, PyObject* args, PyObject* kwds) noexcept
+    {
+        pyobj_handle self{Array_Alloc(subtype)};
+
+        if (!self)
+        {
+            return nullptr;
+        }
 
         PyObject* arg0;
         PyObject* arg1 = nullptr;
@@ -116,7 +161,8 @@ namespace py::cpp::_winrt
                 reinterpret_cast<Array*>(self.get())->array
                     = std::make_unique<py::ComArray<winrt::hstring>>();
             }
-            else if (std::strcmp(type->tp_name, "UUID") == 0) // TODO: stricter check
+            else if (std::strcmp(type->tp_name, "UUID") == 0) // TODO: stricter
+                                                              // check
             {
                 reinterpret_cast<Array*>(self.get())->array
                     = std::make_unique<py::ComArray<winrt::guid>>();

@@ -274,6 +274,11 @@ namespace py
         static PyTypeObject* get_python_type() noexcept;
     };
 
+    namespace cpp::_winrt
+    {
+        PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept;
+    }
+
     /**
      * A type that always evaluates to false.
      *
@@ -1670,34 +1675,18 @@ namespace py
     };
 
     template<typename T>
+    struct ComArray;
+
+    template<typename T>
     struct converter<winrt::com_array<T>>
     {
         static PyObject* convert(winrt::com_array<T> const& instance) noexcept
         {
-            pyobj_handle list{PyList_New(instance.size())};
-            if (!list)
-            {
-                return nullptr;
-            }
-
-            for (uint32_t index = 0; index < instance.size(); index++)
-            {
-                pyobj_handle item{converter<T>::convert(instance[index])};
-                if (!item)
-                {
-                    return nullptr;
-                }
-
-                if (PyList_SetItem(list.get(), index, item.get()) == -1)
-                {
-                    return nullptr;
-                }
-
-                // PyList_SetItem steals the reference to item
-                item.detach();
-            }
-
-            return list.detach();
+            auto array = std::make_unique<ComArray<T>>();
+            // HACK: casting to rvalue reference to steal data
+            // std::move doesn't work because of const&
+            array->array = const_cast<winrt::com_array<T>&&>(instance);
+            return py::cpp::_winrt::Array_New(std::move(array));
         }
 
         static auto convert_to(PyObject* obj)
@@ -1988,7 +1977,7 @@ namespace py
         {
             try
             {
-                array = winrt::com_array<T>(size);
+                array = winrt::com_array<T>(size, empty_instance<T>::get());
                 return true;
             }
             catch (...)

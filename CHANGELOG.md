@@ -16,6 +16,7 @@
   accepts list/sequence).
 - Moved top-level package `__init__.py` to `system` subpackage.
 - Moved fundamental type aliases to `system` package and made runtime types.
+- Array output parameters now return `system.Array` instead of `list`.
 
 ### Fixed
 - Fixed checking wrong number of input parameters on methods with array parameters.
