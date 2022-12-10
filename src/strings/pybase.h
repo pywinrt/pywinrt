@@ -1617,7 +1617,7 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            // this is assuming array_view is always treated as read-only
+            // this is assuming pybuf_view is always treated as read-only
             if (PyObject_GetBuffer(obj, &view, PyBUF_SIMPLE) == -1)
             {
                 throw python_exception();
@@ -1650,30 +1650,22 @@ namespace py
     };
 
     template<typename T>
-    struct converter<winrt::array_view<T>>
+    struct converter<pybuf_view<T>>
     {
-        static PyObject* convert(winrt::array_view<T> const& instance) noexcept
+        static PyObject* convert(pybuf_view<T> const& instance) noexcept
         {
             PyErr_Format(
                 PyExc_NotImplementedError,
-                "py::converter<%s>::convert() is not implemented for winrt::array_view",
+                "py::converter<%s>::convert() is not implemented for py::pybuf_view",
                 typeid(T).name());
             return nullptr;
         }
 
-        static winrt::array_view<T> convert_to(PyObject* obj)
+        static pybuf_view<T> convert_to(PyObject* obj)
         {
             throw_if_pyobj_null(obj);
 
-            // For fundamental C++ types, use buffer protocol, i.e. bytearray,
-            // array, etc. are used without copying data.
-            if (std::is_fundamental_v<T> && PyObject_CheckBuffer(obj))
-            {
-                return std::move(pybuf_view<T>{obj});
-            }
-
-            // Other types require marshalling from Python to COM array.
-            return converter<winrt::com_array<T>>::convert_to(obj);
+            return pybuf_view<T>{obj};
         }
     };
 

@@ -12,9 +12,14 @@
 - Provide useful error message when `NotImplementedError` is raised.
 - Use `PyType_FromModuleAndSpec` in Python >= 3.9.
 - `datetime` conversion now uses Windows API instead Python APIs with float.
+- Array input arguments must now implement Python buffer protocol (no longer
+  accepts list/sequence).
 
 ### Fixed
 - Fixed checking wrong number of input parameters on methods with array parameters.
+- Fixed use after free of array input arguments ([winsdk#20]).
+
+[winsdk#20]: https://github.com/pywinrt/python-winsdk/issues/20
 
 ## [v1.0.0-beta.7] - 2022-09-09
 

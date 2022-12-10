@@ -1034,7 +1034,7 @@ static PyModuleDef module_def
             break;
         case param_category::pass_array:
             w.write(
-                "auto % = py::convert_to<winrt::array_view<%>>(%);\n",
+                "auto % = py::convert_to<py::pybuf_view<%>>(%);\n",
                 bind<write_param_name>(param),
                 param.second->Type(),
                 bind<write_convert_to_params>(method, sequence));
@@ -3812,10 +3812,10 @@ if (!return_value)
                 });
             break;
 
-        // array parameters accept any Python sequence-like object
+        // array parameters accept any array-like (buffer protocol) object
         case param_category::pass_array:
             w.write(
-                "typing.Sequence[%]",
+                "_winrt.Array[%]",
                 bind<write_nonnullable_python_type>(param.second->Type()));
             break;
 
