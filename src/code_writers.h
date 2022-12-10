@@ -3017,40 +3017,40 @@ struct pinterface_python_type<%<%>>
                 switch (type)
                 {
                 case fundamental_type::Boolean:
-                    w.write("_winrt.Boolean");
+                    w.write("%.system.Boolean", settings.module);
                     break;
                 case fundamental_type::Char:
-                    w.write("_winrt.Char16");
+                    w.write("%.system.Char16", settings.module);
                     break;
                 case fundamental_type::Int8:
-                    w.write("_winrt.Int8");
+                    w.write("%.system.Int8", settings.module);
                     break;
                 case fundamental_type::UInt8:
-                    w.write("_winrt.UInt8");
+                    w.write("%.system.UInt8", settings.module);
                     break;
                 case fundamental_type::Int16:
-                    w.write("_winrt.Int16");
+                    w.write("%.system.Int16", settings.module);
                     break;
                 case fundamental_type::UInt16:
-                    w.write("_winrt.UInt16");
+                    w.write("%.system.UInt16", settings.module);
                     break;
                 case fundamental_type::Int32:
-                    w.write("_winrt.Int32");
+                    w.write("%.system.Int32", settings.module);
                     break;
                 case fundamental_type::UInt32:
-                    w.write("_winrt.UInt32");
+                    w.write("%.system.UInt32", settings.module);
                     break;
                 case fundamental_type::Int64:
-                    w.write("_winrt.Int64");
+                    w.write("%.system.Int64", settings.module);
                     break;
                 case fundamental_type::UInt64:
-                    w.write("_winrt.UInt64");
+                    w.write("%.system.UInt64", settings.module);
                     break;
                 case fundamental_type::Float:
-                    w.write("_winrt.Single");
+                    w.write("%.system.Single", settings.module);
                     break;
                 case fundamental_type::Double:
-                    w.write("_winrt.Double");
+                    w.write("%.system.Double", settings.module);
                     break;
                 case fundamental_type::String:
                     w.write("str");
@@ -3822,7 +3822,7 @@ if (!return_value)
 
         // fill array parameters just require the size of the array to be allocated
         case param_category::fill_array:
-            w.write("_winrt.UInt32");
+            w.write("%.system.UInt32", settings.module);
             break;
 
         // this method only handles input parameters, receive arrays are output

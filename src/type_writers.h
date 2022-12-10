@@ -318,7 +318,7 @@ namespace pywinrt
 
             if (ns == "System" && name == "Guid")
             {
-                write("_winrt.Guid");
+                write("%.system.Guid", settings.module);
             }
             else
             {
@@ -579,34 +579,34 @@ namespace pywinrt
             write(writer::get_cpp_type(type));
         }
 
-        static std::string_view get_python_type(ElementType type)
+        static std::string get_python_type(ElementType type)
         {
             switch (type)
             {
             case ElementType::Boolean:
-                return "_winrt.Boolean";
+                return settings.module + ".system.Boolean";
             case ElementType::Char:
-                return "_winrt.Char16";
+                return settings.module + ".system.Char16";
             case ElementType::I1:
-                return "_winrt.Int8";
+                return settings.module + ".system.Int8";
             case ElementType::U1:
-                return "_winrt.UInt8";
+                return settings.module + ".system.UInt8";
             case ElementType::I2:
-                return "_winrt.Int16";
+                return settings.module + ".system.Int16";
             case ElementType::U2:
-                return "_winrt.UInt16";
+                return settings.module + ".system.UInt16";
             case ElementType::I4:
-                return "_winrt.Int32";
+                return settings.module + ".system.Int32";
             case ElementType::U4:
-                return "_winrt.UInt32";
+                return settings.module + ".system.UInt32";
             case ElementType::I8:
-                return "_winrt.Int64";
+                return settings.module + ".system.Int64";
             case ElementType::U8:
-                return "_winrt.UInt64";
+                return settings.module + ".system.UInt64";
             case ElementType::R4:
-                return "_winrt.Single";
+                return settings.module + ".system.Single";
             case ElementType::R8:
-                return "_winrt.Double";
+                return settings.module + ".system.Double";
             case ElementType::String:
                 return "str";
             case ElementType::Object:

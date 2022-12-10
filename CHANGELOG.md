@@ -15,6 +15,7 @@
 - Array input arguments must now implement Python buffer protocol (no longer
   accepts list/sequence).
 - Moved top-level package `__init__.py` to `system` subpackage.
+- Moved fundamental type aliases to `system` package and made runtime types.
 
 ### Fixed
 - Fixed checking wrong number of input parameters on methods with array parameters.
