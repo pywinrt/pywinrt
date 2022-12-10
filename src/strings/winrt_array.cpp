@@ -310,6 +310,15 @@ namespace py::cpp::_winrt
         Py_DECREF(tp);
     }
 
+    static PyMethodDef Array_tp_methods[] = {
+#if PY_VERSION_HEX >= 0x03090000
+        {"__class_getitem__",
+         Py_GenericAlias,
+         METH_O | METH_CLASS,
+         PyDoc_STR("See PEP 585")},
+#endif
+        {}};
+
     static Py_ssize_t Array_sq_length(PyObject* self) noexcept
     {
         return reinterpret_cast<Array*>(self)->array->Size();
@@ -389,6 +398,7 @@ namespace py::cpp::_winrt
         {Py_tp_doc, const_cast<char*>(Array_doc)},
         {Py_tp_new, Array_tp_new},
         {Py_tp_dealloc, Array_tp_dealloc},
+        {Py_tp_methods, Array_tp_methods},
         {Py_sq_length, Array_sq_length},
         {Py_sq_item, Array_sq_item},
 #if PY_VERSION_HEX >= 0x03090000

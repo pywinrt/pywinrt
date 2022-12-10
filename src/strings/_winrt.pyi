@@ -1,4 +1,5 @@
 import array
+import types
 import typing
 import sys
 import uuid
@@ -49,6 +50,8 @@ _Self = typing.TypeVar("_Self")
 _T = typing.TypeVar("_T")
 
 class Array(typing.Generic[_T]):
+    if sys.version_info >= (3, 9):
+        def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     @typing.overload
     def __new__(cls: _Self, __type: typing.Union[_T, str], __size: int, /) -> _Self: ...
     @typing.overload
