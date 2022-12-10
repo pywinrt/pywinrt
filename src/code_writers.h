@@ -3815,7 +3815,8 @@ if (!return_value)
         // array parameters accept any array-like (buffer protocol) object
         case param_category::pass_array:
             w.write(
-                "_winrt.Array[%]",
+                "%.system.Array[%]",
+                settings.module,
                 bind<write_nonnullable_python_type>(param.second->Type()));
             break;
 

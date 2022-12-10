@@ -199,12 +199,12 @@ namespace pywinrt
         w.flush_to_file(folder / "_winrt.pyi");
     }
 
-    inline void write_package_dunder_init_py(stdfs::path const& folder)
+    inline void write_system_dunder_init_py(stdfs::path const& folder)
     {
         writer w;
 
         write_license(w, "#");
-        w.write(strings::package_init, settings.module);
+        w.write(strings::system_init, settings.module);
         w.flush_to_file(folder / "__init__.py");
     }
 
@@ -226,9 +226,9 @@ namespace pywinrt
             w.write("\n");
         }
 
-        w.write("import %\n", module_name);
+        w.write("import %.system\n", module_name);
 
-        w.write("\n_ns_module = %._import_ns_module(\"%\")\n", module_name, ns);
+        w.write("\n_ns_module = %.system._import_ns_module(\"%\")\n", module_name, ns);
 
         w.write_each<write_python_try_import_namespace>(needed_namespaces);
         settings.filter.bind_each<write_python_enum>(members.enums)(w);
@@ -264,6 +264,7 @@ namespace pywinrt
         w.write("import typing\n");
         w.write("\n");
         w.write("import @._winrt as _winrt\n", settings.module);
+        w.write("import @.system\n", settings.module);
 
         w.write_each<write_python_import_namespace>(needed_namespaces);
         settings.filter.bind_each<write_python_enum>(members.enums)(w);

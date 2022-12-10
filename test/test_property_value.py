@@ -4,7 +4,7 @@ from array import array
 from datetime import datetime, timedelta, timezone
 from uuid import UUID, uuid4
 
-from winrt import Array
+from winrt.system import Array
 import winrt.windows.foundation as wf
 
 class TestPropertyValue(unittest.TestCase):

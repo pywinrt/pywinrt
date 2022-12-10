@@ -2,7 +2,7 @@ from importlib.machinery import ExtensionFileLoader
 from importlib.util import spec_from_loader, module_from_spec
 from types import ModuleType
 
-from ._winrt import __file__ as _winrt_file, Array as Array
+from .._winrt import __file__ as _winrt_file, Array as Array
 
 
 def _import_ns_module(ns: str) -> ModuleType:

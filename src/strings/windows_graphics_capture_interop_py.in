@@ -1,6 +1,6 @@
-import %
+import %.system
 
-_ns_module = %._import_ns_module("Windows.Graphics.Capture.Interop")
+_ns_module = %.system._import_ns_module("Windows.Graphics.Capture.Interop")
 
 try:
     import %.windows.graphics.capture

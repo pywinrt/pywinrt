@@ -143,7 +143,9 @@ Where <spec> is one or more of:
 
             auto module_dir = settings.output_folder / settings.module;
             auto src_dir = module_dir / "src";
+            auto system_dir = module_dir / "system";
             create_directories(src_dir);
+            create_directories(system_dir);
 
             group.add(
                 [&]
@@ -151,7 +153,7 @@ Where <spec> is one or more of:
                     write_pybase_h(src_dir);
                     write_package_py_typed(module_dir);
                     write_winrt_pyi(module_dir);
-                    write_package_dunder_init_py(module_dir);
+                    write_system_dunder_init_py(system_dir);
                     write_runtime_cpp(src_dir);
                     write_winrt_module_cpp(src_dir);
                     write_winrt_array_cpp(src_dir);

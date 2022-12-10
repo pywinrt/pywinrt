@@ -3,7 +3,7 @@ import sys
 import unittest
 import uuid
 
-from winrt import Array
+from winrt.system import Array
 from winrt.windows.foundation import Rect, Size, Point
 
 is_64bits = sys.maxsize > 2**32
