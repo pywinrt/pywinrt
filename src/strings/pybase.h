@@ -277,7 +277,8 @@ namespace py
     namespace cpp::_winrt
     {
         PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept;
-    }
+        bool Array_Assign(PyObject* obj, std::unique_ptr<py::Array> array) noexcept;
+    } // namespace cpp::_winrt
 
     /**
      * A type that always evaluates to false.
@@ -2074,6 +2075,15 @@ namespace py
                         sizeof(winrt::Windows::Foundation::TimeSpan)
                         == sizeof(int64_t));
                     return "q";
+                }
+                else if constexpr (
+                    std::is_same_v<
+                        T,
+                        winrt::Windows::Foundation::
+                            IInspectable> || py::is_class_category_v<T> || py::is_interface_category_v<T>)
+                {
+                    static_assert(sizeof(T) == sizeof(void*));
+                    return "P";
                 }
                 else if constexpr (std::is_same_v<T, winrt::Windows::Foundation::Point>)
                 {

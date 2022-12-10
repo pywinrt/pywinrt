@@ -61,6 +61,28 @@ namespace py::cpp::_winrt
         return self.detach();
     }
 
+    /**
+     * Assigns @p array to @p obj if @p obj is a System.Array.
+     * @param [in]  obj     The Python System.Array wrapper object.
+     * @param [in]  array   The WinRT array wrapper.
+     * @returns @c true on success, otherwise returns @c false and sets Python
+     * exception.
+     */
+    bool Array_Assign(PyObject* obj, std::unique_ptr<py::Array> array) noexcept
+    {
+        if (Py_TYPE(obj) != get_python_type<py::Array>())
+        {
+            {
+                PyErr_SetString(PyExc_TypeError, "argument must be System.Array");
+                return false;
+            }
+        }
+
+        reinterpret_cast<Array*>(obj)->array = std::move(array);
+
+        return true;
+    }
+
     static PyObject* Array_tp_new(
         PyTypeObject* subtype, PyObject* args, PyObject* kwds) noexcept
     {
@@ -156,7 +178,33 @@ namespace py::cpp::_winrt
 
             auto type = reinterpret_cast<PyTypeObject*>(arg0);
 
-            if (type == &PyUnicode_Type)
+            // if a type has an _assign_array_ special method, use that to create
+            // the py::Array and assign it to self->array.
+            pyobj_handle assign_array{PyObject_GetAttrString(arg0, "_assign_array_")};
+
+            if (!assign_array)
+            {
+                if (PyErr_ExceptionMatches(PyExc_AttributeError))
+                {
+                    PyErr_Clear();
+                }
+                else
+                {
+                    return nullptr;
+                }
+            }
+
+            if (assign_array)
+            {
+                pyobj_handle result{
+                    PyObject_CallFunction(assign_array.get(), "O", self.get())};
+
+                if (!result)
+                {
+                    return nullptr;
+                }
+            }
+            else if (type == &PyUnicode_Type)
             {
                 reinterpret_cast<Array*>(self.get())->array
                     = std::make_unique<py::ComArray<winrt::hstring>>();
@@ -191,6 +239,11 @@ namespace py::cpp::_winrt
             {
                 reinterpret_cast<Array*>(self.get())->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::Rect>>();
+            }
+            else if (type == py::winrt_type<Object>::get_python_type())
+            {
+                reinterpret_cast<Array*>(self.get())->array = std::make_unique<
+                    py::ComArray<winrt::Windows::Foundation::IInspectable>>();
             }
             else
             {

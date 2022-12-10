@@ -3,8 +3,8 @@ import sys
 import unittest
 import uuid
 
-from winrt.system import Array
-from winrt.windows.foundation import Rect, Size, Point
+from winrt.system import Array, Object
+from winrt.windows.foundation import Rect, Size, Point, Uri, IPropertyValue
 
 is_64bits = sys.maxsize > 2**32
 pointer_size = 8 if is_64bits else 4
@@ -166,8 +166,26 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "P")
             self.assertTrue(m.c_contiguous)
 
+    def test_object(self):
+        a = Array(Object, 3)
+
+        self.assertEqual(len(a), 3)
+        self.assertEqual(list(a), [None, None, None])
+
+        with memoryview(a) as m:
+            self.assertEqual(m.ndim, 1)
+            self.assertEqual(m.shape, (3,))
+            self.assertEqual(m.strides, (pointer_size,))
+            self.assertEqual(m.itemsize, pointer_size)
+            self.assertEqual(m.format, "P")
+            self.assertTrue(m.c_contiguous)
+
     def test_guid(self):
-        actual = [uuid.UUID("00112233-4455-6677-8899-AABBCCDDEEFF"), uuid.uuid4(), uuid.uuid4()]
+        actual = [
+            uuid.UUID("00112233-4455-6677-8899-AABBCCDDEEFF"),
+            uuid.uuid4(),
+            uuid.uuid4(),
+        ]
         a = Array(uuid.UUID, actual)
 
         self.assertEqual(len(a), 3)
@@ -274,4 +292,32 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.strides, (16,))
             self.assertEqual(m.itemsize, 16)
             self.assertEqual(m.format, "4f")
+            self.assertTrue(m.c_contiguous)
+
+    def test_runtime_type(self):
+        a = Array(Uri, [Uri("https://example.com")])
+
+        self.assertEqual(len(a), 1)
+        self.assertEqual(str(a[0]), "https://example.com/")
+
+        with memoryview(a) as m:
+            self.assertEqual(m.ndim, 1)
+            self.assertEqual(m.shape, (1,))
+            self.assertEqual(m.strides, (8,))
+            self.assertEqual(m.itemsize, 8)
+            self.assertEqual(m.format, "P")
+            self.assertTrue(m.c_contiguous)
+
+    def test_interface(self):
+        a = Array(IPropertyValue, 2)
+
+        self.assertEqual(len(a), 2)
+        self.assertEqual(list(a), [None, None])
+
+        with memoryview(a) as m:
+            self.assertEqual(m.ndim, 1)
+            self.assertEqual(m.shape, (2,))
+            self.assertEqual(m.strides, (8,))
+            self.assertEqual(m.itemsize, 8)
+            self.assertEqual(m.format, "P")
             self.assertTrue(m.c_contiguous)

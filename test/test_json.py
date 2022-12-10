@@ -1,6 +1,7 @@
 
 import unittest
 
+from winrt.system import Array
 import winrt.windows.data.json as wdj
 
 class TestJson(unittest.TestCase):
@@ -55,6 +56,13 @@ class TestJson(unittest.TestCase):
         self.assertEqual(a.size, 4)
         for x in range(0,3):
             self.assertEqual(a.get_number_at(x), x+1)
+
+    def test_JsonArray_replace_all(self):
+        a = wdj.JsonArray.parse("[1,2,3,4,5]")
+        self.assertEqual(a.size, 5)
+        a.replace_all(Array(wdj.IJsonValue, [wdj.JsonValue.parse("7")]))
+        self.assertEqual(a.size, 1)
+        self.assertEqual(a.get_number_at(0), 7)
 
     def test_JsonArray_try_parse(self):
         succeeded, a = wdj.JsonArray.try_parse("[1,2,3,4,5]")

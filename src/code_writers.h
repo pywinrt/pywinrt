@@ -1900,6 +1900,26 @@ return 0;
         if (!(is_ptype(type) || is_static_class(type)))
         {
             w.write(
+                "\nstatic PyObject* _assign_array_@(PyObject* /*unused*/, PyObject* arg) noexcept\n{\n",
+                type.TypeName());
+            {
+                writer::indent_guard g{w};
+                w.write("auto array = std::make_unique<py::ComArray<%>>();\n", type);
+                w.write(
+                    "if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))\n{\n");
+                {
+                    writer::indent_guard gg{w};
+                    w.write("return nullptr;\n");
+                }
+                w.write("}\n");
+                w.write("Py_RETURN_NONE;\n");
+            }
+            w.write("}\n");
+        }
+
+        if (!(is_ptype(type) || is_static_class(type)))
+        {
+            w.write(
                 "\nstatic PyObject* _from_@(PyObject* /*unused*/, PyObject* arg) noexcept\n{\n",
                 type.TypeName());
             {
@@ -2273,6 +2293,13 @@ return 0;
                     write_row(add_method);
                     write_row(remove_method);
                 });
+
+            if (!(is_ptype(type) || is_static_class(type)))
+            {
+                w.write(
+                    "{ \"_assign_array_\", _assign_array_@, METH_O | METH_STATIC, nullptr },\n",
+                    type.TypeName());
+            }
 
             // TODO: support _from for ptypes
             if (!(is_ptype(type) || is_static_class(type)))
