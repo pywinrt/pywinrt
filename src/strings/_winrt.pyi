@@ -19,6 +19,7 @@ if sys.version_info >= (3, 9):
     UInt64 = Annotated[int, "Q"]
     Single = Annotated[float, "f"]
     Double = Annotated[float, "d"]
+    Char16 = Annotated[str, "u"]
 else:
     Boolean = bool
     Int8 = int
@@ -31,8 +32,8 @@ else:
     UInt64 = int
     Single = float
     Double = float
+    Char16 = str
 
-Char16 = UInt16  # Char16 also implies valid UTF-16 codepoint
 
 # WinRT GUIDs are marshaled to Python UUIDs
 Guid = uuid.UUID
