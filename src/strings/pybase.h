@@ -84,9 +84,8 @@ namespace py
 
     template<typename T>
     constexpr bool is_pdelegate_category_v
-        = !std::is_base_of_v<
-              winrt::Windows::Foundation::IInspectable,
-              T> && std::is_base_of_v<winrt::Windows::Foundation::IUnknown, T>;
+        = !std::is_base_of_v<winrt::Windows::Foundation::IInspectable, T>
+          && std::is_base_of_v<winrt::Windows::Foundation::IUnknown, T>;
 
     template<typename T>
     constexpr bool is_enum_category_v
@@ -98,8 +97,8 @@ namespace py
 
     template<typename T>
     constexpr bool is_pinterface_category_v
-        = std::is_base_of_v<winrt::Windows::Foundation::IInspectable, T>&&
-            pinterface_checker<typename winrt::impl::category<T>::type>::value;
+        = std::is_base_of_v<winrt::Windows::Foundation::IInspectable, T>
+          && pinterface_checker<typename winrt::impl::category<T>::type>::value;
 
     struct delegate_callable
     {
@@ -1556,8 +1555,8 @@ namespace py
     struct converter<
         T,
         typename std::enable_if_t<(
-            is_interface_category_v<
-                T> || is_pinterface_category_v<T>)&&!is_specialized_interface_v<T>>>
+            is_interface_category_v<T>
+            || is_pinterface_category_v<T>)&&!is_specialized_interface_v<T>>>
     {
         static PyObject* convert(T const& instance) noexcept
         {
