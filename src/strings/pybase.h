@@ -656,7 +656,7 @@ namespace py
         if (view.itemsize != itemsize)
         {
             PyErr_Format(
-                PyExc_TypeError,
+                PyExc_BufferError,
                 "requires buffer with itemsize == %zd, have %zd",
                 itemsize,
                 view.ndim);
@@ -668,7 +668,7 @@ namespace py
         if (!view.format || std::strcmp(view.format, format))
         {
             PyErr_Format(
-                PyExc_TypeError,
+                PyExc_BufferError,
                 "requires buffer with format == \"%s\", have \"%s\"",
                 format,
                 view.format);
@@ -678,14 +678,16 @@ namespace py
         if (view.ndim != 1)
         {
             PyErr_Format(
-                PyExc_TypeError, "requires buffer with ndim == 1, have %d", view.ndim);
+                PyExc_BufferError,
+                "requires buffer with ndim == 1, have %d",
+                view.ndim);
             return false;
         }
 
         if (!view.strides || view.strides[0] != itemsize)
         {
             PyErr_Format(
-                PyExc_TypeError,
+                PyExc_BufferError,
                 "requires buffer with strides[0] == %zd, have %zd",
                 view.strides ? view.strides[0] : 0,
                 itemsize);
