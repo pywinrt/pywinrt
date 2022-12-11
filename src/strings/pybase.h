@@ -642,6 +642,151 @@ namespace py
         }
     }
 
+    /**
+     * Tests if @p view is compatible with @p itemsize and @p format
+     * @param [in]  view        A Python buffer view.
+     * @param [in]  itemsize    The required element size.
+     * @param [in]  format      The required element format.
+     * @returns @c true if the buffer is valid, otherwise sets Python error and returns
+     * @c false
+     */
+    static bool is_buffer_compatible(
+        Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept
+    {
+        if (view.itemsize != itemsize)
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "requires buffer with itemsize == %zd, have %zd",
+                itemsize,
+                view.ndim);
+            return false;
+        }
+
+        assert(format);
+
+        if (!view.format || std::strcmp(view.format, format))
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "requires buffer with format == \"%s\", have \"%s\"",
+                format,
+                view.format);
+            return false;
+        }
+
+        if (view.ndim != 1)
+        {
+            PyErr_Format(
+                PyExc_TypeError, "requires buffer with ndim == 1, have %d", view.ndim);
+            return false;
+        }
+
+        if (!view.strides || view.strides[0] != itemsize)
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "requires buffer with strides[0] == %zd, have %zd",
+                view.strides ? view.strides[0] : 0,
+                itemsize);
+            return false;
+        }
+
+        return true;
+    }
+
+    template<typename T, typename = void>
+    struct buffer
+    {
+        static bool is_compatible(Py_buffer const& view) noexcept
+        {
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::buffer<%s>::is_compatible() is not implemented",
+                typeid(T).name());
+            return false;
+        }
+    };
+
+    // PEP 3118 struct formats
+
+    template<typename T, typename = void>
+    constexpr const char* buffer_format = 0;
+
+    template<>
+    constexpr const char* buffer_format<bool> = "?";
+
+    template<>
+    constexpr const char* buffer_format<int8_t> = "b";
+
+    template<>
+    constexpr const char* buffer_format<uint8_t> = "B";
+
+    template<>
+    constexpr const char* buffer_format<int16_t> = "h";
+
+    template<>
+    constexpr const char* buffer_format<uint16_t> = "H";
+
+    template<>
+    constexpr const char* buffer_format<int32_t> = "i";
+
+    template<>
+    constexpr const char* buffer_format<uint32_t> = "I";
+
+    template<>
+    constexpr const char* buffer_format<int64_t> = "q";
+
+    template<>
+    constexpr const char* buffer_format<uint64_t> = "Q";
+
+    template<>
+    constexpr const char* buffer_format<float> = "f";
+
+    template<>
+    constexpr const char* buffer_format<double> = "d";
+
+    template<>
+    constexpr const char* buffer_format<char16_t> = "u";
+
+    template<>
+    constexpr const char* buffer_format<winrt::guid> = "T{I2H8B}";
+
+    template<>
+    constexpr const char* buffer_format<winrt::hstring> = "P";
+
+    template<>
+    constexpr const char* buffer_format<winrt::Windows::Foundation::IInspectable> = "P";
+
+    template<typename T>
+    constexpr const char* buffer_format<T, std::enable_if_t<is_class_category_v<T>>>
+        = "P";
+
+    template<typename T>
+    constexpr const char* buffer_format<T, std::enable_if_t<is_interface_category_v<T>>>
+        = "P";
+
+    template<typename T>
+    constexpr const char*
+        buffer_format<T, std::enable_if_t<is_pinterface_category_v<T>>>
+        = "P";
+
+    template<>
+    constexpr const char* buffer_format<winrt::Windows::Foundation::DateTime> = "q";
+
+    template<>
+    constexpr const char* buffer_format<winrt::Windows::Foundation::TimeSpan> = "q";
+
+    template<typename T>
+    struct buffer<typename T>
+    {
+        static bool is_compatible(Py_buffer const& view) noexcept
+        {
+            static_assert(buffer_format<T>);
+            return is_buffer_compatible(view, sizeof(T), buffer_format<T>);
+        }
+    };
+
     template<typename T, typename = void>
     struct converter
     {
@@ -1623,26 +1768,22 @@ namespace py
             throw_if_pyobj_null(obj);
 
             // this is assuming pybuf_view is always treated as read-only
-            if (PyObject_GetBuffer(obj, &view, PyBUF_SIMPLE) == -1)
+            if (PyObject_GetBuffer(obj, &view, PyBUF_C_CONTIGUOUS | PyBUF_FORMAT) == -1)
             {
                 throw python_exception();
             }
 
-            // we don't allow data with the wrong item size
-            if (view.itemsize != sizeof(value_type))
+            // TODO: if view.format == "P", we should try to verify the pointer type
+
+            if (!buffer<T>::is_compatible(view))
             {
-                pyobj_handle msg{PyUnicode_FromFormat(
-                    "itemsize is incorrect, expecting %zu but was %zi",
-                    sizeof(value_type),
-                    view.itemsize)};
-                PyErr_SetObject(PyExc_TypeError, msg.get());
                 PyBuffer_Release(&view);
 
                 throw python_exception();
             }
 
             this->m_data = reinterpret_cast<pointer>(view.buf);
-            this->m_size = view.len / view.itemsize;
+            this->m_size = view.shape[0];
         }
 
         ~pybuf_view()
@@ -1989,125 +2130,8 @@ namespace py
 
         const char* Format() noexcept override
         {
-            if constexpr (std::is_fundamental_v<T>)
-            {
-                if constexpr (std::is_same_v<T, bool>)
-                {
-                    return "?";
-                }
-                else if constexpr (std::is_same_v<T, char16_t>)
-                {
-                    return "u";
-                }
-                else if constexpr (std::is_same_v<T, int8_t>)
-                {
-                    return "b";
-                }
-                else if constexpr (std::is_same_v<T, uint8_t>)
-                {
-                    return "B";
-                }
-                else if constexpr (std::is_same_v<T, int16_t>)
-                {
-                    return "h";
-                }
-                else if constexpr (std::is_same_v<T, uint16_t>)
-                {
-                    return "H";
-                }
-                else if constexpr (std::is_same_v<T, int32_t>)
-                {
-                    return "i";
-                }
-                else if constexpr (std::is_same_v<T, uint32_t>)
-                {
-                    return "I";
-                }
-                else if constexpr (std::is_same_v<T, int64_t>)
-                {
-                    return "q";
-                }
-                else if constexpr (std::is_same_v<T, uint64_t>)
-                {
-                    return "Q";
-                }
-                else if constexpr (std::is_same_v<T, float>)
-                {
-                    return "f";
-                }
-                else if constexpr (std::is_same_v<T, double>)
-                {
-                    return "d";
-                }
-                else
-                {
-                    static_assert(false_type<T>, "unsupported fundamental type");
-                }
-            }
-            else
-            {
-                if constexpr (std::is_same_v<T, winrt::hstring>)
-                {
-                    static_assert(
-                        sizeof(winrt::hstring) == sizeof(void*),
-                        "assumption that hstring is pointer may not be correct");
-                    return "P";
-                }
-                else if constexpr (std::is_same_v<T, winrt::guid>)
-                {
-                    return "T{I2H8B}";
-                }
-                else if constexpr (std::is_same_v<
-                                       T,
-                                       winrt::Windows::Foundation::DateTime>)
-                {
-                    static_assert(
-                        sizeof(winrt::Windows::Foundation::DateTime)
-                        == sizeof(int64_t));
-                    return "q";
-                }
-                else if constexpr (std::is_same_v<
-                                       T,
-                                       winrt::Windows::Foundation::TimeSpan>)
-                {
-                    static_assert(
-                        sizeof(winrt::Windows::Foundation::TimeSpan)
-                        == sizeof(int64_t));
-                    return "q";
-                }
-                else if constexpr (
-                    std::is_same_v<
-                        T,
-                        winrt::Windows::Foundation::
-                            IInspectable> || py::is_class_category_v<T> || py::is_interface_category_v<T>)
-                {
-                    static_assert(sizeof(T) == sizeof(void*));
-                    return "P";
-                }
-                else if constexpr (std::is_same_v<T, winrt::Windows::Foundation::Point>)
-                {
-                    static_assert(
-                        sizeof(winrt::Windows::Foundation::Point) == 2 * sizeof(float));
-                    return "2f";
-                }
-                else if constexpr (std::is_same_v<T, winrt::Windows::Foundation::Size>)
-                {
-                    static_assert(
-                        sizeof(winrt::Windows::Foundation::Size) == 2 * sizeof(float));
-                    return "2f";
-                }
-                else if constexpr (std::is_same_v<T, winrt::Windows::Foundation::Rect>)
-                {
-                    static_assert(
-                        sizeof(winrt::Windows::Foundation::Rect) == 4 * sizeof(float));
-                    return "4f";
-                }
-                else
-                {
-                    // NULL means bytes
-                    return nullptr;
-                }
-            }
+            static_assert(buffer_format<T>);
+            return buffer_format<T>;
         }
 
         uint32_t Size() noexcept override

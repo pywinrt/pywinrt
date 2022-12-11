@@ -253,7 +253,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.shape, (2,))
             self.assertEqual(m.strides, (8,))
             self.assertEqual(m.itemsize, 8)
-            self.assertEqual(m.format, "2f")
+            self.assertEqual(m.format, "T{f:x:f:y:}")
             self.assertTrue(m.c_contiguous)
 
     def test_windows_foundation_size(self):
@@ -272,7 +272,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.shape, (2,))
             self.assertEqual(m.strides, (8,))
             self.assertEqual(m.itemsize, 8)
-            self.assertEqual(m.format, "2f")
+            self.assertEqual(m.format, "T{f:width:f:height:}")
             self.assertTrue(m.c_contiguous)
 
     def test_windows_foundation_rect(self):
@@ -291,7 +291,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.shape, (2,))
             self.assertEqual(m.strides, (16,))
             self.assertEqual(m.itemsize, 16)
-            self.assertEqual(m.format, "4f")
+            self.assertEqual(m.format, "T{f:x:f:y:f:width:f:height:}")
             self.assertTrue(m.c_contiguous)
 
     def test_runtime_type(self):

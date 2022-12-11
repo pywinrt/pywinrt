@@ -60,6 +60,7 @@ namespace pywinrt
         {
             writer::indent_guard g{w};
 
+            settings.filter.bind_each<write_struct_buffer_format_decl>(members.structs)(w);
             settings.filter.bind_each<write_py_type_specialization_struct>(
                 members.enums)(w);
             settings.filter.bind_each<write_python_type_specialization_struct>(

@@ -268,6 +268,42 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], times[x])
 
+    def test_create_point_array(self):
+        actual = [wf.Point(x, x+1) for x in range(5)]
+        o = wf.PropertyValue.create_point_array(Array(wf.Point, actual))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.POINT_ARRAY)
+        a = ipv.get_point_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x].x, actual[x].x)
+            self.assertEqual(a[x].y, actual[x].y)
+
+    def test_create_size_array(self):
+        actual = [wf.Size(x, x+1) for x in range(5)]
+        o = wf.PropertyValue.create_size_array(Array(wf.Size, actual))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.SIZE_ARRAY)
+        a = ipv.get_size_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x].width, actual[x].width)
+            self.assertEqual(a[x].height, actual[x].height)
+
+    def test_create_rect_array(self):
+        actual = [wf.Rect(x, x+1, x+2, x+3) for x in range(5)]
+        o = wf.PropertyValue.create_rect_array(Array(wf.Rect, actual))
+        ipv = wf.IPropertyValue._from(o)
+        self.assertEqual(ipv.type, wf.PropertyType.RECT_ARRAY)
+        a = ipv.get_rect_array()
+        self.assertEqual(len(a), 5)
+        for x in range(5):
+            self.assertEqual(a[x].x, actual[x].x)
+            self.assertEqual(a[x].y, actual[x].y)
+            self.assertEqual(a[x].width, actual[x].width)
+            self.assertEqual(a[x].height, actual[x].height)
+
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -2940,6 +2940,109 @@ struct pinterface_python_type<%<%>>
 
 #pragma region struct functions
 
+    static void write_struct_buffer_format_string(writer& w, TypeDef const& type);
+
+    /**
+     * Writes the PEP 3118 format string for the type of a field.
+     */
+    static void write_struct_buffer_format_type(writer& w, Field const& field)
+    {
+        call(
+            get_struct_field_semantics(field, true),
+            [&](fundamental_type type)
+            {
+                switch (type)
+                {
+                case fundamental_type::Boolean:
+                    w.write("?");
+                    break;
+                case fundamental_type::Char:
+                    w.write("u");
+                    break;
+                case fundamental_type::Int8:
+                    w.write("b");
+                    break;
+                case fundamental_type::UInt8:
+                    w.write("B");
+                    break;
+                case fundamental_type::Int16:
+                    w.write("h");
+                    break;
+                case fundamental_type::UInt16:
+                    w.write("H");
+                    break;
+                case fundamental_type::Int32:
+                    w.write("i");
+                    break;
+                case fundamental_type::UInt32:
+                    w.write("I");
+                    break;
+                case fundamental_type::Int64:
+                    w.write("q");
+                    break;
+                case fundamental_type::UInt64:
+                    w.write("Q");
+                    break;
+                case fundamental_type::Float:
+                    w.write("f");
+                    break;
+                case fundamental_type::Double:
+                    w.write("d");
+                    break;
+                case fundamental_type::String:
+                    w.write("P");
+                    break;
+                default:
+                    throw_invalid("invalid fundamental type");
+                }
+            },
+            [&]([[maybe_unused]] TypeDef const& type)
+            {
+                assert(get_category(type) == category::struct_type);
+                w.write("%", bind<write_struct_buffer_format_string>(type));
+            },
+            [](auto)
+            {
+                throw_invalid("invalid struct field type");
+            });
+    }
+
+    /**
+     * Writes the PEP 3118 format string for the type of a struct.
+     */
+    static void write_struct_buffer_format_string(writer& w, TypeDef const& type)
+    {
+        w.write("T{");
+
+        for (auto&& field : type.FieldList())
+        {
+            w.write(
+                "%:%:",
+                bind<write_struct_buffer_format_type>(field),
+                bind<write_lower_snake_case_python_identifier>(field.Name()));
+        }
+
+        w.write("}");
+    }
+
+    /**
+     * Writes a const char* declaration for the PEP 3118 buffer format string
+     * constant describing the layout of a struct.
+     */
+    void write_struct_buffer_format_decl(writer& w, TypeDef const& type)
+    {
+        if (is_customized_struct(type))
+        {
+            return;
+        }
+
+        w.write("template<>\n");
+        w.write(
+            "constexpr const char* buffer_format<%> = \"%\";\n\n",
+            type,
+            bind<write_struct_buffer_format_string>(type));
+    }
+
     void write_struct_converter_decl(writer& w, TypeDef const& type)
     {
         if (is_customized_struct(type))
