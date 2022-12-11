@@ -368,14 +368,12 @@ namespace pywinrt
 
     bool implements_iasync(TypeDef const& type)
     {
-        return get_category(type) == category::interface_type
-               && implements_interface(
-                   type,
-                   {std::make_tuple("Windows.Foundation", "IAsyncAction"),
-                    std::make_tuple("Windows.Foundation", "IAsyncActionWithProgress`1"),
-                    std::make_tuple("Windows.Foundation", "IAsyncOperation`1"),
-                    std::make_tuple(
-                        "Windows.Foundation", "IAsyncOperationWithProgress`2")});
+        return implements_interface(
+            type,
+            {std::make_tuple("Windows.Foundation", "IAsyncAction"),
+             std::make_tuple("Windows.Foundation", "IAsyncActionWithProgress`1"),
+             std::make_tuple("Windows.Foundation", "IAsyncOperation`1"),
+             std::make_tuple("Windows.Foundation", "IAsyncOperationWithProgress`2")});
     }
 
     bool implements_iiterable(TypeDef const& type)

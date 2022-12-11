@@ -5,6 +5,8 @@ import uuid
 
 import winrt.windows.storage.streams as wss
 
+from ._util import async_test
+
 
 class TestWindowsStorageStreams(unittest.TestCase):
     def test_DataReader(self):
@@ -209,3 +211,21 @@ class TestWindowsStorageStreams(unittest.TestCase):
                     ),
                 ):
                     self.assertEqual(actual, expected)
+
+    @async_test
+    async def test_async(self):
+        """
+        Regression test for https://github.com/pywinrt/python-winsdk/issues/21
+        """
+        stream = wss.InMemoryRandomAccessStream()
+
+        writer = wss.DataWriter(stream)
+        writer.write_bytes(b"X" * 10)
+        num = await writer.store_async()
+        self.assertEqual(num, 10)
+
+        stream.seek(0)
+
+        reader = wss.DataReader(stream)
+        num = await reader.load_async(10)
+        self.assertEqual(num, 10)

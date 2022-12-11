@@ -2052,9 +2052,7 @@ namespace py
         try
         {
             async.Completed(
-                [cb = std::move(cb)](
-                    Async const& operation,
-                    winrt::Windows::Foundation::AsyncStatus status) mutable
+                [cb = std::move(cb)](auto const& operation, auto status) mutable
                 {
                     winrt::handle_type<py::gil_state_traits> gil_state{
                         PyGILState_Ensure()};

@@ -3816,14 +3816,17 @@ if (!return_value)
                         return false;
                     });
 
-                if (is_reference_type)
+                auto is_nullable
+                    = is_reference_type && !implements_iasync(get_typedef(t));
+
+                if (is_nullable)
                 {
                     w.write("typing.Optional[");
                 }
 
                 w.write_python(t);
 
-                if (is_reference_type)
+                if (is_nullable)
                 {
                     w.write("]");
                 }
@@ -4442,25 +4445,55 @@ if (!return_value)
                     });
             }
 
-            if (ns == "Windows.Foundation")
+            if (implements_iasync(type))
             {
-                if (name == "IAsyncAction" || name == "IAsyncActionWithProgress`1")
+                std::string return_type = "None";
+
+                if (type.TypeNamespace() == "Windows.Foundation"
+                    && (type.TypeName() == "IAsyncOperation`1"
+                        || type.TypeName() == "IAsyncOperationWithProgress`2"))
                 {
-                    w.write(
-                        "def __await__(self) -> typing.Generator[typing.Any, None, None]: ...\n");
+                    return_type = type.GenericParam().first.Name();
                 }
-                else if (name == "IAsyncOperation`1")
+                else
                 {
-                    w.write(
-                        "def __await__(self) -> typing.Generator[typing.Any, None, %]: ...\n",
-                        bind<write_template_arg_name>(type.GenericParam().first));
+                    for (auto&& ii : type.InterfaceImpl())
+                    {
+                        // REVISIT: this is probably not as robust as it should
+                        // be since it assumes that any class that implements
+                        // IAsyncOperation* will refernce it this way. We may
+                        // need to make this recusive and/or check TypeDef or TypeRef.
+
+                        if (ii.Interface().type() != TypeDefOrRef::TypeSpec)
+                        {
+                            continue;
+                        }
+
+                        auto generic_inst
+                            = ii.Interface().TypeSpec().Signature().GenericTypeInst();
+
+                        auto generic_type = get_typedef(generic_inst.GenericType());
+
+                        if (generic_type.TypeNamespace() != "Windows.Foundation"
+                            || (generic_type.TypeName() != "IAsyncOperation`1"
+                                && generic_type.TypeName()
+                                       != "IAsyncOperationWithProgress`2"))
+                        {
+                            continue;
+                        }
+
+                        auto arg = *generic_inst.GenericArgs().first;
+
+                        return_type
+                            = w.write_temp("%", bind<write_nullable_python_type>(arg));
+
+                        break;
+                    }
                 }
-                else if (name == "IAsyncOperationWithProgress`2")
-                {
-                    w.write(
-                        "def __await__(self) -> typing.Generator[typing.Any, None, %]: ...\n",
-                        bind<write_template_arg_name>(type.GenericParam().first));
-                }
+
+                w.write(
+                    "def __await__(self) -> typing.Generator[typing.Any, None, %]: ...\n",
+                    return_type);
             }
 
             if (!is_ptype(type) || is_static_class(type))
