@@ -7,7 +7,7 @@ jobs:
   build_and_publish:
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: |
           $version = $env:GITHUB_REF.Replace("refs/tags/v", "")
           ./scripts/build_pywinrt_nuget.cmd "$version"

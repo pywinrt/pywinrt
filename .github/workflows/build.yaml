@@ -7,7 +7,7 @@ jobs:
   pywinrt:
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: ./scripts/build_pywinrt_nuget.cmd
       - uses: actions/upload-artifact@v2
         with:
@@ -23,7 +23,7 @@ jobs:
         release-type: ['Release'] # no "Debug" - https://github.com/actions/setup-python/issues/86
     name: Python ${{ matrix.python-version }} ${{ matrix.architecture }} ${{ matrix.release-type }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
