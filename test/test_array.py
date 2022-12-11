@@ -303,8 +303,8 @@ class TestWinRTArray(unittest.TestCase):
         with memoryview(a) as m:
             self.assertEqual(m.ndim, 1)
             self.assertEqual(m.shape, (1,))
-            self.assertEqual(m.strides, (8,))
-            self.assertEqual(m.itemsize, 8)
+            self.assertEqual(m.strides, (pointer_size,))
+            self.assertEqual(m.itemsize, pointer_size)
             self.assertEqual(m.format, "P")
             self.assertTrue(m.c_contiguous)
 
@@ -317,7 +317,7 @@ class TestWinRTArray(unittest.TestCase):
         with memoryview(a) as m:
             self.assertEqual(m.ndim, 1)
             self.assertEqual(m.shape, (2,))
-            self.assertEqual(m.strides, (8,))
-            self.assertEqual(m.itemsize, 8)
+            self.assertEqual(m.strides, (pointer_size,))
+            self.assertEqual(m.itemsize, pointer_size)
             self.assertEqual(m.format, "P")
             self.assertTrue(m.c_contiguous)
