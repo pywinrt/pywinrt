@@ -17,6 +17,8 @@
 - Moved top-level package `__init__.py` to `system` subpackage.
 - Moved fundamental type aliases to `system` package and made runtime types.
 - Array output parameters now return `system.Array` instead of `list`.
+- Fill arrays now take a buffer as the argument and fill that buffer instead
+  of taking a size as the argument and returning a new array.
 
 ### Fixed
 - Fixed checking wrong number of input parameters on methods with array parameters.

@@ -625,9 +625,7 @@ namespace pywinrt
         auto category = get_param_category(param);
 
         return (
-            category == param_category::in
-            || category == param_category::pass_array
-            // Note, fill array acts as in and out param in Python
+            category == param_category::in || category == param_category::pass_array
             || category == param_category::fill_array);
     }
 
@@ -635,7 +633,7 @@ namespace pywinrt
      * Tests if @p param should be treated as an output parameter (part of
      * return tuple) in Python.
      *
-     * This matches WinRT output parameters, receive arrays and fill arrays.
+     * This matches WinRT output parameters and receive arrays.
      *
      * @param [in]  param   The parameter to test.
      * @returns @c true if the parameter matches, otherwise @c false.
@@ -644,11 +642,8 @@ namespace pywinrt
     {
         auto category = get_param_category(param);
 
-        return (
-            category == param_category::out
-            || category == param_category::receive_array
-            // Note, fill array acts as in and out param in Python
-            || category == param_category::fill_array);
+        return category == param_category::out
+               || category == param_category::receive_array;
     }
 
     /**

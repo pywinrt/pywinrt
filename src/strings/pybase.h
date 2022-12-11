@@ -1754,7 +1754,7 @@ namespace py
     /**
      * A wrapper around the Python buffer protocol that implements winrt::array_view.
      */
-    template<typename T>
+    template<typename T, bool writeable>
     struct pybuf_view : winrt::array_view<T>
     {
         using typename winrt::array_view<T>::value_type;
@@ -1770,7 +1770,12 @@ namespace py
             throw_if_pyobj_null(obj);
 
             // this is assuming pybuf_view is always treated as read-only
-            if (PyObject_GetBuffer(obj, &view, PyBUF_C_CONTIGUOUS | PyBUF_FORMAT) == -1)
+            if (PyObject_GetBuffer(
+                    obj,
+                    &view,
+                    PyBUF_C_CONTIGUOUS | PyBUF_FORMAT
+                        | (writeable ? PyBUF_WRITABLE : 0))
+                == -1)
             {
                 throw python_exception();
             }
@@ -1797,10 +1802,10 @@ namespace py
         Py_buffer view;
     };
 
-    template<typename T>
-    struct converter<pybuf_view<T>>
+    template<typename T, bool writeable>
+    struct converter<pybuf_view<T, writeable>>
     {
-        static PyObject* convert(pybuf_view<T> const& instance) noexcept
+        static PyObject* convert(pybuf_view<T, writeable> const& instance) noexcept
         {
             PyErr_Format(
                 PyExc_NotImplementedError,
@@ -1809,11 +1814,11 @@ namespace py
             return nullptr;
         }
 
-        static pybuf_view<T> convert_to(PyObject* obj)
+        static pybuf_view<T, writeable> convert_to(PyObject* obj)
         {
             throw_if_pyobj_null(obj);
 
-            return pybuf_view<T>{obj};
+            return pybuf_view<T, writeable>{obj};
         }
     };
 

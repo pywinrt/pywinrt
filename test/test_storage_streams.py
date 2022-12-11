@@ -86,7 +86,11 @@ class TestWindowsStorageStreams(unittest.TestCase):
                 self.assertEqual(reader.read_boolean(), bool_value)
                 self.assertEqual(bytes(reader.read_buffer(3)), buffer_value)
                 self.assertEqual(reader.read_byte(), byte_value)
-                self.assertEqual(bytes(reader.read_bytes(3)), bytes_value)
+                # don't modify read-only buffer
+                self.assertRaises(BufferError, lambda: reader.read_bytes(bytes(3)))
+                read_bytes = bytearray(3)
+                reader.read_bytes(read_bytes)
+                self.assertEqual(read_bytes, bytes_value)
                 self.assertEqual(
                     reader.read_date_time(),
                     datetime(1601, 1, 2, 3, 4, 5, 6007, timezone.utc),

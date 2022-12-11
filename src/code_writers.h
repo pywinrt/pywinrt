@@ -1015,8 +1015,9 @@ static PyModuleDef module_def
         writer& w, MethodDef const& method, method_signature::param_t const& param)
     {
         auto sequence = param.first.Sequence() - 1;
+        auto category = get_param_category(param);
 
-        switch (get_param_category(param))
+        switch (category)
         {
         case param_category::in:
             w.write(
@@ -1033,24 +1034,13 @@ static PyModuleDef module_def
                 bind<write_out_param_init>(param));
             break;
         case param_category::pass_array:
-            w.write(
-                "auto % = py::convert_to<py::pybuf_view<%>>(%);\n",
-                bind<write_param_name>(param),
-                param.second->Type(),
-                bind<write_convert_to_params>(method, sequence));
-            break;
         case param_category::fill_array:
             w.write(
-                "auto %_count = py::convert_to<winrt::com_array<%>::size_type>(%);\n",
+                "auto % = py::convert_to<py::pybuf_view<%, %>>(%);\n",
                 bind<write_param_name>(param),
                 param.second->Type(),
+                category == param_category::fill_array ? "true" : "false",
                 bind<write_convert_to_params>(method, sequence));
-            w.write(
-                "winrt::com_array<%> % ( %_count, py::empty_instance<%>::get() );\n",
-                param.second->Type(),
-                bind<write_param_name>(param),
-                bind<write_param_name>(param),
-                param.second->Type());
             break;
         case param_category::receive_array:
             w.write(
@@ -3883,17 +3873,12 @@ if (!return_value)
     {
         switch (get_param_category(param))
         {
-        // regular parameters are just `name`
         case param_category::in:
         case param_category::pass_array:
+        case param_category::fill_array:
             w.write(
                 "%",
                 bind<write_lower_snake_case_python_identifier>(param.first.Name()));
-            break;
-
-        // fill array parameters just require the size of the array to be allocated
-        case param_category::fill_array:
-            w.write("%_size", bind<write_lower_snake_case>(param.first.Name()));
             break;
 
         // this method only handles input parameters, receive arrays are output
@@ -3944,15 +3929,11 @@ if (!return_value)
 
         // array parameters accept any array-like (buffer protocol) object
         case param_category::pass_array:
+        case param_category::fill_array:
             w.write(
                 "%.system.Array[%]",
                 settings.module,
                 bind<write_nonnullable_python_type>(param.second->Type()));
-            break;
-
-        // fill array parameters just require the size of the array to be allocated
-        case param_category::fill_array:
-            w.write("%.system.UInt32", settings.module);
             break;
 
         // this method only handles input parameters, receive arrays are output
@@ -3988,7 +3969,6 @@ if (!return_value)
 
         // array parameters return a System.Array
         case param_category::receive_array:
-        case param_category::fill_array:
             w.write(
                 "%.system.Array[%]",
                 settings.module,
@@ -3998,6 +3978,7 @@ if (!return_value)
         // this method only handles ouput parameters
         case param_category::in:
         case param_category::pass_array:
+        case param_category::fill_array:
         default:
             throw_invalid("invalid in param category");
         }
