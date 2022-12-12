@@ -59,6 +59,6 @@ class TestUri(unittest.TestCase):
         self.assertEqual(e1.name, "platform")
         self.assertEqual(e1.value, "windows")
 
-        # t = qp.IndexOf(e0)
-        # self.assertTrue(t[0])
-        # self.assertEqual(t[1], 0)
+        t = qp.index_of(e0)
+        self.assertTrue(t[0])
+        self.assertEqual(t[1], 0)
