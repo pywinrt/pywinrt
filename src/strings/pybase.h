@@ -262,6 +262,9 @@ namespace py
          * @c false.
          */
         virtual bool Set(uint32_t index, PyObject* item) noexcept = 0;
+
+        // needed to avoid leaks with derived types when used with std::unique_ptr
+        virtual ~Array() = default;
     };
 
     /**
