@@ -20,9 +20,9 @@ namespace py::cpp::_winrt
      * Allocates memory for a new System.Array object.
      * @param [in]  subtype The type to use for allocation.
      */
-    static PyObject* Array_Alloc(PyTypeObject* subtype)
+    static Array* Array_Alloc(PyTypeObject* subtype)
     {
-        auto self = subtype->tp_alloc(subtype, 0);
+        auto self = reinterpret_cast<Array*>(subtype->tp_alloc(subtype, 0));
 
         if (!self)
         {
@@ -30,7 +30,7 @@ namespace py::cpp::_winrt
         }
 
         // call C++ constructors on memory allocated from CPython heap
-        new (&reinterpret_cast<Array*>(self)->array) std::unique_ptr<py::Array>{};
+        new (&self->array) std::unique_ptr<py::Array>{};
 
         return self;
     }
@@ -49,16 +49,16 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
-        pyobj_handle self{Array_Alloc(type)};
+        auto self = Array_Alloc(type);
 
         if (!self)
         {
             return nullptr;
         }
 
-        reinterpret_cast<Array*>(self.get())->array = std::move(array);
+        self->array = std::move(array);
 
-        return self.detach();
+        return reinterpret_cast<PyObject*>(self);
     }
 
     /**
@@ -86,12 +86,14 @@ namespace py::cpp::_winrt
     static PyObject* Array_tp_new(
         PyTypeObject* subtype, PyObject* args, PyObject* kwds) noexcept
     {
-        pyobj_handle self{Array_Alloc(subtype)};
+        auto self = Array_Alloc(subtype);
 
         if (!self)
         {
             return nullptr;
         }
+
+        pyobj_handle self_handle{reinterpret_cast<PyObject*>(self)};
 
         PyObject* arg0;
         PyObject* arg1 = nullptr;
@@ -107,63 +109,51 @@ namespace py::cpp::_winrt
         {
             if (PyUnicode_CompareWithASCIIString(arg0, "?") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<bool>>();
+                self->array = std::make_unique<py::ComArray<bool>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "b") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<int8_t>>();
+                self->array = std::make_unique<py::ComArray<int8_t>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "B") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<uint8_t>>();
+                self->array = std::make_unique<py::ComArray<uint8_t>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "h") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<int16_t>>();
+                self->array = std::make_unique<py::ComArray<int16_t>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "H") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<uint16_t>>();
+                self->array = std::make_unique<py::ComArray<uint16_t>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "i") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<int32_t>>();
+                self->array = std::make_unique<py::ComArray<int32_t>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "I") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<uint32_t>>();
+                self->array = std::make_unique<py::ComArray<uint32_t>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "q") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<int64_t>>();
+                self->array = std::make_unique<py::ComArray<int64_t>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "Q") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<uint64_t>>();
+                self->array = std::make_unique<py::ComArray<uint64_t>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "f") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<float>>();
+                self->array = std::make_unique<py::ComArray<float>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "d") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<double>>();
+                self->array = std::make_unique<py::ComArray<double>>();
             }
             else if (PyUnicode_CompareWithASCIIString(arg0, "u") == 0)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<char16_t>>();
+                self->array = std::make_unique<py::ComArray<char16_t>>();
             }
             else
             {
@@ -197,7 +187,7 @@ namespace py::cpp::_winrt
             if (assign_array)
             {
                 pyobj_handle result{
-                    PyObject_CallFunction(assign_array.get(), "O", self.get())};
+                    PyObject_CallFunction(assign_array.get(), "O", self)};
 
                 if (!result)
                 {
@@ -206,43 +196,41 @@ namespace py::cpp::_winrt
             }
             else if (type == &PyUnicode_Type)
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<winrt::hstring>>();
+                self->array = std::make_unique<py::ComArray<winrt::hstring>>();
             }
             else if (std::strcmp(type->tp_name, "UUID") == 0) // TODO: stricter
                                                               // check
             {
-                reinterpret_cast<Array*>(self.get())->array
-                    = std::make_unique<py::ComArray<winrt::guid>>();
+                self->array = std::make_unique<py::ComArray<winrt::guid>>();
             }
             else if (type == PyDateTimeAPI->DateTimeType)
             {
-                reinterpret_cast<Array*>(self.get())->array = std::make_unique<
+                self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::DateTime>>();
             }
             else if (type == PyDateTimeAPI->DeltaType)
             {
-                reinterpret_cast<Array*>(self.get())->array = std::make_unique<
+                self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::TimeSpan>>();
             }
             else if (type == py::get_python_type<winrt::Windows::Foundation::Point>())
             {
-                reinterpret_cast<Array*>(self.get())->array = std::make_unique<
+                self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::Point>>();
             }
             else if (type == py::get_python_type<winrt::Windows::Foundation::Size>())
             {
-                reinterpret_cast<Array*>(self.get())->array = std::make_unique<
+                self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::Size>>();
             }
             else if (type == py::get_python_type<winrt::Windows::Foundation::Rect>())
             {
-                reinterpret_cast<Array*>(self.get())->array = std::make_unique<
+                self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::Rect>>();
             }
             else if (type == py::winrt_type<Object>::get_python_type())
             {
-                reinterpret_cast<Array*>(self.get())->array = std::make_unique<
+                self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::IInspectable>>();
             }
             else
@@ -263,7 +251,7 @@ namespace py::cpp::_winrt
         if (!arg1)
         {
             // no args means empty array
-            return self.detach();
+            return self_handle.detach();
         }
 
         if (PyIndex_Check(arg1))
@@ -295,12 +283,12 @@ namespace py::cpp::_winrt
                     return nullptr;
                 }
 
-                if (!reinterpret_cast<Array*>(self.get())->array->Alloc(size))
+                if (!self->array->Alloc(size))
                 {
                     return nullptr;
                 }
 
-                return self.detach();
+                return self_handle.detach();
             }
         }
 
@@ -317,18 +305,14 @@ namespace py::cpp::_winrt
                 = std::unique_ptr<Py_buffer, decltype(&PyBuffer_Release)>;
             py_buffer_ptr{&view, &PyBuffer_Release};
 
-            if (view.itemsize
-                != reinterpret_cast<Array*>(self.get())->array->ValueSize())
+            if (view.itemsize != self->array->ValueSize())
             {
                 PyErr_SetString(PyExc_TypeError, "itemsize is incorrect");
                 return nullptr;
             }
 
             if (view.format == nullptr
-                || std::strcmp(
-                       view.format,
-                       reinterpret_cast<Array*>(self.get())->array->Format())
-                       != 0)
+                || std::strcmp(view.format, self->array->Format()) != 0)
             {
                 PyErr_SetString(PyExc_TypeError, "format is incorrect");
                 return nullptr;
@@ -342,23 +326,22 @@ namespace py::cpp::_winrt
                 return nullptr;
             }
 
-            if (!reinterpret_cast<Array*>(self.get())->array->Alloc(size))
+            if (!self->array->Alloc(size))
             {
                 return nullptr;
             }
 
             if (PyBuffer_ToContiguous(
-                    reinterpret_cast<Array*>(self.get())->array->Data(),
+                    self->array->Data(),
                     &view,
-                    reinterpret_cast<Array*>(self.get())->array->Size()
-                        * reinterpret_cast<Array*>(self.get())->array->ValueSize(),
+                    self->array->Size() * self->array->ValueSize(),
                     'C')
                 < 0)
             {
                 return nullptr;
             }
 
-            return self.detach();
+            return self_handle.detach();
         }
 
         if (PyList_CheckExact(arg1) || PyTuple_CheckExact(arg1))
@@ -373,24 +356,22 @@ namespace py::cpp::_winrt
                 return nullptr;
             }
 
-            if (!reinterpret_cast<Array*>(self.get())->array->Alloc(size))
+            if (!self->array->Alloc(size))
             {
                 return nullptr;
             }
 
             PyObject** items = PySequence_Fast_ITEMS(arg1);
 
-            for (uint32_t i = 0;
-                 i < reinterpret_cast<Array*>(self.get())->array->Size();
-                 i++)
+            for (uint32_t i = 0; i < self->array->Size(); i++)
             {
-                if (!reinterpret_cast<Array*>(self.get())->array->Set(i, items[i]))
+                if (!self->array->Set(i, items[i]))
                 {
                     return nullptr;
                 }
             }
 
-            return self.detach();
+            return self_handle.detach();
         }
 
         PyErr_Format(
@@ -401,10 +382,10 @@ namespace py::cpp::_winrt
         return nullptr;
     }
 
-    static void Array_tp_dealloc(PyObject* self) noexcept
+    static void Array_tp_dealloc(Array* self) noexcept
     {
         PyTypeObject* tp = Py_TYPE(self);
-        std::destroy_at(&reinterpret_cast<Array*>(self)->array);
+        std::destroy_at(&self->array);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
@@ -418,17 +399,17 @@ namespace py::cpp::_winrt
 #endif
         {}};
 
-    static Py_ssize_t Array_sq_length(PyObject* self) noexcept
+    static Py_ssize_t Array_sq_length(Array* self) noexcept
     {
-        return reinterpret_cast<Array*>(self)->array->Size();
+        return self->array->Size();
     }
 
-    PyObject* Array_sq_item(PyObject* self, Py_ssize_t index) noexcept
+    PyObject* Array_sq_item(Array* self, Py_ssize_t index) noexcept
     {
-        return reinterpret_cast<Array*>(self)->array->At(index);
+        return self->array->At(index);
     }
 
-    static int Array_bf_getbuffer(PyObject* self, Py_buffer* view, int flags) noexcept
+    static int Array_bf_getbuffer(Array* self, Py_buffer* view, int flags) noexcept
     {
         view->obj = nullptr;
 
@@ -442,19 +423,16 @@ namespace py::cpp::_winrt
 
         // required fields
         Py_INCREF(self);
-        view->obj = self;
-        view->buf
-            = reinterpret_cast<void*>(reinterpret_cast<Array*>(self)->array->Data());
+        view->obj = reinterpret_cast<PyObject*>(self);
+        view->buf = reinterpret_cast<void*>(self->array->Data());
         view->len
-            = static_cast<Py_ssize_t>(reinterpret_cast<Array*>(self)->array->Size())
-              * reinterpret_cast<Array*>(self)->array->ValueSize();
-        view->itemsize = reinterpret_cast<Array*>(self)->array->ValueSize();
+            = static_cast<Py_ssize_t>(self->array->Size()) * self->array->ValueSize();
+        view->itemsize = self->array->ValueSize();
         view->ndim = 1;
 
         if ((flags & PyBUF_FORMAT) == PyBUF_FORMAT)
         {
-            view->format
-                = const_cast<char*>(reinterpret_cast<Array*>(self)->array->Format());
+            view->format = const_cast<char*>(self->array->Format());
         }
         else
         {
@@ -465,8 +443,8 @@ namespace py::cpp::_winrt
         {
             // HACK: using internal as a Py_ssize_t value so that we don't have
             // to allocate/free the extra info
-            view->internal = reinterpret_cast<void*>(
-                static_cast<uintptr_t>(reinterpret_cast<Array*>(self)->array->Size()));
+            view->internal
+                = reinterpret_cast<void*>(static_cast<uintptr_t>(self->array->Size()));
             view->shape = reinterpret_cast<Py_ssize_t*>(&view->internal);
         }
         else
@@ -490,7 +468,8 @@ namespace py::cpp::_winrt
     }
 
 #if PY_VERSION_HEX < 0x03090000
-    PyBufferProcs Array_buffer_procs = {Array_bf_getbuffer, nullptr};
+    PyBufferProcs Array_buffer_procs
+        = {reinterpret_cast<getbufferproc>(Array_bf_getbuffer), nullptr};
 #endif
 
     static PyType_Slot Array_type_slots[] = {
