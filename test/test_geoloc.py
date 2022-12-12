@@ -94,7 +94,3 @@ class TestGeolocation(unittest.TestCase):
         basic_pos = coord.point.position
         lat = basic_pos.latitude
         self.assertEqual(type(lat), float)
-
-
-if __name__ == "__main__":
-    unittest.main()

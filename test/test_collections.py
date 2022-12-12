@@ -102,7 +102,3 @@ class TestCollections(unittest.TestCase):
 
         called = await asyncio.wait_for(future, 1)
         self.assertTrue(called)
-
-
-if __name__ == "__main__":
-    unittest.main()

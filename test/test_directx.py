@@ -29,6 +29,3 @@ class TestDirectX(unittest.TestCase):
         msd2 = sd.multisample_description
         self.assertEqual(msd.count, 1)
         self.assertEqual(msd.quality, 2)
-
-if __name__ == '__main__':
-    unittest.main()

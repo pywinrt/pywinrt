@@ -31,6 +31,3 @@ class TestBuffer(unittest.TestCase):
         mb = wss.Buffer.create_memory_buffer_over_i_buffer(buf)
         with mb.create_reference() as mbr, memoryview(mbr) as mv:
             self.assertEqual(mv, data)
-
-if __name__ == '__main__':
-    unittest.main()

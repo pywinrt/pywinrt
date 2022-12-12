@@ -364,6 +364,3 @@ class TestJson(unittest.TestCase):
         self.assertEqual(v, 16)
 
 # todo: GetMany, iterator, sequence
-
-if __name__ == '__main__':
-    unittest.main()

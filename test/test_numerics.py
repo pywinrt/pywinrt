@@ -38,6 +38,3 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(n.y, 2.0)
         self.assertEqual(n.z, 3.0)
         self.assertEqual(p.d, 4.0)
-    
-if __name__ == '__main__':
-    unittest.main()

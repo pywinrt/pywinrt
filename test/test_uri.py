@@ -62,8 +62,3 @@ class TestUri(unittest.TestCase):
         # t = qp.IndexOf(e0)
         # self.assertTrue(t[0])
         # self.assertEqual(t[1], 0)
-
-    
-
-if __name__ == '__main__':
-    unittest.main()

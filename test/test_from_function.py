@@ -11,6 +11,3 @@ class TestQueryInterface(unittest.TestCase):
         o = propset.lookup("strmap")
         strmap = wfc.StringMap._from(o)
         self.assertEqual(type(strmap), wfc.StringMap)
-
-if __name__ == '__main__':
-    unittest.main()

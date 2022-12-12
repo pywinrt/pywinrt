@@ -16,6 +16,3 @@ class TestBuffer(unittest.TestCase):
 
         for i in range(SIZE):
             self.assertEqual(reader.read_byte(), i)
-
-if __name__ == '__main__':
-    unittest.main()

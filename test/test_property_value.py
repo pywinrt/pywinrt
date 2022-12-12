@@ -302,8 +302,3 @@ class TestPropertyValue(unittest.TestCase):
             self.assertEqual(a[x].y, actual[x].y)
             self.assertEqual(a[x].width, actual[x].width)
             self.assertEqual(a[x].height, actual[x].height)
-
-
-
-if __name__ == '__main__':
-    unittest.main()
