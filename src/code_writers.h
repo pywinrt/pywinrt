@@ -938,16 +938,7 @@ static PyModuleDef module_def
             writer::indent_guard g{w};
 
             w.write("auto tp = Py_TYPE(self);\n");
-
-            if (is_ptype(type))
-            {
-                w.write("self->obj.~unique_ptr();\n");
-            }
-            else
-            {
-                w.write("self->obj.~@();\n", type.TypeName());
-            }
-
+            w.write("std::destroy_at(&self->obj);\n");
             w.write("tp->tp_free(self);\n");
             w.write("Py_DECREF(tp);\n");
         }

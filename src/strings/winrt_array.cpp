@@ -404,7 +404,7 @@ namespace py::cpp::_winrt
     static void Array_tp_dealloc(PyObject* self) noexcept
     {
         PyTypeObject* tp = Py_TYPE(self);
-        reinterpret_cast<Array*>(self)->array.~unique_ptr();
+        std::destroy_at(&reinterpret_cast<Array*>(self)->array);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
