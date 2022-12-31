@@ -4237,10 +4237,20 @@ if (!return_value)
 
             auto property_writer = [&](Property const& property)
             {
+                auto [get_method, put_method] = get_property_methods(property);
+
+                auto type = w.write_temp(
+                    "%", bind<write_nullable_python_type>(property.Type().Type()));
+
+                if (is_static(get_method))
+                {
+                    type = w.write_temp("typing.ClassVar[%]", type);
+                }
+
                 w.write(
                     "%: %\n",
                     bind<write_lower_snake_case_python_identifier>(property.Name()),
-                    bind<write_nullable_python_type>(property.Type().Type()));
+                    type);
             };
 
             enumerate_properties(w, type, property_writer);
