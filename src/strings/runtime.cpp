@@ -20,7 +20,7 @@ PyTypeObject* py::register_python_type(
 {
     py::pyobj_handle type_object
     {
-#if PY_HEX_VERSION >= 0x03090000
+#if PY_VERSION_HEX >= 0x03090000
         PyType_FromModuleAndSpec(module, type_spec, base_type)
 #else
         PyType_FromSpecWithBases(type_spec, base_type)
@@ -32,7 +32,7 @@ PyTypeObject* py::register_python_type(
         return nullptr;
     }
 
-#if PY_HEX_VERSION >= 0x03100000
+#if PY_VERSION_HEX >= 0x030A0000
     if (PyModule_AddObjectRef(module, type_name, type_object.get()) == -1)
     {
         return nullptr;
