@@ -381,7 +381,8 @@ namespace py
         PyObject* module,
         const char* const type_name,
         PyType_Spec* type_spec,
-        PyObject* base_type) noexcept;
+        PyObject* base_type,
+        PyTypeObject* metaclass) noexcept;
 
     PyObject* wrap_mapping_iter(PyObject* iter) noexcept;
 

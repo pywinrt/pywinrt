@@ -831,4 +831,24 @@ namespace pywinrt
     {
         return set.find(value) != set.end();
     }
+
+    /**
+     * Checks if a WinRT type has any features that require a Python metaclass.
+     */
+    bool requires_metaclass(TypeDef const& type)
+    {
+        // types with static properties need a metaclass
+
+        for (auto&& prop : type.PropertyList())
+        {
+            auto&& [get_method, set_method] = get_property_methods(prop);
+
+            if (is_static(get_method))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 } // namespace pywinrt

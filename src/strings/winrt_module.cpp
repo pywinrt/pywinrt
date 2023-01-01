@@ -293,7 +293,7 @@ namespace py::cpp::_winrt
         assert(state);
 
         state->Object_type = py::register_python_type(
-            module.get(), _type_name_Object, &Object_type_spec, nullptr);
+            module.get(), _type_name_Object, &Object_type_spec, nullptr, nullptr);
 
         if (!state->Object_type)
         {
@@ -301,7 +301,7 @@ namespace py::cpp::_winrt
         }
 
         state->Array_type = py::register_python_type(
-            module.get(), "Array", &Array_type_spec, nullptr);
+            module.get(), "Array", &Array_type_spec, nullptr, nullptr);
 
         if (!state->Array_type)
         {
@@ -313,7 +313,7 @@ namespace py::cpp::_winrt
 #endif
 
         state->MappingIter_type = py::register_python_type(
-            module.get(), "MappingIter", &MappingIter_type_spec, nullptr);
+            module.get(), "MappingIter", &MappingIter_type_spec, nullptr, nullptr);
 
         if (!state->MappingIter_type)
         {

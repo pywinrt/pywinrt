@@ -529,12 +529,33 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
             return;
         }
 
+        std::string metaclass{"nullptr"};
+
+        if (requires_metaclass(type))
+        {
+            w.write(
+                "py::pyobj_handle type_%_Meta{PyType_FromSpec(&type_spec_@_Meta)};\n",
+                type.TypeName(),
+                type.TypeName());
+
+            w.write("if (!type_%_Meta)\n{\n", type.TypeName());
+            {
+                writer::indent_guard g{w};
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            metaclass = w.write_temp(
+                "reinterpret_cast<PyTypeObject*>(type_%_Meta.get())", type.TypeName());
+        }
+
         w.write(
-            "state->type_@ = py::register_python_type(module.get(), type_name_@, &type_spec_@, %);\n",
+            "state->type_@ = py::register_python_type(module.get(), type_name_@, &type_spec_@, %, %);\n",
             type.TypeName(),
             type.TypeName(),
             type.TypeName(),
-            bind<write_type_base>(type));
+            bind<write_type_base>(type),
+            metaclass);
 
         w.write("if (!state->type_@)\n{\n", type.TypeName());
         {
@@ -2247,24 +2268,6 @@ return 0;
                     method_names.insert(method.Name());
                 });
 
-            enumerate_properties(
-                w,
-                type,
-                [&](auto const& prop)
-                {
-                    auto [get_method, put_method] = get_property_methods(prop);
-                    // instance properties are listed in the getset table, not the
-                    // method table
-                    if (is_static(get_method))
-                    {
-                        write_row(get_method);
-                        if (put_method)
-                        {
-                            write_row(put_method);
-                        }
-                    }
-                });
-
             enumerate_events(
                 w,
                 type,
@@ -2360,8 +2363,7 @@ return 0;
                     {
                         auto [getter, setter] = get_property_methods(prop);
 
-                        // static properties are listed in the method table, not the
-                        // getset table
+                        // static properties are implemented in the metaclass
                         if (!is_static(getter))
                         {
                             write_row(
@@ -2482,6 +2484,83 @@ static PyType_Spec type_spec_@ =
             type_name);
     }
 
+    void write_metaclass(writer& w, TypeDef const& type)
+    {
+        if (!requires_metaclass(type))
+        {
+            return;
+        }
+
+        auto write_row = [&](std::string_view field_name,
+                             std::string_view getter_name,
+                             std::string_view setter_name)
+        {
+            auto setter = setter_name.empty() ? "nullptr"
+                                              : w.write_temp(
+                                                  "reinterpret_cast<setter>(@_%)",
+                                                  type.TypeName(),
+                                                  setter_name);
+
+            w.write(
+                "{ \"%\", reinterpret_cast<getter>(@_%), %, nullptr, nullptr },\n",
+                bind<write_lower_snake_case_python_identifier>(field_name),
+                type.TypeName(),
+                getter_name,
+                setter);
+        };
+
+        w.write("\nstatic PyGetSetDef getset_@_Meta[] = {\n", type.TypeName());
+        {
+            writer::indent_guard g{w};
+
+            enumerate_properties(
+                w,
+                type,
+                [&](Property prop)
+                {
+                    auto [getter, setter] = get_property_methods(prop);
+
+                    if (is_static(getter))
+                    {
+                        write_row(
+                            prop.Name(), getter.Name(), setter ? setter.Name() : "");
+                    }
+                });
+
+            w.write("{ }\n");
+        }
+        w.write("};\n");
+
+        w.write("\nstatic PyType_Slot type_slots_@_Meta[] = \n{\n", type.TypeName());
+
+        {
+            writer::indent_guard g{w};
+            w.write("{ Py_tp_base, &PyType_Type },\n");
+            w.write("{ Py_tp_getset, getset_@_Meta },\n", type.TypeName());
+            w.write("{ }\n");
+        }
+
+        w.write("};\n");
+
+        auto format = R"(
+static PyType_Spec type_spec_@_Meta =
+{
+    "%.@_Meta",
+    static_cast<int>(PyType_Type.tp_basicsize),
+    static_cast<int>(PyType_Type.tp_itemsize),
+    Py_TPFLAGS_DEFAULT,
+    type_slots_@_Meta
+};
+)";
+
+        w.write(
+            format,
+            type.TypeName(),
+            bind<write_ns_module_name>(type.TypeNamespace()),
+            type.TypeName(),
+            type.TypeName());
+    }
+
     void write_category(writer& w, TypeDef const& type)
     {
         switch (get_category(type))
@@ -2567,6 +2646,7 @@ static PyType_Spec type_spec_@ =
         write_getset_table(w, type);
         write_type_slot_table(w, type);
         write_type_spec(w, type);
+        write_metaclass(w, type);
     }
 
 #pragma region pinterface functions

@@ -20,6 +20,7 @@
 - Fill arrays now take a buffer as the argument and fill that buffer instead
   of taking a size as the argument and returning a new array.
 - Use `typing.ClassVar` annotation for static properties.
+- Static properties are now class attributes instead of static methods.
 
 ### Fixed
 - Fixed checking wrong number of input parameters on methods with array parameters.
