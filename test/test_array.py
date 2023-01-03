@@ -14,6 +14,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_bool(self):
         a = Array("?", [False, True])
 
+        self.assertEqual(a._winrt_element_type_name_, "Boolean")
         self.assertEqual(len(a), 2)
         self.assertFalse(a[0])
         self.assertTrue(a[1])
@@ -29,6 +30,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_int8(self):
         a = Array("b", [1, 2, 3])
 
+        self.assertEqual(a._winrt_element_type_name_, "Int8")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), [1, 2, 3])
 
@@ -43,6 +45,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_uint8(self):
         a = Array("B", [1, 2, 3])
 
+        self.assertEqual(a._winrt_element_type_name_, "UInt8")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), [1, 2, 3])
 
@@ -57,6 +60,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_int16(self):
         a = Array("h", [1, 2, 3])
 
+        self.assertEqual(a._winrt_element_type_name_, "Int16")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), [1, 2, 3])
 
@@ -71,6 +75,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_uint16(self):
         a = Array("H", [1, 2, 3])
 
+        self.assertEqual(a._winrt_element_type_name_, "UInt16")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), [1, 2, 3])
 
@@ -85,6 +90,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_int32(self):
         a = Array("i", [1, 2, 3])
 
+        self.assertEqual(a._winrt_element_type_name_, "Int32")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), [1, 2, 3])
 
@@ -99,6 +105,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_uint32(self):
         a = Array("I", [1, 2, 3])
 
+        self.assertEqual(a._winrt_element_type_name_, "UInt32")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), [1, 2, 3])
 
@@ -113,6 +120,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_int64(self):
         a = Array("q", [1, 2, 3])
 
+        self.assertEqual(a._winrt_element_type_name_, "Int64")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), [1, 2, 3])
 
@@ -127,6 +135,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_uint64(self):
         a = Array("Q", [1, 2, 3])
 
+        self.assertEqual(a._winrt_element_type_name_, "UInt64")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), [1, 2, 3])
 
@@ -141,6 +150,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_char(self):
         a = Array("u", ["A", "B", "\u1234"])
 
+        self.assertEqual(a._winrt_element_type_name_, "Char16")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), ["A", "B", "\u1234"])
 
@@ -155,6 +165,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_string(self):
         a = Array(str, ["A", "B", "CDE"])
 
+        self.assertEqual(a._winrt_element_type_name_, "String")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), ["A", "B", "CDE"])
 
@@ -169,6 +180,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_object(self):
         a = Array(Object, 3)
 
+        self.assertEqual(a._winrt_element_type_name_, "Object")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), [None, None, None])
 
@@ -188,6 +200,7 @@ class TestWinRTArray(unittest.TestCase):
         ]
         a = Array(uuid.UUID, actual)
 
+        self.assertEqual(a._winrt_element_type_name_, "Guid")
         self.assertEqual(len(a), 3)
         self.assertEqual(list(a), actual)
 
@@ -208,6 +221,7 @@ class TestWinRTArray(unittest.TestCase):
         ]
         a = Array(datetime.datetime, actual)
 
+        self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.DateTime")
         self.assertEqual(len(a), 2)
         self.assertEqual(list(a), actual)
 
@@ -226,6 +240,7 @@ class TestWinRTArray(unittest.TestCase):
         ]
         a = Array(datetime.timedelta, actual)
 
+        self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.TimeSpan")
         self.assertEqual(len(a), 2)
         self.assertEqual(list(a), actual)
 
@@ -244,6 +259,7 @@ class TestWinRTArray(unittest.TestCase):
         ]
         a = Array(Point, actual)
 
+        self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.Point")
         self.assertEqual(len(a), 2)
         # FIXME: Point does not override object.__eq__
         # self.assertEqual(list(a), actual)
@@ -263,6 +279,7 @@ class TestWinRTArray(unittest.TestCase):
         ]
         a = Array(Size, actual)
 
+        self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.Size")
         self.assertEqual(len(a), 2)
         # FIXME: Size does not override object.__eq__
         # self.assertEqual(list(a), actual)
@@ -282,6 +299,7 @@ class TestWinRTArray(unittest.TestCase):
         ]
         a = Array(Rect, actual)
 
+        self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.Rect")
         self.assertEqual(len(a), 2)
         # FIXME: Rect does not override object.__eq__
         # self.assertEqual(list(a), actual)
@@ -297,6 +315,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_runtime_type(self):
         a = Array(Uri, [Uri("https://example.com")])
 
+        self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.Uri")
         self.assertEqual(len(a), 1)
         self.assertEqual(str(a[0]), "https://example.com/")
 
@@ -311,6 +330,7 @@ class TestWinRTArray(unittest.TestCase):
     def test_interface(self):
         a = Array(IPropertyValue, 2)
 
+        self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.IPropertyValue")
         self.assertEqual(len(a), 2)
         self.assertEqual(list(a), [None, None])
 

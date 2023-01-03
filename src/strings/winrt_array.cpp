@@ -406,6 +406,20 @@ namespace py::cpp::_winrt
         Py_DECREF(tp);
     }
 
+    static PyObject* Array_get_winrt_element_type_name(Array* self) noexcept
+    {
+        auto type = self->array->WinrtElementTypeName();
+        return PyUnicode_FromWideChar(type.data(), type.size());
+    }
+
+    static PyGetSetDef Array_tp_getset[]
+        = {{"_winrt_element_type_name_",
+            reinterpret_cast<getter>(Array_get_winrt_element_type_name),
+            nullptr,
+            PyDoc_STR("Gets the WinRT name of the element type of this array."),
+            nullptr},
+           {}};
+
     static PyMethodDef Array_tp_methods[] = {
 #if PY_VERSION_HEX >= 0x03090000
         {"__class_getitem__",
@@ -485,6 +499,7 @@ namespace py::cpp::_winrt
         {Py_tp_doc, const_cast<char*>(Array_doc)},
         {Py_tp_new, Array_tp_new},
         {Py_tp_dealloc, Array_tp_dealloc},
+        {Py_tp_getset, Array_tp_getset},
         {Py_tp_methods, Array_tp_methods},
         {Py_sq_length, Array_sq_length},
         {Py_sq_item, Array_sq_item},

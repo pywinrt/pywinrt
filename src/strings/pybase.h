@@ -225,6 +225,11 @@ namespace py
         virtual bool Alloc(uint32_t size) noexcept = 0;
 
         /**
+         * Gets the WinRT name of the element type of the array.
+         */
+        virtual std::wstring_view WinrtElementTypeName() noexcept = 0;
+
+        /**
          * Gets the Py_buffer format string for this array type.
          *
          * The format string must be compatible with the struct module.
@@ -2135,6 +2140,11 @@ namespace py
                 py::to_PyErr();
                 return false;
             }
+        }
+
+        virtual std::wstring_view WinrtElementTypeName() noexcept override
+        {
+            return winrt::name_of<T>();
         }
 
         std::string_view Format() noexcept override

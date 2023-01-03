@@ -16,6 +16,7 @@ _Self = typing.TypeVar("_Self")
 _T = typing.TypeVar("_T")
 
 class Array(typing.Generic[_T]):
+    _winrt_element_type_name_: str
     if sys.version_info >= (3, 9):
         def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     @typing.overload
