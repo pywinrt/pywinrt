@@ -412,14 +412,7 @@ namespace py::cpp::_winrt
     static int Array_bf_getbuffer(Array* self, Py_buffer* view, int flags) noexcept
     {
         view->obj = nullptr;
-
-        if (((flags & PyBUF_WRITABLE) == PyBUF_WRITABLE))
-        {
-            PyErr_SetString(PyExc_BufferError, "Array is not writable.");
-            return -1;
-        }
-
-        view->readonly = 1;
+        view->readonly = 0;
 
         // required fields
         Py_INCREF(self);

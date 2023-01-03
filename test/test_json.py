@@ -146,6 +146,13 @@ class TestJson(unittest.TestCase):
         v = a.get_at(5)
         self.assertEqual(v.value_type, wdj.JsonValueType.OBJECT)
 
+    def test_JsonArray_get_many(self):
+        a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
+        items = Array(wdj.IJsonValue, 5)
+        count = a.get_many(3, items)
+        self.assertEqual(count, 3)
+        self.assertEqual(items[0].get_string(), "spam")
+
     def test_JsonArray_index_of(self):
         a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
         v = a.get_at(3)
