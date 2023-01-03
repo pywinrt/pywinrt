@@ -311,8 +311,10 @@ namespace py::cpp::_winrt
                 return nullptr;
             }
 
-            if (view.format == nullptr
-                || std::strcmp(view.format, self->array->Format()) != 0)
+            auto format = view.format ? std::basic_string_view(view.format)
+                                      : std::basic_string_view("B");
+
+            if (format != self->array->Format())
             {
                 PyErr_SetString(PyExc_TypeError, "format is incorrect");
                 return nullptr;
@@ -325,6 +327,20 @@ namespace py::cpp::_winrt
                 PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
                 return nullptr;
             }
+
+            // TODO: need better parsing since 'P' could be in an identifier
+            // however, since we are only using lower case identifiers, this
+            // shouldn't be a problem in practice.
+            if (format.find('P') != std::string_view::npos)
+            {
+                // TODO: need a way to validate pointer types before we can do this
+                PyErr_SetString(
+                    PyExc_NotImplementedError,
+                    "copying arrays containing pointers is not implemented");
+                return nullptr;
+            }
+
+            // Fast path for bilitable types.
 
             if (!self->array->Alloc(size))
             {
