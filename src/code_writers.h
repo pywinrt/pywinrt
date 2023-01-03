@@ -1667,6 +1667,99 @@ else
             });
     }
 
+    void write_seq_subscript_body(writer& w, TypeDef const& type)
+    {
+        std::string collection_type{};
+        enumerate_methods(
+            w,
+            type,
+            [&](MethodDef const& method)
+            {
+                if (method.Name() == "GetAt")
+                {
+                    collection_type
+                        = w.write_temp("%", method.Signature().ReturnType().Type());
+                }
+            });
+
+        auto seq_item_invoke
+            = is_ptype(type) ? "seq_item(i)"
+                             : w.write_temp("_seq_item_@(self, i)", type.TypeName());
+
+        auto format = R"(if (PyIndex_Check(slice))
+{
+    pyobj_handle index{PyNumber_Index(slice)};
+
+    if (!index)
+    {
+        return nullptr;
+    }
+
+    auto i = PyNumber_AsSsize_t(index.get(), PyExc_IndexError);
+
+    if (i == -1 && PyErr_Occurred())
+    {
+        return nullptr;
+    }
+
+    return %;
+}
+
+if (!PySlice_Check(slice))
+{
+    PyErr_Format(
+        PyExc_TypeError,
+        "indicies must be integers, not '^%s'",
+        Py_TYPE(slice)->tp_name);
+}
+
+Py_ssize_t start, stop, step, length;
+
+if (PySlice_GetIndicesEx(
+        slice, %Size(), &start, &stop, &step, &length)
+    < 0)
+{
+    return nullptr;
+}
+
+if (step != 1)
+{
+    PyErr_SetString(
+        PyExc_NotImplementedError,
+        "slices with step other than 1 are not implemented");
+    return nullptr;
+}
+
+winrt::com_array<%> items(length, empty_instance<%>::get());
+
+auto count = %GetMany(start, items);
+
+if (count != length)
+{
+    PyErr_Format(
+        PyExc_RuntimeError,
+        "returned count ^%d did not match requested length ^%zd",
+        count,
+        length);
+    return nullptr;
+}
+
+return convert(items);)";
+
+        write_try_catch(
+            w,
+            [&](writer& w)
+            {
+                w.write(
+                    format,
+                    seq_item_invoke,
+                    bind<write_method_invoke_context>(type, MethodDef{}),
+                    collection_type,
+                    collection_type,
+                    bind<write_method_invoke_context>(type, MethodDef{}));
+            });
+    }
+
     void write_seq_assign_body(writer& w, TypeDef const& type)
     {
         std::string collection_type{};
@@ -2126,6 +2219,20 @@ return 0;
             }
             w.write("}\n");
 
+            w.write(
+                "\nstatic PyObject* _seq_subscript_@(%* self, PyObject* slice) noexcept\n{\n",
+                type.TypeName(),
+                bind<write_pywrapper_type>(type));
+            {
+                write_ptype_body(
+                    "seq_subscript(slice)",
+                    [&](auto& w)
+                    {
+                        write_seq_subscript_body(w, type);
+                    });
+            }
+            w.write("}\n");
+
             if (implements_ivector(type))
             {
                 w.write(
@@ -2435,6 +2542,7 @@ return 0;
             {
                 w.write("{ Py_sq_length, _seq_length_@ },\n", name);
                 w.write("{ Py_sq_item, _seq_item_@ },\n", name);
+                w.write("{ Py_mp_subscript, _seq_subscript_@ },\n", name);
 
                 if (implements_ivector(type))
                 {
@@ -2752,6 +2860,8 @@ struct pinterface_python_type<%<%>>
             {
                 w.write("virtual Py_ssize_t seq_length() noexcept = 0;\n");
                 w.write("virtual PyObject* seq_item(Py_ssize_t i) noexcept = 0;\n");
+                w.write(
+                    "virtual PyObject* seq_subscript(PyObject* slice) noexcept = 0;\n");
 
                 if (implements_ivector(type))
                 {
@@ -2939,6 +3049,14 @@ struct pinterface_python_type<%<%>>
                 {
                     writer::indent_guard gg{w};
                     write_seq_item_body(w, type);
+                }
+                w.write("}\n");
+
+                w.write(
+                    "PyObject* seq_subscript(PyObject* slice) noexcept override\n{\n");
+                {
+                    writer::indent_guard gg{w};
+                    write_seq_subscript_body(w, type);
                 }
                 w.write("}\n");
 
@@ -4463,8 +4581,8 @@ if (!return_value)
                                 bind<write_nonnullable_python_type>(value_type));
                             w.write("@typing.overload\n");
                             w.write(
-                                "def __getitem__(self, index: slice) -> typing.%Sequence[%]: ...\n",
-                                implements_ivector(type) ? "Mutable" : "",
+                                "def __getitem__(self, index: slice) -> %.system.Array[%]: ...\n",
+                                settings.module,
                                 bind<write_nonnullable_python_type>(value_type));
                         }
                         else if (method.Name() == "SetAt")

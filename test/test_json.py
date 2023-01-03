@@ -28,6 +28,10 @@ class TestJson(unittest.TestCase):
             self.assertEqual(v.value_type, wdj.JsonValueType.NUMBER)
             self.assertEqual(v.get_number(), x+1)
 
+    def test_JsonArray_seq_subscript(self):
+        a = wdj.JsonArray.parse("[1,2,3,4,5]")
+        self.assertEqual([v.get_number() for v in a[1:-1]], [2, 3, 4])
+
     def test_JsonArray_seq_set_item(self):
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
         a[2] = wdj.JsonValue.create_string_value("the larch")

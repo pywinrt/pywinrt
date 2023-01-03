@@ -7,6 +7,7 @@
 ### Added
 - Added new `Array` type for wrapping COM arrays.
 - Added support for conversion to/from char16_t/str.
+- Added support for slicing ``IVectorView``.
 
 ### Changed
 - Provide useful error message when `NotImplementedError` is raised.
