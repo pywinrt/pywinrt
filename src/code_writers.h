@@ -1266,7 +1266,7 @@ if (!%)
     return nullptr;
 }
 
-Py_ssize_t arg_count = PyTuple_Size(args);
+auto arg_count = PyTuple_Size(args);
 )");
 
                 separator s{w, "else "};
@@ -1339,7 +1339,7 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
     void write_method_overloads(
         writer& w, TypeDef const& type, std::string_view method_name)
     {
-        w.write("Py_ssize_t arg_count = PyTuple_Size(args);\n\n");
+        w.write("auto arg_count = PyTuple_Size(args);\n\n");
         separator s{w, "else "};
 
         enumerate_methods(
