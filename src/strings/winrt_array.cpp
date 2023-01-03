@@ -449,8 +449,8 @@ namespace py::cpp::_winrt
         }
         else
         {
-            view->internal = NULL;
-            view->shape = NULL;
+            view->internal = nullptr;
+            view->shape = nullptr;
         }
 
         if ((flags & PyBUF_STRIDES) == PyBUF_STRIDES)
@@ -459,10 +459,10 @@ namespace py::cpp::_winrt
         }
         else
         {
-            view->strides = NULL;
+            view->strides = nullptr;
         }
 
-        view->suboffsets = NULL;
+        view->suboffsets = nullptr;
 
         return 0;
     }
