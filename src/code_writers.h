@@ -1367,7 +1367,7 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
                         {
                             writer::indent_guard gg{w};
                             w.write(
-                                "PyErr_SetString(PyExc_AttributeError, \"method overload with % arg(s) is not available in this version of Windows\");\n",
+                                "py::set_arg_count_version_error(%);\n",
                                 count_in_param(signature.params()));
                             w.write("return nullptr;\n");
                         }

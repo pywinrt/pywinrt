@@ -407,6 +407,15 @@ namespace py
         PyErr_Format(PyExc_TypeError, "type '%s' is not activatable", type_name);
     }
 
+    inline __declspec(noinline) void set_arg_count_version_error(
+        Py_ssize_t arg_count) noexcept
+    {
+        PyErr_Format(
+            PyExc_AttributeError,
+            "method overload with %zd arg(s) is not available in this version of Windows",
+            arg_count);
+    }
+
     inline __declspec(noinline) void set_invalid_arg_count_error(
         Py_ssize_t arg_count) noexcept
     {
