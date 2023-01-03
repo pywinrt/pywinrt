@@ -441,7 +441,7 @@ namespace py::cpp::_winrt
 
         if ((flags & PyBUF_FORMAT) == PyBUF_FORMAT)
         {
-            view->format = const_cast<char*>(self->array->Format());
+            view->format = const_cast<char*>(self->array->Format().data());
         }
         else
         {

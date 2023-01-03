@@ -229,7 +229,7 @@ namespace py
          *
          * The format string must be compatible with the struct module.
          */
-        virtual const char* Format() noexcept = 0;
+        virtual std::string_view Format() noexcept = 0;
 
         /**
          * Gets the number of elements in the array.
@@ -2137,7 +2137,7 @@ namespace py
             }
         }
 
-        const char* Format() noexcept override
+        std::string_view Format() noexcept override
         {
             static_assert(buffer_format<T>);
             return buffer_format<T>;
