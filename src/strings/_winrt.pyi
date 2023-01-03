@@ -19,19 +19,45 @@ class Array(typing.Generic[_T]):
     _winrt_element_type_name_: str
     if sys.version_info >= (3, 9):
         def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
-    @typing.overload
-    def __new__(cls: _Self, __type: typing.Union[_T, str], __size: int, /) -> _Self: ...
-    @typing.overload
-    def __new__(cls: _Self, __type: typing.Union[_T, str], __initializer: memoryview, /) -> _Self: ...
-    @typing.overload
-    def __new__(cls: _Self, __type: str, __initializer: array.array, /) -> _Self: ...
-    @typing.overload
-    def __new__(cls: _Self, __type: typing.Union[_T, str], __initializer: Array[_T], /) -> _Self: ...
-    @typing.overload
-    def __new__(cls: _Self, __type: typing.Union[_T, str], __initializer: typing.List[_T], /) -> _Self: ...
+
     @typing.overload
     def __new__(
-        cls: _Self, __type: typing.Union[_T, str], __initializer: typing.Tuple[_T], /
+        cls: typing.Type[_Self],
+        __type: typing.Union[typing.Type[_T], str],
+        __size: int,
+        /,
+    ) -> _Self: ...
+    @typing.overload
+    def __new__(
+        cls: typing.Type[_Self],
+        __type: typing.Union[typing.Type[_T], str],
+        __initializer: memoryview,
+        /,
+    ) -> _Self: ...
+    @typing.overload
+    def __new__(
+        cls: typing.Type[_Self], __type: str, __initializer: array.array, /
+    ) -> _Self: ...
+    @typing.overload
+    def __new__(
+        cls: typing.Type[_Self],
+        __type: typing.Union[typing.Type[_T], str],
+        __initializer: Array[_T],
+        /,
+    ) -> _Self: ...
+    @typing.overload
+    def __new__(
+        cls: typing.Type[_Self],
+        __type: typing.Union[typing.Type[_T], str],
+        __initializer: typing.List[_T],
+        /,
+    ) -> _Self: ...
+    @typing.overload
+    def __new__(
+        cls: typing.Type[_Self],
+        __type: typing.Union[typing.Type[_T], str],
+        __initializer: typing.Tuple[_T],
+        /,
     ) -> _Self: ...
     def __len__(self) -> int: ...
     def __getitem__(self, __i: typing.SupportsIndex) -> _T: ...
