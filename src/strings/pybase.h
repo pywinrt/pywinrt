@@ -404,9 +404,7 @@ namespace py
     inline __declspec(noinline) void set_invalid_activation_error(
         const char* const type_name)
     {
-        std::string msg{type_name};
-        msg.append(" is not activatable");
-        PyErr_SetString(PyExc_TypeError, msg.c_str());
+        PyErr_Format(PyExc_TypeError, "type '%s' is not activatable", type_name);
     }
 
     inline __declspec(noinline) void set_invalid_arg_count_error(
