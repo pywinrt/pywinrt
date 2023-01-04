@@ -341,3 +341,13 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.itemsize, pointer_size)
             self.assertEqual(m.format, "P")
             self.assertTrue(m.c_contiguous)
+
+    def test_sequence_protocol(self):
+        a = Array("B", list(range(10)))
+
+        for i, v in enumerate(a):
+            self.assertEqual(a[i], v)
+            self.assertIn(v, a)
+
+        self.assertEqual(a.count(5), 1)
+        self.assertEqual(a.index(5), 5)
