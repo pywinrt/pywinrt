@@ -420,6 +420,13 @@ namespace py::cpp::_winrt
             nullptr},
            {}};
 
+    // needed for collections.abc.MutableSequence
+    static PyObject* Array_insert(PyObject* self, PyObject* args)
+    {
+        PyErr_SetString(PyExc_TypeError, "'Array' type does not support inserting");
+        return nullptr;
+    }
+
     static PyMethodDef Array_tp_methods[] = {
 #if PY_VERSION_HEX >= 0x03090000
         {"__class_getitem__",
@@ -427,6 +434,7 @@ namespace py::cpp::_winrt
          METH_O | METH_CLASS,
          PyDoc_STR("See PEP 585")},
 #endif
+        {"insert", Array_insert, METH_VARARGS, PyDoc_STR("inserting is not supported")},
         {}};
 
     static Py_ssize_t Array_sq_length(Array* self) noexcept
@@ -437,6 +445,23 @@ namespace py::cpp::_winrt
     PyObject* Array_sq_item(Array* self, Py_ssize_t index) noexcept
     {
         return self->array->At(index);
+    }
+
+    int Array_sq_ass_item(Array* self, Py_ssize_t index, PyObject* value) noexcept
+    {
+        if (!value)
+        {
+            PyErr_SetString(
+                PyExc_TypeError, "'Array' object doesn't support item deletion");
+            return -1;
+        }
+
+        if (!self->array->Set(index, value))
+        {
+            return -1;
+        }
+
+        return 0;
     }
 
     static int Array_bf_getbuffer(Array* self, Py_buffer* view, int flags) noexcept
@@ -503,6 +528,7 @@ namespace py::cpp::_winrt
         {Py_tp_methods, Array_tp_methods},
         {Py_sq_length, Array_sq_length},
         {Py_sq_item, Array_sq_item},
+        {Py_sq_ass_item, Array_sq_ass_item},
 #if PY_VERSION_HEX >= 0x03090000
         {Py_bf_getbuffer, Array_bf_getbuffer},
 #endif

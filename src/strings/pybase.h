@@ -266,7 +266,7 @@ namespace py
          * @returns @c true on success, otherwise sets Python error and returns
          * @c false.
          */
-        virtual bool Set(uint32_t index, PyObject* item) noexcept = 0;
+        virtual bool Set(Py_ssize_t index, PyObject* item) noexcept = 0;
 
         // needed to avoid leaks with derived types when used with std::unique_ptr
         virtual ~Array() = default;
@@ -2188,8 +2188,19 @@ namespace py
             }
         }
 
-        bool Set(uint32_t index, PyObject* item) noexcept override
+        bool Set(Py_ssize_t index, PyObject* item) noexcept override
         {
+            if (index < 0)
+            {
+                index = array.size() + index;
+            }
+
+            if (index < 0 || index >= array.size())
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return false;
+            }
+
             try
             {
                 array[index] = convert_to<T>(item);

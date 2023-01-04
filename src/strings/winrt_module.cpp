@@ -290,15 +290,15 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
-        py::pyobj_handle sequence_type{
-            PyObject_GetAttrString(collections_abc_module.get(), "Sequence")};
+        py::pyobj_handle mutable_sequence_type{
+            PyObject_GetAttrString(collections_abc_module.get(), "MutableSequence")};
 
-        if (!sequence_type)
+        if (!mutable_sequence_type)
         {
             return nullptr;
         }
 
-        py::pyobj_handle array_bases{PyTuple_Pack(1, sequence_type.get())};
+        py::pyobj_handle array_bases{PyTuple_Pack(1, mutable_sequence_type.get())};
 
         if (!array_bases)
         {
