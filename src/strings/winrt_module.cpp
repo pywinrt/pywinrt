@@ -30,6 +30,12 @@ namespace py::cpp::_winrt
         py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self)
     {
         auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
