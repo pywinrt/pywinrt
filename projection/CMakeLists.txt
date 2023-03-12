@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.18)
 
 file(GLOB sources "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src/*.cpp")
 
@@ -19,7 +19,7 @@ project(_winrt)
 # strip suffix to allow support for prerelease version
 string(REGEX MATCH "^[0-9]\\.[0-9]+(\\.[0-9]+)?" PYTHON_BASE_VERSION ${PYTHON_VERSION})
 
-find_package (Python3 ${PYTHON_BASE_VERSION} EXACT COMPONENTS Interpreter Development)
+find_package(Python3 ${PYTHON_BASE_VERSION} EXACT REQUIRED COMPONENTS Development.Module)
 
 Python3_add_library (_winrt MODULE ${sources})
 set_target_properties(_winrt PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG _winrt_d)
