@@ -1382,59 +1382,6 @@ namespace py
         }
     };
 
-    struct pystring
-    {
-        wchar_t* buffer{nullptr};
-        std::wstring_view::size_type size{};
-
-        explicit pystring(PyObject* obj)
-        {
-            throw_if_pyobj_null(obj);
-
-            Py_ssize_t py_size;
-            buffer = PyUnicode_AsWideCharString(obj, &py_size);
-
-            if (!buffer)
-            {
-                throw python_exception();
-            }
-
-            size = static_cast<std::wstring_view::size_type>(py_size);
-        }
-
-        pystring(pystring& other) = delete;
-        pystring& operator=(pystring const&) = delete;
-
-        pystring(pystring&& other) noexcept : buffer(other.buffer), size(other.size)
-        {
-            other.buffer = nullptr;
-        }
-
-        pystring& operator=(pystring&& rhs)
-        {
-            std::swap(buffer, rhs.buffer);
-            size = rhs.size;
-        }
-
-        operator bool() const noexcept
-        {
-            return buffer != nullptr;
-        }
-
-        ~pystring()
-        {
-            PyMem_Free(buffer);
-        }
-    };
-
-    struct pystringview : public pystring, public std::wstring_view
-    {
-        explicit pystringview(PyObject* obj)
-            : pystring(obj), std::wstring_view(pystring::buffer, pystring::size)
-        {
-        }
-    };
-
     template<>
     struct converter<winrt::hstring>
     {
@@ -1473,18 +1420,26 @@ namespace py
 
         static char16_t convert_to(PyObject* obj)
         {
-            pystringview str{obj};
+            throw_if_pyobj_null(obj);
 
-            if (str.length() != 1)
+            Py_ssize_t size;
+            auto buffer = PyUnicode_AsWideCharString(obj, &size);
+
+            if (!buffer)
             {
-                PyErr_Format(
-                    PyExc_TypeError,
-                    "expected a character, but string of length %d found",
-                    str.length());
                 throw python_exception();
             }
 
-            return str[0];
+            if (size != 1)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "expected a character, but string of length %zd found",
+                    size);
+                throw python_exception();
+            }
+
+            return buffer[0];
         }
     };
 
