@@ -3906,7 +3906,7 @@ if (!return_value)
                     if (signature.return_signature())
                     {
                         w.write(
-                            "\nreturn py::convert<%>(return_value.get());\n",
+                            "\nreturn py::convert_to<%>(return_value.get());\n",
                             signature.return_signature().Type());
                     }
                 }
