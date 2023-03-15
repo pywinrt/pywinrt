@@ -1443,9 +1443,21 @@ namespace py
             return PyUnicode_FromWideChar(value.c_str(), value.size());
         }
 
-        static pystringview convert_to(PyObject* obj)
+        static winrt::hstring convert_to(PyObject* obj)
         {
-            pystringview str{obj};
+            throw_if_pyobj_null(obj);
+
+            Py_ssize_t py_size;
+            auto buffer = PyUnicode_AsWideCharString(obj, &py_size);
+
+            if (!buffer)
+            {
+                throw python_exception();
+            }
+
+            auto size = static_cast<winrt::hstring::size_type>(py_size);
+
+            winrt::hstring str{buffer, size};
 
             return str;
         }
