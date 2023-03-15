@@ -3125,6 +3125,24 @@ struct pinterface_python_type<%<%>>
     }
 #pragma endregion
 
+#pragma region enum functions
+
+    /**
+     * Writes a const char* declaration for the PEP 3118 buffer format string
+     * constant describing the underlying type of an enum.
+     */
+    void write_enum_buffer_format_decl(writer& w, TypeDef const& type)
+    {
+        w.write("template<>\n");
+        w.write(
+            "constexpr const char* buffer_format<%> = \"%\";\n\n",
+            type,
+            // flags are UInt32, regular enums are Int32
+            is_flags_enum(type) ? "I" : "i");
+    }
+
+#pragma endregion
+
 #pragma region struct functions
 
     static void write_struct_buffer_format_string(writer& w, TypeDef const& type);

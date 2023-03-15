@@ -28,6 +28,7 @@
 - Fixed use after free of array input arguments ([winsdk#20]).
 - Fixed missing `__await__` on runtime types that inherit `IAsyncOperation` ([winsdk#21]).
 - Fixed compile error in generated code for delegates that return non-void.
+- Fixed `buffer_format<>` not generated for enum types.
 
 [winsdk#20]: https://github.com/pywinrt/python-winsdk/issues/20
 [winsdk#21]: https://github.com/pywinrt/python-winsdk/issues/21
