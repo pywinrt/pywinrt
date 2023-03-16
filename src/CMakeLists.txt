@@ -12,7 +12,6 @@ target_include_directories(pywinrt PRIVATE "${CMAKE_BINARY_DIR}/_packages/Micros
 GENERATE_STRING_LITERAL_FILES("${PROJECT_SOURCE_DIR}/strings/*" "strings" "pywinrt::strings" pywinrt)
 
 TARGET_CONFIG_MSVC_PCH(pywinrt pch.cpp pch.h)
-target_compile_options(pywinrt PUBLIC /await)
 target_link_libraries(pywinrt windowsapp ole32 shlwapi)
 
 set_target_properties(pywinrt PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})

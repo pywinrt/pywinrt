@@ -74,7 +74,7 @@ string(APPEND CMAKE_CXX_FLAGS_RELEASE " /Zi")
 string(APPEND CMAKE_SHARED_LINKER_FLAGS_RELEASE " /DEBUG /OPT:REF /OPT:ICF /MAP")
 string(APPEND CMAKE_EXE_LINKER_FLAGS_RELEASE " /DEBUG /OPT:REF /OPT:ICF /MAP")
 
-add_compile_options(/permissive- /await)
+add_compile_options(/permissive-)
 
 # Explicitly configure _DEBUG preprocessor macro
 string(APPEND CMAKE_CXX_FLAGS_DEBUG " /D_DEBUG")
