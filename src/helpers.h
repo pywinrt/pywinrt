@@ -441,13 +441,20 @@ namespace pywinrt
         return method.Flags().RTSpecialName() && method.Name() == ".ctor";
     }
 
-    auto get_constructors(TypeDef const& type)
+    /** Tests if a method is public (has public accessor flag). */
+    inline bool is_public(MethodDef const& method)
+    {
+        return method.Flags().Access() == MemberAccess::Public;
+    }
+
+    /** Gets a list of all public constructors. */
+    auto get_public_constructors(TypeDef const& type)
     {
         std::vector<MethodDef> ctors{};
 
         for (auto&& method : type.MethodList())
         {
-            if (is_constructor(method))
+            if (is_constructor(method) && is_public(method))
             {
                 ctors.push_back(method);
             }

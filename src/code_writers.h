@@ -1258,7 +1258,7 @@ if (!%)
         {
             writer::indent_guard g{w};
 
-            auto constructors = get_constructors(type);
+            auto constructors = get_public_constructors(type);
             if (is_static_class(type) || constructors.size() == 0)
             {
                 w.write(
@@ -4777,7 +4777,7 @@ if (!return_value)
                 }
             };
 
-            auto constructors = get_constructors(type);
+            auto constructors = get_public_constructors(type);
 
             for (auto&& c : constructors)
             {
