@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # TODO: re-enable /GL and /LTCG when we get a bigger build machine
-add_compile_options(/await /bigobj /GR- /permissive-)
+add_compile_options(/await /bigobj /GR- /permissive- /Gy)
 
 project(_winrt)
 
