@@ -39,7 +39,7 @@ if ($fullProjection) {
 else {
     $pyinclude = "Windows.Data.Json", "Windows.Devices.Geolocation", "Windows.Foundation", "Windows.Graphics.Capture", "Windows.Graphics.DirectX", "Windows.Storage.Streams"
 }
-$pyexclude = "Windows.UI.Composition", "Windows.UI.Xaml"
+$pyexclude = ""
 $pyin = $pyinclude | ForEach-Object { "-include", "$_" }
 $pyout = $pyexclude | ForEach-Object { "-exclude", "$_" }
 
