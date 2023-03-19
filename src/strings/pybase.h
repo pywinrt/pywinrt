@@ -6,6 +6,7 @@
 #include <structmember.h>
 
 #include <windows.h>
+#undef GetCurrentTime // breaks winrt API of the same name
 
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Metadata.h>
