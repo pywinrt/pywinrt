@@ -1086,7 +1086,19 @@ static PyModuleDef module_def
         }
         else
         {
-            w.write("self->obj.");
+            // HACK: work around https://github.com/microsoft/cppwinrt/issues/1287
+            // so far, this is the only case in the entire Windows SDK where
+            // a property is entirely replaced with one of the same name
+            if (type.TypeNamespace() == "Windows.UI.Xaml.Controls.Maps"
+                && type.TypeName() == "MapControl" && method.Name() == "get_Style")
+            {
+                w.write(
+                    "static_cast<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl>(self->obj).");
+            }
+            else
+            {
+                w.write("self->obj.");
+            }
         }
     }
 
