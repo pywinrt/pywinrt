@@ -2118,8 +2118,7 @@ return 0;
             // workaround for https://bugs.python.org/issue40724
             w.write("\n#if PY_VERSION_HEX < 0x03090000\n");
             w.write(
-                "static PyBufferProcs _PyBufferProcs_@ = { reinterpret_cast<getbufferproc>(_get_buffer_@), "
-                "reinterpret_cast<releasebufferproc>(nullptr) };\n",
+                "static PyBufferProcs _PyBufferProcs_@ = { reinterpret_cast<getbufferproc>(_get_buffer_@), nullptr };\n",
                 type.TypeName(),
                 type.TypeName());
             w.write("#endif\n");
