@@ -42,8 +42,8 @@ namespace py::cpp::_winrt
     }
 
     static PyType_Slot Object_type_slots[] = {
-        {Py_tp_new, Object_new},
-        {Py_tp_dealloc, Object_dealloc},
+        {Py_tp_new, reinterpret_cast<void*>(Object_new)},
+        {Py_tp_dealloc, reinterpret_cast<void*>(Object_dealloc)},
         {Py_tp_doc, const_cast<char*>(Object_doc)},
         {},
     };
@@ -155,10 +155,10 @@ namespace py::cpp::_winrt
     PyDoc_STRVAR(MappingIter_doc, "Utility class for wrapping KeyValuePair iterators.");
 
     static PyType_Slot MappingIter_type_slots[] = {
-        {Py_tp_members, MappingIter_members},
-        {Py_tp_init, MappingIter_init},
-        {Py_tp_iter, PyObject_SelfIter},
-        {Py_tp_iternext, MappingIter_iternext},
+        {Py_tp_members, reinterpret_cast<void*>(MappingIter_members)},
+        {Py_tp_init, reinterpret_cast<void*>(MappingIter_init)},
+        {Py_tp_iter, reinterpret_cast<void*>(PyObject_SelfIter)},
+        {Py_tp_iternext, reinterpret_cast<void*>(MappingIter_iternext)},
         {Py_tp_doc, const_cast<char*>(MappingIter_doc)},
         {},
     };

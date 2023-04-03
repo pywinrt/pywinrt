@@ -2520,63 +2520,84 @@ return 0;
         {
             writer::indent_guard g{w};
 
-            w.write("{ Py_tp_new, _new_@ },\n", name);
+            w.write("{ Py_tp_new, reinterpret_cast<void*>(_new_@) },\n", name);
             if (!is_static_class(type))
             {
-                w.write("{ Py_tp_dealloc, _dealloc_@ },\n", name);
+                w.write(
+                    "{ Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_@) },\n", name);
             }
             if ((category == category::class_type)
                 || (category == category::interface_type))
             {
-                w.write("{ Py_tp_methods, _methods_@ },\n", name);
+                w.write(
+                    "{ Py_tp_methods, reinterpret_cast<void*>(_methods_@) },\n", name);
             }
-            w.write("{ Py_tp_getset, _getset_@ },\n", name);
+            w.write("{ Py_tp_getset, reinterpret_cast<void*>(_getset_@) },\n", name);
 
             if (implements_ibuffer(type) || implements_imemorybufferreference(type))
             {
                 // this slot was enabled in 3.9 - https://bugs.python.org/issue40724
                 w.write("#if PY_VERSION_HEX >= 0x03090000\n");
-                w.write("{ Py_bf_getbuffer, _get_buffer_@ },\n", name);
+                w.write(
+                    "{ Py_bf_getbuffer, reinterpret_cast<void*>(_get_buffer_@) },\n",
+                    name);
                 w.write("#endif\n");
             }
 
             if (implements_istringable(type))
             {
-                w.write("{ Py_tp_str, _str_@ },\n", name);
+                w.write("{ Py_tp_str, reinterpret_cast<void*>(_str_@) },\n", name);
             }
             if (implements_iasync(type))
             {
-                w.write(
-                    "{ Py_am_await, reinterpret_cast<unaryfunc>(_await_@) },\n", name);
+                w.write("{ Py_am_await, reinterpret_cast<void*>(_await_@) },\n", name);
             }
             if (implements_iiterable(type) || implements_iiterator(type))
             {
-                w.write("{ Py_tp_iter, _iterator_@ },\n", name);
+                w.write(
+                    "{ Py_tp_iter, reinterpret_cast<void*>(_iterator_@) },\n", name);
             }
             if (implements_iiterator(type))
             {
-                w.write("{ Py_tp_iternext, _iterator_next_@ },\n", name);
+                w.write(
+                    "{ Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_@) },\n",
+                    name);
             }
             if (implements_sequence(type))
             {
-                w.write("{ Py_sq_length, _seq_length_@ },\n", name);
-                w.write("{ Py_sq_item, _seq_item_@ },\n", name);
-                w.write("{ Py_mp_subscript, _seq_subscript_@ },\n", name);
+                w.write(
+                    "{ Py_sq_length, reinterpret_cast<void*>(_seq_length_@) },\n",
+                    name);
+                w.write(
+                    "{ Py_sq_item, reinterpret_cast<void*>(_seq_item_@) },\n", name);
+                w.write(
+                    "{ Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_@) },\n",
+                    name);
 
                 if (implements_ivector(type))
                 {
-                    w.write("{ Py_sq_ass_item, _seq_assign_@ },\n", name);
+                    w.write(
+                        "{ Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_@) },\n",
+                        name);
                 }
             }
             if (implements_mapping(type))
             {
-                w.write("{ Py_sq_contains, _map_contains_@ },\n", name);
-                w.write("{ Py_mp_length, _map_length_@ },\n", name);
-                w.write("{ Py_mp_subscript, _map_subscript_@ },\n", name);
+                w.write(
+                    "{ Py_sq_contains, reinterpret_cast<void*>(_map_contains_@) },\n",
+                    name);
+                w.write(
+                    "{ Py_mp_length, reinterpret_cast<void*>(_map_length_@) },\n",
+                    name);
+                w.write(
+                    "{ Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_@) },\n",
+                    name);
 
                 if (implements_imap(type))
                 {
-                    w.write("{ Py_mp_ass_subscript, _map_assign_@ },\n", name);
+                    w.write(
+                        "{ Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_@) },\n",
+                        name);
                 }
             }
             w.write("{ },\n");
@@ -2662,8 +2683,10 @@ static PyType_Spec type_spec_@ =
 
         {
             writer::indent_guard g{w};
-            w.write("{ Py_tp_base, &PyType_Type },\n");
-            w.write("{ Py_tp_getset, getset_@_Meta },\n", type.TypeName());
+            w.write("{ Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },\n");
+            w.write(
+                "{ Py_tp_getset, reinterpret_cast<void*>(getset_@_Meta) },\n",
+                type.TypeName());
             w.write("{ }\n");
         }
 

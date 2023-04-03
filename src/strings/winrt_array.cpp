@@ -528,15 +528,15 @@ namespace py::cpp::_winrt
 
     static PyType_Slot Array_type_slots[] = {
         {Py_tp_doc, const_cast<char*>(Array_doc)},
-        {Py_tp_new, Array_tp_new},
-        {Py_tp_dealloc, Array_tp_dealloc},
-        {Py_tp_getset, Array_tp_getset},
-        {Py_tp_methods, Array_tp_methods},
-        {Py_sq_length, Array_sq_length},
-        {Py_sq_item, Array_sq_item},
-        {Py_sq_ass_item, Array_sq_ass_item},
+        {Py_tp_new, reinterpret_cast<void*>(Array_tp_new)},
+        {Py_tp_dealloc, reinterpret_cast<void*>(Array_tp_dealloc)},
+        {Py_tp_getset, reinterpret_cast<void*>(Array_tp_getset)},
+        {Py_tp_methods, reinterpret_cast<void*>(Array_tp_methods)},
+        {Py_sq_length, reinterpret_cast<void*>(Array_sq_length)},
+        {Py_sq_item, reinterpret_cast<void*>(Array_sq_item)},
+        {Py_sq_ass_item, reinterpret_cast<void*>(Array_sq_ass_item)},
 #if PY_VERSION_HEX >= 0x03090000
-        {Py_bf_getbuffer, Array_bf_getbuffer},
+        {Py_bf_getbuffer, reinterpret_cast<void*>(Array_bf_getbuffer)},
 #endif
         {},
     };
