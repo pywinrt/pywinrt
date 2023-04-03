@@ -3169,7 +3169,7 @@ struct pinterface_python_type<%<%>>
     {
         w.write("template<>\n");
         w.write(
-            "constexpr const char* buffer_format<%> = \"%\";\n\n",
+            "static constexpr const char* buffer_format<%> = \"%\";\n\n",
             type,
             // flags are UInt32, regular enums are Int32
             is_flags_enum(type) ? "I" : "i");
@@ -3277,7 +3277,7 @@ struct pinterface_python_type<%<%>>
 
         w.write("template<>\n");
         w.write(
-            "constexpr const char* buffer_format<%> = \"%\";\n\n",
+            "static constexpr const char* buffer_format<%> = \"%\";\n\n",
             type,
             bind<write_struct_buffer_format_string>(type));
     }

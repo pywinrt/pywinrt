@@ -730,59 +730,62 @@ namespace py
     // PEP 3118 struct formats
 
     template<typename T, typename = void>
-    constexpr const char* buffer_format = 0;
+    static constexpr const char* buffer_format = 0;
 
     template<>
-    constexpr const char* buffer_format<bool> = "?";
+    static constexpr const char* buffer_format<bool> = "?";
 
     template<>
-    constexpr const char* buffer_format<int8_t> = "b";
+    static constexpr const char* buffer_format<int8_t> = "b";
 
     template<>
-    constexpr const char* buffer_format<uint8_t> = "B";
+    static constexpr const char* buffer_format<uint8_t> = "B";
 
     template<>
-    constexpr const char* buffer_format<int16_t> = "h";
+    static constexpr const char* buffer_format<int16_t> = "h";
 
     template<>
-    constexpr const char* buffer_format<uint16_t> = "H";
+    static constexpr const char* buffer_format<uint16_t> = "H";
 
     template<>
-    constexpr const char* buffer_format<int32_t> = "i";
+    static constexpr const char* buffer_format<int32_t> = "i";
 
     template<>
-    constexpr const char* buffer_format<uint32_t> = "I";
+    static constexpr const char* buffer_format<uint32_t> = "I";
 
     template<>
-    constexpr const char* buffer_format<int64_t> = "q";
+    static constexpr const char* buffer_format<int64_t> = "q";
 
     template<>
-    constexpr const char* buffer_format<uint64_t> = "Q";
+    static constexpr const char* buffer_format<uint64_t> = "Q";
 
     template<>
-    constexpr const char* buffer_format<float> = "f";
+    static constexpr const char* buffer_format<float> = "f";
 
     template<>
-    constexpr const char* buffer_format<double> = "d";
+    static constexpr const char* buffer_format<double> = "d";
 
     template<>
-    constexpr const char* buffer_format<char16_t> = "u";
+    static constexpr const char* buffer_format<char16_t> = "u";
 
     template<>
-    constexpr const char* buffer_format<winrt::guid> = "T{I2H8B}";
+    static constexpr const char* buffer_format<winrt::guid> = "T{I2H8B}";
 
     template<>
-    constexpr const char* buffer_format<winrt::hstring> = "P";
+    static constexpr const char* buffer_format<winrt::hstring> = "P";
 
     template<>
-    constexpr const char* buffer_format<winrt::Windows::Foundation::IInspectable> = "P";
-
-    template<typename T>
-    constexpr const char* buffer_format<T, std::enable_if_t<is_class_category_v<T>>>
+    static constexpr const char* buffer_format<winrt::Windows::Foundation::IInspectable>
         = "P";
 
     template<typename T>
-    constexpr const char* buffer_format<T, std::enable_if_t<is_interface_category_v<T>>>
+    static constexpr const char*
+        buffer_format<T, std::enable_if_t<is_class_category_v<T>>>
+        = "P";
+
+    template<typename T>
+    static constexpr const char*
+        buffer_format<T, std::enable_if_t<is_interface_category_v<T>>>
         = "P";
 
     template<typename T>
@@ -791,10 +794,12 @@ namespace py
         = "P";
 
     template<>
-    constexpr const char* buffer_format<winrt::Windows::Foundation::DateTime> = "q";
+    static constexpr const char* buffer_format<winrt::Windows::Foundation::DateTime>
+        = "q";
 
     template<>
-    constexpr const char* buffer_format<winrt::Windows::Foundation::TimeSpan> = "q";
+    static constexpr const char* buffer_format<winrt::Windows::Foundation::TimeSpan>
+        = "q";
 
     template<typename T>
     struct buffer<typename T>
