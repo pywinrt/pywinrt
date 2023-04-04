@@ -936,7 +936,7 @@ static PyModuleDef module_def
     void write_winrt_type_name_constant(writer& w, TypeDef const& type)
     {
         w.write(
-            "constexpr const char* const type_name_@ = \"@\";\n",
+            "static constexpr const char* const type_name_@ = \"@\";\n",
             type.TypeName(),
             type.TypeName());
     }

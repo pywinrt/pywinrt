@@ -13,7 +13,7 @@ namespace py::cpp::_winrt
 
     // BEGIN: class _winrt.Object:
 
-    constexpr const char* const _type_name_Object = "Object";
+    static constexpr const char* const type_name_Object = "Object";
 
     PyDoc_STRVAR(Object_doc, "base class for wrapped WinRT object instances.");
 
@@ -22,7 +22,7 @@ namespace py::cpp::_winrt
         PyObject* /* unused */,
         PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(_type_name_Object);
+        py::set_invalid_activation_error(type_name_Object);
         return nullptr;
     }
 
@@ -322,7 +322,7 @@ namespace py::cpp::_winrt
         assert(state);
 
         state->Object_type = py::register_python_type(
-            module.get(), _type_name_Object, &Object_type_spec, nullptr, nullptr);
+            module.get(), type_name_Object, &Object_type_spec, nullptr, nullptr);
 
         if (!state->Object_type)
         {
