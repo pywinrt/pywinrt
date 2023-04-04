@@ -175,7 +175,7 @@ namespace py
     template<typename To>
     To as(winrt_wrapper_base* wrapper)
     {
-        return wrapper->get_unknown(wrapper).as<To>();
+        return wrapper->get_unknown(wrapper).template as<To>();
     }
 
     /**
