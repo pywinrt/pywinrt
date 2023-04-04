@@ -802,7 +802,7 @@ namespace py
         = "q";
 
     template<typename T>
-    struct buffer<typename T>
+    struct buffer<T>
     {
         static bool is_compatible(Py_buffer const& view) noexcept
         {
