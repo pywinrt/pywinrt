@@ -2140,7 +2140,7 @@ namespace py
 
         size_t ValueSize() noexcept override
         {
-            return sizeof(winrt::com_array<T>::value_type);
+            return sizeof(typename winrt::com_array<T>::value_type);
         }
 
         void* Data() noexcept override
