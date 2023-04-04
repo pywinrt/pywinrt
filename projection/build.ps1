@@ -3,7 +3,7 @@ param (
     [string]$buildType = "Debug",
 
     [Parameter(Mandatory=$false)]
-    [string]$pythonVersion = "3.7",
+    [string]$pythonVersion = "3.11",
 
     [Parameter(Mandatory=$false)]
     [string]$compiler = "cl.exe"
