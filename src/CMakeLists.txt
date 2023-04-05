@@ -6,7 +6,7 @@ target_sources(pywinrt PUBLIC main.cpp pch.cpp "${PROJECT_BINARY_DIR}/strings.cp
 target_include_directories(pywinrt PUBLIC ${PROJECT_BINARY_DIR} ${PROJECT_SOURCE_DIR})
 target_compile_definitions(pywinrt PUBLIC "PYWINRT_VERSION_STRING=\"${PYWINRT_BUILD_VERSION}\"")
 
-find_program(NUGET_EXE NAMES nuget)
+find_program(NUGET_EXE NAMES nuget REQUIRED)
 execute_process(COMMAND ${NUGET_EXE} install "Microsoft.Windows.WinMD" -Version 1.0.210629.2 -ExcludeVersion -OutputDirectory "${CMAKE_BINARY_DIR}/_packages")
 target_include_directories(pywinrt PRIVATE "${CMAKE_BINARY_DIR}/_packages/Microsoft.Windows.WinMD")
 
