@@ -775,14 +775,17 @@ namespace py
     inline constexpr const char* buffer_format<winrt::hstring> = "P";
 
     template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Foundation::IInspectable> = "P";
-
-    template<typename T>
-    inline constexpr const char* buffer_format<T, std::enable_if_t<is_class_category_v<T>>>
+    inline constexpr const char* buffer_format<winrt::Windows::Foundation::IInspectable>
         = "P";
 
     template<typename T>
-    inline constexpr const char* buffer_format<T, std::enable_if_t<is_interface_category_v<T>>>
+    inline constexpr const char*
+        buffer_format<T, std::enable_if_t<is_class_category_v<T>>>
+        = "P";
+
+    template<typename T>
+    inline constexpr const char*
+        buffer_format<T, std::enable_if_t<is_interface_category_v<T>>>
         = "P";
 
     template<typename T>
@@ -791,10 +794,12 @@ namespace py
         = "P";
 
     template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Foundation::DateTime> = "q";
+    inline constexpr const char* buffer_format<winrt::Windows::Foundation::DateTime>
+        = "q";
 
     template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Foundation::TimeSpan> = "q";
+    inline constexpr const char* buffer_format<winrt::Windows::Foundation::TimeSpan>
+        = "q";
 
     template<typename T>
     struct buffer<T>
