@@ -4,6 +4,7 @@
 #include <winrt/Windows.Graphics.Capture.h>
 
 #include "pybase.h"
+#include "py.Windows.Graphics.Capture.h"
 
 #include <stdio.h>
 
