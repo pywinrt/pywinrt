@@ -175,7 +175,18 @@ namespace pywinrt
         w.write("_ns_module._register_%(%)\n", type.TypeName(), type.TypeName());
     }
 
-    void write_include(writer& w, std::string_view const& ns)
+    /**
+     * Writes a CppWinRT include statement for a namespace.
+     */
+    void write_winrt_include(writer& w, std::string_view const& ns)
+    {
+        w.write("#include <winrt/%.h>\n", ns);
+    }
+
+    /**
+     * Writes a Python include statement for a namespace.
+     */
+    void write_py_include(writer& w, std::string_view const& ns)
     {
         if (w.current_namespace != ns)
         {

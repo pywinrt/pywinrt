@@ -89,7 +89,9 @@ namespace pywinrt
             w.write(format);
         }
 
-        w.write_each<write_include>(w.needed_namespaces);
+        w.write_each<write_py_include>(w.needed_namespaces);
+        w.write("\n");
+        w.write_each<write_winrt_include>(w.needed_namespaces);
 
         {
             auto format = R"(
