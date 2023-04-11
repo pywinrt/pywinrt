@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.24)
+cmake_policy(SET CMP0091 NEW)
+project(_winrt)
 
-file(GLOB sources "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src/*.cpp")
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
-file(GLOB headers RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
-    "cppwinrt/*.h"
-    "cppwinrt/impl/*.h"
-    "pywinrt/winrt/src/*.h"
+file(GLOB sources CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src/*.cpp")
+
+file(GLOB headers CONFIGURE_DEPENDS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
+    "pywinrt/winrt/src/py.*.h"
 )
 
 set(CMAKE_CXX_STANDARD 20)
@@ -13,8 +15,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # TODO: re-enable /GL and /LTCG when we get a bigger build machine
 add_compile_options(/bigobj /GR- /permissive- /Gy)
-
-project(_winrt)
 
 # strip suffix to allow support for prerelease version
 string(REGEX MATCH "^[0-9]\\.[0-9]+(\\.[0-9]+)?" PYTHON_BASE_VERSION ${PYTHON_VERSION})
@@ -41,8 +41,6 @@ if($ENV{CI})
     set_property(GLOBAL PROPERTY JOB_POOLS compile_job=2)
     set_property(TARGET _winrt PROPERTY JOB_POOL_COMPILE compile_job)
 endif()
-
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 string(REGEX REPLACE "/GR" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 # TODO: re-enable /GL and /LTCG when we get a bigger build machine
