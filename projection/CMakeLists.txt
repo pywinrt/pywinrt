@@ -33,7 +33,6 @@ Python3_add_library (_winrt MODULE ${sources})
 set_target_properties(_winrt PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG _winrt_d)
 target_precompile_headers(_winrt PRIVATE ${headers})
 target_include_directories(_winrt PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/cppwinrt" "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src")
-target_link_libraries(_winrt PRIVATE onecore)
 
 if($ENV{CI})
     # CI has limited resources (runs out of heap space), so we limit the number
