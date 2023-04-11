@@ -23,11 +23,11 @@ namespace py
     };
 
     template<typename T>
-    struct empty_instance<T, std::void_t<decltype(T{nullptr})>>
+    struct empty_instance<T, std::void_t<decltype(T(nullptr))>>
     {
         static T get()
         {
-            return T{nullptr};
+            return T(nullptr);
         }
     };
 
