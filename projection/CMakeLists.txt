@@ -13,8 +13,12 @@ file(GLOB headers CONFIGURE_DEPENDS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# TODO: re-enable /GL and /LTCG when we get a bigger build machine
-add_compile_options(/bigobj /GR- /permissive- /Gy)
+if (MSVC)
+    # TODO: re-enable /GL and /LTCG when we get a bigger build machine
+    add_compile_options(/bigobj /GR- /permissive- /Gy)
+else()
+    add_compile_options(-Werror)
+endif()
 
 # strip suffix to allow support for prerelease version
 string(REGEX MATCH "^[0-9]\\.[0-9]+(\\.[0-9]+)?" PYTHON_BASE_VERSION ${PYTHON_VERSION})
@@ -39,14 +43,6 @@ if($ENV{CI})
     # of concurrent processes to combat this
     set_property(GLOBAL PROPERTY JOB_POOLS compile_job=2)
     set_property(TARGET _winrt PROPERTY JOB_POOL_COMPILE compile_job)
-endif()
-
-string(REGEX REPLACE "/GR" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-# TODO: re-enable /GL and /LTCG when we get a bigger build machine
-# string(APPEND CMAKE_MODULE_LINKER_FLAGS " /LTCG:STATUS")
-
-if (CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL "19.20.27404.0")
-    string(APPEND CMAKE_CXX_FLAGS " /d2FH4")
 endif()
 
 install(TARGETS _winrt DESTINATION ".")
