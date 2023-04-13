@@ -6,10 +6,6 @@ set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 file(GLOB sources CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src/*.cpp")
 
-file(GLOB headers CONFIGURE_DEPENDS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
-    "pywinrt/winrt/src/py.*.h"
-)
-
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -35,14 +31,12 @@ find_package(Python3 ${PYTHON_BASE_VERSION} EXACT REQUIRED COMPONENTS Developmen
 
 Python3_add_library (_winrt MODULE ${sources})
 set_target_properties(_winrt PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG _winrt_d)
-target_precompile_headers(_winrt PRIVATE ${headers})
 target_include_directories(_winrt PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/cppwinrt" "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src")
 
-if($ENV{CI})
-    # CI has limited resources (runs out of heap space), so we limit the number
-    # of concurrent processes to combat this
-    set_property(GLOBAL PROPERTY JOB_POOLS compile_job=2)
-    set_property(TARGET _winrt PROPERTY JOB_POOL_COMPILE compile_job)
-endif()
+# speed up builds by precompiling commonly used headers
+target_precompile_headers(_winrt PRIVATE
+    "pywinrt/winrt/src/py.Windows.Foundation.h"
+    "pywinrt/winrt/src/py.Windows.Storage.Streams.h"
+)
 
 install(TARGETS _winrt DESTINATION ".")
