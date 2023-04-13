@@ -659,60 +659,8 @@ namespace py
         }
     }
 
-    /**
-     * Tests if @p view is compatible with @p itemsize and @p format
-     * @param [in]  view        A Python buffer view.
-     * @param [in]  itemsize    The required element size.
-     * @param [in]  format      The required element format.
-     * @returns @c true if the buffer is valid, otherwise sets Python error and returns
-     * @c false
-     */
-    static bool is_buffer_compatible(
-        Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept
-    {
-        if (view.itemsize != itemsize)
-        {
-            PyErr_Format(
-                PyExc_BufferError,
-                "requires buffer with itemsize == %zd, have %zd",
-                itemsize,
-                view.ndim);
-            return false;
-        }
-
-        assert(format);
-
-        if (!view.format || std::strcmp(view.format, format))
-        {
-            PyErr_Format(
-                PyExc_BufferError,
-                "requires buffer with format == \"%s\", have \"%s\"",
-                format,
-                view.format);
-            return false;
-        }
-
-        if (view.ndim != 1)
-        {
-            PyErr_Format(
-                PyExc_BufferError,
-                "requires buffer with ndim == 1, have %d",
-                view.ndim);
-            return false;
-        }
-
-        if (!view.strides || view.strides[0] != itemsize)
-        {
-            PyErr_Format(
-                PyExc_BufferError,
-                "requires buffer with strides[0] == %zd, have %zd",
-                view.strides ? view.strides[0] : 0,
-                itemsize);
-            return false;
-        }
-
-        return true;
-    }
+    bool is_buffer_compatible(
+        Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept;
 
     template<typename T, typename = void>
     struct buffer
