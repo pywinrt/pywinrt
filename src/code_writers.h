@@ -2278,18 +2278,18 @@ return 0;
                         });
                 }
                 w.write("}\n");
-            }
 
-            // alias InsertAt to insert for Python sequence protocol
-            w.write(
-                "\nstatic PyObject* @_get_insert(PyObject* self) noexcept\n{\n",
-                type.TypeName());
-            {
-                writer::indent_guard g{w};
+                // alias InsertAt to insert for Python sequence protocol
+                w.write(
+                    "\nstatic PyObject* @_get_insert(PyObject* self) noexcept\n{\n",
+                    type.TypeName());
+                {
+                    writer::indent_guard g{w};
 
-                w.write("return PyObject_GetAttrString(self, \"insert_at\");\n");
+                    w.write("return PyObject_GetAttrString(self, \"insert_at\");\n");
+                }
+                w.write("}\n");
             }
-            w.write("}\n");
         }
 
         if (implements_mapping(type))
