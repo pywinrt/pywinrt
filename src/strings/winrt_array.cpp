@@ -13,8 +13,6 @@ namespace py::cpp::_winrt
         std::unique_ptr<py::Array> array;
     };
 
-    static constexpr const char* const Array_type_name = "Array";
-
     PyDoc_STRVAR(Array_doc, "class for wrapped COM array instances");
 
     /**
