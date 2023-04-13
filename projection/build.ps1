@@ -15,6 +15,6 @@ $buildPath = "$repoRootPath/_build/py-projection/$env:VSCMD_ARG_TGT_ARCH-$buildT
 
 
 cmake -S $sourcePath "-B$buildPath" -GNinja "-DCMAKE_BUILD_TYPE=$buildType" "-DCMAKE_C_COMPILER=$compiler" "-DCMAKE_CXX_COMPILER=$compiler" "-DPYTHON_VERSION=$pythonVersion"
-cmake --build $buildPath -- -v -j 4
+cmake --build $buildPath -- -v
 
 copy-item $buildPath/*.pyd "$sourcePath/pywinrt/winrt"
