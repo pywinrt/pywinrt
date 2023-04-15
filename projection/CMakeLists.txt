@@ -13,7 +13,7 @@ if (MSVC)
     # TODO: re-enable /GL and /LTCG when we get a bigger build machine
     add_compile_options(/bigobj /GR- /permissive- /Gy)
 else()
-    add_compile_options(-Werror)
+    add_compile_options(-Werror -D_WIN32_WINNT=_WIN32_WINNT_WIN10)
 endif()
 
 # strip suffix to allow support for prerelease version
