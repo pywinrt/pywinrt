@@ -1,18 +1,48 @@
-
+#if __has_include("windows.graphics.capture.interop.h")
 #include <windows.graphics.capture.interop.h>
-#include <windows.graphics.capture.h>
-#include <winrt/Windows.Graphics.Capture.h>
+#else
+// some environments like MSYS2 don't have this header
+#include <unknwn.h>
+
+DEFINE_GUID(
+    IID_IGraphicsCaptureItemInterop,
+    // clang-format off
+    0x3628E81B, 0x3CAC, 0x4C60, 0xB7, 0xF4, 0x23, 0xCE, 0x0E, 0x0C, 0x33, 0x56
+    // clang-format on
+);
+
+MIDL_INTERFACE("3628E81B-3CAC-4C60-B7F4-23CE0E0C3356")
+IGraphicsCaptureItemInterop : ::IUnknown
+{
+    virtual HRESULT STDMETHODCALLTYPE CreateForWindow(
+        HWND window, REFIID riid, _COM_Outptr_ void** result) noexcept
+        = 0;
+
+    virtual HRESULT STDMETHODCALLTYPE CreateForMonitor(
+        HMONITOR monitor, REFIID riid, _COM_Outptr_ void** result) noexcept
+        = 0;
+};
+
+#ifdef __CRT_UUID_DECL
+__CRT_UUID_DECL(
+    IGraphicsCaptureItemInterop,
+    // clang-format off
+    0x3628E81B, 0x3CAC, 0x4C60, 0xB7, 0xF4, 0x23, 0xCE, 0x0E, 0x0C, 0x33, 0x56
+    // clang-format on
+);
+#endif
+#endif
 
 #include "pybase.h"
 #include "py.Windows.Graphics.Capture.h"
-
-#include <stdio.h>
+#include <winrt/Windows.Graphics.Capture.h>
 
 // https://docs.microsoft.com/en-us/windows/win32/api/windows.graphics.capture.interop/
 
 namespace py::cpp::Windows::Graphics::Capture::Interop
 {
-    static PyObject* create_for_monitor(PyObject* /*unused*/, PyObject* window_obj) noexcept
+    static PyObject* create_for_monitor(
+        PyObject* /*unused*/, PyObject* window_obj) noexcept
     {
         try
         {
@@ -29,10 +59,12 @@ namespace py::cpp::Windows::Graphics::Capture::Interop
             winrt::Windows::Graphics::Capture::GraphicsCaptureItem item = {nullptr};
             auto result = interop_factory->CreateForMonitor(
                 reinterpret_cast<HMONITOR>(hmonitor),
-                winrt::guid_of<winrt::Windows::Graphics::Capture::IGraphicsCaptureItem>(),
+                winrt::guid_of<
+                    winrt::Windows::Graphics::Capture::IGraphicsCaptureItem>(),
                 reinterpret_cast<void**>(winrt::put_abi(item)));
 
-            if (result < 0) {
+            if (result < 0)
+            {
                 winrt::throw_hresult(result);
             }
 
@@ -45,7 +77,8 @@ namespace py::cpp::Windows::Graphics::Capture::Interop
         }
     }
 
-    static PyObject* create_for_window(PyObject* /*unused*/, PyObject* window_obj) noexcept
+    static PyObject* create_for_window(
+        PyObject* /*unused*/, PyObject* window_obj) noexcept
     {
         try
         {
@@ -63,10 +96,12 @@ namespace py::cpp::Windows::Graphics::Capture::Interop
             winrt::Windows::Graphics::Capture::GraphicsCaptureItem item = {nullptr};
             auto result = interop_factory->CreateForWindow(
                 reinterpret_cast<HWND>(hwnd),
-                winrt::guid_of<winrt::Windows::Graphics::Capture::IGraphicsCaptureItem>(),
+                winrt::guid_of<
+                    winrt::Windows::Graphics::Capture::IGraphicsCaptureItem>(),
                 reinterpret_cast<void**>(winrt::put_abi(item)));
 
-            if (result < 0) {
+            if (result < 0)
+            {
                 winrt::throw_hresult(result);
             }
 
@@ -108,14 +143,8 @@ Requirements:
 )");
 
     static PyMethodDef module_methods[]{
-        {"create_for_monitor",
-        create_for_monitor,
-        METH_O,
-        create_for_monitor_doc},
-        {"create_for_window",
-        create_for_window,
-        METH_O,
-        create_for_window_doc},
+        {"create_for_monitor", create_for_monitor, METH_O, create_for_monitor_doc},
+        {"create_for_window", create_for_window, METH_O, create_for_window_doc},
         {}};
 
     PyDoc_STRVAR(
@@ -124,14 +153,14 @@ Requirements:
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-        "_%_Windows_Graphics_Capture_Interop",
-        module_doc,
-        0,
-        module_methods,
-        nullptr,
-        nullptr,
-        nullptr,
-        nullptr};
+           "_%_Windows_Graphics_Capture_Interop",
+           module_doc,
+           0,
+           module_methods,
+           nullptr,
+           nullptr,
+           nullptr,
+           nullptr};
 } // namespace py::cpp::Windows::Graphics::Capture::Interop
 
 PyMODINIT_FUNC PyInit__%_Windows_Graphics_Capture_Interop(void) noexcept
