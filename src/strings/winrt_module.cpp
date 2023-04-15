@@ -1,5 +1,7 @@
-#include "pybase.h"
+// must be included before winrt to avoid compile errors
 #include <Shobjidl.h>
+
+#include "pybase.h"
 #include <winrt/base.h>
 
 namespace py::cpp::_winrt

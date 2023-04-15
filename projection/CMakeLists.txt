@@ -40,5 +40,7 @@ target_precompile_headers(_winrt PRIVATE
 )
 # needed because including windows.h affects winrt
 set_property(SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src/runtime.cpp" PROPERTY SKIP_PRECOMPILE_HEADERS ON)
+# needed because including Shobjidl.h affects winrt
+set_property(SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src/_winrt.cpp" PROPERTY SKIP_PRECOMPILE_HEADERS ON)
 
 install(TARGETS _winrt DESTINATION ".")
