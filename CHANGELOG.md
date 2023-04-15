@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+## [v1.0.0-beta.9] - 2023-04-15
+
+### Fixed
+- Fixed compiling generated code with clang and gcc.
+
 ## [v1.0.0-beta.8] - 2023-04-02
 
 ### Added
@@ -143,7 +148,8 @@
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.8...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.9...HEAD
+[v1.0.0-beta.9]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.8...v1.0.0-beta.9
 [v1.0.0-beta.8]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.7...v1.0.0-beta.8
 [v1.0.0-beta.7]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.6...v1.0.0-beta.7
 [v1.0.0-beta.6]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.5...v1.0.0-beta.6
