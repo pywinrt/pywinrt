@@ -1,5 +1,8 @@
+// must be included before cppwinrt to enable FILETIME conversions
+#include <Windows.h>
 
 #include <Python.h>
+#include <datetime.h>
 #include "pybase.h"
 
 // "backport" of Python 3.12 function.
@@ -291,4 +294,104 @@ bool py::is_buffer_compatible(
     }
 
     return true;
+}
+
+/**
+ * Converts a winrt Windows.Foundation.DateTime to a Python datetime.datetime.
+ * @param [in]  value   The winrt Windows.Foundation.DateTime.
+ * @returns             The Python datetime.datetime or nullptr on error.
+ */
+PyObject* py::convert_datetime(winrt::Windows::Foundation::DateTime value) noexcept
+{
+    try
+    {
+        FILETIME ft = winrt::clock::to_FILETIME(value);
+        SYSTEMTIME st;
+
+        if (!FileTimeToSystemTime(&ft, &st))
+        {
+            winrt::throw_last_error();
+        }
+
+        auto microseconds
+            = std::chrono::time_point_cast<std::chrono::microseconds>(value)
+                  .time_since_epoch()
+                  .count()
+              % 1000;
+
+        // FIXME: where can we put this so it only imports once?
+        PyDateTime_IMPORT;
+
+        // new reference
+        return PyDateTimeAPI->DateTime_FromDateAndTime(
+            st.wYear,
+            st.wMonth,
+            st.wDay,
+            st.wHour,
+            st.wMinute,
+            st.wSecond,
+            st.wMilliseconds * 1000 + microseconds,
+            PyDateTime_TimeZone_UTC,
+            PyDateTimeAPI->DateTimeType);
+    }
+    catch (...)
+    {
+        py::to_PyErr();
+        return nullptr;
+    }
+}
+
+/**
+ * Converts a Python datetime.datetime to a winrt Windows.Foundation.DateTime.
+ * @param [in]  obj     The Python datetime.datetime object.
+ * @returns             The winrt Windows.Foundation.DateTime value.
+ */
+winrt::Windows::Foundation::DateTime py::convert_to_datetime(PyObject* obj)
+{
+    throw_if_pyobj_null(obj);
+
+    // FIXME: where can we put this so it only imports once?
+    PyDateTime_IMPORT;
+
+    if (!PyDateTime_Check(obj))
+    {
+        PyErr_SetString(PyExc_TypeError, "requires datetime.datetime object");
+        throw python_exception();
+    }
+
+    // WinRT works in UTC, so ensure correct time zone. Also works
+    // for "naive" datetime.
+
+    // new reference
+    pyobj_handle utc{
+        PyObject_CallMethod(obj, "astimezone", "O", PyDateTime_TimeZone_UTC)};
+    if (!utc)
+    {
+        throw python_exception();
+    }
+
+    SYSTEMTIME st;
+    st.wYear = PyDateTime_GET_YEAR(utc.get());
+    st.wMonth = PyDateTime_GET_MONTH(utc.get());
+    st.wDay = PyDateTime_GET_DAY(utc.get());
+    st.wHour = PyDateTime_DATE_GET_HOUR(utc.get());
+    st.wMinute = PyDateTime_DATE_GET_MINUTE(utc.get());
+    st.wSecond = PyDateTime_DATE_GET_SECOND(utc.get());
+    st.wMilliseconds = PyDateTime_DATE_GET_MICROSECOND(utc.get()) / 1000;
+
+    FILETIME ft;
+
+    if (!SystemTimeToFileTime(&st, &ft))
+    {
+        winrt::throw_last_error();
+    }
+
+    auto value = winrt::clock::from_FILETIME(ft);
+
+    auto microseconds = PyDateTime_DATE_GET_MICROSECOND(utc.get()) % 1000;
+
+    value += std::chrono::duration_cast<winrt::Windows::Foundation::DateTime::duration>(
+        std::chrono::microseconds{microseconds});
+
+    return value;
 }

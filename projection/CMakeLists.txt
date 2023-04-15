@@ -38,5 +38,7 @@ target_precompile_headers(_winrt PRIVATE
     "pywinrt/winrt/src/py.Windows.Foundation.h"
     "pywinrt/winrt/src/py.Windows.Storage.Streams.h"
 )
+# needed because including windows.h affects winrt
+set_property(SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/pywinrt/winrt/src/runtime.cpp" PROPERTY SKIP_PRECOMPILE_HEADERS ON)
 
 install(TARGETS _winrt DESTINATION ".")
