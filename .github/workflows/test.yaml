@@ -26,10 +26,11 @@ jobs:
           path: |
             projection/cppwinrt/
             projection/pywinrt/
-  test:
+  msvc:
     runs-on: windows-2022
     needs: generate
     strategy:
+      fail-fast: false
       matrix:
         python-version: ['3.7', '3.8', '3.9', '3.10', "3.11"]
         architecture: ['x86', 'x64']
@@ -52,10 +53,49 @@ jobs:
           cd projection
           ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion ${{ matrix.python-version }}
         shell: powershell
-      - name: Run tests
+      - name: test
         env:
           PYTHONPATH: projection/pywinrt
         run: python -m unittest -v
+  mingw:
+    runs-on: windows-2022
+    needs: generate
+    strategy:
+      fail-fast: false
+      matrix:
+        sys:
+          - mingw32
+          - mingw64
+          - ucrt64
+          - clang32
+          - clang64
+    name: 'Building on MSYS ${{ matrix.sys }}'
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
+        with:
+          name: generated
+          path: projection/
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: ${{matrix.sys}}
+          update: true
+          pacboy: >-
+            cc:p
+            cmake:p
+            python:p
+      - name: build
+        run: |
+          ${MINGW_PREFIX}/bin/cmake -S projection -B _build/${MSYSTEM} -DPYTHON_VERSION=3.10 -DPython3_ROOT_DIR=${MINGW_PREFIX}
+          ${MINGW_PREFIX}/bin/cmake --build _build/${MSYSTEM} -v
+          cp _build/${MSYSTEM}/_winrt.pyd projection/pywinrt/winrt/
+      - name: test
+        env:
+          PYTHONPATH: projection/pywinrt
+        run: ${MINGW_PREFIX}/bin/python -m unittest -v
   lint:
     runs-on: windows-2022
     steps:
