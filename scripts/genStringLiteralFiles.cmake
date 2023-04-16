@@ -9,7 +9,6 @@ foreach(outfile ${out_h} ${out_cpp})
 endforeach()
 
 file(APPEND ${out_h}   "#pragma once\n\n")
-file(APPEND ${out_cpp} "#include \"pch.h\"\n\n")
 
 foreach(outfile ${out_h} ${out_cpp})
     file(APPEND ${outfile} "namespace ${namespace} {\n\n")
