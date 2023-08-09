@@ -9,7 +9,7 @@ and familiar way.
 ### Prerequisites
 
 * [Windows 10](https://www.microsoft.com/windows), October 2018 Update or later.
-* [Python for Windows](https://docs.python.org/3.7/using/windows.html), version 3.7 or later
+* [Python for Windows](https://docs.python.org/3/using/windows.html), version 3.8 or later
 * [pip](https://pypi.org/project/pip/), version 19 or later
 
 ### Installing

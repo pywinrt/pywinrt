@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Removed
+- Removed support for Python 3.7.
+
 ## [v1.0.0-beta.9] - 2023-04-15
 
 ### Fixed

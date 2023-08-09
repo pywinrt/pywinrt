@@ -529,10 +529,6 @@ namespace py
         std::memset(&(py_instance->obj), 0, sizeof(py_instance->obj));
         py_instance->obj = instance;
 
-#if PY_VERSION_HEX < 0x03080000
-        Py_INCREF(type_object);
-#endif
-
         return reinterpret_cast<PyObject*>(py_instance);
     }
 
@@ -565,10 +561,6 @@ namespace py
         py_instance->get_unknown = &winrt_wrapper<T>::fetch_unknown;
         std::memset(&(py_instance->obj), 0, sizeof(py_instance->obj));
         py_instance->obj = instance;
-
-#if PY_VERSION_HEX < 0x03080000
-        Py_INCREF(type_object);
-#endif
 
         return reinterpret_cast<PyObject*>(py_instance);
     }
@@ -604,10 +596,6 @@ namespace py
             = &winrt_pinterface_wrapper<typename ptype::abstract>::fetch_unknown;
         std::memset(&(py_instance->obj), 0, sizeof(py_instance->obj));
         py_instance->obj = std::make_unique<typename ptype::concrete>(instance);
-
-#if PY_VERSION_HEX < 0x03080000
-        Py_INCREF(type);
-#endif
 
         return reinterpret_cast<PyObject*>(py_instance);
     }
