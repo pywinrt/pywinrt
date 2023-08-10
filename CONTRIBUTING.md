@@ -1,5 +1,11 @@
 
 
+## Prerequisites
+
+- Visual Studio 2022
+- Nuget (`winget install microsoft.nuget`)
+- Python
+
 ## Building pywinrt.exe
 
 If you are not already in a Visual Studio command prompt, run:
