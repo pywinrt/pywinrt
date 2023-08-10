@@ -1,4 +1,4 @@
-
+import sys
 import unittest
 
 import winrt.windows.foundation as wf
@@ -31,3 +31,9 @@ class TestBuffer(unittest.TestCase):
         mb = wss.Buffer.create_memory_buffer_over_i_buffer(buf)
         with mb.create_reference() as mbr, memoryview(mbr) as mv:
             self.assertEqual(mv, data)
+
+    @unittest.skipIf(sys.version_info < (3, 12), "requires Python 3.12 or greater")
+    def test_is_collections_abc_buffer_subclass(self):
+        from collections.abc import Buffer
+        self.assertTrue(issubclass(wss.Buffer, Buffer))
+        self.assertTrue(issubclass(wf.IMemoryBufferReference, Buffer))

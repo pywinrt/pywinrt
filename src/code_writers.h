@@ -4452,7 +4452,8 @@ if (!return_value)
 
             if (implements_ibuffer(type) || implements_imemorybufferreference(type))
             {
-                w.write("def __bytes__(self) -> bytes: ...\n");
+                w.write("def __buffer__(self, flags: int) -> memoryview: ...\n");
+                w.write("def __release_buffer__(self, view: memoryview) -> None: ...\n");
             }
 
             if (implements_mapping(type))

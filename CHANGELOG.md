@@ -9,6 +9,7 @@
 
 ### Changed
 - Changed how `collections.abc` protocols are implemented.
+- Changed type hints for buffer protocol to align with PEP 688.
 
 ### Fixed
 - Fixed structs should not inherit from `_winrt.Object`.
