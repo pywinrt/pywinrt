@@ -465,7 +465,9 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
 
     void write_type_base(writer& w, TypeDef const& type)
     {
-        if (has_dealloc(type))
+        auto category = get_category(type);
+
+        if (category == category::interface_type || category == category::class_type)
         {
             if (implements_imap(type))
             {
@@ -485,7 +487,7 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
             }
             else
             {
-                w.write("bases.get()");
+                w.write("object_bases.get()");
             }
         }
         else
@@ -825,9 +827,9 @@ static PyModuleDef module_def
             }
             w.write("}\n\n");
 
-            w.write("py::pyobj_handle bases{PyTuple_Pack(1, object_type)};\n\n");
+            w.write("py::pyobj_handle object_bases{PyTuple_Pack(1, object_type)};\n\n");
 
-            w.write("if (!bases)\n{\n");
+            w.write("if (!object_bases)\n{\n");
             {
                 writer::indent_guard gg{w};
 

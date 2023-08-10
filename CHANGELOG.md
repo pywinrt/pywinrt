@@ -7,6 +7,9 @@
 ### Added
 - Added positional-only parameters indication to type hints.
 
+### Fixed
+- Fixed structs should not inherit from `_winrt.Object`.
+
 ### Removed
 - Removed support for Python 3.7.
 
