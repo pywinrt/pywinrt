@@ -124,6 +124,33 @@ namespace pywinrt
         }
 
         w.write("@ = _ns_module.@\n", type.TypeName(), type.TypeName());
+
+        if (implements_imap(type))
+        {
+            w.write(
+                "%.system._mixin_mutable_mapping(@)\n",
+                settings.module,
+                type.TypeName());
+        } 
+        else if (implements_imapview(type))
+        {
+            w.write(
+                "%.system._mixin_mapping(@)\n",
+                settings.module,
+                type.TypeName());
+        } 
+        else if (implements_ivector(type)) {
+            w.write(
+                "%.system._mixin_mutable_sequence(@)\n",
+                settings.module,
+                type.TypeName());
+        } 
+        else if (implements_ivectorview(type)) {
+            w.write(
+                "%.system._mixin_sequence(@)\n",
+                settings.module,
+                type.TypeName());
+        }
     }
 
     /**
@@ -469,26 +496,7 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
 
         if (category == category::interface_type || category == category::class_type)
         {
-            if (implements_imap(type))
-            {
-                w.write("mutable_mapping_bases.get()");
-            }
-            else if (implements_imapview(type))
-            {
-                w.write("mapping_bases.get()");
-            }
-            else if (implements_ivector(type))
-            {
-                w.write("mutable_sequence_bases.get()");
-            }
-            else if (implements_ivectorview(type))
-            {
-                w.write("sequence_bases.get()");
-            }
-            else
-            {
-                w.write("object_bases.get()");
-            }
+            w.write("object_bases.get()");
         }
         else
         {
@@ -830,100 +838,6 @@ static PyModuleDef module_def
             w.write("py::pyobj_handle object_bases{PyTuple_Pack(1, object_type)};\n\n");
 
             w.write("if (!object_bases)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write(
-                "py::pyobj_handle collections_abc_module{PyImport_ImportModule(\"collections.abc\")};\n\n");
-            w.write("if (!collections_abc_module)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write(
-                "py::pyobj_handle sequence_type{PyObject_GetAttrString(collections_abc_module.get(), \"Sequence\")};\n\n");
-            w.write("if (!sequence_type)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write(
-                "py::pyobj_handle sequence_bases{PyTuple_Pack(2, object_type, sequence_type.get())};\n\n");
-
-            w.write("if (!sequence_bases)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write(
-                "py::pyobj_handle mutable_sequence_type{PyObject_GetAttrString(collections_abc_module.get(), \"MutableSequence\")};\n\n");
-            w.write("if (!mutable_sequence_type)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write(
-                "py::pyobj_handle mutable_sequence_bases{PyTuple_Pack(2, object_type, mutable_sequence_type.get())};\n\n");
-
-            w.write("if (!mutable_sequence_bases)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write(
-                "py::pyobj_handle mapping_type{PyObject_GetAttrString(collections_abc_module.get(), \"Mapping\")};\n\n");
-            w.write("if (!mapping_type)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write(
-                "py::pyobj_handle mapping_bases{PyTuple_Pack(2, object_type, mapping_type.get())};\n\n");
-
-            w.write("if (!mapping_bases)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write(
-                "py::pyobj_handle mutable_mapping_type{PyObject_GetAttrString(collections_abc_module.get(), \"MutableMapping\")};\n\n");
-            w.write("if (!mutable_mapping_type)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write(
-                "py::pyobj_handle mutable_mapping_bases{PyTuple_Pack(2, object_type, mutable_mapping_type.get())};\n\n");
-
-            w.write("if (!mutable_mapping_bases)\n{\n");
             {
                 writer::indent_guard gg{w};
 
@@ -2280,17 +2194,6 @@ return 0;
                         });
                 }
                 w.write("}\n");
-
-                // alias InsertAt to insert for Python sequence protocol
-                w.write(
-                    "\nstatic PyObject* @_get_insert(PyObject* self) noexcept\n{\n",
-                    type.TypeName());
-                {
-                    writer::indent_guard g{w};
-
-                    w.write("return PyObject_GetAttrString(self, \"insert_at\");\n");
-                }
-                w.write("}\n");
             }
         }
 
@@ -2511,11 +2414,6 @@ return 0;
                                 setter ? setter.Name() : "");
                         }
                     });
-            }
-
-            if (implements_ivector(type))
-            {
-                write_row("insert", "get_insert", "");
             }
 
             w.write("{ }\n");

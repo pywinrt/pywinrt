@@ -7,6 +7,9 @@
 ### Added
 - Added positional-only parameters indication to type hints.
 
+### Changed
+- Changed how `collections.abc` protocols are implemented.
+
 ### Fixed
 - Fixed structs should not inherit from `_winrt.Object`.
 

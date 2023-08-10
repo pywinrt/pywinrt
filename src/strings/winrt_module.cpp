@@ -290,29 +290,6 @@ namespace py::cpp::_winrt
         static const auto kSTA
             = static_cast<long>(winrt::apartment_type::single_threaded);
 
-        py::pyobj_handle collections_abc_module{
-            PyImport_ImportModule("collections.abc")};
-
-        if (!collections_abc_module)
-        {
-            return nullptr;
-        }
-
-        py::pyobj_handle mutable_sequence_type{
-            PyObject_GetAttrString(collections_abc_module.get(), "MutableSequence")};
-
-        if (!mutable_sequence_type)
-        {
-            return nullptr;
-        }
-
-        py::pyobj_handle array_bases{PyTuple_Pack(1, mutable_sequence_type.get())};
-
-        if (!array_bases)
-        {
-            return nullptr;
-        }
-
         py::pyobj_handle module{PyModule_Create(&module_def)};
 
         if (!module)
@@ -332,7 +309,7 @@ namespace py::cpp::_winrt
         }
 
         state->Array_type = py::register_python_type(
-            module.get(), "Array", &Array_type_spec, array_bases.get(), nullptr);
+            module.get(), "Array", &Array_type_spec, nullptr, nullptr);
 
         if (!state->Array_type)
         {
