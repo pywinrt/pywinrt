@@ -4770,7 +4770,7 @@ if (!return_value)
             {
                 w.write("@staticmethod\n");
                 w.write(
-                    "def _from(obj: %.system.Object) -> @: ...\n",
+                    "def _from(obj: %.system.Object, /) -> @: ...\n",
                     settings.module,
                     type.TypeName());
             }
@@ -4797,8 +4797,6 @@ if (!return_value)
                           ? ", "
                           : "";
 
-                // TODO: add trailing ", /" (PEP 570) to the parameters when we drop
-                // support for Python 3.7
                 if (is_constructor(method))
                 {
                     w.write(
@@ -4812,12 +4810,13 @@ if (!return_value)
                 else
                 {
                     w.write(
-                        "def %(%%%) -> %: ...\n",
+                        "def %(%%%%) -> %: ...\n",
                         bind<write_lower_snake_case_python_identifier>(method.Name()),
                         is_static(method) ? "" : "self",
                         first_seperator,
                         bind_list<write_method_in_param_name_and_typing>(
                             ", ", filter_py_in_params(signature.params())),
+                        filter_py_in_params(signature.params()).empty() ? "" : ", /",
                         bind<write_return_typing>(signature));
                 }
             };

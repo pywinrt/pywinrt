@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Added positional-only parameters indication to type hints.
+
 ### Removed
 - Removed support for Python 3.7.
 
