@@ -22,7 +22,7 @@ namespace pywinrt
         template<typename T>
         void add(T&& callback)
         {
-#if defined(XLANG_DEBUG)
+#if defined(_DEBUG)
             callback();
 #else
             m_tasks.push_back(std::async(std::forward<T>(callback)));

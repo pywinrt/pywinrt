@@ -20,10 +20,6 @@
 #include <set>
 #include <filesystem>
 
-#if defined(_DEBUG)
-#define XLANG_DEBUG
-#endif
-
 namespace pywinrt
 {
     using namespace std::literals;

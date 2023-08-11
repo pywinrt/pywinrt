@@ -18,7 +18,7 @@ namespace pywinrt::text
         template<typename... Args>
         void write(std::string_view const& value, Args const&... args)
         {
-#if defined(XLANG_DEBUG)
+#if defined(_DEBUG)
             auto expected = count_placeholders(value);
             auto actual = sizeof...(Args);
             assert(expected == actual);
@@ -29,7 +29,7 @@ namespace pywinrt::text
         template<typename... Args>
         std::string write_temp(std::string_view const& value, Args const&... args)
         {
-#if defined(XLANG_DEBUG)
+#if defined(_DEBUG)
             bool restore_debug_trace = debug_trace;
             debug_trace = false;
 #endif
@@ -41,7 +41,7 @@ namespace pywinrt::text
             std::string result{m_first.data() + size, m_first.size() - size};
             m_first.resize(size);
 
-#if defined(XLANG_DEBUG)
+#if defined(_DEBUG)
             debug_trace = restore_debug_trace;
 #endif
             return result;
@@ -51,7 +51,7 @@ namespace pywinrt::text
         {
             m_first.insert(m_first.end(), value.begin(), value.end());
 
-#if defined(XLANG_DEBUG)
+#if defined(_DEBUG)
             if (debug_trace)
             {
                 ::printf("%.*s", static_cast<int>(value.size()), value.data());
@@ -63,7 +63,7 @@ namespace pywinrt::text
         {
             m_first.push_back(value);
 
-#if defined(XLANG_DEBUG)
+#if defined(_DEBUG)
             if (debug_trace)
             {
                 ::printf("%c", value);
@@ -205,7 +205,7 @@ namespace pywinrt::text
                 file.end());
         }
 
-#if defined(XLANG_DEBUG)
+#if defined(_DEBUG)
         bool debug_trace{};
 #endif
 
