@@ -22,18 +22,22 @@ else()
     endif()
 endif()
 
-# strip suffix to allow support for prerelease version
-string(REGEX MATCH "^[0-9]\\.[0-9]+(\\.[0-9]+)?" PYTHON_BASE_VERSION ${PYTHON_VERSION})
+if (PYTHON_VERSION)
+    # strip suffix to allow support for prerelease version
+    string(REGEX MATCH "^[0-9]\\.[0-9]+(\\.[0-9]+)?" PYTHON_BASE_VERSION ${PYTHON_VERSION})
 
-# work around https://gitlab.kitware.com/cmake/cmake/-/issues/24587
-if(NOT CMAKE_GENERATOR_PLATFORM AND CMAKE_SYSTEM_PROCESSOR MATCHES "ARM64" OR CMAKE_GENERATOR_PLATFORM MATCHES "ARM64")
-    set(Python3_ROOT_DIR
-        [HKEY_CURRENT_USER/SOFTWARE/Python/PythonCore/${PYTHON_BASE_VERSION}-arm64/InstallPath]
-        [HKEY_LOCAL_MACHINE/SOFTWARE/Python/PythonCore/${PYTHON_BASE_VERSION}-arm64/InstallPath]
-    )
+    # work around https://gitlab.kitware.com/cmake/cmake/-/issues/24587
+    if(NOT CMAKE_GENERATOR_PLATFORM AND CMAKE_SYSTEM_PROCESSOR MATCHES "ARM64" OR CMAKE_GENERATOR_PLATFORM MATCHES "ARM64")
+        set(Python3_ROOT_DIR
+            [HKEY_CURRENT_USER/SOFTWARE/Python/PythonCore/${PYTHON_BASE_VERSION}-arm64/InstallPath]
+            [HKEY_LOCAL_MACHINE/SOFTWARE/Python/PythonCore/${PYTHON_BASE_VERSION}-arm64/InstallPath]
+        )
+    endif()
+
+    find_package(Python3 ${PYTHON_BASE_VERSION} EXACT REQUIRED COMPONENTS Development.Module)
+else()
+    find_package(Python3 REQUIRED COMPONENTS Development.Module)
 endif()
-
-find_package(Python3 ${PYTHON_BASE_VERSION} EXACT REQUIRED COMPONENTS Development.Module)
 
 Python3_add_library (_winrt MODULE ${sources})
 set_target_properties(_winrt PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG _winrt_d)

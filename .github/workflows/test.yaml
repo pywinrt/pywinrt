@@ -90,7 +90,7 @@ jobs:
             python:p
       - name: build
         run: |
-          ${MINGW_PREFIX}/bin/cmake -S projection -B _build/${MSYSTEM} -DPYTHON_VERSION=3.10 -DPython3_ROOT_DIR=${MINGW_PREFIX}
+          ${MINGW_PREFIX}/bin/cmake -S projection -B _build/${MSYSTEM} -DPython3_ROOT_DIR=${MINGW_PREFIX}
           ${MINGW_PREFIX}/bin/cmake --build _build/${MSYSTEM} -v
           cp _build/${MSYSTEM}/_winrt.pyd projection/pywinrt/winrt/
       - name: test
