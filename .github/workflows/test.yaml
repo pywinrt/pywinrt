@@ -88,6 +88,9 @@ jobs:
             cc:p
             cmake:p
             python:p
+      # HACK: work around https://github.com/msys2/MINGW-packages/issues/17998
+      - name: patch headers
+        run: sed 's/enum \(DirectXAlphaMode\|DirectXPixelFormat\)/ABI::Windows::Graphics::DirectX::\1/' ${MINGW_PREFIX}/include/windows.ui.composition.h -i
       - name: build
         run: |
           ${MINGW_PREFIX}/bin/cmake -S projection -B _build/${MSYSTEM} -DPython3_ROOT_DIR=${MINGW_PREFIX}
