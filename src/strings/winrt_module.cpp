@@ -251,7 +251,7 @@ namespace py::cpp::_winrt
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        assert(state);
+        WINRT_ASSERT(state);
 
         Py_VISIT(state->Object_type);
         Py_VISIT(state->Array_type);
@@ -263,7 +263,7 @@ namespace py::cpp::_winrt
     static int module_clear(PyObject* module) noexcept
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        assert(state);
+        WINRT_ASSERT(state);
 
         Py_CLEAR(state->Object_type);
         Py_CLEAR(state->Array_type);
@@ -298,7 +298,7 @@ namespace py::cpp::_winrt
         }
 
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-        assert(state);
+        WINRT_ASSERT(state);
 
         state->Object_type = py::register_python_type(
             module.get(), type_name_Object, &Object_type_spec, nullptr, nullptr);
@@ -360,7 +360,7 @@ PyTypeObject* py::winrt_type<py::Object>::get_python_type() noexcept
 
     auto state
         = reinterpret_cast<py::cpp::_winrt::module_state*>(PyModule_GetState(module));
-    assert(state);
+    WINRT_ASSERT(state);
 
     return state->Object_type;
 }
@@ -378,7 +378,7 @@ PyTypeObject* py::winrt_type<py::Array>::get_python_type() noexcept
 
     auto state
         = reinterpret_cast<py::cpp::_winrt::module_state*>(PyModule_GetState(module));
-    assert(state);
+    WINRT_ASSERT(state);
 
     return state->Array_type;
 }
@@ -396,7 +396,7 @@ PyTypeObject* py::winrt_type<py::MappingIter>::get_python_type() noexcept
 
     auto state
         = reinterpret_cast<py::cpp::_winrt::module_state*>(PyModule_GetState(module));
-    assert(state);
+    WINRT_ASSERT(state);
 
     return state->MappingIter_type;
 }

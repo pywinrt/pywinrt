@@ -847,7 +847,7 @@ static PyModuleDef module_def
 
             w.write(
                 "auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));\n");
-            w.write("assert(state);\n\n");
+            w.write("WINRT_ASSERT(state);\n\n");
 
             settings.filter.bind_each<write_ns_module_init_python_type>(
                 members.classes)(w);
@@ -2658,7 +2658,7 @@ static PyType_Spec type_spec_@_Meta =
             w.write(
                 "auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));\n");
 
-            w.write("assert(state);\n\n");
+            w.write("WINRT_ASSERT(state);\n\n");
 
             w.write("if (state->type_@)\n{\n", type.TypeName());
             {

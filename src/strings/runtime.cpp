@@ -264,7 +264,7 @@ bool py::is_buffer_compatible(
         return false;
     }
 
-    assert(format);
+    WINRT_ASSERT(format);
 
     if (!view.format || std::strcmp(view.format, format))
     {
