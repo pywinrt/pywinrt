@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [v1.0.0-beta.10] - 2023-08-11
+
 ### Added
 - Added positional-only parameters indication to type hints.
 
@@ -26,8 +28,8 @@
 
 ### Added
 - Added new `Array` type for wrapping COM arrays.
-- Added support for conversion to/from char16_t/str.
-- Added support for slicing ``IVectorView``.
+- Added support for conversion to/from `char16_t`/`str`.
+- Added support for slicing `IVectorView`.
 
 ### Changed
 - Provide useful error message when `NotImplementedError` is raised.
@@ -161,7 +163,8 @@
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.9...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.10...HEAD
+[v1.0.0-beta.10]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.9...v1.0.0-beta.10
 [v1.0.0-beta.9]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.8...v1.0.0-beta.9
 [v1.0.0-beta.8]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.7...v1.0.0-beta.8
 [v1.0.0-beta.7]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.6...v1.0.0-beta.7
