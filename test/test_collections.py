@@ -41,6 +41,8 @@ class TestCollections(unittest.TestCase):
         self.assertIn("hello", m.keys())
         self.assertIn("world", m.values())
         self.assertIn(("hello", "world"), m.items())
+        self.assertEqual(m, {"hello": "world"})
+        self.assertFalse(m != {"hello": "world"})
 
         del m["hello"]
 

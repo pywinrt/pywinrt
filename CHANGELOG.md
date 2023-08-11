@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed mixin of `__eq__` for mappings.
+
 ## [v1.0.0-beta.10] - 2023-08-11
 
 ### Added
