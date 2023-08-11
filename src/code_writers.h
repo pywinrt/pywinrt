@@ -131,25 +131,21 @@ namespace pywinrt
                 "%.system._mixin_mutable_mapping(@)\n",
                 settings.module,
                 type.TypeName());
-        } 
+        }
         else if (implements_imapview(type))
         {
-            w.write(
-                "%.system._mixin_mapping(@)\n",
-                settings.module,
-                type.TypeName());
-        } 
-        else if (implements_ivector(type)) {
+            w.write("%.system._mixin_mapping(@)\n", settings.module, type.TypeName());
+        }
+        else if (implements_ivector(type))
+        {
             w.write(
                 "%.system._mixin_mutable_sequence(@)\n",
                 settings.module,
                 type.TypeName());
-        } 
-        else if (implements_ivectorview(type)) {
-            w.write(
-                "%.system._mixin_sequence(@)\n",
-                settings.module,
-                type.TypeName());
+        }
+        else if (implements_ivectorview(type))
+        {
+            w.write("%.system._mixin_sequence(@)\n", settings.module, type.TypeName());
         }
     }
 
@@ -4453,7 +4449,8 @@ if (!return_value)
             if (implements_ibuffer(type) || implements_imemorybufferreference(type))
             {
                 w.write("def __buffer__(self, flags: int) -> memoryview: ...\n");
-                w.write("def __release_buffer__(self, view: memoryview) -> None: ...\n");
+                w.write(
+                    "def __release_buffer__(self, view: memoryview) -> None: ...\n");
             }
 
             if (implements_mapping(type))
