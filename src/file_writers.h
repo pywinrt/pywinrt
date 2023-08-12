@@ -174,7 +174,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
         write_license(w, "#");
 
-        if (settings.filter.includes(members.enums))
+        if (!members.enums.empty())
         {
             w.write("import enum\n");
             w.write("\n");
@@ -207,7 +207,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
         write_license(w, "#");
 
-        if (settings.filter.includes(members.enums))
+        if (!members.enums.empty())
         {
             w.write("import enum\n");
         }

@@ -11,6 +11,7 @@
 - Fixed mixin of `__eq__` for mappings.
 - Fixed parsing structs with guid field.
 - Fixed single byte struct field arg format.
+- Fixed importing `enum` when not needed.
 
 ### Removed
 - Removed generation of base/core files.
