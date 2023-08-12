@@ -16,10 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build pywinrt.exe
-        run: ./scripts/vsdevcmd-build.cmd
+        run: ./scripts/build_pywinrt_nuget.cmd
+      - name: Fetch tools
+        run: ./scripts/fetch-tools.ps1 -useLocalPyWinRT -PyWinRTVersion 1.2.3.4
       - name: generate
         working-directory: projection
-        run: ./generate.ps1
+        run: ./generate.ps1 -usePyWinRTNuget
       - uses: actions/upload-artifact@v3
         with:
           name: generated

@@ -31,7 +31,10 @@ bld/
 #wwwroot/
 
 # CMake cache
-/_build
+/_build/
+
+# Build tools
+/_tools/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
