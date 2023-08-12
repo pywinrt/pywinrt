@@ -7,26 +7,6 @@ if(NOT DEFINED PYWINRT_BUILD_VERSION)
 set(PYWINRT_BUILD_VERSION "0.0.0")
 endif()
 
-function(GENERATE_STRING_LITERAL_FILES glob_expression output_filename namespace target)
-
-    file(GLOB input_files CONFIGURE_DEPENDS "${glob_expression}")
-
-    set(out_h   "${PROJECT_BINARY_DIR}/${output_filename}.h")
-    set(out_cpp "${PROJECT_BINARY_DIR}/${output_filename}.cpp")
-    set(output_files ${out_h} ${out_cpp})
-
-    add_custom_command(
-        OUTPUT  ${output_files}
-        DEPENDS ${input_files}
-        COMMAND ${CMAKE_COMMAND} \"-Dglob_expression=${glob_expression}\" \"-Dout_h=${out_h}\" \"-Dout_cpp=${out_cpp}\" \"-Dnamespace=${namespace}\" -P \"${PYWINRT_SCRIPTS_PATH}/genStringLiteralFiles.cmake\"
-    )
-
-    set(gen_target_name "generated_${target}_${output_filename}")
-    add_custom_target(${gen_target_name} DEPENDS ${output_files})
-    add_dependencies(${target} ${gen_target_name})
-
-endfunction()
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 

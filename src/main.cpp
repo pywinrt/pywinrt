@@ -5,8 +5,6 @@
 #include "text_writer.h"
 
 #include "helpers.h"
-
-#include "strings.h"
 #include "settings.h"
 #include "type_writers.h"
 #include "code_writers.h"
