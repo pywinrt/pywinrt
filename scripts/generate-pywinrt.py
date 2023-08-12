@@ -14,10 +14,24 @@ if not PYWINRT_EXE.exists():
     raise RuntimeError("pywinrt.exe not found. Please run `./scripts/fetch-tools.cmd`")
 
 
-# generate headers for windows sdk
+# generate code for windows sdk
 
+MINIMAL_NAMESPACES = [
+    "Windows.Data.Json",
+    "Windows.Devices.Geolocation",
+    "Windows.Foundation",
+    "Windows.Graphics.Capture",
+    "Windows.Graphics.DirectX",
+    "Windows.Storage.Streams",
+]
 WINDOWS_SDK = "10.0.22621.0+"
 SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "pywinrt"
+
+include_args = []
+
+if "--minimal" in sys.argv:
+    for ns in MINIMAL_NAMESPACES:
+        include_args.extend(["-include", ns])
 
 subprocess.check_call(
     [
@@ -29,11 +43,10 @@ subprocess.check_call(
         "-header-path",
         SDK_PACKAGE_PATH,
     ]
+    + include_args
 )
 
-raise SystemExit
-
-# generate headers for test component
+# generate code for test component
 
 TEST_PACKAGE_METADATA = (
     REPO_ROOT_PATH

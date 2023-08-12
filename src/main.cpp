@@ -24,6 +24,11 @@ namespace pywinrt
          cmd::option::no_max,
          "<spec>",
          "Windows metadata to include in projection"},
+        {"reference",
+         0,
+         cmd::option::no_max,
+         "<spec>",
+         "Windows metadata to reference from projection"},
         {"output", 0, 1, "<path>", "Location of generated projection"},
         {"include",
          0,
@@ -90,6 +95,7 @@ Where <spec> is one or more of:
         settings.verbose = args.exists("verbose");
         settings.module = args.value("module", "winrt");
         settings.input = args.files("input", database::is_database);
+        settings.reference = args.files("reference", database::is_database);
 
         for (auto&& include : args.values("include"))
         {
@@ -115,6 +121,7 @@ Where <spec> is one or more of:
     {
         std::vector<std::string> files;
         files.insert(files.end(), settings.input.begin(), settings.input.end());
+        files.insert(files.end(), settings.reference.begin(), settings.reference.end());
         return files;
     }
 
@@ -123,6 +130,53 @@ Where <spec> is one or more of:
         return !members.interfaces.empty() || !members.classes.empty()
                || !members.enums.empty() || !members.structs.empty()
                || !members.delegates.empty();
+    }
+
+    static void build_filters(cache const& c)
+    {
+        std::set<std::string> include;
+
+        if (!settings.include.empty())
+        {
+            // if user gave includes, use them
+            include = settings.include;
+        }
+        else if (!settings.reference.empty())
+        {
+            // if user did not give includes but gave references, get all types
+            // from input
+            for (auto file : settings.input)
+            {
+                auto db = std::find_if(
+                    c.databases().begin(),
+                    c.databases().end(),
+                    [&](auto&& db)
+                    {
+                        return db.path() == file;
+                    });
+
+                for (auto&& type : db->TypeDef)
+                {
+                    if (!type.Flags().WindowsRuntime())
+                    {
+                        continue;
+                    }
+
+                    std::string full_name{type.TypeNamespace()};
+                    full_name += '.';
+                    full_name += type.TypeName();
+                    include.insert(full_name);
+                }
+            }
+        }
+        else
+        {
+            // if user gave neither includes nor references, then we don't need
+            // an include filter
+            include = {};
+        }
+
+        settings.filter = {include, settings.exclude};
     }
 
     int run(int const argc, char** argv)
@@ -135,13 +189,18 @@ Where <spec> is one or more of:
             auto start = get_start_time();
             process_args(argc, argv);
             cache c{get_files_to_cache()};
-            settings.filter = {settings.include, settings.exclude};
+            build_filters(c);
 
             if (settings.verbose)
             {
                 for (auto&& file : settings.input)
                 {
                     w.write("input: %\n", file);
+                }
+
+                for (auto&& file : settings.reference)
+                {
+                    w.write("reference: %\n", file);
                 }
 
                 w.write("output: %\n", settings.output_folder.string());

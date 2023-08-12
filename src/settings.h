@@ -5,6 +5,7 @@ namespace pywinrt
     struct settings_type
     {
         std::set<std::string> input;
+        std::set<std::string> reference;
 
         std::optional<std::filesystem::path> header_path;
         std::filesystem::path output_folder;

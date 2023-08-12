@@ -5,6 +5,7 @@
 ## [Unreleased]
 
 ### Added
+- Added `-reference` option to `pywinrt.exe`.
 - Added `-header-path` option to `pywinrt.exe`.
 
 ### Fixed
