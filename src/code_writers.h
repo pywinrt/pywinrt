@@ -3142,6 +3142,10 @@ struct pinterface_python_type<%<%>>
                     throw_invalid("invalid fundamental type");
                 }
             },
+            [&](guid_type type)
+            {
+                w.write("T{I2H8B}");
+            },
             [&]([[maybe_unused]] TypeDef const& type)
             {
                 assert(get_category(type) == category::struct_type);
@@ -3268,6 +3272,10 @@ struct pinterface_python_type<%<%>>
                     throw_invalid("invalid fundamental type");
                 }
             },
+            [&](guid_type type)
+            {
+                w.write("PyObject*");
+            },
             [&]([[maybe_unused]] TypeDef const& type)
             {
                 assert(get_category(type) == category::struct_type);
@@ -3334,6 +3342,10 @@ struct pinterface_python_type<%<%>>
                 default:
                     throw_invalid("invalid fundamental type");
                 }
+            },
+            [&](guid_type type)
+            {
+                w.write("uuid.uuid");
             },
             [&]([[maybe_unused]] TypeDef const& type)
             {
@@ -3406,6 +3418,10 @@ struct pinterface_python_type<%<%>>
                     throw_invalid("invalid fundamental type");
                 }
             },
+            [&](guid_type type)
+            {
+                w.write("O");
+            },
             [&]([[maybe_unused]] type_definition const& type)
             {
                 assert(get_category(type) == category::struct_type);
@@ -3422,6 +3438,10 @@ struct pinterface_python_type<%<%>>
         call(
             get_struct_field_semantics(field, true),
             [&](fundamental_type)
+            {
+                w.write(", &_%", field.Name());
+            },
+            [&](guid_type type)
             {
                 w.write(", &_%", field.Name());
             },
@@ -3443,6 +3463,10 @@ struct pinterface_python_type<%<%>>
             [&](fundamental_type)
             {
                 w.write("_%", field.Name());
+            },
+            [&](guid_type type)
+            {
+                w.write("py::converter<winrt::guid>::convert_to(_%)", field.Name());
             },
             [&](type_definition const& type)
             {
@@ -3472,6 +3496,10 @@ struct pinterface_python_type<%<%>>
             get_struct_field_semantics(field, true),
             [&](fundamental_type)
             {
+            },
+            [&](guid_type type)
+            {
+                w.write(", &_%", field.Name());
             },
             [&]([[maybe_unused]] TypeDef const& type)
             {

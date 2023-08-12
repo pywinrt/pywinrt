@@ -9,6 +9,7 @@
 
 ### Fixed
 - Fixed mixin of `__eq__` for mappings.
+- Fixed parsing structs with guid field.
 
 ### Removed
 - Removed generation of base/core files.
