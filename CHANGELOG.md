@@ -10,6 +10,7 @@
 ### Fixed
 - Fixed mixin of `__eq__` for mappings.
 - Fixed parsing structs with guid field.
+- Fixed single byte struct field arg format.
 
 ### Removed
 - Removed generation of base/core files.

@@ -3380,10 +3380,10 @@ struct pinterface_python_type<%<%>>
                     w.write("u1");
                     break;
                 case fundamental_type::Int8:
-                    w.write("y1");
+                    w.write("b");
                     break;
                 case fundamental_type::UInt8:
-                    w.write("y1");
+                    w.write("B");
                     break;
                 case fundamental_type::Int16:
                     w.write("h");

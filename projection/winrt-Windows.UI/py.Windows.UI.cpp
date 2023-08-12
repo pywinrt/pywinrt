@@ -3328,7 +3328,7 @@ namespace py::cpp::Windows::UI
         uint8_t _B{};
 
         static const char* kwlist[] = {"a", "r", "g", "b", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "y1y1y1y1", const_cast<char**>(kwlist), &_A, &_R, &_G, &_B))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "BBBB", const_cast<char**>(kwlist), &_A, &_R, &_G, &_B))
         {
             return nullptr;
         }
