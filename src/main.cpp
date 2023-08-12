@@ -37,6 +37,7 @@ namespace pywinrt
          cmd::option::no_max,
          "<prefix>",
          "One or more prefixes to exclude from projection"},
+        {"header-path", 0, 1, "<path>", "Install headers in custom path"},
         {"verbose", 0, 0, {}, "Show detailed progress information"},
         {"module", 0, 1, "<name>", "Name of generated projection. Defaults to winrt."},
         {"help", 0, cmd::option::no_max, {}, "Show detailed help"},
@@ -104,6 +105,12 @@ Where <spec> is one or more of:
 
         settings.output_folder = absolute(args.value("output", "output"));
         create_directories(settings.output_folder);
+
+        if (args.exists("header-path"))
+        {
+            settings.header_path = absolute(args.value("header-path"));
+            create_directories(settings.header_path.value());
+        }
     }
 
     auto get_files_to_cache()
@@ -146,24 +153,6 @@ Where <spec> is one or more of:
 
             task_group group;
 
-            auto module_dir = settings.output_folder / settings.module;
-            auto src_dir = module_dir / "src";
-            auto system_dir = module_dir / "system";
-            create_directories(src_dir);
-            create_directories(system_dir);
-
-            group.add(
-                [&]
-                {
-                    write_pybase_h(src_dir);
-                    write_package_py_typed(module_dir);
-                    write_winrt_pyi(module_dir);
-                    write_system_dunder_init_py(system_dir);
-                    write_runtime_cpp(src_dir);
-                    write_winrt_module_cpp(src_dir);
-                    write_winrt_array_cpp(src_dir);
-                });
-
             std::vector<std::string> generated_namespaces{};
 
             for (auto&& [ns, members] : c.namespaces())
@@ -175,7 +164,10 @@ Where <spec> is one or more of:
 
                 generated_namespaces.emplace_back(ns);
 
-                auto ns_dir = module_dir;
+                auto ns_package_name = w.write_temp("%-%", settings.module, ns);
+                auto ns_package_dir = settings.output_folder / ns_package_name;
+                auto ns_dir = ns_package_dir / settings.module;
+
                 for (auto&& ns_segment : get_dotted_name_segments(ns))
                 {
                     std::string segment{ns_segment};
@@ -193,27 +185,17 @@ Where <spec> is one or more of:
                 create_directories(ns_dir);
 
                 group.add(
-                    [&src_dir, ns_dir, ns = ns, members = members]
+                    [ns_package_dir, ns_dir, ns = ns, members = members]
                     {
-                        auto namespaces = write_namespace_cpp(src_dir, ns, members);
-                        write_namespace_h(src_dir, ns, namespaces, members);
+                        auto header_dir = settings.header_path.value_or(ns_package_dir);
+
+                        auto namespaces
+                            = write_namespace_cpp(ns_package_dir, ns, members);
+                        write_namespace_h(header_dir, ns, namespaces, members);
                         write_namespace_dunder_init_py(
                             ns_dir, settings.module, namespaces, ns, members);
                         write_namespace_dunder_init_pyi(
                             ns_dir, namespaces, ns, members);
-
-                        // special case for adding additional
-                        // Windows.Graphics.Capture.Interop module (the interop
-                        // namespace doesn't have metadata to automatically generate it)
-                        if (ns == "Windows.Graphics.Capture")
-                        {
-                            auto interop_dir = ns_dir / "interop";
-                            create_directories(interop_dir);
-
-                            write_windows_graphics_capture_interop_cpp(src_dir);
-                            write_windows_graphics_capture_interop_py(interop_dir);
-                            write_windows_graphics_capture_interop_pyi(interop_dir);
-                        }
                     });
             }
 

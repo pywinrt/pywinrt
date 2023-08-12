@@ -4,8 +4,14 @@
 
 ## [Unreleased]
 
+### Added
+- Added `-header-path` option to `pywinrt.exe`.
+
 ### Fixed
 - Fixed mixin of `__eq__` for mappings.
+
+### Removed
+- Removed generation of base/core files.
 
 ## [v1.0.0-beta.10] - 2023-08-11
 

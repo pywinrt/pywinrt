@@ -4,14 +4,6 @@ namespace pywinrt
 {
     namespace stdfs = std::filesystem;
 
-    inline void write_pybase_h(stdfs::path const& folder)
-    {
-        writer w;
-        write_license(w);
-        w.write(strings::pybase);
-        w.flush_to_file(folder / "pybase.h");
-    }
-
     inline void write_namespace_h(
         stdfs::path const& folder,
         std::string_view const& ns,
@@ -150,69 +142,6 @@ namespace pywinrt
         return std::move(w.needed_namespaces);
     }
 
-    inline void write_runtime_cpp(stdfs::path const& folder)
-    {
-        writer w;
-
-        write_license(w);
-        w.write(strings::runtime);
-
-        auto filename = w.write_temp("runtime.cpp");
-        w.flush_to_file(folder / filename);
-    }
-
-    inline void write_winrt_module_cpp(stdfs::path const& folder)
-    {
-        writer w;
-
-        write_license(w);
-        w.write(strings::winrt_module);
-
-        auto filename = w.write_temp("_winrt.cpp");
-        w.flush_to_file(folder / filename);
-    }
-
-    inline void write_winrt_array_cpp(stdfs::path const& folder)
-    {
-        writer w;
-
-        write_license(w);
-        w.write(strings::winrt_array);
-
-        auto filename = w.write_temp("_winrt_array.cpp");
-        w.flush_to_file(folder / filename);
-    }
-
-    void write_namespace_cpp_filename(writer& w, std::string const& ns)
-    {
-        w.write("\"./%/src/py.%.cpp\"", settings.module, ns);
-    }
-
-    inline void write_package_py_typed(stdfs::path const& folder)
-    {
-        writer w;
-
-        w.flush_to_file(folder / "py.typed");
-    }
-
-    inline void write_winrt_pyi(stdfs::path const& folder)
-    {
-        writer w;
-
-        write_license(w, "#");
-        w.write(strings::_winrt);
-        w.flush_to_file(folder / "_winrt.pyi");
-    }
-
-    inline void write_system_dunder_init_py(stdfs::path const& folder)
-    {
-        writer w;
-
-        write_license(w, "#");
-        w.write(strings::system_init, settings.module);
-        w.flush_to_file(folder / "__init__.py");
-    }
-
     inline void write_namespace_dunder_init_py(
         stdfs::path const& folder,
         std::string_view const& module_name,
@@ -285,51 +214,4 @@ namespace pywinrt
 
         w.flush_to_file(folder / "__init__.pyi");
     }
-
-    /**
-     * Writes the Windows.Graphics.Capture.Interop module source code file.
-     * @param folder The destination folder. This folder must already exist.
-     */
-    inline void write_windows_graphics_capture_interop_cpp(stdfs::path const& folder)
-    {
-        writer w;
-
-        write_license(w, "//");
-        w.write(
-            strings::windows_graphics_capture_interop_cpp,
-            settings.module,
-            settings.module);
-        w.flush_to_file(folder / "py.Windows.Graphics.Capture.Interop.cpp");
-    }
-
-    /**
-     * Writes the Windows.Graphics.Capture.Interop module `__init__.py` file.
-     * @param folder The destination folder. This folder must already exist.
-     */
-    inline void write_windows_graphics_capture_interop_py(stdfs::path const& folder)
-    {
-        writer w;
-
-        write_license(w, "#");
-        w.write(
-            strings::windows_graphics_capture_interop_py,
-            settings.module,
-            settings.module,
-            settings.module);
-        w.flush_to_file(folder / "__init__.py");
-    }
-
-    /**
-     * Writes the Windows.Graphics.Capture.Interop module `__init__.pyi` file.
-     * @param folder The destination folder. This folder must already exist.
-     */
-    inline void write_windows_graphics_capture_interop_pyi(stdfs::path const& folder)
-    {
-        writer w;
-
-        write_license(w, "#");
-        w.write(strings::windows_graphics_capture_interop_pyi);
-        w.flush_to_file(folder / "__init__.pyi");
-    }
-
 } // namespace pywinrt

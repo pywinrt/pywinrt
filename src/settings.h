@@ -6,6 +6,7 @@ namespace pywinrt
     {
         std::set<std::string> input;
 
+        std::optional<std::filesystem::path> header_path;
         std::filesystem::path output_folder;
         std::string module{"pyrt"};
         bool verbose{};
