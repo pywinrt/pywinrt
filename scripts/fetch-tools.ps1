@@ -7,6 +7,9 @@ param(
     [Parameter(Mandatory=$false)]
     [string]$PyWinRTVersion = "1.0.0-beta.10",
 
+    [Parameter(Mandatory=$false)]
+    [string]$TestWinRTVersion = "1.0.12",
+
     [switch]$useLocalPyWinRT
 )
 
@@ -27,6 +30,12 @@ if ($LASTEXITCODE -ne 0) {
 
 $source = If ($useLocalPyWinRT) { "-Source", "$repoRootPath" } Else { "" }
 & nuget install PyWinRT -Version $PyWinRTVersion -Prerelease -DependencyVersion Ignore -ExcludeVersion -OutputDirectory "$repoRootPath/_tools" $source
+
+if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+}
+
+& nuget install KennyKerr.Windows.TestWinRT -Version $TestWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
 
 if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
