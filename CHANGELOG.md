@@ -13,6 +13,7 @@
 - Fixed parsing structs with guid field.
 - Fixed single byte struct field arg format.
 - Fixed importing `enum` when not needed.
+- Fixed compiler warning about converting `Py_ssize_t` in `ComArray`.
 
 ### Removed
 - Removed generation of base/core files.

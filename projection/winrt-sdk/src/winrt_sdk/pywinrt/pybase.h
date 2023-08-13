@@ -2031,7 +2031,8 @@ namespace py
 
             try
             {
-                array[index] = convert_to<T>(item);
+                array[static_cast<winrt::array_view<T>::size_type>(index)]
+                    = convert_to<T>(item);
                 return true;
             }
             catch (...)
