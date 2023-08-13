@@ -1,2 +1,3 @@
-/cppwinrt/
-/pywinrt/
+*.egg-info
+*.tar.gz
+*.whl
