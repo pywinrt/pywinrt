@@ -25,7 +25,7 @@ MINIMAL_NAMESPACES = [
     "Windows.Storage.Streams",
 ]
 WINDOWS_SDK = "10.0.22621.0+"
-SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "pywinrt"
+SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "src" / "winrt_sdk" / "pywinrt"
 
 include_args = []
 

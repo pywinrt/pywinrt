@@ -9,15 +9,13 @@ CPPWINRT_EXE = (
 )
 
 if not CPPWINRT_EXE.exists():
-    raise RuntimeError(
-        "cppwinrt.exe not found. Please run `./scripts/fetch-tools.cmd`"
-    )
+    raise RuntimeError("cppwinrt.exe not found. Please run `./scripts/fetch-tools.cmd`")
 
 
 # generate headers for windows sdk
 
 WINDOWS_SDK = "10.0.22621.0+"
-SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "cppwinrt"
+SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "src" / "winrt_sdk" / "cppwinrt"
 
 shutil.rmtree(SDK_PACKAGE_PATH, ignore_errors=True)
 subprocess.check_call(
