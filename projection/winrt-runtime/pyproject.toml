@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "winrt_sdk"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winrt-runtime"
+authors = [
+    {name = "David Lechner", email = "david@pybricks.com"},
+]
+description = "Python runtime for Windows Runtime (WinRT) APIs"
+readme = "README.md"
+license = {text = "MIT"}
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Target Audience :: Developers",
+]
+dynamic = ["version"]
+
+[project.urls]
+# Homepage = "https://github.com/pywrint/pywrinrt"
+# Documentation = "https://readthedocs.org"
+Repository = "https://github.com/pywrint/pywrinrt"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,15 +1,17 @@
-from importlib.machinery import ExtensionFileLoader
-from importlib.util import spec_from_loader, module_from_spec
 import sys
-from types import ModuleType
 import uuid
-from collections.abc import Sequence, MutableSequence, Mapping, MutableMapping
+from collections.abc import Mapping, MutableMapping, MutableSequence, Sequence
+from importlib.machinery import ExtensionFileLoader
+from importlib.util import module_from_spec, spec_from_loader
+from types import ModuleType
 
-from .._winrt import __file__ as _winrt_file, Array as Array, Object as Object
+from .._winrt import Array as Array
+from .._winrt import Object as Object
+from .._winrt import __file__ as _winrt_file
 
 
 def _import_ns_module(ns: str) -> ModuleType:
-    module_name = f"_%_{ns.replace('.', '_')}"
+    module_name = f"_winrt_{ns.replace('.', '_')}"
     loader = ExtensionFileLoader(module_name, _winrt_file)
     spec = spec_from_loader(module_name, loader)
     assert spec is not None
@@ -17,9 +19,11 @@ def _import_ns_module(ns: str) -> ModuleType:
     loader.exec_module(module)
     return module
 
+
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12
 # so we have to implement the protocols like this instead.
 # https://github.com/python/cpython/issues/103968#issuecomment-1589928055
+
 
 def _mixin_sequence(typ) -> None:
     """
@@ -44,6 +48,7 @@ def _mixin_sequence(typ) -> None:
 
     Sequence.register(typ)
 
+
 def _mixin_mutable_sequence(typ) -> None:
     """
     Adds missing Python mapping methods to types that implement IVector and
@@ -52,6 +57,7 @@ def _mixin_mutable_sequence(typ) -> None:
     _mixin_sequence(typ)
 
     if not hasattr(typ, "insert") and hasattr(typ, "insert_at"):
+
         def insert(self, index: int, value: object) -> None:
             """
             Alias for ``insert_at`` for compatibility with Python Sequence protocol.
@@ -84,6 +90,7 @@ def _mixin_mutable_sequence(typ) -> None:
 
     MutableSequence.register(typ)
 
+
 def _mixin_mapping(typ) -> None:
     """
     Adds missing Python mapping methods to types that implement IMapView and
@@ -110,6 +117,7 @@ def _mixin_mapping(typ) -> None:
 
     Mapping.register(typ)
 
+
 def _mixin_mutable_mapping(typ) -> None:
     """
     Adds missing Python mapping methods to types that implement IMap and
@@ -134,9 +142,9 @@ def _mixin_mutable_mapping(typ) -> None:
 
     if not hasattr(typ, "update"):
         typ.update = MutableMapping.update
-        
 
     MutableMapping.register(typ)
+
 
 if sys.version_info >= (3, 9):
     from typing import Annotated

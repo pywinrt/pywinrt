@@ -84,7 +84,7 @@ namespace py::cpp::_winrt
     //          return self
     //
     //      def __next__(self):
-    //          return next(self._iter)
+    //          return next(self._iter).key
     //
 
     struct MappingIter_object

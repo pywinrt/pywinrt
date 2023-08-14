@@ -1,7 +1,7 @@
 import array
+import sys
 import types
 import typing
-import sys
 
 MTA: int
 STA: int

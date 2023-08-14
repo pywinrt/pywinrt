@@ -212,21 +212,6 @@ namespace py::cpp::_winrt
                 self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::TimeSpan>>();
             }
-            else if (type == py::get_python_type<winrt::Windows::Foundation::Point>())
-            {
-                self->array = std::make_unique<
-                    py::ComArray<winrt::Windows::Foundation::Point>>();
-            }
-            else if (type == py::get_python_type<winrt::Windows::Foundation::Size>())
-            {
-                self->array = std::make_unique<
-                    py::ComArray<winrt::Windows::Foundation::Size>>();
-            }
-            else if (type == py::get_python_type<winrt::Windows::Foundation::Rect>())
-            {
-                self->array = std::make_unique<
-                    py::ComArray<winrt::Windows::Foundation::Rect>>();
-            }
             else if (type == py::winrt_type<Object>::get_python_type())
             {
                 self->array = std::make_unique<
