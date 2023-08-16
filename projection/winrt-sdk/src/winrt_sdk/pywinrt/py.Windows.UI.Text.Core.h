@@ -220,11 +220,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Text::Core::CoreTextRange>
-    {
-        static PyObject* convert(winrt::Windows::UI::Text::Core::CoreTextRange instance) noexcept;
-        static winrt::Windows::UI::Text::Core::CoreTextRange convert_to(PyObject* obj);
-    };
-
 }

@@ -1040,11 +1040,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Composition::InkTrailPoint>
-    {
-        static PyObject* convert(winrt::Windows::UI::Composition::InkTrailPoint instance) noexcept;
-        static winrt::Windows::UI::Composition::InkTrailPoint convert_to(PyObject* obj);
-    };
-
 }

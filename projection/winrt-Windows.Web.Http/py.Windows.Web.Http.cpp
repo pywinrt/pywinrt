@@ -4,35 +4,6 @@
 #include "py.Windows.Web.Http.h"
 
 
-PyObject* py::converter<winrt::Windows::Web::Http::HttpProgress>::convert(winrt::Windows::Web::Http::HttpProgress instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Web::Http::HttpProgress>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Web::Http::HttpProgress py::converter<winrt::Windows::Web::Http::HttpProgress>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Web::Http::HttpProgress>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Web::Http::HttpProgress>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Web::Http::HttpProgress");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Web::Http
 {
     struct module_state

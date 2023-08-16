@@ -182,25 +182,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>
-    {
-        static PyObject* convert(winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint instance) noexcept;
-        static winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>
-    {
-        static PyObject* convert(winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo instance) noexcept;
-        static winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>
-    {
-        static PyObject* convert(winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle instance) noexcept;
-        static winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle convert_to(PyObject* obj);
-    };
-
 }

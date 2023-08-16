@@ -4,64 +4,6 @@
 #include "py.Windows.UI.Core.h"
 
 
-PyObject* py::converter<winrt::Windows::UI::Core::CorePhysicalKeyStatus>::convert(winrt::Windows::UI::Core::CorePhysicalKeyStatus instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Core::CorePhysicalKeyStatus>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Core::CorePhysicalKeyStatus py::converter<winrt::Windows::UI::Core::CorePhysicalKeyStatus>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Core::CorePhysicalKeyStatus>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Core::CorePhysicalKeyStatus>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Core::CorePhysicalKeyStatus");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::UI::Core::CoreProximityEvaluation>::convert(winrt::Windows::UI::Core::CoreProximityEvaluation instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Core::CoreProximityEvaluation>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Core::CoreProximityEvaluation py::converter<winrt::Windows::UI::Core::CoreProximityEvaluation>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Core::CoreProximityEvaluation>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Core::CoreProximityEvaluation>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Core::CoreProximityEvaluation");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::UI::Core
 {
     struct module_state

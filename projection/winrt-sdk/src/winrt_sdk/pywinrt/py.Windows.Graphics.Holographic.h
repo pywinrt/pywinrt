@@ -269,25 +269,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Graphics::Holographic::HolographicAdapterId>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::Holographic::HolographicAdapterId instance) noexcept;
-        static winrt::Windows::Graphics::Holographic::HolographicAdapterId convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Graphics::Holographic::HolographicFrameId>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::Holographic::HolographicFrameId instance) noexcept;
-        static winrt::Windows::Graphics::Holographic::HolographicFrameId convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::Holographic::HolographicStereoTransform instance) noexcept;
-        static winrt::Windows::Graphics::Holographic::HolographicStereoTransform convert_to(PyObject* obj);
-    };
-
 }

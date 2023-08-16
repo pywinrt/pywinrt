@@ -66,7 +66,6 @@ namespace pywinrt
             settings.filter.bind_each<write_pinterface_type_mapper>(members.interfaces)(
                 w);
             settings.filter.bind_each<write_delegate_type_mapper>(members.delegates)(w);
-            settings.filter.bind_each<write_struct_converter_decl>(members.structs)(w);
         }
         w.write("}\n");
 
@@ -132,7 +131,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
     instance = value;
 })");
         }
-        settings.filter.bind_each<write_struct_convert_functions>(members.structs)(w);
 
         auto segments = get_dotted_name_segments(ns);
         w.write("\n\nnamespace py::cpp::%\n{", bind_list("::", segments));

@@ -161,18 +161,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Devices::Input::MouseDelta>
-    {
-        static PyObject* convert(winrt::Windows::Devices::Input::MouseDelta instance) noexcept;
-        static winrt::Windows::Devices::Input::MouseDelta convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Devices::Input::PointerDeviceUsage>
-    {
-        static PyObject* convert(winrt::Windows::Devices::Input::PointerDeviceUsage instance) noexcept;
-        static winrt::Windows::Devices::Input::PointerDeviceUsage convert_to(PyObject* obj);
-    };
-
 }

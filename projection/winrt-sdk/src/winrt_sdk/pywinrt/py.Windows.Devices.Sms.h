@@ -419,11 +419,4 @@ namespace py
         using type = py::impl::Windows::Devices::Sms::SmsMessageReceivedEventHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::Devices::Sms::SmsEncodedLength>
-    {
-        static PyObject* convert(winrt::Windows::Devices::Sms::SmsEncodedLength instance) noexcept;
-        static winrt::Windows::Devices::Sms::SmsEncodedLength convert_to(PyObject* obj);
-    };
-
 }

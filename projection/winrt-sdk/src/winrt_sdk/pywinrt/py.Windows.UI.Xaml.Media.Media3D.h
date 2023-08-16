@@ -62,11 +62,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D instance) noexcept;
-        static winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D convert_to(PyObject* obj);
-    };
-
 }

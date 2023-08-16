@@ -242,11 +242,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Web::Http::HttpProgress>
-    {
-        static PyObject* convert(winrt::Windows::Web::Http::HttpProgress instance) noexcept;
-        static winrt::Windows::Web::Http::HttpProgress convert_to(PyObject* obj);
-    };
-
 }

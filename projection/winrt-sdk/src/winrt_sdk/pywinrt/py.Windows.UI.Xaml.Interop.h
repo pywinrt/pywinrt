@@ -175,11 +175,4 @@ namespace py
         using type = py::impl::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Interop::TypeName>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Interop::TypeName instance) noexcept;
-        static winrt::Windows::UI::Xaml::Interop::TypeName convert_to(PyObject* obj);
-    };
-
 }

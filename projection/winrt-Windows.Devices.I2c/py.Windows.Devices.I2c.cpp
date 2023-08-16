@@ -4,35 +4,6 @@
 #include "py.Windows.Devices.I2c.h"
 
 
-PyObject* py::converter<winrt::Windows::Devices::I2c::I2cTransferResult>::convert(winrt::Windows::Devices::I2c::I2cTransferResult instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Devices::I2c::I2cTransferResult>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Devices::I2c::I2cTransferResult py::converter<winrt::Windows::Devices::I2c::I2cTransferResult>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Devices::I2c::I2cTransferResult>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Devices::I2c::I2cTransferResult>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Devices::I2c::I2cTransferResult");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Devices::I2c
 {
     struct module_state

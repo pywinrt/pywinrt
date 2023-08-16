@@ -244,25 +244,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>
-    {
-        static PyObject* convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress instance) noexcept;
-        static winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>
-    {
-        static PyObject* convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange instance) noexcept;
-        static winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>
-    {
-        static PyObject* convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress instance) noexcept;
-        static winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress convert_to(PyObject* obj);
-    };
-
 }

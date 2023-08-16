@@ -4,64 +4,6 @@
 #include "py.Windows.Graphics.DirectX.Direct3D11.h"
 
 
-PyObject* py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::convert(winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>::convert(winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 {
     struct module_state

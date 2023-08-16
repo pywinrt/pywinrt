@@ -815,11 +815,4 @@ namespace py
         using type = py::impl::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Media::Matrix>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Media::Matrix instance) noexcept;
-        static winrt::Windows::UI::Xaml::Media::Matrix convert_to(PyObject* obj);
-    };
-
 }

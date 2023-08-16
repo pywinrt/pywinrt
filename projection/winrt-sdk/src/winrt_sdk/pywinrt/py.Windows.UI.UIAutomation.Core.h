@@ -135,18 +135,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>
-    {
-        static PyObject* convert(winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration instance) noexcept;
-        static winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>
-    {
-        static PyObject* convert(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId instance) noexcept;
-        static winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId convert_to(PyObject* obj);
-    };
-
 }

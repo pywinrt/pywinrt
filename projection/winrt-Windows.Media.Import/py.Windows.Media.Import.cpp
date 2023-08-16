@@ -4,35 +4,6 @@
 #include "py.Windows.Media.Import.h"
 
 
-PyObject* py::converter<winrt::Windows::Media::Import::PhotoImportProgress>::convert(winrt::Windows::Media::Import::PhotoImportProgress instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Media::Import::PhotoImportProgress>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Media::Import::PhotoImportProgress py::converter<winrt::Windows::Media::Import::PhotoImportProgress>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Media::Import::PhotoImportProgress>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Media::Import::PhotoImportProgress>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Media::Import::PhotoImportProgress");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Media::Import
 {
     struct module_state

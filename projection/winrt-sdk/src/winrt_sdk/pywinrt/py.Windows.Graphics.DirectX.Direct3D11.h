@@ -76,18 +76,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription instance) noexcept;
-        static winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription instance) noexcept;
-        static winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription convert_to(PyObject* obj);
-    };
-
 }

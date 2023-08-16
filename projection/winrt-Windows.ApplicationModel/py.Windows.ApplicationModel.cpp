@@ -4,64 +4,6 @@
 #include "py.Windows.ApplicationModel.h"
 
 
-PyObject* py::converter<winrt::Windows::ApplicationModel::PackageInstallProgress>::convert(winrt::Windows::ApplicationModel::PackageInstallProgress instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::ApplicationModel::PackageInstallProgress>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::ApplicationModel::PackageInstallProgress py::converter<winrt::Windows::ApplicationModel::PackageInstallProgress>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::ApplicationModel::PackageInstallProgress>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageInstallProgress>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::ApplicationModel::PackageInstallProgress");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::ApplicationModel::PackageVersion>::convert(winrt::Windows::ApplicationModel::PackageVersion instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::ApplicationModel::PackageVersion>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::ApplicationModel::PackageVersion py::converter<winrt::Windows::ApplicationModel::PackageVersion>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::ApplicationModel::PackageVersion>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageVersion>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::ApplicationModel::PackageVersion");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::ApplicationModel
 {
     struct module_state

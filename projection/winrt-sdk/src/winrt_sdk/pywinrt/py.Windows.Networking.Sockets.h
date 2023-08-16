@@ -465,18 +465,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Networking::Sockets::BandwidthStatistics>
-    {
-        static PyObject* convert(winrt::Windows::Networking::Sockets::BandwidthStatistics instance) noexcept;
-        static winrt::Windows::Networking::Sockets::BandwidthStatistics convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>
-    {
-        static PyObject* convert(winrt::Windows::Networking::Sockets::RoundTripTimeStatistics instance) noexcept;
-        static winrt::Windows::Networking::Sockets::RoundTripTimeStatistics convert_to(PyObject* obj);
-    };
-
 }

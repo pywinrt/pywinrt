@@ -737,18 +737,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Media::Animation::KeyTime instance) noexcept;
-        static winrt::Windows::UI::Xaml::Media::Animation::KeyTime convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior instance) noexcept;
-        static winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior convert_to(PyObject* obj);
-    };
-
 }

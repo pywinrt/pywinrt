@@ -936,18 +936,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>
-    {
-        static PyObject* convert(winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress instance) noexcept;
-        static winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Networking::NetworkOperators::ProfileUsage>
-    {
-        static PyObject* convert(winrt::Windows::Networking::NetworkOperators::ProfileUsage instance) noexcept;
-        static winrt::Windows::Networking::NetworkOperators::ProfileUsage convert_to(PyObject* obj);
-    };
-
 }

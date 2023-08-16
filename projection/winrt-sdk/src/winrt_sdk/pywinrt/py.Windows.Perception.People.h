@@ -122,18 +122,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Perception::People::HandMeshVertex>
-    {
-        static PyObject* convert(winrt::Windows::Perception::People::HandMeshVertex instance) noexcept;
-        static winrt::Windows::Perception::People::HandMeshVertex convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Perception::People::JointPose>
-    {
-        static PyObject* convert(winrt::Windows::Perception::People::JointPose instance) noexcept;
-        static winrt::Windows::Perception::People::JointPose convert_to(PyObject* obj);
-    };
-
 }

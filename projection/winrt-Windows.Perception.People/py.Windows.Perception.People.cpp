@@ -4,64 +4,6 @@
 #include "py.Windows.Perception.People.h"
 
 
-PyObject* py::converter<winrt::Windows::Perception::People::HandMeshVertex>::convert(winrt::Windows::Perception::People::HandMeshVertex instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Perception::People::HandMeshVertex>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Perception::People::HandMeshVertex py::converter<winrt::Windows::Perception::People::HandMeshVertex>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Perception::People::HandMeshVertex>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Perception::People::HandMeshVertex>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Perception::People::HandMeshVertex");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::Perception::People::JointPose>::convert(winrt::Windows::Perception::People::JointPose instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Perception::People::JointPose>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Perception::People::JointPose py::converter<winrt::Windows::Perception::People::JointPose>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Perception::People::JointPose>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Perception::People::JointPose>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Perception::People::JointPose");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Perception::People
 {
     struct module_state

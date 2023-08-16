@@ -319,11 +319,4 @@ namespace py
         using type = py::impl::Windows::Graphics::Printing::PrintTaskSourceRequestedHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::Graphics::Printing::PrintPageDescription>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::Printing::PrintPageDescription instance) noexcept;
-        static winrt::Windows::Graphics::Printing::PrintPageDescription convert_to(PyObject* obj);
-    };
-
 }

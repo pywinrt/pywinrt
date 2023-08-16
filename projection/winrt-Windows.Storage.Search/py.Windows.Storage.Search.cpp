@@ -4,35 +4,6 @@
 #include "py.Windows.Storage.Search.h"
 
 
-PyObject* py::converter<winrt::Windows::Storage::Search::SortEntry>::convert(winrt::Windows::Storage::Search::SortEntry instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Storage::Search::SortEntry>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Storage::Search::SortEntry py::converter<winrt::Windows::Storage::Search::SortEntry>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Storage::Search::SortEntry>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Storage::Search::SortEntry>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Storage::Search::SortEntry");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Storage::Search
 {
     struct module_state

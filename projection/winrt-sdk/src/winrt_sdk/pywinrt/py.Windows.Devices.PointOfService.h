@@ -898,11 +898,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Devices::PointOfService::SizeUInt32>
-    {
-        static PyObject* convert(winrt::Windows::Devices::PointOfService::SizeUInt32 instance) noexcept;
-        static winrt::Windows::Devices::PointOfService::SizeUInt32 convert_to(PyObject* obj);
-    };
-
 }

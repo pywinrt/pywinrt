@@ -4,35 +4,6 @@
 #include "py.Windows.Data.Text.h"
 
 
-PyObject* py::converter<winrt::Windows::Data::Text::TextSegment>::convert(winrt::Windows::Data::Text::TextSegment instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Data::Text::TextSegment>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Data::Text::TextSegment py::converter<winrt::Windows::Data::Text::TextSegment>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Data::Text::TextSegment>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Data::Text::TextSegment>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Data::Text::TextSegment");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Data::Text
 {
     struct module_state

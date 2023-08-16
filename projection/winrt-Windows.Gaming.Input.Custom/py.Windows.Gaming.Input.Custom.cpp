@@ -4,64 +4,6 @@
 #include "py.Windows.Gaming.Input.Custom.h"
 
 
-PyObject* py::converter<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>::convert(winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo py::converter<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>::convert(winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress py::converter<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Gaming::Input::Custom
 {
     struct module_state

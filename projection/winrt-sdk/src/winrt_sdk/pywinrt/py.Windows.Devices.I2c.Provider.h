@@ -94,11 +94,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult>
-    {
-        static PyObject* convert(winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult instance) noexcept;
-        static winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult convert_to(PyObject* obj);
-    };
-
 }

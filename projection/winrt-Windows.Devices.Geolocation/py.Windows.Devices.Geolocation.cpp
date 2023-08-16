@@ -4,35 +4,6 @@
 #include "py.Windows.Devices.Geolocation.h"
 
 
-PyObject* py::converter<winrt::Windows::Devices::Geolocation::BasicGeoposition>::convert(winrt::Windows::Devices::Geolocation::BasicGeoposition instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Devices::Geolocation::BasicGeoposition>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Devices::Geolocation::BasicGeoposition py::converter<winrt::Windows::Devices::Geolocation::BasicGeoposition>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Devices::Geolocation::BasicGeoposition>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Devices::Geolocation::BasicGeoposition>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Devices::Geolocation::BasicGeoposition");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Devices::Geolocation
 {
     struct module_state

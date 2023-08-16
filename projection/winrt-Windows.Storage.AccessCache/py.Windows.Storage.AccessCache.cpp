@@ -4,35 +4,6 @@
 #include "py.Windows.Storage.AccessCache.h"
 
 
-PyObject* py::converter<winrt::Windows::Storage::AccessCache::AccessListEntry>::convert(winrt::Windows::Storage::AccessCache::AccessListEntry instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Storage::AccessCache::AccessListEntry>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Storage::AccessCache::AccessListEntry py::converter<winrt::Windows::Storage::AccessCache::AccessListEntry>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Storage::AccessCache::AccessListEntry>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntry>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Storage::AccessCache::AccessListEntry");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Storage::AccessCache
 {
     struct module_state

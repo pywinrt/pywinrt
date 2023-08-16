@@ -4,35 +4,6 @@
 #include "py.Windows.UI.Xaml.Data.h"
 
 
-PyObject* py::converter<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>::convert(winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult py::converter<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::UI::Xaml::Data
 {
     struct module_state

@@ -578,11 +578,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange instance) noexcept;
-        static winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange convert_to(PyObject* obj);
-    };
-
 }

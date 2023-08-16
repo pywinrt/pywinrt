@@ -4,35 +4,6 @@
 #include "py.Windows.Devices.Scanners.h"
 
 
-PyObject* py::converter<winrt::Windows::Devices::Scanners::ImageScannerResolution>::convert(winrt::Windows::Devices::Scanners::ImageScannerResolution instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Devices::Scanners::ImageScannerResolution>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Devices::Scanners::ImageScannerResolution py::converter<winrt::Windows::Devices::Scanners::ImageScannerResolution>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Devices::Scanners::ImageScannerResolution>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Devices::Scanners::ImageScannerResolution>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Devices::Scanners::ImageScannerResolution");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Devices::Scanners
 {
     struct module_state

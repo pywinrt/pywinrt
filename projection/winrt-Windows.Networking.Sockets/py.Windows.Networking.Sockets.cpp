@@ -4,64 +4,6 @@
 #include "py.Windows.Networking.Sockets.h"
 
 
-PyObject* py::converter<winrt::Windows::Networking::Sockets::BandwidthStatistics>::convert(winrt::Windows::Networking::Sockets::BandwidthStatistics instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Networking::Sockets::BandwidthStatistics>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Networking::Sockets::BandwidthStatistics py::converter<winrt::Windows::Networking::Sockets::BandwidthStatistics>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Networking::Sockets::BandwidthStatistics>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Networking::Sockets::BandwidthStatistics>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Networking::Sockets::BandwidthStatistics");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>::convert(winrt::Windows::Networking::Sockets::RoundTripTimeStatistics instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Networking::Sockets::RoundTripTimeStatistics py::converter<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Networking::Sockets::RoundTripTimeStatistics");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Networking::Sockets
 {
     struct module_state

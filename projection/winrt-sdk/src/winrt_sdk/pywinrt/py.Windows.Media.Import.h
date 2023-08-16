@@ -248,11 +248,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Media::Import::PhotoImportProgress>
-    {
-        static PyObject* convert(winrt::Windows::Media::Import::PhotoImportProgress instance) noexcept;
-        static winrt::Windows::Media::Import::PhotoImportProgress convert_to(PyObject* obj);
-    };
-
 }

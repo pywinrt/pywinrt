@@ -802,11 +802,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId instance) noexcept;
-        static winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId convert_to(PyObject* obj);
-    };
-
 }

@@ -4,35 +4,6 @@
 #include "py.Windows.UI.Xaml.Controls.Maps.h"
 
 
-PyObject* py::converter<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>::convert(winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange py::converter<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 {
     struct module_state

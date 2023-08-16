@@ -170,11 +170,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>
-    {
-        static PyObject* convert(winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo instance) noexcept;
-        static winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo convert_to(PyObject* obj);
-    };
-
 }

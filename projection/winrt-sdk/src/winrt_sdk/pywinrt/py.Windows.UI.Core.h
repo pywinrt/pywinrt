@@ -484,18 +484,4 @@ namespace py
         using type = py::impl::Windows::UI::Core::IdleDispatchedHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::UI::Core::CorePhysicalKeyStatus>
-    {
-        static PyObject* convert(winrt::Windows::UI::Core::CorePhysicalKeyStatus instance) noexcept;
-        static winrt::Windows::UI::Core::CorePhysicalKeyStatus convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::Core::CoreProximityEvaluation>
-    {
-        static PyObject* convert(winrt::Windows::UI::Core::CoreProximityEvaluation instance) noexcept;
-        static winrt::Windows::UI::Core::CoreProximityEvaluation convert_to(PyObject* obj);
-    };
-
 }

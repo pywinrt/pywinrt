@@ -67,18 +67,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Color>
-    {
-        static PyObject* convert(winrt::Windows::UI::Color instance) noexcept;
-        static winrt::Windows::UI::Color convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::WindowId>
-    {
-        static PyObject* convert(winrt::Windows::UI::WindowId instance) noexcept;
-        static winrt::Windows::UI::WindowId convert_to(PyObject* obj);
-    };
-
 }

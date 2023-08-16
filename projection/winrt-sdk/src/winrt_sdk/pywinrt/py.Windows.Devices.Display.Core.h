@@ -410,11 +410,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>
-    {
-        static PyObject* convert(winrt::Windows::Devices::Display::Core::DisplayPresentationRate instance) noexcept;
-        static winrt::Windows::Devices::Display::Core::DisplayPresentationRate convert_to(PyObject* obj);
-    };
-
 }

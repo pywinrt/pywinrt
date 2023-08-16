@@ -4,64 +4,6 @@
 #include "py.Windows.Networking.NetworkOperators.h"
 
 
-PyObject* py::converter<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>::convert(winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress py::converter<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::Networking::NetworkOperators::ProfileUsage>::convert(winrt::Windows::Networking::NetworkOperators::ProfileUsage instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Networking::NetworkOperators::ProfileUsage>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Networking::NetworkOperators::ProfileUsage py::converter<winrt::Windows::Networking::NetworkOperators::ProfileUsage>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Networking::NetworkOperators::ProfileUsage>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ProfileUsage>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Networking::NetworkOperators::ProfileUsage");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Networking::NetworkOperators
 {
     struct module_state

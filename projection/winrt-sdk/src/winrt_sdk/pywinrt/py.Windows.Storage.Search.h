@@ -211,11 +211,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Storage::Search::SortEntry>
-    {
-        static PyObject* convert(winrt::Windows::Storage::Search::SortEntry instance) noexcept;
-        static winrt::Windows::Storage::Search::SortEntry convert_to(PyObject* obj);
-    };
-
 }

@@ -227,11 +227,4 @@ namespace py
         using type = py::impl::Windows::Graphics::Display::DisplayPropertiesEventHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::Graphics::Display::NitRange>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::Display::NitRange instance) noexcept;
-        static winrt::Windows::Graphics::Display::NitRange convert_to(PyObject* obj);
-    };
-
 }

@@ -4,35 +4,6 @@
 #include "py.Windows.UI.Text.h"
 
 
-PyObject* py::converter<winrt::Windows::UI::Text::FontWeight>::convert(winrt::Windows::UI::Text::FontWeight instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Text::FontWeight>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Text::FontWeight py::converter<winrt::Windows::UI::Text::FontWeight>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Text::FontWeight>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Text::FontWeight>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Text::FontWeight");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::UI::Text
 {
     struct module_state

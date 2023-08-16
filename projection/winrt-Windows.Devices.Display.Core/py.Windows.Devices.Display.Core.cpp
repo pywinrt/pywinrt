@@ -4,35 +4,6 @@
 #include "py.Windows.Devices.Display.Core.h"
 
 
-PyObject* py::converter<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>::convert(winrt::Windows::Devices::Display::Core::DisplayPresentationRate instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Devices::Display::Core::DisplayPresentationRate py::converter<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Devices::Display::Core::DisplayPresentationRate");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Devices::Display::Core
 {
     struct module_state

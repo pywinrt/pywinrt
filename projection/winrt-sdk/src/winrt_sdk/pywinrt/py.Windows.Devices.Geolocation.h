@@ -230,11 +230,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Devices::Geolocation::BasicGeoposition>
-    {
-        static PyObject* convert(winrt::Windows::Devices::Geolocation::BasicGeoposition instance) noexcept;
-        static winrt::Windows::Devices::Geolocation::BasicGeoposition convert_to(PyObject* obj);
-    };
-
 }

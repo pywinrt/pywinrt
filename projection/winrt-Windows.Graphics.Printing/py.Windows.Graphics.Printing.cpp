@@ -4,35 +4,6 @@
 #include "py.Windows.Graphics.Printing.h"
 
 
-PyObject* py::converter<winrt::Windows::Graphics::Printing::PrintPageDescription>::convert(winrt::Windows::Graphics::Printing::PrintPageDescription instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Graphics::Printing::PrintPageDescription>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Graphics::Printing::PrintPageDescription py::converter<winrt::Windows::Graphics::Printing::PrintPageDescription>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Graphics::Printing::PrintPageDescription>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Graphics::Printing::PrintPageDescription>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Graphics::Printing::PrintPageDescription");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Graphics::Printing
 {
     struct module_state

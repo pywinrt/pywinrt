@@ -390,11 +390,4 @@ namespace py
         using type = py::impl::Windows::Security::Isolation::MessageReceivedCallback;
     };
 
-    template<>
-    struct converter<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>
-    {
-        static PyObject* convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress instance) noexcept;
-        static winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress convert_to(PyObject* obj);
-    };
-
 }

@@ -146,11 +146,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Devices::Scanners::ImageScannerResolution>
-    {
-        static PyObject* convert(winrt::Windows::Devices::Scanners::ImageScannerResolution instance) noexcept;
-        static winrt::Windows::Devices::Scanners::ImageScannerResolution convert_to(PyObject* obj);
-    };
-
 }

@@ -76,39 +76,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Graphics::DisplayAdapterId>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::DisplayAdapterId instance) noexcept;
-        static winrt::Windows::Graphics::DisplayAdapterId convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Graphics::DisplayId>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::DisplayId instance) noexcept;
-        static winrt::Windows::Graphics::DisplayId convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Graphics::PointInt32>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::PointInt32 instance) noexcept;
-        static winrt::Windows::Graphics::PointInt32 convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Graphics::RectInt32>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::RectInt32 instance) noexcept;
-        static winrt::Windows::Graphics::RectInt32 convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Graphics::SizeInt32>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::SizeInt32 instance) noexcept;
-        static winrt::Windows::Graphics::SizeInt32 convert_to(PyObject* obj);
-    };
-
 }

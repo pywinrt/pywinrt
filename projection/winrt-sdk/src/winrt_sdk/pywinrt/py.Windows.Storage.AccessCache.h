@@ -109,11 +109,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Storage::AccessCache::AccessListEntry>
-    {
-        static PyObject* convert(winrt::Windows::Storage::AccessCache::AccessListEntry instance) noexcept;
-        static winrt::Windows::Storage::AccessCache::AccessListEntry convert_to(PyObject* obj);
-    };
-
 }

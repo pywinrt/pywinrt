@@ -1691,25 +1691,4 @@ namespace py
         using type = py::impl::TestComponent::TestHandler;
     };
 
-    template<>
-    struct converter<winrt::TestComponent::Blittable>
-    {
-        static PyObject* convert(winrt::TestComponent::Blittable instance) noexcept;
-        static winrt::TestComponent::Blittable convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::TestComponent::Nested>
-    {
-        static PyObject* convert(winrt::TestComponent::Nested instance) noexcept;
-        static winrt::TestComponent::Nested convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::TestComponent::NonBlittable>
-    {
-        static PyObject* convert(winrt::TestComponent::NonBlittable instance) noexcept;
-        static winrt::TestComponent::NonBlittable convert_to(PyObject* obj);
-    };
-
 }

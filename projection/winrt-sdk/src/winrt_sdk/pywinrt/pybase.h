@@ -90,6 +90,22 @@ namespace py
         = std::is_same_v<winrt::impl::category_t<T>, winrt::impl::enum_category>;
 
     template<typename T>
+    struct is_struct_category
+    {
+        static constexpr bool value = false;
+    };
+
+    template<typename... Fields>
+    struct is_struct_category<winrt::impl::struct_category<Fields...>>
+    {
+        static constexpr bool value = true;
+    };
+
+    template<typename T>
+    constexpr bool is_struct_category_v
+        = is_struct_category<typename winrt::impl::category<T>::type>::value;
+
+    template<typename T>
     constexpr bool is_interface_category_v
         = std::is_same_v<winrt::impl::category_t<T>, winrt::impl::interface_category>;
 
@@ -1324,6 +1340,46 @@ namespace py
     };
 
     template<typename T>
+    struct converter<T, typename std::enable_if_t<is_struct_category_v<T>>>
+    {
+        static PyObject* convert(T instance) noexcept
+        {
+            auto type = py::get_python_type<T>();
+
+            if (!type)
+            {
+                return nullptr;
+            }
+
+            return py::wrap_struct(instance, type);
+        }
+
+        static auto convert_to(PyObject* obj)
+        {
+            throw_if_pyobj_null(obj);
+
+            auto type = py::get_python_type<T>();
+
+            if (!type)
+            {
+                throw python_exception();
+            }
+
+            if (Py_TYPE(obj) != type)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "must be %.200s, not %.200s",
+                    type->tp_name,
+                    Py_TYPE(obj)->tp_name);
+                throw python_exception();
+            }
+
+            return reinterpret_cast<py::winrt_struct_wrapper<T>*>(obj)->obj;
+        }
+    };
+
+    template<typename T>
     struct converter<T, typename std::enable_if_t<is_class_category_v<T>>>
     {
         static PyObject* convert(T const& instance) noexcept
@@ -1950,13 +2006,6 @@ namespace py
 
         return PyObject_GetIter(future.get());
     }
-
-    template<>
-    struct converter<winrt::event_token>
-    {
-        static PyObject* convert(winrt::event_token instance) noexcept;
-        static winrt::event_token convert_to(PyObject* obj);
-    };
 
     template<typename T>
     struct ComArray : Array

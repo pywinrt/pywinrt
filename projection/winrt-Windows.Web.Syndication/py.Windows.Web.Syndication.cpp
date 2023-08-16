@@ -4,64 +4,6 @@
 #include "py.Windows.Web.Syndication.h"
 
 
-PyObject* py::converter<winrt::Windows::Web::Syndication::RetrievalProgress>::convert(winrt::Windows::Web::Syndication::RetrievalProgress instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Web::Syndication::RetrievalProgress>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Web::Syndication::RetrievalProgress py::converter<winrt::Windows::Web::Syndication::RetrievalProgress>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Web::Syndication::RetrievalProgress>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Web::Syndication::RetrievalProgress>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Web::Syndication::RetrievalProgress");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::Web::Syndication::TransferProgress>::convert(winrt::Windows::Web::Syndication::TransferProgress instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Web::Syndication::TransferProgress>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Web::Syndication::TransferProgress py::converter<winrt::Windows::Web::Syndication::TransferProgress>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Web::Syndication::TransferProgress>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Web::Syndication::TransferProgress>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Web::Syndication::TransferProgress");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Web::Syndication
 {
     struct module_state

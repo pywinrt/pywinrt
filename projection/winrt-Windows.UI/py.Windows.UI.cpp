@@ -4,64 +4,6 @@
 #include "py.Windows.UI.h"
 
 
-PyObject* py::converter<winrt::Windows::UI::Color>::convert(winrt::Windows::UI::Color instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Color>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Color py::converter<winrt::Windows::UI::Color>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Color>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Color>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Color");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::UI::WindowId>::convert(winrt::Windows::UI::WindowId instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::WindowId>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::WindowId py::converter<winrt::Windows::UI::WindowId>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::WindowId>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::WindowId>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::WindowId");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::UI
 {
     struct module_state

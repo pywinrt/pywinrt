@@ -4,35 +4,6 @@
 #include "py.Windows.Services.Store.h"
 
 
-PyObject* py::converter<winrt::Windows::Services::Store::StorePackageUpdateStatus>::convert(winrt::Windows::Services::Store::StorePackageUpdateStatus instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Services::Store::StorePackageUpdateStatus>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Services::Store::StorePackageUpdateStatus py::converter<winrt::Windows::Services::Store::StorePackageUpdateStatus>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Services::Store::StorePackageUpdateStatus>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Services::Store::StorePackageUpdateStatus>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Services::Store::StorePackageUpdateStatus");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Services::Store
 {
     struct module_state

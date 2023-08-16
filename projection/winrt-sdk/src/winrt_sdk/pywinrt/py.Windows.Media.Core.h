@@ -998,39 +998,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Media::Core::MseTimeRange>
-    {
-        static PyObject* convert(winrt::Windows::Media::Core::MseTimeRange instance) noexcept;
-        static winrt::Windows::Media::Core::MseTimeRange convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Media::Core::TimedTextDouble>
-    {
-        static PyObject* convert(winrt::Windows::Media::Core::TimedTextDouble instance) noexcept;
-        static winrt::Windows::Media::Core::TimedTextDouble convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Media::Core::TimedTextPadding>
-    {
-        static PyObject* convert(winrt::Windows::Media::Core::TimedTextPadding instance) noexcept;
-        static winrt::Windows::Media::Core::TimedTextPadding convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Media::Core::TimedTextPoint>
-    {
-        static PyObject* convert(winrt::Windows::Media::Core::TimedTextPoint instance) noexcept;
-        static winrt::Windows::Media::Core::TimedTextPoint convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Media::Core::TimedTextSize>
-    {
-        static PyObject* convert(winrt::Windows::Media::Core::TimedTextSize instance) noexcept;
-        static winrt::Windows::Media::Core::TimedTextSize convert_to(PyObject* obj);
-    };
-
 }

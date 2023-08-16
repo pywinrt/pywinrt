@@ -290,11 +290,4 @@ namespace py
         using type = py::impl::Windows::UI::Xaml::Data::PropertyChangedEventHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult instance) noexcept;
-        static winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult convert_to(PyObject* obj);
-    };
-
 }

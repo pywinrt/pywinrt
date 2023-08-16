@@ -437,18 +437,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::ApplicationModel::PackageInstallProgress>
-    {
-        static PyObject* convert(winrt::Windows::ApplicationModel::PackageInstallProgress instance) noexcept;
-        static winrt::Windows::ApplicationModel::PackageInstallProgress convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::ApplicationModel::PackageVersion>
-    {
-        static PyObject* convert(winrt::Windows::ApplicationModel::PackageVersion instance) noexcept;
-        static winrt::Windows::ApplicationModel::PackageVersion convert_to(PyObject* obj);
-    };
-
 }

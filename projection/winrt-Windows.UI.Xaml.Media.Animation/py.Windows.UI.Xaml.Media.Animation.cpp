@@ -4,64 +4,6 @@
 #include "py.Windows.UI.Xaml.Media.Animation.h"
 
 
-PyObject* py::converter<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>::convert(winrt::Windows::UI::Xaml::Media::Animation::KeyTime instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Xaml::Media::Animation::KeyTime py::converter<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Xaml::Media::Animation::KeyTime");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>::convert(winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior py::converter<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::UI::Xaml::Media::Animation
 {
     struct module_state

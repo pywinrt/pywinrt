@@ -4,64 +4,6 @@
 #include "py.Windows.Devices.Gpio.h"
 
 
-PyObject* py::converter<winrt::Windows::Devices::Gpio::GpioChangeCount>::convert(winrt::Windows::Devices::Gpio::GpioChangeCount instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Devices::Gpio::GpioChangeCount>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Devices::Gpio::GpioChangeCount py::converter<winrt::Windows::Devices::Gpio::GpioChangeCount>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Devices::Gpio::GpioChangeCount>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeCount>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Devices::Gpio::GpioChangeCount");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::Devices::Gpio::GpioChangeRecord>::convert(winrt::Windows::Devices::Gpio::GpioChangeRecord instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Devices::Gpio::GpioChangeRecord>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Devices::Gpio::GpioChangeRecord py::converter<winrt::Windows::Devices::Gpio::GpioChangeRecord>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Devices::Gpio::GpioChangeRecord>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeRecord>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Devices::Gpio::GpioChangeRecord");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Devices::Gpio
 {
     struct module_state

@@ -280,25 +280,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Graphics::Imaging::BitmapBounds>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::Imaging::BitmapBounds instance) noexcept;
-        static winrt::Windows::Graphics::Imaging::BitmapBounds convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::Imaging::BitmapPlaneDescription instance) noexcept;
-        static winrt::Windows::Graphics::Imaging::BitmapPlaneDescription convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Graphics::Imaging::BitmapSize>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::Imaging::BitmapSize instance) noexcept;
-        static winrt::Windows::Graphics::Imaging::BitmapSize convert_to(PyObject* obj);
-    };
-
 }

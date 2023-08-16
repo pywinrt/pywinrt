@@ -4,35 +4,6 @@
 #include "py.Windows.Management.Deployment.h"
 
 
-PyObject* py::converter<winrt::Windows::Management::Deployment::DeploymentProgress>::convert(winrt::Windows::Management::Deployment::DeploymentProgress instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Management::Deployment::DeploymentProgress>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Management::Deployment::DeploymentProgress py::converter<winrt::Windows::Management::Deployment::DeploymentProgress>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Management::Deployment::DeploymentProgress>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Management::Deployment::DeploymentProgress>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Management::Deployment::DeploymentProgress");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Management::Deployment
 {
     struct module_state

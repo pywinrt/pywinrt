@@ -155,18 +155,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation instance) noexcept;
-        static winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Markup::XmlnsDefinition instance) noexcept;
-        static winrt::Windows::UI::Xaml::Markup::XmlnsDefinition convert_to(PyObject* obj);
-    };
-
 }

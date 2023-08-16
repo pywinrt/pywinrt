@@ -447,25 +447,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Input::CrossSlideThresholds>
-    {
-        static PyObject* convert(winrt::Windows::UI::Input::CrossSlideThresholds instance) noexcept;
-        static winrt::Windows::UI::Input::CrossSlideThresholds convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::Input::ManipulationDelta>
-    {
-        static PyObject* convert(winrt::Windows::UI::Input::ManipulationDelta instance) noexcept;
-        static winrt::Windows::UI::Input::ManipulationDelta convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::Input::ManipulationVelocities>
-    {
-        static PyObject* convert(winrt::Windows::UI::Input::ManipulationVelocities instance) noexcept;
-        static winrt::Windows::UI::Input::ManipulationVelocities convert_to(PyObject* obj);
-    };
-
 }

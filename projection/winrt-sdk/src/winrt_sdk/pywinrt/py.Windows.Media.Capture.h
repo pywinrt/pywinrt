@@ -1106,11 +1106,4 @@ namespace py
         using type = py::impl::Windows::Media::Capture::RecordLimitationExceededEventHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::Media::Capture::WhiteBalanceGain>
-    {
-        static PyObject* convert(winrt::Windows::Media::Capture::WhiteBalanceGain instance) noexcept;
-        static winrt::Windows::Media::Capture::WhiteBalanceGain convert_to(PyObject* obj);
-    };
-
 }

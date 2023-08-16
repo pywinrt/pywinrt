@@ -395,11 +395,4 @@ namespace py
         using type = py::impl::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::Networking::Connectivity::NetworkUsageStates>
-    {
-        static PyObject* convert(winrt::Windows::Networking::Connectivity::NetworkUsageStates instance) noexcept;
-        static winrt::Windows::Networking::Connectivity::NetworkUsageStates convert_to(PyObject* obj);
-    };
-
 }

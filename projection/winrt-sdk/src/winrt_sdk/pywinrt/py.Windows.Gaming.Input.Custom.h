@@ -167,18 +167,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>
-    {
-        static PyObject* convert(winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo instance) noexcept;
-        static winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>
-    {
-        static PyObject* convert(winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress instance) noexcept;
-        static winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress convert_to(PyObject* obj);
-    };
-
 }

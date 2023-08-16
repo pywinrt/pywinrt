@@ -351,11 +351,4 @@ namespace py
         using type = py::impl::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription instance) noexcept;
-        static winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription convert_to(PyObject* obj);
-    };
-
 }

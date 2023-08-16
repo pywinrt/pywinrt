@@ -844,11 +844,4 @@ namespace py
         using type = py::impl::Windows::UI::Xaml::Controls::Primitives::ScrollEventHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition instance) noexcept;
-        static winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition convert_to(PyObject* obj);
-    };
-
 }

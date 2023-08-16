@@ -4,64 +4,6 @@
 #include "py.Windows.UI.UIAutomation.Core.h"
 
 
-PyObject* py::converter<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>::convert(winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration py::converter<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>::convert(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId py::converter<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::UI::UIAutomation::Core
 {
     struct module_state

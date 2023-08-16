@@ -191,18 +191,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Web::Syndication::RetrievalProgress>
-    {
-        static PyObject* convert(winrt::Windows::Web::Syndication::RetrievalProgress instance) noexcept;
-        static winrt::Windows::Web::Syndication::RetrievalProgress convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Web::Syndication::TransferProgress>
-    {
-        static PyObject* convert(winrt::Windows::Web::Syndication::TransferProgress instance) noexcept;
-        static winrt::Windows::Web::Syndication::TransferProgress convert_to(PyObject* obj);
-    };
-
 }

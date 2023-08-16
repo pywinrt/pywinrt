@@ -143,18 +143,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Devices::Gpio::GpioChangeCount>
-    {
-        static PyObject* convert(winrt::Windows::Devices::Gpio::GpioChangeCount instance) noexcept;
-        static winrt::Windows::Devices::Gpio::GpioChangeCount convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Devices::Gpio::GpioChangeRecord>
-    {
-        static PyObject* convert(winrt::Windows::Devices::Gpio::GpioChangeRecord instance) noexcept;
-        static winrt::Windows::Devices::Gpio::GpioChangeRecord convert_to(PyObject* obj);
-    };
-
 }

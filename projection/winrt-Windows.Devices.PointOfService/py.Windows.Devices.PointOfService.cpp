@@ -4,35 +4,6 @@
 #include "py.Windows.Devices.PointOfService.h"
 
 
-PyObject* py::converter<winrt::Windows::Devices::PointOfService::SizeUInt32>::convert(winrt::Windows::Devices::PointOfService::SizeUInt32 instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Devices::PointOfService::SizeUInt32>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Devices::PointOfService::SizeUInt32 py::converter<winrt::Windows::Devices::PointOfService::SizeUInt32>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Devices::PointOfService::SizeUInt32>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Devices::PointOfService::SizeUInt32>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Devices::PointOfService::SizeUInt32");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Devices::PointOfService
 {
     struct module_state

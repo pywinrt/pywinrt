@@ -300,39 +300,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Perception::Spatial::SpatialBoundingBox>
-    {
-        static PyObject* convert(winrt::Windows::Perception::Spatial::SpatialBoundingBox instance) noexcept;
-        static winrt::Windows::Perception::Spatial::SpatialBoundingBox convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>
-    {
-        static PyObject* convert(winrt::Windows::Perception::Spatial::SpatialBoundingFrustum instance) noexcept;
-        static winrt::Windows::Perception::Spatial::SpatialBoundingFrustum convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>
-    {
-        static PyObject* convert(winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox instance) noexcept;
-        static winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>
-    {
-        static PyObject* convert(winrt::Windows::Perception::Spatial::SpatialBoundingSphere instance) noexcept;
-        static winrt::Windows::Perception::Spatial::SpatialBoundingSphere convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Perception::Spatial::SpatialRay>
-    {
-        static PyObject* convert(winrt::Windows::Perception::Spatial::SpatialRay instance) noexcept;
-        static winrt::Windows::Perception::Spatial::SpatialRay convert_to(PyObject* obj);
-    };
-
 }

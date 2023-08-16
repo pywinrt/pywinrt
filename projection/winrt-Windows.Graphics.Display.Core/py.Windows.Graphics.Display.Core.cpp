@@ -4,35 +4,6 @@
 #include "py.Windows.Graphics.Display.Core.h"
 
 
-PyObject* py::converter<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>::convert(winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata py::converter<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Graphics::Display::Core
 {
     struct module_state

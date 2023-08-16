@@ -3812,32 +3812,4 @@ namespace py
         using type = py::impl::Windows::Foundation::TypedEventHandler<TSender, TResult>;
     };
 
-    template<>
-    struct converter<winrt::hresult>
-    {
-        static PyObject* convert(winrt::hresult instance) noexcept;
-        static winrt::hresult convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Foundation::Point>
-    {
-        static PyObject* convert(winrt::Windows::Foundation::Point instance) noexcept;
-        static winrt::Windows::Foundation::Point convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Foundation::Rect>
-    {
-        static PyObject* convert(winrt::Windows::Foundation::Rect instance) noexcept;
-        static winrt::Windows::Foundation::Rect convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Foundation::Size>
-    {
-        static PyObject* convert(winrt::Windows::Foundation::Size instance) noexcept;
-        static winrt::Windows::Foundation::Size convert_to(PyObject* obj);
-    };
-
 }

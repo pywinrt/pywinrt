@@ -231,11 +231,4 @@ namespace py
         using type = py::impl::Windows::Data::Text::WordSegmentsTokenizingHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::Data::Text::TextSegment>
-    {
-        static PyObject* convert(winrt::Windows::Data::Text::TextSegment instance) noexcept;
-        static winrt::Windows::Data::Text::TextSegment convert_to(PyObject* obj);
-    };
-
 }

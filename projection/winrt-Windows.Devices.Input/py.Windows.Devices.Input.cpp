@@ -4,64 +4,6 @@
 #include "py.Windows.Devices.Input.h"
 
 
-PyObject* py::converter<winrt::Windows::Devices::Input::MouseDelta>::convert(winrt::Windows::Devices::Input::MouseDelta instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Devices::Input::MouseDelta>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Devices::Input::MouseDelta py::converter<winrt::Windows::Devices::Input::MouseDelta>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Devices::Input::MouseDelta>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Devices::Input::MouseDelta>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Devices::Input::MouseDelta");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::Devices::Input::PointerDeviceUsage>::convert(winrt::Windows::Devices::Input::PointerDeviceUsage instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::Devices::Input::PointerDeviceUsage>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::Devices::Input::PointerDeviceUsage py::converter<winrt::Windows::Devices::Input::PointerDeviceUsage>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::Devices::Input::PointerDeviceUsage>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::Devices::Input::PointerDeviceUsage>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::Devices::Input::PointerDeviceUsage");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::Devices::Input
 {
     struct module_state

@@ -1684,32 +1684,4 @@ namespace py
         using type = py::impl::Windows::UI::Xaml::WindowVisibilityChangedEventHandler;
     };
 
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::CornerRadius>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::CornerRadius instance) noexcept;
-        static winrt::Windows::UI::Xaml::CornerRadius convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Duration>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Duration instance) noexcept;
-        static winrt::Windows::UI::Xaml::Duration convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::GridLength>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::GridLength instance) noexcept;
-        static winrt::Windows::UI::Xaml::GridLength convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Thickness>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Thickness instance) noexcept;
-        static winrt::Windows::UI::Xaml::Thickness convert_to(PyObject* obj);
-    };
-
 }

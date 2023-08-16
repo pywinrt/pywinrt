@@ -4,35 +4,6 @@
 #include "py.Windows.ApplicationModel.Resources.Core.h"
 
 
-PyObject* py::converter<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>::convert(winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo py::converter<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::ApplicationModel::Resources::Core
 {
     struct module_state

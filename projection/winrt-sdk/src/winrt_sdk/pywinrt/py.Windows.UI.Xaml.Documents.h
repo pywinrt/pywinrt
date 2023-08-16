@@ -264,11 +264,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::UI::Xaml::Documents::TextRange>
-    {
-        static PyObject* convert(winrt::Windows::UI::Xaml::Documents::TextRange instance) noexcept;
-        static winrt::Windows::UI::Xaml::Documents::TextRange convert_to(PyObject* obj);
-    };
-
 }

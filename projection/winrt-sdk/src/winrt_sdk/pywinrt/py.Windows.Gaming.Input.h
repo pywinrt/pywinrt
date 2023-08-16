@@ -253,46 +253,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Gaming::Input::ArcadeStickReading>
-    {
-        static PyObject* convert(winrt::Windows::Gaming::Input::ArcadeStickReading instance) noexcept;
-        static winrt::Windows::Gaming::Input::ArcadeStickReading convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Gaming::Input::FlightStickReading>
-    {
-        static PyObject* convert(winrt::Windows::Gaming::Input::FlightStickReading instance) noexcept;
-        static winrt::Windows::Gaming::Input::FlightStickReading convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Gaming::Input::GamepadReading>
-    {
-        static PyObject* convert(winrt::Windows::Gaming::Input::GamepadReading instance) noexcept;
-        static winrt::Windows::Gaming::Input::GamepadReading convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Gaming::Input::GamepadVibration>
-    {
-        static PyObject* convert(winrt::Windows::Gaming::Input::GamepadVibration instance) noexcept;
-        static winrt::Windows::Gaming::Input::GamepadVibration convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Gaming::Input::RacingWheelReading>
-    {
-        static PyObject* convert(winrt::Windows::Gaming::Input::RacingWheelReading instance) noexcept;
-        static winrt::Windows::Gaming::Input::RacingWheelReading convert_to(PyObject* obj);
-    };
-
-    template<>
-    struct converter<winrt::Windows::Gaming::Input::UINavigationReading>
-    {
-        static PyObject* convert(winrt::Windows::Gaming::Input::UINavigationReading instance) noexcept;
-        static winrt::Windows::Gaming::Input::UINavigationReading convert_to(PyObject* obj);
-    };
-
 }

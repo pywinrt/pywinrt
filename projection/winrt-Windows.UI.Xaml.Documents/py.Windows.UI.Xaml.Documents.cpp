@@ -4,35 +4,6 @@
 #include "py.Windows.UI.Xaml.Documents.h"
 
 
-PyObject* py::converter<winrt::Windows::UI::Xaml::Documents::TextRange>::convert(winrt::Windows::UI::Xaml::Documents::TextRange instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Xaml::Documents::TextRange>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Xaml::Documents::TextRange py::converter<winrt::Windows::UI::Xaml::Documents::TextRange>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Xaml::Documents::TextRange>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Documents::TextRange>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Xaml::Documents::TextRange");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::UI::Xaml::Documents
 {
     struct module_state

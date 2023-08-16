@@ -3193,34 +3193,6 @@ struct pinterface_python_type<%<%>>
             bind<write_struct_buffer_format_string>(type));
     }
 
-    void write_struct_converter_decl(writer& w, TypeDef const& type)
-    {
-        if (is_customized_struct(type))
-        {
-            return;
-        }
-
-        auto ns = type.TypeNamespace();
-        auto name = type.TypeName();
-        if ((ns == "Windows.Foundation") && (name == "EventRegistrationToken"))
-        {
-            // The declaration for event_token is baked into pybase.h to address
-            // ordering issues.
-            return;
-        }
-
-        w.write("template<>\nstruct converter<%>\n{\n", type);
-        {
-            writer::indent_guard g{w};
-            w.write(
-                "static PyObject* convert(% instance) noexcept;\nstatic % convert_to(PyObject* obj);\n",
-                type,
-                type);
-        }
-
-        w.write("};\n\n");
-    }
-
     void write_struct_field_var_type(writer& w, Field const& field)
     {
         call(
@@ -3700,57 +3672,6 @@ if (!PyArg_ParseTupleAndKeywords(args, kwds, "%", const_cast<char**>(kwlist)%))
         {
             write_struct_getset_function(w, type, field);
         }
-    }
-
-    void write_struct_convert_functions(writer& w, TypeDef const& type)
-    {
-        if (is_customized_struct(type))
-        {
-            return;
-        }
-
-        w.write(
-            "\n\nPyObject* py::converter<%>::convert(% instance) noexcept\n{\n",
-            type,
-            type);
-        {
-            writer::indent_guard g{w};
-
-            w.write("auto type = py::get_python_type<%>();\n", type);
-            w.write("if (!type)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-            w.write("return py::wrap_struct(instance, type);\n");
-        }
-        w.write("}\n");
-
-        w.write("% py::converter<%>::convert_to(PyObject* obj)\n{\n", type, type);
-        {
-            writer::indent_guard g{w};
-
-            auto format = R"(throw_if_pyobj_null(obj);
-
-auto type =  py::get_python_type<%>();
-
-if (!type) {
-    throw python_exception();
-}
-
-if (Py_TYPE(obj) == type)
-{
-    return reinterpret_cast<py::winrt_struct_wrapper<%>*>(obj)->obj;
-}
-
-PyErr_SetString(PyExc_TypeError, "expecting %");
-throw python_exception();
-)";
-            w.write(format, type, type, type);
-        }
-        w.write("}");
     }
 
     void write_struct(writer& w, TypeDef const& type)

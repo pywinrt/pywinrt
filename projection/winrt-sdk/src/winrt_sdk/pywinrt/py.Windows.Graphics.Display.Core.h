@@ -80,11 +80,4 @@ namespace py
     {
         static PyTypeObject* get_python_type() noexcept;
     };
-    template<>
-    struct converter<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>
-    {
-        static PyObject* convert(winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata instance) noexcept;
-        static winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata convert_to(PyObject* obj);
-    };
-
 }

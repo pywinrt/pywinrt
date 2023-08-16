@@ -4,64 +4,6 @@
 #include "py.Windows.UI.Xaml.Markup.h"
 
 
-PyObject* py::converter<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>::convert(winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation py::converter<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation");
-    throw python_exception();
-}
-
-PyObject* py::converter<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>::convert(winrt::Windows::UI::Xaml::Markup::XmlnsDefinition instance) noexcept
-{
-    auto type = py::get_python_type<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>();
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return py::wrap_struct(instance, type);
-}
-winrt::Windows::UI::Xaml::Markup::XmlnsDefinition py::converter<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>::convert_to(PyObject* obj)
-{
-    throw_if_pyobj_null(obj);
-
-    auto type =  py::get_python_type<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>();
-
-    if (!type) {
-        throw python_exception();
-    }
-
-    if (Py_TYPE(obj) == type)
-    {
-        return reinterpret_cast<py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>*>(obj)->obj;
-    }
-
-    PyErr_SetString(PyExc_TypeError, "expecting winrt::Windows::UI::Xaml::Markup::XmlnsDefinition");
-    throw python_exception();
-}
-
 namespace py::cpp::Windows::UI::Xaml::Markup
 {
     struct module_state
