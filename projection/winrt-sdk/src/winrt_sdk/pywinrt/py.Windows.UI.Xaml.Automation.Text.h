@@ -29,12 +29,14 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.text";
+        static constexpr const char* type_name = "TextPatternRangeEndpoint";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Text::TextUnit>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.text";
+        static constexpr const char* type_name = "TextUnit";
     };
 }

@@ -55,13 +55,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::PickerLocationId>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers";
+        static constexpr const char* type_name = "PickerLocationId";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::PickerViewMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers";
+        static constexpr const char* type_name = "PickerViewMode";
     };
 
     template<>

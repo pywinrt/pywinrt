@@ -139,61 +139,71 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::CrossSlidingState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "CrossSlidingState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::DraggingState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "DraggingState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::EdgeGestureKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "EdgeGestureKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::GazeInputAccessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "GazeInputAccessStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::GestureSettings>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "GestureSettings";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::HoldingState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "HoldingState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::InputActivationState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "InputActivationState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::PointerUpdateKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "PointerUpdateKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerMenuKnownIcon>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "RadialControllerMenuKnownIcon";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "RadialControllerSystemMenuItemKind";
     };
 
     template<>

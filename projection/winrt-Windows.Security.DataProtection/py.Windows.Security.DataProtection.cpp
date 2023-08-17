@@ -8,86 +8,11 @@ namespace py::cpp::Windows::Security::DataProtection
 {
     struct module_state
     {
-        PyObject* type_UserDataAvailability;
-        PyObject* type_UserDataBufferUnprotectStatus;
-        PyObject* type_UserDataStorageItemProtectionStatus;
         PyTypeObject* type_UserDataAvailabilityStateChangedEventArgs;
         PyTypeObject* type_UserDataBufferUnprotectResult;
         PyTypeObject* type_UserDataProtectionManager;
         PyTypeObject* type_UserDataStorageItemProtectionInfo;
     };
-
-    static PyObject* register_UserDataAvailability(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserDataAvailability)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserDataAvailability = type;
-        Py_INCREF(state->type_UserDataAvailability);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UserDataBufferUnprotectStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserDataBufferUnprotectStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserDataBufferUnprotectStatus = type;
-        Py_INCREF(state->type_UserDataBufferUnprotectStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UserDataStorageItemProtectionStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserDataStorageItemProtectionStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserDataStorageItemProtectionStatus = type;
-        Py_INCREF(state->type_UserDataStorageItemProtectionStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- UserDataAvailabilityStateChangedEventArgs class --------------------
     static constexpr const char* const type_name_UserDataAvailabilityStateChangedEventArgs = "UserDataAvailabilityStateChangedEventArgs";
@@ -751,12 +676,6 @@ namespace py::cpp::Windows::Security::DataProtection
     // ----- Windows.Security.DataProtection Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::DataProtection");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_UserDataAvailability", register_UserDataAvailability, METH_O, "registers type"},
-        {"_register_UserDataBufferUnprotectStatus", register_UserDataBufferUnprotectStatus, METH_O, "registers type"},
-        {"_register_UserDataStorageItemProtectionStatus", register_UserDataStorageItemProtectionStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -767,9 +686,6 @@ namespace py::cpp::Windows::Security::DataProtection
             return 0;
         }
 
-        Py_VISIT(state->type_UserDataAvailability);
-        Py_VISIT(state->type_UserDataBufferUnprotectStatus);
-        Py_VISIT(state->type_UserDataStorageItemProtectionStatus);
         Py_VISIT(state->type_UserDataAvailabilityStateChangedEventArgs);
         Py_VISIT(state->type_UserDataBufferUnprotectResult);
         Py_VISIT(state->type_UserDataProtectionManager);
@@ -787,9 +703,6 @@ namespace py::cpp::Windows::Security::DataProtection
             return 0;
         }
 
-        Py_CLEAR(state->type_UserDataAvailability);
-        Py_CLEAR(state->type_UserDataBufferUnprotectStatus);
-        Py_CLEAR(state->type_UserDataStorageItemProtectionStatus);
         Py_CLEAR(state->type_UserDataAvailabilityStateChangedEventArgs);
         Py_CLEAR(state->type_UserDataBufferUnprotectResult);
         Py_CLEAR(state->type_UserDataProtectionManager);
@@ -804,7 +717,7 @@ namespace py::cpp::Windows::Security::DataProtection
            "_winrt_Windows_Security_DataProtection",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -865,75 +778,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_DataProtection(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Security::DataProtection::UserDataAvailability>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::DataProtection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::DataProtection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAvailability;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::DataProtection::UserDataAvailability is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::DataProtection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::DataProtection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataBufferUnprotectStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::DataProtection::UserDataBufferUnprotectStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::DataProtection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::DataProtection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataStorageItemProtectionStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>::get_python_type() noexcept {

@@ -16,6 +16,4 @@ class BinaryStringEncoding(enum.IntEnum):
     UTF16_L_E = 1
     UTF16_B_E = 2
 
-_ns_module._register_BinaryStringEncoding(BinaryStringEncoding)
-
 CryptographicBuffer = _ns_module.CryptographicBuffer

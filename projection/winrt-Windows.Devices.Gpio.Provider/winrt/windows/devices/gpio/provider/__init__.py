@@ -38,11 +38,6 @@ class ProviderGpioSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED_READ_ONLY = 1
 
-_ns_module._register_ProviderGpioPinDriveMode(ProviderGpioPinDriveMode)
-_ns_module._register_ProviderGpioPinEdge(ProviderGpioPinEdge)
-_ns_module._register_ProviderGpioPinValue(ProviderGpioPinValue)
-_ns_module._register_ProviderGpioSharingMode(ProviderGpioSharingMode)
-
 GpioPinProviderValueChangedEventArgs = _ns_module.GpioPinProviderValueChangedEventArgs
 IGpioControllerProvider = _ns_module.IGpioControllerProvider
 IGpioPinProvider = _ns_module.IGpioPinProvider

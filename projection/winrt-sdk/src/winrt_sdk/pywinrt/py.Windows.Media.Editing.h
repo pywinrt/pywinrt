@@ -85,13 +85,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Editing::MediaTrimmingPreference>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.editing";
+        static constexpr const char* type_name = "MediaTrimmingPreference";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Editing::VideoFramePrecision>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.editing";
+        static constexpr const char* type_name = "VideoFramePrecision";
     };
 
     template<>

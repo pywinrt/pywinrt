@@ -47,13 +47,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ContentRestrictions::ContentAccessRestrictionLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
+        static constexpr const char* type_name = "ContentAccessRestrictionLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::ContentRestrictions::RatedContentCategory>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
+        static constexpr const char* type_name = "RatedContentCategory";
     };
 
     template<>

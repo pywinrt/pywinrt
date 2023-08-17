@@ -38,10 +38,6 @@ class MdmSessionState(enum.IntEnum):
     RETRYING = 5
     COMPLETED = 6
 
-_ns_module._register_MdmAlertDataType(MdmAlertDataType)
-_ns_module._register_MdmAlertMark(MdmAlertMark)
-_ns_module._register_MdmSessionState(MdmSessionState)
-
 MdmAlert = _ns_module.MdmAlert
 MdmSession = _ns_module.MdmSession
 MdmSessionManager = _ns_module.MdmSessionManager

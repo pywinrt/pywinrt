@@ -254,13 +254,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ActivationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ActivationKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ApplicationExecutionState";
     };
 
     template<>

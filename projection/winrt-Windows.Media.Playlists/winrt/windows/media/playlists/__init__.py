@@ -26,6 +26,4 @@ class PlaylistFormat(enum.IntEnum):
     ZUNE = 1
     M3U = 2
 
-_ns_module._register_PlaylistFormat(PlaylistFormat)
-
 Playlist = _ns_module.Playlist

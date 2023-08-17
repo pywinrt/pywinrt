@@ -9,5 +9,4 @@ try:
 except ImportError:
     pass
 
-
 GameControllerProviderInfo = _ns_module.GameControllerProviderInfo

@@ -33,9 +33,5 @@ class WebAuthenticationStatus(enum.IntEnum):
     USER_CANCEL = 1
     ERROR_HTTP = 2
 
-_ns_module._register_TokenBindingKeyType(TokenBindingKeyType)
-_ns_module._register_WebAuthenticationOptions(WebAuthenticationOptions)
-_ns_module._register_WebAuthenticationStatus(WebAuthenticationStatus)
-
 WebAuthenticationBroker = _ns_module.WebAuthenticationBroker
 WebAuthenticationResult = _ns_module.WebAuthenticationResult

@@ -94,25 +94,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynAuthenticationMechanism";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynBusAttachmentState";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionLostReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynSessionLostReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynTrafficType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynTrafficType";
     };
 
     template<>

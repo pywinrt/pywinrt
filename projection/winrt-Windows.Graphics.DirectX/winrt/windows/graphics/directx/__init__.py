@@ -170,8 +170,3 @@ class DirectXPrimitiveTopology(enum.IntEnum):
     TRIANGLE_LIST = 4
     TRIANGLE_STRIP = 5
 
-_ns_module._register_DirectXAlphaMode(DirectXAlphaMode)
-_ns_module._register_DirectXColorSpace(DirectXColorSpace)
-_ns_module._register_DirectXPixelFormat(DirectXPixelFormat)
-_ns_module._register_DirectXPrimitiveTopology(DirectXPrimitiveTopology)
-

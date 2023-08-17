@@ -285,9 +285,6 @@ namespace py::cpp::Windows::System::Power::Diagnostics
     // ----- Windows.System.Power.Diagnostics Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::System::Power::Diagnostics");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -325,7 +322,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
            "_winrt_Windows_System_Power_Diagnostics",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

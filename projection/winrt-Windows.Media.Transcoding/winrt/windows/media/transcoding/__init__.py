@@ -46,8 +46,5 @@ class TranscodeFailureReason(enum.IntEnum):
     INVALID_PROFILE = 2
     CODEC_NOT_FOUND = 3
 
-_ns_module._register_MediaVideoProcessingAlgorithm(MediaVideoProcessingAlgorithm)
-_ns_module._register_TranscodeFailureReason(TranscodeFailureReason)
-
 MediaTranscoder = _ns_module.MediaTranscoder
 PrepareTranscodeResult = _ns_module.PrepareTranscodeResult

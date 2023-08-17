@@ -330,32 +330,16 @@ namespace py
     };
 
     /**
-     * Type registration for pure Python types.
+     * Type registration for pure Python type info.
+     *
+     * @tparam T    A winrt type name like `winrt::Windows::Foundation::PropertyType`.
      */
     template<typename T>
     struct py_type
     {
-        static PyObject* get_python_type() noexcept
-        {
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::py_type<%s>::get_python_type() is not implemented",
-                typeid(T).name());
-            return nullptr;
-        }
+        static constexpr const char* module_name = 0;
+        static constexpr const char* type_name = 0;
     };
-
-    /**
-     * Gets the registered pure Python type for @p T.
-     *
-     * @returns A borrowed reference to the type or nullptr if the type was not
-     * registered.
-     */
-    template<typename T>
-    PyObject* get_py_type() noexcept
-    {
-        return py_type<T>::get_python_type();
-    }
 
     /**
      * Gets the registered binary extension type for @p T.
@@ -496,14 +480,29 @@ namespace py
     template<typename T>
     PyObject* wrap_enum(PyObject* value) noexcept
     {
-        PyObject* type_object = get_py_type<T>();
+        static_assert(py_type<T>::module_name);
+        static_assert(py_type<T>::type_name);
 
-        if (!type_object)
+        // TODO: it would be nice if we could make this a relative import
+
+        // new reference
+        pyobj_handle module{PyImport_ImportModule(py_type<T>::module_name)};
+
+        if (!module)
         {
-            PyErr_SetString(PyExc_RuntimeError, "enum type has not been registered");
             return nullptr;
         }
 
+        // new reference
+        pyobj_handle type_object{
+            PyObject_GetAttrString(module.get(), py_type<T>::type_name)};
+
+        if (!type_object)
+        {
+            return nullptr;
+        }
+
+        // new reference
         pyobj_handle args{PyTuple_Pack(1, value)};
 
         if (!args)
@@ -511,7 +510,8 @@ namespace py
             return nullptr;
         }
 
-        pyobj_handle obj{PyObject_Call(type_object, args.get(), nullptr)};
+        // new reference
+        pyobj_handle obj{PyObject_Call(type_object.get(), args.get(), nullptr)};
 
         if (!obj)
         {

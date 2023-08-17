@@ -104,10 +104,6 @@ class MediaMemoryTypes(enum.IntEnum):
     CPU = 1
     GPU_AND_CPU = 2
 
-_ns_module._register_AudioEffectType(AudioEffectType)
-_ns_module._register_MediaEffectClosedReason(MediaEffectClosedReason)
-_ns_module._register_MediaMemoryTypes(MediaMemoryTypes)
-
 AudioCaptureEffectsManager = _ns_module.AudioCaptureEffectsManager
 AudioEffect = _ns_module.AudioEffect
 AudioEffectDefinition = _ns_module.AudioEffectDefinition

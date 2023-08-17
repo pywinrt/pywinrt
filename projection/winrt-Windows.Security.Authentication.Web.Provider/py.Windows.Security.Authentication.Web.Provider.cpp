@@ -8,10 +8,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 {
     struct module_state
     {
-        PyObject* type_WebAccountClientViewType;
-        PyObject* type_WebAccountProviderOperationKind;
-        PyObject* type_WebAccountScope;
-        PyObject* type_WebAccountSelectionOptions;
         PyTypeObject* type_WebAccountClientView;
         PyTypeObject* type_WebAccountManager;
         PyTypeObject* type_WebAccountProviderAddAccountOperation;
@@ -32,102 +28,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         PyTypeObject* type_IWebAccountProviderTokenOperation;
         PyTypeObject* type_IWebAccountProviderUIReportOperation;
     };
-
-    static PyObject* register_WebAccountClientViewType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebAccountClientViewType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebAccountClientViewType = type;
-        Py_INCREF(state->type_WebAccountClientViewType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WebAccountProviderOperationKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebAccountProviderOperationKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebAccountProviderOperationKind = type;
-        Py_INCREF(state->type_WebAccountProviderOperationKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WebAccountScope(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebAccountScope)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebAccountScope = type;
-        Py_INCREF(state->type_WebAccountScope);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WebAccountSelectionOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebAccountSelectionOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebAccountSelectionOptions = type;
-        Py_INCREF(state->type_WebAccountSelectionOptions);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- WebAccountClientView class --------------------
     static constexpr const char* const type_name_WebAccountClientView = "WebAccountClientView";
@@ -4120,13 +4020,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     // ----- Windows.Security.Authentication.Web.Provider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::Web::Provider");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_WebAccountClientViewType", register_WebAccountClientViewType, METH_O, "registers type"},
-        {"_register_WebAccountProviderOperationKind", register_WebAccountProviderOperationKind, METH_O, "registers type"},
-        {"_register_WebAccountScope", register_WebAccountScope, METH_O, "registers type"},
-        {"_register_WebAccountSelectionOptions", register_WebAccountSelectionOptions, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4137,10 +4030,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             return 0;
         }
 
-        Py_VISIT(state->type_WebAccountClientViewType);
-        Py_VISIT(state->type_WebAccountProviderOperationKind);
-        Py_VISIT(state->type_WebAccountScope);
-        Py_VISIT(state->type_WebAccountSelectionOptions);
         Py_VISIT(state->type_WebAccountClientView);
         Py_VISIT(state->type_WebAccountManager);
         Py_VISIT(state->type_WebAccountProviderAddAccountOperation);
@@ -4173,10 +4062,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             return 0;
         }
 
-        Py_CLEAR(state->type_WebAccountClientViewType);
-        Py_CLEAR(state->type_WebAccountProviderOperationKind);
-        Py_CLEAR(state->type_WebAccountScope);
-        Py_CLEAR(state->type_WebAccountSelectionOptions);
         Py_CLEAR(state->type_WebAccountClientView);
         Py_CLEAR(state->type_WebAccountManager);
         Py_CLEAR(state->type_WebAccountProviderAddAccountOperation);
@@ -4206,7 +4091,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
            "_winrt_Windows_Security_Authentication_Web_Provider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4357,98 +4242,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Web_Provider(void) 
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientViewType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountClientViewType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientViewType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderOperationKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderOperationKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderOperationKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountScope;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountSelectionOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountSelectionOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountSelectionOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView>::get_python_type() noexcept {

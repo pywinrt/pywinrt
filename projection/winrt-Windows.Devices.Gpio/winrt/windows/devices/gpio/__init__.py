@@ -55,13 +55,6 @@ class GpioSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED_READ_ONLY = 1
 
-_ns_module._register_GpioChangePolarity(GpioChangePolarity)
-_ns_module._register_GpioOpenStatus(GpioOpenStatus)
-_ns_module._register_GpioPinDriveMode(GpioPinDriveMode)
-_ns_module._register_GpioPinEdge(GpioPinEdge)
-_ns_module._register_GpioPinValue(GpioPinValue)
-_ns_module._register_GpioSharingMode(GpioSharingMode)
-
 GpioChangeCount = _ns_module.GpioChangeCount
 GpioChangeRecord = _ns_module.GpioChangeRecord
 GpioChangeCounter = _ns_module.GpioChangeCounter

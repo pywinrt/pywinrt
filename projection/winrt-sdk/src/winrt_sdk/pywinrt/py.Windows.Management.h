@@ -45,19 +45,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::MdmAlertDataType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management";
+        static constexpr const char* type_name = "MdmAlertDataType";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::MdmAlertMark>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management";
+        static constexpr const char* type_name = "MdmAlertMark";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::MdmSessionState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management";
+        static constexpr const char* type_name = "MdmSessionState";
     };
 
     template<>

@@ -3452,9 +3452,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     // ----- Windows.Storage.BulkAccess Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Storage::BulkAccess");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3496,7 +3493,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
            "_winrt_Windows_Storage_BulkAccess",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

@@ -72,19 +72,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::AccountPictureKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "AccountPictureKind";
     };
 
     template<>
     struct py_type<winrt::Windows::System::UserProfile::SetAccountPictureResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "SetAccountPictureResult";
     };
 
     template<>
     struct py_type<winrt::Windows::System::UserProfile::SetImageFeedResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "SetImageFeedResult";
     };
 
     template<>

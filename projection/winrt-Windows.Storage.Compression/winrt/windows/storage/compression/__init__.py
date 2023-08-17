@@ -24,7 +24,5 @@ class CompressAlgorithm(enum.IntEnum):
     XPRESS_HUFF = 4
     LZMS = 5
 
-_ns_module._register_CompressAlgorithm(CompressAlgorithm)
-
 Compressor = _ns_module.Compressor
 Decompressor = _ns_module.Decompressor

@@ -8,14 +8,6 @@ namespace py::cpp::Windows::Media::Miracast
 {
     struct module_state
     {
-        PyObject* type_MiracastReceiverApplySettingsStatus;
-        PyObject* type_MiracastReceiverAuthorizationMethod;
-        PyObject* type_MiracastReceiverDisconnectReason;
-        PyObject* type_MiracastReceiverGameControllerDeviceUsageMode;
-        PyObject* type_MiracastReceiverListeningStatus;
-        PyObject* type_MiracastReceiverSessionStartStatus;
-        PyObject* type_MiracastReceiverWiFiStatus;
-        PyObject* type_MiracastTransmitterAuthorizationStatus;
         PyTypeObject* type_MiracastReceiver;
         PyTypeObject* type_MiracastReceiverApplySettingsResult;
         PyTypeObject* type_MiracastReceiverConnection;
@@ -35,198 +27,6 @@ namespace py::cpp::Windows::Media::Miracast
         PyTypeObject* type_MiracastReceiverVideoStreamSettings;
         PyTypeObject* type_MiracastTransmitter;
     };
-
-    static PyObject* register_MiracastReceiverApplySettingsStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MiracastReceiverApplySettingsStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MiracastReceiverApplySettingsStatus = type;
-        Py_INCREF(state->type_MiracastReceiverApplySettingsStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MiracastReceiverAuthorizationMethod(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MiracastReceiverAuthorizationMethod)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MiracastReceiverAuthorizationMethod = type;
-        Py_INCREF(state->type_MiracastReceiverAuthorizationMethod);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MiracastReceiverDisconnectReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MiracastReceiverDisconnectReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MiracastReceiverDisconnectReason = type;
-        Py_INCREF(state->type_MiracastReceiverDisconnectReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MiracastReceiverGameControllerDeviceUsageMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MiracastReceiverGameControllerDeviceUsageMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MiracastReceiverGameControllerDeviceUsageMode = type;
-        Py_INCREF(state->type_MiracastReceiverGameControllerDeviceUsageMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MiracastReceiverListeningStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MiracastReceiverListeningStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MiracastReceiverListeningStatus = type;
-        Py_INCREF(state->type_MiracastReceiverListeningStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MiracastReceiverSessionStartStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MiracastReceiverSessionStartStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MiracastReceiverSessionStartStatus = type;
-        Py_INCREF(state->type_MiracastReceiverSessionStartStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MiracastReceiverWiFiStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MiracastReceiverWiFiStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MiracastReceiverWiFiStatus = type;
-        Py_INCREF(state->type_MiracastReceiverWiFiStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MiracastTransmitterAuthorizationStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MiracastTransmitterAuthorizationStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MiracastTransmitterAuthorizationStatus = type;
-        Py_INCREF(state->type_MiracastTransmitterAuthorizationStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- MiracastReceiver class --------------------
     static constexpr const char* const type_name_MiracastReceiver = "MiracastReceiver";
@@ -4300,17 +4100,6 @@ namespace py::cpp::Windows::Media::Miracast
     // ----- Windows.Media.Miracast Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::Miracast");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_MiracastReceiverApplySettingsStatus", register_MiracastReceiverApplySettingsStatus, METH_O, "registers type"},
-        {"_register_MiracastReceiverAuthorizationMethod", register_MiracastReceiverAuthorizationMethod, METH_O, "registers type"},
-        {"_register_MiracastReceiverDisconnectReason", register_MiracastReceiverDisconnectReason, METH_O, "registers type"},
-        {"_register_MiracastReceiverGameControllerDeviceUsageMode", register_MiracastReceiverGameControllerDeviceUsageMode, METH_O, "registers type"},
-        {"_register_MiracastReceiverListeningStatus", register_MiracastReceiverListeningStatus, METH_O, "registers type"},
-        {"_register_MiracastReceiverSessionStartStatus", register_MiracastReceiverSessionStartStatus, METH_O, "registers type"},
-        {"_register_MiracastReceiverWiFiStatus", register_MiracastReceiverWiFiStatus, METH_O, "registers type"},
-        {"_register_MiracastTransmitterAuthorizationStatus", register_MiracastTransmitterAuthorizationStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4321,14 +4110,6 @@ namespace py::cpp::Windows::Media::Miracast
             return 0;
         }
 
-        Py_VISIT(state->type_MiracastReceiverApplySettingsStatus);
-        Py_VISIT(state->type_MiracastReceiverAuthorizationMethod);
-        Py_VISIT(state->type_MiracastReceiverDisconnectReason);
-        Py_VISIT(state->type_MiracastReceiverGameControllerDeviceUsageMode);
-        Py_VISIT(state->type_MiracastReceiverListeningStatus);
-        Py_VISIT(state->type_MiracastReceiverSessionStartStatus);
-        Py_VISIT(state->type_MiracastReceiverWiFiStatus);
-        Py_VISIT(state->type_MiracastTransmitterAuthorizationStatus);
         Py_VISIT(state->type_MiracastReceiver);
         Py_VISIT(state->type_MiracastReceiverApplySettingsResult);
         Py_VISIT(state->type_MiracastReceiverConnection);
@@ -4360,14 +4141,6 @@ namespace py::cpp::Windows::Media::Miracast
             return 0;
         }
 
-        Py_CLEAR(state->type_MiracastReceiverApplySettingsStatus);
-        Py_CLEAR(state->type_MiracastReceiverAuthorizationMethod);
-        Py_CLEAR(state->type_MiracastReceiverDisconnectReason);
-        Py_CLEAR(state->type_MiracastReceiverGameControllerDeviceUsageMode);
-        Py_CLEAR(state->type_MiracastReceiverListeningStatus);
-        Py_CLEAR(state->type_MiracastReceiverSessionStartStatus);
-        Py_CLEAR(state->type_MiracastReceiverWiFiStatus);
-        Py_CLEAR(state->type_MiracastTransmitterAuthorizationStatus);
         Py_CLEAR(state->type_MiracastReceiver);
         Py_CLEAR(state->type_MiracastReceiverApplySettingsResult);
         Py_CLEAR(state->type_MiracastReceiverConnection);
@@ -4396,7 +4169,7 @@ namespace py::cpp::Windows::Media::Miracast
            "_winrt_Windows_Media_Miracast",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4541,190 +4314,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Miracast(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Miracast;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Miracast");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MiracastReceiverApplySettingsStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverAuthorizationMethod>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Miracast;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Miracast");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MiracastReceiverAuthorizationMethod;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Miracast::MiracastReceiverAuthorizationMethod is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Miracast;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Miracast");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MiracastReceiverDisconnectReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDeviceUsageMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Miracast;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Miracast");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MiracastReceiverGameControllerDeviceUsageMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDeviceUsageMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverListeningStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Miracast;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Miracast");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MiracastReceiverListeningStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Miracast::MiracastReceiverListeningStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverSessionStartStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Miracast;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Miracast");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MiracastReceiverSessionStartStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Miracast::MiracastReceiverSessionStartStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverWiFiStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Miracast;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Miracast");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MiracastReceiverWiFiStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Miracast::MiracastReceiverWiFiStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Miracast::MiracastTransmitterAuthorizationStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Miracast;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Miracast");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MiracastTransmitterAuthorizationStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Miracast::MiracastTransmitterAuthorizationStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::Miracast::MiracastReceiver>::get_python_type() noexcept {

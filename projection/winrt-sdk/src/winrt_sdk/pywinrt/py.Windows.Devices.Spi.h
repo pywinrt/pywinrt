@@ -49,13 +49,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::SpiMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.spi";
+        static constexpr const char* type_name = "SpiMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Spi::SpiSharingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.spi";
+        static constexpr const char* type_name = "SpiSharingMode";
     };
 
     template<>

@@ -85,43 +85,50 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::DataProtectionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "DataProtectionStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::EnforcementLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "EnforcementLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::FileProtectionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "FileProtectionStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedImportExportStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectedImportExportStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectionPolicyAuditAction";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectionPolicyEvaluationResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectionPolicyRequestAccessBehavior";
     };
 
     template<>

@@ -2094,9 +2094,5 @@ class XamlTypeIndex(enum.IntEnum):
     THEME_SHADOW = 964
     XAML_U_I_COMMAND = 969
 
-_ns_module._register_XamlEventIndex(XamlEventIndex)
-_ns_module._register_XamlPropertyIndex(XamlPropertyIndex)
-_ns_module._register_XamlTypeIndex(XamlTypeIndex)
-
 XamlDirect = _ns_module.XamlDirect
 IXamlDirectObject = _ns_module.IXamlDirectObject

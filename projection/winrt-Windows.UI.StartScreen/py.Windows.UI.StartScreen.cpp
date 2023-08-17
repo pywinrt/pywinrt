@@ -8,12 +8,6 @@ namespace py::cpp::Windows::UI::StartScreen
 {
     struct module_state
     {
-        PyObject* type_ForegroundText;
-        PyObject* type_JumpListItemKind;
-        PyObject* type_JumpListSystemGroupKind;
-        PyObject* type_TileMixedRealityModelActivationBehavior;
-        PyObject* type_TileOptions;
-        PyObject* type_TileSize;
         PyTypeObject* type_JumpList;
         PyTypeObject* type_JumpListItem;
         PyTypeObject* type_SecondaryTile;
@@ -24,150 +18,6 @@ namespace py::cpp::Windows::UI::StartScreen
         PyTypeObject* type_VisualElementsRequestDeferral;
         PyTypeObject* type_VisualElementsRequestedEventArgs;
     };
-
-    static PyObject* register_ForegroundText(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ForegroundText)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ForegroundText = type;
-        Py_INCREF(state->type_ForegroundText);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_JumpListItemKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_JumpListItemKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_JumpListItemKind = type;
-        Py_INCREF(state->type_JumpListItemKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_JumpListSystemGroupKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_JumpListSystemGroupKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_JumpListSystemGroupKind = type;
-        Py_INCREF(state->type_JumpListSystemGroupKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_TileMixedRealityModelActivationBehavior(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_TileMixedRealityModelActivationBehavior)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_TileMixedRealityModelActivationBehavior = type;
-        Py_INCREF(state->type_TileMixedRealityModelActivationBehavior);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_TileOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_TileOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_TileOptions = type;
-        Py_INCREF(state->type_TileOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_TileSize(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_TileSize)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_TileSize = type;
-        Py_INCREF(state->type_TileSize);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- JumpList class --------------------
     static constexpr const char* const type_name_JumpList = "JumpList";
@@ -3626,15 +3476,6 @@ namespace py::cpp::Windows::UI::StartScreen
     // ----- Windows.UI.StartScreen Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::StartScreen");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ForegroundText", register_ForegroundText, METH_O, "registers type"},
-        {"_register_JumpListItemKind", register_JumpListItemKind, METH_O, "registers type"},
-        {"_register_JumpListSystemGroupKind", register_JumpListSystemGroupKind, METH_O, "registers type"},
-        {"_register_TileMixedRealityModelActivationBehavior", register_TileMixedRealityModelActivationBehavior, METH_O, "registers type"},
-        {"_register_TileOptions", register_TileOptions, METH_O, "registers type"},
-        {"_register_TileSize", register_TileSize, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3645,12 +3486,6 @@ namespace py::cpp::Windows::UI::StartScreen
             return 0;
         }
 
-        Py_VISIT(state->type_ForegroundText);
-        Py_VISIT(state->type_JumpListItemKind);
-        Py_VISIT(state->type_JumpListSystemGroupKind);
-        Py_VISIT(state->type_TileMixedRealityModelActivationBehavior);
-        Py_VISIT(state->type_TileOptions);
-        Py_VISIT(state->type_TileSize);
         Py_VISIT(state->type_JumpList);
         Py_VISIT(state->type_JumpListItem);
         Py_VISIT(state->type_SecondaryTile);
@@ -3673,12 +3508,6 @@ namespace py::cpp::Windows::UI::StartScreen
             return 0;
         }
 
-        Py_CLEAR(state->type_ForegroundText);
-        Py_CLEAR(state->type_JumpListItemKind);
-        Py_CLEAR(state->type_JumpListSystemGroupKind);
-        Py_CLEAR(state->type_TileMixedRealityModelActivationBehavior);
-        Py_CLEAR(state->type_TileOptions);
-        Py_CLEAR(state->type_TileSize);
         Py_CLEAR(state->type_JumpList);
         Py_CLEAR(state->type_JumpListItem);
         Py_CLEAR(state->type_SecondaryTile);
@@ -3698,7 +3527,7 @@ namespace py::cpp::Windows::UI::StartScreen
            "_winrt_Windows_UI_StartScreen",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3789,144 +3618,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_StartScreen(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::StartScreen::ForegroundText>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ForegroundText;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::ForegroundText is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::StartScreen::JumpListItemKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JumpListItemKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::JumpListItemKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::StartScreen::JumpListSystemGroupKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JumpListSystemGroupKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::JumpListSystemGroupKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::StartScreen::TileMixedRealityModelActivationBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileMixedRealityModelActivationBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::TileMixedRealityModelActivationBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::StartScreen::TileOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::TileOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::StartScreen::TileSize>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileSize;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::TileSize is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::StartScreen::JumpList>::get_python_type() noexcept {

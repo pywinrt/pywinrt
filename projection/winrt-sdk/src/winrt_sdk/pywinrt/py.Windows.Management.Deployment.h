@@ -99,73 +99,85 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::AddPackageByAppInstallerOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "AddPackageByAppInstallerOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::DeploymentOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "DeploymentOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::DeploymentProgressState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "DeploymentProgressState";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageInstallState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "PackageInstallState";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "PackageState";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "PackageStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageStubPreference>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "PackageStubPreference";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageTypes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "PackageTypes";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::RemovalOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "RemovalOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::SharedPackageContainerCreationCollisionOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "SharedPackageContainerCreationCollisionOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::SharedPackageContainerOperationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "SharedPackageContainerOperationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Deployment::StubPackageOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "StubPackageOption";
     };
 
     template<>

@@ -64,9 +64,6 @@ class VideoFramePrecision(enum.IntEnum):
     NEAREST_FRAME = 0
     NEAREST_KEY_FRAME = 1
 
-_ns_module._register_MediaTrimmingPreference(MediaTrimmingPreference)
-_ns_module._register_VideoFramePrecision(VideoFramePrecision)
-
 BackgroundAudioTrack = _ns_module.BackgroundAudioTrack
 EmbeddedAudioTrack = _ns_module.EmbeddedAudioTrack
 MediaClip = _ns_module.MediaClip

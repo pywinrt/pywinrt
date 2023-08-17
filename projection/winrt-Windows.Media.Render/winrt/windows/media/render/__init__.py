@@ -20,5 +20,3 @@ class AudioRenderCategory(enum.IntEnum):
     MOVIE = 10
     MEDIA = 11
 
-_ns_module._register_AudioRenderCategory(AudioRenderCategory)
-

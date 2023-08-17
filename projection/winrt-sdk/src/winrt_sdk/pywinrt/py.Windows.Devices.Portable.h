@@ -33,7 +33,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Portable::ServiceDeviceType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.portable";
+        static constexpr const char* type_name = "ServiceDeviceType";
     };
 
     template<>

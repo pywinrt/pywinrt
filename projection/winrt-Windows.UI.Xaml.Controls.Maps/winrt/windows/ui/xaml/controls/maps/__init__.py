@@ -129,21 +129,6 @@ class MapWatermarkMode(enum.IntEnum):
     AUTOMATIC = 0
     ON = 1
 
-_ns_module._register_MapAnimationKind(MapAnimationKind)
-_ns_module._register_MapCameraChangeReason(MapCameraChangeReason)
-_ns_module._register_MapColorScheme(MapColorScheme)
-_ns_module._register_MapElementCollisionBehavior(MapElementCollisionBehavior)
-_ns_module._register_MapInteractionMode(MapInteractionMode)
-_ns_module._register_MapLoadingStatus(MapLoadingStatus)
-_ns_module._register_MapModel3DShadingOption(MapModel3DShadingOption)
-_ns_module._register_MapPanInteractionMode(MapPanInteractionMode)
-_ns_module._register_MapProjection(MapProjection)
-_ns_module._register_MapStyle(MapStyle)
-_ns_module._register_MapTileAnimationState(MapTileAnimationState)
-_ns_module._register_MapTileLayer(MapTileLayer)
-_ns_module._register_MapVisibleRegionKind(MapVisibleRegionKind)
-_ns_module._register_MapWatermarkMode(MapWatermarkMode)
-
 MapZoomLevelRange = _ns_module.MapZoomLevelRange
 CustomMapTileDataSource = _ns_module.CustomMapTileDataSource
 HttpMapTileDataSource = _ns_module.HttpMapTileDataSource

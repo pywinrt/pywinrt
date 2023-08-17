@@ -9,5 +9,4 @@ try:
 except ImportError:
     pass
 
-
 VibrationDevice = _ns_module.VibrationDevice

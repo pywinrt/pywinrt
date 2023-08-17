@@ -14,6 +14,5 @@ try:
 except ImportError:
     pass
 
-
 CommunicationBlockingAccessManager = _ns_module.CommunicationBlockingAccessManager
 CommunicationBlockingAppManager = _ns_module.CommunicationBlockingAppManager

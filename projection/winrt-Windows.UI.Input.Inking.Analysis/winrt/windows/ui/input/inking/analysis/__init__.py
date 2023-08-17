@@ -58,11 +58,6 @@ class InkAnalysisStrokeKind(enum.IntEnum):
     WRITING = 1
     DRAWING = 2
 
-_ns_module._register_InkAnalysisDrawingKind(InkAnalysisDrawingKind)
-_ns_module._register_InkAnalysisNodeKind(InkAnalysisNodeKind)
-_ns_module._register_InkAnalysisStatus(InkAnalysisStatus)
-_ns_module._register_InkAnalysisStrokeKind(InkAnalysisStrokeKind)
-
 InkAnalysisInkBullet = _ns_module.InkAnalysisInkBullet
 InkAnalysisInkDrawing = _ns_module.InkAnalysisInkDrawing
 InkAnalysisInkWord = _ns_module.InkAnalysisInkWord

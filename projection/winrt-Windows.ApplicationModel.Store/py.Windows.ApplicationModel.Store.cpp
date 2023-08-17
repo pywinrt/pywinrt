@@ -8,9 +8,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
 {
     struct module_state
     {
-        PyObject* type_FulfillmentResult;
-        PyObject* type_ProductPurchaseStatus;
-        PyObject* type_ProductType;
         PyTypeObject* type_CurrentApp;
         PyTypeObject* type_CurrentAppSimulator;
         PyTypeObject* type_LicenseInformation;
@@ -21,78 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
         PyTypeObject* type_PurchaseResults;
         PyTypeObject* type_UnfulfilledConsumable;
     };
-
-    static PyObject* register_FulfillmentResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_FulfillmentResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_FulfillmentResult = type;
-        Py_INCREF(state->type_FulfillmentResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ProductPurchaseStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProductPurchaseStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProductPurchaseStatus = type;
-        Py_INCREF(state->type_ProductPurchaseStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ProductType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProductType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProductType = type;
-        Py_INCREF(state->type_ProductType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CurrentApp class --------------------
     static constexpr const char* const type_name_CurrentApp = "CurrentApp";
@@ -2660,12 +2585,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     // ----- Windows.ApplicationModel.Store Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Store");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_FulfillmentResult", register_FulfillmentResult, METH_O, "registers type"},
-        {"_register_ProductPurchaseStatus", register_ProductPurchaseStatus, METH_O, "registers type"},
-        {"_register_ProductType", register_ProductType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2676,9 +2595,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
             return 0;
         }
 
-        Py_VISIT(state->type_FulfillmentResult);
-        Py_VISIT(state->type_ProductPurchaseStatus);
-        Py_VISIT(state->type_ProductType);
         Py_VISIT(state->type_CurrentApp);
         Py_VISIT(state->type_CurrentAppSimulator);
         Py_VISIT(state->type_LicenseInformation);
@@ -2701,9 +2617,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
             return 0;
         }
 
-        Py_CLEAR(state->type_FulfillmentResult);
-        Py_CLEAR(state->type_ProductPurchaseStatus);
-        Py_CLEAR(state->type_ProductType);
         Py_CLEAR(state->type_CurrentApp);
         Py_CLEAR(state->type_CurrentAppSimulator);
         Py_CLEAR(state->type_LicenseInformation);
@@ -2723,7 +2636,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
            "_winrt_Windows_ApplicationModel_Store",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2826,75 +2739,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::FulfillmentResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FulfillmentResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::FulfillmentResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::ProductPurchaseStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProductPurchaseStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::ProductPurchaseStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::ProductType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProductType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::ProductType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::CurrentApp>::get_python_type() noexcept {

@@ -126,13 +126,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Threading::WorkItemOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.threading";
+        static constexpr const char* type_name = "WorkItemOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Threading::WorkItemPriority>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.threading";
+        static constexpr const char* type_name = "WorkItemPriority";
     };
 
     template<>

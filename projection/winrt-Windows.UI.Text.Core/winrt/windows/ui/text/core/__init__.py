@@ -123,13 +123,6 @@ class CoreTextTextUpdatingResult(enum.IntEnum):
     SUCCEEDED = 0
     FAILED = 1
 
-_ns_module._register_CoreTextFormatUpdatingReason(CoreTextFormatUpdatingReason)
-_ns_module._register_CoreTextFormatUpdatingResult(CoreTextFormatUpdatingResult)
-_ns_module._register_CoreTextInputPaneDisplayPolicy(CoreTextInputPaneDisplayPolicy)
-_ns_module._register_CoreTextInputScope(CoreTextInputScope)
-_ns_module._register_CoreTextSelectionUpdatingResult(CoreTextSelectionUpdatingResult)
-_ns_module._register_CoreTextTextUpdatingResult(CoreTextTextUpdatingResult)
-
 CoreTextRange = _ns_module.CoreTextRange
 CoreTextCompositionCompletedEventArgs = _ns_module.CoreTextCompositionCompletedEventArgs
 CoreTextCompositionSegment = _ns_module.CoreTextCompositionSegment

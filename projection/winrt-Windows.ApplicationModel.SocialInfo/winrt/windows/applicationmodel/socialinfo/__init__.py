@@ -44,11 +44,6 @@ class SocialItemBadgeStyle(enum.IntEnum):
     VISIBLE = 1
     VISIBLE_WITH_COUNT = 2
 
-_ns_module._register_SocialFeedItemStyle(SocialFeedItemStyle)
-_ns_module._register_SocialFeedKind(SocialFeedKind)
-_ns_module._register_SocialFeedUpdateMode(SocialFeedUpdateMode)
-_ns_module._register_SocialItemBadgeStyle(SocialItemBadgeStyle)
-
 SocialFeedChildItem = _ns_module.SocialFeedChildItem
 SocialFeedContent = _ns_module.SocialFeedContent
 SocialFeedItem = _ns_module.SocialFeedItem

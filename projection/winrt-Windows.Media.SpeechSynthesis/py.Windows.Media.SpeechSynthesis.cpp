@@ -8,86 +8,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 {
     struct module_state
     {
-        PyObject* type_SpeechAppendedSilence;
-        PyObject* type_SpeechPunctuationSilence;
-        PyObject* type_VoiceGender;
         PyTypeObject* type_SpeechSynthesisStream;
         PyTypeObject* type_SpeechSynthesizer;
         PyTypeObject* type_SpeechSynthesizerOptions;
         PyTypeObject* type_VoiceInformation;
     };
-
-    static PyObject* register_SpeechAppendedSilence(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechAppendedSilence)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechAppendedSilence = type;
-        Py_INCREF(state->type_SpeechAppendedSilence);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpeechPunctuationSilence(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechPunctuationSilence)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechPunctuationSilence = type;
-        Py_INCREF(state->type_SpeechPunctuationSilence);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_VoiceGender(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_VoiceGender)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_VoiceGender = type;
-        Py_INCREF(state->type_VoiceGender);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- SpeechSynthesisStream class --------------------
     static constexpr const char* const type_name_SpeechSynthesisStream = "SpeechSynthesisStream";
@@ -1572,12 +1497,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     // ----- Windows.Media.SpeechSynthesis Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::SpeechSynthesis");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SpeechAppendedSilence", register_SpeechAppendedSilence, METH_O, "registers type"},
-        {"_register_SpeechPunctuationSilence", register_SpeechPunctuationSilence, METH_O, "registers type"},
-        {"_register_VoiceGender", register_VoiceGender, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1588,9 +1507,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
             return 0;
         }
 
-        Py_VISIT(state->type_SpeechAppendedSilence);
-        Py_VISIT(state->type_SpeechPunctuationSilence);
-        Py_VISIT(state->type_VoiceGender);
         Py_VISIT(state->type_SpeechSynthesisStream);
         Py_VISIT(state->type_SpeechSynthesizer);
         Py_VISIT(state->type_SpeechSynthesizerOptions);
@@ -1608,9 +1524,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
             return 0;
         }
 
-        Py_CLEAR(state->type_SpeechAppendedSilence);
-        Py_CLEAR(state->type_SpeechPunctuationSilence);
-        Py_CLEAR(state->type_VoiceGender);
         Py_CLEAR(state->type_SpeechSynthesisStream);
         Py_CLEAR(state->type_SpeechSynthesizer);
         Py_CLEAR(state->type_SpeechSynthesizerOptions);
@@ -1625,7 +1538,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
            "_winrt_Windows_Media_SpeechSynthesis",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1692,75 +1605,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_SpeechSynthesis(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechSynthesis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechSynthesis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechAppendedSilence;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechSynthesis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechSynthesis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechPunctuationSilence;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechSynthesis::VoiceGender>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechSynthesis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechSynthesis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceGender;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechSynthesis::VoiceGender is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>::get_python_type() noexcept {

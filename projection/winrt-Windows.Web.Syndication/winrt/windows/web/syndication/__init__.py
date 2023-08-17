@@ -47,10 +47,6 @@ class SyndicationTextType(enum.IntEnum):
     HTML = 1
     XHTML = 2
 
-_ns_module._register_SyndicationErrorStatus(SyndicationErrorStatus)
-_ns_module._register_SyndicationFormat(SyndicationFormat)
-_ns_module._register_SyndicationTextType(SyndicationTextType)
-
 RetrievalProgress = _ns_module.RetrievalProgress
 TransferProgress = _ns_module.TransferProgress
 SyndicationAttribute = _ns_module.SyndicationAttribute

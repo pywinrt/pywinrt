@@ -23,8 +23,6 @@ class AutomationRemoteOperationStatus(enum.IntEnum):
     UNHANDLED_EXCEPTION = 3
     EXECUTION_FAILURE = 4
 
-_ns_module._register_AutomationRemoteOperationStatus(AutomationRemoteOperationStatus)
-
 AutomationAnnotationTypeRegistration = _ns_module.AutomationAnnotationTypeRegistration
 AutomationRemoteOperationOperandId = _ns_module.AutomationRemoteOperationOperandId
 AutomationRemoteOperationResult = _ns_module.AutomationRemoteOperationResult

@@ -39,8 +39,6 @@ class DevicePortalConnectionClosedReason(enum.IntEnum):
     USER_NOT_PRESENT = 4
     SERVICE_TERMINATED = 5
 
-_ns_module._register_DevicePortalConnectionClosedReason(DevicePortalConnectionClosedReason)
-
 DevicePortalConnection = _ns_module.DevicePortalConnection
 DevicePortalConnectionClosedEventArgs = _ns_module.DevicePortalConnectionClosedEventArgs
 DevicePortalConnectionRequestReceivedEventArgs = _ns_module.DevicePortalConnectionRequestReceivedEventArgs

@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 {
     struct module_state
     {
-        PyObject* type_HttpDiagnosticRequestInitiator;
         PyTypeObject* type_HttpDiagnosticProvider;
         PyTypeObject* type_HttpDiagnosticProviderRequestResponseCompletedEventArgs;
         PyTypeObject* type_HttpDiagnosticProviderRequestResponseTimestamps;
@@ -16,30 +15,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         PyTypeObject* type_HttpDiagnosticProviderResponseReceivedEventArgs;
         PyTypeObject* type_HttpDiagnosticSourceLocation;
     };
-
-    static PyObject* register_HttpDiagnosticRequestInitiator(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HttpDiagnosticRequestInitiator)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HttpDiagnosticRequestInitiator = type;
-        Py_INCREF(state->type_HttpDiagnosticRequestInitiator);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- HttpDiagnosticProvider class --------------------
     static constexpr const char* const type_name_HttpDiagnosticProvider = "HttpDiagnosticProvider";
@@ -1303,10 +1278,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     // ----- Windows.Web.Http.Diagnostics Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Web::Http::Diagnostics");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_HttpDiagnosticRequestInitiator", register_HttpDiagnosticRequestInitiator, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1317,7 +1288,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
             return 0;
         }
 
-        Py_VISIT(state->type_HttpDiagnosticRequestInitiator);
         Py_VISIT(state->type_HttpDiagnosticProvider);
         Py_VISIT(state->type_HttpDiagnosticProviderRequestResponseCompletedEventArgs);
         Py_VISIT(state->type_HttpDiagnosticProviderRequestResponseTimestamps);
@@ -1337,7 +1307,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
             return 0;
         }
 
-        Py_CLEAR(state->type_HttpDiagnosticRequestInitiator);
         Py_CLEAR(state->type_HttpDiagnosticProvider);
         Py_CLEAR(state->type_HttpDiagnosticProviderRequestResponseCompletedEventArgs);
         Py_CLEAR(state->type_HttpDiagnosticProviderRequestResponseTimestamps);
@@ -1354,7 +1323,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
            "_winrt_Windows_Web_Http_Diagnostics",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1427,29 +1396,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http_Diagnostics(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticRequestInitiator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpDiagnosticRequestInitiator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticRequestInitiator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>::get_python_type() noexcept {

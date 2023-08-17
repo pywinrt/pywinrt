@@ -36,10 +36,6 @@ class I2cTransferStatus(enum.IntEnum):
     CLOCK_STRETCH_TIMEOUT = 3
     UNKNOWN_ERROR = 4
 
-_ns_module._register_I2cBusSpeed(I2cBusSpeed)
-_ns_module._register_I2cSharingMode(I2cSharingMode)
-_ns_module._register_I2cTransferStatus(I2cTransferStatus)
-
 I2cTransferResult = _ns_module.I2cTransferResult
 I2cConnectionSettings = _ns_module.I2cConnectionSettings
 I2cController = _ns_module.I2cController

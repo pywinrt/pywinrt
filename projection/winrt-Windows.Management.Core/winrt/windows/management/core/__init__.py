@@ -9,5 +9,4 @@ try:
 except ImportError:
     pass
 
-
 ApplicationDataManager = _ns_module.ApplicationDataManager

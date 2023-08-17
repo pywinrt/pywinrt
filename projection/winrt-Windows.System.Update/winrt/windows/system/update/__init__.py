@@ -52,11 +52,6 @@ class SystemUpdateStartInstallAction(enum.IntEnum):
     UP_TO_REBOOT = 0
     ALLOW_REBOOT = 1
 
-_ns_module._register_SystemUpdateAttentionRequiredReason(SystemUpdateAttentionRequiredReason)
-_ns_module._register_SystemUpdateItemState(SystemUpdateItemState)
-_ns_module._register_SystemUpdateManagerState(SystemUpdateManagerState)
-_ns_module._register_SystemUpdateStartInstallAction(SystemUpdateStartInstallAction)
-
 SystemUpdateItem = _ns_module.SystemUpdateItem
 SystemUpdateLastErrorInfo = _ns_module.SystemUpdateLastErrorInfo
 SystemUpdateManager = _ns_module.SystemUpdateManager

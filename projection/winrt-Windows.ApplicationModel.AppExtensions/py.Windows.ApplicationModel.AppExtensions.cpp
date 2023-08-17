@@ -1284,9 +1284,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     // ----- Windows.ApplicationModel.AppExtensions Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::AppExtensions");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1334,7 +1331,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
            "_winrt_Windows_ApplicationModel_AppExtensions",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

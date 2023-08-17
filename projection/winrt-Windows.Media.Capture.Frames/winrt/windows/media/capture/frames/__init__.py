@@ -114,13 +114,6 @@ class MultiSourceMediaFrameReaderStartStatus(enum.IntEnum):
     DEVICE_NOT_AVAILABLE = 3
     UNKNOWN_FAILURE = 4
 
-_ns_module._register_MediaFrameReaderAcquisitionMode(MediaFrameReaderAcquisitionMode)
-_ns_module._register_MediaFrameReaderStartStatus(MediaFrameReaderStartStatus)
-_ns_module._register_MediaFrameSourceGetPropertyStatus(MediaFrameSourceGetPropertyStatus)
-_ns_module._register_MediaFrameSourceKind(MediaFrameSourceKind)
-_ns_module._register_MediaFrameSourceSetPropertyStatus(MediaFrameSourceSetPropertyStatus)
-_ns_module._register_MultiSourceMediaFrameReaderStartStatus(MultiSourceMediaFrameReaderStartStatus)
-
 AudioMediaFrame = _ns_module.AudioMediaFrame
 BufferMediaFrame = _ns_module.BufferMediaFrame
 DepthMediaFrame = _ns_module.DepthMediaFrame

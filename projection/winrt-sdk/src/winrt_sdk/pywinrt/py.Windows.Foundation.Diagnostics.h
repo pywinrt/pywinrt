@@ -74,49 +74,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::CausalityRelation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "CausalityRelation";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::CausalitySource>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "CausalitySource";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::CausalitySynchronousWork>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "CausalitySynchronousWork";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::CausalityTraceLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "CausalityTraceLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::ErrorOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "ErrorOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "LoggingFieldFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "LoggingLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingOpcode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "LoggingOpcode";
     };
 
     template<>

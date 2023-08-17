@@ -9,6 +9,5 @@ try:
 except ImportError:
     pass
 
-
 PerceptionTimestamp = _ns_module.PerceptionTimestamp
 PerceptionTimestampHelper = _ns_module.PerceptionTimestampHelper

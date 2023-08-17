@@ -115,18 +115,6 @@ class WiFiWpsKind(enum.IntEnum):
     ETHERNET = 4
     USB = 5
 
-_ns_module._register_WiFiAccessStatus(WiFiAccessStatus)
-_ns_module._register_WiFiConnectionMethod(WiFiConnectionMethod)
-_ns_module._register_WiFiConnectionStatus(WiFiConnectionStatus)
-_ns_module._register_WiFiNetworkKind(WiFiNetworkKind)
-_ns_module._register_WiFiOnDemandHotspotAvailability(WiFiOnDemandHotspotAvailability)
-_ns_module._register_WiFiOnDemandHotspotCellularBars(WiFiOnDemandHotspotCellularBars)
-_ns_module._register_WiFiOnDemandHotspotConnectStatus(WiFiOnDemandHotspotConnectStatus)
-_ns_module._register_WiFiPhyKind(WiFiPhyKind)
-_ns_module._register_WiFiReconnectionKind(WiFiReconnectionKind)
-_ns_module._register_WiFiWpsConfigurationStatus(WiFiWpsConfigurationStatus)
-_ns_module._register_WiFiWpsKind(WiFiWpsKind)
-
 WiFiAdapter = _ns_module.WiFiAdapter
 WiFiAvailableNetwork = _ns_module.WiFiAvailableNetwork
 WiFiConnectionResult = _ns_module.WiFiConnectionResult

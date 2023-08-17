@@ -19,6 +19,3 @@ class TextUnit(enum.IntEnum):
     PAGE = 5
     DOCUMENT = 6
 
-_ns_module._register_TextPatternRangeEndpoint(TextPatternRangeEndpoint)
-_ns_module._register_TextUnit(TextUnit)
-

@@ -64,19 +64,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingConnectionErrorStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.casting";
+        static constexpr const char* type_name = "CastingConnectionErrorStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingConnectionState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.casting";
+        static constexpr const char* type_name = "CastingConnectionState";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingPlaybackTypes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.casting";
+        static constexpr const char* type_name = "CastingPlaybackTypes";
     };
 
     template<>

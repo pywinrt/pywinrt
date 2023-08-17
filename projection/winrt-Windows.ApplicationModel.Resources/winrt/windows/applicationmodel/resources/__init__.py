@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 ResourceLoader = _ns_module.ResourceLoader

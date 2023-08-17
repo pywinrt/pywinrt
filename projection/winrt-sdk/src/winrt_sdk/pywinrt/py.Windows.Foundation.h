@@ -3559,13 +3559,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::AsyncStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "AsyncStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::PropertyType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "PropertyType";
     };
 
     template<>

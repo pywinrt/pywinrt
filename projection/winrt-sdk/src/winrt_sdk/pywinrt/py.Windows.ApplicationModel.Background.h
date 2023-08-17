@@ -322,79 +322,92 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::AlarmAccessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "AlarmAccessStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ApplicationTriggerResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "ApplicationTriggerResult";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundAccessRequestKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "BackgroundAccessRequestKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "BackgroundAccessStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskCancellationReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "BackgroundTaskCancellationReason";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskThrottleCounter>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "BackgroundTaskThrottleCounter";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundWorkCostValue>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "BackgroundWorkCostValue";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::CustomSystemEventTriggerRecurrence>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "CustomSystemEventTriggerRecurrence";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::DeviceTriggerResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "DeviceTriggerResult";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::LocationTriggerType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "LocationTriggerType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::MediaProcessingTriggerResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "MediaProcessingTriggerResult";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SystemConditionType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "SystemConditionType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SystemTriggerType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "SystemTriggerType";
     };
 
     template<>

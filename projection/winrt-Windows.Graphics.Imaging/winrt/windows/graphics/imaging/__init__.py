@@ -97,18 +97,6 @@ class TiffCompressionMode(enum.IntEnum):
     ZIP = 6
     LZWH_DIFFERENCING = 7
 
-_ns_module._register_BitmapAlphaMode(BitmapAlphaMode)
-_ns_module._register_BitmapBufferAccessMode(BitmapBufferAccessMode)
-_ns_module._register_BitmapFlip(BitmapFlip)
-_ns_module._register_BitmapInterpolationMode(BitmapInterpolationMode)
-_ns_module._register_BitmapPixelFormat(BitmapPixelFormat)
-_ns_module._register_BitmapRotation(BitmapRotation)
-_ns_module._register_ColorManagementMode(ColorManagementMode)
-_ns_module._register_ExifOrientationMode(ExifOrientationMode)
-_ns_module._register_JpegSubsamplingMode(JpegSubsamplingMode)
-_ns_module._register_PngFilterMode(PngFilterMode)
-_ns_module._register_TiffCompressionMode(TiffCompressionMode)
-
 BitmapBounds = _ns_module.BitmapBounds
 BitmapPlaneDescription = _ns_module.BitmapPlaneDescription
 BitmapSize = _ns_module.BitmapSize

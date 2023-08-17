@@ -14,6 +14,5 @@ try:
 except ImportError:
     pass
 
-
 SpatialGraphInteropFrameOfReferencePreview = _ns_module.SpatialGraphInteropFrameOfReferencePreview
 SpatialGraphInteropPreview = _ns_module.SpatialGraphInteropPreview

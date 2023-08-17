@@ -119,103 +119,120 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentBusyStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentBusyStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarOtherAppReadAccess>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentCalendarOtherAppReadAccess";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarOtherAppWriteAccess>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentCalendarOtherAppWriteAccess";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentCalendarSyncStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentConflictType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentConflictType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentDaysOfWeek>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentDaysOfWeek";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentDetailsKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentDetailsKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentParticipantResponse>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentParticipantResponse";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentParticipantRole>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentParticipantRole";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrenceUnit>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentRecurrenceUnit";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentSensitivity>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentSensitivity";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreAccessType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentStoreAccessType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentStoreChangeType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentSummaryCardView>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentSummaryCardView";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentWeekOfMonth>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "AppointmentWeekOfMonth";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::FindAppointmentCalendarsOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "FindAppointmentCalendarsOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::RecurrenceType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
+        static constexpr const char* type_name = "RecurrenceType";
     };
 
     template<>

@@ -8,8 +8,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 {
     struct module_state
     {
-        PyObject* type_Print3DWorkflowDetail;
-        PyObject* type_Print3DWorkflowStatus;
         PyTypeObject* type_Print3DWorkflow;
         PyTypeObject* type_Print3DWorkflowPrintRequestedEventArgs;
         PyTypeObject* type_Print3DWorkflowPrinterChangedEventArgs;
@@ -20,54 +18,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         PyTypeObject* type_PrintTaskConfigurationSaveRequestedDeferral;
         PyTypeObject* type_PrintTaskConfigurationSaveRequestedEventArgs;
     };
-
-    static PyObject* register_Print3DWorkflowDetail(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Print3DWorkflowDetail)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Print3DWorkflowDetail = type;
-        Py_INCREF(state->type_Print3DWorkflowDetail);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_Print3DWorkflowStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Print3DWorkflowStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Print3DWorkflowStatus = type;
-        Py_INCREF(state->type_Print3DWorkflowStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Print3DWorkflow class --------------------
     static constexpr const char* const type_name_Print3DWorkflow = "Print3DWorkflow";
@@ -1363,11 +1313,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     // ----- Windows.Devices.Printers.Extensions Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Printers::Extensions");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_Print3DWorkflowDetail", register_Print3DWorkflowDetail, METH_O, "registers type"},
-        {"_register_Print3DWorkflowStatus", register_Print3DWorkflowStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1378,8 +1323,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
             return 0;
         }
 
-        Py_VISIT(state->type_Print3DWorkflowDetail);
-        Py_VISIT(state->type_Print3DWorkflowStatus);
         Py_VISIT(state->type_Print3DWorkflow);
         Py_VISIT(state->type_Print3DWorkflowPrintRequestedEventArgs);
         Py_VISIT(state->type_Print3DWorkflowPrinterChangedEventArgs);
@@ -1402,8 +1345,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
             return 0;
         }
 
-        Py_CLEAR(state->type_Print3DWorkflowDetail);
-        Py_CLEAR(state->type_Print3DWorkflowStatus);
         Py_CLEAR(state->type_Print3DWorkflow);
         Py_CLEAR(state->type_Print3DWorkflowPrintRequestedEventArgs);
         Py_CLEAR(state->type_Print3DWorkflowPrinterChangedEventArgs);
@@ -1423,7 +1364,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
            "_winrt_Windows_Devices_Printers_Extensions",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1514,52 +1455,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Printers_Extensions(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowDetail>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DWorkflowDetail;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowDetail is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DWorkflowStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow>::get_python_type() noexcept {

@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 InstalledDesktopApp = _ns_module.InstalledDesktopApp

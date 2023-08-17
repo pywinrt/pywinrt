@@ -71,11 +71,6 @@ class UnicodeNumericType(enum.IntEnum):
     DIGIT = 2
     NUMERIC = 3
 
-_ns_module._register_AlternateNormalizationFormat(AlternateNormalizationFormat)
-_ns_module._register_TextPredictionOptions(TextPredictionOptions)
-_ns_module._register_UnicodeGeneralCategory(UnicodeGeneralCategory)
-_ns_module._register_UnicodeNumericType(UnicodeNumericType)
-
 TextSegment = _ns_module.TextSegment
 AlternateWordForm = _ns_module.AlternateWordForm
 SelectableWordSegment = _ns_module.SelectableWordSegment

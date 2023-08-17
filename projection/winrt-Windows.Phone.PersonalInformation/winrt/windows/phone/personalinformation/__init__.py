@@ -43,12 +43,6 @@ class VCardFormat(enum.IntEnum):
     VERSION2_1 = 0
     VERSION3 = 1
 
-_ns_module._register_ContactChangeType(ContactChangeType)
-_ns_module._register_ContactQueryResultOrdering(ContactQueryResultOrdering)
-_ns_module._register_ContactStoreApplicationAccessMode(ContactStoreApplicationAccessMode)
-_ns_module._register_ContactStoreSystemAccessMode(ContactStoreSystemAccessMode)
-_ns_module._register_VCardFormat(VCardFormat)
-
 ContactAddress = _ns_module.ContactAddress
 ContactChangeRecord = _ns_module.ContactChangeRecord
 ContactInformation = _ns_module.ContactInformation

@@ -8,33 +8,8 @@ namespace py::cpp::Windows::Media::Playlists
 {
     struct module_state
     {
-        PyObject* type_PlaylistFormat;
         PyTypeObject* type_Playlist;
     };
-
-    static PyObject* register_PlaylistFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PlaylistFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PlaylistFormat = type;
-        Py_INCREF(state->type_PlaylistFormat);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Playlist class --------------------
     static constexpr const char* const type_name_Playlist = "Playlist";
@@ -276,10 +251,6 @@ namespace py::cpp::Windows::Media::Playlists
     // ----- Windows.Media.Playlists Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::Playlists");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PlaylistFormat", register_PlaylistFormat, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -290,7 +261,6 @@ namespace py::cpp::Windows::Media::Playlists
             return 0;
         }
 
-        Py_VISIT(state->type_PlaylistFormat);
         Py_VISIT(state->type_Playlist);
 
         return 0;
@@ -305,7 +275,6 @@ namespace py::cpp::Windows::Media::Playlists
             return 0;
         }
 
-        Py_CLEAR(state->type_PlaylistFormat);
         Py_CLEAR(state->type_Playlist);
 
         return 0;
@@ -317,7 +286,7 @@ namespace py::cpp::Windows::Media::Playlists
            "_winrt_Windows_Media_Playlists",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -360,29 +329,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Playlists(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Playlists::PlaylistFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Playlists;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Playlists");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlaylistFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Playlists::PlaylistFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::Playlists::Playlist>::get_python_type() noexcept {

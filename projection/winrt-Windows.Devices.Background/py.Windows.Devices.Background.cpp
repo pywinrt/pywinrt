@@ -265,9 +265,6 @@ namespace py::cpp::Windows::Devices::Background
     // ----- Windows.Devices.Background Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Background");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -305,7 +302,7 @@ namespace py::cpp::Windows::Devices::Background
            "_winrt_Windows_Devices_Background",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

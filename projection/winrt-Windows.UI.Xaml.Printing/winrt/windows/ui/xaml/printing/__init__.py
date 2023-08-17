@@ -25,8 +25,6 @@ class PreviewPageCountType(enum.IntEnum):
     FINAL = 0
     INTERMEDIATE = 1
 
-_ns_module._register_PreviewPageCountType(PreviewPageCountType)
-
 AddPagesEventArgs = _ns_module.AddPagesEventArgs
 GetPreviewPageEventArgs = _ns_module.GetPreviewPageEventArgs
 PaginateEventArgs = _ns_module.PaginateEventArgs

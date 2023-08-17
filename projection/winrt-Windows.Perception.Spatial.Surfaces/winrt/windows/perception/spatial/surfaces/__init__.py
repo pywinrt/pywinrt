@@ -34,7 +34,6 @@ try:
 except ImportError:
     pass
 
-
 SpatialSurfaceInfo = _ns_module.SpatialSurfaceInfo
 SpatialSurfaceMesh = _ns_module.SpatialSurfaceMesh
 SpatialSurfaceMeshBuffer = _ns_module.SpatialSurfaceMeshBuffer

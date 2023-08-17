@@ -477,67 +477,78 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::FocusInputDeviceKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "FocusInputDeviceKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::FocusNavigationDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "FocusNavigationDirection";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::InputScopeNameValue>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "InputScopeNameValue";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::KeyTipPlacementMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "KeyTipPlacementMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorPlacementMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "KeyboardAcceleratorPlacementMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::KeyboardNavigationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "KeyboardNavigationMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::ManipulationModes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationModes";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::StandardUICommandKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "StandardUICommandKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::XYFocusKeyboardNavigationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "XYFocusKeyboardNavigationMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::XYFocusNavigationStrategy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "XYFocusNavigationStrategy";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::XYFocusNavigationStrategyOverride>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "XYFocusNavigationStrategyOverride";
     };
 
     template<>

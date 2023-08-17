@@ -43,10 +43,6 @@ class LampArrayRepetitionMode(enum.IntEnum):
     OCCURRENCES = 0
     FOREVER = 1
 
-_ns_module._register_LampArrayEffectCompletionBehavior(LampArrayEffectCompletionBehavior)
-_ns_module._register_LampArrayEffectStartMode(LampArrayEffectStartMode)
-_ns_module._register_LampArrayRepetitionMode(LampArrayRepetitionMode)
-
 LampArrayBitmapEffect = _ns_module.LampArrayBitmapEffect
 LampArrayBitmapRequestedEventArgs = _ns_module.LampArrayBitmapRequestedEventArgs
 LampArrayBlinkEffect = _ns_module.LampArrayBlinkEffect

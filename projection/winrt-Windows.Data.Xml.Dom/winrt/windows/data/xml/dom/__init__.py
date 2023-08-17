@@ -41,8 +41,6 @@ class NodeType(enum.IntEnum):
     DOCUMENT_FRAGMENT_NODE = 11
     NOTATION_NODE = 12
 
-_ns_module._register_NodeType(NodeType)
-
 DtdEntity = _ns_module.DtdEntity
 DtdNotation = _ns_module.DtdNotation
 XmlAttribute = _ns_module.XmlAttribute

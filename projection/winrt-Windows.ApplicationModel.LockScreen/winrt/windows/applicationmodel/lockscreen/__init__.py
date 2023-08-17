@@ -19,7 +19,6 @@ try:
 except ImportError:
     pass
 
-
 LockApplicationHost = _ns_module.LockApplicationHost
 LockScreenBadge = _ns_module.LockScreenBadge
 LockScreenInfo = _ns_module.LockScreenInfo

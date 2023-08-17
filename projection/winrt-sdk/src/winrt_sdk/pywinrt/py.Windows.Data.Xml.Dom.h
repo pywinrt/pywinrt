@@ -67,7 +67,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Xml::Dom::NodeType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "NodeType";
     };
 
     template<>

@@ -71,19 +71,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::HttpCacheReadBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.filters";
+        static constexpr const char* type_name = "HttpCacheReadBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::HttpCacheWriteBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.filters";
+        static constexpr const char* type_name = "HttpCacheWriteBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::HttpCookieUsageBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.filters";
+        static constexpr const char* type_name = "HttpCookieUsageBehavior";
     };
 
     template<>

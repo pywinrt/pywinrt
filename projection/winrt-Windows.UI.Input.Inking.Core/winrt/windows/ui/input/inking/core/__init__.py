@@ -41,8 +41,6 @@ class CoreWetStrokeDisposition(enum.IntEnum):
     COMPLETED = 1
     CANCELED = 2
 
-_ns_module._register_CoreWetStrokeDisposition(CoreWetStrokeDisposition)
-
 CoreIncrementalInkStroke = _ns_module.CoreIncrementalInkStroke
 CoreInkIndependentInputSource = _ns_module.CoreInkIndependentInputSource
 CoreInkPresenterHost = _ns_module.CoreInkPresenterHost

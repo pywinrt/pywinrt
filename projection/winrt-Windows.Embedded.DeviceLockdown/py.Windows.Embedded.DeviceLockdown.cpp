@@ -268,9 +268,6 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
     // ----- Windows.Embedded.DeviceLockdown Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Embedded::DeviceLockdown");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -308,7 +305,7 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
            "_winrt_Windows_Embedded_DeviceLockdown",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

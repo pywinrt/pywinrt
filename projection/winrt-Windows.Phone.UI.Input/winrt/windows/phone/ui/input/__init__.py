@@ -9,7 +9,6 @@ try:
 except ImportError:
     pass
 
-
 BackPressedEventArgs = _ns_module.BackPressedEventArgs
 CameraEventArgs = _ns_module.CameraEventArgs
 HardwareButtons = _ns_module.HardwareButtons

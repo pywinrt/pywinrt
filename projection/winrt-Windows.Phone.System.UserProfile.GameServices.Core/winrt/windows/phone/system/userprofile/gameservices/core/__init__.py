@@ -26,8 +26,5 @@ class GameServiceScoreKind(enum.IntEnum):
     NUMBER = 0
     TIME = 1
 
-_ns_module._register_GameServiceGameOutcome(GameServiceGameOutcome)
-_ns_module._register_GameServiceScoreKind(GameServiceScoreKind)
-
 GameService = _ns_module.GameService
 GameServicePropertyCollection = _ns_module.GameServicePropertyCollection

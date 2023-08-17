@@ -8,13 +8,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
 {
     struct module_state
     {
-        PyObject* type_DataProtectionStatus;
-        PyObject* type_EnforcementLevel;
-        PyObject* type_FileProtectionStatus;
-        PyObject* type_ProtectedImportExportStatus;
-        PyObject* type_ProtectionPolicyAuditAction;
-        PyObject* type_ProtectionPolicyEvaluationResult;
-        PyObject* type_ProtectionPolicyRequestAccessBehavior;
         PyTypeObject* type_BufferProtectUnprotectResult;
         PyTypeObject* type_DataProtectionInfo;
         PyTypeObject* type_DataProtectionManager;
@@ -32,174 +25,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
         PyTypeObject* type_ProtectionPolicyManager;
         PyTypeObject* type_ThreadNetworkContext;
     };
-
-    static PyObject* register_DataProtectionStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DataProtectionStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DataProtectionStatus = type;
-        Py_INCREF(state->type_DataProtectionStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_EnforcementLevel(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_EnforcementLevel)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_EnforcementLevel = type;
-        Py_INCREF(state->type_EnforcementLevel);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_FileProtectionStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_FileProtectionStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_FileProtectionStatus = type;
-        Py_INCREF(state->type_FileProtectionStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ProtectedImportExportStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProtectedImportExportStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProtectedImportExportStatus = type;
-        Py_INCREF(state->type_ProtectedImportExportStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ProtectionPolicyAuditAction(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProtectionPolicyAuditAction)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProtectionPolicyAuditAction = type;
-        Py_INCREF(state->type_ProtectionPolicyAuditAction);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ProtectionPolicyEvaluationResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProtectionPolicyEvaluationResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProtectionPolicyEvaluationResult = type;
-        Py_INCREF(state->type_ProtectionPolicyEvaluationResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ProtectionPolicyRequestAccessBehavior(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProtectionPolicyRequestAccessBehavior)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProtectionPolicyRequestAccessBehavior = type;
-        Py_INCREF(state->type_ProtectionPolicyRequestAccessBehavior);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- BufferProtectUnprotectResult class --------------------
     static constexpr const char* const type_name_BufferProtectUnprotectResult = "BufferProtectUnprotectResult";
@@ -3965,16 +3790,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     // ----- Windows.Security.EnterpriseData Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::EnterpriseData");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_DataProtectionStatus", register_DataProtectionStatus, METH_O, "registers type"},
-        {"_register_EnforcementLevel", register_EnforcementLevel, METH_O, "registers type"},
-        {"_register_FileProtectionStatus", register_FileProtectionStatus, METH_O, "registers type"},
-        {"_register_ProtectedImportExportStatus", register_ProtectedImportExportStatus, METH_O, "registers type"},
-        {"_register_ProtectionPolicyAuditAction", register_ProtectionPolicyAuditAction, METH_O, "registers type"},
-        {"_register_ProtectionPolicyEvaluationResult", register_ProtectionPolicyEvaluationResult, METH_O, "registers type"},
-        {"_register_ProtectionPolicyRequestAccessBehavior", register_ProtectionPolicyRequestAccessBehavior, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3985,13 +3800,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
             return 0;
         }
 
-        Py_VISIT(state->type_DataProtectionStatus);
-        Py_VISIT(state->type_EnforcementLevel);
-        Py_VISIT(state->type_FileProtectionStatus);
-        Py_VISIT(state->type_ProtectedImportExportStatus);
-        Py_VISIT(state->type_ProtectionPolicyAuditAction);
-        Py_VISIT(state->type_ProtectionPolicyEvaluationResult);
-        Py_VISIT(state->type_ProtectionPolicyRequestAccessBehavior);
         Py_VISIT(state->type_BufferProtectUnprotectResult);
         Py_VISIT(state->type_DataProtectionInfo);
         Py_VISIT(state->type_DataProtectionManager);
@@ -4021,13 +3829,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
             return 0;
         }
 
-        Py_CLEAR(state->type_DataProtectionStatus);
-        Py_CLEAR(state->type_EnforcementLevel);
-        Py_CLEAR(state->type_FileProtectionStatus);
-        Py_CLEAR(state->type_ProtectedImportExportStatus);
-        Py_CLEAR(state->type_ProtectionPolicyAuditAction);
-        Py_CLEAR(state->type_ProtectionPolicyEvaluationResult);
-        Py_CLEAR(state->type_ProtectionPolicyRequestAccessBehavior);
         Py_CLEAR(state->type_BufferProtectUnprotectResult);
         Py_CLEAR(state->type_DataProtectionInfo);
         Py_CLEAR(state->type_DataProtectionManager);
@@ -4054,7 +3855,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
            "_winrt_Windows_Security_EnterpriseData",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4193,167 +3994,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_EnterpriseData(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Security::EnterpriseData::DataProtectionStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataProtectionStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::DataProtectionStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::EnterpriseData::EnforcementLevel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EnforcementLevel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::EnforcementLevel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::EnterpriseData::FileProtectionStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileProtectionStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::FileProtectionStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedImportExportStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectedImportExportStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectedImportExportStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectionPolicyAuditAction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectionPolicyEvaluationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectionPolicyRequestAccessBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>::get_python_type() noexcept {

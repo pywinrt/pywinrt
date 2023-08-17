@@ -43,8 +43,6 @@ class MidiMessageType(enum.IntEnum):
     ACTIVE_SENSING = 254
     SYSTEM_RESET = 255
 
-_ns_module._register_MidiMessageType(MidiMessageType)
-
 MidiActiveSensingMessage = _ns_module.MidiActiveSensingMessage
 MidiChannelPressureMessage = _ns_module.MidiChannelPressureMessage
 MidiContinueMessage = _ns_module.MidiContinueMessage

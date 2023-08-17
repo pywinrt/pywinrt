@@ -8,12 +8,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 {
     struct module_state
     {
-        PyObject* type_ClockState;
-        PyObject* type_ConnectedAnimationComponent;
-        PyObject* type_EasingMode;
-        PyObject* type_FillBehavior;
-        PyObject* type_RepeatBehaviorType;
-        PyObject* type_SlideNavigationTransitionEffect;
         PyTypeObject* type_AddDeleteThemeTransition;
         PyTypeObject* type_BackEase;
         PyTypeObject* type_BasicConnectedAnimationConfiguration;
@@ -104,150 +98,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         PyTypeObject* type_KeyTime;
         PyTypeObject* type_RepeatBehavior;
     };
-
-    static PyObject* register_ClockState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ClockState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ClockState = type;
-        Py_INCREF(state->type_ClockState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ConnectedAnimationComponent(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ConnectedAnimationComponent)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ConnectedAnimationComponent = type;
-        Py_INCREF(state->type_ConnectedAnimationComponent);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_EasingMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_EasingMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_EasingMode = type;
-        Py_INCREF(state->type_EasingMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_FillBehavior(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_FillBehavior)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_FillBehavior = type;
-        Py_INCREF(state->type_FillBehavior);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_RepeatBehaviorType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_RepeatBehaviorType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_RepeatBehaviorType = type;
-        Py_INCREF(state->type_RepeatBehaviorType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SlideNavigationTransitionEffect(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SlideNavigationTransitionEffect)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SlideNavigationTransitionEffect = type;
-        Py_INCREF(state->type_SlideNavigationTransitionEffect);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AddDeleteThemeTransition class --------------------
     static constexpr const char* const type_name_AddDeleteThemeTransition = "AddDeleteThemeTransition";
@@ -22875,15 +22725,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     // ----- Windows.UI.Xaml.Media.Animation Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Media::Animation");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ClockState", register_ClockState, METH_O, "registers type"},
-        {"_register_ConnectedAnimationComponent", register_ConnectedAnimationComponent, METH_O, "registers type"},
-        {"_register_EasingMode", register_EasingMode, METH_O, "registers type"},
-        {"_register_FillBehavior", register_FillBehavior, METH_O, "registers type"},
-        {"_register_RepeatBehaviorType", register_RepeatBehaviorType, METH_O, "registers type"},
-        {"_register_SlideNavigationTransitionEffect", register_SlideNavigationTransitionEffect, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -22894,12 +22735,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
             return 0;
         }
 
-        Py_VISIT(state->type_ClockState);
-        Py_VISIT(state->type_ConnectedAnimationComponent);
-        Py_VISIT(state->type_EasingMode);
-        Py_VISIT(state->type_FillBehavior);
-        Py_VISIT(state->type_RepeatBehaviorType);
-        Py_VISIT(state->type_SlideNavigationTransitionEffect);
         Py_VISIT(state->type_AddDeleteThemeTransition);
         Py_VISIT(state->type_BackEase);
         Py_VISIT(state->type_BasicConnectedAnimationConfiguration);
@@ -23002,12 +22837,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
             return 0;
         }
 
-        Py_CLEAR(state->type_ClockState);
-        Py_CLEAR(state->type_ConnectedAnimationComponent);
-        Py_CLEAR(state->type_EasingMode);
-        Py_CLEAR(state->type_FillBehavior);
-        Py_CLEAR(state->type_RepeatBehaviorType);
-        Py_CLEAR(state->type_SlideNavigationTransitionEffect);
         Py_CLEAR(state->type_AddDeleteThemeTransition);
         Py_CLEAR(state->type_BackEase);
         Py_CLEAR(state->type_BasicConnectedAnimationConfiguration);
@@ -23107,7 +22936,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
            "_winrt_Windows_UI_Xaml_Media_Animation",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -24002,144 +23831,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ClockState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClockState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ClockState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationComponent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectedAnimationComponent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationComponent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EasingMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::EasingMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Media::Animation::FillBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FillBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::FillBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RepeatBehaviorType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SlideNavigationTransitionEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition>::get_python_type() noexcept {

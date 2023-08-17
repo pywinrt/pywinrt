@@ -204,9 +204,6 @@ namespace py::cpp::Windows::Phone::Devices::Power
     // ----- Windows.Phone.Devices.Power Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Phone::Devices::Power");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -242,7 +239,7 @@ namespace py::cpp::Windows::Phone::Devices::Power
            "_winrt_Windows_Phone_Devices_Power",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

@@ -86,37 +86,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextFormatUpdatingReason";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextFormatUpdatingResult";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextInputPaneDisplayPolicy";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextInputScope>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextInputScope";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextSelectionUpdatingResult";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextTextUpdatingResult";
     };
 
     template<>

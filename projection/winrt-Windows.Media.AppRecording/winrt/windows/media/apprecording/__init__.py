@@ -25,8 +25,6 @@ class AppRecordingSaveScreenshotOption(enum.IntEnum):
     NONE = 0
     HDR_CONTENT_VISIBLE = 1
 
-_ns_module._register_AppRecordingSaveScreenshotOption(AppRecordingSaveScreenshotOption)
-
 AppRecordingManager = _ns_module.AppRecordingManager
 AppRecordingResult = _ns_module.AppRecordingResult
 AppRecordingSaveScreenshotResult = _ns_module.AppRecordingSaveScreenshotResult

@@ -8,12 +8,6 @@ namespace py::cpp::Windows::Devices::Gpio
 {
     struct module_state
     {
-        PyObject* type_GpioChangePolarity;
-        PyObject* type_GpioOpenStatus;
-        PyObject* type_GpioPinDriveMode;
-        PyObject* type_GpioPinEdge;
-        PyObject* type_GpioPinValue;
-        PyObject* type_GpioSharingMode;
         PyTypeObject* type_GpioChangeCounter;
         PyTypeObject* type_GpioChangeReader;
         PyTypeObject* type_GpioController;
@@ -22,150 +16,6 @@ namespace py::cpp::Windows::Devices::Gpio
         PyTypeObject* type_GpioChangeCount;
         PyTypeObject* type_GpioChangeRecord;
     };
-
-    static PyObject* register_GpioChangePolarity(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GpioChangePolarity)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GpioChangePolarity = type;
-        Py_INCREF(state->type_GpioChangePolarity);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GpioOpenStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GpioOpenStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GpioOpenStatus = type;
-        Py_INCREF(state->type_GpioOpenStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GpioPinDriveMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GpioPinDriveMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GpioPinDriveMode = type;
-        Py_INCREF(state->type_GpioPinDriveMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GpioPinEdge(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GpioPinEdge)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GpioPinEdge = type;
-        Py_INCREF(state->type_GpioPinEdge);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GpioPinValue(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GpioPinValue)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GpioPinValue = type;
-        Py_INCREF(state->type_GpioPinValue);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GpioSharingMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GpioSharingMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GpioSharingMode = type;
-        Py_INCREF(state->type_GpioSharingMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- GpioChangeCounter class --------------------
     static constexpr const char* const type_name_GpioChangeCounter = "GpioChangeCounter";
@@ -2121,15 +1971,6 @@ namespace py::cpp::Windows::Devices::Gpio
     // ----- Windows.Devices.Gpio Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Gpio");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_GpioChangePolarity", register_GpioChangePolarity, METH_O, "registers type"},
-        {"_register_GpioOpenStatus", register_GpioOpenStatus, METH_O, "registers type"},
-        {"_register_GpioPinDriveMode", register_GpioPinDriveMode, METH_O, "registers type"},
-        {"_register_GpioPinEdge", register_GpioPinEdge, METH_O, "registers type"},
-        {"_register_GpioPinValue", register_GpioPinValue, METH_O, "registers type"},
-        {"_register_GpioSharingMode", register_GpioSharingMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2140,12 +1981,6 @@ namespace py::cpp::Windows::Devices::Gpio
             return 0;
         }
 
-        Py_VISIT(state->type_GpioChangePolarity);
-        Py_VISIT(state->type_GpioOpenStatus);
-        Py_VISIT(state->type_GpioPinDriveMode);
-        Py_VISIT(state->type_GpioPinEdge);
-        Py_VISIT(state->type_GpioPinValue);
-        Py_VISIT(state->type_GpioSharingMode);
         Py_VISIT(state->type_GpioChangeCounter);
         Py_VISIT(state->type_GpioChangeReader);
         Py_VISIT(state->type_GpioController);
@@ -2166,12 +2001,6 @@ namespace py::cpp::Windows::Devices::Gpio
             return 0;
         }
 
-        Py_CLEAR(state->type_GpioChangePolarity);
-        Py_CLEAR(state->type_GpioOpenStatus);
-        Py_CLEAR(state->type_GpioPinDriveMode);
-        Py_CLEAR(state->type_GpioPinEdge);
-        Py_CLEAR(state->type_GpioPinValue);
-        Py_CLEAR(state->type_GpioSharingMode);
         Py_CLEAR(state->type_GpioChangeCounter);
         Py_CLEAR(state->type_GpioChangeReader);
         Py_CLEAR(state->type_GpioController);
@@ -2189,7 +2018,7 @@ namespace py::cpp::Windows::Devices::Gpio
            "_winrt_Windows_Devices_Gpio",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2268,144 +2097,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Gpio(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Gpio::GpioChangePolarity>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioChangePolarity;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioChangePolarity is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Gpio::GpioOpenStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioOpenStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioOpenStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Gpio::GpioPinDriveMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioPinDriveMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioPinDriveMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Gpio::GpioPinEdge>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioPinEdge;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioPinEdge is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Gpio::GpioPinValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioPinValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioPinValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Gpio::GpioSharingMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioSharingMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioSharingMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::GpioChangeCounter>::get_python_type() noexcept {

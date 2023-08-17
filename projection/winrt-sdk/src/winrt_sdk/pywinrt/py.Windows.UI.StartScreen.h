@@ -85,37 +85,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::ForegroundText>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "ForegroundText";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::JumpListItemKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "JumpListItemKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::JumpListSystemGroupKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "JumpListSystemGroupKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::TileMixedRealityModelActivationBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "TileMixedRealityModelActivationBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::TileOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "TileOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::TileSize>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "TileSize";
     };
 
     template<>

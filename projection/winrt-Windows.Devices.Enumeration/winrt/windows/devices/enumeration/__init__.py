@@ -138,18 +138,6 @@ class Panel(enum.IntEnum):
     LEFT = 5
     RIGHT = 6
 
-_ns_module._register_DeviceAccessStatus(DeviceAccessStatus)
-_ns_module._register_DeviceClass(DeviceClass)
-_ns_module._register_DeviceInformationKind(DeviceInformationKind)
-_ns_module._register_DevicePairingKinds(DevicePairingKinds)
-_ns_module._register_DevicePairingProtectionLevel(DevicePairingProtectionLevel)
-_ns_module._register_DevicePairingResultStatus(DevicePairingResultStatus)
-_ns_module._register_DevicePickerDisplayStatusOptions(DevicePickerDisplayStatusOptions)
-_ns_module._register_DeviceUnpairingResultStatus(DeviceUnpairingResultStatus)
-_ns_module._register_DeviceWatcherEventKind(DeviceWatcherEventKind)
-_ns_module._register_DeviceWatcherStatus(DeviceWatcherStatus)
-_ns_module._register_Panel(Panel)
-
 DeviceAccessChangedEventArgs = _ns_module.DeviceAccessChangedEventArgs
 DeviceAccessInformation = _ns_module.DeviceAccessInformation
 DeviceConnectionChangeTriggerDetails = _ns_module.DeviceConnectionChangeTriggerDetails

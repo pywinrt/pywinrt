@@ -8,87 +8,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 {
     struct module_state
     {
-        PyObject* type_ProviderI2cBusSpeed;
-        PyObject* type_ProviderI2cSharingMode;
-        PyObject* type_ProviderI2cTransferStatus;
         PyTypeObject* type_ProviderI2cConnectionSettings;
         PyTypeObject* type_II2cControllerProvider;
         PyTypeObject* type_II2cDeviceProvider;
         PyTypeObject* type_II2cProvider;
         PyTypeObject* type_ProviderI2cTransferResult;
     };
-
-    static PyObject* register_ProviderI2cBusSpeed(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProviderI2cBusSpeed)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProviderI2cBusSpeed = type;
-        Py_INCREF(state->type_ProviderI2cBusSpeed);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ProviderI2cSharingMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProviderI2cSharingMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProviderI2cSharingMode = type;
-        Py_INCREF(state->type_ProviderI2cSharingMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ProviderI2cTransferStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProviderI2cTransferStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProviderI2cTransferStatus = type;
-        Py_INCREF(state->type_ProviderI2cTransferStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ProviderI2cConnectionSettings class --------------------
     static constexpr const char* const type_name_ProviderI2cConnectionSettings = "ProviderI2cConnectionSettings";
@@ -1004,12 +929,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     // ----- Windows.Devices.I2c.Provider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::I2c::Provider");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ProviderI2cBusSpeed", register_ProviderI2cBusSpeed, METH_O, "registers type"},
-        {"_register_ProviderI2cSharingMode", register_ProviderI2cSharingMode, METH_O, "registers type"},
-        {"_register_ProviderI2cTransferStatus", register_ProviderI2cTransferStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1020,9 +939,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
             return 0;
         }
 
-        Py_VISIT(state->type_ProviderI2cBusSpeed);
-        Py_VISIT(state->type_ProviderI2cSharingMode);
-        Py_VISIT(state->type_ProviderI2cTransferStatus);
         Py_VISIT(state->type_ProviderI2cConnectionSettings);
         Py_VISIT(state->type_II2cControllerProvider);
         Py_VISIT(state->type_II2cDeviceProvider);
@@ -1041,9 +957,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
             return 0;
         }
 
-        Py_CLEAR(state->type_ProviderI2cBusSpeed);
-        Py_CLEAR(state->type_ProviderI2cSharingMode);
-        Py_CLEAR(state->type_ProviderI2cTransferStatus);
         Py_CLEAR(state->type_ProviderI2cConnectionSettings);
         Py_CLEAR(state->type_II2cControllerProvider);
         Py_CLEAR(state->type_II2cDeviceProvider);
@@ -1059,7 +972,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
            "_winrt_Windows_Devices_I2c_Provider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1126,75 +1039,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_I2c_Provider(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cBusSpeed>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::I2c::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::I2c::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProviderI2cBusSpeed;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::I2c::Provider::ProviderI2cBusSpeed is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cSharingMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::I2c::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::I2c::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProviderI2cSharingMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::I2c::Provider::ProviderI2cSharingMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::I2c::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::I2c::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProviderI2cTransferStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings>::get_python_type() noexcept {

@@ -8,87 +8,12 @@ namespace py::cpp::Windows::Web::UI::Interop
 {
     struct module_state
     {
-        PyObject* type_WebViewControlAcceleratorKeyRoutingStage;
-        PyObject* type_WebViewControlMoveFocusReason;
-        PyObject* type_WebViewControlProcessCapabilityState;
         PyTypeObject* type_WebViewControl;
         PyTypeObject* type_WebViewControlAcceleratorKeyPressedEventArgs;
         PyTypeObject* type_WebViewControlMoveFocusRequestedEventArgs;
         PyTypeObject* type_WebViewControlProcess;
         PyTypeObject* type_WebViewControlProcessOptions;
     };
-
-    static PyObject* register_WebViewControlAcceleratorKeyRoutingStage(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebViewControlAcceleratorKeyRoutingStage)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebViewControlAcceleratorKeyRoutingStage = type;
-        Py_INCREF(state->type_WebViewControlAcceleratorKeyRoutingStage);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WebViewControlMoveFocusReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebViewControlMoveFocusReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebViewControlMoveFocusReason = type;
-        Py_INCREF(state->type_WebViewControlMoveFocusReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WebViewControlProcessCapabilityState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebViewControlProcessCapabilityState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebViewControlProcessCapabilityState = type;
-        Py_INCREF(state->type_WebViewControlProcessCapabilityState);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- WebViewControl class --------------------
     static constexpr const char* const type_name_WebViewControl = "WebViewControl";
@@ -2819,12 +2744,6 @@ namespace py::cpp::Windows::Web::UI::Interop
     // ----- Windows.Web.UI.Interop Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Web::UI::Interop");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_WebViewControlAcceleratorKeyRoutingStage", register_WebViewControlAcceleratorKeyRoutingStage, METH_O, "registers type"},
-        {"_register_WebViewControlMoveFocusReason", register_WebViewControlMoveFocusReason, METH_O, "registers type"},
-        {"_register_WebViewControlProcessCapabilityState", register_WebViewControlProcessCapabilityState, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2835,9 +2754,6 @@ namespace py::cpp::Windows::Web::UI::Interop
             return 0;
         }
 
-        Py_VISIT(state->type_WebViewControlAcceleratorKeyRoutingStage);
-        Py_VISIT(state->type_WebViewControlMoveFocusReason);
-        Py_VISIT(state->type_WebViewControlProcessCapabilityState);
         Py_VISIT(state->type_WebViewControl);
         Py_VISIT(state->type_WebViewControlAcceleratorKeyPressedEventArgs);
         Py_VISIT(state->type_WebViewControlMoveFocusRequestedEventArgs);
@@ -2856,9 +2772,6 @@ namespace py::cpp::Windows::Web::UI::Interop
             return 0;
         }
 
-        Py_CLEAR(state->type_WebViewControlAcceleratorKeyRoutingStage);
-        Py_CLEAR(state->type_WebViewControlMoveFocusReason);
-        Py_CLEAR(state->type_WebViewControlProcessCapabilityState);
         Py_CLEAR(state->type_WebViewControl);
         Py_CLEAR(state->type_WebViewControlAcceleratorKeyPressedEventArgs);
         Py_CLEAR(state->type_WebViewControlMoveFocusRequestedEventArgs);
@@ -2874,7 +2787,7 @@ namespace py::cpp::Windows::Web::UI::Interop
            "_winrt_Windows_Web_UI_Interop",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2941,75 +2854,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_UI_Interop(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyRoutingStage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlAcceleratorKeyRoutingStage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyRoutingStage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlMoveFocusReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::UI::Interop::WebViewControlProcessCapabilityState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlProcessCapabilityState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::Interop::WebViewControlProcessCapabilityState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::Interop::WebViewControl>::get_python_type() noexcept {

@@ -8,13 +8,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 {
     struct module_state
     {
-        PyObject* type_InteractionBindingAxisModes;
-        PyObject* type_InteractionChainingMode;
-        PyObject* type_InteractionSourceMode;
-        PyObject* type_InteractionSourceRedirectionMode;
-        PyObject* type_InteractionTrackerClampingOption;
-        PyObject* type_InteractionTrackerPositionUpdateOption;
-        PyObject* type_VisualInteractionSourceRedirectionMode;
         PyTypeObject* type_CompositionConditionalValue;
         PyTypeObject* type_CompositionInteractionSourceCollection;
         PyTypeObject* type_InteractionSourceConfiguration;
@@ -35,174 +28,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         PyTypeObject* type_ICompositionInteractionSource;
         PyTypeObject* type_IInteractionTrackerOwner;
     };
-
-    static PyObject* register_InteractionBindingAxisModes(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InteractionBindingAxisModes)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InteractionBindingAxisModes = type;
-        Py_INCREF(state->type_InteractionBindingAxisModes);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_InteractionChainingMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InteractionChainingMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InteractionChainingMode = type;
-        Py_INCREF(state->type_InteractionChainingMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_InteractionSourceMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InteractionSourceMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InteractionSourceMode = type;
-        Py_INCREF(state->type_InteractionSourceMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_InteractionSourceRedirectionMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InteractionSourceRedirectionMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InteractionSourceRedirectionMode = type;
-        Py_INCREF(state->type_InteractionSourceRedirectionMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_InteractionTrackerClampingOption(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InteractionTrackerClampingOption)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InteractionTrackerClampingOption = type;
-        Py_INCREF(state->type_InteractionTrackerClampingOption);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_InteractionTrackerPositionUpdateOption(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InteractionTrackerPositionUpdateOption)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InteractionTrackerPositionUpdateOption = type;
-        Py_INCREF(state->type_InteractionTrackerPositionUpdateOption);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_VisualInteractionSourceRedirectionMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_VisualInteractionSourceRedirectionMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_VisualInteractionSourceRedirectionMode = type;
-        Py_INCREF(state->type_VisualInteractionSourceRedirectionMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CompositionConditionalValue class --------------------
     static constexpr const char* const type_name_CompositionConditionalValue = "CompositionConditionalValue";
@@ -5193,16 +5018,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     // ----- Windows.UI.Composition.Interactions Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Composition::Interactions");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_InteractionBindingAxisModes", register_InteractionBindingAxisModes, METH_O, "registers type"},
-        {"_register_InteractionChainingMode", register_InteractionChainingMode, METH_O, "registers type"},
-        {"_register_InteractionSourceMode", register_InteractionSourceMode, METH_O, "registers type"},
-        {"_register_InteractionSourceRedirectionMode", register_InteractionSourceRedirectionMode, METH_O, "registers type"},
-        {"_register_InteractionTrackerClampingOption", register_InteractionTrackerClampingOption, METH_O, "registers type"},
-        {"_register_InteractionTrackerPositionUpdateOption", register_InteractionTrackerPositionUpdateOption, METH_O, "registers type"},
-        {"_register_VisualInteractionSourceRedirectionMode", register_VisualInteractionSourceRedirectionMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -5213,13 +5028,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
             return 0;
         }
 
-        Py_VISIT(state->type_InteractionBindingAxisModes);
-        Py_VISIT(state->type_InteractionChainingMode);
-        Py_VISIT(state->type_InteractionSourceMode);
-        Py_VISIT(state->type_InteractionSourceRedirectionMode);
-        Py_VISIT(state->type_InteractionTrackerClampingOption);
-        Py_VISIT(state->type_InteractionTrackerPositionUpdateOption);
-        Py_VISIT(state->type_VisualInteractionSourceRedirectionMode);
         Py_VISIT(state->type_CompositionConditionalValue);
         Py_VISIT(state->type_CompositionInteractionSourceCollection);
         Py_VISIT(state->type_InteractionSourceConfiguration);
@@ -5252,13 +5060,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
             return 0;
         }
 
-        Py_CLEAR(state->type_InteractionBindingAxisModes);
-        Py_CLEAR(state->type_InteractionChainingMode);
-        Py_CLEAR(state->type_InteractionSourceMode);
-        Py_CLEAR(state->type_InteractionSourceRedirectionMode);
-        Py_CLEAR(state->type_InteractionTrackerClampingOption);
-        Py_CLEAR(state->type_InteractionTrackerPositionUpdateOption);
-        Py_CLEAR(state->type_VisualInteractionSourceRedirectionMode);
         Py_CLEAR(state->type_CompositionConditionalValue);
         Py_CLEAR(state->type_CompositionInteractionSourceCollection);
         Py_CLEAR(state->type_InteractionSourceConfiguration);
@@ -5288,7 +5089,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
            "_winrt_Windows_UI_Composition_Interactions",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -5439,167 +5240,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition_Interactions(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionBindingAxisModes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionBindingAxisModes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionBindingAxisModes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionChainingMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionChainingMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionChainingMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionSourceMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionSourceMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionSourceMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionSourceRedirectionMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerClampingOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerClampingOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerClampingOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerPositionUpdateOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerPositionUpdateOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerPositionUpdateOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualInteractionSourceRedirectionMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue>::get_python_type() noexcept {

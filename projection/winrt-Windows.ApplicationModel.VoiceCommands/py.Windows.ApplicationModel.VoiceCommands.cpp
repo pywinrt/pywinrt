@@ -8,8 +8,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 {
     struct module_state
     {
-        PyObject* type_VoiceCommandCompletionReason;
-        PyObject* type_VoiceCommandContentTileType;
         PyTypeObject* type_VoiceCommand;
         PyTypeObject* type_VoiceCommandCompletedEventArgs;
         PyTypeObject* type_VoiceCommandConfirmationResult;
@@ -21,54 +19,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         PyTypeObject* type_VoiceCommandServiceConnection;
         PyTypeObject* type_VoiceCommandUserMessage;
     };
-
-    static PyObject* register_VoiceCommandCompletionReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_VoiceCommandCompletionReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_VoiceCommandCompletionReason = type;
-        Py_INCREF(state->type_VoiceCommandCompletionReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_VoiceCommandContentTileType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_VoiceCommandContentTileType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_VoiceCommandContentTileType = type;
-        Py_INCREF(state->type_VoiceCommandContentTileType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- VoiceCommand class --------------------
     static constexpr const char* const type_name_VoiceCommand = "VoiceCommand";
@@ -2204,11 +2154,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     // ----- Windows.ApplicationModel.VoiceCommands Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::VoiceCommands");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_VoiceCommandCompletionReason", register_VoiceCommandCompletionReason, METH_O, "registers type"},
-        {"_register_VoiceCommandContentTileType", register_VoiceCommandContentTileType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2219,8 +2164,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
             return 0;
         }
 
-        Py_VISIT(state->type_VoiceCommandCompletionReason);
-        Py_VISIT(state->type_VoiceCommandContentTileType);
         Py_VISIT(state->type_VoiceCommand);
         Py_VISIT(state->type_VoiceCommandCompletedEventArgs);
         Py_VISIT(state->type_VoiceCommandConfirmationResult);
@@ -2244,8 +2187,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
             return 0;
         }
 
-        Py_CLEAR(state->type_VoiceCommandCompletionReason);
-        Py_CLEAR(state->type_VoiceCommandContentTileType);
         Py_CLEAR(state->type_VoiceCommand);
         Py_CLEAR(state->type_VoiceCommandCompletedEventArgs);
         Py_CLEAR(state->type_VoiceCommandConfirmationResult);
@@ -2266,7 +2207,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
            "_winrt_Windows_ApplicationModel_VoiceCommands",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2375,52 +2316,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_VoiceCommands(void) noexce
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandCompletionReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandContentTileType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>::get_python_type() noexcept {

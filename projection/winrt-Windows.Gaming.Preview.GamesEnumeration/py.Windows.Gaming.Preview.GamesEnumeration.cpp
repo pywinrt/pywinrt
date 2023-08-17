@@ -8,62 +8,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 {
     struct module_state
     {
-        PyObject* type_GameListCategory;
-        PyObject* type_GameListEntryLaunchableState;
         PyTypeObject* type_GameList;
         PyTypeObject* type_GameListEntry;
         PyTypeObject* type_GameModeConfiguration;
         PyTypeObject* type_GameModeUserConfiguration;
         PyTypeObject* type_IGameListEntry;
     };
-
-    static PyObject* register_GameListCategory(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GameListCategory)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GameListCategory = type;
-        Py_INCREF(state->type_GameListCategory);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GameListEntryLaunchableState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GameListEntryLaunchableState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GameListEntryLaunchableState = type;
-        Py_INCREF(state->type_GameListEntryLaunchableState);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- GameList class --------------------
     static constexpr const char* const type_name_GameList = "GameList";
@@ -1595,11 +1545,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     // ----- Windows.Gaming.Preview.GamesEnumeration Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Gaming::Preview::GamesEnumeration");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_GameListCategory", register_GameListCategory, METH_O, "registers type"},
-        {"_register_GameListEntryLaunchableState", register_GameListEntryLaunchableState, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1610,8 +1555,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
             return 0;
         }
 
-        Py_VISIT(state->type_GameListCategory);
-        Py_VISIT(state->type_GameListEntryLaunchableState);
         Py_VISIT(state->type_GameList);
         Py_VISIT(state->type_GameListEntry);
         Py_VISIT(state->type_GameModeConfiguration);
@@ -1630,8 +1573,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
             return 0;
         }
 
-        Py_CLEAR(state->type_GameListCategory);
-        Py_CLEAR(state->type_GameListEntryLaunchableState);
         Py_CLEAR(state->type_GameList);
         Py_CLEAR(state->type_GameListEntry);
         Py_CLEAR(state->type_GameModeConfiguration);
@@ -1647,7 +1588,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
            "_winrt_Windows_Gaming_Preview_GamesEnumeration",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1714,52 +1655,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Preview_GamesEnumeration(void) noexc
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Preview::GamesEnumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameListCategory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntryLaunchableState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Preview::GamesEnumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameListEntryLaunchableState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntryLaunchableState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameList>::get_python_type() noexcept {

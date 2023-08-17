@@ -39,7 +39,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
+        static constexpr const char* type_name = "IndexedResourceType";
     };
 
     template<>

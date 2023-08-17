@@ -62,12 +62,6 @@ class BluetoothLEScanningMode(enum.IntEnum):
     ACTIVE = 1
     NONE = 2
 
-_ns_module._register_BluetoothLEAdvertisementFlags(BluetoothLEAdvertisementFlags)
-_ns_module._register_BluetoothLEAdvertisementPublisherStatus(BluetoothLEAdvertisementPublisherStatus)
-_ns_module._register_BluetoothLEAdvertisementType(BluetoothLEAdvertisementType)
-_ns_module._register_BluetoothLEAdvertisementWatcherStatus(BluetoothLEAdvertisementWatcherStatus)
-_ns_module._register_BluetoothLEScanningMode(BluetoothLEScanningMode)
-
 BluetoothLEAdvertisement = _ns_module.BluetoothLEAdvertisement
 BluetoothLEAdvertisementBytePattern = _ns_module.BluetoothLEAdvertisementBytePattern
 BluetoothLEAdvertisementDataSection = _ns_module.BluetoothLEAdvertisementDataSection

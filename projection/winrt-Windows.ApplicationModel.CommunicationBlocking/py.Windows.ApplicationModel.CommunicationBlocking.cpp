@@ -382,9 +382,6 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
     // ----- Windows.ApplicationModel.CommunicationBlocking Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::CommunicationBlocking");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -422,7 +419,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
            "_winrt_Windows_ApplicationModel_CommunicationBlocking",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

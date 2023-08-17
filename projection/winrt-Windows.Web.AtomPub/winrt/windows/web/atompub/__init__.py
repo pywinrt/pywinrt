@@ -34,7 +34,6 @@ try:
 except ImportError:
     pass
 
-
 AtomPubClient = _ns_module.AtomPubClient
 ResourceCollection = _ns_module.ResourceCollection
 ServiceDocument = _ns_module.ServiceDocument

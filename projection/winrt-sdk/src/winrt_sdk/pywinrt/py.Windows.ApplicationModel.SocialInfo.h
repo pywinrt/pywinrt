@@ -61,25 +61,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItemStyle>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
+        static constexpr const char* type_name = "SocialFeedItemStyle";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
+        static constexpr const char* type_name = "SocialFeedKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
+        static constexpr const char* type_name = "SocialFeedUpdateMode";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialItemBadgeStyle>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
+        static constexpr const char* type_name = "SocialItemBadgeStyle";
     };
 
     template<>

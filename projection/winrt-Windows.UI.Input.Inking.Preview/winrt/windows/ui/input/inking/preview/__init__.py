@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 PalmRejectionDelayZonePreview = _ns_module.PalmRejectionDelayZonePreview

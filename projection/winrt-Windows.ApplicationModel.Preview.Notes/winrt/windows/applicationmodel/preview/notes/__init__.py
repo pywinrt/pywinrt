@@ -19,7 +19,6 @@ try:
 except ImportError:
     pass
 
-
 NotePlacementChangedPreviewEventArgs = _ns_module.NotePlacementChangedPreviewEventArgs
 NoteVisibilityChangedPreviewEventArgs = _ns_module.NoteVisibilityChangedPreviewEventArgs
 NotesWindowManagerPreview = _ns_module.NotesWindowManagerPreview

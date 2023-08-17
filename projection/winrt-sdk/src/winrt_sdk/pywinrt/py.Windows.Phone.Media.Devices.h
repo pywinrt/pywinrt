@@ -35,13 +35,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Media::Devices::AudioRoutingEndpoint>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.media.devices";
+        static constexpr const char* type_name = "AudioRoutingEndpoint";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Media::Devices::AvailableAudioRoutingEndpoints>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.media.devices";
+        static constexpr const char* type_name = "AvailableAudioRoutingEndpoints";
     };
 
     template<>

@@ -58,13 +58,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Cortana::CortanaPermission>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.cortana";
+        static constexpr const char* type_name = "CortanaPermission";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Cortana::CortanaPermissionsChangeResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.cortana";
+        static constexpr const char* type_name = "CortanaPermissionsChangeResult";
     };
 
     template<>

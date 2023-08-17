@@ -55,11 +55,5 @@ class DeviceAccountSyncScheduleKind(enum.IntEnum):
     DAILY = 5
     AS_ITEMS_ARRIVE = 6
 
-_ns_module._register_DeviceAccountAuthenticationType(DeviceAccountAuthenticationType)
-_ns_module._register_DeviceAccountIconId(DeviceAccountIconId)
-_ns_module._register_DeviceAccountMailAgeFilter(DeviceAccountMailAgeFilter)
-_ns_module._register_DeviceAccountServerType(DeviceAccountServerType)
-_ns_module._register_DeviceAccountSyncScheduleKind(DeviceAccountSyncScheduleKind)
-
 DeviceAccountConfiguration = _ns_module.DeviceAccountConfiguration
 UserDataAccountSystemAccessManager = _ns_module.UserDataAccountSystemAccessManager

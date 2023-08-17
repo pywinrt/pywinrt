@@ -84,15 +84,6 @@ class Printing3DTextureEdgeBehavior(enum.IntEnum):
     MIRROR = 2
     CLAMP = 3
 
-_ns_module._register_Print3DTaskCompletion(Print3DTaskCompletion)
-_ns_module._register_Print3DTaskDetail(Print3DTaskDetail)
-_ns_module._register_Printing3DBufferFormat(Printing3DBufferFormat)
-_ns_module._register_Printing3DMeshVerificationMode(Printing3DMeshVerificationMode)
-_ns_module._register_Printing3DModelUnit(Printing3DModelUnit)
-_ns_module._register_Printing3DObjectType(Printing3DObjectType)
-_ns_module._register_Printing3DPackageCompression(Printing3DPackageCompression)
-_ns_module._register_Printing3DTextureEdgeBehavior(Printing3DTextureEdgeBehavior)
-
 Printing3DBufferDescription = _ns_module.Printing3DBufferDescription
 Print3DManager = _ns_module.Print3DManager
 Print3DTask = _ns_module.Print3DTask

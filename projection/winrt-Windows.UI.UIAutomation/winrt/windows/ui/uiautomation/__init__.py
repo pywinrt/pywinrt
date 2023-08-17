@@ -4,7 +4,6 @@ import winrt.system
 
 _ns_module = winrt.system._import_ns_module("Windows.UI.UIAutomation")
 
-
 AutomationConnection = _ns_module.AutomationConnection
 AutomationConnectionBoundObject = _ns_module.AutomationConnectionBoundObject
 AutomationElement = _ns_module.AutomationElement

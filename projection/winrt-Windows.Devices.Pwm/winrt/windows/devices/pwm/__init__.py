@@ -25,7 +25,5 @@ class PwmPulsePolarity(enum.IntEnum):
     ACTIVE_HIGH = 0
     ACTIVE_LOW = 1
 
-_ns_module._register_PwmPulsePolarity(PwmPulsePolarity)
-
 PwmController = _ns_module.PwmController
 PwmPin = _ns_module.PwmPin

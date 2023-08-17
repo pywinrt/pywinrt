@@ -8,14 +8,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 {
     struct module_state
     {
-        PyObject* type_CertificateChainPolicy;
-        PyObject* type_ChainValidationResult;
-        PyObject* type_EnrollKeyUsages;
-        PyObject* type_ExportOption;
-        PyObject* type_InstallOptions;
-        PyObject* type_KeyProtectionLevel;
-        PyObject* type_KeySize;
-        PyObject* type_SignatureValidationResult;
         PyTypeObject* type_Certificate;
         PyTypeObject* type_CertificateChain;
         PyTypeObject* type_CertificateEnrollmentManager;
@@ -40,198 +32,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         PyTypeObject* type_UserCertificateEnrollmentManager;
         PyTypeObject* type_UserCertificateStore;
     };
-
-    static PyObject* register_CertificateChainPolicy(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CertificateChainPolicy)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CertificateChainPolicy = type;
-        Py_INCREF(state->type_CertificateChainPolicy);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ChainValidationResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ChainValidationResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ChainValidationResult = type;
-        Py_INCREF(state->type_ChainValidationResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_EnrollKeyUsages(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_EnrollKeyUsages)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_EnrollKeyUsages = type;
-        Py_INCREF(state->type_EnrollKeyUsages);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ExportOption(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ExportOption)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ExportOption = type;
-        Py_INCREF(state->type_ExportOption);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_InstallOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InstallOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InstallOptions = type;
-        Py_INCREF(state->type_InstallOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_KeyProtectionLevel(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_KeyProtectionLevel)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_KeyProtectionLevel = type;
-        Py_INCREF(state->type_KeyProtectionLevel);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_KeySize(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_KeySize)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_KeySize = type;
-        Py_INCREF(state->type_KeySize);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SignatureValidationResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SignatureValidationResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SignatureValidationResult = type;
-        Py_INCREF(state->type_SignatureValidationResult);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Certificate class --------------------
     static constexpr const char* const type_name_Certificate = "Certificate";
@@ -6940,17 +6740,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     // ----- Windows.Security.Cryptography.Certificates Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::Cryptography::Certificates");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_CertificateChainPolicy", register_CertificateChainPolicy, METH_O, "registers type"},
-        {"_register_ChainValidationResult", register_ChainValidationResult, METH_O, "registers type"},
-        {"_register_EnrollKeyUsages", register_EnrollKeyUsages, METH_O, "registers type"},
-        {"_register_ExportOption", register_ExportOption, METH_O, "registers type"},
-        {"_register_InstallOptions", register_InstallOptions, METH_O, "registers type"},
-        {"_register_KeyProtectionLevel", register_KeyProtectionLevel, METH_O, "registers type"},
-        {"_register_KeySize", register_KeySize, METH_O, "registers type"},
-        {"_register_SignatureValidationResult", register_SignatureValidationResult, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -6961,14 +6750,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return 0;
         }
 
-        Py_VISIT(state->type_CertificateChainPolicy);
-        Py_VISIT(state->type_ChainValidationResult);
-        Py_VISIT(state->type_EnrollKeyUsages);
-        Py_VISIT(state->type_ExportOption);
-        Py_VISIT(state->type_InstallOptions);
-        Py_VISIT(state->type_KeyProtectionLevel);
-        Py_VISIT(state->type_KeySize);
-        Py_VISIT(state->type_SignatureValidationResult);
         Py_VISIT(state->type_Certificate);
         Py_VISIT(state->type_CertificateChain);
         Py_VISIT(state->type_CertificateEnrollmentManager);
@@ -7005,14 +6786,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return 0;
         }
 
-        Py_CLEAR(state->type_CertificateChainPolicy);
-        Py_CLEAR(state->type_ChainValidationResult);
-        Py_CLEAR(state->type_EnrollKeyUsages);
-        Py_CLEAR(state->type_ExportOption);
-        Py_CLEAR(state->type_InstallOptions);
-        Py_CLEAR(state->type_KeyProtectionLevel);
-        Py_CLEAR(state->type_KeySize);
-        Py_CLEAR(state->type_SignatureValidationResult);
         Py_CLEAR(state->type_Certificate);
         Py_CLEAR(state->type_CertificateChain);
         Py_CLEAR(state->type_CertificateEnrollmentManager);
@@ -7046,7 +6819,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
            "_winrt_Windows_Security_Cryptography_Certificates",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -7251,190 +7024,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Certificates(void) no
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateChainPolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CertificateChainPolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CertificateChainPolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Certificates::ChainValidationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChainValidationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::ChainValidationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Certificates::EnrollKeyUsages>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EnrollKeyUsages;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::EnrollKeyUsages is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Certificates::ExportOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExportOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::ExportOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InstallOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::InstallOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Certificates::KeyProtectionLevel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyProtectionLevel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::KeyProtectionLevel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Certificates::KeySize>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeySize;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::KeySize is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Certificates::SignatureValidationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SignatureValidationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::SignatureValidationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::Certificate>::get_python_type() noexcept {

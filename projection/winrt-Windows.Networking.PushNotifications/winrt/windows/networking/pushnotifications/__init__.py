@@ -38,8 +38,6 @@ class PushNotificationType(enum.IntEnum):
     RAW = 3
     TILE_FLYOUT = 4
 
-_ns_module._register_PushNotificationType(PushNotificationType)
-
 PushNotificationChannel = _ns_module.PushNotificationChannel
 PushNotificationChannelManager = _ns_module.PushNotificationChannelManager
 PushNotificationChannelManagerForUser = _ns_module.PushNotificationChannelManagerForUser

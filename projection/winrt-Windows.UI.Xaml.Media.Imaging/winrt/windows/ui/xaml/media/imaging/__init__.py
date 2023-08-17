@@ -45,10 +45,6 @@ class SvgImageSourceLoadStatus(enum.IntEnum):
     INVALID_FORMAT = 2
     OTHER = 3
 
-_ns_module._register_BitmapCreateOptions(BitmapCreateOptions)
-_ns_module._register_DecodePixelType(DecodePixelType)
-_ns_module._register_SvgImageSourceLoadStatus(SvgImageSourceLoadStatus)
-
 BitmapImage = _ns_module.BitmapImage
 BitmapSource = _ns_module.BitmapSource
 DownloadProgressEventArgs = _ns_module.DownloadProgressEventArgs

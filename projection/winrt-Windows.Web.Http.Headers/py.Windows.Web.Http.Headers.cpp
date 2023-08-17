@@ -17876,9 +17876,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     // ----- Windows.Web.Http.Headers Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Web::Http::Headers");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -17978,7 +17975,7 @@ namespace py::cpp::Windows::Web::Http::Headers
            "_winrt_Windows_Web_Http_Headers",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

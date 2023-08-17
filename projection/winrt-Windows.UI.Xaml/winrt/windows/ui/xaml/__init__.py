@@ -342,40 +342,6 @@ class Visibility(enum.IntEnum):
     VISIBLE = 0
     COLLAPSED = 1
 
-_ns_module._register_ApplicationHighContrastAdjustment(ApplicationHighContrastAdjustment)
-_ns_module._register_ApplicationRequiresPointerMode(ApplicationRequiresPointerMode)
-_ns_module._register_ApplicationTheme(ApplicationTheme)
-_ns_module._register_AutomationTextAttributesEnum(AutomationTextAttributesEnum)
-_ns_module._register_DurationType(DurationType)
-_ns_module._register_ElementHighContrastAdjustment(ElementHighContrastAdjustment)
-_ns_module._register_ElementSoundKind(ElementSoundKind)
-_ns_module._register_ElementSoundMode(ElementSoundMode)
-_ns_module._register_ElementSoundPlayerState(ElementSoundPlayerState)
-_ns_module._register_ElementSpatialAudioMode(ElementSpatialAudioMode)
-_ns_module._register_ElementTheme(ElementTheme)
-_ns_module._register_FlowDirection(FlowDirection)
-_ns_module._register_FocusState(FocusState)
-_ns_module._register_FocusVisualKind(FocusVisualKind)
-_ns_module._register_FontCapitals(FontCapitals)
-_ns_module._register_FontEastAsianLanguage(FontEastAsianLanguage)
-_ns_module._register_FontEastAsianWidths(FontEastAsianWidths)
-_ns_module._register_FontFraction(FontFraction)
-_ns_module._register_FontNumeralAlignment(FontNumeralAlignment)
-_ns_module._register_FontNumeralStyle(FontNumeralStyle)
-_ns_module._register_FontVariants(FontVariants)
-_ns_module._register_GridUnitType(GridUnitType)
-_ns_module._register_HorizontalAlignment(HorizontalAlignment)
-_ns_module._register_LineStackingStrategy(LineStackingStrategy)
-_ns_module._register_OpticalMarginAlignment(OpticalMarginAlignment)
-_ns_module._register_TextAlignment(TextAlignment)
-_ns_module._register_TextLineBounds(TextLineBounds)
-_ns_module._register_TextReadingOrder(TextReadingOrder)
-_ns_module._register_TextTrimming(TextTrimming)
-_ns_module._register_TextWrapping(TextWrapping)
-_ns_module._register_Vector3TransitionComponents(Vector3TransitionComponents)
-_ns_module._register_VerticalAlignment(VerticalAlignment)
-_ns_module._register_Visibility(Visibility)
-
 CornerRadius = _ns_module.CornerRadius
 Duration = _ns_module.Duration
 GridLength = _ns_module.GridLength

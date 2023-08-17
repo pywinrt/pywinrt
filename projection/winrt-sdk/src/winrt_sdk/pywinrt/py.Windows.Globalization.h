@@ -55,13 +55,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DayOfWeek>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "DayOfWeek";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::LanguageLayoutDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "LanguageLayoutDirection";
     };
 
     template<>

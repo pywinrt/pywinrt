@@ -43,7 +43,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Pwm::PwmPulsePolarity>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pwm";
+        static constexpr const char* type_name = "PwmPulsePolarity";
     };
 
     template<>

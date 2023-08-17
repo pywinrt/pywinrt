@@ -46,12 +46,6 @@ class PeriodicForceEffectKind(enum.IntEnum):
     SAWTOOTH_WAVE_UP = 3
     SAWTOOTH_WAVE_DOWN = 4
 
-_ns_module._register_ConditionForceEffectKind(ConditionForceEffectKind)
-_ns_module._register_ForceFeedbackEffectAxes(ForceFeedbackEffectAxes)
-_ns_module._register_ForceFeedbackEffectState(ForceFeedbackEffectState)
-_ns_module._register_ForceFeedbackLoadEffectResult(ForceFeedbackLoadEffectResult)
-_ns_module._register_PeriodicForceEffectKind(PeriodicForceEffectKind)
-
 ConditionForceEffect = _ns_module.ConditionForceEffect
 ConstantForceEffect = _ns_module.ConstantForceEffect
 ForceFeedbackMotor = _ns_module.ForceFeedbackMotor

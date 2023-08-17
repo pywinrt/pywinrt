@@ -8,11 +8,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 {
     struct module_state
     {
-        PyObject* type_AppInstallState;
-        PyObject* type_AppInstallType;
-        PyObject* type_AppInstallationToastNotificationMode;
-        PyObject* type_AutoUpdateSetting;
-        PyObject* type_GetEntitlementStatus;
         PyTypeObject* type_AppInstallItem;
         PyTypeObject* type_AppInstallManager;
         PyTypeObject* type_AppInstallManagerItemEventArgs;
@@ -21,126 +16,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         PyTypeObject* type_AppUpdateOptions;
         PyTypeObject* type_GetEntitlementResult;
     };
-
-    static PyObject* register_AppInstallState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AppInstallState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AppInstallState = type;
-        Py_INCREF(state->type_AppInstallState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AppInstallType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AppInstallType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AppInstallType = type;
-        Py_INCREF(state->type_AppInstallType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AppInstallationToastNotificationMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AppInstallationToastNotificationMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AppInstallationToastNotificationMode = type;
-        Py_INCREF(state->type_AppInstallationToastNotificationMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AutoUpdateSetting(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AutoUpdateSetting)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AutoUpdateSetting = type;
-        Py_INCREF(state->type_AutoUpdateSetting);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GetEntitlementStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GetEntitlementStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GetEntitlementStatus = type;
-        Py_INCREF(state->type_GetEntitlementStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AppInstallItem class --------------------
     static constexpr const char* const type_name_AppInstallItem = "AppInstallItem";
@@ -3840,14 +3715,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     // ----- Windows.ApplicationModel.Store.Preview.InstallControl Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Store::Preview::InstallControl");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AppInstallState", register_AppInstallState, METH_O, "registers type"},
-        {"_register_AppInstallType", register_AppInstallType, METH_O, "registers type"},
-        {"_register_AppInstallationToastNotificationMode", register_AppInstallationToastNotificationMode, METH_O, "registers type"},
-        {"_register_AutoUpdateSetting", register_AutoUpdateSetting, METH_O, "registers type"},
-        {"_register_GetEntitlementStatus", register_GetEntitlementStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3858,11 +3725,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
             return 0;
         }
 
-        Py_VISIT(state->type_AppInstallState);
-        Py_VISIT(state->type_AppInstallType);
-        Py_VISIT(state->type_AppInstallationToastNotificationMode);
-        Py_VISIT(state->type_AutoUpdateSetting);
-        Py_VISIT(state->type_GetEntitlementStatus);
         Py_VISIT(state->type_AppInstallItem);
         Py_VISIT(state->type_AppInstallManager);
         Py_VISIT(state->type_AppInstallManagerItemEventArgs);
@@ -3883,11 +3745,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
             return 0;
         }
 
-        Py_CLEAR(state->type_AppInstallState);
-        Py_CLEAR(state->type_AppInstallType);
-        Py_CLEAR(state->type_AppInstallationToastNotificationMode);
-        Py_CLEAR(state->type_AutoUpdateSetting);
-        Py_CLEAR(state->type_GetEntitlementStatus);
         Py_CLEAR(state->type_AppInstallItem);
         Py_CLEAR(state->type_AppInstallManager);
         Py_CLEAR(state->type_AppInstallManagerItemEventArgs);
@@ -3905,7 +3762,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
            "_winrt_Windows_ApplicationModel_Store_Preview_InstallControl",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3984,121 +3841,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_Preview_InstallContr
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppInstallState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppInstallType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppInstallationToastNotificationMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AutoUpdateSetting>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutoUpdateSetting;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AutoUpdateSetting is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GetEntitlementStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>::get_python_type() noexcept {

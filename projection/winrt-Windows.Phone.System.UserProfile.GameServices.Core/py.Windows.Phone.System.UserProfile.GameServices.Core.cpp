@@ -8,59 +8,9 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 {
     struct module_state
     {
-        PyObject* type_GameServiceGameOutcome;
-        PyObject* type_GameServiceScoreKind;
         PyTypeObject* type_GameService;
         PyTypeObject* type_GameServicePropertyCollection;
     };
-
-    static PyObject* register_GameServiceGameOutcome(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GameServiceGameOutcome)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GameServiceGameOutcome = type;
-        Py_INCREF(state->type_GameServiceGameOutcome);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GameServiceScoreKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GameServiceScoreKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GameServiceScoreKind = type;
-        Py_INCREF(state->type_GameServiceScoreKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- GameService class --------------------
     static constexpr const char* const type_name_GameService = "GameService";
@@ -534,11 +484,6 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
     // ----- Windows.Phone.System.UserProfile.GameServices.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Phone::System::UserProfile::GameServices::Core");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_GameServiceGameOutcome", register_GameServiceGameOutcome, METH_O, "registers type"},
-        {"_register_GameServiceScoreKind", register_GameServiceScoreKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -549,8 +494,6 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
             return 0;
         }
 
-        Py_VISIT(state->type_GameServiceGameOutcome);
-        Py_VISIT(state->type_GameServiceScoreKind);
         Py_VISIT(state->type_GameService);
         Py_VISIT(state->type_GameServicePropertyCollection);
 
@@ -566,8 +509,6 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
             return 0;
         }
 
-        Py_CLEAR(state->type_GameServiceGameOutcome);
-        Py_CLEAR(state->type_GameServiceScoreKind);
         Py_CLEAR(state->type_GameService);
         Py_CLEAR(state->type_GameServicePropertyCollection);
 
@@ -580,7 +521,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
            "_winrt_Windows_Phone_System_UserProfile_GameServices_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -635,52 +576,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_System_UserProfile_GameServices_Core(
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServiceGameOutcome>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::System::UserProfile::GameServices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameServiceGameOutcome;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServiceGameOutcome is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServiceScoreKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::System::UserProfile::GameServices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameServiceScoreKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServiceScoreKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService>::get_python_type() noexcept {

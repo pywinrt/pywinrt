@@ -335,9 +335,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity
     // ----- Windows.Security.Authentication.Identity Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::Identity");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -375,7 +372,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
            "_winrt_Windows_Security_Authentication_Identity",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

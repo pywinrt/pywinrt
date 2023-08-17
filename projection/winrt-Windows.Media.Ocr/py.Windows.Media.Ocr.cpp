@@ -663,9 +663,6 @@ namespace py::cpp::Windows::Media::Ocr
     // ----- Windows.Media.Ocr Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::Ocr");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -707,7 +704,7 @@ namespace py::cpp::Windows::Media::Ocr
            "_winrt_Windows_Media_Ocr",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

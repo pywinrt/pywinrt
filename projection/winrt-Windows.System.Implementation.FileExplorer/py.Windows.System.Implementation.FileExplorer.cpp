@@ -504,9 +504,6 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     // ----- Windows.System.Implementation.FileExplorer Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::System::Implementation::FileExplorer");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -548,7 +545,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
            "_winrt_Windows_System_Implementation_FileExplorer",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

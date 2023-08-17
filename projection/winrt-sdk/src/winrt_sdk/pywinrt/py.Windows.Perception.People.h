@@ -72,13 +72,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::People::HandJointKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.people";
+        static constexpr const char* type_name = "HandJointKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Perception::People::JointPoseAccuracy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.people";
+        static constexpr const char* type_name = "JointPoseAccuracy";
     };
 
     template<>

@@ -9,5 +9,4 @@ try:
 except ImportError:
     pass
 
-
 XsltProcessor = _ns_module.XsltProcessor

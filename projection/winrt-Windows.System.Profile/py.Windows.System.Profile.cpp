@@ -8,10 +8,6 @@ namespace py::cpp::Windows::System::Profile
 {
     struct module_state
     {
-        PyObject* type_PlatformDataCollectionLevel;
-        PyObject* type_SystemIdentificationSource;
-        PyObject* type_SystemOutOfBoxExperienceState;
-        PyObject* type_UnsupportedAppRequirementReasons;
         PyTypeObject* type_AnalyticsInfo;
         PyTypeObject* type_AnalyticsVersionInfo;
         PyTypeObject* type_AppApplicability;
@@ -29,102 +25,6 @@ namespace py::cpp::Windows::System::Profile
         PyTypeObject* type_UnsupportedAppRequirement;
         PyTypeObject* type_WindowsIntegrityPolicy;
     };
-
-    static PyObject* register_PlatformDataCollectionLevel(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PlatformDataCollectionLevel)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PlatformDataCollectionLevel = type;
-        Py_INCREF(state->type_PlatformDataCollectionLevel);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SystemIdentificationSource(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SystemIdentificationSource)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SystemIdentificationSource = type;
-        Py_INCREF(state->type_SystemIdentificationSource);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SystemOutOfBoxExperienceState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SystemOutOfBoxExperienceState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SystemOutOfBoxExperienceState = type;
-        Py_INCREF(state->type_SystemOutOfBoxExperienceState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UnsupportedAppRequirementReasons(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UnsupportedAppRequirementReasons)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UnsupportedAppRequirementReasons = type;
-        Py_INCREF(state->type_UnsupportedAppRequirementReasons);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AnalyticsInfo class --------------------
     static constexpr const char* const type_name_AnalyticsInfo = "AnalyticsInfo";
@@ -2307,13 +2207,6 @@ namespace py::cpp::Windows::System::Profile
     // ----- Windows.System.Profile Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::System::Profile");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PlatformDataCollectionLevel", register_PlatformDataCollectionLevel, METH_O, "registers type"},
-        {"_register_SystemIdentificationSource", register_SystemIdentificationSource, METH_O, "registers type"},
-        {"_register_SystemOutOfBoxExperienceState", register_SystemOutOfBoxExperienceState, METH_O, "registers type"},
-        {"_register_UnsupportedAppRequirementReasons", register_UnsupportedAppRequirementReasons, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2324,10 +2217,6 @@ namespace py::cpp::Windows::System::Profile
             return 0;
         }
 
-        Py_VISIT(state->type_PlatformDataCollectionLevel);
-        Py_VISIT(state->type_SystemIdentificationSource);
-        Py_VISIT(state->type_SystemOutOfBoxExperienceState);
-        Py_VISIT(state->type_UnsupportedAppRequirementReasons);
         Py_VISIT(state->type_AnalyticsInfo);
         Py_VISIT(state->type_AnalyticsVersionInfo);
         Py_VISIT(state->type_AppApplicability);
@@ -2357,10 +2246,6 @@ namespace py::cpp::Windows::System::Profile
             return 0;
         }
 
-        Py_CLEAR(state->type_PlatformDataCollectionLevel);
-        Py_CLEAR(state->type_SystemIdentificationSource);
-        Py_CLEAR(state->type_SystemOutOfBoxExperienceState);
-        Py_CLEAR(state->type_UnsupportedAppRequirementReasons);
         Py_CLEAR(state->type_AnalyticsInfo);
         Py_CLEAR(state->type_AnalyticsVersionInfo);
         Py_CLEAR(state->type_AppApplicability);
@@ -2387,7 +2272,7 @@ namespace py::cpp::Windows::System::Profile
            "_winrt_Windows_System_Profile",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2574,98 +2459,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::System::Profile::PlatformDataCollectionLevel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlatformDataCollectionLevel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::PlatformDataCollectionLevel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Profile::SystemIdentificationSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemIdentificationSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SystemIdentificationSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Profile::SystemOutOfBoxExperienceState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemOutOfBoxExperienceState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SystemOutOfBoxExperienceState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Profile::UnsupportedAppRequirementReasons>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnsupportedAppRequirementReasons;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::UnsupportedAppRequirementReasons is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::AnalyticsInfo>::get_python_type() noexcept {

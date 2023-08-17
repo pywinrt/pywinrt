@@ -57,11 +57,6 @@ class ImageScannerScanSource(enum.IntEnum):
     FEEDER = 2
     AUTO_CONFIGURED = 3
 
-_ns_module._register_ImageScannerAutoCroppingMode(ImageScannerAutoCroppingMode)
-_ns_module._register_ImageScannerColorMode(ImageScannerColorMode)
-_ns_module._register_ImageScannerFormat(ImageScannerFormat)
-_ns_module._register_ImageScannerScanSource(ImageScannerScanSource)
-
 ImageScannerResolution = _ns_module.ImageScannerResolution
 ImageScanner = _ns_module.ImageScanner
 ImageScannerAutoConfiguration = _ns_module.ImageScannerAutoConfiguration

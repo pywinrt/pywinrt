@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 {
     struct module_state
     {
-        PyObject* type_NodeType;
         PyTypeObject* type_DtdEntity;
         PyTypeObject* type_DtdNotation;
         PyTypeObject* type_XmlAttribute;
@@ -31,30 +30,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
         PyTypeObject* type_IXmlNodeSerializer;
         PyTypeObject* type_IXmlText;
     };
-
-    static PyObject* register_NodeType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_NodeType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_NodeType = type;
-        Py_INCREF(state->type_NodeType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- DtdEntity class --------------------
     static constexpr const char* const type_name_DtdEntity = "DtdEntity";
@@ -17267,10 +17242,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     // ----- Windows.Data.Xml.Dom Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Data::Xml::Dom");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_NodeType", register_NodeType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -17281,7 +17252,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
             return 0;
         }
 
-        Py_VISIT(state->type_NodeType);
         Py_VISIT(state->type_DtdEntity);
         Py_VISIT(state->type_DtdNotation);
         Py_VISIT(state->type_XmlAttribute);
@@ -17316,7 +17286,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
             return 0;
         }
 
-        Py_CLEAR(state->type_NodeType);
         Py_CLEAR(state->type_DtdEntity);
         Py_CLEAR(state->type_DtdNotation);
         Py_CLEAR(state->type_XmlAttribute);
@@ -17348,7 +17317,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
            "_winrt_Windows_Data_Xml_Dom",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -17511,29 +17480,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Data_Xml_Dom(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Data::Xml::Dom::NodeType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NodeType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::NodeType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::DtdEntity>::get_python_type() noexcept {

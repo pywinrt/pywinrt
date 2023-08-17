@@ -39,13 +39,6 @@ class PlatformDiagnosticTraceSlotType(enum.IntEnum):
     ALWAYS_ON = 1
     MINI = 2
 
-_ns_module._register_PlatformDiagnosticActionState(PlatformDiagnosticActionState)
-_ns_module._register_PlatformDiagnosticEscalationType(PlatformDiagnosticEscalationType)
-_ns_module._register_PlatformDiagnosticEventBufferLatencies(PlatformDiagnosticEventBufferLatencies)
-_ns_module._register_PlatformDiagnosticTracePriority(PlatformDiagnosticTracePriority)
-_ns_module._register_PlatformDiagnosticTraceSlotState(PlatformDiagnosticTraceSlotState)
-_ns_module._register_PlatformDiagnosticTraceSlotType(PlatformDiagnosticTraceSlotType)
-
 PlatformDiagnosticActions = _ns_module.PlatformDiagnosticActions
 PlatformDiagnosticTraceInfo = _ns_module.PlatformDiagnosticTraceInfo
 PlatformDiagnosticTraceRuntimeInfo = _ns_module.PlatformDiagnosticTraceRuntimeInfo

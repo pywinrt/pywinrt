@@ -14,7 +14,6 @@ try:
 except ImportError:
     pass
 
-
 AppBroadcastingMonitor = _ns_module.AppBroadcastingMonitor
 AppBroadcastingStatus = _ns_module.AppBroadcastingStatus
 AppBroadcastingStatusDetails = _ns_module.AppBroadcastingStatusDetails

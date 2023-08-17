@@ -113,55 +113,64 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ArcadeStickButtons>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "ArcadeStickButtons";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::FlightStickButtons>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "FlightStickButtons";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GameControllerButtonLabel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "GameControllerButtonLabel";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GameControllerSwitchKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "GameControllerSwitchKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GameControllerSwitchPosition>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "GameControllerSwitchPosition";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GamepadButtons>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "GamepadButtons";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "OptionalUINavigationButtons";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::RacingWheelButtons>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "RacingWheelButtons";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "RequiredUINavigationButtons";
     };
 
     template<>

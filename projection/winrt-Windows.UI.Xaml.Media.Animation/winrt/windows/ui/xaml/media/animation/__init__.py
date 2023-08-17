@@ -71,13 +71,6 @@ class SlideNavigationTransitionEffect(enum.IntEnum):
     FROM_LEFT = 1
     FROM_RIGHT = 2
 
-_ns_module._register_ClockState(ClockState)
-_ns_module._register_ConnectedAnimationComponent(ConnectedAnimationComponent)
-_ns_module._register_EasingMode(EasingMode)
-_ns_module._register_FillBehavior(FillBehavior)
-_ns_module._register_RepeatBehaviorType(RepeatBehaviorType)
-_ns_module._register_SlideNavigationTransitionEffect(SlideNavigationTransitionEffect)
-
 KeyTime = _ns_module.KeyTime
 RepeatBehavior = _ns_module.RepeatBehavior
 AddDeleteThemeTransition = _ns_module.AddDeleteThemeTransition

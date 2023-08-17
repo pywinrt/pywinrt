@@ -69,31 +69,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
+        static constexpr const char* type_name = "BluetoothLEAdvertisementFlags";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
+        static constexpr const char* type_name = "BluetoothLEAdvertisementPublisherStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
+        static constexpr const char* type_name = "BluetoothLEAdvertisementType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
+        static constexpr const char* type_name = "BluetoothLEAdvertisementWatcherStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEScanningMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
+        static constexpr const char* type_name = "BluetoothLEScanningMode";
     };
 
     template<>

@@ -14,6 +14,5 @@ try:
 except ImportError:
     pass
 
-
 Battery = _ns_module.Battery
 BatteryReport = _ns_module.BatteryReport

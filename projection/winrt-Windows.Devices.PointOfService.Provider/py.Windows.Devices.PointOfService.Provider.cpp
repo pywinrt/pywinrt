@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 {
     struct module_state
     {
-        PyObject* type_BarcodeScannerTriggerState;
         PyTypeObject* type_BarcodeScannerDisableScannerRequest;
         PyTypeObject* type_BarcodeScannerDisableScannerRequestEventArgs;
         PyTypeObject* type_BarcodeScannerEnableScannerRequest;
@@ -32,30 +31,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         PyTypeObject* type_BarcodeScannerVideoFrame;
         PyTypeObject* type_BarcodeSymbologyAttributesBuilder;
     };
-
-    static PyObject* register_BarcodeScannerTriggerState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BarcodeScannerTriggerState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BarcodeScannerTriggerState = type;
-        Py_INCREF(state->type_BarcodeScannerTriggerState);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- BarcodeScannerDisableScannerRequest class --------------------
     static constexpr const char* const type_name_BarcodeScannerDisableScannerRequest = "BarcodeScannerDisableScannerRequest";
@@ -4425,10 +4400,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     // ----- Windows.Devices.PointOfService.Provider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::PointOfService::Provider");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_BarcodeScannerTriggerState", register_BarcodeScannerTriggerState, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4439,7 +4410,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
             return 0;
         }
 
-        Py_VISIT(state->type_BarcodeScannerTriggerState);
         Py_VISIT(state->type_BarcodeScannerDisableScannerRequest);
         Py_VISIT(state->type_BarcodeScannerDisableScannerRequestEventArgs);
         Py_VISIT(state->type_BarcodeScannerEnableScannerRequest);
@@ -4475,7 +4445,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
             return 0;
         }
 
-        Py_CLEAR(state->type_BarcodeScannerTriggerState);
         Py_CLEAR(state->type_BarcodeScannerDisableScannerRequest);
         Py_CLEAR(state->type_BarcodeScannerDisableScannerRequestEventArgs);
         Py_CLEAR(state->type_BarcodeScannerEnableScannerRequest);
@@ -4508,7 +4477,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
            "_winrt_Windows_Devices_PointOfService_Provider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4677,29 +4646,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService_Provider(void) noexc
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerTriggerState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerTriggerState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerTriggerState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest>::get_python_type() noexcept {

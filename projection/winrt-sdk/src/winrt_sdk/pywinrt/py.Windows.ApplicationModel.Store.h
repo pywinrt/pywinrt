@@ -78,19 +78,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::FulfillmentResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "FulfillmentResult";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::ProductPurchaseStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "ProductPurchaseStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::ProductType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "ProductType";
     };
 
     template<>

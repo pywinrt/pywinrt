@@ -87,12 +87,6 @@ class SpatialInteractionSourcePositionAccuracy(enum.IntEnum):
     HIGH = 0
     APPROXIMATE = 1
 
-_ns_module._register_SpatialGestureSettings(SpatialGestureSettings)
-_ns_module._register_SpatialInteractionPressKind(SpatialInteractionPressKind)
-_ns_module._register_SpatialInteractionSourceHandedness(SpatialInteractionSourceHandedness)
-_ns_module._register_SpatialInteractionSourceKind(SpatialInteractionSourceKind)
-_ns_module._register_SpatialInteractionSourcePositionAccuracy(SpatialInteractionSourcePositionAccuracy)
-
 SpatialGestureRecognizer = _ns_module.SpatialGestureRecognizer
 SpatialHoldCanceledEventArgs = _ns_module.SpatialHoldCanceledEventArgs
 SpatialHoldCompletedEventArgs = _ns_module.SpatialHoldCompletedEventArgs

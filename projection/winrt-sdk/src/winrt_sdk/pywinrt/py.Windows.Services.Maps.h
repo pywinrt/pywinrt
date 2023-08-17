@@ -95,73 +95,85 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::ManeuverWarningKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "ManeuverWarningKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::ManeuverWarningSeverity>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "ManeuverWarningSeverity";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapLocationDesiredAccuracy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapLocationDesiredAccuracy";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapLocationFinderStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapLocationFinderStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapManeuverNotices>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapManeuverNotices";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteFinderStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapRouteFinderStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteManeuverKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapRouteManeuverKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteOptimization>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapRouteOptimization";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteRestrictions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapRouteRestrictions";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapServiceDataUsagePreference>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapServiceDataUsagePreference";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::TrafficCongestion>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "TrafficCongestion";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::WaypointKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "WaypointKind";
     };
 
     template<>

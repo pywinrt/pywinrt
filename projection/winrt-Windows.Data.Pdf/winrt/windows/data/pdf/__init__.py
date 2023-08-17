@@ -32,8 +32,6 @@ class PdfPageRotation(enum.IntEnum):
     ROTATE180 = 2
     ROTATE270 = 3
 
-_ns_module._register_PdfPageRotation(PdfPageRotation)
-
 PdfDocument = _ns_module.PdfDocument
 PdfPage = _ns_module.PdfPage
 PdfPageDimensions = _ns_module.PdfPageDimensions

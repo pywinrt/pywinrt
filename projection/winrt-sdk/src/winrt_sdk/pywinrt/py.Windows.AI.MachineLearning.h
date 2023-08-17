@@ -103,25 +103,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelDeviceKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "LearningModelDeviceKind";
     };
 
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelFeatureKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "LearningModelFeatureKind";
     };
 
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelPixelRange>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "LearningModelPixelRange";
     };
 
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorKind";
     };
 
     template<>

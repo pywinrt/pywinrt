@@ -22,7 +22,5 @@ class CompositionDebugOverdrawContentKinds(enum.IntFlag):
     SWAP_CHAINS = 0x40
     ALL = 0xffffffff
 
-_ns_module._register_CompositionDebugOverdrawContentKinds(CompositionDebugOverdrawContentKinds)
-
 CompositionDebugHeatMaps = _ns_module.CompositionDebugHeatMaps
 CompositionDebugSettings = _ns_module.CompositionDebugSettings

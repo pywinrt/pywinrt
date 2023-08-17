@@ -8,34 +8,9 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
 {
     struct module_state
     {
-        PyObject* type_CompositionDebugOverdrawContentKinds;
         PyTypeObject* type_CompositionDebugHeatMaps;
         PyTypeObject* type_CompositionDebugSettings;
     };
-
-    static PyObject* register_CompositionDebugOverdrawContentKinds(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CompositionDebugOverdrawContentKinds)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CompositionDebugOverdrawContentKinds = type;
-        Py_INCREF(state->type_CompositionDebugOverdrawContentKinds);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CompositionDebugHeatMaps class --------------------
     static constexpr const char* const type_name_CompositionDebugHeatMaps = "CompositionDebugHeatMaps";
@@ -375,10 +350,6 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
     // ----- Windows.UI.Composition.Diagnostics Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Composition::Diagnostics");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_CompositionDebugOverdrawContentKinds", register_CompositionDebugOverdrawContentKinds, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -389,7 +360,6 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
             return 0;
         }
 
-        Py_VISIT(state->type_CompositionDebugOverdrawContentKinds);
         Py_VISIT(state->type_CompositionDebugHeatMaps);
         Py_VISIT(state->type_CompositionDebugSettings);
 
@@ -405,7 +375,6 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
             return 0;
         }
 
-        Py_CLEAR(state->type_CompositionDebugOverdrawContentKinds);
         Py_CLEAR(state->type_CompositionDebugHeatMaps);
         Py_CLEAR(state->type_CompositionDebugSettings);
 
@@ -418,7 +387,7 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
            "_winrt_Windows_UI_Composition_Diagnostics",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -467,29 +436,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition_Diagnostics(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionDebugOverdrawContentKinds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugHeatMaps>::get_python_type() noexcept {

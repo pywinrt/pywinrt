@@ -73,43 +73,50 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveEndpointPairCreationBehaviors";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveEndpointPairCreationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveEndpointPairState";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveNetworkAccessKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveNetworkAccessKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurementStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveQualityOfServiceMeasurementStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveQualityOfServiceMetric";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveSocketKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveSocketKind";
     };
 
     template<>

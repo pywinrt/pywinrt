@@ -91,85 +91,99 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDaysOfWeek>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskDaysOfWeek";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDetailsKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskDetailsKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListOtherAppReadAccess>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskListOtherAppReadAccess";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListOtherAppWriteAccess>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskListOtherAppWriteAccess";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskListSyncStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskPriority>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskPriority";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskQueryKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQuerySortProperty>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskQuerySortProperty";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceUnit>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskRecurrenceUnit";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationUnit>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskRegenerationUnit";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskSensitivity>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskSensitivity";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStoreAccessType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskStoreAccessType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskWeekOfMonth>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskWeekOfMonth";
     };
 
     template<>

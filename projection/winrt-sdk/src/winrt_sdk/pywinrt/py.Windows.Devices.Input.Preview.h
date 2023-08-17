@@ -51,7 +51,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazeDeviceConfigurationStatePreview";
     };
 
     template<>

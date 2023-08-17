@@ -136,73 +136,85 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::NDCertificateFeature>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDCertificateFeature";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::NDCertificatePlatformID>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDCertificatePlatformID";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::NDCertificateType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDCertificateType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::NDClosedCaptionFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDClosedCaptionFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::NDContentIDType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDContentIDType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::NDMediaStreamType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDMediaStreamType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::NDProximityDetectionType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDProximityDetectionType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::NDStartAsyncOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDStartAsyncOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDecryptorSetup>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyDecryptorSetup";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyEncryptionAlgorithm>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyEncryptionAlgorithm";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyHardwareDRMFeatures>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyHardwareDRMFeatures";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyITADataFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyITADataFormat";
     };
 
     template<>

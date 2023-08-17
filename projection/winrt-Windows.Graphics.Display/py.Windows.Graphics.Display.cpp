@@ -8,14 +8,6 @@ namespace py::cpp::Windows::Graphics::Display
 {
     struct module_state
     {
-        PyObject* type_AdvancedColorKind;
-        PyObject* type_DisplayBrightnessOverrideOptions;
-        PyObject* type_DisplayBrightnessOverrideScenario;
-        PyObject* type_DisplayBrightnessScenario;
-        PyObject* type_DisplayColorOverrideScenario;
-        PyObject* type_DisplayOrientations;
-        PyObject* type_HdrMetadataFormat;
-        PyObject* type_ResolutionScale;
         PyTypeObject* type_AdvancedColorInfo;
         PyTypeObject* type_BrightnessOverride;
         PyTypeObject* type_BrightnessOverrideSettings;
@@ -28,198 +20,6 @@ namespace py::cpp::Windows::Graphics::Display
         PyTypeObject* type_DisplayServices;
         PyTypeObject* type_NitRange;
     };
-
-    static PyObject* register_AdvancedColorKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AdvancedColorKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AdvancedColorKind = type;
-        Py_INCREF(state->type_AdvancedColorKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DisplayBrightnessOverrideOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DisplayBrightnessOverrideOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DisplayBrightnessOverrideOptions = type;
-        Py_INCREF(state->type_DisplayBrightnessOverrideOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DisplayBrightnessOverrideScenario(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DisplayBrightnessOverrideScenario)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DisplayBrightnessOverrideScenario = type;
-        Py_INCREF(state->type_DisplayBrightnessOverrideScenario);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DisplayBrightnessScenario(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DisplayBrightnessScenario)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DisplayBrightnessScenario = type;
-        Py_INCREF(state->type_DisplayBrightnessScenario);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DisplayColorOverrideScenario(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DisplayColorOverrideScenario)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DisplayColorOverrideScenario = type;
-        Py_INCREF(state->type_DisplayColorOverrideScenario);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DisplayOrientations(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DisplayOrientations)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DisplayOrientations = type;
-        Py_INCREF(state->type_DisplayOrientations);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HdrMetadataFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HdrMetadataFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HdrMetadataFormat = type;
-        Py_INCREF(state->type_HdrMetadataFormat);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ResolutionScale(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ResolutionScale)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ResolutionScale = type;
-        Py_INCREF(state->type_ResolutionScale);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AdvancedColorInfo class --------------------
     static constexpr const char* const type_name_AdvancedColorInfo = "AdvancedColorInfo";
@@ -3556,17 +3356,6 @@ namespace py::cpp::Windows::Graphics::Display
     // ----- Windows.Graphics.Display Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Display");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AdvancedColorKind", register_AdvancedColorKind, METH_O, "registers type"},
-        {"_register_DisplayBrightnessOverrideOptions", register_DisplayBrightnessOverrideOptions, METH_O, "registers type"},
-        {"_register_DisplayBrightnessOverrideScenario", register_DisplayBrightnessOverrideScenario, METH_O, "registers type"},
-        {"_register_DisplayBrightnessScenario", register_DisplayBrightnessScenario, METH_O, "registers type"},
-        {"_register_DisplayColorOverrideScenario", register_DisplayColorOverrideScenario, METH_O, "registers type"},
-        {"_register_DisplayOrientations", register_DisplayOrientations, METH_O, "registers type"},
-        {"_register_HdrMetadataFormat", register_HdrMetadataFormat, METH_O, "registers type"},
-        {"_register_ResolutionScale", register_ResolutionScale, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3577,14 +3366,6 @@ namespace py::cpp::Windows::Graphics::Display
             return 0;
         }
 
-        Py_VISIT(state->type_AdvancedColorKind);
-        Py_VISIT(state->type_DisplayBrightnessOverrideOptions);
-        Py_VISIT(state->type_DisplayBrightnessOverrideScenario);
-        Py_VISIT(state->type_DisplayBrightnessScenario);
-        Py_VISIT(state->type_DisplayColorOverrideScenario);
-        Py_VISIT(state->type_DisplayOrientations);
-        Py_VISIT(state->type_HdrMetadataFormat);
-        Py_VISIT(state->type_ResolutionScale);
         Py_VISIT(state->type_AdvancedColorInfo);
         Py_VISIT(state->type_BrightnessOverride);
         Py_VISIT(state->type_BrightnessOverrideSettings);
@@ -3609,14 +3390,6 @@ namespace py::cpp::Windows::Graphics::Display
             return 0;
         }
 
-        Py_CLEAR(state->type_AdvancedColorKind);
-        Py_CLEAR(state->type_DisplayBrightnessOverrideOptions);
-        Py_CLEAR(state->type_DisplayBrightnessOverrideScenario);
-        Py_CLEAR(state->type_DisplayBrightnessScenario);
-        Py_CLEAR(state->type_DisplayColorOverrideScenario);
-        Py_CLEAR(state->type_DisplayOrientations);
-        Py_CLEAR(state->type_HdrMetadataFormat);
-        Py_CLEAR(state->type_ResolutionScale);
         Py_CLEAR(state->type_AdvancedColorInfo);
         Py_CLEAR(state->type_BrightnessOverride);
         Py_CLEAR(state->type_BrightnessOverrideSettings);
@@ -3638,7 +3411,7 @@ namespace py::cpp::Windows::Graphics::Display
            "_winrt_Windows_Graphics_Display",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3753,190 +3526,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Display(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Display::AdvancedColorKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdvancedColorKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::AdvancedColorKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayBrightnessOverrideOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayBrightnessOverrideOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideScenario>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayBrightnessOverrideScenario;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayBrightnessOverrideScenario is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Display::DisplayBrightnessScenario>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayBrightnessScenario;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayBrightnessScenario is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Display::DisplayColorOverrideScenario>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayColorOverrideScenario;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayColorOverrideScenario is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Display::DisplayOrientations>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayOrientations;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayOrientations is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Display::HdrMetadataFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HdrMetadataFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::HdrMetadataFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Display::ResolutionScale>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResolutionScale;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::ResolutionScale is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::AdvancedColorInfo>::get_python_type() noexcept {

@@ -39,19 +39,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::DomainNameType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking";
+        static constexpr const char* type_name = "DomainNameType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::HostNameSortOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking";
+        static constexpr const char* type_name = "HostNameSortOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::HostNameType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking";
+        static constexpr const char* type_name = "HostNameType";
     };
 
     template<>

@@ -178,151 +178,176 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardActivationPolicyChangeResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardAppletIdGroupActivationPolicy";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardAutomaticResponseStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardAutomaticResponseStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardCryptogramAlgorithm";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardCryptogramGeneratorOperationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardCryptogramMaterialPackageConfirmationResponseFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardCryptogramMaterialPackageFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialProtectionMethod>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardCryptogramMaterialProtectionMethod";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardCryptogramMaterialType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardCryptogramPlacementOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardCryptogramStorageKeyAlgorithm";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardCryptogramStorageKeyCapabilities";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptographicKeyAttestationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardCryptographicKeyAttestationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulationCategory>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardEmulationCategory";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardEmulationType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardEmulatorConnectionDeactivatedReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionSource>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardEmulatorConnectionSource";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorEnablementPolicy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardEmulatorEnablementPolicy";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardLaunchBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardLaunchBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardPinCharacterPolicyOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardReaderKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardReaderKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardReaderStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardReaderStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardTriggerType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardTriggerType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.smartcards";
+        static constexpr const char* type_name = "SmartCardUnlockPromptingBehavior";
     };
 
     template<>

@@ -84,49 +84,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "AudioEncodingQuality";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaMirroringOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "MediaMirroringOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaPixelFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "MediaPixelFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaRotation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "MediaRotation";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaThumbnailFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "MediaThumbnailFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::SphericalVideoFrameFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "SphericalVideoFrameFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::StereoscopicVideoPackingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "StereoscopicVideoPackingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "VideoEncodingQuality";
     };
 
     template<>

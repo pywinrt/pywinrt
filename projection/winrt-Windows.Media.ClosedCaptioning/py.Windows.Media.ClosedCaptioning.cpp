@@ -8,133 +8,8 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 {
     struct module_state
     {
-        PyObject* type_ClosedCaptionColor;
-        PyObject* type_ClosedCaptionEdgeEffect;
-        PyObject* type_ClosedCaptionOpacity;
-        PyObject* type_ClosedCaptionSize;
-        PyObject* type_ClosedCaptionStyle;
         PyTypeObject* type_ClosedCaptionProperties;
     };
-
-    static PyObject* register_ClosedCaptionColor(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ClosedCaptionColor)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ClosedCaptionColor = type;
-        Py_INCREF(state->type_ClosedCaptionColor);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ClosedCaptionEdgeEffect(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ClosedCaptionEdgeEffect)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ClosedCaptionEdgeEffect = type;
-        Py_INCREF(state->type_ClosedCaptionEdgeEffect);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ClosedCaptionOpacity(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ClosedCaptionOpacity)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ClosedCaptionOpacity = type;
-        Py_INCREF(state->type_ClosedCaptionOpacity);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ClosedCaptionSize(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ClosedCaptionSize)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ClosedCaptionSize = type;
-        Py_INCREF(state->type_ClosedCaptionSize);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ClosedCaptionStyle(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ClosedCaptionStyle)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ClosedCaptionStyle = type;
-        Py_INCREF(state->type_ClosedCaptionStyle);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ClosedCaptionProperties class --------------------
     static constexpr const char* const type_name_ClosedCaptionProperties = "ClosedCaptionProperties";
@@ -478,14 +353,6 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
     // ----- Windows.Media.ClosedCaptioning Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::ClosedCaptioning");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ClosedCaptionColor", register_ClosedCaptionColor, METH_O, "registers type"},
-        {"_register_ClosedCaptionEdgeEffect", register_ClosedCaptionEdgeEffect, METH_O, "registers type"},
-        {"_register_ClosedCaptionOpacity", register_ClosedCaptionOpacity, METH_O, "registers type"},
-        {"_register_ClosedCaptionSize", register_ClosedCaptionSize, METH_O, "registers type"},
-        {"_register_ClosedCaptionStyle", register_ClosedCaptionStyle, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -496,11 +363,6 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
             return 0;
         }
 
-        Py_VISIT(state->type_ClosedCaptionColor);
-        Py_VISIT(state->type_ClosedCaptionEdgeEffect);
-        Py_VISIT(state->type_ClosedCaptionOpacity);
-        Py_VISIT(state->type_ClosedCaptionSize);
-        Py_VISIT(state->type_ClosedCaptionStyle);
         Py_VISIT(state->type_ClosedCaptionProperties);
 
         return 0;
@@ -515,11 +377,6 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
             return 0;
         }
 
-        Py_CLEAR(state->type_ClosedCaptionColor);
-        Py_CLEAR(state->type_ClosedCaptionEdgeEffect);
-        Py_CLEAR(state->type_ClosedCaptionOpacity);
-        Py_CLEAR(state->type_ClosedCaptionSize);
-        Py_CLEAR(state->type_ClosedCaptionStyle);
         Py_CLEAR(state->type_ClosedCaptionProperties);
 
         return 0;
@@ -531,7 +388,7 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
            "_winrt_Windows_Media_ClosedCaptioning",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -580,121 +437,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_ClosedCaptioning(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionColor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::ClosedCaptioning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::ClosedCaptioning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClosedCaptionColor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::ClosedCaptioning::ClosedCaptionColor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::ClosedCaptioning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::ClosedCaptioning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClosedCaptionEdgeEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionOpacity>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::ClosedCaptioning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::ClosedCaptioning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClosedCaptionOpacity;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::ClosedCaptioning::ClosedCaptionOpacity is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionSize>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::ClosedCaptioning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::ClosedCaptioning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClosedCaptionSize;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::ClosedCaptioning::ClosedCaptionSize is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionStyle>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::ClosedCaptioning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::ClosedCaptioning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClosedCaptionStyle;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::ClosedCaptioning::ClosedCaptionStyle is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>::get_python_type() noexcept {

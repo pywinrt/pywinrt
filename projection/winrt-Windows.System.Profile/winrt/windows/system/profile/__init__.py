@@ -47,11 +47,6 @@ class UnsupportedAppRequirementReasons(enum.IntFlag):
     UNKNOWN = 0
     DENIED_BY_SYSTEM = 0x1
 
-_ns_module._register_PlatformDataCollectionLevel(PlatformDataCollectionLevel)
-_ns_module._register_SystemIdentificationSource(SystemIdentificationSource)
-_ns_module._register_SystemOutOfBoxExperienceState(SystemOutOfBoxExperienceState)
-_ns_module._register_UnsupportedAppRequirementReasons(UnsupportedAppRequirementReasons)
-
 AnalyticsInfo = _ns_module.AnalyticsInfo
 AnalyticsVersionInfo = _ns_module.AnalyticsVersionInfo
 AppApplicability = _ns_module.AppApplicability

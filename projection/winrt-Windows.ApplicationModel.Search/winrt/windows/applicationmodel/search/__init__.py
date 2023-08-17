@@ -24,7 +24,6 @@ try:
 except ImportError:
     pass
 
-
 LocalContentSuggestionSettings = _ns_module.LocalContentSuggestionSettings
 SearchPane = _ns_module.SearchPane
 SearchPaneQueryChangedEventArgs = _ns_module.SearchPaneQueryChangedEventArgs

@@ -77,37 +77,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceAudioMeasurementSystem";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceAudioNotificationKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotifications>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceAudioNotifications";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceLaneMarkers>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceLaneMarkers";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceManeuverKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceManeuverKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceMode";
     };
 
     template<>

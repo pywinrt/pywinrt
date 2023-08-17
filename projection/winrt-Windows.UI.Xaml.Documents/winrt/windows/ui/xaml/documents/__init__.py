@@ -49,9 +49,6 @@ class UnderlineStyle(enum.IntEnum):
     NONE = 0
     SINGLE = 1
 
-_ns_module._register_LogicalDirection(LogicalDirection)
-_ns_module._register_UnderlineStyle(UnderlineStyle)
-
 TextRange = _ns_module.TextRange
 Block = _ns_module.Block
 BlockCollection = _ns_module.BlockCollection

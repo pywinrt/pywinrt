@@ -43,8 +43,6 @@ class GameSaveErrorStatus(enum.IntEnum):
     USER_HAS_NO_XBOX_LIVE_INFO = -2138898420
     OBJECT_EXPIRED = -2138898419
 
-_ns_module._register_GameSaveErrorStatus(GameSaveErrorStatus)
-
 GameSaveBlobGetResult = _ns_module.GameSaveBlobGetResult
 GameSaveBlobInfo = _ns_module.GameSaveBlobInfo
 GameSaveBlobInfoGetResult = _ns_module.GameSaveBlobInfoGetResult

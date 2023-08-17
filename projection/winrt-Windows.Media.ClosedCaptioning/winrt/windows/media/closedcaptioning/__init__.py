@@ -59,10 +59,4 @@ class ClosedCaptionStyle(enum.IntEnum):
     CURSIVE = 6
     SMALL_CAPITALS = 7
 
-_ns_module._register_ClosedCaptionColor(ClosedCaptionColor)
-_ns_module._register_ClosedCaptionEdgeEffect(ClosedCaptionEdgeEffect)
-_ns_module._register_ClosedCaptionOpacity(ClosedCaptionOpacity)
-_ns_module._register_ClosedCaptionSize(ClosedCaptionSize)
-_ns_module._register_ClosedCaptionStyle(ClosedCaptionStyle)
-
 ClosedCaptionProperties = _ns_module.ClosedCaptionProperties

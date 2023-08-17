@@ -10,6 +10,4 @@ class ApplicationProfileModes(enum.IntFlag):
     DEFAULT = 0
     ALTERNATE = 0x1
 
-_ns_module._register_ApplicationProfileModes(ApplicationProfileModes)
-
 ApplicationProfile = _ns_module.ApplicationProfile

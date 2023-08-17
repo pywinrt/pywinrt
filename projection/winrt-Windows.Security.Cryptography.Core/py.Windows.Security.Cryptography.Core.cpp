@@ -8,10 +8,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 {
     struct module_state
     {
-        PyObject* type_Capi1KdfTargetAlgorithm;
-        PyObject* type_CryptographicPadding;
-        PyObject* type_CryptographicPrivateKeyBlobType;
-        PyObject* type_CryptographicPublicKeyBlobType;
         PyTypeObject* type_AsymmetricAlgorithmNames;
         PyTypeObject* type_AsymmetricKeyAlgorithmProvider;
         PyTypeObject* type_CryptographicEngine;
@@ -30,102 +26,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         PyTypeObject* type_SymmetricAlgorithmNames;
         PyTypeObject* type_SymmetricKeyAlgorithmProvider;
     };
-
-    static PyObject* register_Capi1KdfTargetAlgorithm(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Capi1KdfTargetAlgorithm)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Capi1KdfTargetAlgorithm = type;
-        Py_INCREF(state->type_Capi1KdfTargetAlgorithm);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CryptographicPadding(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CryptographicPadding)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CryptographicPadding = type;
-        Py_INCREF(state->type_CryptographicPadding);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CryptographicPrivateKeyBlobType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CryptographicPrivateKeyBlobType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CryptographicPrivateKeyBlobType = type;
-        Py_INCREF(state->type_CryptographicPrivateKeyBlobType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CryptographicPublicKeyBlobType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CryptographicPublicKeyBlobType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CryptographicPublicKeyBlobType = type;
-        Py_INCREF(state->type_CryptographicPublicKeyBlobType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AsymmetricAlgorithmNames class --------------------
     static constexpr const char* const type_name_AsymmetricAlgorithmNames = "AsymmetricAlgorithmNames";
@@ -5197,13 +5097,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     // ----- Windows.Security.Cryptography.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::Cryptography::Core");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_Capi1KdfTargetAlgorithm", register_Capi1KdfTargetAlgorithm, METH_O, "registers type"},
-        {"_register_CryptographicPadding", register_CryptographicPadding, METH_O, "registers type"},
-        {"_register_CryptographicPrivateKeyBlobType", register_CryptographicPrivateKeyBlobType, METH_O, "registers type"},
-        {"_register_CryptographicPublicKeyBlobType", register_CryptographicPublicKeyBlobType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -5214,10 +5107,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
             return 0;
         }
 
-        Py_VISIT(state->type_Capi1KdfTargetAlgorithm);
-        Py_VISIT(state->type_CryptographicPadding);
-        Py_VISIT(state->type_CryptographicPrivateKeyBlobType);
-        Py_VISIT(state->type_CryptographicPublicKeyBlobType);
         Py_VISIT(state->type_AsymmetricAlgorithmNames);
         Py_VISIT(state->type_AsymmetricKeyAlgorithmProvider);
         Py_VISIT(state->type_CryptographicEngine);
@@ -5248,10 +5137,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
             return 0;
         }
 
-        Py_CLEAR(state->type_Capi1KdfTargetAlgorithm);
-        Py_CLEAR(state->type_CryptographicPadding);
-        Py_CLEAR(state->type_CryptographicPrivateKeyBlobType);
-        Py_CLEAR(state->type_CryptographicPublicKeyBlobType);
         Py_CLEAR(state->type_AsymmetricAlgorithmNames);
         Py_CLEAR(state->type_AsymmetricKeyAlgorithmProvider);
         Py_CLEAR(state->type_CryptographicEngine);
@@ -5279,7 +5164,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
            "_winrt_Windows_Security_Cryptography_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -5454,98 +5339,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Core(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Capi1KdfTargetAlgorithm;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Core::CryptographicPadding>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CryptographicPadding;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::CryptographicPadding is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CryptographicPrivateKeyBlobType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CryptographicPublicKeyBlobType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames>::get_python_type() noexcept {

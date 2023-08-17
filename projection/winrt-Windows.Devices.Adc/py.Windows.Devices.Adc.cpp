@@ -8,34 +8,9 @@ namespace py::cpp::Windows::Devices::Adc
 {
     struct module_state
     {
-        PyObject* type_AdcChannelMode;
         PyTypeObject* type_AdcChannel;
         PyTypeObject* type_AdcController;
     };
-
-    static PyObject* register_AdcChannelMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AdcChannelMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AdcChannelMode = type;
-        Py_INCREF(state->type_AdcChannelMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AdcChannel class --------------------
     static constexpr const char* const type_name_AdcChannel = "AdcChannel";
@@ -577,10 +552,6 @@ namespace py::cpp::Windows::Devices::Adc
     // ----- Windows.Devices.Adc Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Adc");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AdcChannelMode", register_AdcChannelMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -591,7 +562,6 @@ namespace py::cpp::Windows::Devices::Adc
             return 0;
         }
 
-        Py_VISIT(state->type_AdcChannelMode);
         Py_VISIT(state->type_AdcChannel);
         Py_VISIT(state->type_AdcController);
 
@@ -607,7 +577,6 @@ namespace py::cpp::Windows::Devices::Adc
             return 0;
         }
 
-        Py_CLEAR(state->type_AdcChannelMode);
         Py_CLEAR(state->type_AdcChannel);
         Py_CLEAR(state->type_AdcController);
 
@@ -620,7 +589,7 @@ namespace py::cpp::Windows::Devices::Adc
            "_winrt_Windows_Devices_Adc",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -669,29 +638,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Adc(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Adc::AdcChannelMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Adc;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Adc");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdcChannelMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Adc::AdcChannelMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Adc::AdcChannel>::get_python_type() noexcept {

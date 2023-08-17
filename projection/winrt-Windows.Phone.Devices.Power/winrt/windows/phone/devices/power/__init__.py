@@ -9,5 +9,4 @@ try:
 except ImportError:
     pass
 
-
 Battery = _ns_module.Battery

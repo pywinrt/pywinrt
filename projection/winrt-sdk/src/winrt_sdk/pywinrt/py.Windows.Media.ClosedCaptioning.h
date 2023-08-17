@@ -49,31 +49,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionColor>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
+        static constexpr const char* type_name = "ClosedCaptionColor";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
+        static constexpr const char* type_name = "ClosedCaptionEdgeEffect";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionOpacity>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
+        static constexpr const char* type_name = "ClosedCaptionOpacity";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionSize>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
+        static constexpr const char* type_name = "ClosedCaptionSize";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionStyle>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
+        static constexpr const char* type_name = "ClosedCaptionStyle";
     };
 
     template<>

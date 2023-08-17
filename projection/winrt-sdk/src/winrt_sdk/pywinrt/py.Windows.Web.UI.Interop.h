@@ -87,19 +87,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyRoutingStage>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
+        static constexpr const char* type_name = "WebViewControlAcceleratorKeyRoutingStage";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
+        static constexpr const char* type_name = "WebViewControlMoveFocusReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlProcessCapabilityState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
+        static constexpr const char* type_name = "WebViewControlProcessCapabilityState";
     };
 
     template<>

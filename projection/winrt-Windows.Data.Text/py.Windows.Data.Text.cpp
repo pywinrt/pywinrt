@@ -8,10 +8,6 @@ namespace py::cpp::Windows::Data::Text
 {
     struct module_state
     {
-        PyObject* type_AlternateNormalizationFormat;
-        PyObject* type_TextPredictionOptions;
-        PyObject* type_UnicodeGeneralCategory;
-        PyObject* type_UnicodeNumericType;
         PyTypeObject* type_AlternateWordForm;
         PyTypeObject* type_SelectableWordSegment;
         PyTypeObject* type_SelectableWordsSegmenter;
@@ -25,102 +21,6 @@ namespace py::cpp::Windows::Data::Text
         PyTypeObject* type_WordsSegmenter;
         PyTypeObject* type_TextSegment;
     };
-
-    static PyObject* register_AlternateNormalizationFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AlternateNormalizationFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AlternateNormalizationFormat = type;
-        Py_INCREF(state->type_AlternateNormalizationFormat);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_TextPredictionOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_TextPredictionOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_TextPredictionOptions = type;
-        Py_INCREF(state->type_TextPredictionOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UnicodeGeneralCategory(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UnicodeGeneralCategory)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UnicodeGeneralCategory = type;
-        Py_INCREF(state->type_UnicodeGeneralCategory);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UnicodeNumericType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UnicodeNumericType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UnicodeNumericType = type;
-        Py_INCREF(state->type_UnicodeNumericType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AlternateWordForm class --------------------
     static constexpr const char* const type_name_AlternateWordForm = "AlternateWordForm";
@@ -2668,13 +2568,6 @@ namespace py::cpp::Windows::Data::Text
     // ----- Windows.Data.Text Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Data::Text");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AlternateNormalizationFormat", register_AlternateNormalizationFormat, METH_O, "registers type"},
-        {"_register_TextPredictionOptions", register_TextPredictionOptions, METH_O, "registers type"},
-        {"_register_UnicodeGeneralCategory", register_UnicodeGeneralCategory, METH_O, "registers type"},
-        {"_register_UnicodeNumericType", register_UnicodeNumericType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2685,10 +2578,6 @@ namespace py::cpp::Windows::Data::Text
             return 0;
         }
 
-        Py_VISIT(state->type_AlternateNormalizationFormat);
-        Py_VISIT(state->type_TextPredictionOptions);
-        Py_VISIT(state->type_UnicodeGeneralCategory);
-        Py_VISIT(state->type_UnicodeNumericType);
         Py_VISIT(state->type_AlternateWordForm);
         Py_VISIT(state->type_SelectableWordSegment);
         Py_VISIT(state->type_SelectableWordsSegmenter);
@@ -2714,10 +2603,6 @@ namespace py::cpp::Windows::Data::Text
             return 0;
         }
 
-        Py_CLEAR(state->type_AlternateNormalizationFormat);
-        Py_CLEAR(state->type_TextPredictionOptions);
-        Py_CLEAR(state->type_UnicodeGeneralCategory);
-        Py_CLEAR(state->type_UnicodeNumericType);
         Py_CLEAR(state->type_AlternateWordForm);
         Py_CLEAR(state->type_SelectableWordSegment);
         Py_CLEAR(state->type_SelectableWordsSegmenter);
@@ -2740,7 +2625,7 @@ namespace py::cpp::Windows::Data::Text
            "_winrt_Windows_Data_Text",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2849,98 +2734,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Data_Text(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Data::Text::AlternateNormalizationFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AlternateNormalizationFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::AlternateNormalizationFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Data::Text::TextPredictionOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextPredictionOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::TextPredictionOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Data::Text::UnicodeGeneralCategory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnicodeGeneralCategory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::UnicodeGeneralCategory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Data::Text::UnicodeNumericType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnicodeNumericType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::UnicodeNumericType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::AlternateWordForm>::get_python_type() noexcept {

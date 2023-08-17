@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Foundation::Collections
 {
     struct module_state
     {
-        PyObject* type_CollectionChange;
         PyTypeObject* type_PropertySet;
         PyTypeObject* type_StringMap;
         PyTypeObject* type_ValueSet;
@@ -25,30 +24,6 @@ namespace py::cpp::Windows::Foundation::Collections
         PyTypeObject* type_IVectorView;
         PyTypeObject* type_IVector;
     };
-
-    static PyObject* register_CollectionChange(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CollectionChange)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CollectionChange = type;
-        Py_INCREF(state->type_CollectionChange);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PropertySet class --------------------
     static constexpr const char* const type_name_PropertySet = "PropertySet";
@@ -3237,10 +3212,6 @@ namespace py::cpp::Windows::Foundation::Collections
     // ----- Windows.Foundation.Collections Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Foundation::Collections");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_CollectionChange", register_CollectionChange, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3251,7 +3222,6 @@ namespace py::cpp::Windows::Foundation::Collections
             return 0;
         }
 
-        Py_VISIT(state->type_CollectionChange);
         Py_VISIT(state->type_PropertySet);
         Py_VISIT(state->type_StringMap);
         Py_VISIT(state->type_ValueSet);
@@ -3280,7 +3250,6 @@ namespace py::cpp::Windows::Foundation::Collections
             return 0;
         }
 
-        Py_CLEAR(state->type_CollectionChange);
         Py_CLEAR(state->type_PropertySet);
         Py_CLEAR(state->type_StringMap);
         Py_CLEAR(state->type_ValueSet);
@@ -3306,7 +3275,7 @@ namespace py::cpp::Windows::Foundation::Collections
            "_winrt_Windows_Foundation_Collections",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3433,29 +3402,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation_Collections(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::Collections::CollectionChange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CollectionChange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Collections::CollectionChange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Collections::PropertySet>::get_python_type() noexcept {

@@ -24,7 +24,6 @@ try:
 except ImportError:
     pass
 
-
 OcrEngine = _ns_module.OcrEngine
 OcrLine = _ns_module.OcrLine
 OcrResult = _ns_module.OcrResult

@@ -37,25 +37,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
+        static constexpr const char* type_name = "PhoneNumberFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
+        static constexpr const char* type_name = "PhoneNumberMatchResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
+        static constexpr const char* type_name = "PhoneNumberParseResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
+        static constexpr const char* type_name = "PredictedPhoneNumberKind";
     };
 
     template<>

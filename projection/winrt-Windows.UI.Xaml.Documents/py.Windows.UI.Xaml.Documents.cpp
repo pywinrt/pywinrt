@@ -8,8 +8,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 {
     struct module_state
     {
-        PyObject* type_LogicalDirection;
-        PyObject* type_UnderlineStyle;
         PyTypeObject* type_Block;
         PyTypeObject* type_BlockCollection;
         PyTypeObject* type_Bold;
@@ -38,54 +36,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         PyTypeObject* type_Underline;
         PyTypeObject* type_TextRange;
     };
-
-    static PyObject* register_LogicalDirection(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LogicalDirection)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LogicalDirection = type;
-        Py_INCREF(state->type_LogicalDirection);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UnderlineStyle(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UnderlineStyle)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UnderlineStyle = type;
-        Py_INCREF(state->type_UnderlineStyle);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Block class --------------------
     static constexpr const char* const type_name_Block = "Block";
@@ -13531,11 +13481,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     // ----- Windows.UI.Xaml.Documents Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Documents");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_LogicalDirection", register_LogicalDirection, METH_O, "registers type"},
-        {"_register_UnderlineStyle", register_UnderlineStyle, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -13546,8 +13491,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return 0;
         }
 
-        Py_VISIT(state->type_LogicalDirection);
-        Py_VISIT(state->type_UnderlineStyle);
         Py_VISIT(state->type_Block);
         Py_VISIT(state->type_BlockCollection);
         Py_VISIT(state->type_Bold);
@@ -13588,8 +13531,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return 0;
         }
 
-        Py_CLEAR(state->type_LogicalDirection);
-        Py_CLEAR(state->type_UnderlineStyle);
         Py_CLEAR(state->type_Block);
         Py_CLEAR(state->type_BlockCollection);
         Py_CLEAR(state->type_Bold);
@@ -13627,7 +13568,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
            "_winrt_Windows_UI_Xaml_Documents",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -13880,52 +13821,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Documents::LogicalDirection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LogicalDirection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::LogicalDirection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Documents::UnderlineStyle>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnderlineStyle;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::UnderlineStyle is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Block>::get_python_type() noexcept {

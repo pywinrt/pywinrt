@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 InkWorkspaceHostedAppManager = _ns_module.InkWorkspaceHostedAppManager

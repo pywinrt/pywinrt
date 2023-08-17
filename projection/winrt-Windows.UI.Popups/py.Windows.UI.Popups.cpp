@@ -8,62 +8,12 @@ namespace py::cpp::Windows::UI::Popups
 {
     struct module_state
     {
-        PyObject* type_MessageDialogOptions;
-        PyObject* type_Placement;
         PyTypeObject* type_MessageDialog;
         PyTypeObject* type_PopupMenu;
         PyTypeObject* type_UICommand;
         PyTypeObject* type_UICommandSeparator;
         PyTypeObject* type_IUICommand;
     };
-
-    static PyObject* register_MessageDialogOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MessageDialogOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MessageDialogOptions = type;
-        Py_INCREF(state->type_MessageDialogOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_Placement(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Placement)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Placement = type;
-        Py_INCREF(state->type_Placement);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- MessageDialog class --------------------
     static constexpr const char* const type_name_MessageDialog = "MessageDialog";
@@ -1428,11 +1378,6 @@ namespace py::cpp::Windows::UI::Popups
     // ----- Windows.UI.Popups Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Popups");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_MessageDialogOptions", register_MessageDialogOptions, METH_O, "registers type"},
-        {"_register_Placement", register_Placement, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1443,8 +1388,6 @@ namespace py::cpp::Windows::UI::Popups
             return 0;
         }
 
-        Py_VISIT(state->type_MessageDialogOptions);
-        Py_VISIT(state->type_Placement);
         Py_VISIT(state->type_MessageDialog);
         Py_VISIT(state->type_PopupMenu);
         Py_VISIT(state->type_UICommand);
@@ -1463,8 +1406,6 @@ namespace py::cpp::Windows::UI::Popups
             return 0;
         }
 
-        Py_CLEAR(state->type_MessageDialogOptions);
-        Py_CLEAR(state->type_Placement);
         Py_CLEAR(state->type_MessageDialog);
         Py_CLEAR(state->type_PopupMenu);
         Py_CLEAR(state->type_UICommand);
@@ -1480,7 +1421,7 @@ namespace py::cpp::Windows::UI::Popups
            "_winrt_Windows_UI_Popups",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1547,52 +1488,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Popups(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Popups::MessageDialogOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Popups;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Popups");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MessageDialogOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Popups::MessageDialogOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Popups::Placement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Popups;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Popups");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Placement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Popups::Placement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Popups::MessageDialog>::get_python_type() noexcept {

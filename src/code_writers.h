@@ -191,14 +191,6 @@ namespace pywinrt
     }
 
     /**
-     * Writes a method call to register a pure Python type.
-     */
-    void write_py_type_registration(writer& w, TypeDef const& type)
-    {
-        w.write("_ns_module._register_%(%)\n", type.TypeName(), type.TypeName());
-    }
-
-    /**
      * Writes a CppWinRT include statement for a namespace.
      */
     void write_winrt_include(writer& w, std::string_view const& ns)
@@ -311,7 +303,7 @@ catch (...)
     }
 
     /**
-     * Writes the pure Python type specialization struct.
+     * Writes the type specialization for the py_type struct.
      */
     void write_py_type_specialization_struct(writer& w, TypeDef const& type)
     {
@@ -324,54 +316,16 @@ catch (...)
 template<>
 struct py_type<%>
 {
-    static PyObject* get_python_type() noexcept;
+    static constexpr const char* module_name = "%.%";
+    static constexpr const char* type_name = "%";
 };
 )";
-        w.write(format, bind<write_python_wrapper_template_type>(type));
-    }
-
-    /**
-     * Writes the pure Python type getter function implementation.
-     */
-    void write_get_py_type_definition(writer& w, TypeDef const& type)
-    {
-        if (is_exclusive_to(type))
-        {
-            return;
-        }
-
-        auto format = R"(
-PyObject* py::py_type<%>::get_python_type() noexcept {
-    using namespace py::cpp::%;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for %");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_@;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type % is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-)";
-
         w.write(
             format,
             bind<write_python_wrapper_template_type>(type),
-            bind<write_type_namespace>(type),
-            bind<write_type_namespace>(type),
-            type.TypeName(),
-            bind<write_python_wrapper_template_type>(type));
+            settings.module,
+            bind<write_lower_case>(type.TypeNamespace()),
+            type.TypeName());
     }
 
     /**
@@ -501,36 +455,6 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
     }
 
     /**
-     * Writes a module method table item for a pure Python type registration method.
-     */
-    void write_ns_module_register_py_type_method_def(writer& w, TypeDef const& type)
-    {
-        w.write(
-            "{\"_register_%\", register_%, METH_O, \"registers type\"},\n",
-            type.TypeName(),
-            type.TypeName());
-    }
-
-    /**
-     * Writes the module method table for the namespace module.
-     * @param w The writer.
-     * @param members The namespace module members.
-     */
-    void write_ns_module_method_table(
-        writer& w, cache::namespace_members const& members)
-    {
-        w.write("static PyMethodDef module_methods[] = {\n");
-        {
-            writer::indent_guard g{w};
-
-            settings.filter.bind_each<write_ns_module_register_py_type_method_def>(
-                members.enums)(w);
-
-            w.write("{}};\n\n");
-        }
-    }
-
-    /**
      * Writes the type initialization for a binary extension Python type inside
      * the module init function.
      */
@@ -641,7 +565,6 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
         {
             writer::indent_guard g{w};
 
-            settings.filter.bind_each<write_ns_module_py_type_member>(members.enums)(w);
             settings.filter.bind_each<write_ns_module_python_type_member>(
                 members.classes)(w);
             settings.filter.bind_each<write_ns_module_python_type_member>(
@@ -700,7 +623,6 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
             }
             w.write("}\n\n");
 
-            settings.filter.bind_each<write_ns_module_visit_member>(members.enums)(w);
             settings.filter.bind_each<write_ns_module_visit_member>(members.classes)(w);
             settings.filter.bind_each<write_ns_module_visit_member>(members.interfaces)(
                 w);
@@ -749,7 +671,6 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
             }
             w.write("}\n\n");
 
-            settings.filter.bind_each<write_ns_module_clear_member>(members.enums)(w);
             settings.filter.bind_each<write_ns_module_clear_member>(members.classes)(w);
             settings.filter.bind_each<write_ns_module_clear_member>(members.interfaces)(
                 w);
@@ -771,7 +692,7 @@ static PyModuleDef module_def
        "%",
        module_doc,
        sizeof(module_state),
-       module_methods,
+       nullptr,
        nullptr,
        module_traverse,
        module_clear,
@@ -791,7 +712,6 @@ static PyModuleDef module_def
         w.write("\n// ----- % Initialization --------------------\n", ns);
 
         write_ns_module_doc_string(w, ns);
-        write_ns_module_method_table(w, members);
         write_ns_module_traverse_func(w, members);
         write_ns_module_clear_func(w, members);
         write_ns_module_def_struct(w, ns);
@@ -2638,50 +2558,6 @@ static PyType_Spec type_spec_@_Meta =
             w.write("struct");
             break;
         }
-    }
-
-    /**
-     * Writes an pure Python type registration method.
-     */
-    void write_py_type_registration_method(writer& w, TypeDef const& type)
-    {
-        w.write(
-            "\nstatic PyObject* register_%(PyObject* module, PyObject* type) noexcept\n{\n",
-            type.TypeName());
-        {
-            writer::indent_guard g{w};
-
-            w.write(
-                "auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));\n");
-
-            w.write("WINRT_ASSERT(state);\n\n");
-
-            w.write("if (state->type_@)\n{\n", type.TypeName());
-            {
-                writer::indent_guard gg{w};
-
-                w.write(
-                    "PyErr_SetString(PyExc_RuntimeError, \"type has already been registered\");\n");
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write("if (!PyType_Check(type))\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write(
-                    "PyErr_SetString(PyExc_TypeError, \"argument is not a type\");\n");
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
-
-            w.write("state->type_@ = type;\n", type.TypeName());
-            w.write("Py_INCREF(state->type_@);\n\n", type.TypeName());
-
-            w.write("\nPy_RETURN_NONE;\n");
-        }
-        w.write("}\n");
     }
 
     void write_inspectable_type(writer& w, TypeDef const& type)

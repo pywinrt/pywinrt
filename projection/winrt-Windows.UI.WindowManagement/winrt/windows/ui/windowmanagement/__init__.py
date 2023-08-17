@@ -54,12 +54,6 @@ class WindowingEnvironmentKind(enum.IntEnum):
     OVERLAPPED = 1
     TILED = 2
 
-_ns_module._register_AppWindowClosedReason(AppWindowClosedReason)
-_ns_module._register_AppWindowFrameStyle(AppWindowFrameStyle)
-_ns_module._register_AppWindowPresentationKind(AppWindowPresentationKind)
-_ns_module._register_AppWindowTitleBarVisibility(AppWindowTitleBarVisibility)
-_ns_module._register_WindowingEnvironmentKind(WindowingEnvironmentKind)
-
 AppWindow = _ns_module.AppWindow
 AppWindowChangedEventArgs = _ns_module.AppWindowChangedEventArgs
 AppWindowCloseRequestedEventArgs = _ns_module.AppWindowCloseRequestedEventArgs

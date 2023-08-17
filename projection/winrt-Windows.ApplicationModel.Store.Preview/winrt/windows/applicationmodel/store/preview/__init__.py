@@ -100,12 +100,6 @@ class StoreSystemFeature(enum.IntEnum):
     VIDEO_MEMORY1_G_B = 33
     ARCHITECTURE_ARM64 = 34
 
-_ns_module._register_DeliveryOptimizationDownloadMode(DeliveryOptimizationDownloadMode)
-_ns_module._register_DeliveryOptimizationDownloadModeSource(DeliveryOptimizationDownloadModeSource)
-_ns_module._register_StoreLogOptions(StoreLogOptions)
-_ns_module._register_StorePreviewProductPurchaseStatus(StorePreviewProductPurchaseStatus)
-_ns_module._register_StoreSystemFeature(StoreSystemFeature)
-
 DeliveryOptimizationSettings = _ns_module.DeliveryOptimizationSettings
 StoreConfiguration = _ns_module.StoreConfiguration
 StoreHardwareManufacturerInfo = _ns_module.StoreHardwareManufacturerInfo

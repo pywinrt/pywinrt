@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 HolographicKeyboard = _ns_module.HolographicKeyboard

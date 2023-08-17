@@ -25,9 +25,5 @@ class HostNameType(enum.IntEnum):
     IPV6 = 2
     BLUETOOTH = 3
 
-_ns_module._register_DomainNameType(DomainNameType)
-_ns_module._register_HostNameSortOptions(HostNameSortOptions)
-_ns_module._register_HostNameType(HostNameType)
-
 EndpointPair = _ns_module.EndpointPair
 HostName = _ns_module.HostName

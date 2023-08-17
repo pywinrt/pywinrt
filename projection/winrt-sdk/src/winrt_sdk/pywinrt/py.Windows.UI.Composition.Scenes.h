@@ -77,25 +77,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Scenes::SceneAlphaMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneAlphaMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::Scenes::SceneAttributeSemantic>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneAttributeSemantic";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::Scenes::SceneComponentType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneComponentType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::Scenes::SceneWrappingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneWrappingMode";
     };
 
     template<>

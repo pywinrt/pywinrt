@@ -61,19 +61,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
+        static constexpr const char* type_name = "SpeechAppendedSilence";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
+        static constexpr const char* type_name = "SpeechPunctuationSilence";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SpeechSynthesis::VoiceGender>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
+        static constexpr const char* type_name = "VoiceGender";
     };
 
     template<>

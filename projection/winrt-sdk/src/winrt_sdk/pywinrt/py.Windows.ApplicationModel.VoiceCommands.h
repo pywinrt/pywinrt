@@ -69,13 +69,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandCompletionReason";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandContentTileType";
     };
 
     template<>

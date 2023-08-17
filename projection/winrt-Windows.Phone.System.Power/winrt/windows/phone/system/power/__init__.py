@@ -15,6 +15,4 @@ class PowerSavingMode(enum.IntEnum):
     OFF = 0
     ON = 1
 
-_ns_module._register_PowerSavingMode(PowerSavingMode)
-
 PowerManager = _ns_module.PowerManager

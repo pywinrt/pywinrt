@@ -74,13 +74,6 @@ class TileSize(enum.IntEnum):
     SQUARE71X71 = 6
     SQUARE44X44 = 7
 
-_ns_module._register_ForegroundText(ForegroundText)
-_ns_module._register_JumpListItemKind(JumpListItemKind)
-_ns_module._register_JumpListSystemGroupKind(JumpListSystemGroupKind)
-_ns_module._register_TileMixedRealityModelActivationBehavior(TileMixedRealityModelActivationBehavior)
-_ns_module._register_TileOptions(TileOptions)
-_ns_module._register_TileSize(TileSize)
-
 JumpList = _ns_module.JumpList
 JumpListItem = _ns_module.JumpListItem
 SecondaryTile = _ns_module.SecondaryTile

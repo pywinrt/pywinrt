@@ -14,6 +14,5 @@ try:
 except ImportError:
     pass
 
-
 PhoneCallOrigin = _ns_module.PhoneCallOrigin
 PhoneCallOriginManager = _ns_module.PhoneCallOriginManager

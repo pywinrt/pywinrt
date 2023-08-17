@@ -121,9 +121,6 @@ namespace py::cpp::Windows::Management::Core
     // ----- Windows.Management.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Management::Core");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -159,7 +156,7 @@ namespace py::cpp::Windows::Management::Core
            "_winrt_Windows_Management_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

@@ -19,7 +19,6 @@ try:
 except ImportError:
     pass
 
-
 PaymentAppCanMakePaymentTriggerDetails = _ns_module.PaymentAppCanMakePaymentTriggerDetails
 PaymentAppManager = _ns_module.PaymentAppManager
 PaymentTransaction = _ns_module.PaymentTransaction

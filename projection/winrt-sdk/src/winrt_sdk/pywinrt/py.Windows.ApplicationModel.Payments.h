@@ -99,37 +99,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentCanMakePaymentResultStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentOptionPresence";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangeKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentRequestChangeKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestCompletionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentRequestCompletionStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentRequestStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentShippingType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentShippingType";
     };
 
     template<>

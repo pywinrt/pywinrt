@@ -64,10 +64,6 @@ class LearningModelFeatureKindPreview(enum.IntEnum):
     MAP = 3
     IMAGE = 4
 
-_ns_module._register_FeatureElementKindPreview(FeatureElementKindPreview)
-_ns_module._register_LearningModelDeviceKindPreview(LearningModelDeviceKindPreview)
-_ns_module._register_LearningModelFeatureKindPreview(LearningModelFeatureKindPreview)
-
 ImageVariableDescriptorPreview = _ns_module.ImageVariableDescriptorPreview
 InferencingOptionsPreview = _ns_module.InferencingOptionsPreview
 LearningModelBindingPreview = _ns_module.LearningModelBindingPreview

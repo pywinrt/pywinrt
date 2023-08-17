@@ -124,79 +124,92 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatConversationThreadingKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatItemKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatItemKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatMessageChangeType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatMessageKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageOperatorKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatMessageOperatorKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatMessageStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageTransportKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatMessageTransportKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageValidationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatMessageValidationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatRestoreHistorySpan>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatRestoreHistorySpan";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatStoreChangedEventKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatStoreChangedEventKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatTransportErrorCodeCategory>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatTransportErrorCodeCategory";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatTransportInterpretedErrorCode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "ChatTransportInterpretedErrorCode";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsServiceKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
+        static constexpr const char* type_name = "RcsServiceKind";
     };
 
     template<>

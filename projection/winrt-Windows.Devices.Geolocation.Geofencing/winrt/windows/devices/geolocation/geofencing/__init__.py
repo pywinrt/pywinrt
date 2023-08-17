@@ -45,11 +45,6 @@ class MonitoredGeofenceStates(enum.IntFlag):
     EXITED = 0x2
     REMOVED = 0x4
 
-_ns_module._register_GeofenceMonitorStatus(GeofenceMonitorStatus)
-_ns_module._register_GeofenceRemovalReason(GeofenceRemovalReason)
-_ns_module._register_GeofenceState(GeofenceState)
-_ns_module._register_MonitoredGeofenceStates(MonitoredGeofenceStates)
-
 Geofence = _ns_module.Geofence
 GeofenceMonitor = _ns_module.GeofenceMonitor
 GeofenceStateChangeReport = _ns_module.GeofenceStateChangeReport

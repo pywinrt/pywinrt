@@ -57,11 +57,6 @@ class DialDeviceDisplayStatus(enum.IntEnum):
     DISCONNECTED = 4
     ERROR = 5
 
-_ns_module._register_DialAppLaunchResult(DialAppLaunchResult)
-_ns_module._register_DialAppState(DialAppState)
-_ns_module._register_DialAppStopResult(DialAppStopResult)
-_ns_module._register_DialDeviceDisplayStatus(DialDeviceDisplayStatus)
-
 DialApp = _ns_module.DialApp
 DialAppStateDetails = _ns_module.DialAppStateDetails
 DialDevice = _ns_module.DialDevice

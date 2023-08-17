@@ -8,39 +8,10 @@ namespace py::cpp::Windows::Phone::Speech::Recognition
 {
     struct module_state
     {
-        PyObject* type_SpeechRecognitionUIStatus;
     };
-
-    static PyObject* register_SpeechRecognitionUIStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechRecognitionUIStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechRecognitionUIStatus = type;
-        Py_INCREF(state->type_SpeechRecognitionUIStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Windows.Phone.Speech.Recognition Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Phone::Speech::Recognition");
-
-    static PyMethodDef module_methods[] = {
-        {"_register_SpeechRecognitionUIStatus", register_SpeechRecognitionUIStatus, METH_O, "registers type"},
-        {}};
 
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
@@ -52,7 +23,6 @@ namespace py::cpp::Windows::Phone::Speech::Recognition
             return 0;
         }
 
-        Py_VISIT(state->type_SpeechRecognitionUIStatus);
 
         return 0;
     }
@@ -66,7 +36,6 @@ namespace py::cpp::Windows::Phone::Speech::Recognition
             return 0;
         }
 
-        Py_CLEAR(state->type_SpeechRecognitionUIStatus);
 
         return 0;
     }
@@ -77,7 +46,7 @@ namespace py::cpp::Windows::Phone::Speech::Recognition
            "_winrt_Windows_Phone_Speech_Recognition",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -114,27 +83,4 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_Speech_Recognition(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::Speech::Recognition::SpeechRecognitionUIStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Speech::Recognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Speech::Recognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionUIStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Speech::Recognition::SpeechRecognitionUIStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

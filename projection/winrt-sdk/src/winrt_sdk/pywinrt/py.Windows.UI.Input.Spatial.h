@@ -111,31 +111,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Spatial::SpatialGestureSettings>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialGestureSettings";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionPressKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionPressKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionSourceHandedness";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionSourceKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourcePositionAccuracy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionSourcePositionAccuracy";
     };
 
     template<>

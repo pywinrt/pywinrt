@@ -8,9 +8,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
 {
     struct module_state
     {
-        PyObject* type_BindingMode;
-        PyObject* type_RelativeSourceMode;
-        PyObject* type_UpdateSourceTrigger;
         PyTypeObject* type_Binding;
         PyTypeObject* type_BindingBase;
         PyTypeObject* type_BindingExpression;
@@ -33,78 +30,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         PyTypeObject* type_IValueConverter;
         PyTypeObject* type_LoadMoreItemsResult;
     };
-
-    static PyObject* register_BindingMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BindingMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BindingMode = type;
-        Py_INCREF(state->type_BindingMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_RelativeSourceMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_RelativeSourceMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_RelativeSourceMode = type;
-        Py_INCREF(state->type_RelativeSourceMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UpdateSourceTrigger(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UpdateSourceTrigger)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UpdateSourceTrigger = type;
-        Py_INCREF(state->type_UpdateSourceTrigger);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Binding class --------------------
     static constexpr const char* const type_name_Binding = "Binding";
@@ -4784,12 +4709,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     // ----- Windows.UI.Xaml.Data Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Data");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_BindingMode", register_BindingMode, METH_O, "registers type"},
-        {"_register_RelativeSourceMode", register_RelativeSourceMode, METH_O, "registers type"},
-        {"_register_UpdateSourceTrigger", register_UpdateSourceTrigger, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4800,9 +4719,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
             return 0;
         }
 
-        Py_VISIT(state->type_BindingMode);
-        Py_VISIT(state->type_RelativeSourceMode);
-        Py_VISIT(state->type_UpdateSourceTrigger);
         Py_VISIT(state->type_Binding);
         Py_VISIT(state->type_BindingBase);
         Py_VISIT(state->type_BindingExpression);
@@ -4837,9 +4753,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
             return 0;
         }
 
-        Py_CLEAR(state->type_BindingMode);
-        Py_CLEAR(state->type_RelativeSourceMode);
-        Py_CLEAR(state->type_UpdateSourceTrigger);
         Py_CLEAR(state->type_Binding);
         Py_CLEAR(state->type_BindingBase);
         Py_CLEAR(state->type_BindingExpression);
@@ -4871,7 +4784,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
            "_winrt_Windows_UI_Xaml_Data",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -5040,75 +4953,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Data(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Data::BindingMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Data;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Data");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BindingMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Data::BindingMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Data::RelativeSourceMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Data;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Data");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RelativeSourceMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Data::RelativeSourceMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Data::UpdateSourceTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Data;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Data");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UpdateSourceTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Data::UpdateSourceTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Data::Binding>::get_python_type() noexcept {

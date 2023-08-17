@@ -22,8 +22,6 @@ class VibrationAccessStatus(enum.IntEnum):
     DENIED_BY_SYSTEM = 2
     DENIED_BY_ENERGY_SAVER = 3
 
-_ns_module._register_VibrationAccessStatus(VibrationAccessStatus)
-
 KnownSimpleHapticsControllerWaveforms = _ns_module.KnownSimpleHapticsControllerWaveforms
 SimpleHapticsController = _ns_module.SimpleHapticsController
 SimpleHapticsControllerFeedback = _ns_module.SimpleHapticsControllerFeedback

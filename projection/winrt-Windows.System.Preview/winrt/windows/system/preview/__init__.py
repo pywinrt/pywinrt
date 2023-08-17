@@ -24,8 +24,6 @@ class HingeState(enum.IntEnum):
     CONVEX = 4
     FULL = 5
 
-_ns_module._register_HingeState(HingeState)
-
 TwoPanelHingedDevicePosturePreview = _ns_module.TwoPanelHingedDevicePosturePreview
 TwoPanelHingedDevicePosturePreviewReading = _ns_module.TwoPanelHingedDevicePosturePreviewReading
 TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = _ns_module.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs

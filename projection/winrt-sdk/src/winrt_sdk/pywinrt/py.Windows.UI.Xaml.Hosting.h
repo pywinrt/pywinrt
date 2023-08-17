@@ -73,13 +73,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "DesignerAppViewState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "XamlSourceFocusNavigationReason";
     };
 
     template<>

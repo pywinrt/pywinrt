@@ -123,18 +123,6 @@ class SmsModemErrorCode(enum.IntEnum):
     NETWORK_FAILURE = 10
     FIXED_DIALING_NUMBER_RESTRICTED = 11
 
-_ns_module._register_CellularClass(CellularClass)
-_ns_module._register_SmsBroadcastType(SmsBroadcastType)
-_ns_module._register_SmsDataFormat(SmsDataFormat)
-_ns_module._register_SmsDeviceStatus(SmsDeviceStatus)
-_ns_module._register_SmsEncoding(SmsEncoding)
-_ns_module._register_SmsFilterActionType(SmsFilterActionType)
-_ns_module._register_SmsGeographicalScope(SmsGeographicalScope)
-_ns_module._register_SmsMessageClass(SmsMessageClass)
-_ns_module._register_SmsMessageFilter(SmsMessageFilter)
-_ns_module._register_SmsMessageType(SmsMessageType)
-_ns_module._register_SmsModemErrorCode(SmsModemErrorCode)
-
 SmsEncodedLength = _ns_module.SmsEncodedLength
 DeleteSmsMessageOperation = _ns_module.DeleteSmsMessageOperation
 DeleteSmsMessagesOperation = _ns_module.DeleteSmsMessagesOperation

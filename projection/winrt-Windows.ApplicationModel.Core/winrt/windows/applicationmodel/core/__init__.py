@@ -42,8 +42,6 @@ class AppRestartFailureReason(enum.IntEnum):
     INVALID_USER = 2
     OTHER = 3
 
-_ns_module._register_AppRestartFailureReason(AppRestartFailureReason)
-
 AppListEntry = _ns_module.AppListEntry
 CoreApplication = _ns_module.CoreApplication
 CoreApplicationView = _ns_module.CoreApplicationView

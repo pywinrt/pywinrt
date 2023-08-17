@@ -37,11 +37,6 @@ class PreviewTeamViewCommand(enum.IntEnum):
     TOGGLE_SCREEN_SHARING = 7
     TOGGLE_FULL_SCREEN = 8
 
-_ns_module._register_PreviewMeetingInfoDisplayKind(PreviewMeetingInfoDisplayKind)
-_ns_module._register_PreviewSystemState(PreviewSystemState)
-_ns_module._register_PreviewTeamEndMeetingKind(PreviewTeamEndMeetingKind)
-_ns_module._register_PreviewTeamViewCommand(PreviewTeamViewCommand)
-
 PreviewTeamCleanupRequestedEventArgs = _ns_module.PreviewTeamCleanupRequestedEventArgs
 PreviewTeamCommandInvokedEventArgs = _ns_module.PreviewTeamCommandInvokedEventArgs
 PreviewTeamDeviceCredentials = _ns_module.PreviewTeamDeviceCredentials

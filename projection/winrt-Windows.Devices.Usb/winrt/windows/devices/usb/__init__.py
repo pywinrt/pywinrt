@@ -55,13 +55,6 @@ class UsbWriteOptions(enum.IntFlag):
     AUTO_CLEAR_STALL = 0x1
     SHORT_PACKET_TERMINATE = 0x2
 
-_ns_module._register_UsbControlRecipient(UsbControlRecipient)
-_ns_module._register_UsbControlTransferType(UsbControlTransferType)
-_ns_module._register_UsbEndpointType(UsbEndpointType)
-_ns_module._register_UsbReadOptions(UsbReadOptions)
-_ns_module._register_UsbTransferDirection(UsbTransferDirection)
-_ns_module._register_UsbWriteOptions(UsbWriteOptions)
-
 UsbBulkInEndpointDescriptor = _ns_module.UsbBulkInEndpointDescriptor
 UsbBulkInPipe = _ns_module.UsbBulkInPipe
 UsbBulkOutEndpointDescriptor = _ns_module.UsbBulkOutEndpointDescriptor

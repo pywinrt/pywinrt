@@ -60,9 +60,6 @@ class WorkflowPrintTicketValidationStatus(enum.IntEnum):
     CONFLICTING = 1
     INVALID = 2
 
-_ns_module._register_SettingsLaunchKind(SettingsLaunchKind)
-_ns_module._register_WorkflowPrintTicketValidationStatus(WorkflowPrintTicketValidationStatus)
-
 PrintSupportExtensionSession = _ns_module.PrintSupportExtensionSession
 PrintSupportExtensionTriggerDetails = _ns_module.PrintSupportExtensionTriggerDetails
 PrintSupportPrintDeviceCapabilitiesChangedEventArgs = _ns_module.PrintSupportPrintDeviceCapabilitiesChangedEventArgs

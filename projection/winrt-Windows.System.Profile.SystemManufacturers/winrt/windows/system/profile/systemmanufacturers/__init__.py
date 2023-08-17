@@ -9,7 +9,6 @@ try:
 except ImportError:
     pass
 
-
 OemSupportInfo = _ns_module.OemSupportInfo
 SmbiosInformation = _ns_module.SmbiosInformation
 SystemSupportDeviceInfo = _ns_module.SystemSupportDeviceInfo

@@ -24,6 +24,5 @@ try:
 except ImportError:
     pass
 
-
 QuickLink = _ns_module.QuickLink
 ShareOperation = _ns_module.ShareOperation

@@ -41,9 +41,4 @@ class DisplayMonitorUsageKind(enum.IntEnum):
     HEAD_MOUNTED = 1
     SPECIAL_PURPOSE = 2
 
-_ns_module._register_DisplayMonitorConnectionKind(DisplayMonitorConnectionKind)
-_ns_module._register_DisplayMonitorDescriptorKind(DisplayMonitorDescriptorKind)
-_ns_module._register_DisplayMonitorPhysicalConnectorKind(DisplayMonitorPhysicalConnectorKind)
-_ns_module._register_DisplayMonitorUsageKind(DisplayMonitorUsageKind)
-
 DisplayMonitor = _ns_module.DisplayMonitor

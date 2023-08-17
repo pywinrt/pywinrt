@@ -8,33 +8,8 @@ namespace py::cpp::Windows::Phone::ApplicationModel
 {
     struct module_state
     {
-        PyObject* type_ApplicationProfileModes;
         PyTypeObject* type_ApplicationProfile;
     };
-
-    static PyObject* register_ApplicationProfileModes(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ApplicationProfileModes)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ApplicationProfileModes = type;
-        Py_INCREF(state->type_ApplicationProfileModes);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ApplicationProfile class --------------------
     static constexpr const char* const type_name_ApplicationProfile = "ApplicationProfile";
@@ -113,10 +88,6 @@ namespace py::cpp::Windows::Phone::ApplicationModel
     // ----- Windows.Phone.ApplicationModel Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Phone::ApplicationModel");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ApplicationProfileModes", register_ApplicationProfileModes, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -127,7 +98,6 @@ namespace py::cpp::Windows::Phone::ApplicationModel
             return 0;
         }
 
-        Py_VISIT(state->type_ApplicationProfileModes);
         Py_VISIT(state->type_ApplicationProfile);
 
         return 0;
@@ -142,7 +112,6 @@ namespace py::cpp::Windows::Phone::ApplicationModel
             return 0;
         }
 
-        Py_CLEAR(state->type_ApplicationProfileModes);
         Py_CLEAR(state->type_ApplicationProfile);
 
         return 0;
@@ -154,7 +123,7 @@ namespace py::cpp::Windows::Phone::ApplicationModel
            "_winrt_Windows_Phone_ApplicationModel",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -203,29 +172,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_ApplicationModel(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::ApplicationModel::ApplicationProfileModes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::ApplicationModel;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::ApplicationModel");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationProfileModes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::ApplicationModel::ApplicationProfileModes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Phone::ApplicationModel::ApplicationProfile>::get_python_type() noexcept {

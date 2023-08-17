@@ -8,9 +8,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 {
     struct module_state
     {
-        PyObject* type_CoreInputViewKind;
-        PyObject* type_CoreInputViewOcclusionKind;
-        PyObject* type_CoreInputViewXYFocusTransferDirection;
         PyTypeObject* type_CoreFrameworkInputView;
         PyTypeObject* type_CoreFrameworkInputViewAnimationStartingEventArgs;
         PyTypeObject* type_CoreFrameworkInputViewOcclusionsChangedEventArgs;
@@ -23,78 +20,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         PyTypeObject* type_CoreInputViewTransferringXYFocusEventArgs;
         PyTypeObject* type_UISettingsController;
     };
-
-    static PyObject* register_CoreInputViewKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CoreInputViewKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CoreInputViewKind = type;
-        Py_INCREF(state->type_CoreInputViewKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CoreInputViewOcclusionKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CoreInputViewOcclusionKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CoreInputViewOcclusionKind = type;
-        Py_INCREF(state->type_CoreInputViewOcclusionKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CoreInputViewXYFocusTransferDirection(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CoreInputViewXYFocusTransferDirection)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CoreInputViewXYFocusTransferDirection = type;
-        Py_INCREF(state->type_CoreInputViewXYFocusTransferDirection);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CoreFrameworkInputView class --------------------
     static constexpr const char* const type_name_CoreFrameworkInputView = "CoreFrameworkInputView";
@@ -2375,12 +2300,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     // ----- Windows.UI.ViewManagement.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::ViewManagement::Core");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_CoreInputViewKind", register_CoreInputViewKind, METH_O, "registers type"},
-        {"_register_CoreInputViewOcclusionKind", register_CoreInputViewOcclusionKind, METH_O, "registers type"},
-        {"_register_CoreInputViewXYFocusTransferDirection", register_CoreInputViewXYFocusTransferDirection, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2391,9 +2310,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
             return 0;
         }
 
-        Py_VISIT(state->type_CoreInputViewKind);
-        Py_VISIT(state->type_CoreInputViewOcclusionKind);
-        Py_VISIT(state->type_CoreInputViewXYFocusTransferDirection);
         Py_VISIT(state->type_CoreFrameworkInputView);
         Py_VISIT(state->type_CoreFrameworkInputViewAnimationStartingEventArgs);
         Py_VISIT(state->type_CoreFrameworkInputViewOcclusionsChangedEventArgs);
@@ -2418,9 +2334,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
             return 0;
         }
 
-        Py_CLEAR(state->type_CoreInputViewKind);
-        Py_CLEAR(state->type_CoreInputViewOcclusionKind);
-        Py_CLEAR(state->type_CoreInputViewXYFocusTransferDirection);
         Py_CLEAR(state->type_CoreFrameworkInputView);
         Py_CLEAR(state->type_CoreFrameworkInputViewAnimationStartingEventArgs);
         Py_CLEAR(state->type_CoreFrameworkInputViewOcclusionsChangedEventArgs);
@@ -2442,7 +2355,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
            "_winrt_Windows_UI_ViewManagement_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2545,75 +2458,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ViewManagement_Core(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInputViewKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInputViewOcclusionKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInputViewXYFocusTransferDirection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView>::get_python_type() noexcept {

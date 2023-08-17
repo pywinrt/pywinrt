@@ -41,8 +41,6 @@ class LocalLocationFinderStatus(enum.IntEnum):
     NETWORK_FAILURE = 6
     NOT_SUPPORTED = 7
 
-_ns_module._register_LocalLocationFinderStatus(LocalLocationFinderStatus)
-
 LocalCategories = _ns_module.LocalCategories
 LocalLocation = _ns_module.LocalLocation
 LocalLocationFinder = _ns_module.LocalLocationFinder

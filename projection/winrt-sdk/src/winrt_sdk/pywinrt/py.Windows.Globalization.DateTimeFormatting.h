@@ -55,43 +55,50 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::DayFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
+        static constexpr const char* type_name = "DayFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::DayOfWeekFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
+        static constexpr const char* type_name = "DayOfWeekFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::HourFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
+        static constexpr const char* type_name = "HourFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::MinuteFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
+        static constexpr const char* type_name = "MinuteFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::MonthFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
+        static constexpr const char* type_name = "MonthFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::SecondFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
+        static constexpr const char* type_name = "SecondFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::YearFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
+        static constexpr const char* type_name = "YearFormat";
     };
 
     template<>

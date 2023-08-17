@@ -69,25 +69,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "GipFirmwareUpdateStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GipMessageClass>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "GipMessageClass";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::XusbDeviceSubtype>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "XusbDeviceSubtype";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::XusbDeviceType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "XusbDeviceType";
     };
 
     template<>

@@ -9,6 +9,5 @@ try:
 except ImportError:
     pass
 
-
 IPwmControllerProvider = _ns_module.IPwmControllerProvider
 IPwmProvider = _ns_module.IPwmProvider

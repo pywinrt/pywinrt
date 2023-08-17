@@ -48,7 +48,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletItemAppAssociation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet.system";
+        static constexpr const char* type_name = "WalletItemAppAssociation";
     };
 
     template<>

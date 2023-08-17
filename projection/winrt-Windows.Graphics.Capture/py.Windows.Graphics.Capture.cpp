@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Graphics::Capture
 {
     struct module_state
     {
-        PyObject* type_GraphicsCaptureAccessKind;
         PyTypeObject* type_Direct3D11CaptureFrame;
         PyTypeObject* type_Direct3D11CaptureFramePool;
         PyTypeObject* type_GraphicsCaptureAccess;
@@ -16,30 +15,6 @@ namespace py::cpp::Windows::Graphics::Capture
         PyTypeObject* type_GraphicsCapturePicker;
         PyTypeObject* type_GraphicsCaptureSession;
     };
-
-    static PyObject* register_GraphicsCaptureAccessKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GraphicsCaptureAccessKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GraphicsCaptureAccessKind = type;
-        Py_INCREF(state->type_GraphicsCaptureAccessKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Direct3D11CaptureFrame class --------------------
     static constexpr const char* const type_name_Direct3D11CaptureFrame = "Direct3D11CaptureFrame";
@@ -1328,10 +1303,6 @@ namespace py::cpp::Windows::Graphics::Capture
     // ----- Windows.Graphics.Capture Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Capture");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_GraphicsCaptureAccessKind", register_GraphicsCaptureAccessKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1342,7 +1313,6 @@ namespace py::cpp::Windows::Graphics::Capture
             return 0;
         }
 
-        Py_VISIT(state->type_GraphicsCaptureAccessKind);
         Py_VISIT(state->type_Direct3D11CaptureFrame);
         Py_VISIT(state->type_Direct3D11CaptureFramePool);
         Py_VISIT(state->type_GraphicsCaptureAccess);
@@ -1362,7 +1332,6 @@ namespace py::cpp::Windows::Graphics::Capture
             return 0;
         }
 
-        Py_CLEAR(state->type_GraphicsCaptureAccessKind);
         Py_CLEAR(state->type_Direct3D11CaptureFrame);
         Py_CLEAR(state->type_Direct3D11CaptureFramePool);
         Py_CLEAR(state->type_GraphicsCaptureAccess);
@@ -1379,7 +1348,7 @@ namespace py::cpp::Windows::Graphics::Capture
            "_winrt_Windows_Graphics_Capture",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1452,29 +1421,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Capture(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GraphicsCaptureAccessKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>::get_python_type() noexcept {

@@ -48,11 +48,6 @@ class XusbDeviceType(enum.IntEnum):
     UNKNOWN = 0
     GAMEPAD = 1
 
-_ns_module._register_GipFirmwareUpdateStatus(GipFirmwareUpdateStatus)
-_ns_module._register_GipMessageClass(GipMessageClass)
-_ns_module._register_XusbDeviceSubtype(XusbDeviceSubtype)
-_ns_module._register_XusbDeviceType(XusbDeviceType)
-
 GameControllerVersionInfo = _ns_module.GameControllerVersionInfo
 GipFirmwareUpdateProgress = _ns_module.GipFirmwareUpdateProgress
 GameControllerFactoryManager = _ns_module.GameControllerFactoryManager

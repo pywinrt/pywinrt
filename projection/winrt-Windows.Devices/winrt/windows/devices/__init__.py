@@ -29,7 +29,6 @@ try:
 except ImportError:
     pass
 
-
 LowLevelDevicesAggregateProvider = _ns_module.LowLevelDevicesAggregateProvider
 LowLevelDevicesController = _ns_module.LowLevelDevicesController
 ILowLevelDevicesAggregateProvider = _ns_module.ILowLevelDevicesAggregateProvider

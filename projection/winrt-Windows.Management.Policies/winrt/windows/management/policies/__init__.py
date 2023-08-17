@@ -29,7 +29,5 @@ class NamedPolicyKind(enum.IntEnum):
     INT64 = 4
     STRING = 5
 
-_ns_module._register_NamedPolicyKind(NamedPolicyKind)
-
 NamedPolicy = _ns_module.NamedPolicy
 NamedPolicyData = _ns_module.NamedPolicyData

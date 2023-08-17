@@ -61,7 +61,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeDisposition>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
+        static constexpr const char* type_name = "CoreWetStrokeDisposition";
     };
 
     template<>

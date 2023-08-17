@@ -8,12 +8,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
 {
     struct module_state
     {
-        PyObject* type_MediaFrameReaderAcquisitionMode;
-        PyObject* type_MediaFrameReaderStartStatus;
-        PyObject* type_MediaFrameSourceGetPropertyStatus;
-        PyObject* type_MediaFrameSourceKind;
-        PyObject* type_MediaFrameSourceSetPropertyStatus;
-        PyObject* type_MultiSourceMediaFrameReaderStartStatus;
         PyTypeObject* type_AudioMediaFrame;
         PyTypeObject* type_BufferMediaFrame;
         PyTypeObject* type_DepthMediaFrame;
@@ -34,150 +28,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
         PyTypeObject* type_VideoMediaFrame;
         PyTypeObject* type_VideoMediaFrameFormat;
     };
-
-    static PyObject* register_MediaFrameReaderAcquisitionMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaFrameReaderAcquisitionMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaFrameReaderAcquisitionMode = type;
-        Py_INCREF(state->type_MediaFrameReaderAcquisitionMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MediaFrameReaderStartStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaFrameReaderStartStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaFrameReaderStartStatus = type;
-        Py_INCREF(state->type_MediaFrameReaderStartStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MediaFrameSourceGetPropertyStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaFrameSourceGetPropertyStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaFrameSourceGetPropertyStatus = type;
-        Py_INCREF(state->type_MediaFrameSourceGetPropertyStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MediaFrameSourceKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaFrameSourceKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaFrameSourceKind = type;
-        Py_INCREF(state->type_MediaFrameSourceKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MediaFrameSourceSetPropertyStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaFrameSourceSetPropertyStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaFrameSourceSetPropertyStatus = type;
-        Py_INCREF(state->type_MediaFrameSourceSetPropertyStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MultiSourceMediaFrameReaderStartStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MultiSourceMediaFrameReaderStartStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MultiSourceMediaFrameReaderStartStatus = type;
-        Py_INCREF(state->type_MultiSourceMediaFrameReaderStartStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AudioMediaFrame class --------------------
     static constexpr const char* const type_name_AudioMediaFrame = "AudioMediaFrame";
@@ -3894,15 +3744,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     // ----- Windows.Media.Capture.Frames Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::Capture::Frames");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_MediaFrameReaderAcquisitionMode", register_MediaFrameReaderAcquisitionMode, METH_O, "registers type"},
-        {"_register_MediaFrameReaderStartStatus", register_MediaFrameReaderStartStatus, METH_O, "registers type"},
-        {"_register_MediaFrameSourceGetPropertyStatus", register_MediaFrameSourceGetPropertyStatus, METH_O, "registers type"},
-        {"_register_MediaFrameSourceKind", register_MediaFrameSourceKind, METH_O, "registers type"},
-        {"_register_MediaFrameSourceSetPropertyStatus", register_MediaFrameSourceSetPropertyStatus, METH_O, "registers type"},
-        {"_register_MultiSourceMediaFrameReaderStartStatus", register_MultiSourceMediaFrameReaderStartStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3913,12 +3754,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
             return 0;
         }
 
-        Py_VISIT(state->type_MediaFrameReaderAcquisitionMode);
-        Py_VISIT(state->type_MediaFrameReaderStartStatus);
-        Py_VISIT(state->type_MediaFrameSourceGetPropertyStatus);
-        Py_VISIT(state->type_MediaFrameSourceKind);
-        Py_VISIT(state->type_MediaFrameSourceSetPropertyStatus);
-        Py_VISIT(state->type_MultiSourceMediaFrameReaderStartStatus);
         Py_VISIT(state->type_AudioMediaFrame);
         Py_VISIT(state->type_BufferMediaFrame);
         Py_VISIT(state->type_DepthMediaFrame);
@@ -3951,12 +3786,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
             return 0;
         }
 
-        Py_CLEAR(state->type_MediaFrameReaderAcquisitionMode);
-        Py_CLEAR(state->type_MediaFrameReaderStartStatus);
-        Py_CLEAR(state->type_MediaFrameSourceGetPropertyStatus);
-        Py_CLEAR(state->type_MediaFrameSourceKind);
-        Py_CLEAR(state->type_MediaFrameSourceSetPropertyStatus);
-        Py_CLEAR(state->type_MultiSourceMediaFrameReaderStartStatus);
         Py_CLEAR(state->type_AudioMediaFrame);
         Py_CLEAR(state->type_BufferMediaFrame);
         Py_CLEAR(state->type_DepthMediaFrame);
@@ -3986,7 +3815,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
            "_winrt_Windows_Media_Capture_Frames",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4137,144 +3966,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Capture_Frames(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameReaderAcquisitionMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReaderStartStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameReaderStartStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameReaderStartStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameSourceGetPropertyStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameSourceKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameSourceKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameSourceSetPropertyStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MultiSourceMediaFrameReaderStartStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>::get_python_type() noexcept {

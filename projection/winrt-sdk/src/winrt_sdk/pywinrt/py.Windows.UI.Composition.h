@@ -246,127 +246,148 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationControllerProgressBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "AnimationControllerProgressBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationDelayBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "AnimationDelayBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "AnimationDirection";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationIterationBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "AnimationIterationBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationPropertyAccessMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "AnimationPropertyAccessMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationStopBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "AnimationStopBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBackfaceVisibility>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionBackfaceVisibility";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBatchTypes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionBatchTypes";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBitmapInterpolationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionBitmapInterpolationMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBorderMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionBorderMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionColorSpace>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionColorSpace";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionCompositeMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionCompositeMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionDropShadowSourcePolicy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionDropShadowSourcePolicy";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionEasingFunctionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionEasingFunctionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionEffectFactoryLoadStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionEffectFactoryLoadStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionGetValueStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionGetValueStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionGradientExtendMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionGradientExtendMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionMappingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionMappingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionStretch>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionStretch";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionStrokeCap>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionStrokeCap";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionStrokeLineJoin>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionStrokeLineJoin";
     };
 
     template<>

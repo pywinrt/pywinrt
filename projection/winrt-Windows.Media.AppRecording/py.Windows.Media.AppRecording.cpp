@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Media::AppRecording
 {
     struct module_state
     {
-        PyObject* type_AppRecordingSaveScreenshotOption;
         PyTypeObject* type_AppRecordingManager;
         PyTypeObject* type_AppRecordingResult;
         PyTypeObject* type_AppRecordingSaveScreenshotResult;
@@ -16,30 +15,6 @@ namespace py::cpp::Windows::Media::AppRecording
         PyTypeObject* type_AppRecordingStatus;
         PyTypeObject* type_AppRecordingStatusDetails;
     };
-
-    static PyObject* register_AppRecordingSaveScreenshotOption(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AppRecordingSaveScreenshotOption)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AppRecordingSaveScreenshotOption = type;
-        Py_INCREF(state->type_AppRecordingSaveScreenshotOption);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AppRecordingManager class --------------------
     static constexpr const char* const type_name_AppRecordingManager = "AppRecordingManager";
@@ -1115,10 +1090,6 @@ namespace py::cpp::Windows::Media::AppRecording
     // ----- Windows.Media.AppRecording Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::AppRecording");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AppRecordingSaveScreenshotOption", register_AppRecordingSaveScreenshotOption, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1129,7 +1100,6 @@ namespace py::cpp::Windows::Media::AppRecording
             return 0;
         }
 
-        Py_VISIT(state->type_AppRecordingSaveScreenshotOption);
         Py_VISIT(state->type_AppRecordingManager);
         Py_VISIT(state->type_AppRecordingResult);
         Py_VISIT(state->type_AppRecordingSaveScreenshotResult);
@@ -1149,7 +1119,6 @@ namespace py::cpp::Windows::Media::AppRecording
             return 0;
         }
 
-        Py_CLEAR(state->type_AppRecordingSaveScreenshotOption);
         Py_CLEAR(state->type_AppRecordingManager);
         Py_CLEAR(state->type_AppRecordingResult);
         Py_CLEAR(state->type_AppRecordingSaveScreenshotResult);
@@ -1166,7 +1135,7 @@ namespace py::cpp::Windows::Media::AppRecording
            "_winrt_Windows_Media_AppRecording",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1239,29 +1208,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_AppRecording(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppRecording;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppRecording");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppRecordingSaveScreenshotOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::AppRecording::AppRecordingManager>::get_python_type() noexcept {

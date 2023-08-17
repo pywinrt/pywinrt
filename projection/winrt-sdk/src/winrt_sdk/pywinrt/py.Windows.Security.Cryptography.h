@@ -32,7 +32,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::BinaryStringEncoding>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography";
+        static constexpr const char* type_name = "BinaryStringEncoding";
     };
 
     template<>

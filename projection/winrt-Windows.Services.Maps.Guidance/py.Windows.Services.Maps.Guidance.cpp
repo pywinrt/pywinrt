@@ -8,12 +8,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 {
     struct module_state
     {
-        PyObject* type_GuidanceAudioMeasurementSystem;
-        PyObject* type_GuidanceAudioNotificationKind;
-        PyObject* type_GuidanceAudioNotifications;
-        PyObject* type_GuidanceLaneMarkers;
-        PyObject* type_GuidanceManeuverKind;
-        PyObject* type_GuidanceMode;
         PyTypeObject* type_GuidanceAudioNotificationRequestedEventArgs;
         PyTypeObject* type_GuidanceLaneInfo;
         PyTypeObject* type_GuidanceManeuver;
@@ -26,150 +20,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         PyTypeObject* type_GuidanceTelemetryCollector;
         PyTypeObject* type_GuidanceUpdatedEventArgs;
     };
-
-    static PyObject* register_GuidanceAudioMeasurementSystem(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GuidanceAudioMeasurementSystem)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GuidanceAudioMeasurementSystem = type;
-        Py_INCREF(state->type_GuidanceAudioMeasurementSystem);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GuidanceAudioNotificationKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GuidanceAudioNotificationKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GuidanceAudioNotificationKind = type;
-        Py_INCREF(state->type_GuidanceAudioNotificationKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GuidanceAudioNotifications(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GuidanceAudioNotifications)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GuidanceAudioNotifications = type;
-        Py_INCREF(state->type_GuidanceAudioNotifications);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GuidanceLaneMarkers(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GuidanceLaneMarkers)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GuidanceLaneMarkers = type;
-        Py_INCREF(state->type_GuidanceLaneMarkers);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GuidanceManeuverKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GuidanceManeuverKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GuidanceManeuverKind = type;
-        Py_INCREF(state->type_GuidanceManeuverKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GuidanceMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GuidanceMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GuidanceMode = type;
-        Py_INCREF(state->type_GuidanceMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- GuidanceAudioNotificationRequestedEventArgs class --------------------
     static constexpr const char* const type_name_GuidanceAudioNotificationRequestedEventArgs = "GuidanceAudioNotificationRequestedEventArgs";
@@ -3343,15 +3193,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     // ----- Windows.Services.Maps.Guidance Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Services::Maps::Guidance");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_GuidanceAudioMeasurementSystem", register_GuidanceAudioMeasurementSystem, METH_O, "registers type"},
-        {"_register_GuidanceAudioNotificationKind", register_GuidanceAudioNotificationKind, METH_O, "registers type"},
-        {"_register_GuidanceAudioNotifications", register_GuidanceAudioNotifications, METH_O, "registers type"},
-        {"_register_GuidanceLaneMarkers", register_GuidanceLaneMarkers, METH_O, "registers type"},
-        {"_register_GuidanceManeuverKind", register_GuidanceManeuverKind, METH_O, "registers type"},
-        {"_register_GuidanceMode", register_GuidanceMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3362,12 +3203,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
             return 0;
         }
 
-        Py_VISIT(state->type_GuidanceAudioMeasurementSystem);
-        Py_VISIT(state->type_GuidanceAudioNotificationKind);
-        Py_VISIT(state->type_GuidanceAudioNotifications);
-        Py_VISIT(state->type_GuidanceLaneMarkers);
-        Py_VISIT(state->type_GuidanceManeuverKind);
-        Py_VISIT(state->type_GuidanceMode);
         Py_VISIT(state->type_GuidanceAudioNotificationRequestedEventArgs);
         Py_VISIT(state->type_GuidanceLaneInfo);
         Py_VISIT(state->type_GuidanceManeuver);
@@ -3392,12 +3227,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
             return 0;
         }
 
-        Py_CLEAR(state->type_GuidanceAudioMeasurementSystem);
-        Py_CLEAR(state->type_GuidanceAudioNotificationKind);
-        Py_CLEAR(state->type_GuidanceAudioNotifications);
-        Py_CLEAR(state->type_GuidanceLaneMarkers);
-        Py_CLEAR(state->type_GuidanceManeuverKind);
-        Py_CLEAR(state->type_GuidanceMode);
         Py_CLEAR(state->type_GuidanceAudioNotificationRequestedEventArgs);
         Py_CLEAR(state->type_GuidanceLaneInfo);
         Py_CLEAR(state->type_GuidanceManeuver);
@@ -3419,7 +3248,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
            "_winrt_Windows_Services_Maps_Guidance",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3528,144 +3357,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps_Guidance(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceAudioMeasurementSystem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceAudioNotificationKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotifications>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceAudioNotifications;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotifications is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceLaneMarkers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceLaneMarkers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceLaneMarkers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceManeuverKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceManeuverKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceManeuverKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>::get_python_type() noexcept {

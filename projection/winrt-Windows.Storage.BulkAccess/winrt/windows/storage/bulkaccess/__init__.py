@@ -34,7 +34,6 @@ try:
 except ImportError:
     pass
 
-
 FileInformation = _ns_module.FileInformation
 FileInformationFactory = _ns_module.FileInformationFactory
 FolderInformation = _ns_module.FolderInformation

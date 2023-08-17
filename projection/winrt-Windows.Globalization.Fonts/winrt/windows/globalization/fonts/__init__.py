@@ -9,6 +9,5 @@ try:
 except ImportError:
     pass
 
-
 LanguageFont = _ns_module.LanguageFont
 LanguageFontGroup = _ns_module.LanguageFontGroup

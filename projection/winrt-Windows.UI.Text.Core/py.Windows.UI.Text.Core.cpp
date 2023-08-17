@@ -8,12 +8,6 @@ namespace py::cpp::Windows::UI::Text::Core
 {
     struct module_state
     {
-        PyObject* type_CoreTextFormatUpdatingReason;
-        PyObject* type_CoreTextFormatUpdatingResult;
-        PyObject* type_CoreTextInputPaneDisplayPolicy;
-        PyObject* type_CoreTextInputScope;
-        PyObject* type_CoreTextSelectionUpdatingResult;
-        PyObject* type_CoreTextTextUpdatingResult;
         PyTypeObject* type_CoreTextCompositionCompletedEventArgs;
         PyTypeObject* type_CoreTextCompositionSegment;
         PyTypeObject* type_CoreTextCompositionStartedEventArgs;
@@ -32,150 +26,6 @@ namespace py::cpp::Windows::UI::Text::Core
         PyTypeObject* type_CoreTextTextUpdatingEventArgs;
         PyTypeObject* type_CoreTextRange;
     };
-
-    static PyObject* register_CoreTextFormatUpdatingReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CoreTextFormatUpdatingReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CoreTextFormatUpdatingReason = type;
-        Py_INCREF(state->type_CoreTextFormatUpdatingReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CoreTextFormatUpdatingResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CoreTextFormatUpdatingResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CoreTextFormatUpdatingResult = type;
-        Py_INCREF(state->type_CoreTextFormatUpdatingResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CoreTextInputPaneDisplayPolicy(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CoreTextInputPaneDisplayPolicy)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CoreTextInputPaneDisplayPolicy = type;
-        Py_INCREF(state->type_CoreTextInputPaneDisplayPolicy);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CoreTextInputScope(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CoreTextInputScope)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CoreTextInputScope = type;
-        Py_INCREF(state->type_CoreTextInputScope);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CoreTextSelectionUpdatingResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CoreTextSelectionUpdatingResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CoreTextSelectionUpdatingResult = type;
-        Py_INCREF(state->type_CoreTextSelectionUpdatingResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CoreTextTextUpdatingResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CoreTextTextUpdatingResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CoreTextTextUpdatingResult = type;
-        Py_INCREF(state->type_CoreTextTextUpdatingResult);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CoreTextCompositionCompletedEventArgs class --------------------
     static constexpr const char* const type_name_CoreTextCompositionCompletedEventArgs = "CoreTextCompositionCompletedEventArgs";
@@ -3598,15 +3448,6 @@ namespace py::cpp::Windows::UI::Text::Core
     // ----- Windows.UI.Text.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Text::Core");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_CoreTextFormatUpdatingReason", register_CoreTextFormatUpdatingReason, METH_O, "registers type"},
-        {"_register_CoreTextFormatUpdatingResult", register_CoreTextFormatUpdatingResult, METH_O, "registers type"},
-        {"_register_CoreTextInputPaneDisplayPolicy", register_CoreTextInputPaneDisplayPolicy, METH_O, "registers type"},
-        {"_register_CoreTextInputScope", register_CoreTextInputScope, METH_O, "registers type"},
-        {"_register_CoreTextSelectionUpdatingResult", register_CoreTextSelectionUpdatingResult, METH_O, "registers type"},
-        {"_register_CoreTextTextUpdatingResult", register_CoreTextTextUpdatingResult, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3617,12 +3458,6 @@ namespace py::cpp::Windows::UI::Text::Core
             return 0;
         }
 
-        Py_VISIT(state->type_CoreTextFormatUpdatingReason);
-        Py_VISIT(state->type_CoreTextFormatUpdatingResult);
-        Py_VISIT(state->type_CoreTextInputPaneDisplayPolicy);
-        Py_VISIT(state->type_CoreTextInputScope);
-        Py_VISIT(state->type_CoreTextSelectionUpdatingResult);
-        Py_VISIT(state->type_CoreTextTextUpdatingResult);
         Py_VISIT(state->type_CoreTextCompositionCompletedEventArgs);
         Py_VISIT(state->type_CoreTextCompositionSegment);
         Py_VISIT(state->type_CoreTextCompositionStartedEventArgs);
@@ -3653,12 +3488,6 @@ namespace py::cpp::Windows::UI::Text::Core
             return 0;
         }
 
-        Py_CLEAR(state->type_CoreTextFormatUpdatingReason);
-        Py_CLEAR(state->type_CoreTextFormatUpdatingResult);
-        Py_CLEAR(state->type_CoreTextInputPaneDisplayPolicy);
-        Py_CLEAR(state->type_CoreTextInputScope);
-        Py_CLEAR(state->type_CoreTextSelectionUpdatingResult);
-        Py_CLEAR(state->type_CoreTextTextUpdatingResult);
         Py_CLEAR(state->type_CoreTextCompositionCompletedEventArgs);
         Py_CLEAR(state->type_CoreTextCompositionSegment);
         Py_CLEAR(state->type_CoreTextCompositionStartedEventArgs);
@@ -3686,7 +3515,7 @@ namespace py::cpp::Windows::UI::Text::Core
            "_winrt_Windows_UI_Text_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3831,144 +3660,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Text_Core(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextFormatUpdatingReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextFormatUpdatingResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextInputPaneDisplayPolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Text::Core::CoreTextInputScope>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextInputScope;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextInputScope is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextSelectionUpdatingResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextTextUpdatingResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextTextUpdatingResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>::get_python_type() noexcept {

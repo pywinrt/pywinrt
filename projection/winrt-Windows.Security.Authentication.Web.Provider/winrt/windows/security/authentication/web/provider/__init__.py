@@ -72,11 +72,6 @@ class WebAccountSelectionOptions(enum.IntFlag):
     DEFAULT = 0
     NEW = 0x1
 
-_ns_module._register_WebAccountClientViewType(WebAccountClientViewType)
-_ns_module._register_WebAccountProviderOperationKind(WebAccountProviderOperationKind)
-_ns_module._register_WebAccountScope(WebAccountScope)
-_ns_module._register_WebAccountSelectionOptions(WebAccountSelectionOptions)
-
 WebAccountClientView = _ns_module.WebAccountClientView
 WebAccountManager = _ns_module.WebAccountManager
 WebAccountProviderAddAccountOperation = _ns_module.WebAccountProviderAddAccountOperation

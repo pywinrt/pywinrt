@@ -8,8 +8,6 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 {
     struct module_state
     {
-        PyObject* type_PrintOptionStates;
-        PyObject* type_PrintOptionType;
         PyTypeObject* type_PrintBindingOptionDetails;
         PyTypeObject* type_PrintBorderingOptionDetails;
         PyTypeObject* type_PrintCollationOptionDetails;
@@ -35,54 +33,6 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         PyTypeObject* type_IPrintOptionDetails;
         PyTypeObject* type_IPrintTextOptionDetails;
     };
-
-    static PyObject* register_PrintOptionStates(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PrintOptionStates)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PrintOptionStates = type;
-        Py_INCREF(state->type_PrintOptionStates);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PrintOptionType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PrintOptionType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PrintOptionType = type;
-        Py_INCREF(state->type_PrintOptionType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PrintBindingOptionDetails class --------------------
     static constexpr const char* const type_name_PrintBindingOptionDetails = "PrintBindingOptionDetails";
@@ -8410,11 +8360,6 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     // ----- Windows.Graphics.Printing.OptionDetails Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing::OptionDetails");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PrintOptionStates", register_PrintOptionStates, METH_O, "registers type"},
-        {"_register_PrintOptionType", register_PrintOptionType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -8425,8 +8370,6 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
             return 0;
         }
 
-        Py_VISIT(state->type_PrintOptionStates);
-        Py_VISIT(state->type_PrintOptionType);
         Py_VISIT(state->type_PrintBindingOptionDetails);
         Py_VISIT(state->type_PrintBorderingOptionDetails);
         Py_VISIT(state->type_PrintCollationOptionDetails);
@@ -8464,8 +8407,6 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
             return 0;
         }
 
-        Py_CLEAR(state->type_PrintOptionStates);
-        Py_CLEAR(state->type_PrintOptionType);
         Py_CLEAR(state->type_PrintBindingOptionDetails);
         Py_CLEAR(state->type_PrintBorderingOptionDetails);
         Py_CLEAR(state->type_PrintCollationOptionDetails);
@@ -8500,7 +8441,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
            "_winrt_Windows_Graphics_Printing_OptionDetails",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -8681,52 +8622,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_OptionDetails(void) noexc
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintOptionStates;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintOptionType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails>::get_python_type() noexcept {

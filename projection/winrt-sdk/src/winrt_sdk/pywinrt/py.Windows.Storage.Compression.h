@@ -38,7 +38,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Compression::CompressAlgorithm>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.compression";
+        static constexpr const char* type_name = "CompressAlgorithm";
     };
 
     template<>

@@ -23,9 +23,6 @@ class TypeKind(enum.IntEnum):
     METADATA = 1
     CUSTOM = 2
 
-_ns_module._register_NotifyCollectionChangedAction(NotifyCollectionChangedAction)
-_ns_module._register_TypeKind(TypeKind)
-
 TypeName = _ns_module.TypeName
 NotifyCollectionChangedEventArgs = _ns_module.NotifyCollectionChangedEventArgs
 IBindableIterable = _ns_module.IBindableIterable

@@ -457,7 +457,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WebUI::PrintContent>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "PrintContent";
     };
 
     template<>

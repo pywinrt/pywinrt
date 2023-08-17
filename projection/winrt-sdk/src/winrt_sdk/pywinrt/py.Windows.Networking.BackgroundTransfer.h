@@ -104,25 +104,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferCostPolicy";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferPriority";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferStatus";
     };
 
     template<>

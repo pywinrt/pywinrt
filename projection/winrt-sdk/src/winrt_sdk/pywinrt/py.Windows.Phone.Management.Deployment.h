@@ -54,13 +54,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
+        static constexpr const char* type_name = "EnterpriseEnrollmentStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
+        static constexpr const char* type_name = "EnterpriseStatus";
     };
 
     template<>

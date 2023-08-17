@@ -8,12 +8,6 @@ namespace py::cpp::Windows::Media::Protection
 {
     struct module_state
     {
-        PyObject* type_GraphicsTrustStatus;
-        PyObject* type_HdcpProtection;
-        PyObject* type_HdcpSetProtectionResult;
-        PyObject* type_ProtectionCapabilityResult;
-        PyObject* type_RenewalStatus;
-        PyObject* type_RevocationAndRenewalReasons;
         PyTypeObject* type_ComponentLoadFailedEventArgs;
         PyTypeObject* type_ComponentRenewal;
         PyTypeObject* type_HdcpSession;
@@ -26,150 +20,6 @@ namespace py::cpp::Windows::Media::Protection
         PyTypeObject* type_ServiceRequestedEventArgs;
         PyTypeObject* type_IMediaProtectionServiceRequest;
     };
-
-    static PyObject* register_GraphicsTrustStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GraphicsTrustStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GraphicsTrustStatus = type;
-        Py_INCREF(state->type_GraphicsTrustStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HdcpProtection(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HdcpProtection)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HdcpProtection = type;
-        Py_INCREF(state->type_HdcpProtection);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HdcpSetProtectionResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HdcpSetProtectionResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HdcpSetProtectionResult = type;
-        Py_INCREF(state->type_HdcpSetProtectionResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ProtectionCapabilityResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProtectionCapabilityResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProtectionCapabilityResult = type;
-        Py_INCREF(state->type_ProtectionCapabilityResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_RenewalStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_RenewalStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_RenewalStatus = type;
-        Py_INCREF(state->type_RenewalStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_RevocationAndRenewalReasons(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_RevocationAndRenewalReasons)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_RevocationAndRenewalReasons = type;
-        Py_INCREF(state->type_RevocationAndRenewalReasons);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ComponentLoadFailedEventArgs class --------------------
     static constexpr const char* const type_name_ComponentLoadFailedEventArgs = "ComponentLoadFailedEventArgs";
@@ -1777,15 +1627,6 @@ namespace py::cpp::Windows::Media::Protection
     // ----- Windows.Media.Protection Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::Protection");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_GraphicsTrustStatus", register_GraphicsTrustStatus, METH_O, "registers type"},
-        {"_register_HdcpProtection", register_HdcpProtection, METH_O, "registers type"},
-        {"_register_HdcpSetProtectionResult", register_HdcpSetProtectionResult, METH_O, "registers type"},
-        {"_register_ProtectionCapabilityResult", register_ProtectionCapabilityResult, METH_O, "registers type"},
-        {"_register_RenewalStatus", register_RenewalStatus, METH_O, "registers type"},
-        {"_register_RevocationAndRenewalReasons", register_RevocationAndRenewalReasons, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1796,12 +1637,6 @@ namespace py::cpp::Windows::Media::Protection
             return 0;
         }
 
-        Py_VISIT(state->type_GraphicsTrustStatus);
-        Py_VISIT(state->type_HdcpProtection);
-        Py_VISIT(state->type_HdcpSetProtectionResult);
-        Py_VISIT(state->type_ProtectionCapabilityResult);
-        Py_VISIT(state->type_RenewalStatus);
-        Py_VISIT(state->type_RevocationAndRenewalReasons);
         Py_VISIT(state->type_ComponentLoadFailedEventArgs);
         Py_VISIT(state->type_ComponentRenewal);
         Py_VISIT(state->type_HdcpSession);
@@ -1826,12 +1661,6 @@ namespace py::cpp::Windows::Media::Protection
             return 0;
         }
 
-        Py_CLEAR(state->type_GraphicsTrustStatus);
-        Py_CLEAR(state->type_HdcpProtection);
-        Py_CLEAR(state->type_HdcpSetProtectionResult);
-        Py_CLEAR(state->type_ProtectionCapabilityResult);
-        Py_CLEAR(state->type_RenewalStatus);
-        Py_CLEAR(state->type_RevocationAndRenewalReasons);
         Py_CLEAR(state->type_ComponentLoadFailedEventArgs);
         Py_CLEAR(state->type_ComponentRenewal);
         Py_CLEAR(state->type_HdcpSession);
@@ -1853,7 +1682,7 @@ namespace py::cpp::Windows::Media::Protection
            "_winrt_Windows_Media_Protection",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1956,144 +1785,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Protection(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Protection::GraphicsTrustStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GraphicsTrustStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::GraphicsTrustStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Protection::HdcpProtection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HdcpProtection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::HdcpProtection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Protection::HdcpSetProtectionResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HdcpSetProtectionResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::HdcpSetProtectionResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Protection::ProtectionCapabilityResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectionCapabilityResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::ProtectionCapabilityResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Protection::RenewalStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RenewalStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::RenewalStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Protection::RevocationAndRenewalReasons>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RevocationAndRenewalReasons;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::RevocationAndRenewalReasons is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>::get_python_type() noexcept {

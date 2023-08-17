@@ -8,8 +8,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 {
     struct module_state
     {
-        PyObject* type_NotifyCollectionChangedAction;
-        PyObject* type_TypeKind;
         PyTypeObject* type_NotifyCollectionChangedEventArgs;
         PyTypeObject* type_IBindableIterable;
         PyTypeObject* type_IBindableIterator;
@@ -19,54 +17,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         PyTypeObject* type_INotifyCollectionChanged;
         PyTypeObject* type_TypeName;
     };
-
-    static PyObject* register_NotifyCollectionChangedAction(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_NotifyCollectionChangedAction)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_NotifyCollectionChangedAction = type;
-        Py_INCREF(state->type_NotifyCollectionChangedAction);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_TypeKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_TypeKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_TypeKind = type;
-        Py_INCREF(state->type_TypeKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- NotifyCollectionChangedEventArgs class --------------------
     static constexpr const char* const type_name_NotifyCollectionChangedEventArgs = "NotifyCollectionChangedEventArgs";
@@ -1883,11 +1833,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     // ----- Windows.UI.Xaml.Interop Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Interop");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_NotifyCollectionChangedAction", register_NotifyCollectionChangedAction, METH_O, "registers type"},
-        {"_register_TypeKind", register_TypeKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1898,8 +1843,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
             return 0;
         }
 
-        Py_VISIT(state->type_NotifyCollectionChangedAction);
-        Py_VISIT(state->type_TypeKind);
         Py_VISIT(state->type_NotifyCollectionChangedEventArgs);
         Py_VISIT(state->type_IBindableIterable);
         Py_VISIT(state->type_IBindableIterator);
@@ -1921,8 +1864,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
             return 0;
         }
 
-        Py_CLEAR(state->type_NotifyCollectionChangedAction);
-        Py_CLEAR(state->type_TypeKind);
         Py_CLEAR(state->type_NotifyCollectionChangedEventArgs);
         Py_CLEAR(state->type_IBindableIterable);
         Py_CLEAR(state->type_IBindableIterator);
@@ -1941,7 +1882,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
            "_winrt_Windows_UI_Xaml_Interop",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2026,52 +1967,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Interop(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NotifyCollectionChangedAction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Interop::TypeKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TypeKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Interop::TypeKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>::get_python_type() noexcept {

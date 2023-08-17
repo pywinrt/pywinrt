@@ -59,11 +59,6 @@ class ShareWindowCommand(enum.IntEnum):
     START_SHARING = 1
     STOP_SHARING = 2
 
-_ns_module._register_SecurityAppKind(SecurityAppKind)
-_ns_module._register_SecurityAppState(SecurityAppState)
-_ns_module._register_SecurityAppSubstatus(SecurityAppSubstatus)
-_ns_module._register_ShareWindowCommand(ShareWindowCommand)
-
 AdaptiveCardBuilder = _ns_module.AdaptiveCardBuilder
 FocusSession = _ns_module.FocusSession
 FocusSessionManager = _ns_module.FocusSessionManager

@@ -55,7 +55,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "AutomationRemoteOperationStatus";
     };
 
     template<>

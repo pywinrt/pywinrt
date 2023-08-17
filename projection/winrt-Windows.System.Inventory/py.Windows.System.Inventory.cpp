@@ -243,9 +243,6 @@ namespace py::cpp::Windows::System::Inventory
     // ----- Windows.System.Inventory Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::System::Inventory");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -281,7 +278,7 @@ namespace py::cpp::Windows::System::Inventory
            "_winrt_Windows_System_Inventory",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

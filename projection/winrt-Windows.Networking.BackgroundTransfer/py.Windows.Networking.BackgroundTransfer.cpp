@@ -8,10 +8,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 {
     struct module_state
     {
-        PyObject* type_BackgroundTransferBehavior;
-        PyObject* type_BackgroundTransferCostPolicy;
-        PyObject* type_BackgroundTransferPriority;
-        PyObject* type_BackgroundTransferStatus;
         PyTypeObject* type_BackgroundDownloader;
         PyTypeObject* type_BackgroundTransferCompletionGroup;
         PyTypeObject* type_BackgroundTransferCompletionGroupTriggerDetails;
@@ -33,102 +29,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         PyTypeObject* type_BackgroundTransferFileRange;
         PyTypeObject* type_BackgroundUploadProgress;
     };
-
-    static PyObject* register_BackgroundTransferBehavior(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BackgroundTransferBehavior)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BackgroundTransferBehavior = type;
-        Py_INCREF(state->type_BackgroundTransferBehavior);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_BackgroundTransferCostPolicy(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BackgroundTransferCostPolicy)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BackgroundTransferCostPolicy = type;
-        Py_INCREF(state->type_BackgroundTransferCostPolicy);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_BackgroundTransferPriority(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BackgroundTransferPriority)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BackgroundTransferPriority = type;
-        Py_INCREF(state->type_BackgroundTransferPriority);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_BackgroundTransferStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BackgroundTransferStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BackgroundTransferStatus = type;
-        Py_INCREF(state->type_BackgroundTransferStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- BackgroundDownloader class --------------------
     static constexpr const char* const type_name_BackgroundDownloader = "BackgroundDownloader";
@@ -6080,13 +5980,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     // ----- Windows.Networking.BackgroundTransfer Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Networking::BackgroundTransfer");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_BackgroundTransferBehavior", register_BackgroundTransferBehavior, METH_O, "registers type"},
-        {"_register_BackgroundTransferCostPolicy", register_BackgroundTransferCostPolicy, METH_O, "registers type"},
-        {"_register_BackgroundTransferPriority", register_BackgroundTransferPriority, METH_O, "registers type"},
-        {"_register_BackgroundTransferStatus", register_BackgroundTransferStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -6097,10 +5990,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             return 0;
         }
 
-        Py_VISIT(state->type_BackgroundTransferBehavior);
-        Py_VISIT(state->type_BackgroundTransferCostPolicy);
-        Py_VISIT(state->type_BackgroundTransferPriority);
-        Py_VISIT(state->type_BackgroundTransferStatus);
         Py_VISIT(state->type_BackgroundDownloader);
         Py_VISIT(state->type_BackgroundTransferCompletionGroup);
         Py_VISIT(state->type_BackgroundTransferCompletionGroupTriggerDetails);
@@ -6134,10 +6023,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             return 0;
         }
 
-        Py_CLEAR(state->type_BackgroundTransferBehavior);
-        Py_CLEAR(state->type_BackgroundTransferCostPolicy);
-        Py_CLEAR(state->type_BackgroundTransferPriority);
-        Py_CLEAR(state->type_BackgroundTransferStatus);
         Py_CLEAR(state->type_BackgroundDownloader);
         Py_CLEAR(state->type_BackgroundTransferCompletionGroup);
         Py_CLEAR(state->type_BackgroundTransferCompletionGroupTriggerDetails);
@@ -6168,7 +6053,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
            "_winrt_Windows_Networking_BackgroundTransfer",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -6331,98 +6216,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_BackgroundTransfer(void) noexcep
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferCostPolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferPriority;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader>::get_python_type() noexcept {

@@ -9,5 +9,4 @@ try:
 except ImportError:
     pass
 
-
 CorePerceptionAutomation = _ns_module.CorePerceptionAutomation

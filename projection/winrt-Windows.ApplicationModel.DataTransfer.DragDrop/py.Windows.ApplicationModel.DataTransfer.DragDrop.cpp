@@ -8,39 +8,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop
 {
     struct module_state
     {
-        PyObject* type_DragDropModifiers;
     };
-
-    static PyObject* register_DragDropModifiers(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DragDropModifiers)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DragDropModifiers = type;
-        Py_INCREF(state->type_DragDropModifiers);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Windows.ApplicationModel.DataTransfer.DragDrop Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::DataTransfer::DragDrop");
-
-    static PyMethodDef module_methods[] = {
-        {"_register_DragDropModifiers", register_DragDropModifiers, METH_O, "registers type"},
-        {}};
 
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
@@ -52,7 +23,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop
             return 0;
         }
 
-        Py_VISIT(state->type_DragDropModifiers);
 
         return 0;
     }
@@ -66,7 +36,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop
             return 0;
         }
 
-        Py_CLEAR(state->type_DragDropModifiers);
 
         return 0;
     }
@@ -77,7 +46,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop
            "_winrt_Windows_ApplicationModel_DataTransfer_DragDrop",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -114,27 +83,4 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer_DragDrop(void
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer::DragDrop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragDropModifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

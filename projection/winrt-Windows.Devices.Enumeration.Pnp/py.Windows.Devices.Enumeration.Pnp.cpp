@@ -8,36 +8,11 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 {
     struct module_state
     {
-        PyObject* type_PnpObjectType;
         PyTypeObject* type_PnpObject;
         PyTypeObject* type_PnpObjectCollection;
         PyTypeObject* type_PnpObjectUpdate;
         PyTypeObject* type_PnpObjectWatcher;
     };
-
-    static PyObject* register_PnpObjectType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PnpObjectType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PnpObjectType = type;
-        Py_INCREF(state->type_PnpObjectType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PnpObject class --------------------
     static constexpr const char* const type_name_PnpObject = "PnpObject";
@@ -1219,10 +1194,6 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
     // ----- Windows.Devices.Enumeration.Pnp Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Enumeration::Pnp");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PnpObjectType", register_PnpObjectType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1233,7 +1204,6 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
             return 0;
         }
 
-        Py_VISIT(state->type_PnpObjectType);
         Py_VISIT(state->type_PnpObject);
         Py_VISIT(state->type_PnpObjectCollection);
         Py_VISIT(state->type_PnpObjectUpdate);
@@ -1251,7 +1221,6 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
             return 0;
         }
 
-        Py_CLEAR(state->type_PnpObjectType);
         Py_CLEAR(state->type_PnpObject);
         Py_CLEAR(state->type_PnpObjectCollection);
         Py_CLEAR(state->type_PnpObjectUpdate);
@@ -1266,7 +1235,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
            "_winrt_Windows_Devices_Enumeration_Pnp",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1327,29 +1296,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Enumeration_Pnp(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration::Pnp;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration::Pnp");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PnpObjectType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::Pnp::PnpObjectType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObject>::get_python_type() noexcept {

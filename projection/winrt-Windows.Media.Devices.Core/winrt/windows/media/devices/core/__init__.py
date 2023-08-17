@@ -36,8 +36,6 @@ class FrameFlashMode(enum.IntEnum):
     ENABLE = 1
     GLOBAL = 2
 
-_ns_module._register_FrameFlashMode(FrameFlashMode)
-
 CameraIntrinsics = _ns_module.CameraIntrinsics
 DepthCorrelatedCoordinateMapper = _ns_module.DepthCorrelatedCoordinateMapper
 FrameControlCapabilities = _ns_module.FrameControlCapabilities

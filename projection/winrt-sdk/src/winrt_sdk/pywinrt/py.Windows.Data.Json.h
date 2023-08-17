@@ -39,13 +39,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Json::JsonErrorStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.json";
+        static constexpr const char* type_name = "JsonErrorStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Data::Json::JsonValueType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.json";
+        static constexpr const char* type_name = "JsonValueType";
     };
 
     template<>

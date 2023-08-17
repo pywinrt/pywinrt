@@ -56,19 +56,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::DataProtection::UserDataAvailability>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
+        static constexpr const char* type_name = "UserDataAvailability";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
+        static constexpr const char* type_name = "UserDataBufferUnprotectStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
+        static constexpr const char* type_name = "UserDataStorageItemProtectionStatus";
     };
 
     template<>

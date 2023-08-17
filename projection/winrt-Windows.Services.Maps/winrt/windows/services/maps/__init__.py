@@ -158,19 +158,6 @@ class WaypointKind(enum.IntEnum):
     STOP = 0
     VIA = 1
 
-_ns_module._register_ManeuverWarningKind(ManeuverWarningKind)
-_ns_module._register_ManeuverWarningSeverity(ManeuverWarningSeverity)
-_ns_module._register_MapLocationDesiredAccuracy(MapLocationDesiredAccuracy)
-_ns_module._register_MapLocationFinderStatus(MapLocationFinderStatus)
-_ns_module._register_MapManeuverNotices(MapManeuverNotices)
-_ns_module._register_MapRouteFinderStatus(MapRouteFinderStatus)
-_ns_module._register_MapRouteManeuverKind(MapRouteManeuverKind)
-_ns_module._register_MapRouteOptimization(MapRouteOptimization)
-_ns_module._register_MapRouteRestrictions(MapRouteRestrictions)
-_ns_module._register_MapServiceDataUsagePreference(MapServiceDataUsagePreference)
-_ns_module._register_TrafficCongestion(TrafficCongestion)
-_ns_module._register_WaypointKind(WaypointKind)
-
 EnhancedWaypoint = _ns_module.EnhancedWaypoint
 ManeuverWarning = _ns_module.ManeuverWarning
 MapAddress = _ns_module.MapAddress

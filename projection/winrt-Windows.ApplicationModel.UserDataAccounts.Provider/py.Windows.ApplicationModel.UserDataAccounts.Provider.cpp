@@ -8,62 +8,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 {
     struct module_state
     {
-        PyObject* type_UserDataAccountProviderOperationKind;
-        PyObject* type_UserDataAccountProviderPartnerAccountKind;
         PyTypeObject* type_UserDataAccountPartnerAccountInfo;
         PyTypeObject* type_UserDataAccountProviderAddAccountOperation;
         PyTypeObject* type_UserDataAccountProviderResolveErrorsOperation;
         PyTypeObject* type_UserDataAccountProviderSettingsOperation;
         PyTypeObject* type_IUserDataAccountProviderOperation;
     };
-
-    static PyObject* register_UserDataAccountProviderOperationKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserDataAccountProviderOperationKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserDataAccountProviderOperationKind = type;
-        Py_INCREF(state->type_UserDataAccountProviderOperationKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UserDataAccountProviderPartnerAccountKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserDataAccountProviderPartnerAccountKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserDataAccountProviderPartnerAccountKind = type;
-        Py_INCREF(state->type_UserDataAccountProviderPartnerAccountKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- UserDataAccountPartnerAccountInfo class --------------------
     static constexpr const char* const type_name_UserDataAccountPartnerAccountInfo = "UserDataAccountPartnerAccountInfo";
@@ -758,11 +708,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     // ----- Windows.ApplicationModel.UserDataAccounts.Provider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserDataAccounts::Provider");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_UserDataAccountProviderOperationKind", register_UserDataAccountProviderOperationKind, METH_O, "registers type"},
-        {"_register_UserDataAccountProviderPartnerAccountKind", register_UserDataAccountProviderPartnerAccountKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -773,8 +718,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
             return 0;
         }
 
-        Py_VISIT(state->type_UserDataAccountProviderOperationKind);
-        Py_VISIT(state->type_UserDataAccountProviderPartnerAccountKind);
         Py_VISIT(state->type_UserDataAccountPartnerAccountInfo);
         Py_VISIT(state->type_UserDataAccountProviderAddAccountOperation);
         Py_VISIT(state->type_UserDataAccountProviderResolveErrorsOperation);
@@ -793,8 +736,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
             return 0;
         }
 
-        Py_CLEAR(state->type_UserDataAccountProviderOperationKind);
-        Py_CLEAR(state->type_UserDataAccountProviderPartnerAccountKind);
         Py_CLEAR(state->type_UserDataAccountPartnerAccountInfo);
         Py_CLEAR(state->type_UserDataAccountProviderAddAccountOperation);
         Py_CLEAR(state->type_UserDataAccountProviderResolveErrorsOperation);
@@ -810,7 +751,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
            "_winrt_Windows_ApplicationModel_UserDataAccounts_Provider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -877,52 +818,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataAccounts_Provider(
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderOperationKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountProviderOperationKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderOperationKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderPartnerAccountKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountProviderPartnerAccountKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderPartnerAccountKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>::get_python_type() noexcept {

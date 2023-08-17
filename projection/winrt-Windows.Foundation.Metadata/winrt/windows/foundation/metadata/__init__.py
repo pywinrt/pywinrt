@@ -56,13 +56,4 @@ class ThreadingModel(enum.IntEnum):
     BOTH = 3
     INVALID_THREADING = 0
 
-_ns_module._register_AttributeTargets(AttributeTargets)
-_ns_module._register_CompositionType(CompositionType)
-_ns_module._register_DeprecationType(DeprecationType)
-_ns_module._register_FeatureStage(FeatureStage)
-_ns_module._register_GCPressureAmount(GCPressureAmount)
-_ns_module._register_MarshalingType(MarshalingType)
-_ns_module._register_Platform(Platform)
-_ns_module._register_ThreadingModel(ThreadingModel)
-
 ApiInformation = _ns_module.ApiInformation

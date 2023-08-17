@@ -133,49 +133,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletion>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Print3DTaskCompletion";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskDetail>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Print3DTaskDetail";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DBufferFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DMeshVerificationMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DModelUnit>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DModelUnit";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DObjectType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DObjectType";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DPackageCompression>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DPackageCompression";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DTextureEdgeBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DTextureEdgeBehavior";
     };
 
     template<>

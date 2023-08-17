@@ -14,7 +14,6 @@ try:
 except ImportError:
     pass
 
-
 AddAppointmentOperation = _ns_module.AddAppointmentOperation
 AppointmentsProviderLaunchActionVerbs = _ns_module.AppointmentsProviderLaunchActionVerbs
 RemoveAppointmentOperation = _ns_module.RemoveAppointmentOperation

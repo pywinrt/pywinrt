@@ -73,13 +73,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintOptionStates";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintOptionType";
     };
 
     template<>

@@ -97,16 +97,6 @@ class InjectedInputVisualizationMode(enum.IntEnum):
     DEFAULT = 1
     INDIRECT = 2
 
-_ns_module._register_InjectedInputButtonChangeKind(InjectedInputButtonChangeKind)
-_ns_module._register_InjectedInputKeyOptions(InjectedInputKeyOptions)
-_ns_module._register_InjectedInputMouseOptions(InjectedInputMouseOptions)
-_ns_module._register_InjectedInputPenButtons(InjectedInputPenButtons)
-_ns_module._register_InjectedInputPenParameters(InjectedInputPenParameters)
-_ns_module._register_InjectedInputPointerOptions(InjectedInputPointerOptions)
-_ns_module._register_InjectedInputShortcut(InjectedInputShortcut)
-_ns_module._register_InjectedInputTouchParameters(InjectedInputTouchParameters)
-_ns_module._register_InjectedInputVisualizationMode(InjectedInputVisualizationMode)
-
 InjectedInputPoint = _ns_module.InjectedInputPoint
 InjectedInputPointerInfo = _ns_module.InjectedInputPointerInfo
 InjectedInputRectangle = _ns_module.InjectedInputRectangle

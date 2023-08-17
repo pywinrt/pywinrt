@@ -28,8 +28,6 @@ class GazeDeviceConfigurationStatePreview(enum.IntEnum):
     SCREEN_SETUP_NEEDED = 3
     USER_CALIBRATION_NEEDED = 4
 
-_ns_module._register_GazeDeviceConfigurationStatePreview(GazeDeviceConfigurationStatePreview)
-
 GazeDevicePreview = _ns_module.GazeDevicePreview
 GazeDeviceWatcherAddedPreviewEventArgs = _ns_module.GazeDeviceWatcherAddedPreviewEventArgs
 GazeDeviceWatcherPreview = _ns_module.GazeDeviceWatcherPreview

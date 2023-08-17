@@ -1237,9 +1237,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     // ----- Windows.Perception.Spatial.Surfaces Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Perception::Spatial::Surfaces");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1283,7 +1280,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
            "_winrt_Windows_Perception_Spatial_Surfaces",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

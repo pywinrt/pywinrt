@@ -116,19 +116,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::AudioEffectType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "AudioEffectType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Effects::MediaEffectClosedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "MediaEffectClosedReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Effects::MediaMemoryTypes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "MediaMemoryTypes";
     };
 
     template<>

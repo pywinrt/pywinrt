@@ -52,7 +52,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIContentMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
+        static constexpr const char* type_name = "CoreDragUIContentMode";
     };
 
     template<>

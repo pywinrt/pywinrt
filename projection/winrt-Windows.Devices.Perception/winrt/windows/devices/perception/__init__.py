@@ -55,9 +55,6 @@ class PerceptionFrameSourcePropertyChangeStatus(enum.IntEnum):
     PROPERTY_READ_ONLY = 4
     VALUE_OUT_OF_RANGE = 5
 
-_ns_module._register_PerceptionFrameSourceAccessStatus(PerceptionFrameSourceAccessStatus)
-_ns_module._register_PerceptionFrameSourcePropertyChangeStatus(PerceptionFrameSourcePropertyChangeStatus)
-
 KnownCameraIntrinsicsProperties = _ns_module.KnownCameraIntrinsicsProperties
 KnownPerceptionColorFrameSourceProperties = _ns_module.KnownPerceptionColorFrameSourceProperties
 KnownPerceptionDepthFrameSourceProperties = _ns_module.KnownPerceptionDepthFrameSourceProperties

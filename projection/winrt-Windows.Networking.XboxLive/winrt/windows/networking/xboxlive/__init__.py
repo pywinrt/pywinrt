@@ -85,14 +85,6 @@ class XboxLiveSocketKind(enum.IntEnum):
     DATAGRAM = 1
     STREAM = 2
 
-_ns_module._register_XboxLiveEndpointPairCreationBehaviors(XboxLiveEndpointPairCreationBehaviors)
-_ns_module._register_XboxLiveEndpointPairCreationStatus(XboxLiveEndpointPairCreationStatus)
-_ns_module._register_XboxLiveEndpointPairState(XboxLiveEndpointPairState)
-_ns_module._register_XboxLiveNetworkAccessKind(XboxLiveNetworkAccessKind)
-_ns_module._register_XboxLiveQualityOfServiceMeasurementStatus(XboxLiveQualityOfServiceMeasurementStatus)
-_ns_module._register_XboxLiveQualityOfServiceMetric(XboxLiveQualityOfServiceMetric)
-_ns_module._register_XboxLiveSocketKind(XboxLiveSocketKind)
-
 XboxLiveDeviceAddress = _ns_module.XboxLiveDeviceAddress
 XboxLiveEndpointPair = _ns_module.XboxLiveEndpointPair
 XboxLiveEndpointPairCreationResult = _ns_module.XboxLiveEndpointPairCreationResult

@@ -40,19 +40,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Power::BatteryStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.power";
+        static constexpr const char* type_name = "BatteryStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Power::EnergySaverStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.power";
+        static constexpr const char* type_name = "EnergySaverStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Power::PowerSupplyStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.power";
+        static constexpr const char* type_name = "PowerSupplyStatus";
     };
 
     template<>

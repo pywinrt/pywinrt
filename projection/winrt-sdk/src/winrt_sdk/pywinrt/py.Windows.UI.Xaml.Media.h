@@ -267,133 +267,155 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AcrylicBackgroundSource>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "AcrylicBackgroundSource";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AlignmentX>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "AlignmentX";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AlignmentY>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "AlignmentY";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AudioCategory>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "AudioCategory";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AudioDeviceType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "AudioDeviceType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::BrushMappingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "BrushMappingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::ColorInterpolationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "ColorInterpolationMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::ElementCompositeMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "ElementCompositeMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::FastPlayFallbackBehaviour>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "FastPlayFallbackBehaviour";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::FillRule>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "FillRule";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::GradientSpreadMethod>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "GradientSpreadMethod";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "LoadedImageSourceLoadStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::MediaCanPlayResponse>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "MediaCanPlayResponse";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::MediaElementState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "MediaElementState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PenLineCap>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PenLineCap";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PenLineJoin>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PenLineJoin";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::RevealBrushState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "RevealBrushState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Stereo3DVideoPackingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "Stereo3DVideoPackingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Stereo3DVideoRenderMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "Stereo3DVideoRenderMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Stretch>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "Stretch";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::StyleSimulations>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "StyleSimulations";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::SweepDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "SweepDirection";
     };
 
     template<>

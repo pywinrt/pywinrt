@@ -8,10 +8,6 @@ namespace py::cpp::Windows::AI::MachineLearning
 {
     struct module_state
     {
-        PyObject* type_LearningModelDeviceKind;
-        PyObject* type_LearningModelFeatureKind;
-        PyObject* type_LearningModelPixelRange;
-        PyObject* type_TensorKind;
         PyTypeObject* type_ImageFeatureDescriptor;
         PyTypeObject* type_ImageFeatureValue;
         PyTypeObject* type_LearningModel;
@@ -41,102 +37,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         PyTypeObject* type_ILearningModelOperatorProvider;
         PyTypeObject* type_ITensor;
     };
-
-    static PyObject* register_LearningModelDeviceKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LearningModelDeviceKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LearningModelDeviceKind = type;
-        Py_INCREF(state->type_LearningModelDeviceKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_LearningModelFeatureKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LearningModelFeatureKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LearningModelFeatureKind = type;
-        Py_INCREF(state->type_LearningModelFeatureKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_LearningModelPixelRange(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LearningModelPixelRange)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LearningModelPixelRange = type;
-        Py_INCREF(state->type_LearningModelPixelRange);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_TensorKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_TensorKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_TensorKind = type;
-        Py_INCREF(state->type_TensorKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ImageFeatureDescriptor class --------------------
     static constexpr const char* const type_name_ImageFeatureDescriptor = "ImageFeatureDescriptor";
@@ -8969,13 +8869,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     // ----- Windows.AI.MachineLearning Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::AI::MachineLearning");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_LearningModelDeviceKind", register_LearningModelDeviceKind, METH_O, "registers type"},
-        {"_register_LearningModelFeatureKind", register_LearningModelFeatureKind, METH_O, "registers type"},
-        {"_register_LearningModelPixelRange", register_LearningModelPixelRange, METH_O, "registers type"},
-        {"_register_TensorKind", register_TensorKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -8986,10 +8879,6 @@ namespace py::cpp::Windows::AI::MachineLearning
             return 0;
         }
 
-        Py_VISIT(state->type_LearningModelDeviceKind);
-        Py_VISIT(state->type_LearningModelFeatureKind);
-        Py_VISIT(state->type_LearningModelPixelRange);
-        Py_VISIT(state->type_TensorKind);
         Py_VISIT(state->type_ImageFeatureDescriptor);
         Py_VISIT(state->type_ImageFeatureValue);
         Py_VISIT(state->type_LearningModel);
@@ -9031,10 +8920,6 @@ namespace py::cpp::Windows::AI::MachineLearning
             return 0;
         }
 
-        Py_CLEAR(state->type_LearningModelDeviceKind);
-        Py_CLEAR(state->type_LearningModelFeatureKind);
-        Py_CLEAR(state->type_LearningModelPixelRange);
-        Py_CLEAR(state->type_TensorKind);
         Py_CLEAR(state->type_ImageFeatureDescriptor);
         Py_CLEAR(state->type_ImageFeatureValue);
         Py_CLEAR(state->type_LearningModel);
@@ -9073,7 +8958,7 @@ namespace py::cpp::Windows::AI::MachineLearning
            "_winrt_Windows_AI_MachineLearning",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -9278,98 +9163,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_AI_MachineLearning(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::AI::MachineLearning::LearningModelDeviceKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelDeviceKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::LearningModelDeviceKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::AI::MachineLearning::LearningModelFeatureKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelFeatureKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::LearningModelFeatureKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::AI::MachineLearning::LearningModelPixelRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelPixelRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::LearningModelPixelRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::AI::MachineLearning::TensorKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor>::get_python_type() noexcept {

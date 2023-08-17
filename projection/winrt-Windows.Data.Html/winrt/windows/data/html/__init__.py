@@ -4,5 +4,4 @@ import winrt.system
 
 _ns_module = winrt.system._import_ns_module("Windows.Data.Html")
 
-
 HtmlUtilities = _ns_module.HtmlUtilities

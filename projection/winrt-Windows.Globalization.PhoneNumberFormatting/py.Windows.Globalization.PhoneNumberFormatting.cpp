@@ -8,109 +8,9 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 {
     struct module_state
     {
-        PyObject* type_PhoneNumberFormat;
-        PyObject* type_PhoneNumberMatchResult;
-        PyObject* type_PhoneNumberParseResult;
-        PyObject* type_PredictedPhoneNumberKind;
         PyTypeObject* type_PhoneNumberFormatter;
         PyTypeObject* type_PhoneNumberInfo;
     };
-
-    static PyObject* register_PhoneNumberFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PhoneNumberFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PhoneNumberFormat = type;
-        Py_INCREF(state->type_PhoneNumberFormat);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PhoneNumberMatchResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PhoneNumberMatchResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PhoneNumberMatchResult = type;
-        Py_INCREF(state->type_PhoneNumberMatchResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PhoneNumberParseResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PhoneNumberParseResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PhoneNumberParseResult = type;
-        Py_INCREF(state->type_PhoneNumberParseResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PredictedPhoneNumberKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PredictedPhoneNumberKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PredictedPhoneNumberKind = type;
-        Py_INCREF(state->type_PredictedPhoneNumberKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PhoneNumberFormatter class --------------------
     static constexpr const char* const type_name_PhoneNumberFormatter = "PhoneNumberFormatter";
@@ -944,13 +844,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
     // ----- Windows.Globalization.PhoneNumberFormatting Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Globalization::PhoneNumberFormatting");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PhoneNumberFormat", register_PhoneNumberFormat, METH_O, "registers type"},
-        {"_register_PhoneNumberMatchResult", register_PhoneNumberMatchResult, METH_O, "registers type"},
-        {"_register_PhoneNumberParseResult", register_PhoneNumberParseResult, METH_O, "registers type"},
-        {"_register_PredictedPhoneNumberKind", register_PredictedPhoneNumberKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -961,10 +854,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             return 0;
         }
 
-        Py_VISIT(state->type_PhoneNumberFormat);
-        Py_VISIT(state->type_PhoneNumberMatchResult);
-        Py_VISIT(state->type_PhoneNumberParseResult);
-        Py_VISIT(state->type_PredictedPhoneNumberKind);
         Py_VISIT(state->type_PhoneNumberFormatter);
         Py_VISIT(state->type_PhoneNumberInfo);
 
@@ -980,10 +869,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             return 0;
         }
 
-        Py_CLEAR(state->type_PhoneNumberFormat);
-        Py_CLEAR(state->type_PhoneNumberMatchResult);
-        Py_CLEAR(state->type_PhoneNumberParseResult);
-        Py_CLEAR(state->type_PredictedPhoneNumberKind);
         Py_CLEAR(state->type_PhoneNumberFormatter);
         Py_CLEAR(state->type_PhoneNumberInfo);
 
@@ -996,7 +881,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
            "_winrt_Windows_Globalization_PhoneNumberFormatting",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1045,98 +930,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization_PhoneNumberFormatting(void) n
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::PhoneNumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::PhoneNumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneNumberFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::PhoneNumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::PhoneNumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneNumberMatchResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::PhoneNumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::PhoneNumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneNumberParseResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::PhoneNumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::PhoneNumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PredictedPhoneNumberKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter>::get_python_type() noexcept {

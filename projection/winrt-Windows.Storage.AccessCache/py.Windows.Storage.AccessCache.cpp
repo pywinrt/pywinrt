@@ -8,8 +8,6 @@ namespace py::cpp::Windows::Storage::AccessCache
 {
     struct module_state
     {
-        PyObject* type_AccessCacheOptions;
-        PyObject* type_RecentStorageItemVisibility;
         PyTypeObject* type_AccessListEntryView;
         PyTypeObject* type_ItemRemovedEventArgs;
         PyTypeObject* type_StorageApplicationPermissions;
@@ -18,54 +16,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         PyTypeObject* type_IStorageItemAccessList;
         PyTypeObject* type_AccessListEntry;
     };
-
-    static PyObject* register_AccessCacheOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AccessCacheOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AccessCacheOptions = type;
-        Py_INCREF(state->type_AccessCacheOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_RecentStorageItemVisibility(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_RecentStorageItemVisibility)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_RecentStorageItemVisibility = type;
-        Py_INCREF(state->type_RecentStorageItemVisibility);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AccessListEntryView class --------------------
     static constexpr const char* const type_name_AccessListEntryView = "AccessListEntryView";
@@ -2433,11 +2383,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     // ----- Windows.Storage.AccessCache Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Storage::AccessCache");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AccessCacheOptions", register_AccessCacheOptions, METH_O, "registers type"},
-        {"_register_RecentStorageItemVisibility", register_RecentStorageItemVisibility, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2448,8 +2393,6 @@ namespace py::cpp::Windows::Storage::AccessCache
             return 0;
         }
 
-        Py_VISIT(state->type_AccessCacheOptions);
-        Py_VISIT(state->type_RecentStorageItemVisibility);
         Py_VISIT(state->type_AccessListEntryView);
         Py_VISIT(state->type_ItemRemovedEventArgs);
         Py_VISIT(state->type_StorageApplicationPermissions);
@@ -2470,8 +2413,6 @@ namespace py::cpp::Windows::Storage::AccessCache
             return 0;
         }
 
-        Py_CLEAR(state->type_AccessCacheOptions);
-        Py_CLEAR(state->type_RecentStorageItemVisibility);
         Py_CLEAR(state->type_AccessListEntryView);
         Py_CLEAR(state->type_ItemRemovedEventArgs);
         Py_CLEAR(state->type_StorageApplicationPermissions);
@@ -2489,7 +2430,7 @@ namespace py::cpp::Windows::Storage::AccessCache
            "_winrt_Windows_Storage_AccessCache",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2574,52 +2515,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_AccessCache(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::AccessCache::AccessCacheOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::AccessCache;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::AccessCache");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccessCacheOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::AccessCache::AccessCacheOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::AccessCache::RecentStorageItemVisibility>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::AccessCache;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::AccessCache");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RecentStorageItemVisibility;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::AccessCache::RecentStorageItemVisibility is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Storage::AccessCache::AccessListEntryView>::get_python_type() noexcept {

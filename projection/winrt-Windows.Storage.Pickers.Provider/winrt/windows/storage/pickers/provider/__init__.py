@@ -36,10 +36,6 @@ class SetFileNameResult(enum.IntEnum):
     NOT_ALLOWED = 1
     UNAVAILABLE = 2
 
-_ns_module._register_AddFileResult(AddFileResult)
-_ns_module._register_FileSelectionMode(FileSelectionMode)
-_ns_module._register_SetFileNameResult(SetFileNameResult)
-
 FileOpenPickerUI = _ns_module.FileOpenPickerUI
 FileRemovedEventArgs = _ns_module.FileRemovedEventArgs
 FileSavePickerUI = _ns_module.FileSavePickerUI

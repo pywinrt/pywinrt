@@ -20,7 +20,5 @@ class ServiceDeviceType(enum.IntEnum):
     SMS_SERVICE = 5
     TASKS_SERVICE = 6
 
-_ns_module._register_ServiceDeviceType(ServiceDeviceType)
-
 ServiceDevice = _ns_module.ServiceDevice
 StorageDevice = _ns_module.StorageDevice

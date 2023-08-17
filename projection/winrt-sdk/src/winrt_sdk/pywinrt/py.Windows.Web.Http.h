@@ -96,31 +96,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpCompletionOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpCompletionOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpProgressStage>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpProgressStage";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpResponseMessageSource>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpResponseMessageSource";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpStatusCode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpStatusCode";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpVersion>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpVersion";
     };
 
     template<>

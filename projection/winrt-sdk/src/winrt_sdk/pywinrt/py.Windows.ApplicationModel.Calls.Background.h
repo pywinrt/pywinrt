@@ -49,31 +49,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneCallBlockedReason";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneIncomingCallDismissedReason";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneLineChangeKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneLineProperties";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneTriggerType";
     };
 
     template<>

@@ -21,8 +21,6 @@ class IndexedResourceType(enum.IntEnum):
     PATH = 1
     EMBEDDED_DATA = 2
 
-_ns_module._register_IndexedResourceType(IndexedResourceType)
-
 IndexedResourceCandidate = _ns_module.IndexedResourceCandidate
 IndexedResourceQualifier = _ns_module.IndexedResourceQualifier
 ResourceIndexer = _ns_module.ResourceIndexer

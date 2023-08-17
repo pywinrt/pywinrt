@@ -8,11 +8,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 {
     struct module_state
     {
-        PyObject* type_PhoneCallBlockedReason;
-        PyObject* type_PhoneIncomingCallDismissedReason;
-        PyObject* type_PhoneLineChangeKind;
-        PyObject* type_PhoneLineProperties;
-        PyObject* type_PhoneTriggerType;
         PyTypeObject* type_PhoneCallBlockedTriggerDetails;
         PyTypeObject* type_PhoneCallOriginDataRequestTriggerDetails;
         PyTypeObject* type_PhoneIncomingCallDismissedTriggerDetails;
@@ -20,126 +15,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
         PyTypeObject* type_PhoneLineChangedTriggerDetails;
         PyTypeObject* type_PhoneNewVoicemailMessageTriggerDetails;
     };
-
-    static PyObject* register_PhoneCallBlockedReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PhoneCallBlockedReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PhoneCallBlockedReason = type;
-        Py_INCREF(state->type_PhoneCallBlockedReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PhoneIncomingCallDismissedReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PhoneIncomingCallDismissedReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PhoneIncomingCallDismissedReason = type;
-        Py_INCREF(state->type_PhoneIncomingCallDismissedReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PhoneLineChangeKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PhoneLineChangeKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PhoneLineChangeKind = type;
-        Py_INCREF(state->type_PhoneLineChangeKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PhoneLineProperties(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PhoneLineProperties)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PhoneLineProperties = type;
-        Py_INCREF(state->type_PhoneLineProperties);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PhoneTriggerType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PhoneTriggerType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PhoneTriggerType = type;
-        Py_INCREF(state->type_PhoneTriggerType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PhoneCallBlockedTriggerDetails class --------------------
     static constexpr const char* const type_name_PhoneCallBlockedTriggerDetails = "PhoneCallBlockedTriggerDetails";
@@ -986,14 +861,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     // ----- Windows.ApplicationModel.Calls.Background Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Calls::Background");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PhoneCallBlockedReason", register_PhoneCallBlockedReason, METH_O, "registers type"},
-        {"_register_PhoneIncomingCallDismissedReason", register_PhoneIncomingCallDismissedReason, METH_O, "registers type"},
-        {"_register_PhoneLineChangeKind", register_PhoneLineChangeKind, METH_O, "registers type"},
-        {"_register_PhoneLineProperties", register_PhoneLineProperties, METH_O, "registers type"},
-        {"_register_PhoneTriggerType", register_PhoneTriggerType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1004,11 +871,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
             return 0;
         }
 
-        Py_VISIT(state->type_PhoneCallBlockedReason);
-        Py_VISIT(state->type_PhoneIncomingCallDismissedReason);
-        Py_VISIT(state->type_PhoneLineChangeKind);
-        Py_VISIT(state->type_PhoneLineProperties);
-        Py_VISIT(state->type_PhoneTriggerType);
         Py_VISIT(state->type_PhoneCallBlockedTriggerDetails);
         Py_VISIT(state->type_PhoneCallOriginDataRequestTriggerDetails);
         Py_VISIT(state->type_PhoneIncomingCallDismissedTriggerDetails);
@@ -1028,11 +890,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
             return 0;
         }
 
-        Py_CLEAR(state->type_PhoneCallBlockedReason);
-        Py_CLEAR(state->type_PhoneIncomingCallDismissedReason);
-        Py_CLEAR(state->type_PhoneLineChangeKind);
-        Py_CLEAR(state->type_PhoneLineProperties);
-        Py_CLEAR(state->type_PhoneTriggerType);
         Py_CLEAR(state->type_PhoneCallBlockedTriggerDetails);
         Py_CLEAR(state->type_PhoneCallOriginDataRequestTriggerDetails);
         Py_CLEAR(state->type_PhoneIncomingCallDismissedTriggerDetails);
@@ -1049,7 +906,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
            "_winrt_Windows_ApplicationModel_Calls_Background",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1122,121 +979,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls_Background(void) noe
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallBlockedReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneIncomingCallDismissedReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLineChangeKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLineProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneTriggerType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>::get_python_type() noexcept {

@@ -35,8 +35,6 @@ class DiagnosticActionState(enum.IntEnum):
     VERIFYING_RESOLUTION = 5
     EXECUTING = 6
 
-_ns_module._register_DiagnosticActionState(DiagnosticActionState)
-
 DiagnosticActionResult = _ns_module.DiagnosticActionResult
 DiagnosticInvoker = _ns_module.DiagnosticInvoker
 ProcessCpuUsage = _ns_module.ProcessCpuUsage

@@ -474,9 +474,6 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
     // ----- Windows.Devices.Pwm.Provider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Pwm::Provider");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -514,7 +511,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
            "_winrt_Windows_Devices_Pwm_Provider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

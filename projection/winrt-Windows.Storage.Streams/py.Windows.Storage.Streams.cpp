@@ -8,10 +8,6 @@ namespace py::cpp::Windows::Storage::Streams
 {
     struct module_state
     {
-        PyObject* type_ByteOrder;
-        PyObject* type_FileOpenDisposition;
-        PyObject* type_InputStreamOptions;
-        PyObject* type_UnicodeEncoding;
         PyTypeObject* type_Buffer;
         PyTypeObject* type_DataReader;
         PyTypeObject* type_DataReaderLoadOperation;
@@ -38,102 +34,6 @@ namespace py::cpp::Windows::Storage::Streams
         PyTypeObject* type_IRandomAccessStreamReference;
         PyTypeObject* type_IRandomAccessStreamWithContentType;
     };
-
-    static PyObject* register_ByteOrder(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ByteOrder)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ByteOrder = type;
-        Py_INCREF(state->type_ByteOrder);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_FileOpenDisposition(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_FileOpenDisposition)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_FileOpenDisposition = type;
-        Py_INCREF(state->type_FileOpenDisposition);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_InputStreamOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InputStreamOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InputStreamOptions = type;
-        Py_INCREF(state->type_InputStreamOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UnicodeEncoding(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UnicodeEncoding)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UnicodeEncoding = type;
-        Py_INCREF(state->type_UnicodeEncoding);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Buffer class --------------------
     static constexpr const char* const type_name_Buffer = "Buffer";
@@ -9127,13 +9027,6 @@ namespace py::cpp::Windows::Storage::Streams
     // ----- Windows.Storage.Streams Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Storage::Streams");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ByteOrder", register_ByteOrder, METH_O, "registers type"},
-        {"_register_FileOpenDisposition", register_FileOpenDisposition, METH_O, "registers type"},
-        {"_register_InputStreamOptions", register_InputStreamOptions, METH_O, "registers type"},
-        {"_register_UnicodeEncoding", register_UnicodeEncoding, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -9144,10 +9037,6 @@ namespace py::cpp::Windows::Storage::Streams
             return 0;
         }
 
-        Py_VISIT(state->type_ByteOrder);
-        Py_VISIT(state->type_FileOpenDisposition);
-        Py_VISIT(state->type_InputStreamOptions);
-        Py_VISIT(state->type_UnicodeEncoding);
         Py_VISIT(state->type_Buffer);
         Py_VISIT(state->type_DataReader);
         Py_VISIT(state->type_DataReaderLoadOperation);
@@ -9186,10 +9075,6 @@ namespace py::cpp::Windows::Storage::Streams
             return 0;
         }
 
-        Py_CLEAR(state->type_ByteOrder);
-        Py_CLEAR(state->type_FileOpenDisposition);
-        Py_CLEAR(state->type_InputStreamOptions);
-        Py_CLEAR(state->type_UnicodeEncoding);
         Py_CLEAR(state->type_Buffer);
         Py_CLEAR(state->type_DataReader);
         Py_CLEAR(state->type_DataReaderLoadOperation);
@@ -9225,7 +9110,7 @@ namespace py::cpp::Windows::Storage::Streams
            "_winrt_Windows_Storage_Streams",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -9420,98 +9305,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Streams(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Streams::ByteOrder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ByteOrder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::ByteOrder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Streams::FileOpenDisposition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileOpenDisposition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::FileOpenDisposition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Streams::InputStreamOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InputStreamOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::InputStreamOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Streams::UnicodeEncoding>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnicodeEncoding;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::UnicodeEncoding is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::Buffer>::get_python_type() noexcept {

@@ -84,43 +84,50 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectAdvertisementListenStateDiscoverability";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectAdvertisementPublisherStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectConfigurationMethod";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectConnectionStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectDeviceSelectorType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectError>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectError";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectPairingProcedure";
     };
 
     template<>

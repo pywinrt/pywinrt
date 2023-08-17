@@ -258,9 +258,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
     // ----- Windows.Phone.PersonalInformation.Provisioning Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Phone::PersonalInformation::Provisioning");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -298,7 +295,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
            "_winrt_Windows_Phone_PersonalInformation_Provisioning",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

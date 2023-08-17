@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 CoreUserActivityManager = _ns_module.CoreUserActivityManager

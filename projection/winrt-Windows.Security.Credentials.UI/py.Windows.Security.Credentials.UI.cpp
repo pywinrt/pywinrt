@@ -8,111 +8,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 {
     struct module_state
     {
-        PyObject* type_AuthenticationProtocol;
-        PyObject* type_CredentialSaveOption;
-        PyObject* type_UserConsentVerificationResult;
-        PyObject* type_UserConsentVerifierAvailability;
         PyTypeObject* type_CredentialPicker;
         PyTypeObject* type_CredentialPickerOptions;
         PyTypeObject* type_CredentialPickerResults;
         PyTypeObject* type_UserConsentVerifier;
     };
-
-    static PyObject* register_AuthenticationProtocol(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AuthenticationProtocol)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AuthenticationProtocol = type;
-        Py_INCREF(state->type_AuthenticationProtocol);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CredentialSaveOption(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CredentialSaveOption)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CredentialSaveOption = type;
-        Py_INCREF(state->type_CredentialSaveOption);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UserConsentVerificationResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserConsentVerificationResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserConsentVerificationResult = type;
-        Py_INCREF(state->type_UserConsentVerificationResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UserConsentVerifierAvailability(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserConsentVerifierAvailability)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserConsentVerifierAvailability = type;
-        Py_INCREF(state->type_UserConsentVerifierAvailability);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CredentialPicker class --------------------
     static constexpr const char* const type_name_CredentialPicker = "CredentialPicker";
@@ -1115,13 +1015,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
     // ----- Windows.Security.Credentials.UI Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::Credentials::UI");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AuthenticationProtocol", register_AuthenticationProtocol, METH_O, "registers type"},
-        {"_register_CredentialSaveOption", register_CredentialSaveOption, METH_O, "registers type"},
-        {"_register_UserConsentVerificationResult", register_UserConsentVerificationResult, METH_O, "registers type"},
-        {"_register_UserConsentVerifierAvailability", register_UserConsentVerifierAvailability, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1132,10 +1025,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
             return 0;
         }
 
-        Py_VISIT(state->type_AuthenticationProtocol);
-        Py_VISIT(state->type_CredentialSaveOption);
-        Py_VISIT(state->type_UserConsentVerificationResult);
-        Py_VISIT(state->type_UserConsentVerifierAvailability);
         Py_VISIT(state->type_CredentialPicker);
         Py_VISIT(state->type_CredentialPickerOptions);
         Py_VISIT(state->type_CredentialPickerResults);
@@ -1153,10 +1042,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
             return 0;
         }
 
-        Py_CLEAR(state->type_AuthenticationProtocol);
-        Py_CLEAR(state->type_CredentialSaveOption);
-        Py_CLEAR(state->type_UserConsentVerificationResult);
-        Py_CLEAR(state->type_UserConsentVerifierAvailability);
         Py_CLEAR(state->type_CredentialPicker);
         Py_CLEAR(state->type_CredentialPickerOptions);
         Py_CLEAR(state->type_CredentialPickerResults);
@@ -1171,7 +1056,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
            "_winrt_Windows_Security_Credentials_UI",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1232,98 +1117,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Credentials_UI(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Credentials::UI::AuthenticationProtocol>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AuthenticationProtocol;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::UI::AuthenticationProtocol is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Credentials::UI::CredentialSaveOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CredentialSaveOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::UI::CredentialSaveOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Credentials::UI::UserConsentVerificationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserConsentVerificationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::UI::UserConsentVerificationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Credentials::UI::UserConsentVerifierAvailability>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserConsentVerifierAvailability;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::UI::UserConsentVerifierAvailability is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::UI::CredentialPicker>::get_python_type() noexcept {

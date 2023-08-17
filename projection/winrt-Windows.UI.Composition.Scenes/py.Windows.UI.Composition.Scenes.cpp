@@ -8,10 +8,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 {
     struct module_state
     {
-        PyObject* type_SceneAlphaMode;
-        PyObject* type_SceneAttributeSemantic;
-        PyObject* type_SceneComponentType;
-        PyObject* type_SceneWrappingMode;
         PyTypeObject* type_SceneBoundingBox;
         PyTypeObject* type_SceneComponent;
         PyTypeObject* type_SceneComponentCollection;
@@ -30,102 +26,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         PyTypeObject* type_SceneSurfaceMaterialInput;
         PyTypeObject* type_SceneVisual;
     };
-
-    static PyObject* register_SceneAlphaMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SceneAlphaMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SceneAlphaMode = type;
-        Py_INCREF(state->type_SceneAlphaMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SceneAttributeSemantic(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SceneAttributeSemantic)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SceneAttributeSemantic = type;
-        Py_INCREF(state->type_SceneAttributeSemantic);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SceneComponentType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SceneComponentType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SceneComponentType = type;
-        Py_INCREF(state->type_SceneComponentType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SceneWrappingMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SceneWrappingMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SceneWrappingMode = type;
-        Py_INCREF(state->type_SceneWrappingMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- SceneBoundingBox class --------------------
     static constexpr const char* const type_name_SceneBoundingBox = "SceneBoundingBox";
@@ -4676,13 +4576,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     // ----- Windows.UI.Composition.Scenes Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Composition::Scenes");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SceneAlphaMode", register_SceneAlphaMode, METH_O, "registers type"},
-        {"_register_SceneAttributeSemantic", register_SceneAttributeSemantic, METH_O, "registers type"},
-        {"_register_SceneComponentType", register_SceneComponentType, METH_O, "registers type"},
-        {"_register_SceneWrappingMode", register_SceneWrappingMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4693,10 +4586,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
             return 0;
         }
 
-        Py_VISIT(state->type_SceneAlphaMode);
-        Py_VISIT(state->type_SceneAttributeSemantic);
-        Py_VISIT(state->type_SceneComponentType);
-        Py_VISIT(state->type_SceneWrappingMode);
         Py_VISIT(state->type_SceneBoundingBox);
         Py_VISIT(state->type_SceneComponent);
         Py_VISIT(state->type_SceneComponentCollection);
@@ -4727,10 +4616,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
             return 0;
         }
 
-        Py_CLEAR(state->type_SceneAlphaMode);
-        Py_CLEAR(state->type_SceneAttributeSemantic);
-        Py_CLEAR(state->type_SceneComponentType);
-        Py_CLEAR(state->type_SceneWrappingMode);
         Py_CLEAR(state->type_SceneBoundingBox);
         Py_CLEAR(state->type_SceneComponent);
         Py_CLEAR(state->type_SceneComponentCollection);
@@ -4758,7 +4643,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
            "_winrt_Windows_UI_Composition_Scenes",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4897,98 +4782,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition_Scenes(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Scenes::SceneAlphaMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneAlphaMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneAlphaMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Scenes::SceneAttributeSemantic>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneAttributeSemantic;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneAttributeSemantic is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Scenes::SceneComponentType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneComponentType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneComponentType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Composition::Scenes::SceneWrappingMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneWrappingMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneWrappingMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneBoundingBox>::get_python_type() noexcept {

@@ -230,22 +230,6 @@ class UserNotificationChangedKind(enum.IntEnum):
     ADDED = 0
     REMOVED = 1
 
-_ns_module._register_AdaptiveNotificationContentKind(AdaptiveNotificationContentKind)
-_ns_module._register_BadgeTemplateType(BadgeTemplateType)
-_ns_module._register_NotificationKinds(NotificationKinds)
-_ns_module._register_NotificationMirroring(NotificationMirroring)
-_ns_module._register_NotificationSetting(NotificationSetting)
-_ns_module._register_NotificationUpdateResult(NotificationUpdateResult)
-_ns_module._register_PeriodicUpdateRecurrence(PeriodicUpdateRecurrence)
-_ns_module._register_TileFlyoutTemplateType(TileFlyoutTemplateType)
-_ns_module._register_TileTemplateType(TileTemplateType)
-_ns_module._register_ToastDismissalReason(ToastDismissalReason)
-_ns_module._register_ToastHistoryChangedType(ToastHistoryChangedType)
-_ns_module._register_ToastNotificationMode(ToastNotificationMode)
-_ns_module._register_ToastNotificationPriority(ToastNotificationPriority)
-_ns_module._register_ToastTemplateType(ToastTemplateType)
-_ns_module._register_UserNotificationChangedKind(UserNotificationChangedKind)
-
 AdaptiveNotificationText = _ns_module.AdaptiveNotificationText
 BadgeNotification = _ns_module.BadgeNotification
 BadgeUpdateManager = _ns_module.BadgeUpdateManager

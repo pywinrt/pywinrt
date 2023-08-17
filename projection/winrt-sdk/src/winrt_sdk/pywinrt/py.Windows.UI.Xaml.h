@@ -908,199 +908,232 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::ApplicationHighContrastAdjustment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "ApplicationHighContrastAdjustment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::ApplicationRequiresPointerMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "ApplicationRequiresPointerMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::ApplicationTheme>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "ApplicationTheme";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::AutomationTextAttributesEnum>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "AutomationTextAttributesEnum";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::DurationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "DurationType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::ElementHighContrastAdjustment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "ElementHighContrastAdjustment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::ElementSoundKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "ElementSoundKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::ElementSoundMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "ElementSoundMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::ElementSoundPlayerState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "ElementSoundPlayerState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::ElementSpatialAudioMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "ElementSpatialAudioMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::ElementTheme>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "ElementTheme";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::FlowDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "FlowDirection";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::FocusState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "FocusState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::FocusVisualKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "FocusVisualKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::FontCapitals>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "FontCapitals";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::FontEastAsianLanguage>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "FontEastAsianLanguage";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::FontEastAsianWidths>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "FontEastAsianWidths";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::FontFraction>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "FontFraction";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::FontNumeralAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "FontNumeralAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::FontNumeralStyle>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "FontNumeralStyle";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::FontVariants>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "FontVariants";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::GridUnitType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "GridUnitType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::HorizontalAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "HorizontalAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::LineStackingStrategy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "LineStackingStrategy";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::OpticalMarginAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "OpticalMarginAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::TextAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "TextAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::TextLineBounds>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "TextLineBounds";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::TextReadingOrder>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "TextReadingOrder";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::TextTrimming>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "TextTrimming";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::TextWrapping>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "TextWrapping";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Vector3TransitionComponents>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "Vector3TransitionComponents";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::VerticalAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "VerticalAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Visibility>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml";
+        static constexpr const char* type_name = "Visibility";
     };
 
     template<>

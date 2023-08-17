@@ -136,20 +136,6 @@ class ViewSizePreference(enum.IntEnum):
     USE_NONE = 5
     CUSTOM = 6
 
-_ns_module._register_ApplicationViewBoundsMode(ApplicationViewBoundsMode)
-_ns_module._register_ApplicationViewMode(ApplicationViewMode)
-_ns_module._register_ApplicationViewOrientation(ApplicationViewOrientation)
-_ns_module._register_ApplicationViewState(ApplicationViewState)
-_ns_module._register_ApplicationViewSwitchingOptions(ApplicationViewSwitchingOptions)
-_ns_module._register_ApplicationViewWindowingMode(ApplicationViewWindowingMode)
-_ns_module._register_FullScreenSystemOverlayMode(FullScreenSystemOverlayMode)
-_ns_module._register_HandPreference(HandPreference)
-_ns_module._register_ScreenCaptureDisabledBehavior(ScreenCaptureDisabledBehavior)
-_ns_module._register_UIColorType(UIColorType)
-_ns_module._register_UIElementType(UIElementType)
-_ns_module._register_UserInteractionMode(UserInteractionMode)
-_ns_module._register_ViewSizePreference(ViewSizePreference)
-
 AccessibilitySettings = _ns_module.AccessibilitySettings
 ActivationViewSwitcher = _ns_module.ActivationViewSwitcher
 ApplicationView = _ns_module.ApplicationView

@@ -69,13 +69,6 @@ class SpatialPerceptionAccessStatus(enum.IntEnum):
     DENIED_BY_USER = 2
     DENIED_BY_SYSTEM = 3
 
-_ns_module._register_SpatialAnchorExportPurpose(SpatialAnchorExportPurpose)
-_ns_module._register_SpatialEntityWatcherStatus(SpatialEntityWatcherStatus)
-_ns_module._register_SpatialLocatability(SpatialLocatability)
-_ns_module._register_SpatialLookDirectionRange(SpatialLookDirectionRange)
-_ns_module._register_SpatialMovementRange(SpatialMovementRange)
-_ns_module._register_SpatialPerceptionAccessStatus(SpatialPerceptionAccessStatus)
-
 SpatialBoundingBox = _ns_module.SpatialBoundingBox
 SpatialBoundingFrustum = _ns_module.SpatialBoundingFrustum
 SpatialBoundingOrientedBox = _ns_module.SpatialBoundingOrientedBox

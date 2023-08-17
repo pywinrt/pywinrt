@@ -67,12 +67,6 @@ class TargetedContentValueKind(enum.IntEnum):
     IMAGE_FILES = 12
     ACTIONS = 13
 
-_ns_module._register_TargetedContentAppInstallationState(TargetedContentAppInstallationState)
-_ns_module._register_TargetedContentAvailability(TargetedContentAvailability)
-_ns_module._register_TargetedContentInteraction(TargetedContentInteraction)
-_ns_module._register_TargetedContentObjectKind(TargetedContentObjectKind)
-_ns_module._register_TargetedContentValueKind(TargetedContentValueKind)
-
 TargetedContentAction = _ns_module.TargetedContentAction
 TargetedContentAvailabilityChangedEventArgs = _ns_module.TargetedContentAvailabilityChangedEventArgs
 TargetedContentChangedEventArgs = _ns_module.TargetedContentChangedEventArgs

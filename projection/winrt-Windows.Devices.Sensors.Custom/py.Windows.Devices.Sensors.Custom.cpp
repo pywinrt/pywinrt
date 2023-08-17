@@ -616,9 +616,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     // ----- Windows.Devices.Sensors.Custom Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Sensors::Custom");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -658,7 +655,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
            "_winrt_Windows_Devices_Sensors_Custom",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

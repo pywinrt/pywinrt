@@ -204,85 +204,99 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::ApplicationDataCreateDisposition>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "ApplicationDataCreateDisposition";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::ApplicationDataLocality>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "ApplicationDataLocality";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::CreationCollisionOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "CreationCollisionOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::FileAccessMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "FileAccessMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::FileAttributes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "FileAttributes";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::KnownFolderId>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "KnownFolderId";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::KnownFoldersAccessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "KnownFoldersAccessStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::KnownLibraryId>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "KnownLibraryId";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::NameCollisionOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "NameCollisionOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::StorageDeleteOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageDeleteOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::StorageItemTypes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageItemTypes";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::StorageLibraryChangeType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageLibraryChangeType";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::StorageOpenOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageOpenOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::StreamedFileFailureMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StreamedFileFailureMode";
     };
 
     template<>

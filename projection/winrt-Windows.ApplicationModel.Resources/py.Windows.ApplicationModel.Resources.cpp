@@ -387,9 +387,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources
     // ----- Windows.ApplicationModel.Resources Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Resources");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -425,7 +422,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
            "_winrt_Windows_ApplicationModel_Resources",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

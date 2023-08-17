@@ -14,7 +14,6 @@ try:
 except ImportError:
     pass
 
-
 SysStorageProviderEventReceivedEventArgs = _ns_module.SysStorageProviderEventReceivedEventArgs
 ISysStorageProviderEventSource = _ns_module.ISysStorageProviderEventSource
 ISysStorageProviderHandlerFactory = _ns_module.ISysStorageProviderHandlerFactory

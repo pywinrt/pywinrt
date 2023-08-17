@@ -8,10 +8,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 {
     struct module_state
     {
-        PyObject* type_GipFirmwareUpdateStatus;
-        PyObject* type_GipMessageClass;
-        PyObject* type_XusbDeviceSubtype;
-        PyObject* type_XusbDeviceType;
         PyTypeObject* type_GameControllerFactoryManager;
         PyTypeObject* type_GipFirmwareUpdateResult;
         PyTypeObject* type_GipGameControllerProvider;
@@ -26,102 +22,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         PyTypeObject* type_GameControllerVersionInfo;
         PyTypeObject* type_GipFirmwareUpdateProgress;
     };
-
-    static PyObject* register_GipFirmwareUpdateStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GipFirmwareUpdateStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GipFirmwareUpdateStatus = type;
-        Py_INCREF(state->type_GipFirmwareUpdateStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GipMessageClass(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GipMessageClass)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GipMessageClass = type;
-        Py_INCREF(state->type_GipMessageClass);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_XusbDeviceSubtype(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XusbDeviceSubtype)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XusbDeviceSubtype = type;
-        Py_INCREF(state->type_XusbDeviceSubtype);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_XusbDeviceType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XusbDeviceType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XusbDeviceType = type;
-        Py_INCREF(state->type_XusbDeviceType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- GameControllerFactoryManager class --------------------
     static constexpr const char* const type_name_GameControllerFactoryManager = "GameControllerFactoryManager";
@@ -2630,13 +2530,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     // ----- Windows.Gaming.Input.Custom Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Gaming::Input::Custom");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_GipFirmwareUpdateStatus", register_GipFirmwareUpdateStatus, METH_O, "registers type"},
-        {"_register_GipMessageClass", register_GipMessageClass, METH_O, "registers type"},
-        {"_register_XusbDeviceSubtype", register_XusbDeviceSubtype, METH_O, "registers type"},
-        {"_register_XusbDeviceType", register_XusbDeviceType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2647,10 +2540,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
             return 0;
         }
 
-        Py_VISIT(state->type_GipFirmwareUpdateStatus);
-        Py_VISIT(state->type_GipMessageClass);
-        Py_VISIT(state->type_XusbDeviceSubtype);
-        Py_VISIT(state->type_XusbDeviceType);
         Py_VISIT(state->type_GameControllerFactoryManager);
         Py_VISIT(state->type_GipFirmwareUpdateResult);
         Py_VISIT(state->type_GipGameControllerProvider);
@@ -2677,10 +2566,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
             return 0;
         }
 
-        Py_CLEAR(state->type_GipFirmwareUpdateStatus);
-        Py_CLEAR(state->type_GipMessageClass);
-        Py_CLEAR(state->type_XusbDeviceSubtype);
-        Py_CLEAR(state->type_XusbDeviceType);
         Py_CLEAR(state->type_GameControllerFactoryManager);
         Py_CLEAR(state->type_GipFirmwareUpdateResult);
         Py_CLEAR(state->type_GipGameControllerProvider);
@@ -2704,7 +2589,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
            "_winrt_Windows_Gaming_Input_Custom",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2819,98 +2704,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input_Custom(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GipFirmwareUpdateStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Input::Custom::GipMessageClass>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GipMessageClass;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::GipMessageClass is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Input::Custom::XusbDeviceSubtype>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XusbDeviceSubtype;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::XusbDeviceSubtype is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Input::Custom::XusbDeviceType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XusbDeviceType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::XusbDeviceType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>::get_python_type() noexcept {

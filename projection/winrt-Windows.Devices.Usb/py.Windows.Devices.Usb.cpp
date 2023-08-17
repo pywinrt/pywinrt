@@ -8,12 +8,6 @@ namespace py::cpp::Windows::Devices::Usb
 {
     struct module_state
     {
-        PyObject* type_UsbControlRecipient;
-        PyObject* type_UsbControlTransferType;
-        PyObject* type_UsbEndpointType;
-        PyObject* type_UsbReadOptions;
-        PyObject* type_UsbTransferDirection;
-        PyObject* type_UsbWriteOptions;
         PyTypeObject* type_UsbBulkInEndpointDescriptor;
         PyTypeObject* type_UsbBulkInPipe;
         PyTypeObject* type_UsbBulkOutEndpointDescriptor;
@@ -37,150 +31,6 @@ namespace py::cpp::Windows::Devices::Usb
         PyTypeObject* type_UsbInterruptOutPipe;
         PyTypeObject* type_UsbSetupPacket;
     };
-
-    static PyObject* register_UsbControlRecipient(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UsbControlRecipient)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UsbControlRecipient = type;
-        Py_INCREF(state->type_UsbControlRecipient);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UsbControlTransferType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UsbControlTransferType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UsbControlTransferType = type;
-        Py_INCREF(state->type_UsbControlTransferType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UsbEndpointType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UsbEndpointType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UsbEndpointType = type;
-        Py_INCREF(state->type_UsbEndpointType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UsbReadOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UsbReadOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UsbReadOptions = type;
-        Py_INCREF(state->type_UsbReadOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UsbTransferDirection(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UsbTransferDirection)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UsbTransferDirection = type;
-        Py_INCREF(state->type_UsbTransferDirection);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UsbWriteOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UsbWriteOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UsbWriteOptions = type;
-        Py_INCREF(state->type_UsbWriteOptions);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- UsbBulkInEndpointDescriptor class --------------------
     static constexpr const char* const type_name_UsbBulkInEndpointDescriptor = "UsbBulkInEndpointDescriptor";
@@ -4967,15 +4817,6 @@ namespace py::cpp::Windows::Devices::Usb
     // ----- Windows.Devices.Usb Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Usb");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_UsbControlRecipient", register_UsbControlRecipient, METH_O, "registers type"},
-        {"_register_UsbControlTransferType", register_UsbControlTransferType, METH_O, "registers type"},
-        {"_register_UsbEndpointType", register_UsbEndpointType, METH_O, "registers type"},
-        {"_register_UsbReadOptions", register_UsbReadOptions, METH_O, "registers type"},
-        {"_register_UsbTransferDirection", register_UsbTransferDirection, METH_O, "registers type"},
-        {"_register_UsbWriteOptions", register_UsbWriteOptions, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4986,12 +4827,6 @@ namespace py::cpp::Windows::Devices::Usb
             return 0;
         }
 
-        Py_VISIT(state->type_UsbControlRecipient);
-        Py_VISIT(state->type_UsbControlTransferType);
-        Py_VISIT(state->type_UsbEndpointType);
-        Py_VISIT(state->type_UsbReadOptions);
-        Py_VISIT(state->type_UsbTransferDirection);
-        Py_VISIT(state->type_UsbWriteOptions);
         Py_VISIT(state->type_UsbBulkInEndpointDescriptor);
         Py_VISIT(state->type_UsbBulkInPipe);
         Py_VISIT(state->type_UsbBulkOutEndpointDescriptor);
@@ -5027,12 +4862,6 @@ namespace py::cpp::Windows::Devices::Usb
             return 0;
         }
 
-        Py_CLEAR(state->type_UsbControlRecipient);
-        Py_CLEAR(state->type_UsbControlTransferType);
-        Py_CLEAR(state->type_UsbEndpointType);
-        Py_CLEAR(state->type_UsbReadOptions);
-        Py_CLEAR(state->type_UsbTransferDirection);
-        Py_CLEAR(state->type_UsbWriteOptions);
         Py_CLEAR(state->type_UsbBulkInEndpointDescriptor);
         Py_CLEAR(state->type_UsbBulkInPipe);
         Py_CLEAR(state->type_UsbBulkOutEndpointDescriptor);
@@ -5065,7 +4894,7 @@ namespace py::cpp::Windows::Devices::Usb
            "_winrt_Windows_Devices_Usb",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -5240,144 +5069,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Usb(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Usb::UsbControlRecipient>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbControlRecipient;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbControlRecipient is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Usb::UsbControlTransferType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbControlTransferType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbControlTransferType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Usb::UsbEndpointType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbEndpointType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbEndpointType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Usb::UsbReadOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbReadOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbReadOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Usb::UsbTransferDirection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbTransferDirection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbTransferDirection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Usb::UsbWriteOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbWriteOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbWriteOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor>::get_python_type() noexcept {

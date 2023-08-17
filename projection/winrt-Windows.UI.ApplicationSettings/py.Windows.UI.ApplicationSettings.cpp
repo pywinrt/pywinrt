@@ -8,9 +8,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 {
     struct module_state
     {
-        PyObject* type_SettingsEdgeLocation;
-        PyObject* type_SupportedWebAccountActions;
-        PyObject* type_WebAccountAction;
         PyTypeObject* type_AccountsSettingsPane;
         PyTypeObject* type_AccountsSettingsPaneCommandsRequestedEventArgs;
         PyTypeObject* type_AccountsSettingsPaneEventDeferral;
@@ -23,78 +20,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         PyTypeObject* type_WebAccountInvokedArgs;
         PyTypeObject* type_WebAccountProviderCommand;
     };
-
-    static PyObject* register_SettingsEdgeLocation(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SettingsEdgeLocation)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SettingsEdgeLocation = type;
-        Py_INCREF(state->type_SettingsEdgeLocation);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SupportedWebAccountActions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SupportedWebAccountActions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SupportedWebAccountActions = type;
-        Py_INCREF(state->type_SupportedWebAccountActions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WebAccountAction(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebAccountAction)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebAccountAction = type;
-        Py_INCREF(state->type_WebAccountAction);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AccountsSettingsPane class --------------------
     static constexpr const char* const type_name_AccountsSettingsPane = "AccountsSettingsPane";
@@ -2014,12 +1939,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     // ----- Windows.UI.ApplicationSettings Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::ApplicationSettings");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SettingsEdgeLocation", register_SettingsEdgeLocation, METH_O, "registers type"},
-        {"_register_SupportedWebAccountActions", register_SupportedWebAccountActions, METH_O, "registers type"},
-        {"_register_WebAccountAction", register_WebAccountAction, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2030,9 +1949,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             return 0;
         }
 
-        Py_VISIT(state->type_SettingsEdgeLocation);
-        Py_VISIT(state->type_SupportedWebAccountActions);
-        Py_VISIT(state->type_WebAccountAction);
         Py_VISIT(state->type_AccountsSettingsPane);
         Py_VISIT(state->type_AccountsSettingsPaneCommandsRequestedEventArgs);
         Py_VISIT(state->type_AccountsSettingsPaneEventDeferral);
@@ -2057,9 +1973,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             return 0;
         }
 
-        Py_CLEAR(state->type_SettingsEdgeLocation);
-        Py_CLEAR(state->type_SupportedWebAccountActions);
-        Py_CLEAR(state->type_WebAccountAction);
         Py_CLEAR(state->type_AccountsSettingsPane);
         Py_CLEAR(state->type_AccountsSettingsPaneCommandsRequestedEventArgs);
         Py_CLEAR(state->type_AccountsSettingsPaneEventDeferral);
@@ -2081,7 +1994,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
            "_winrt_Windows_UI_ApplicationSettings",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2196,75 +2109,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ApplicationSettings(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::ApplicationSettings::SettingsEdgeLocation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SettingsEdgeLocation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::SettingsEdgeLocation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::ApplicationSettings::SupportedWebAccountActions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SupportedWebAccountActions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::SupportedWebAccountActions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::ApplicationSettings::WebAccountAction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountAction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::WebAccountAction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane>::get_python_type() noexcept {

@@ -8,14 +8,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 {
     struct module_state
     {
-        PyObject* type_SpeechContinuousRecognitionMode;
-        PyObject* type_SpeechRecognitionAudioProblem;
-        PyObject* type_SpeechRecognitionConfidence;
-        PyObject* type_SpeechRecognitionConstraintProbability;
-        PyObject* type_SpeechRecognitionConstraintType;
-        PyObject* type_SpeechRecognitionResultStatus;
-        PyObject* type_SpeechRecognitionScenario;
-        PyObject* type_SpeechRecognizerState;
         PyTypeObject* type_SpeechContinuousRecognitionCompletedEventArgs;
         PyTypeObject* type_SpeechContinuousRecognitionResultGeneratedEventArgs;
         PyTypeObject* type_SpeechContinuousRecognitionSession;
@@ -37,198 +29,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         PyTypeObject* type_VoiceCommandSet;
         PyTypeObject* type_ISpeechRecognitionConstraint;
     };
-
-    static PyObject* register_SpeechContinuousRecognitionMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechContinuousRecognitionMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechContinuousRecognitionMode = type;
-        Py_INCREF(state->type_SpeechContinuousRecognitionMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpeechRecognitionAudioProblem(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechRecognitionAudioProblem)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechRecognitionAudioProblem = type;
-        Py_INCREF(state->type_SpeechRecognitionAudioProblem);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpeechRecognitionConfidence(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechRecognitionConfidence)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechRecognitionConfidence = type;
-        Py_INCREF(state->type_SpeechRecognitionConfidence);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpeechRecognitionConstraintProbability(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechRecognitionConstraintProbability)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechRecognitionConstraintProbability = type;
-        Py_INCREF(state->type_SpeechRecognitionConstraintProbability);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpeechRecognitionConstraintType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechRecognitionConstraintType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechRecognitionConstraintType = type;
-        Py_INCREF(state->type_SpeechRecognitionConstraintType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpeechRecognitionResultStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechRecognitionResultStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechRecognitionResultStatus = type;
-        Py_INCREF(state->type_SpeechRecognitionResultStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpeechRecognitionScenario(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechRecognitionScenario)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechRecognitionScenario = type;
-        Py_INCREF(state->type_SpeechRecognitionScenario);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpeechRecognizerState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpeechRecognizerState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpeechRecognizerState = type;
-        Py_INCREF(state->type_SpeechRecognizerState);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- SpeechContinuousRecognitionCompletedEventArgs class --------------------
     static constexpr const char* const type_name_SpeechContinuousRecognitionCompletedEventArgs = "SpeechContinuousRecognitionCompletedEventArgs";
@@ -4457,17 +4257,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     // ----- Windows.Media.SpeechRecognition Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::SpeechRecognition");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SpeechContinuousRecognitionMode", register_SpeechContinuousRecognitionMode, METH_O, "registers type"},
-        {"_register_SpeechRecognitionAudioProblem", register_SpeechRecognitionAudioProblem, METH_O, "registers type"},
-        {"_register_SpeechRecognitionConfidence", register_SpeechRecognitionConfidence, METH_O, "registers type"},
-        {"_register_SpeechRecognitionConstraintProbability", register_SpeechRecognitionConstraintProbability, METH_O, "registers type"},
-        {"_register_SpeechRecognitionConstraintType", register_SpeechRecognitionConstraintType, METH_O, "registers type"},
-        {"_register_SpeechRecognitionResultStatus", register_SpeechRecognitionResultStatus, METH_O, "registers type"},
-        {"_register_SpeechRecognitionScenario", register_SpeechRecognitionScenario, METH_O, "registers type"},
-        {"_register_SpeechRecognizerState", register_SpeechRecognizerState, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4478,14 +4267,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
             return 0;
         }
 
-        Py_VISIT(state->type_SpeechContinuousRecognitionMode);
-        Py_VISIT(state->type_SpeechRecognitionAudioProblem);
-        Py_VISIT(state->type_SpeechRecognitionConfidence);
-        Py_VISIT(state->type_SpeechRecognitionConstraintProbability);
-        Py_VISIT(state->type_SpeechRecognitionConstraintType);
-        Py_VISIT(state->type_SpeechRecognitionResultStatus);
-        Py_VISIT(state->type_SpeechRecognitionScenario);
-        Py_VISIT(state->type_SpeechRecognizerState);
         Py_VISIT(state->type_SpeechContinuousRecognitionCompletedEventArgs);
         Py_VISIT(state->type_SpeechContinuousRecognitionResultGeneratedEventArgs);
         Py_VISIT(state->type_SpeechContinuousRecognitionSession);
@@ -4519,14 +4300,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
             return 0;
         }
 
-        Py_CLEAR(state->type_SpeechContinuousRecognitionMode);
-        Py_CLEAR(state->type_SpeechRecognitionAudioProblem);
-        Py_CLEAR(state->type_SpeechRecognitionConfidence);
-        Py_CLEAR(state->type_SpeechRecognitionConstraintProbability);
-        Py_CLEAR(state->type_SpeechRecognitionConstraintType);
-        Py_CLEAR(state->type_SpeechRecognitionResultStatus);
-        Py_CLEAR(state->type_SpeechRecognitionScenario);
-        Py_CLEAR(state->type_SpeechRecognizerState);
         Py_CLEAR(state->type_SpeechContinuousRecognitionCompletedEventArgs);
         Py_CLEAR(state->type_SpeechContinuousRecognitionResultGeneratedEventArgs);
         Py_CLEAR(state->type_SpeechContinuousRecognitionSession);
@@ -4557,7 +4330,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
            "_winrt_Windows_Media_SpeechRecognition",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4726,190 +4499,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_SpeechRecognition(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechContinuousRecognitionMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionAudioProblem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionAudioProblem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionAudioProblem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConfidence>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionConfidence;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConfidence is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionConstraintProbability;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionConstraintType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionResultStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionScenario>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionScenario;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionScenario is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognizerState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognizerState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>::get_python_type() noexcept {

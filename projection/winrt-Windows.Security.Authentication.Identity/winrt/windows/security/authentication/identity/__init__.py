@@ -14,6 +14,5 @@ try:
 except ImportError:
     pass
 
-
 EnterpriseKeyCredentialRegistrationInfo = _ns_module.EnterpriseKeyCredentialRegistrationInfo
 EnterpriseKeyCredentialRegistrationManager = _ns_module.EnterpriseKeyCredentialRegistrationManager

@@ -8,10 +8,6 @@ namespace py::cpp::Windows::UI::Shell
 {
     struct module_state
     {
-        PyObject* type_SecurityAppKind;
-        PyObject* type_SecurityAppState;
-        PyObject* type_SecurityAppSubstatus;
-        PyObject* type_ShareWindowCommand;
         PyTypeObject* type_AdaptiveCardBuilder;
         PyTypeObject* type_FocusSession;
         PyTypeObject* type_FocusSessionManager;
@@ -31,102 +27,6 @@ namespace py::cpp::Windows::UI::Shell
         PyTypeObject* type_IAdaptiveCard;
         PyTypeObject* type_IAdaptiveCardBuilderStatics;
     };
-
-    static PyObject* register_SecurityAppKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SecurityAppKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SecurityAppKind = type;
-        Py_INCREF(state->type_SecurityAppKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SecurityAppState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SecurityAppState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SecurityAppState = type;
-        Py_INCREF(state->type_SecurityAppState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SecurityAppSubstatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SecurityAppSubstatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SecurityAppSubstatus = type;
-        Py_INCREF(state->type_SecurityAppSubstatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ShareWindowCommand(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ShareWindowCommand)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ShareWindowCommand = type;
-        Py_INCREF(state->type_ShareWindowCommand);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AdaptiveCardBuilder class --------------------
     static constexpr const char* const type_name_AdaptiveCardBuilder = "AdaptiveCardBuilder";
@@ -4216,13 +4116,6 @@ namespace py::cpp::Windows::UI::Shell
     // ----- Windows.UI.Shell Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Shell");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SecurityAppKind", register_SecurityAppKind, METH_O, "registers type"},
-        {"_register_SecurityAppState", register_SecurityAppState, METH_O, "registers type"},
-        {"_register_SecurityAppSubstatus", register_SecurityAppSubstatus, METH_O, "registers type"},
-        {"_register_ShareWindowCommand", register_ShareWindowCommand, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4233,10 +4126,6 @@ namespace py::cpp::Windows::UI::Shell
             return 0;
         }
 
-        Py_VISIT(state->type_SecurityAppKind);
-        Py_VISIT(state->type_SecurityAppState);
-        Py_VISIT(state->type_SecurityAppSubstatus);
-        Py_VISIT(state->type_ShareWindowCommand);
         Py_VISIT(state->type_AdaptiveCardBuilder);
         Py_VISIT(state->type_FocusSession);
         Py_VISIT(state->type_FocusSessionManager);
@@ -4268,10 +4157,6 @@ namespace py::cpp::Windows::UI::Shell
             return 0;
         }
 
-        Py_CLEAR(state->type_SecurityAppKind);
-        Py_CLEAR(state->type_SecurityAppState);
-        Py_CLEAR(state->type_SecurityAppSubstatus);
-        Py_CLEAR(state->type_ShareWindowCommand);
         Py_CLEAR(state->type_AdaptiveCardBuilder);
         Py_CLEAR(state->type_FocusSession);
         Py_CLEAR(state->type_FocusSessionManager);
@@ -4300,7 +4185,7 @@ namespace py::cpp::Windows::UI::Shell
            "_winrt_Windows_UI_Shell",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4451,98 +4336,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Shell(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Shell::SecurityAppKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecurityAppKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::SecurityAppKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Shell::SecurityAppState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecurityAppState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::SecurityAppState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Shell::SecurityAppSubstatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecurityAppSubstatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::SecurityAppSubstatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Shell::ShareWindowCommand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareWindowCommand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::ShareWindowCommand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::AdaptiveCardBuilder>::get_python_type() noexcept {

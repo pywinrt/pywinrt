@@ -24,7 +24,6 @@ try:
 except ImportError:
     pass
 
-
 DetectedFace = _ns_module.DetectedFace
 FaceDetector = _ns_module.FaceDetector
 FaceTracker = _ns_module.FaceTracker

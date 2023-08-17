@@ -26,6 +26,4 @@ class UserNotificationListenerAccessStatus(enum.IntEnum):
     ALLOWED = 1
     DENIED = 2
 
-_ns_module._register_UserNotificationListenerAccessStatus(UserNotificationListenerAccessStatus)
-
 UserNotificationListener = _ns_module.UserNotificationListener

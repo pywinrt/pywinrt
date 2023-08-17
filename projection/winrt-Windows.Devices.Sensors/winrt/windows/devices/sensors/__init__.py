@@ -93,18 +93,6 @@ class SimpleOrientation(enum.IntEnum):
     FACEUP = 4
     FACEDOWN = 5
 
-_ns_module._register_AccelerometerReadingType(AccelerometerReadingType)
-_ns_module._register_ActivitySensorReadingConfidence(ActivitySensorReadingConfidence)
-_ns_module._register_ActivityType(ActivityType)
-_ns_module._register_HumanEngagement(HumanEngagement)
-_ns_module._register_HumanPresence(HumanPresence)
-_ns_module._register_MagnetometerAccuracy(MagnetometerAccuracy)
-_ns_module._register_PedometerStepKind(PedometerStepKind)
-_ns_module._register_SensorOptimizationGoal(SensorOptimizationGoal)
-_ns_module._register_SensorReadingType(SensorReadingType)
-_ns_module._register_SensorType(SensorType)
-_ns_module._register_SimpleOrientation(SimpleOrientation)
-
 Accelerometer = _ns_module.Accelerometer
 AccelerometerDataThreshold = _ns_module.AccelerometerDataThreshold
 AccelerometerReading = _ns_module.AccelerometerReading

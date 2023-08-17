@@ -8,84 +8,9 @@ namespace py::cpp::Windows::Security::Authentication::Web
 {
     struct module_state
     {
-        PyObject* type_TokenBindingKeyType;
-        PyObject* type_WebAuthenticationOptions;
-        PyObject* type_WebAuthenticationStatus;
         PyTypeObject* type_WebAuthenticationBroker;
         PyTypeObject* type_WebAuthenticationResult;
     };
-
-    static PyObject* register_TokenBindingKeyType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_TokenBindingKeyType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_TokenBindingKeyType = type;
-        Py_INCREF(state->type_TokenBindingKeyType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WebAuthenticationOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebAuthenticationOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebAuthenticationOptions = type;
-        Py_INCREF(state->type_WebAuthenticationOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WebAuthenticationStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebAuthenticationStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebAuthenticationStatus = type;
-        Py_INCREF(state->type_WebAuthenticationStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- WebAuthenticationBroker class --------------------
     static constexpr const char* const type_name_WebAuthenticationBroker = "WebAuthenticationBroker";
@@ -476,12 +401,6 @@ namespace py::cpp::Windows::Security::Authentication::Web
     // ----- Windows.Security.Authentication.Web Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::Web");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_TokenBindingKeyType", register_TokenBindingKeyType, METH_O, "registers type"},
-        {"_register_WebAuthenticationOptions", register_WebAuthenticationOptions, METH_O, "registers type"},
-        {"_register_WebAuthenticationStatus", register_WebAuthenticationStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -492,9 +411,6 @@ namespace py::cpp::Windows::Security::Authentication::Web
             return 0;
         }
 
-        Py_VISIT(state->type_TokenBindingKeyType);
-        Py_VISIT(state->type_WebAuthenticationOptions);
-        Py_VISIT(state->type_WebAuthenticationStatus);
         Py_VISIT(state->type_WebAuthenticationBroker);
         Py_VISIT(state->type_WebAuthenticationResult);
 
@@ -510,9 +426,6 @@ namespace py::cpp::Windows::Security::Authentication::Web
             return 0;
         }
 
-        Py_CLEAR(state->type_TokenBindingKeyType);
-        Py_CLEAR(state->type_WebAuthenticationOptions);
-        Py_CLEAR(state->type_WebAuthenticationStatus);
         Py_CLEAR(state->type_WebAuthenticationBroker);
         Py_CLEAR(state->type_WebAuthenticationResult);
 
@@ -525,7 +438,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
            "_winrt_Windows_Security_Authentication_Web",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -574,75 +487,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Web(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Web::TokenBindingKeyType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TokenBindingKeyType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::TokenBindingKeyType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAuthenticationOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAuthenticationStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::WebAuthenticationStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker>::get_python_type() noexcept {

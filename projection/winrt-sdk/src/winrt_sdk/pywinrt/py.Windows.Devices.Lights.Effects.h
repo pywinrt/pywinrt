@@ -66,19 +66,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArrayEffectCompletionBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectStartMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArrayEffectStartMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayRepetitionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArrayRepetitionMode";
     };
 
     template<>

@@ -42,10 +42,6 @@ class UpdateSourceTrigger(enum.IntEnum):
     EXPLICIT = 2
     LOST_FOCUS = 3
 
-_ns_module._register_BindingMode(BindingMode)
-_ns_module._register_RelativeSourceMode(RelativeSourceMode)
-_ns_module._register_UpdateSourceTrigger(UpdateSourceTrigger)
-
 LoadMoreItemsResult = _ns_module.LoadMoreItemsResult
 Binding = _ns_module.Binding
 BindingBase = _ns_module.BindingBase

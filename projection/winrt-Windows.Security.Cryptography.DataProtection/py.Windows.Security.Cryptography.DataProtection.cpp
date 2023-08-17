@@ -257,9 +257,6 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
     // ----- Windows.Security.Cryptography.DataProtection Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::Cryptography::DataProtection");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -295,7 +292,7 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
            "_winrt_Windows_Security_Cryptography_DataProtection",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

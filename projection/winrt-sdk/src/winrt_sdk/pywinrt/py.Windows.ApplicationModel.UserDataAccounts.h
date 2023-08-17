@@ -77,19 +77,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
+        static constexpr const char* type_name = "UserDataAccountContentKinds";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
+        static constexpr const char* type_name = "UserDataAccountOtherAppReadAccess";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
+        static constexpr const char* type_name = "UserDataAccountStoreAccessType";
     };
 
     template<>

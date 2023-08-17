@@ -49,13 +49,6 @@ class PaymentShippingType(enum.IntEnum):
     DELIVERY = 1
     PICKUP = 2
 
-_ns_module._register_PaymentCanMakePaymentResultStatus(PaymentCanMakePaymentResultStatus)
-_ns_module._register_PaymentOptionPresence(PaymentOptionPresence)
-_ns_module._register_PaymentRequestChangeKind(PaymentRequestChangeKind)
-_ns_module._register_PaymentRequestCompletionStatus(PaymentRequestCompletionStatus)
-_ns_module._register_PaymentRequestStatus(PaymentRequestStatus)
-_ns_module._register_PaymentShippingType(PaymentShippingType)
-
 PaymentAddress = _ns_module.PaymentAddress
 PaymentCanMakePaymentResult = _ns_module.PaymentCanMakePaymentResult
 PaymentCurrencyAmount = _ns_module.PaymentCurrencyAmount

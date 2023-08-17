@@ -63,25 +63,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
+        static constexpr const char* type_name = "InkAnalysisDrawingKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
+        static constexpr const char* type_name = "InkAnalysisNodeKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
+        static constexpr const char* type_name = "InkAnalysisStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
+        static constexpr const char* type_name = "InkAnalysisStrokeKind";
     };
 
     template<>

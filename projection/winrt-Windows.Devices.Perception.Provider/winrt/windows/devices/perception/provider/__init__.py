@@ -34,7 +34,6 @@ try:
 except ImportError:
     pass
 
-
 KnownPerceptionFrameKind = _ns_module.KnownPerceptionFrameKind
 PerceptionControlGroup = _ns_module.PerceptionControlGroup
 PerceptionCorrelation = _ns_module.PerceptionCorrelation

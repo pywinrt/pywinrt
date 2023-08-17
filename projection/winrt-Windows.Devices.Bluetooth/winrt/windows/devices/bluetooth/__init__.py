@@ -174,15 +174,6 @@ class BluetoothServiceCapabilities(enum.IntFlag):
     TELEPHONE_SERVICE = 0x200
     INFORMATION_SERVICE = 0x400
 
-_ns_module._register_BluetoothAddressType(BluetoothAddressType)
-_ns_module._register_BluetoothCacheMode(BluetoothCacheMode)
-_ns_module._register_BluetoothConnectionStatus(BluetoothConnectionStatus)
-_ns_module._register_BluetoothError(BluetoothError)
-_ns_module._register_BluetoothLEPreferredConnectionParametersRequestStatus(BluetoothLEPreferredConnectionParametersRequestStatus)
-_ns_module._register_BluetoothMajorClass(BluetoothMajorClass)
-_ns_module._register_BluetoothMinorClass(BluetoothMinorClass)
-_ns_module._register_BluetoothServiceCapabilities(BluetoothServiceCapabilities)
-
 BluetoothAdapter = _ns_module.BluetoothAdapter
 BluetoothClassOfDevice = _ns_module.BluetoothClassOfDevice
 BluetoothDevice = _ns_module.BluetoothDevice

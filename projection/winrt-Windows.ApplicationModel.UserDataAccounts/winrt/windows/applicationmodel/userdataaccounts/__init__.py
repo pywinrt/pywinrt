@@ -60,10 +60,6 @@ class UserDataAccountStoreAccessType(enum.IntEnum):
     ALL_ACCOUNTS_READ_ONLY = 0
     APP_ACCOUNTS_READ_WRITE = 1
 
-_ns_module._register_UserDataAccountContentKinds(UserDataAccountContentKinds)
-_ns_module._register_UserDataAccountOtherAppReadAccess(UserDataAccountOtherAppReadAccess)
-_ns_module._register_UserDataAccountStoreAccessType(UserDataAccountStoreAccessType)
-
 UserDataAccount = _ns_module.UserDataAccount
 UserDataAccountManager = _ns_module.UserDataAccountManager
 UserDataAccountManagerForUser = _ns_module.UserDataAccountManagerForUser

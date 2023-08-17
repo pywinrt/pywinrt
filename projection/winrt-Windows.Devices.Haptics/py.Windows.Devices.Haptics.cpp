@@ -8,36 +8,11 @@ namespace py::cpp::Windows::Devices::Haptics
 {
     struct module_state
     {
-        PyObject* type_VibrationAccessStatus;
         PyTypeObject* type_KnownSimpleHapticsControllerWaveforms;
         PyTypeObject* type_SimpleHapticsController;
         PyTypeObject* type_SimpleHapticsControllerFeedback;
         PyTypeObject* type_VibrationDevice;
     };
-
-    static PyObject* register_VibrationAccessStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_VibrationAccessStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_VibrationAccessStatus = type;
-        Py_INCREF(state->type_VibrationAccessStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- KnownSimpleHapticsControllerWaveforms class --------------------
     static constexpr const char* const type_name_KnownSimpleHapticsControllerWaveforms = "KnownSimpleHapticsControllerWaveforms";
@@ -1130,10 +1105,6 @@ namespace py::cpp::Windows::Devices::Haptics
     // ----- Windows.Devices.Haptics Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Haptics");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_VibrationAccessStatus", register_VibrationAccessStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1144,7 +1115,6 @@ namespace py::cpp::Windows::Devices::Haptics
             return 0;
         }
 
-        Py_VISIT(state->type_VibrationAccessStatus);
         Py_VISIT(state->type_KnownSimpleHapticsControllerWaveforms);
         Py_VISIT(state->type_SimpleHapticsController);
         Py_VISIT(state->type_SimpleHapticsControllerFeedback);
@@ -1162,7 +1132,6 @@ namespace py::cpp::Windows::Devices::Haptics
             return 0;
         }
 
-        Py_CLEAR(state->type_VibrationAccessStatus);
         Py_CLEAR(state->type_KnownSimpleHapticsControllerWaveforms);
         Py_CLEAR(state->type_SimpleHapticsController);
         Py_CLEAR(state->type_SimpleHapticsControllerFeedback);
@@ -1177,7 +1146,7 @@ namespace py::cpp::Windows::Devices::Haptics
            "_winrt_Windows_Devices_Haptics",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1244,29 +1213,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Haptics(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Haptics::VibrationAccessStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Haptics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Haptics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VibrationAccessStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Haptics::VibrationAccessStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms>::get_python_type() noexcept {

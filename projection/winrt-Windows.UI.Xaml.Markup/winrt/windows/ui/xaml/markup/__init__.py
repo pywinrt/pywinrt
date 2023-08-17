@@ -29,7 +29,6 @@ try:
 except ImportError:
     pass
 
-
 XamlBinaryWriterErrorInformation = _ns_module.XamlBinaryWriterErrorInformation
 XmlnsDefinition = _ns_module.XmlnsDefinition
 MarkupExtension = _ns_module.MarkupExtension

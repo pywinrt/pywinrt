@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 SoundLevelBroker = _ns_module.SoundLevelBroker

@@ -8,10 +8,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 {
     struct module_state
     {
-        PyObject* type_AllJoynAuthenticationMechanism;
-        PyObject* type_AllJoynBusAttachmentState;
-        PyObject* type_AllJoynSessionLostReason;
-        PyObject* type_AllJoynTrafficType;
         PyTypeObject* type_AllJoynAboutData;
         PyTypeObject* type_AllJoynAboutDataView;
         PyTypeObject* type_AllJoynAcceptSessionJoinerEventArgs;
@@ -37,102 +33,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
         PyTypeObject* type_IAllJoynAcceptSessionJoiner;
         PyTypeObject* type_IAllJoynProducer;
     };
-
-    static PyObject* register_AllJoynAuthenticationMechanism(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AllJoynAuthenticationMechanism)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AllJoynAuthenticationMechanism = type;
-        Py_INCREF(state->type_AllJoynAuthenticationMechanism);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AllJoynBusAttachmentState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AllJoynBusAttachmentState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AllJoynBusAttachmentState = type;
-        Py_INCREF(state->type_AllJoynBusAttachmentState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AllJoynSessionLostReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AllJoynSessionLostReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AllJoynSessionLostReason = type;
-        Py_INCREF(state->type_AllJoynSessionLostReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AllJoynTrafficType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AllJoynTrafficType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AllJoynTrafficType = type;
-        Py_INCREF(state->type_AllJoynTrafficType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AllJoynAboutData class --------------------
     static constexpr const char* const type_name_AllJoynAboutData = "AllJoynAboutData";
@@ -5559,13 +5459,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     // ----- Windows.Devices.AllJoyn Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::AllJoyn");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AllJoynAuthenticationMechanism", register_AllJoynAuthenticationMechanism, METH_O, "registers type"},
-        {"_register_AllJoynBusAttachmentState", register_AllJoynBusAttachmentState, METH_O, "registers type"},
-        {"_register_AllJoynSessionLostReason", register_AllJoynSessionLostReason, METH_O, "registers type"},
-        {"_register_AllJoynTrafficType", register_AllJoynTrafficType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -5576,10 +5469,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
             return 0;
         }
 
-        Py_VISIT(state->type_AllJoynAuthenticationMechanism);
-        Py_VISIT(state->type_AllJoynBusAttachmentState);
-        Py_VISIT(state->type_AllJoynSessionLostReason);
-        Py_VISIT(state->type_AllJoynTrafficType);
         Py_VISIT(state->type_AllJoynAboutData);
         Py_VISIT(state->type_AllJoynAboutDataView);
         Py_VISIT(state->type_AllJoynAcceptSessionJoinerEventArgs);
@@ -5617,10 +5506,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
             return 0;
         }
 
-        Py_CLEAR(state->type_AllJoynAuthenticationMechanism);
-        Py_CLEAR(state->type_AllJoynBusAttachmentState);
-        Py_CLEAR(state->type_AllJoynSessionLostReason);
-        Py_CLEAR(state->type_AllJoynTrafficType);
         Py_CLEAR(state->type_AllJoynAboutData);
         Py_CLEAR(state->type_AllJoynAboutDataView);
         Py_CLEAR(state->type_AllJoynAcceptSessionJoinerEventArgs);
@@ -5655,7 +5540,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
            "_winrt_Windows_Devices_AllJoyn",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -5842,98 +5727,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_AllJoyn(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynAuthenticationMechanism;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynBusAttachmentState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionLostReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynSessionLostReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynSessionLostReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynTrafficType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynTrafficType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynTrafficType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutData>::get_python_type() noexcept {

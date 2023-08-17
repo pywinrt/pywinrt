@@ -37,9 +37,6 @@ class GameListEntryLaunchableState(enum.IntEnum):
     BY_USER_PROVIDED_PATH = 2
     BY_TILE = 3
 
-_ns_module._register_GameListCategory(GameListCategory)
-_ns_module._register_GameListEntryLaunchableState(GameListEntryLaunchableState)
-
 GameList = _ns_module.GameList
 GameListEntry = _ns_module.GameListEntry
 GameModeConfiguration = _ns_module.GameModeConfiguration

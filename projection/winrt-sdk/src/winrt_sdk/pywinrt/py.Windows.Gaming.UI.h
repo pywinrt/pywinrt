@@ -49,13 +49,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::UI::GameChatMessageOrigin>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.ui";
+        static constexpr const char* type_name = "GameChatMessageOrigin";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::UI::GameChatOverlayPosition>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.ui";
+        static constexpr const char* type_name = "GameChatOverlayPosition";
     };
 
     template<>

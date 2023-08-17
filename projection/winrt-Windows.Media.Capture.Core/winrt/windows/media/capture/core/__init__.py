@@ -14,6 +14,5 @@ try:
 except ImportError:
     pass
 
-
 VariablePhotoCapturedEventArgs = _ns_module.VariablePhotoCapturedEventArgs
 VariablePhotoSequenceCapture = _ns_module.VariablePhotoSequenceCapture

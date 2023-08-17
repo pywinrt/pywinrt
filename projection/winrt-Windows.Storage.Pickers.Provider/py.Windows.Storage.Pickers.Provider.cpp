@@ -8,9 +8,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 {
     struct module_state
     {
-        PyObject* type_AddFileResult;
-        PyObject* type_FileSelectionMode;
-        PyObject* type_SetFileNameResult;
         PyTypeObject* type_FileOpenPickerUI;
         PyTypeObject* type_FileRemovedEventArgs;
         PyTypeObject* type_FileSavePickerUI;
@@ -21,78 +18,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         PyTypeObject* type_TargetFileRequestDeferral;
         PyTypeObject* type_TargetFileRequestedEventArgs;
     };
-
-    static PyObject* register_AddFileResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AddFileResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AddFileResult = type;
-        Py_INCREF(state->type_AddFileResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_FileSelectionMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_FileSelectionMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_FileSelectionMode = type;
-        Py_INCREF(state->type_FileSelectionMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SetFileNameResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SetFileNameResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SetFileNameResult = type;
-        Py_INCREF(state->type_SetFileNameResult);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- FileOpenPickerUI class --------------------
     static constexpr const char* const type_name_FileOpenPickerUI = "FileOpenPickerUI";
@@ -1600,12 +1525,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     // ----- Windows.Storage.Pickers.Provider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Storage::Pickers::Provider");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AddFileResult", register_AddFileResult, METH_O, "registers type"},
-        {"_register_FileSelectionMode", register_FileSelectionMode, METH_O, "registers type"},
-        {"_register_SetFileNameResult", register_SetFileNameResult, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1616,9 +1535,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
             return 0;
         }
 
-        Py_VISIT(state->type_AddFileResult);
-        Py_VISIT(state->type_FileSelectionMode);
-        Py_VISIT(state->type_SetFileNameResult);
         Py_VISIT(state->type_FileOpenPickerUI);
         Py_VISIT(state->type_FileRemovedEventArgs);
         Py_VISIT(state->type_FileSavePickerUI);
@@ -1641,9 +1557,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
             return 0;
         }
 
-        Py_CLEAR(state->type_AddFileResult);
-        Py_CLEAR(state->type_FileSelectionMode);
-        Py_CLEAR(state->type_SetFileNameResult);
         Py_CLEAR(state->type_FileOpenPickerUI);
         Py_CLEAR(state->type_FileRemovedEventArgs);
         Py_CLEAR(state->type_FileSavePickerUI);
@@ -1663,7 +1576,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
            "_winrt_Windows_Storage_Pickers_Provider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1754,75 +1667,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Pickers_Provider(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Pickers::Provider::AddFileResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AddFileResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::AddFileResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Pickers::Provider::FileSelectionMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileSelectionMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::FileSelectionMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Pickers::Provider::SetFileNameResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SetFileNameResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::SetFileNameResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>::get_python_type() noexcept {

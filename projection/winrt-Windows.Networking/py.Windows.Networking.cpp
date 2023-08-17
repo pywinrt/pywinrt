@@ -8,84 +8,9 @@ namespace py::cpp::Windows::Networking
 {
     struct module_state
     {
-        PyObject* type_DomainNameType;
-        PyObject* type_HostNameSortOptions;
-        PyObject* type_HostNameType;
         PyTypeObject* type_EndpointPair;
         PyTypeObject* type_HostName;
     };
-
-    static PyObject* register_DomainNameType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DomainNameType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DomainNameType = type;
-        Py_INCREF(state->type_DomainNameType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HostNameSortOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HostNameSortOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HostNameSortOptions = type;
-        Py_INCREF(state->type_HostNameSortOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HostNameType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HostNameType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HostNameType = type;
-        Py_INCREF(state->type_HostNameType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- EndpointPair class --------------------
     static constexpr const char* const type_name_EndpointPair = "EndpointPair";
@@ -694,12 +619,6 @@ namespace py::cpp::Windows::Networking
     // ----- Windows.Networking Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Networking");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_DomainNameType", register_DomainNameType, METH_O, "registers type"},
-        {"_register_HostNameSortOptions", register_HostNameSortOptions, METH_O, "registers type"},
-        {"_register_HostNameType", register_HostNameType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -710,9 +629,6 @@ namespace py::cpp::Windows::Networking
             return 0;
         }
 
-        Py_VISIT(state->type_DomainNameType);
-        Py_VISIT(state->type_HostNameSortOptions);
-        Py_VISIT(state->type_HostNameType);
         Py_VISIT(state->type_EndpointPair);
         Py_VISIT(state->type_HostName);
 
@@ -728,9 +644,6 @@ namespace py::cpp::Windows::Networking
             return 0;
         }
 
-        Py_CLEAR(state->type_DomainNameType);
-        Py_CLEAR(state->type_HostNameSortOptions);
-        Py_CLEAR(state->type_HostNameType);
         Py_CLEAR(state->type_EndpointPair);
         Py_CLEAR(state->type_HostName);
 
@@ -743,7 +656,7 @@ namespace py::cpp::Windows::Networking
            "_winrt_Windows_Networking",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -792,75 +705,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::DomainNameType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DomainNameType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::DomainNameType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::HostNameSortOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HostNameSortOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::HostNameSortOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::HostNameType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HostNameType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::HostNameType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Networking::EndpointPair>::get_python_type() noexcept {

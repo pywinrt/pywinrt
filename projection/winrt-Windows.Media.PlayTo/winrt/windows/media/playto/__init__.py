@@ -33,9 +33,6 @@ class PlayToConnectionState(enum.IntEnum):
     CONNECTED = 1
     RENDERING = 2
 
-_ns_module._register_PlayToConnectionError(PlayToConnectionError)
-_ns_module._register_PlayToConnectionState(PlayToConnectionState)
-
 CurrentTimeChangeRequestedEventArgs = _ns_module.CurrentTimeChangeRequestedEventArgs
 MuteChangeRequestedEventArgs = _ns_module.MuteChangeRequestedEventArgs
 PlayToConnection = _ns_module.PlayToConnection

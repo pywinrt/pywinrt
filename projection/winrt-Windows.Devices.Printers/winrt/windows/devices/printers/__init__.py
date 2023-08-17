@@ -64,11 +64,6 @@ class PageConfigurationSource(enum.IntEnum):
     PRINT_JOB_CONFIGURATION = 0
     PDL_CONTENT = 1
 
-_ns_module._register_IppAttributeErrorReason(IppAttributeErrorReason)
-_ns_module._register_IppAttributeValueKind(IppAttributeValueKind)
-_ns_module._register_IppResolutionUnit(IppResolutionUnit)
-_ns_module._register_PageConfigurationSource(PageConfigurationSource)
-
 IppAttributeError = _ns_module.IppAttributeError
 IppAttributeValue = _ns_module.IppAttributeValue
 IppIntegerRange = _ns_module.IppIntegerRange

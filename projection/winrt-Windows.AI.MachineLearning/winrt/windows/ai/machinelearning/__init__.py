@@ -82,11 +82,6 @@ class TensorKind(enum.IntEnum):
     COMPLEX64 = 14
     COMPLEX128 = 15
 
-_ns_module._register_LearningModelDeviceKind(LearningModelDeviceKind)
-_ns_module._register_LearningModelFeatureKind(LearningModelFeatureKind)
-_ns_module._register_LearningModelPixelRange(LearningModelPixelRange)
-_ns_module._register_TensorKind(TensorKind)
-
 ImageFeatureDescriptor = _ns_module.ImageFeatureDescriptor
 ImageFeatureValue = _ns_module.ImageFeatureValue
 LearningModel = _ns_module.LearningModel

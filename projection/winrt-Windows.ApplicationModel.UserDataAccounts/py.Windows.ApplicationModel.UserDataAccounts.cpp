@@ -8,87 +8,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 {
     struct module_state
     {
-        PyObject* type_UserDataAccountContentKinds;
-        PyObject* type_UserDataAccountOtherAppReadAccess;
-        PyObject* type_UserDataAccountStoreAccessType;
         PyTypeObject* type_UserDataAccount;
         PyTypeObject* type_UserDataAccountManager;
         PyTypeObject* type_UserDataAccountManagerForUser;
         PyTypeObject* type_UserDataAccountStore;
         PyTypeObject* type_UserDataAccountStoreChangedEventArgs;
     };
-
-    static PyObject* register_UserDataAccountContentKinds(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserDataAccountContentKinds)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserDataAccountContentKinds = type;
-        Py_INCREF(state->type_UserDataAccountContentKinds);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UserDataAccountOtherAppReadAccess(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserDataAccountOtherAppReadAccess)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserDataAccountOtherAppReadAccess = type;
-        Py_INCREF(state->type_UserDataAccountOtherAppReadAccess);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_UserDataAccountStoreAccessType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserDataAccountStoreAccessType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserDataAccountStoreAccessType = type;
-        Py_INCREF(state->type_UserDataAccountStoreAccessType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- UserDataAccount class --------------------
     static constexpr const char* const type_name_UserDataAccount = "UserDataAccount";
@@ -1529,12 +1454,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
     // ----- Windows.ApplicationModel.UserDataAccounts Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserDataAccounts");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_UserDataAccountContentKinds", register_UserDataAccountContentKinds, METH_O, "registers type"},
-        {"_register_UserDataAccountOtherAppReadAccess", register_UserDataAccountOtherAppReadAccess, METH_O, "registers type"},
-        {"_register_UserDataAccountStoreAccessType", register_UserDataAccountStoreAccessType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1545,9 +1464,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
             return 0;
         }
 
-        Py_VISIT(state->type_UserDataAccountContentKinds);
-        Py_VISIT(state->type_UserDataAccountOtherAppReadAccess);
-        Py_VISIT(state->type_UserDataAccountStoreAccessType);
         Py_VISIT(state->type_UserDataAccount);
         Py_VISIT(state->type_UserDataAccountManager);
         Py_VISIT(state->type_UserDataAccountManagerForUser);
@@ -1566,9 +1482,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
             return 0;
         }
 
-        Py_CLEAR(state->type_UserDataAccountContentKinds);
-        Py_CLEAR(state->type_UserDataAccountOtherAppReadAccess);
-        Py_CLEAR(state->type_UserDataAccountStoreAccessType);
         Py_CLEAR(state->type_UserDataAccount);
         Py_CLEAR(state->type_UserDataAccountManager);
         Py_CLEAR(state->type_UserDataAccountManagerForUser);
@@ -1584,7 +1497,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
            "_winrt_Windows_ApplicationModel_UserDataAccounts",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1651,75 +1564,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataAccounts(void) noe
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountContentKinds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountOtherAppReadAccess;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountStoreAccessType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>::get_python_type() noexcept {

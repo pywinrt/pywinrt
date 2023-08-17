@@ -39,19 +39,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
+        static constexpr const char* type_name = "ExtendedExecutionReason";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
+        static constexpr const char* type_name = "ExtendedExecutionResult";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
+        static constexpr const char* type_name = "ExtendedExecutionRevokedReason";
     };
 
     template<>

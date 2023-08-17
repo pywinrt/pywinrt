@@ -78,55 +78,64 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputButtonChangeKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputButtonChangeKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputKeyOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputMouseOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenButtons>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputPenButtons";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenParameters>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputPenParameters";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputPointerOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputShortcut>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputShortcut";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputTouchParameters";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputVisualizationMode";
     };
 
     template<>

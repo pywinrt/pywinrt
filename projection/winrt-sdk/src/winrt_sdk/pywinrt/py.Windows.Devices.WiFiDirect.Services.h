@@ -83,43 +83,50 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertisementStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceAdvertisementStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceConfigurationMethod>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceConfigurationMethod";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceError>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceError";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceIPProtocol>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceIPProtocol";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionErrorStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceSessionErrorStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceSessionStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceStatus";
     };
 
     template<>

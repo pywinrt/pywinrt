@@ -45,9 +45,6 @@ class DnssdServiceWatcherStatus(enum.IntEnum):
     STOPPED = 4
     ABORTED = 5
 
-_ns_module._register_DnssdRegistrationStatus(DnssdRegistrationStatus)
-_ns_module._register_DnssdServiceWatcherStatus(DnssdServiceWatcherStatus)
-
 DnssdRegistrationResult = _ns_module.DnssdRegistrationResult
 DnssdServiceInstance = _ns_module.DnssdServiceInstance
 DnssdServiceInstanceCollection = _ns_module.DnssdServiceInstanceCollection

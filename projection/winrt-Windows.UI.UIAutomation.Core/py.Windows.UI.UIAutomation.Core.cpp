@@ -8,7 +8,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 {
     struct module_state
     {
-        PyObject* type_AutomationRemoteOperationStatus;
         PyTypeObject* type_AutomationRemoteOperationResult;
         PyTypeObject* type_CoreAutomationRegistrar;
         PyTypeObject* type_CoreAutomationRemoteOperation;
@@ -23,30 +22,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         PyTypeObject* type_AutomationAnnotationTypeRegistration;
         PyTypeObject* type_AutomationRemoteOperationOperandId;
     };
-
-    static PyObject* register_AutomationRemoteOperationStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AutomationRemoteOperationStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AutomationRemoteOperationStatus = type;
-        Py_INCREF(state->type_AutomationRemoteOperationStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AutomationRemoteOperationResult class --------------------
     static constexpr const char* const type_name_AutomationRemoteOperationResult = "AutomationRemoteOperationResult";
@@ -1971,10 +1946,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     // ----- Windows.UI.UIAutomation.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::UIAutomation::Core");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AutomationRemoteOperationStatus", register_AutomationRemoteOperationStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1985,7 +1956,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
             return 0;
         }
 
-        Py_VISIT(state->type_AutomationRemoteOperationStatus);
         Py_VISIT(state->type_AutomationRemoteOperationResult);
         Py_VISIT(state->type_CoreAutomationRegistrar);
         Py_VISIT(state->type_CoreAutomationRemoteOperation);
@@ -2012,7 +1982,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
             return 0;
         }
 
-        Py_CLEAR(state->type_AutomationRemoteOperationStatus);
         Py_CLEAR(state->type_AutomationRemoteOperationResult);
         Py_CLEAR(state->type_CoreAutomationRegistrar);
         Py_CLEAR(state->type_CoreAutomationRemoteOperation);
@@ -2036,7 +2005,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
            "_winrt_Windows_UI_UIAutomation_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2151,29 +2120,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_UIAutomation_Core(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationRemoteOperationStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>::get_python_type() noexcept {

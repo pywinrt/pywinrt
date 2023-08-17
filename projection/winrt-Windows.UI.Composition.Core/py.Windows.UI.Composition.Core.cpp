@@ -291,9 +291,6 @@ namespace py::cpp::Windows::UI::Composition::Core
     // ----- Windows.UI.Composition.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Composition::Core");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -329,7 +326,7 @@ namespace py::cpp::Windows::UI::Composition::Core
            "_winrt_Windows_UI_Composition_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

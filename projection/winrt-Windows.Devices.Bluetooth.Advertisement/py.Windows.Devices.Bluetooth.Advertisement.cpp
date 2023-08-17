@@ -8,11 +8,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 {
     struct module_state
     {
-        PyObject* type_BluetoothLEAdvertisementFlags;
-        PyObject* type_BluetoothLEAdvertisementPublisherStatus;
-        PyObject* type_BluetoothLEAdvertisementType;
-        PyObject* type_BluetoothLEAdvertisementWatcherStatus;
-        PyObject* type_BluetoothLEScanningMode;
         PyTypeObject* type_BluetoothLEAdvertisement;
         PyTypeObject* type_BluetoothLEAdvertisementBytePattern;
         PyTypeObject* type_BluetoothLEAdvertisementDataSection;
@@ -25,126 +20,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         PyTypeObject* type_BluetoothLEAdvertisementWatcherStoppedEventArgs;
         PyTypeObject* type_BluetoothLEManufacturerData;
     };
-
-    static PyObject* register_BluetoothLEAdvertisementFlags(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BluetoothLEAdvertisementFlags)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BluetoothLEAdvertisementFlags = type;
-        Py_INCREF(state->type_BluetoothLEAdvertisementFlags);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_BluetoothLEAdvertisementPublisherStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BluetoothLEAdvertisementPublisherStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BluetoothLEAdvertisementPublisherStatus = type;
-        Py_INCREF(state->type_BluetoothLEAdvertisementPublisherStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_BluetoothLEAdvertisementType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BluetoothLEAdvertisementType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BluetoothLEAdvertisementType = type;
-        Py_INCREF(state->type_BluetoothLEAdvertisementType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_BluetoothLEAdvertisementWatcherStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BluetoothLEAdvertisementWatcherStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BluetoothLEAdvertisementWatcherStatus = type;
-        Py_INCREF(state->type_BluetoothLEAdvertisementWatcherStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_BluetoothLEScanningMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BluetoothLEScanningMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BluetoothLEScanningMode = type;
-        Py_INCREF(state->type_BluetoothLEScanningMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- BluetoothLEAdvertisement class --------------------
     static constexpr const char* const type_name_BluetoothLEAdvertisement = "BluetoothLEAdvertisement";
@@ -3360,14 +3235,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     // ----- Windows.Devices.Bluetooth.Advertisement Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Bluetooth::Advertisement");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_BluetoothLEAdvertisementFlags", register_BluetoothLEAdvertisementFlags, METH_O, "registers type"},
-        {"_register_BluetoothLEAdvertisementPublisherStatus", register_BluetoothLEAdvertisementPublisherStatus, METH_O, "registers type"},
-        {"_register_BluetoothLEAdvertisementType", register_BluetoothLEAdvertisementType, METH_O, "registers type"},
-        {"_register_BluetoothLEAdvertisementWatcherStatus", register_BluetoothLEAdvertisementWatcherStatus, METH_O, "registers type"},
-        {"_register_BluetoothLEScanningMode", register_BluetoothLEScanningMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3378,11 +3245,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             return 0;
         }
 
-        Py_VISIT(state->type_BluetoothLEAdvertisementFlags);
-        Py_VISIT(state->type_BluetoothLEAdvertisementPublisherStatus);
-        Py_VISIT(state->type_BluetoothLEAdvertisementType);
-        Py_VISIT(state->type_BluetoothLEAdvertisementWatcherStatus);
-        Py_VISIT(state->type_BluetoothLEScanningMode);
         Py_VISIT(state->type_BluetoothLEAdvertisement);
         Py_VISIT(state->type_BluetoothLEAdvertisementBytePattern);
         Py_VISIT(state->type_BluetoothLEAdvertisementDataSection);
@@ -3407,11 +3269,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             return 0;
         }
 
-        Py_CLEAR(state->type_BluetoothLEAdvertisementFlags);
-        Py_CLEAR(state->type_BluetoothLEAdvertisementPublisherStatus);
-        Py_CLEAR(state->type_BluetoothLEAdvertisementType);
-        Py_CLEAR(state->type_BluetoothLEAdvertisementWatcherStatus);
-        Py_CLEAR(state->type_BluetoothLEScanningMode);
         Py_CLEAR(state->type_BluetoothLEAdvertisement);
         Py_CLEAR(state->type_BluetoothLEAdvertisementBytePattern);
         Py_CLEAR(state->type_BluetoothLEAdvertisementDataSection);
@@ -3433,7 +3290,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
            "_winrt_Windows_Devices_Bluetooth_Advertisement",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3542,121 +3399,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_Advertisement(void) noexc
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Advertisement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Advertisement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BluetoothLEAdvertisementFlags;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Advertisement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Advertisement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BluetoothLEAdvertisementPublisherStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Advertisement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Advertisement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BluetoothLEAdvertisementType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Advertisement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Advertisement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BluetoothLEAdvertisementWatcherStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEScanningMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Advertisement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Advertisement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BluetoothLEScanningMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEScanningMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement>::get_python_type() noexcept {

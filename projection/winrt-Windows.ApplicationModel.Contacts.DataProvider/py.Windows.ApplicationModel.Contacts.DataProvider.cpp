@@ -1660,9 +1660,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     // ----- Windows.ApplicationModel.Contacts.DataProvider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Contacts::DataProvider");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1716,7 +1713,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
            "_winrt_Windows_ApplicationModel_Contacts_DataProvider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

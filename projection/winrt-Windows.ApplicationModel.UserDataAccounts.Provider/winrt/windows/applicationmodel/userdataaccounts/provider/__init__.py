@@ -25,9 +25,6 @@ class UserDataAccountProviderPartnerAccountKind(enum.IntEnum):
     EXCHANGE = 0
     POP_OR_IMAP = 1
 
-_ns_module._register_UserDataAccountProviderOperationKind(UserDataAccountProviderOperationKind)
-_ns_module._register_UserDataAccountProviderPartnerAccountKind(UserDataAccountProviderPartnerAccountKind)
-
 UserDataAccountPartnerAccountInfo = _ns_module.UserDataAccountPartnerAccountInfo
 UserDataAccountProviderAddAccountOperation = _ns_module.UserDataAccountProviderAddAccountOperation
 UserDataAccountProviderResolveErrorsOperation = _ns_module.UserDataAccountProviderResolveErrorsOperation

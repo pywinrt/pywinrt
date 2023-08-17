@@ -49,12 +49,6 @@ class PhoneTriggerType(enum.IntEnum):
     INCOMING_CALL_DISMISSED = 6
     INCOMING_CALL_NOTIFICATION = 7
 
-_ns_module._register_PhoneCallBlockedReason(PhoneCallBlockedReason)
-_ns_module._register_PhoneIncomingCallDismissedReason(PhoneIncomingCallDismissedReason)
-_ns_module._register_PhoneLineChangeKind(PhoneLineChangeKind)
-_ns_module._register_PhoneLineProperties(PhoneLineProperties)
-_ns_module._register_PhoneTriggerType(PhoneTriggerType)
-
 PhoneCallBlockedTriggerDetails = _ns_module.PhoneCallBlockedTriggerDetails
 PhoneCallOriginDataRequestTriggerDetails = _ns_module.PhoneCallOriginDataRequestTriggerDetails
 PhoneIncomingCallDismissedTriggerDetails = _ns_module.PhoneIncomingCallDismissedTriggerDetails

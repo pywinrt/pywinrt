@@ -40,10 +40,6 @@ class UserDataStorageItemProtectionStatus(enum.IntEnum):
     NOT_PROTECTABLE = 1
     DATA_UNAVAILABLE = 2
 
-_ns_module._register_UserDataAvailability(UserDataAvailability)
-_ns_module._register_UserDataBufferUnprotectStatus(UserDataBufferUnprotectStatus)
-_ns_module._register_UserDataStorageItemProtectionStatus(UserDataStorageItemProtectionStatus)
-
 UserDataAvailabilityStateChangedEventArgs = _ns_module.UserDataAvailabilityStateChangedEventArgs
 UserDataBufferUnprotectResult = _ns_module.UserDataBufferUnprotectResult
 UserDataProtectionManager = _ns_module.UserDataProtectionManager

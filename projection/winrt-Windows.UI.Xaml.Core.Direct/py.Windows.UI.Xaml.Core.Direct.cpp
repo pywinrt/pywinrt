@@ -8,84 +8,9 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 {
     struct module_state
     {
-        PyObject* type_XamlEventIndex;
-        PyObject* type_XamlPropertyIndex;
-        PyObject* type_XamlTypeIndex;
         PyTypeObject* type_XamlDirect;
         PyTypeObject* type_IXamlDirectObject;
     };
-
-    static PyObject* register_XamlEventIndex(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XamlEventIndex)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XamlEventIndex = type;
-        Py_INCREF(state->type_XamlEventIndex);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_XamlPropertyIndex(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XamlPropertyIndex)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XamlPropertyIndex = type;
-        Py_INCREF(state->type_XamlPropertyIndex);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_XamlTypeIndex(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XamlTypeIndex)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XamlTypeIndex = type;
-        Py_INCREF(state->type_XamlTypeIndex);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- XamlDirect class --------------------
     static constexpr const char* const type_name_XamlDirect = "XamlDirect";
@@ -2020,12 +1945,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
     // ----- Windows.UI.Xaml.Core.Direct Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Core::Direct");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_XamlEventIndex", register_XamlEventIndex, METH_O, "registers type"},
-        {"_register_XamlPropertyIndex", register_XamlPropertyIndex, METH_O, "registers type"},
-        {"_register_XamlTypeIndex", register_XamlTypeIndex, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2036,9 +1955,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
             return 0;
         }
 
-        Py_VISIT(state->type_XamlEventIndex);
-        Py_VISIT(state->type_XamlPropertyIndex);
-        Py_VISIT(state->type_XamlTypeIndex);
         Py_VISIT(state->type_XamlDirect);
         Py_VISIT(state->type_IXamlDirectObject);
 
@@ -2054,9 +1970,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
             return 0;
         }
 
-        Py_CLEAR(state->type_XamlEventIndex);
-        Py_CLEAR(state->type_XamlPropertyIndex);
-        Py_CLEAR(state->type_XamlTypeIndex);
         Py_CLEAR(state->type_XamlDirect);
         Py_CLEAR(state->type_IXamlDirectObject);
 
@@ -2069,7 +1982,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
            "_winrt_Windows_UI_Xaml_Core_Direct",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2118,75 +2031,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Core_Direct(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Core::Direct;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Core::Direct");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlEventIndex;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Core::Direct;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Core::Direct");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlPropertyIndex;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Core::Direct;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Core::Direct");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlTypeIndex;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Core::Direct::XamlDirect>::get_python_type() noexcept {

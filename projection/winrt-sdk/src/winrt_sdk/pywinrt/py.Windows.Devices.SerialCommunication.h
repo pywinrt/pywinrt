@@ -51,31 +51,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialError>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
+        static constexpr const char* type_name = "SerialError";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialHandshake>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
+        static constexpr const char* type_name = "SerialHandshake";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialParity>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
+        static constexpr const char* type_name = "SerialParity";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialPinChange>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
+        static constexpr const char* type_name = "SerialPinChange";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialStopBitCount>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
+        static constexpr const char* type_name = "SerialStopBitCount";
     };
 
     template<>

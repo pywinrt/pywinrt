@@ -31,8 +31,6 @@ class SearchSuggestionKind(enum.IntEnum):
     RESULT = 1
     SEPARATOR = 2
 
-_ns_module._register_SearchSuggestionKind(SearchSuggestionKind)
-
 RequestingFocusOnKeyboardInputEventArgs = _ns_module.RequestingFocusOnKeyboardInputEventArgs
 SearchSuggestion = _ns_module.SearchSuggestion
 SearchSuggestionManager = _ns_module.SearchSuggestionManager

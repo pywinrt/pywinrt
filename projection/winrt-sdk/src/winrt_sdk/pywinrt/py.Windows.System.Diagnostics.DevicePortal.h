@@ -54,7 +54,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.deviceportal";
+        static constexpr const char* type_name = "DevicePortalConnectionClosedReason";
     };
 
     template<>

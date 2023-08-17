@@ -4399,9 +4399,6 @@ namespace py::cpp::TestComponent
     // ----- TestComponent Initialization --------------------
     PyDoc_STRVAR(module_doc, "TestComponent");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4445,7 +4442,7 @@ namespace py::cpp::TestComponent
            "_winrt_TestComponent",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

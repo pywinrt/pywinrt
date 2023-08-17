@@ -112,17 +112,6 @@ class StoreUninstallStorePackageStatus(enum.IntEnum):
     UNINSTALL_NOT_APPLICABLE = 3
     ERROR = 4
 
-_ns_module._register_StoreCanLicenseStatus(StoreCanLicenseStatus)
-_ns_module._register_StoreConsumableStatus(StoreConsumableStatus)
-_ns_module._register_StoreDurationUnit(StoreDurationUnit)
-_ns_module._register_StorePackageUpdateState(StorePackageUpdateState)
-_ns_module._register_StorePurchaseStatus(StorePurchaseStatus)
-_ns_module._register_StoreQueueItemExtendedState(StoreQueueItemExtendedState)
-_ns_module._register_StoreQueueItemKind(StoreQueueItemKind)
-_ns_module._register_StoreQueueItemState(StoreQueueItemState)
-_ns_module._register_StoreRateAndReviewStatus(StoreRateAndReviewStatus)
-_ns_module._register_StoreUninstallStorePackageStatus(StoreUninstallStorePackageStatus)
-
 StorePackageUpdateStatus = _ns_module.StorePackageUpdateStatus
 StoreAcquireLicenseResult = _ns_module.StoreAcquireLicenseResult
 StoreAppLicense = _ns_module.StoreAppLicense

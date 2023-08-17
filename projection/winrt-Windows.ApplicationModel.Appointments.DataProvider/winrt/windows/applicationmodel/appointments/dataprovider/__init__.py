@@ -19,7 +19,6 @@ try:
 except ImportError:
     pass
 
-
 AppointmentCalendarCancelMeetingRequest = _ns_module.AppointmentCalendarCancelMeetingRequest
 AppointmentCalendarCancelMeetingRequestEventArgs = _ns_module.AppointmentCalendarCancelMeetingRequestEventArgs
 AppointmentCalendarCreateOrUpdateAppointmentRequest = _ns_module.AppointmentCalendarCreateOrUpdateAppointmentRequest

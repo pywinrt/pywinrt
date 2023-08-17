@@ -58,13 +58,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
+        static constexpr const char* type_name = "DnssdRegistrationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcherStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
+        static constexpr const char* type_name = "DnssdServiceWatcherStatus";
     };
 
     template<>

@@ -37,9 +37,6 @@ class EnterpriseStatus(enum.IntEnum):
     REVOKED = 2
     EXPIRED = 3
 
-_ns_module._register_EnterpriseEnrollmentStatus(EnterpriseEnrollmentStatus)
-_ns_module._register_EnterpriseStatus(EnterpriseStatus)
-
 Enterprise = _ns_module.Enterprise
 EnterpriseEnrollmentManager = _ns_module.EnterpriseEnrollmentManager
 EnterpriseEnrollmentResult = _ns_module.EnterpriseEnrollmentResult

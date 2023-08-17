@@ -115,61 +115,71 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattCharacteristicProperties";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattClientCharacteristicConfigurationDescriptorValue";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattCommunicationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattOpenStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattOpenStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattProtectionLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattRequestState";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattServiceProviderAdvertisementStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattSessionStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattSharingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattWriteOption";
     };
 
     template<>

@@ -8,12 +8,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 {
     struct module_state
     {
-        PyObject* type_PaymentCanMakePaymentResultStatus;
-        PyObject* type_PaymentOptionPresence;
-        PyObject* type_PaymentRequestChangeKind;
-        PyObject* type_PaymentRequestCompletionStatus;
-        PyObject* type_PaymentRequestStatus;
-        PyObject* type_PaymentShippingType;
         PyTypeObject* type_PaymentAddress;
         PyTypeObject* type_PaymentCanMakePaymentResult;
         PyTypeObject* type_PaymentCurrencyAmount;
@@ -32,150 +26,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         PyTypeObject* type_PaymentShippingOption;
         PyTypeObject* type_PaymentToken;
     };
-
-    static PyObject* register_PaymentCanMakePaymentResultStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PaymentCanMakePaymentResultStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PaymentCanMakePaymentResultStatus = type;
-        Py_INCREF(state->type_PaymentCanMakePaymentResultStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PaymentOptionPresence(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PaymentOptionPresence)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PaymentOptionPresence = type;
-        Py_INCREF(state->type_PaymentOptionPresence);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PaymentRequestChangeKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PaymentRequestChangeKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PaymentRequestChangeKind = type;
-        Py_INCREF(state->type_PaymentRequestChangeKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PaymentRequestCompletionStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PaymentRequestCompletionStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PaymentRequestCompletionStatus = type;
-        Py_INCREF(state->type_PaymentRequestCompletionStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PaymentRequestStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PaymentRequestStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PaymentRequestStatus = type;
-        Py_INCREF(state->type_PaymentRequestStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PaymentShippingType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PaymentShippingType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PaymentShippingType = type;
-        Py_INCREF(state->type_PaymentShippingType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PaymentAddress class --------------------
     static constexpr const char* const type_name_PaymentAddress = "PaymentAddress";
@@ -4359,15 +4209,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     // ----- Windows.ApplicationModel.Payments Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Payments");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PaymentCanMakePaymentResultStatus", register_PaymentCanMakePaymentResultStatus, METH_O, "registers type"},
-        {"_register_PaymentOptionPresence", register_PaymentOptionPresence, METH_O, "registers type"},
-        {"_register_PaymentRequestChangeKind", register_PaymentRequestChangeKind, METH_O, "registers type"},
-        {"_register_PaymentRequestCompletionStatus", register_PaymentRequestCompletionStatus, METH_O, "registers type"},
-        {"_register_PaymentRequestStatus", register_PaymentRequestStatus, METH_O, "registers type"},
-        {"_register_PaymentShippingType", register_PaymentShippingType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4378,12 +4219,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return 0;
         }
 
-        Py_VISIT(state->type_PaymentCanMakePaymentResultStatus);
-        Py_VISIT(state->type_PaymentOptionPresence);
-        Py_VISIT(state->type_PaymentRequestChangeKind);
-        Py_VISIT(state->type_PaymentRequestCompletionStatus);
-        Py_VISIT(state->type_PaymentRequestStatus);
-        Py_VISIT(state->type_PaymentShippingType);
         Py_VISIT(state->type_PaymentAddress);
         Py_VISIT(state->type_PaymentCanMakePaymentResult);
         Py_VISIT(state->type_PaymentCurrencyAmount);
@@ -4414,12 +4249,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return 0;
         }
 
-        Py_CLEAR(state->type_PaymentCanMakePaymentResultStatus);
-        Py_CLEAR(state->type_PaymentOptionPresence);
-        Py_CLEAR(state->type_PaymentRequestChangeKind);
-        Py_CLEAR(state->type_PaymentRequestCompletionStatus);
-        Py_CLEAR(state->type_PaymentRequestStatus);
-        Py_CLEAR(state->type_PaymentShippingType);
         Py_CLEAR(state->type_PaymentAddress);
         Py_CLEAR(state->type_PaymentCanMakePaymentResult);
         Py_CLEAR(state->type_PaymentCurrencyAmount);
@@ -4447,7 +4276,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
            "_winrt_Windows_ApplicationModel_Payments",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4586,144 +4415,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Payments(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Payments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Payments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentCanMakePaymentResultStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Payments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Payments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentOptionPresence;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangeKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Payments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Payments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentRequestChangeKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Payments::PaymentRequestChangeKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestCompletionStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Payments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Payments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentRequestCompletionStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Payments::PaymentRequestCompletionStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Payments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Payments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentRequestStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Payments::PaymentRequestStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentShippingType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Payments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Payments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentShippingType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Payments::PaymentShippingType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentAddress>::get_python_type() noexcept {

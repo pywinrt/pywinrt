@@ -31,9 +31,6 @@ class OnlineIdSystemTicketStatus(enum.IntEnum):
     ERROR = 1
     SERVICE_CONNECTION_ERROR = 2
 
-_ns_module._register_CredentialPromptType(CredentialPromptType)
-_ns_module._register_OnlineIdSystemTicketStatus(OnlineIdSystemTicketStatus)
-
 OnlineIdAuthenticator = _ns_module.OnlineIdAuthenticator
 OnlineIdServiceTicket = _ns_module.OnlineIdServiceTicket
 OnlineIdServiceTicketRequest = _ns_module.OnlineIdServiceTicketRequest

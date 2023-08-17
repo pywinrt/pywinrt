@@ -99,16 +99,6 @@ class SystemMediaTransportControlsButton(enum.IntEnum):
 class SystemMediaTransportControlsProperty(enum.IntEnum):
     SOUND_LEVEL = 0
 
-_ns_module._register_AudioBufferAccessMode(AudioBufferAccessMode)
-_ns_module._register_AudioProcessing(AudioProcessing)
-_ns_module._register_MediaPlaybackAutoRepeatMode(MediaPlaybackAutoRepeatMode)
-_ns_module._register_MediaPlaybackStatus(MediaPlaybackStatus)
-_ns_module._register_MediaPlaybackType(MediaPlaybackType)
-_ns_module._register_MediaTimelineControllerState(MediaTimelineControllerState)
-_ns_module._register_SoundLevel(SoundLevel)
-_ns_module._register_SystemMediaTransportControlsButton(SystemMediaTransportControlsButton)
-_ns_module._register_SystemMediaTransportControlsProperty(SystemMediaTransportControlsProperty)
-
 MediaTimeRange = _ns_module.MediaTimeRange
 AudioBuffer = _ns_module.AudioBuffer
 AudioFrame = _ns_module.AudioFrame

@@ -80,13 +80,6 @@ class IndexerOption(enum.IntEnum):
     DO_NOT_USE_INDEXER = 2
     ONLY_USE_INDEXER_AND_OPTIMIZE_FOR_INDEXED_PROPERTIES = 3
 
-_ns_module._register_CommonFileQuery(CommonFileQuery)
-_ns_module._register_CommonFolderQuery(CommonFolderQuery)
-_ns_module._register_DateStackOption(DateStackOption)
-_ns_module._register_FolderDepth(FolderDepth)
-_ns_module._register_IndexedState(IndexedState)
-_ns_module._register_IndexerOption(IndexerOption)
-
 SortEntry = _ns_module.SortEntry
 ContentIndexer = _ns_module.ContentIndexer
 ContentIndexerQuery = _ns_module.ContentIndexerQuery

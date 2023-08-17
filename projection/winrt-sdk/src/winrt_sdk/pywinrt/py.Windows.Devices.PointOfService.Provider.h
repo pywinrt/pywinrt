@@ -73,7 +73,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerTriggerState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
+        static constexpr const char* type_name = "BarcodeScannerTriggerState";
     };
 
     template<>

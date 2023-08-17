@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
 {
     struct module_state
     {
-        PyObject* type_GazeDeviceConfigurationStatePreview;
         PyTypeObject* type_GazeDevicePreview;
         PyTypeObject* type_GazeDeviceWatcherAddedPreviewEventArgs;
         PyTypeObject* type_GazeDeviceWatcherPreview;
@@ -20,30 +19,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
         PyTypeObject* type_GazeMovedPreviewEventArgs;
         PyTypeObject* type_GazePointPreview;
     };
-
-    static PyObject* register_GazeDeviceConfigurationStatePreview(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GazeDeviceConfigurationStatePreview)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GazeDeviceConfigurationStatePreview = type;
-        Py_INCREF(state->type_GazeDeviceConfigurationStatePreview);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- GazeDevicePreview class --------------------
     static constexpr const char* const type_name_GazeDevicePreview = "GazeDevicePreview";
@@ -1805,10 +1780,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     // ----- Windows.Devices.Input.Preview Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Input::Preview");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_GazeDeviceConfigurationStatePreview", register_GazeDeviceConfigurationStatePreview, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1819,7 +1790,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
             return 0;
         }
 
-        Py_VISIT(state->type_GazeDeviceConfigurationStatePreview);
         Py_VISIT(state->type_GazeDevicePreview);
         Py_VISIT(state->type_GazeDeviceWatcherAddedPreviewEventArgs);
         Py_VISIT(state->type_GazeDeviceWatcherPreview);
@@ -1843,7 +1813,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
             return 0;
         }
 
-        Py_CLEAR(state->type_GazeDeviceConfigurationStatePreview);
         Py_CLEAR(state->type_GazeDevicePreview);
         Py_CLEAR(state->type_GazeDeviceWatcherAddedPreviewEventArgs);
         Py_CLEAR(state->type_GazeDeviceWatcherPreview);
@@ -1864,7 +1833,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
            "_winrt_Windows_Devices_Input_Preview",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1961,29 +1930,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Input_Preview(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GazeDeviceConfigurationStatePreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::Preview::GazeDevicePreview>::get_python_type() noexcept {

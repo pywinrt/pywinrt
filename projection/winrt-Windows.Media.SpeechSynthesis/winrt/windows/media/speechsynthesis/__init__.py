@@ -43,10 +43,6 @@ class VoiceGender(enum.IntEnum):
     MALE = 0
     FEMALE = 1
 
-_ns_module._register_SpeechAppendedSilence(SpeechAppendedSilence)
-_ns_module._register_SpeechPunctuationSilence(SpeechPunctuationSilence)
-_ns_module._register_VoiceGender(VoiceGender)
-
 SpeechSynthesisStream = _ns_module.SpeechSynthesisStream
 SpeechSynthesizer = _ns_module.SpeechSynthesizer
 SpeechSynthesizerOptions = _ns_module.SpeechSynthesizerOptions

@@ -59,13 +59,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollectionType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidCollectionType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidReportType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidReportType";
     };
 
     template<>

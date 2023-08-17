@@ -20,8 +20,5 @@ class WorkItemPriority(enum.IntEnum):
     NORMAL = 0
     HIGH = 1
 
-_ns_module._register_WorkItemOptions(WorkItemOptions)
-_ns_module._register_WorkItemPriority(WorkItemPriority)
-
 ThreadPool = _ns_module.ThreadPool
 ThreadPoolTimer = _ns_module.ThreadPoolTimer

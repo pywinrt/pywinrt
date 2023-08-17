@@ -53,10 +53,6 @@ class CastingPlaybackTypes(enum.IntFlag):
     VIDEO = 0x2
     PICTURE = 0x4
 
-_ns_module._register_CastingConnectionErrorStatus(CastingConnectionErrorStatus)
-_ns_module._register_CastingConnectionState(CastingConnectionState)
-_ns_module._register_CastingPlaybackTypes(CastingPlaybackTypes)
-
 CastingConnection = _ns_module.CastingConnection
 CastingConnectionErrorOccurredEventArgs = _ns_module.CastingConnectionErrorOccurredEventArgs
 CastingDevice = _ns_module.CastingDevice

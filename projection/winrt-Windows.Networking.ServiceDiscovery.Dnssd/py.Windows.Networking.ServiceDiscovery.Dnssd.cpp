@@ -8,61 +8,11 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 {
     struct module_state
     {
-        PyObject* type_DnssdRegistrationStatus;
-        PyObject* type_DnssdServiceWatcherStatus;
         PyTypeObject* type_DnssdRegistrationResult;
         PyTypeObject* type_DnssdServiceInstance;
         PyTypeObject* type_DnssdServiceInstanceCollection;
         PyTypeObject* type_DnssdServiceWatcher;
     };
-
-    static PyObject* register_DnssdRegistrationStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DnssdRegistrationStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DnssdRegistrationStatus = type;
-        Py_INCREF(state->type_DnssdRegistrationStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DnssdServiceWatcherStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DnssdServiceWatcherStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DnssdServiceWatcherStatus = type;
-        Py_INCREF(state->type_DnssdServiceWatcherStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- DnssdRegistrationResult class --------------------
     static constexpr const char* const type_name_DnssdRegistrationResult = "DnssdRegistrationResult";
@@ -1421,11 +1371,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
     // ----- Windows.Networking.ServiceDiscovery.Dnssd Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Networking::ServiceDiscovery::Dnssd");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_DnssdRegistrationStatus", register_DnssdRegistrationStatus, METH_O, "registers type"},
-        {"_register_DnssdServiceWatcherStatus", register_DnssdServiceWatcherStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1436,8 +1381,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
             return 0;
         }
 
-        Py_VISIT(state->type_DnssdRegistrationStatus);
-        Py_VISIT(state->type_DnssdServiceWatcherStatus);
         Py_VISIT(state->type_DnssdRegistrationResult);
         Py_VISIT(state->type_DnssdServiceInstance);
         Py_VISIT(state->type_DnssdServiceInstanceCollection);
@@ -1455,8 +1398,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
             return 0;
         }
 
-        Py_CLEAR(state->type_DnssdRegistrationStatus);
-        Py_CLEAR(state->type_DnssdServiceWatcherStatus);
         Py_CLEAR(state->type_DnssdRegistrationResult);
         Py_CLEAR(state->type_DnssdServiceInstance);
         Py_CLEAR(state->type_DnssdServiceInstanceCollection);
@@ -1471,7 +1412,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
            "_winrt_Windows_Networking_ServiceDiscovery_Dnssd",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1532,52 +1473,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_ServiceDiscovery_Dnssd(void) noe
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::ServiceDiscovery::Dnssd");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DnssdRegistrationStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcherStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::ServiceDiscovery::Dnssd");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DnssdServiceWatcherStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcherStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult>::get_python_type() noexcept {

@@ -56,19 +56,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::AddFileResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "AddFileResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::FileSelectionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "FileSelectionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::SetFileNameResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "SetFileNameResult";
     };
 
     template<>

@@ -165,67 +165,78 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sms::CellularClass>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "CellularClass";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsBroadcastType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsBroadcastType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsDataFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsDataFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsDeviceStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsDeviceStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsEncoding>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsEncoding";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsFilterActionType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsFilterActionType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsGeographicalScope>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsGeographicalScope";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsMessageClass>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsMessageClass";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsMessageFilter>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsMessageFilter";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsMessageType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsMessageType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsModemErrorCode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsModemErrorCode";
     };
 
     template<>

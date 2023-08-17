@@ -17,8 +17,6 @@ class CollectionChange(enum.IntEnum):
     ITEM_REMOVED = 2
     ITEM_CHANGED = 3
 
-_ns_module._register_CollectionChange(CollectionChange)
-
 PropertySet = _ns_module.PropertySet
 winrt.system._mixin_mutable_mapping(PropertySet)
 StringMap = _ns_module.StringMap

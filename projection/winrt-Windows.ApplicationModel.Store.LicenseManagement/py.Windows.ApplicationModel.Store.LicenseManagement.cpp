@@ -8,35 +8,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 {
     struct module_state
     {
-        PyObject* type_LicenseRefreshOption;
         PyTypeObject* type_LicenseManager;
         PyTypeObject* type_LicenseSatisfactionInfo;
         PyTypeObject* type_LicenseSatisfactionResult;
     };
-
-    static PyObject* register_LicenseRefreshOption(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LicenseRefreshOption)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LicenseRefreshOption = type;
-        Py_INCREF(state->type_LicenseRefreshOption);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- LicenseManager class --------------------
     static constexpr const char* const type_name_LicenseManager = "LicenseManager";
@@ -502,10 +477,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
     // ----- Windows.ApplicationModel.Store.LicenseManagement Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Store::LicenseManagement");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_LicenseRefreshOption", register_LicenseRefreshOption, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -516,7 +487,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
             return 0;
         }
 
-        Py_VISIT(state->type_LicenseRefreshOption);
         Py_VISIT(state->type_LicenseManager);
         Py_VISIT(state->type_LicenseSatisfactionInfo);
         Py_VISIT(state->type_LicenseSatisfactionResult);
@@ -533,7 +503,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
             return 0;
         }
 
-        Py_CLEAR(state->type_LicenseRefreshOption);
         Py_CLEAR(state->type_LicenseManager);
         Py_CLEAR(state->type_LicenseSatisfactionInfo);
         Py_CLEAR(state->type_LicenseSatisfactionResult);
@@ -547,7 +516,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
            "_winrt_Windows_ApplicationModel_Store_LicenseManagement",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -602,29 +571,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_LicenseManagement(vo
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseRefreshOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::LicenseManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LicenseRefreshOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseRefreshOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager>::get_python_type() noexcept {

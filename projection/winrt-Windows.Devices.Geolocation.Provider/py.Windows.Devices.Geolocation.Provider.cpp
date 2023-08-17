@@ -8,33 +8,8 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
 {
     struct module_state
     {
-        PyObject* type_LocationOverrideStatus;
         PyTypeObject* type_GeolocationProvider;
     };
-
-    static PyObject* register_LocationOverrideStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LocationOverrideStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LocationOverrideStatus = type;
-        Py_INCREF(state->type_LocationOverrideStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- GeolocationProvider class --------------------
     static constexpr const char* const type_name_GeolocationProvider = "GeolocationProvider";
@@ -267,10 +242,6 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
     // ----- Windows.Devices.Geolocation.Provider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Geolocation::Provider");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_LocationOverrideStatus", register_LocationOverrideStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -281,7 +252,6 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
             return 0;
         }
 
-        Py_VISIT(state->type_LocationOverrideStatus);
         Py_VISIT(state->type_GeolocationProvider);
 
         return 0;
@@ -296,7 +266,6 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
             return 0;
         }
 
-        Py_CLEAR(state->type_LocationOverrideStatus);
         Py_CLEAR(state->type_GeolocationProvider);
 
         return 0;
@@ -308,7 +277,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
            "_winrt_Windows_Devices_Geolocation_Provider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -351,29 +320,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Geolocation_Provider(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::Provider::LocationOverrideStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LocationOverrideStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Provider::LocationOverrideStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::Provider::GeolocationProvider>::get_python_type() noexcept {

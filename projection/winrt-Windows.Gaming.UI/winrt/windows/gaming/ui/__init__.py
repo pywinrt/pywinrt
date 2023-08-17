@@ -35,9 +35,6 @@ class GameChatOverlayPosition(enum.IntEnum):
     TOP_LEFT = 6
     TOP_RIGHT = 7
 
-_ns_module._register_GameChatMessageOrigin(GameChatMessageOrigin)
-_ns_module._register_GameChatOverlayPosition(GameChatOverlayPosition)
-
 GameBar = _ns_module.GameBar
 GameChatMessageReceivedEventArgs = _ns_module.GameChatMessageReceivedEventArgs
 GameChatOverlay = _ns_module.GameChatOverlay

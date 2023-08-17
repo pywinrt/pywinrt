@@ -82,31 +82,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowClosedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowClosedReason";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowFrameStyle>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowFrameStyle";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowPresentationKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarVisibility>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowTitleBarVisibility";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "WindowingEnvironmentKind";
     };
 
     template<>

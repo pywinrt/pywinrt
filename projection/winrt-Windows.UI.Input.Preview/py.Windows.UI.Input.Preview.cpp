@@ -80,9 +80,6 @@ namespace py::cpp::Windows::UI::Input::Preview
     // ----- Windows.UI.Input.Preview Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Input::Preview");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -118,7 +115,7 @@ namespace py::cpp::Windows::UI::Input::Preview
            "_winrt_Windows_UI_Input_Preview",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

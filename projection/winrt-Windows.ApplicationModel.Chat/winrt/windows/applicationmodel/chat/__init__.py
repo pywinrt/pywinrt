@@ -135,20 +135,6 @@ class RcsServiceKind(enum.IntEnum):
     FILE_TRANSFER = 2
     CAPABILITY = 3
 
-_ns_module._register_ChatConversationThreadingKind(ChatConversationThreadingKind)
-_ns_module._register_ChatItemKind(ChatItemKind)
-_ns_module._register_ChatMessageChangeType(ChatMessageChangeType)
-_ns_module._register_ChatMessageKind(ChatMessageKind)
-_ns_module._register_ChatMessageOperatorKind(ChatMessageOperatorKind)
-_ns_module._register_ChatMessageStatus(ChatMessageStatus)
-_ns_module._register_ChatMessageTransportKind(ChatMessageTransportKind)
-_ns_module._register_ChatMessageValidationStatus(ChatMessageValidationStatus)
-_ns_module._register_ChatRestoreHistorySpan(ChatRestoreHistorySpan)
-_ns_module._register_ChatStoreChangedEventKind(ChatStoreChangedEventKind)
-_ns_module._register_ChatTransportErrorCodeCategory(ChatTransportErrorCodeCategory)
-_ns_module._register_ChatTransportInterpretedErrorCode(ChatTransportInterpretedErrorCode)
-_ns_module._register_RcsServiceKind(RcsServiceKind)
-
 ChatCapabilities = _ns_module.ChatCapabilities
 ChatCapabilitiesManager = _ns_module.ChatCapabilitiesManager
 ChatConversation = _ns_module.ChatConversation

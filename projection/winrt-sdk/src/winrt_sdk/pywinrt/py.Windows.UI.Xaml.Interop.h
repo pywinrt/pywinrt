@@ -107,13 +107,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
+        static constexpr const char* type_name = "NotifyCollectionChangedAction";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::TypeKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
+        static constexpr const char* type_name = "TypeKind";
     };
 
     template<>

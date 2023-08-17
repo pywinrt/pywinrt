@@ -46,25 +46,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::DisplayMonitorConnectionKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display";
+        static constexpr const char* type_name = "DisplayMonitorConnectionKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Display::DisplayMonitorDescriptorKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display";
+        static constexpr const char* type_name = "DisplayMonitorDescriptorKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display";
+        static constexpr const char* type_name = "DisplayMonitorPhysicalConnectorKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Display::DisplayMonitorUsageKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display";
+        static constexpr const char* type_name = "DisplayMonitorUsageKind";
     };
 
     template<>

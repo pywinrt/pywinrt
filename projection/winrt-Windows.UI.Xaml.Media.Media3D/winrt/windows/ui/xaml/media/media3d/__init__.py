@@ -9,7 +9,6 @@ try:
 except ImportError:
     pass
 
-
 Matrix3D = _ns_module.Matrix3D
 CompositeTransform3D = _ns_module.CompositeTransform3D
 Matrix3DHelper = _ns_module.Matrix3DHelper

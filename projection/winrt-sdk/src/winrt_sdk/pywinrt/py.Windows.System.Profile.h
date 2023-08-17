@@ -71,25 +71,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::PlatformDataCollectionLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "PlatformDataCollectionLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemIdentificationSource>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "SystemIdentificationSource";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemOutOfBoxExperienceState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "SystemOutOfBoxExperienceState";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Profile::UnsupportedAppRequirementReasons>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "UnsupportedAppRequirementReasons";
     };
 
     template<>

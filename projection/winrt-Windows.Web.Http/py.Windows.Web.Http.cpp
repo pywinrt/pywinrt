@@ -8,11 +8,6 @@ namespace py::cpp::Windows::Web::Http
 {
     struct module_state
     {
-        PyObject* type_HttpCompletionOption;
-        PyObject* type_HttpProgressStage;
-        PyObject* type_HttpResponseMessageSource;
-        PyObject* type_HttpStatusCode;
-        PyObject* type_HttpVersion;
         PyTypeObject* type_HttpBufferContent;
         PyTypeObject* type_HttpClient;
         PyTypeObject* type_HttpCookie;
@@ -34,126 +29,6 @@ namespace py::cpp::Windows::Web::Http
         PyTypeObject* type_IHttpContent;
         PyTypeObject* type_HttpProgress;
     };
-
-    static PyObject* register_HttpCompletionOption(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HttpCompletionOption)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HttpCompletionOption = type;
-        Py_INCREF(state->type_HttpCompletionOption);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HttpProgressStage(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HttpProgressStage)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HttpProgressStage = type;
-        Py_INCREF(state->type_HttpProgressStage);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HttpResponseMessageSource(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HttpResponseMessageSource)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HttpResponseMessageSource = type;
-        Py_INCREF(state->type_HttpResponseMessageSource);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HttpStatusCode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HttpStatusCode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HttpStatusCode = type;
-        Py_INCREF(state->type_HttpStatusCode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HttpVersion(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HttpVersion)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HttpVersion = type;
-        Py_INCREF(state->type_HttpVersion);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- HttpBufferContent class --------------------
     static constexpr const char* const type_name_HttpBufferContent = "HttpBufferContent";
@@ -7985,14 +7860,6 @@ namespace py::cpp::Windows::Web::Http
     // ----- Windows.Web.Http Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Web::Http");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_HttpCompletionOption", register_HttpCompletionOption, METH_O, "registers type"},
-        {"_register_HttpProgressStage", register_HttpProgressStage, METH_O, "registers type"},
-        {"_register_HttpResponseMessageSource", register_HttpResponseMessageSource, METH_O, "registers type"},
-        {"_register_HttpStatusCode", register_HttpStatusCode, METH_O, "registers type"},
-        {"_register_HttpVersion", register_HttpVersion, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -8003,11 +7870,6 @@ namespace py::cpp::Windows::Web::Http
             return 0;
         }
 
-        Py_VISIT(state->type_HttpCompletionOption);
-        Py_VISIT(state->type_HttpProgressStage);
-        Py_VISIT(state->type_HttpResponseMessageSource);
-        Py_VISIT(state->type_HttpStatusCode);
-        Py_VISIT(state->type_HttpVersion);
         Py_VISIT(state->type_HttpBufferContent);
         Py_VISIT(state->type_HttpClient);
         Py_VISIT(state->type_HttpCookie);
@@ -8041,11 +7903,6 @@ namespace py::cpp::Windows::Web::Http
             return 0;
         }
 
-        Py_CLEAR(state->type_HttpCompletionOption);
-        Py_CLEAR(state->type_HttpProgressStage);
-        Py_CLEAR(state->type_HttpResponseMessageSource);
-        Py_CLEAR(state->type_HttpStatusCode);
-        Py_CLEAR(state->type_HttpVersion);
         Py_CLEAR(state->type_HttpBufferContent);
         Py_CLEAR(state->type_HttpClient);
         Py_CLEAR(state->type_HttpCookie);
@@ -8076,7 +7933,7 @@ namespace py::cpp::Windows::Web::Http
            "_winrt_Windows_Web_Http",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -8239,121 +8096,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Http::HttpCompletionOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCompletionOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpCompletionOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Http::HttpProgressStage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpProgressStage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpProgressStage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Http::HttpResponseMessageSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpResponseMessageSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpResponseMessageSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Http::HttpStatusCode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpStatusCode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpStatusCode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Http::HttpVersion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpVersion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpVersion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpBufferContent>::get_python_type() noexcept {

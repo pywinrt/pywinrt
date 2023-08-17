@@ -8,8 +8,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 {
     struct module_state
     {
-        PyObject* type_SettingsLaunchKind;
-        PyObject* type_WorkflowPrintTicketValidationStatus;
         PyTypeObject* type_PrintSupportExtensionSession;
         PyTypeObject* type_PrintSupportExtensionTriggerDetails;
         PyTypeObject* type_PrintSupportPrintDeviceCapabilitiesChangedEventArgs;
@@ -21,54 +19,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         PyTypeObject* type_PrintSupportSettingsActivatedEventArgs;
         PyTypeObject* type_PrintSupportSettingsUISession;
     };
-
-    static PyObject* register_SettingsLaunchKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SettingsLaunchKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SettingsLaunchKind = type;
-        Py_INCREF(state->type_SettingsLaunchKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WorkflowPrintTicketValidationStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WorkflowPrintTicketValidationStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WorkflowPrintTicketValidationStatus = type;
-        Py_INCREF(state->type_WorkflowPrintTicketValidationStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PrintSupportExtensionSession class --------------------
     static constexpr const char* const type_name_PrintSupportExtensionSession = "PrintSupportExtensionSession";
@@ -2037,11 +1987,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     // ----- Windows.Graphics.Printing.PrintSupport Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing::PrintSupport");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SettingsLaunchKind", register_SettingsLaunchKind, METH_O, "registers type"},
-        {"_register_WorkflowPrintTicketValidationStatus", register_WorkflowPrintTicketValidationStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2052,8 +1997,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
             return 0;
         }
 
-        Py_VISIT(state->type_SettingsLaunchKind);
-        Py_VISIT(state->type_WorkflowPrintTicketValidationStatus);
         Py_VISIT(state->type_PrintSupportExtensionSession);
         Py_VISIT(state->type_PrintSupportExtensionTriggerDetails);
         Py_VISIT(state->type_PrintSupportPrintDeviceCapabilitiesChangedEventArgs);
@@ -2077,8 +2020,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
             return 0;
         }
 
-        Py_CLEAR(state->type_SettingsLaunchKind);
-        Py_CLEAR(state->type_WorkflowPrintTicketValidationStatus);
         Py_CLEAR(state->type_PrintSupportExtensionSession);
         Py_CLEAR(state->type_PrintSupportExtensionTriggerDetails);
         Py_CLEAR(state->type_PrintSupportPrintDeviceCapabilitiesChangedEventArgs);
@@ -2099,7 +2040,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
            "_winrt_Windows_Graphics_Printing_PrintSupport",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2196,52 +2137,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_PrintSupport(void) noexce
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::SettingsLaunchKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SettingsLaunchKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::SettingsLaunchKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::WorkflowPrintTicketValidationStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WorkflowPrintTicketValidationStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::WorkflowPrintTicketValidationStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>::get_python_type() noexcept {

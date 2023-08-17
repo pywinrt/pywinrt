@@ -55,9 +55,6 @@ class VoiceCommandContentTileType(enum.IntEnum):
     TITLE_WITH280X140_ICON = 6
     TITLE_WITH280X140_ICON_AND_TEXT = 7
 
-_ns_module._register_VoiceCommandCompletionReason(VoiceCommandCompletionReason)
-_ns_module._register_VoiceCommandContentTileType(VoiceCommandContentTileType)
-
 VoiceCommand = _ns_module.VoiceCommand
 VoiceCommandCompletedEventArgs = _ns_module.VoiceCommandCompletedEventArgs
 VoiceCommandConfirmationResult = _ns_module.VoiceCommandConfirmationResult

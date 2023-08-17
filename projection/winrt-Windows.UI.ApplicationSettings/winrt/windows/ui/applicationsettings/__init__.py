@@ -50,10 +50,6 @@ class WebAccountAction(enum.IntEnum):
     MANAGE = 3
     MORE = 4
 
-_ns_module._register_SettingsEdgeLocation(SettingsEdgeLocation)
-_ns_module._register_SupportedWebAccountActions(SupportedWebAccountActions)
-_ns_module._register_WebAccountAction(WebAccountAction)
-
 AccountsSettingsPane = _ns_module.AccountsSettingsPane
 AccountsSettingsPaneCommandsRequestedEventArgs = _ns_module.AccountsSettingsPaneCommandsRequestedEventArgs
 AccountsSettingsPaneEventDeferral = _ns_module.AccountsSettingsPaneEventDeferral

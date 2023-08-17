@@ -133,9 +133,6 @@ namespace py::cpp::Windows::Media::Core::Preview
     // ----- Windows.Media.Core.Preview Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::Core::Preview");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -171,7 +168,7 @@ namespace py::cpp::Windows::Media::Core::Preview
            "_winrt_Windows_Media_Core_Preview",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

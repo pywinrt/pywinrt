@@ -145,22 +145,6 @@ class WwanNetworkRegistrationState(enum.IntEnum):
     PARTNER = 5
     DENIED = 6
 
-_ns_module._register_CellularApnAuthenticationType(CellularApnAuthenticationType)
-_ns_module._register_ConnectionProfileDeleteStatus(ConnectionProfileDeleteStatus)
-_ns_module._register_DataUsageGranularity(DataUsageGranularity)
-_ns_module._register_DomainAuthenticationKind(DomainAuthenticationKind)
-_ns_module._register_DomainConnectivityLevel(DomainConnectivityLevel)
-_ns_module._register_NetworkAuthenticationType(NetworkAuthenticationType)
-_ns_module._register_NetworkConnectivityLevel(NetworkConnectivityLevel)
-_ns_module._register_NetworkCostType(NetworkCostType)
-_ns_module._register_NetworkEncryptionType(NetworkEncryptionType)
-_ns_module._register_NetworkTypes(NetworkTypes)
-_ns_module._register_RoamingStates(RoamingStates)
-_ns_module._register_TriStates(TriStates)
-_ns_module._register_WwanDataClass(WwanDataClass)
-_ns_module._register_WwanNetworkIPKind(WwanNetworkIPKind)
-_ns_module._register_WwanNetworkRegistrationState(WwanNetworkRegistrationState)
-
 NetworkUsageStates = _ns_module.NetworkUsageStates
 AttributedNetworkUsage = _ns_module.AttributedNetworkUsage
 CellularApnContext = _ns_module.CellularApnContext

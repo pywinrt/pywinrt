@@ -8,34 +8,9 @@ namespace py::cpp::Windows::Management::Workplace
 {
     struct module_state
     {
-        PyObject* type_MessagingSyncPolicy;
         PyTypeObject* type_MdmPolicy;
         PyTypeObject* type_WorkplaceSettings;
     };
-
-    static PyObject* register_MessagingSyncPolicy(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MessagingSyncPolicy)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MessagingSyncPolicy = type;
-        Py_INCREF(state->type_MessagingSyncPolicy);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- MdmPolicy class --------------------
     static constexpr const char* const type_name_MdmPolicy = "MdmPolicy";
@@ -298,10 +273,6 @@ namespace py::cpp::Windows::Management::Workplace
     // ----- Windows.Management.Workplace Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Management::Workplace");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_MessagingSyncPolicy", register_MessagingSyncPolicy, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -312,7 +283,6 @@ namespace py::cpp::Windows::Management::Workplace
             return 0;
         }
 
-        Py_VISIT(state->type_MessagingSyncPolicy);
         Py_VISIT(state->type_MdmPolicy);
         Py_VISIT(state->type_WorkplaceSettings);
 
@@ -328,7 +298,6 @@ namespace py::cpp::Windows::Management::Workplace
             return 0;
         }
 
-        Py_CLEAR(state->type_MessagingSyncPolicy);
         Py_CLEAR(state->type_MdmPolicy);
         Py_CLEAR(state->type_WorkplaceSettings);
 
@@ -341,7 +310,7 @@ namespace py::cpp::Windows::Management::Workplace
            "_winrt_Windows_Management_Workplace",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -396,29 +365,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Workplace(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Management::Workplace::MessagingSyncPolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Workplace;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Workplace");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MessagingSyncPolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Workplace::MessagingSyncPolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Management::Workplace::MdmPolicy>::get_python_type() noexcept {

@@ -39,7 +39,6 @@ try:
 except ImportError:
     pass
 
-
 RfcommDeviceService = _ns_module.RfcommDeviceService
 RfcommDeviceServicesResult = _ns_module.RfcommDeviceServicesResult
 RfcommServiceId = _ns_module.RfcommServiceId

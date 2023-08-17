@@ -60,13 +60,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::PlayTo::PlayToConnectionError>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToConnectionError";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::PlayTo::PlayToConnectionState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToConnectionState";
     };
 
     template<>

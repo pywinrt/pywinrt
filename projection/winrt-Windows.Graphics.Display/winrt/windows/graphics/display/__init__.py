@@ -79,15 +79,6 @@ class ResolutionScale(enum.IntEnum):
     SCALE450_PERCENT = 450
     SCALE500_PERCENT = 500
 
-_ns_module._register_AdvancedColorKind(AdvancedColorKind)
-_ns_module._register_DisplayBrightnessOverrideOptions(DisplayBrightnessOverrideOptions)
-_ns_module._register_DisplayBrightnessOverrideScenario(DisplayBrightnessOverrideScenario)
-_ns_module._register_DisplayBrightnessScenario(DisplayBrightnessScenario)
-_ns_module._register_DisplayColorOverrideScenario(DisplayColorOverrideScenario)
-_ns_module._register_DisplayOrientations(DisplayOrientations)
-_ns_module._register_HdrMetadataFormat(HdrMetadataFormat)
-_ns_module._register_ResolutionScale(ResolutionScale)
-
 NitRange = _ns_module.NitRange
 AdvancedColorInfo = _ns_module.AdvancedColorInfo
 BrightnessOverride = _ns_module.BrightnessOverride

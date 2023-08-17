@@ -9,6 +9,5 @@ try:
 except ImportError:
     pass
 
-
 DeviceServicingDetails = _ns_module.DeviceServicingDetails
 DeviceUseDetails = _ns_module.DeviceUseDetails

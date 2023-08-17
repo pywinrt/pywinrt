@@ -46,25 +46,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewMeetingInfoDisplayKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
+        static constexpr const char* type_name = "PreviewMeetingInfoDisplayKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewSystemState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
+        static constexpr const char* type_name = "PreviewSystemState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
+        static constexpr const char* type_name = "PreviewTeamEndMeetingKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamViewCommand>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
+        static constexpr const char* type_name = "PreviewTeamViewCommand";
     };
 
     template<>

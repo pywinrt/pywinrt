@@ -368,97 +368,113 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AnimationDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "AnimationDirection";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ComponentResourceLocation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "ComponentResourceLocation";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::EdgeTransitionLocation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "EdgeTransitionLocation";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "FlyoutPlacementMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "FlyoutShowMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "GeneratorDirection";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GroupHeaderPlacement>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "GroupHeaderPlacement";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterCheckMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "ListViewItemPresenterCheckMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "ListViewItemPresenterSelectionIndicatorMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::PlacementMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "PlacementMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "PopupPlacementMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "ScrollEventType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ScrollingIndicatorMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "ScrollingIndicatorMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SliderSnapsTo>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "SliderSnapsTo";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "SnapPointsAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::TickPlacement>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
+        static constexpr const char* type_name = "TickPlacement";
     };
 
     template<>

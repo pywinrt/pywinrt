@@ -336,19 +336,6 @@ class PrintTaskCompletion(enum.IntEnum):
     FAILED = 2
     SUBMITTED = 3
 
-_ns_module._register_PrintBinding(PrintBinding)
-_ns_module._register_PrintBordering(PrintBordering)
-_ns_module._register_PrintCollation(PrintCollation)
-_ns_module._register_PrintColorMode(PrintColorMode)
-_ns_module._register_PrintDuplex(PrintDuplex)
-_ns_module._register_PrintHolePunch(PrintHolePunch)
-_ns_module._register_PrintMediaSize(PrintMediaSize)
-_ns_module._register_PrintMediaType(PrintMediaType)
-_ns_module._register_PrintOrientation(PrintOrientation)
-_ns_module._register_PrintQuality(PrintQuality)
-_ns_module._register_PrintStaple(PrintStaple)
-_ns_module._register_PrintTaskCompletion(PrintTaskCompletion)
-
 PrintPageDescription = _ns_module.PrintPageDescription
 PrintManager = _ns_module.PrintManager
 PrintPageInfo = _ns_module.PrintPageInfo

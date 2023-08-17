@@ -48,19 +48,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::AnimationEffect>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
+        static constexpr const char* type_name = "AnimationEffect";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::AnimationEffectTarget>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
+        static constexpr const char* type_name = "AnimationEffectTarget";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
+        static constexpr const char* type_name = "PropertyAnimationType";
     };
 
     template<>

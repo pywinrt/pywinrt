@@ -68,19 +68,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::FeatureElementKindPreview>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "FeatureElementKindPreview";
     };
 
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDeviceKindPreview>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "LearningModelDeviceKindPreview";
     };
 
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelFeatureKindPreview>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "LearningModelFeatureKindPreview";
     };
 
     template<>

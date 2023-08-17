@@ -4,6 +4,5 @@ import winrt.system
 
 _ns_module = winrt.system._import_ns_module("Windows.System.Power.Diagnostics")
 
-
 BackgroundEnergyDiagnostics = _ns_module.BackgroundEnergyDiagnostics
 ForegroundEnergyDiagnostics = _ns_module.ForegroundEnergyDiagnostics

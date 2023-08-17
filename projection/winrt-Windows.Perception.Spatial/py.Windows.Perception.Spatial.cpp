@@ -8,12 +8,6 @@ namespace py::cpp::Windows::Perception::Spatial
 {
     struct module_state
     {
-        PyObject* type_SpatialAnchorExportPurpose;
-        PyObject* type_SpatialEntityWatcherStatus;
-        PyObject* type_SpatialLocatability;
-        PyObject* type_SpatialLookDirectionRange;
-        PyObject* type_SpatialMovementRange;
-        PyObject* type_SpatialPerceptionAccessStatus;
         PyTypeObject* type_SpatialAnchor;
         PyTypeObject* type_SpatialAnchorExportSufficiency;
         PyTypeObject* type_SpatialAnchorExporter;
@@ -41,150 +35,6 @@ namespace py::cpp::Windows::Perception::Spatial
         PyTypeObject* type_SpatialBoundingSphere;
         PyTypeObject* type_SpatialRay;
     };
-
-    static PyObject* register_SpatialAnchorExportPurpose(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialAnchorExportPurpose)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialAnchorExportPurpose = type;
-        Py_INCREF(state->type_SpatialAnchorExportPurpose);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpatialEntityWatcherStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialEntityWatcherStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialEntityWatcherStatus = type;
-        Py_INCREF(state->type_SpatialEntityWatcherStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpatialLocatability(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialLocatability)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialLocatability = type;
-        Py_INCREF(state->type_SpatialLocatability);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpatialLookDirectionRange(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialLookDirectionRange)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialLookDirectionRange = type;
-        Py_INCREF(state->type_SpatialLookDirectionRange);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpatialMovementRange(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialMovementRange)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialMovementRange = type;
-        Py_INCREF(state->type_SpatialMovementRange);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpatialPerceptionAccessStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialPerceptionAccessStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialPerceptionAccessStatus = type;
-        Py_INCREF(state->type_SpatialPerceptionAccessStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- SpatialAnchor class --------------------
     static constexpr const char* const type_name_SpatialAnchor = "SpatialAnchor";
@@ -4943,15 +4793,6 @@ namespace py::cpp::Windows::Perception::Spatial
     // ----- Windows.Perception.Spatial Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Perception::Spatial");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SpatialAnchorExportPurpose", register_SpatialAnchorExportPurpose, METH_O, "registers type"},
-        {"_register_SpatialEntityWatcherStatus", register_SpatialEntityWatcherStatus, METH_O, "registers type"},
-        {"_register_SpatialLocatability", register_SpatialLocatability, METH_O, "registers type"},
-        {"_register_SpatialLookDirectionRange", register_SpatialLookDirectionRange, METH_O, "registers type"},
-        {"_register_SpatialMovementRange", register_SpatialMovementRange, METH_O, "registers type"},
-        {"_register_SpatialPerceptionAccessStatus", register_SpatialPerceptionAccessStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4962,12 +4803,6 @@ namespace py::cpp::Windows::Perception::Spatial
             return 0;
         }
 
-        Py_VISIT(state->type_SpatialAnchorExportPurpose);
-        Py_VISIT(state->type_SpatialEntityWatcherStatus);
-        Py_VISIT(state->type_SpatialLocatability);
-        Py_VISIT(state->type_SpatialLookDirectionRange);
-        Py_VISIT(state->type_SpatialMovementRange);
-        Py_VISIT(state->type_SpatialPerceptionAccessStatus);
         Py_VISIT(state->type_SpatialAnchor);
         Py_VISIT(state->type_SpatialAnchorExportSufficiency);
         Py_VISIT(state->type_SpatialAnchorExporter);
@@ -5007,12 +4842,6 @@ namespace py::cpp::Windows::Perception::Spatial
             return 0;
         }
 
-        Py_CLEAR(state->type_SpatialAnchorExportPurpose);
-        Py_CLEAR(state->type_SpatialEntityWatcherStatus);
-        Py_CLEAR(state->type_SpatialLocatability);
-        Py_CLEAR(state->type_SpatialLookDirectionRange);
-        Py_CLEAR(state->type_SpatialMovementRange);
-        Py_CLEAR(state->type_SpatialPerceptionAccessStatus);
         Py_CLEAR(state->type_SpatialAnchor);
         Py_CLEAR(state->type_SpatialAnchorExportSufficiency);
         Py_CLEAR(state->type_SpatialAnchorExporter);
@@ -5049,7 +4878,7 @@ namespace py::cpp::Windows::Perception::Spatial
            "_winrt_Windows_Perception_Spatial",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -5254,144 +5083,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Spatial(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExportPurpose>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAnchorExportPurpose;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialAnchorExportPurpose is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityWatcherStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialEntityWatcherStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialEntityWatcherStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Perception::Spatial::SpatialLocatability>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialLocatability;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialLocatability is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Perception::Spatial::SpatialLookDirectionRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialLookDirectionRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialLookDirectionRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Perception::Spatial::SpatialMovementRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialMovementRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialMovementRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Perception::Spatial::SpatialPerceptionAccessStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialPerceptionAccessStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialPerceptionAccessStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchor>::get_python_type() noexcept {

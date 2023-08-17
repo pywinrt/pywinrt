@@ -159,37 +159,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::GraphicsTrustStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "GraphicsTrustStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::HdcpProtection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "HdcpProtection";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::HdcpSetProtectionResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "HdcpSetProtectionResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::ProtectionCapabilityResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "ProtectionCapabilityResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::RenewalStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "RenewalStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::RevocationAndRenewalReasons>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "RevocationAndRenewalReasons";
     };
 
     template<>

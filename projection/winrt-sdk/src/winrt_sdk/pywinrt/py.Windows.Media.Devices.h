@@ -307,157 +307,183 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::AdvancedPhotoMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "AdvancedPhotoMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::AudioDeviceRole>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "AudioDeviceRole";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::AutoFocusRange>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "AutoFocusRange";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::CameraOcclusionKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "CameraOcclusionKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::CameraStreamState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "CameraStreamState";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::CaptureSceneMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "CaptureSceneMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::CaptureUse>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "CaptureUse";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::ColorTemperaturePreset>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "ColorTemperaturePreset";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::DigitalWindowMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "DigitalWindowMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::FocusMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "FocusMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::FocusPreset>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "FocusPreset";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::HdrVideoMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "HdrVideoMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::InfraredTorchMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "InfraredTorchMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::IsoSpeedPreset>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "IsoSpeedPreset";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::ManualFocusDistance>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "ManualFocusDistance";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::MediaCaptureFocusState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "MediaCaptureFocusState";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::MediaCaptureOptimization>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "MediaCaptureOptimization";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::MediaCapturePauseBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "MediaCapturePauseBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::OpticalImageStabilizationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "OpticalImageStabilizationMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::RegionOfInterestType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "RegionOfInterestType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::SendCommandStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "SendCommandStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::TelephonyKey>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "TelephonyKey";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "VideoDeviceControllerGetDevicePropertyStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "VideoDeviceControllerSetDevicePropertyStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::VideoTemporalDenoisingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "VideoTemporalDenoisingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::ZoomTransitionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "ZoomTransitionMode";
     };
 
     template<>

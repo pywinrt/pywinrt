@@ -59,13 +59,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::AccessCacheOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.accesscache";
+        static constexpr const char* type_name = "AccessCacheOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::RecentStorageItemVisibility>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.accesscache";
+        static constexpr const char* type_name = "RecentStorageItemVisibility";
     };
 
     template<>

@@ -8,8 +8,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 {
     struct module_state
     {
-        PyObject* type_CurrencyFormatterMode;
-        PyObject* type_RoundingAlgorithm;
         PyTypeObject* type_CurrencyFormatter;
         PyTypeObject* type_DecimalFormatter;
         PyTypeObject* type_IncrementNumberRounder;
@@ -26,54 +24,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         PyTypeObject* type_ISignedZeroOption;
         PyTypeObject* type_ISignificantDigitsOption;
     };
-
-    static PyObject* register_CurrencyFormatterMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CurrencyFormatterMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CurrencyFormatterMode = type;
-        Py_INCREF(state->type_CurrencyFormatterMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_RoundingAlgorithm(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_RoundingAlgorithm)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_RoundingAlgorithm = type;
-        Py_INCREF(state->type_RoundingAlgorithm);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CurrencyFormatter class --------------------
     static constexpr const char* const type_name_CurrencyFormatter = "CurrencyFormatter";
@@ -5903,11 +5853,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     // ----- Windows.Globalization.NumberFormatting Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Globalization::NumberFormatting");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_CurrencyFormatterMode", register_CurrencyFormatterMode, METH_O, "registers type"},
-        {"_register_RoundingAlgorithm", register_RoundingAlgorithm, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -5918,8 +5863,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             return 0;
         }
 
-        Py_VISIT(state->type_CurrencyFormatterMode);
-        Py_VISIT(state->type_RoundingAlgorithm);
         Py_VISIT(state->type_CurrencyFormatter);
         Py_VISIT(state->type_DecimalFormatter);
         Py_VISIT(state->type_IncrementNumberRounder);
@@ -5948,8 +5891,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             return 0;
         }
 
-        Py_CLEAR(state->type_CurrencyFormatterMode);
-        Py_CLEAR(state->type_RoundingAlgorithm);
         Py_CLEAR(state->type_CurrencyFormatter);
         Py_CLEAR(state->type_DecimalFormatter);
         Py_CLEAR(state->type_IncrementNumberRounder);
@@ -5975,7 +5916,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
            "_winrt_Windows_Globalization_NumberFormatting",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -6102,52 +6043,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization_NumberFormatting(void) noexce
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatterMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CurrencyFormatterMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::CurrencyFormatterMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RoundingAlgorithm;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter>::get_python_type() noexcept {

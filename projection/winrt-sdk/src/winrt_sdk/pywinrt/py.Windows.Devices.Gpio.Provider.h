@@ -49,25 +49,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::Provider::ProviderGpioPinDriveMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
+        static constexpr const char* type_name = "ProviderGpioPinDriveMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::Provider::ProviderGpioPinEdge>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
+        static constexpr const char* type_name = "ProviderGpioPinEdge";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::Provider::ProviderGpioPinValue>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
+        static constexpr const char* type_name = "ProviderGpioPinValue";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::Provider::ProviderGpioSharingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
+        static constexpr const char* type_name = "ProviderGpioSharingMode";
     };
 
     template<>

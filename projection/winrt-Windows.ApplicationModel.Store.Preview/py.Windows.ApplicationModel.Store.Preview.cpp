@@ -8,11 +8,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 {
     struct module_state
     {
-        PyObject* type_DeliveryOptimizationDownloadMode;
-        PyObject* type_DeliveryOptimizationDownloadModeSource;
-        PyObject* type_StoreLogOptions;
-        PyObject* type_StorePreviewProductPurchaseStatus;
-        PyObject* type_StoreSystemFeature;
         PyTypeObject* type_DeliveryOptimizationSettings;
         PyTypeObject* type_StoreConfiguration;
         PyTypeObject* type_StoreHardwareManufacturerInfo;
@@ -22,126 +17,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         PyTypeObject* type_StorePreviewSkuInfo;
         PyTypeObject* type_WebAuthenticationCoreManagerHelper;
     };
-
-    static PyObject* register_DeliveryOptimizationDownloadMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DeliveryOptimizationDownloadMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DeliveryOptimizationDownloadMode = type;
-        Py_INCREF(state->type_DeliveryOptimizationDownloadMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DeliveryOptimizationDownloadModeSource(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DeliveryOptimizationDownloadModeSource)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DeliveryOptimizationDownloadModeSource = type;
-        Py_INCREF(state->type_DeliveryOptimizationDownloadModeSource);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_StoreLogOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_StoreLogOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_StoreLogOptions = type;
-        Py_INCREF(state->type_StoreLogOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_StorePreviewProductPurchaseStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_StorePreviewProductPurchaseStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_StorePreviewProductPurchaseStatus = type;
-        Py_INCREF(state->type_StorePreviewProductPurchaseStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_StoreSystemFeature(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_StoreSystemFeature)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_StoreSystemFeature = type;
-        Py_INCREF(state->type_StoreSystemFeature);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- DeliveryOptimizationSettings class --------------------
     static constexpr const char* const type_name_DeliveryOptimizationSettings = "DeliveryOptimizationSettings";
@@ -2078,14 +1953,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     // ----- Windows.ApplicationModel.Store.Preview Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Store::Preview");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_DeliveryOptimizationDownloadMode", register_DeliveryOptimizationDownloadMode, METH_O, "registers type"},
-        {"_register_DeliveryOptimizationDownloadModeSource", register_DeliveryOptimizationDownloadModeSource, METH_O, "registers type"},
-        {"_register_StoreLogOptions", register_StoreLogOptions, METH_O, "registers type"},
-        {"_register_StorePreviewProductPurchaseStatus", register_StorePreviewProductPurchaseStatus, METH_O, "registers type"},
-        {"_register_StoreSystemFeature", register_StoreSystemFeature, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2096,11 +1963,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             return 0;
         }
 
-        Py_VISIT(state->type_DeliveryOptimizationDownloadMode);
-        Py_VISIT(state->type_DeliveryOptimizationDownloadModeSource);
-        Py_VISIT(state->type_StoreLogOptions);
-        Py_VISIT(state->type_StorePreviewProductPurchaseStatus);
-        Py_VISIT(state->type_StoreSystemFeature);
         Py_VISIT(state->type_DeliveryOptimizationSettings);
         Py_VISIT(state->type_StoreConfiguration);
         Py_VISIT(state->type_StoreHardwareManufacturerInfo);
@@ -2122,11 +1984,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             return 0;
         }
 
-        Py_CLEAR(state->type_DeliveryOptimizationDownloadMode);
-        Py_CLEAR(state->type_DeliveryOptimizationDownloadModeSource);
-        Py_CLEAR(state->type_StoreLogOptions);
-        Py_CLEAR(state->type_StorePreviewProductPurchaseStatus);
-        Py_CLEAR(state->type_StoreSystemFeature);
         Py_CLEAR(state->type_DeliveryOptimizationSettings);
         Py_CLEAR(state->type_StoreConfiguration);
         Py_CLEAR(state->type_StoreHardwareManufacturerInfo);
@@ -2145,7 +2002,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
            "_winrt_Windows_ApplicationModel_Store_Preview",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2236,121 +2093,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_Preview(void) noexce
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeliveryOptimizationDownloadMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadModeSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeliveryOptimizationDownloadModeSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadModeSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreLogOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StoreLogOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::StoreLogOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductPurchaseStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorePreviewProductPurchaseStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductPurchaseStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StoreSystemFeature;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::StoreSystemFeature is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>::get_python_type() noexcept {

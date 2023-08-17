@@ -53,11 +53,6 @@ class SceneWrappingMode(enum.IntEnum):
     MIRRORED_REPEAT = 1
     REPEAT = 2
 
-_ns_module._register_SceneAlphaMode(SceneAlphaMode)
-_ns_module._register_SceneAttributeSemantic(SceneAttributeSemantic)
-_ns_module._register_SceneComponentType(SceneComponentType)
-_ns_module._register_SceneWrappingMode(SceneWrappingMode)
-
 SceneBoundingBox = _ns_module.SceneBoundingBox
 SceneComponent = _ns_module.SceneComponent
 SceneComponentCollection = _ns_module.SceneComponentCollection

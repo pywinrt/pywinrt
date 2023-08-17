@@ -9,6 +9,5 @@ try:
 except ImportError:
     pass
 
-
 ScreenReaderPositionChangedEventArgs = _ns_module.ScreenReaderPositionChangedEventArgs
 ScreenReaderService = _ns_module.ScreenReaderService

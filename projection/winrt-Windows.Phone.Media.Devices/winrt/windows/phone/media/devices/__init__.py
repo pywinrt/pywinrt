@@ -27,7 +27,4 @@ class AvailableAudioRoutingEndpoints(enum.IntFlag):
     SPEAKERPHONE = 0x2
     BLUETOOTH = 0x4
 
-_ns_module._register_AudioRoutingEndpoint(AudioRoutingEndpoint)
-_ns_module._register_AvailableAudioRoutingEndpoints(AvailableAudioRoutingEndpoints)
-
 AudioRoutingManager = _ns_module.AudioRoutingManager

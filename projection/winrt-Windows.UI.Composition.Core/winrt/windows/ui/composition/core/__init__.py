@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 CompositorController = _ns_module.CompositorController

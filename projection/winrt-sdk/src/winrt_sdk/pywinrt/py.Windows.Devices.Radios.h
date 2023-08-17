@@ -43,19 +43,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Radios::RadioAccessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.radios";
+        static constexpr const char* type_name = "RadioAccessStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Radios::RadioKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.radios";
+        static constexpr const char* type_name = "RadioKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Radios::RadioState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.radios";
+        static constexpr const char* type_name = "RadioState";
     };
 
     template<>

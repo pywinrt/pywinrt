@@ -71,31 +71,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletActionKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletActionKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletBarcodeSymbology";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletDetailViewPosition>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletDetailViewPosition";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletItemKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletItemKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletSummaryViewPosition";
     };
 
     template<>

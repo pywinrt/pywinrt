@@ -14,7 +14,6 @@ try:
 except ImportError:
     pass
 
-
 CustomSensor = _ns_module.CustomSensor
 CustomSensorReading = _ns_module.CustomSensorReading
 CustomSensorReadingChangedEventArgs = _ns_module.CustomSensorReadingChangedEventArgs

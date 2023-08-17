@@ -151,25 +151,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResultStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ClipboardHistoryItemsResultStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataPackageOperation";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::SetHistoryItemAsContentStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "SetHistoryItemAsContentStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareUITheme>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ShareUITheme";
     };
 
     template<>

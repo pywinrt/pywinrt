@@ -4,5 +4,4 @@ import winrt.system
 
 _ns_module = winrt.system._import_ns_module("Windows.Phone.System.Profile")
 
-
 RetailMode = _ns_module.RetailMode

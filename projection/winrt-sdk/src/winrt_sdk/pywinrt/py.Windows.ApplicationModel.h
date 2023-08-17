@@ -135,61 +135,71 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AddResourcePackageOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "AddResourcePackageOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppExecutionContext>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "AppExecutionContext";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppInstallerPolicySource>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "AppInstallerPolicySource";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::FullTrustLaunchResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "FullTrustLaunchResult";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::LimitedAccessFeatureStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "LimitedAccessFeatureStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageContentGroupState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageContentGroupState";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageRelationship>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageRelationship";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageSignatureKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageSignatureKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageUpdateAvailability>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageUpdateAvailability";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::StartupTaskState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "StartupTaskState";
     };
 
     template<>

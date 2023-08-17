@@ -151,73 +151,85 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ControlChannelTriggerResetReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "ControlChannelTriggerResetReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ControlChannelTriggerResourceType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "ControlChannelTriggerResourceType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ControlChannelTriggerStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "ControlChannelTriggerStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::MessageWebSocketReceiveMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "MessageWebSocketReceiveMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketActivityConnectedStandbyAction>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketActivityConnectedStandbyAction";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketActivityKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketActivityKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketActivityTriggerReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketActivityTriggerReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketErrorStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketErrorStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketMessageType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketMessageType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketProtectionLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketProtectionLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketQualityOfService>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketQualityOfService";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketSslErrorSeverity>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketSslErrorSeverity";
     };
 
     template<>

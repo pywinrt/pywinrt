@@ -8,10 +8,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 {
     struct module_state
     {
-        PyObject* type_SocialFeedItemStyle;
-        PyObject* type_SocialFeedKind;
-        PyObject* type_SocialFeedUpdateMode;
-        PyObject* type_SocialItemBadgeStyle;
         PyTypeObject* type_SocialFeedChildItem;
         PyTypeObject* type_SocialFeedContent;
         PyTypeObject* type_SocialFeedItem;
@@ -19,102 +15,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         PyTypeObject* type_SocialItemThumbnail;
         PyTypeObject* type_SocialUserInfo;
     };
-
-    static PyObject* register_SocialFeedItemStyle(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SocialFeedItemStyle)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SocialFeedItemStyle = type;
-        Py_INCREF(state->type_SocialFeedItemStyle);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SocialFeedKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SocialFeedKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SocialFeedKind = type;
-        Py_INCREF(state->type_SocialFeedKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SocialFeedUpdateMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SocialFeedUpdateMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SocialFeedUpdateMode = type;
-        Py_INCREF(state->type_SocialFeedUpdateMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SocialItemBadgeStyle(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SocialItemBadgeStyle)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SocialItemBadgeStyle = type;
-        Py_INCREF(state->type_SocialItemBadgeStyle);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- SocialFeedChildItem class --------------------
     static constexpr const char* const type_name_SocialFeedChildItem = "SocialFeedChildItem";
@@ -2073,13 +1973,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     // ----- Windows.ApplicationModel.SocialInfo Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::SocialInfo");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SocialFeedItemStyle", register_SocialFeedItemStyle, METH_O, "registers type"},
-        {"_register_SocialFeedKind", register_SocialFeedKind, METH_O, "registers type"},
-        {"_register_SocialFeedUpdateMode", register_SocialFeedUpdateMode, METH_O, "registers type"},
-        {"_register_SocialItemBadgeStyle", register_SocialItemBadgeStyle, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2090,10 +1983,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
             return 0;
         }
 
-        Py_VISIT(state->type_SocialFeedItemStyle);
-        Py_VISIT(state->type_SocialFeedKind);
-        Py_VISIT(state->type_SocialFeedUpdateMode);
-        Py_VISIT(state->type_SocialItemBadgeStyle);
         Py_VISIT(state->type_SocialFeedChildItem);
         Py_VISIT(state->type_SocialFeedContent);
         Py_VISIT(state->type_SocialFeedItem);
@@ -2113,10 +2002,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
             return 0;
         }
 
-        Py_CLEAR(state->type_SocialFeedItemStyle);
-        Py_CLEAR(state->type_SocialFeedKind);
-        Py_CLEAR(state->type_SocialFeedUpdateMode);
-        Py_CLEAR(state->type_SocialItemBadgeStyle);
         Py_CLEAR(state->type_SocialFeedChildItem);
         Py_CLEAR(state->type_SocialFeedContent);
         Py_CLEAR(state->type_SocialFeedItem);
@@ -2133,7 +2018,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
            "_winrt_Windows_ApplicationModel_SocialInfo",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2206,98 +2091,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_SocialInfo(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItemStyle>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::SocialInfo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocialFeedItemStyle;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItemStyle is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::SocialInfo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocialFeedKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::SocialInfo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocialFeedUpdateMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialItemBadgeStyle>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::SocialInfo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocialItemBadgeStyle;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::SocialInfo::SocialItemBadgeStyle is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem>::get_python_type() noexcept {

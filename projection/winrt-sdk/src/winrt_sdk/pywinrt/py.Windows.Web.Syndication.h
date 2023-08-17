@@ -75,19 +75,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationErrorStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationErrorStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationTextType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationTextType";
     };
 
     template<>

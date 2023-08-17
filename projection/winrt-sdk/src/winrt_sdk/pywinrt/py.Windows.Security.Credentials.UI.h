@@ -49,25 +49,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::AuthenticationProtocol>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
+        static constexpr const char* type_name = "AuthenticationProtocol";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::CredentialSaveOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
+        static constexpr const char* type_name = "CredentialSaveOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::UserConsentVerificationResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
+        static constexpr const char* type_name = "UserConsentVerificationResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::UserConsentVerifierAvailability>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
+        static constexpr const char* type_name = "UserConsentVerifierAvailability";
     };
 
     template<>

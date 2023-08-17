@@ -149,19 +149,6 @@ class SocketSslErrorSeverity(enum.IntEnum):
     IGNORABLE = 1
     FATAL = 2
 
-_ns_module._register_ControlChannelTriggerResetReason(ControlChannelTriggerResetReason)
-_ns_module._register_ControlChannelTriggerResourceType(ControlChannelTriggerResourceType)
-_ns_module._register_ControlChannelTriggerStatus(ControlChannelTriggerStatus)
-_ns_module._register_MessageWebSocketReceiveMode(MessageWebSocketReceiveMode)
-_ns_module._register_SocketActivityConnectedStandbyAction(SocketActivityConnectedStandbyAction)
-_ns_module._register_SocketActivityKind(SocketActivityKind)
-_ns_module._register_SocketActivityTriggerReason(SocketActivityTriggerReason)
-_ns_module._register_SocketErrorStatus(SocketErrorStatus)
-_ns_module._register_SocketMessageType(SocketMessageType)
-_ns_module._register_SocketProtectionLevel(SocketProtectionLevel)
-_ns_module._register_SocketQualityOfService(SocketQualityOfService)
-_ns_module._register_SocketSslErrorSeverity(SocketSslErrorSeverity)
-
 BandwidthStatistics = _ns_module.BandwidthStatistics
 RoundTripTimeStatistics = _ns_module.RoundTripTimeStatistics
 ControlChannelTrigger = _ns_module.ControlChannelTrigger

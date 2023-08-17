@@ -8,110 +8,10 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 {
     struct module_state
     {
-        PyObject* type_GeofenceMonitorStatus;
-        PyObject* type_GeofenceRemovalReason;
-        PyObject* type_GeofenceState;
-        PyObject* type_MonitoredGeofenceStates;
         PyTypeObject* type_Geofence;
         PyTypeObject* type_GeofenceMonitor;
         PyTypeObject* type_GeofenceStateChangeReport;
     };
-
-    static PyObject* register_GeofenceMonitorStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GeofenceMonitorStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GeofenceMonitorStatus = type;
-        Py_INCREF(state->type_GeofenceMonitorStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GeofenceRemovalReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GeofenceRemovalReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GeofenceRemovalReason = type;
-        Py_INCREF(state->type_GeofenceRemovalReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GeofenceState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GeofenceState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GeofenceState = type;
-        Py_INCREF(state->type_GeofenceState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MonitoredGeofenceStates(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MonitoredGeofenceStates)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MonitoredGeofenceStates = type;
-        Py_INCREF(state->type_MonitoredGeofenceStates);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Geofence class --------------------
     static constexpr const char* const type_name_Geofence = "Geofence";
@@ -865,13 +765,6 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
     // ----- Windows.Devices.Geolocation.Geofencing Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Geolocation::Geofencing");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_GeofenceMonitorStatus", register_GeofenceMonitorStatus, METH_O, "registers type"},
-        {"_register_GeofenceRemovalReason", register_GeofenceRemovalReason, METH_O, "registers type"},
-        {"_register_GeofenceState", register_GeofenceState, METH_O, "registers type"},
-        {"_register_MonitoredGeofenceStates", register_MonitoredGeofenceStates, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -882,10 +775,6 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
             return 0;
         }
 
-        Py_VISIT(state->type_GeofenceMonitorStatus);
-        Py_VISIT(state->type_GeofenceRemovalReason);
-        Py_VISIT(state->type_GeofenceState);
-        Py_VISIT(state->type_MonitoredGeofenceStates);
         Py_VISIT(state->type_Geofence);
         Py_VISIT(state->type_GeofenceMonitor);
         Py_VISIT(state->type_GeofenceStateChangeReport);
@@ -902,10 +791,6 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
             return 0;
         }
 
-        Py_CLEAR(state->type_GeofenceMonitorStatus);
-        Py_CLEAR(state->type_GeofenceRemovalReason);
-        Py_CLEAR(state->type_GeofenceState);
-        Py_CLEAR(state->type_MonitoredGeofenceStates);
         Py_CLEAR(state->type_Geofence);
         Py_CLEAR(state->type_GeofenceMonitor);
         Py_CLEAR(state->type_GeofenceStateChangeReport);
@@ -919,7 +804,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
            "_winrt_Windows_Devices_Geolocation_Geofencing",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -980,98 +865,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Geolocation_Geofencing(void) noexce
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation::Geofencing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation::Geofencing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeofenceMonitorStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation::Geofencing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation::Geofencing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeofenceRemovalReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation::Geofencing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation::Geofencing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeofenceState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geofencing::GeofenceState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation::Geofencing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation::Geofencing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MonitoredGeofenceStates;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::Geofencing::Geofence>::get_python_type() noexcept {

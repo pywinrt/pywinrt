@@ -8,36 +8,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 {
     struct module_state
     {
-        PyObject* type_PreviewPageCountType;
         PyTypeObject* type_AddPagesEventArgs;
         PyTypeObject* type_GetPreviewPageEventArgs;
         PyTypeObject* type_PaginateEventArgs;
         PyTypeObject* type_PrintDocument;
     };
-
-    static PyObject* register_PreviewPageCountType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PreviewPageCountType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PreviewPageCountType = type;
-        Py_INCREF(state->type_PreviewPageCountType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AddPagesEventArgs class --------------------
     static constexpr const char* const type_name_AddPagesEventArgs = "AddPagesEventArgs";
@@ -872,10 +847,6 @@ namespace py::cpp::Windows::UI::Xaml::Printing
     // ----- Windows.UI.Xaml.Printing Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Printing");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PreviewPageCountType", register_PreviewPageCountType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -886,7 +857,6 @@ namespace py::cpp::Windows::UI::Xaml::Printing
             return 0;
         }
 
-        Py_VISIT(state->type_PreviewPageCountType);
         Py_VISIT(state->type_AddPagesEventArgs);
         Py_VISIT(state->type_GetPreviewPageEventArgs);
         Py_VISIT(state->type_PaginateEventArgs);
@@ -904,7 +874,6 @@ namespace py::cpp::Windows::UI::Xaml::Printing
             return 0;
         }
 
-        Py_CLEAR(state->type_PreviewPageCountType);
         Py_CLEAR(state->type_AddPagesEventArgs);
         Py_CLEAR(state->type_GetPreviewPageEventArgs);
         Py_CLEAR(state->type_PaginateEventArgs);
@@ -919,7 +888,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
            "_winrt_Windows_UI_Xaml_Printing",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -986,29 +955,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Printing(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Printing::PreviewPageCountType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Printing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Printing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PreviewPageCountType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Printing::PreviewPageCountType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs>::get_python_type() noexcept {

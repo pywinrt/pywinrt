@@ -114,13 +114,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameListCategory";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntryLaunchableState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameListEntryLaunchableState";
     };
 
     template<>

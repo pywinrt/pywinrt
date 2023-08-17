@@ -41,10 +41,6 @@ class CoreInputViewXYFocusTransferDirection(enum.IntEnum):
     DOWN = 2
     LEFT = 3
 
-_ns_module._register_CoreInputViewKind(CoreInputViewKind)
-_ns_module._register_CoreInputViewOcclusionKind(CoreInputViewOcclusionKind)
-_ns_module._register_CoreInputViewXYFocusTransferDirection(CoreInputViewXYFocusTransferDirection)
-
 CoreFrameworkInputView = _ns_module.CoreFrameworkInputView
 CoreFrameworkInputViewAnimationStartingEventArgs = _ns_module.CoreFrameworkInputViewAnimationStartingEventArgs
 CoreFrameworkInputViewOcclusionsChangedEventArgs = _ns_module.CoreFrameworkInputViewOcclusionsChangedEventArgs

@@ -51,12 +51,4 @@ class YearFormat(enum.IntEnum):
     ABBREVIATED = 2
     FULL = 3
 
-_ns_module._register_DayFormat(DayFormat)
-_ns_module._register_DayOfWeekFormat(DayOfWeekFormat)
-_ns_module._register_HourFormat(HourFormat)
-_ns_module._register_MinuteFormat(MinuteFormat)
-_ns_module._register_MonthFormat(MonthFormat)
-_ns_module._register_SecondFormat(SecondFormat)
-_ns_module._register_YearFormat(YearFormat)
-
 DateTimeFormatter = _ns_module.DateTimeFormatter

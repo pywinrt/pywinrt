@@ -81,11 +81,6 @@ class StatelessAppServiceResponseStatus(enum.IntEnum):
     DISABLED_BY_POLICY = 13
     WEB_SERVICE_UNAVAILABLE = 14
 
-_ns_module._register_AppServiceClosedStatus(AppServiceClosedStatus)
-_ns_module._register_AppServiceConnectionStatus(AppServiceConnectionStatus)
-_ns_module._register_AppServiceResponseStatus(AppServiceResponseStatus)
-_ns_module._register_StatelessAppServiceResponseStatus(StatelessAppServiceResponseStatus)
-
 AppServiceCatalog = _ns_module.AppServiceCatalog
 AppServiceClosedEventArgs = _ns_module.AppServiceClosedEventArgs
 AppServiceConnection = _ns_module.AppServiceConnection

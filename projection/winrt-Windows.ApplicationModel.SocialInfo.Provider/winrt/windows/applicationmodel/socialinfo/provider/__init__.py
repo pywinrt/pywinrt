@@ -19,7 +19,6 @@ try:
 except ImportError:
     pass
 
-
 SocialDashboardItemUpdater = _ns_module.SocialDashboardItemUpdater
 SocialFeedUpdater = _ns_module.SocialFeedUpdater
 SocialInfoProviderManager = _ns_module.SocialInfoProviderManager

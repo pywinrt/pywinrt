@@ -8,8 +8,6 @@ namespace py::cpp::Windows::Web::UI
 {
     struct module_state
     {
-        PyObject* type_WebViewControlPermissionState;
-        PyObject* type_WebViewControlPermissionType;
         PyTypeObject* type_WebViewControlContentLoadingEventArgs;
         PyTypeObject* type_WebViewControlDOMContentLoadedEventArgs;
         PyTypeObject* type_WebViewControlDeferredPermissionRequest;
@@ -27,54 +25,6 @@ namespace py::cpp::Windows::Web::UI
         PyTypeObject* type_IWebViewControl;
         PyTypeObject* type_IWebViewControl2;
     };
-
-    static PyObject* register_WebViewControlPermissionState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebViewControlPermissionState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebViewControlPermissionState = type;
-        Py_INCREF(state->type_WebViewControlPermissionState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WebViewControlPermissionType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebViewControlPermissionType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebViewControlPermissionType = type;
-        Py_INCREF(state->type_WebViewControlPermissionType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- WebViewControlContentLoadingEventArgs class --------------------
     static constexpr const char* const type_name_WebViewControlContentLoadingEventArgs = "WebViewControlContentLoadingEventArgs";
@@ -3845,11 +3795,6 @@ namespace py::cpp::Windows::Web::UI
     // ----- Windows.Web.UI Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Web::UI");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_WebViewControlPermissionState", register_WebViewControlPermissionState, METH_O, "registers type"},
-        {"_register_WebViewControlPermissionType", register_WebViewControlPermissionType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3860,8 +3805,6 @@ namespace py::cpp::Windows::Web::UI
             return 0;
         }
 
-        Py_VISIT(state->type_WebViewControlPermissionState);
-        Py_VISIT(state->type_WebViewControlPermissionType);
         Py_VISIT(state->type_WebViewControlContentLoadingEventArgs);
         Py_VISIT(state->type_WebViewControlDOMContentLoadedEventArgs);
         Py_VISIT(state->type_WebViewControlDeferredPermissionRequest);
@@ -3891,8 +3834,6 @@ namespace py::cpp::Windows::Web::UI
             return 0;
         }
 
-        Py_CLEAR(state->type_WebViewControlPermissionState);
-        Py_CLEAR(state->type_WebViewControlPermissionType);
         Py_CLEAR(state->type_WebViewControlContentLoadingEventArgs);
         Py_CLEAR(state->type_WebViewControlDOMContentLoadedEventArgs);
         Py_CLEAR(state->type_WebViewControlDeferredPermissionRequest);
@@ -3919,7 +3860,7 @@ namespace py::cpp::Windows::Web::UI
            "_winrt_Windows_Web_UI",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4052,52 +3993,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_UI(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Web::UI::WebViewControlPermissionState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlPermissionState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlPermissionState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::UI::WebViewControlPermissionType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlPermissionType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlPermissionType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>::get_python_type() noexcept {

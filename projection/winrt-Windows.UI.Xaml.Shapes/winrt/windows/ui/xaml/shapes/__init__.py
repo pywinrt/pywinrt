@@ -19,7 +19,6 @@ try:
 except ImportError:
     pass
 
-
 Ellipse = _ns_module.Ellipse
 Line = _ns_module.Line
 Path = _ns_module.Path

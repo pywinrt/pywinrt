@@ -8,84 +8,9 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 {
     struct module_state
     {
-        PyObject* type_ExtendedExecutionForegroundReason;
-        PyObject* type_ExtendedExecutionForegroundResult;
-        PyObject* type_ExtendedExecutionForegroundRevokedReason;
         PyTypeObject* type_ExtendedExecutionForegroundRevokedEventArgs;
         PyTypeObject* type_ExtendedExecutionForegroundSession;
     };
-
-    static PyObject* register_ExtendedExecutionForegroundReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ExtendedExecutionForegroundReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ExtendedExecutionForegroundReason = type;
-        Py_INCREF(state->type_ExtendedExecutionForegroundReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ExtendedExecutionForegroundResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ExtendedExecutionForegroundResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ExtendedExecutionForegroundResult = type;
-        Py_INCREF(state->type_ExtendedExecutionForegroundResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ExtendedExecutionForegroundRevokedReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ExtendedExecutionForegroundRevokedReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ExtendedExecutionForegroundRevokedReason = type;
-        Py_INCREF(state->type_ExtendedExecutionForegroundRevokedReason);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ExtendedExecutionForegroundRevokedEventArgs class --------------------
     static constexpr const char* const type_name_ExtendedExecutionForegroundRevokedEventArgs = "ExtendedExecutionForegroundRevokedEventArgs";
@@ -507,12 +432,6 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
     // ----- Windows.ApplicationModel.ExtendedExecution.Foreground Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::ExtendedExecution::Foreground");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ExtendedExecutionForegroundReason", register_ExtendedExecutionForegroundReason, METH_O, "registers type"},
-        {"_register_ExtendedExecutionForegroundResult", register_ExtendedExecutionForegroundResult, METH_O, "registers type"},
-        {"_register_ExtendedExecutionForegroundRevokedReason", register_ExtendedExecutionForegroundRevokedReason, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -523,9 +442,6 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
             return 0;
         }
 
-        Py_VISIT(state->type_ExtendedExecutionForegroundReason);
-        Py_VISIT(state->type_ExtendedExecutionForegroundResult);
-        Py_VISIT(state->type_ExtendedExecutionForegroundRevokedReason);
         Py_VISIT(state->type_ExtendedExecutionForegroundRevokedEventArgs);
         Py_VISIT(state->type_ExtendedExecutionForegroundSession);
 
@@ -541,9 +457,6 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
             return 0;
         }
 
-        Py_CLEAR(state->type_ExtendedExecutionForegroundReason);
-        Py_CLEAR(state->type_ExtendedExecutionForegroundResult);
-        Py_CLEAR(state->type_ExtendedExecutionForegroundRevokedReason);
         Py_CLEAR(state->type_ExtendedExecutionForegroundRevokedEventArgs);
         Py_CLEAR(state->type_ExtendedExecutionForegroundSession);
 
@@ -556,7 +469,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
            "_winrt_Windows_ApplicationModel_ExtendedExecution_Foreground",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -605,75 +518,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_ExtendedExecution_Foregrou
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ExtendedExecution::Foreground");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExtendedExecutionForegroundReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ExtendedExecution::Foreground");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExtendedExecutionForegroundResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ExtendedExecution::Foreground");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExtendedExecutionForegroundRevokedReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>::get_python_type() noexcept {

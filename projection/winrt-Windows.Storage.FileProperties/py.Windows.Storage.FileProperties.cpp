@@ -8,12 +8,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 {
     struct module_state
     {
-        PyObject* type_PhotoOrientation;
-        PyObject* type_PropertyPrefetchOptions;
-        PyObject* type_ThumbnailMode;
-        PyObject* type_ThumbnailOptions;
-        PyObject* type_ThumbnailType;
-        PyObject* type_VideoOrientation;
         PyTypeObject* type_BasicProperties;
         PyTypeObject* type_DocumentProperties;
         PyTypeObject* type_GeotagHelper;
@@ -24,150 +18,6 @@ namespace py::cpp::Windows::Storage::FileProperties
         PyTypeObject* type_VideoProperties;
         PyTypeObject* type_IStorageItemExtraProperties;
     };
-
-    static PyObject* register_PhotoOrientation(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PhotoOrientation)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PhotoOrientation = type;
-        Py_INCREF(state->type_PhotoOrientation);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PropertyPrefetchOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PropertyPrefetchOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PropertyPrefetchOptions = type;
-        Py_INCREF(state->type_PropertyPrefetchOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ThumbnailMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ThumbnailMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ThumbnailMode = type;
-        Py_INCREF(state->type_ThumbnailMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ThumbnailOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ThumbnailOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ThumbnailOptions = type;
-        Py_INCREF(state->type_ThumbnailOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ThumbnailType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ThumbnailType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ThumbnailType = type;
-        Py_INCREF(state->type_ThumbnailType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_VideoOrientation(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_VideoOrientation)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_VideoOrientation = type;
-        Py_INCREF(state->type_VideoOrientation);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- BasicProperties class --------------------
     static constexpr const char* const type_name_BasicProperties = "BasicProperties";
@@ -3690,15 +3540,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     // ----- Windows.Storage.FileProperties Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Storage::FileProperties");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PhotoOrientation", register_PhotoOrientation, METH_O, "registers type"},
-        {"_register_PropertyPrefetchOptions", register_PropertyPrefetchOptions, METH_O, "registers type"},
-        {"_register_ThumbnailMode", register_ThumbnailMode, METH_O, "registers type"},
-        {"_register_ThumbnailOptions", register_ThumbnailOptions, METH_O, "registers type"},
-        {"_register_ThumbnailType", register_ThumbnailType, METH_O, "registers type"},
-        {"_register_VideoOrientation", register_VideoOrientation, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3709,12 +3550,6 @@ namespace py::cpp::Windows::Storage::FileProperties
             return 0;
         }
 
-        Py_VISIT(state->type_PhotoOrientation);
-        Py_VISIT(state->type_PropertyPrefetchOptions);
-        Py_VISIT(state->type_ThumbnailMode);
-        Py_VISIT(state->type_ThumbnailOptions);
-        Py_VISIT(state->type_ThumbnailType);
-        Py_VISIT(state->type_VideoOrientation);
         Py_VISIT(state->type_BasicProperties);
         Py_VISIT(state->type_DocumentProperties);
         Py_VISIT(state->type_GeotagHelper);
@@ -3737,12 +3572,6 @@ namespace py::cpp::Windows::Storage::FileProperties
             return 0;
         }
 
-        Py_CLEAR(state->type_PhotoOrientation);
-        Py_CLEAR(state->type_PropertyPrefetchOptions);
-        Py_CLEAR(state->type_ThumbnailMode);
-        Py_CLEAR(state->type_ThumbnailOptions);
-        Py_CLEAR(state->type_ThumbnailType);
-        Py_CLEAR(state->type_VideoOrientation);
         Py_CLEAR(state->type_BasicProperties);
         Py_CLEAR(state->type_DocumentProperties);
         Py_CLEAR(state->type_GeotagHelper);
@@ -3762,7 +3591,7 @@ namespace py::cpp::Windows::Storage::FileProperties
            "_winrt_Windows_Storage_FileProperties",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3853,144 +3682,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_FileProperties(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::FileProperties::PhotoOrientation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoOrientation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::PhotoOrientation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::FileProperties::PropertyPrefetchOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PropertyPrefetchOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::PropertyPrefetchOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::FileProperties::ThumbnailMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ThumbnailMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::ThumbnailMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::FileProperties::ThumbnailOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ThumbnailOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::ThumbnailOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::FileProperties::ThumbnailType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ThumbnailType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::ThumbnailType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::FileProperties::VideoOrientation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoOrientation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::VideoOrientation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Storage::FileProperties::BasicProperties>::get_python_type() noexcept {

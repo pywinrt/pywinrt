@@ -34,8 +34,6 @@ class GlobalSystemMediaTransportControlsSessionPlaybackStatus(enum.IntEnum):
     PLAYING = 4
     PAUSED = 5
 
-_ns_module._register_GlobalSystemMediaTransportControlsSessionPlaybackStatus(GlobalSystemMediaTransportControlsSessionPlaybackStatus)
-
 CurrentSessionChangedEventArgs = _ns_module.CurrentSessionChangedEventArgs
 GlobalSystemMediaTransportControlsSession = _ns_module.GlobalSystemMediaTransportControlsSession
 GlobalSystemMediaTransportControlsSessionManager = _ns_module.GlobalSystemMediaTransportControlsSessionManager

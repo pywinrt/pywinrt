@@ -72,25 +72,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScannerAutoCroppingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerColorMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScannerColorMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScannerFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerScanSource>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScannerScanSource";
     };
 
     template<>

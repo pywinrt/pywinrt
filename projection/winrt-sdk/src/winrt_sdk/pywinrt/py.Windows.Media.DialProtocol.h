@@ -68,25 +68,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialAppLaunchResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialAppLaunchResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialAppState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialAppState";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialAppStopResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialAppStopResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialDeviceDisplayStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialDeviceDisplayStatus";
     };
 
     template<>

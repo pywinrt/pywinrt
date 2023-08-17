@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 {
     struct module_state
     {
-        PyObject* type_GameSaveErrorStatus;
         PyTypeObject* type_GameSaveBlobGetResult;
         PyTypeObject* type_GameSaveBlobInfo;
         PyTypeObject* type_GameSaveBlobInfoGetResult;
@@ -21,30 +20,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         PyTypeObject* type_GameSaveProvider;
         PyTypeObject* type_GameSaveProviderGetResult;
     };
-
-    static PyObject* register_GameSaveErrorStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GameSaveErrorStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GameSaveErrorStatus = type;
-        Py_INCREF(state->type_GameSaveErrorStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- GameSaveBlobGetResult class --------------------
     static constexpr const char* const type_name_GameSaveBlobGetResult = "GameSaveBlobGetResult";
@@ -1810,10 +1785,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     // ----- Windows.Gaming.XboxLive.Storage Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Gaming::XboxLive::Storage");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_GameSaveErrorStatus", register_GameSaveErrorStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1824,7 +1795,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
             return 0;
         }
 
-        Py_VISIT(state->type_GameSaveErrorStatus);
         Py_VISIT(state->type_GameSaveBlobGetResult);
         Py_VISIT(state->type_GameSaveBlobInfo);
         Py_VISIT(state->type_GameSaveBlobInfoGetResult);
@@ -1849,7 +1819,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
             return 0;
         }
 
-        Py_CLEAR(state->type_GameSaveErrorStatus);
         Py_CLEAR(state->type_GameSaveBlobGetResult);
         Py_CLEAR(state->type_GameSaveBlobInfo);
         Py_CLEAR(state->type_GameSaveBlobInfoGetResult);
@@ -1871,7 +1840,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
            "_winrt_Windows_Gaming_XboxLive_Storage",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1974,29 +1943,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_XboxLive_Storage(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveErrorStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveErrorStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveErrorStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult>::get_python_type() noexcept {

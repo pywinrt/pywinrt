@@ -41,8 +41,6 @@ class HttpDiagnosticRequestInitiator(enum.IntEnum):
     FETCH = 11
     BEACON = 12
 
-_ns_module._register_HttpDiagnosticRequestInitiator(HttpDiagnosticRequestInitiator)
-
 HttpDiagnosticProvider = _ns_module.HttpDiagnosticProvider
 HttpDiagnosticProviderRequestResponseCompletedEventArgs = _ns_module.HttpDiagnosticProviderRequestResponseCompletedEventArgs
 HttpDiagnosticProviderRequestResponseTimestamps = _ns_module.HttpDiagnosticProviderRequestResponseTimestamps

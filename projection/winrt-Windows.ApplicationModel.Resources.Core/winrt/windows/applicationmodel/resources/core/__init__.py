@@ -40,9 +40,6 @@ class ResourceQualifierPersistence(enum.IntEnum):
     NONE = 0
     LOCAL_MACHINE = 1
 
-_ns_module._register_ResourceCandidateKind(ResourceCandidateKind)
-_ns_module._register_ResourceQualifierPersistence(ResourceQualifierPersistence)
-
 ResourceLayoutInfo = _ns_module.ResourceLayoutInfo
 NamedResource = _ns_module.NamedResource
 ResourceCandidate = _ns_module.ResourceCandidate

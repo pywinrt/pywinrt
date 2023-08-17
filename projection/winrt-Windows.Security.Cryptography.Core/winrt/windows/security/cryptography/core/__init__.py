@@ -50,11 +50,6 @@ class CryptographicPublicKeyBlobType(enum.IntEnum):
     CAPI1_PUBLIC_KEY = 3
     B_CRYPT_ECC_FULL_PUBLIC_KEY = 4
 
-_ns_module._register_Capi1KdfTargetAlgorithm(Capi1KdfTargetAlgorithm)
-_ns_module._register_CryptographicPadding(CryptographicPadding)
-_ns_module._register_CryptographicPrivateKeyBlobType(CryptographicPrivateKeyBlobType)
-_ns_module._register_CryptographicPublicKeyBlobType(CryptographicPublicKeyBlobType)
-
 AsymmetricAlgorithmNames = _ns_module.AsymmetricAlgorithmNames
 AsymmetricKeyAlgorithmProvider = _ns_module.AsymmetricKeyAlgorithmProvider
 CryptographicEngine = _ns_module.CryptographicEngine

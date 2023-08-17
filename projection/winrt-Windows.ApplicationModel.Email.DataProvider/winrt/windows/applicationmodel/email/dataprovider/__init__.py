@@ -24,7 +24,6 @@ try:
 except ImportError:
     pass
 
-
 EmailDataProviderConnection = _ns_module.EmailDataProviderConnection
 EmailDataProviderTriggerDetails = _ns_module.EmailDataProviderTriggerDetails
 EmailMailboxCreateFolderRequest = _ns_module.EmailMailboxCreateFolderRequest

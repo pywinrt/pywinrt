@@ -162,8 +162,6 @@ class PrintContent(enum.IntEnum):
     CUSTOM_PAGE_RANGE = 2
     CURRENT_SELECTION = 3
 
-_ns_module._register_PrintContent(PrintContent)
-
 ActivatedDeferral = _ns_module.ActivatedDeferral
 ActivatedOperation = _ns_module.ActivatedOperation
 BackgroundActivatedEventArgs = _ns_module.BackgroundActivatedEventArgs

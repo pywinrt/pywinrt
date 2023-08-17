@@ -80,13 +80,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlPermissionState";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlPermissionType";
     };
 
     template<>

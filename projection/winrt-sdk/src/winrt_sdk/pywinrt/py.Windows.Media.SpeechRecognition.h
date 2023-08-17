@@ -87,49 +87,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
+        static constexpr const char* type_name = "SpeechContinuousRecognitionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionAudioProblem>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
+        static constexpr const char* type_name = "SpeechRecognitionAudioProblem";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConfidence>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
+        static constexpr const char* type_name = "SpeechRecognitionConfidence";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
+        static constexpr const char* type_name = "SpeechRecognitionConstraintProbability";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
+        static constexpr const char* type_name = "SpeechRecognitionConstraintType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
+        static constexpr const char* type_name = "SpeechRecognitionResultStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionScenario>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
+        static constexpr const char* type_name = "SpeechRecognitionScenario";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
+        static constexpr const char* type_name = "SpeechRecognizerState";
     };
 
     template<>

@@ -99,17 +99,6 @@ class StartupTaskState(enum.IntEnum):
     DISABLED_BY_POLICY = 3
     ENABLED_BY_POLICY = 4
 
-_ns_module._register_AddResourcePackageOptions(AddResourcePackageOptions)
-_ns_module._register_AppExecutionContext(AppExecutionContext)
-_ns_module._register_AppInstallerPolicySource(AppInstallerPolicySource)
-_ns_module._register_FullTrustLaunchResult(FullTrustLaunchResult)
-_ns_module._register_LimitedAccessFeatureStatus(LimitedAccessFeatureStatus)
-_ns_module._register_PackageContentGroupState(PackageContentGroupState)
-_ns_module._register_PackageRelationship(PackageRelationship)
-_ns_module._register_PackageSignatureKind(PackageSignatureKind)
-_ns_module._register_PackageUpdateAvailability(PackageUpdateAvailability)
-_ns_module._register_StartupTaskState(StartupTaskState)
-
 PackageInstallProgress = _ns_module.PackageInstallProgress
 PackageVersion = _ns_module.PackageVersion
 AppDisplayInfo = _ns_module.AppDisplayInfo

@@ -174,9 +174,6 @@ namespace py::cpp::Windows::System::Display
     // ----- Windows.System.Display Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::System::Display");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -212,7 +209,7 @@ namespace py::cpp::Windows::System::Display
            "_winrt_Windows_System_Display",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

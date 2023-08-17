@@ -366,9 +366,6 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
     // ----- Windows.Perception.Spatial.Preview Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Perception::Spatial::Preview");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -406,7 +403,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
            "_winrt_Windows_Perception_Spatial_Preview",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

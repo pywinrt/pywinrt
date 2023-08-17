@@ -25,8 +25,6 @@ class LicenseRefreshOption(enum.IntEnum):
     RUNNING_LICENSES = 0
     ALL_LICENSES = 1
 
-_ns_module._register_LicenseRefreshOption(LicenseRefreshOption)
-
 LicenseManager = _ns_module.LicenseManager
 LicenseSatisfactionInfo = _ns_module.LicenseSatisfactionInfo
 LicenseSatisfactionResult = _ns_module.LicenseSatisfactionResult

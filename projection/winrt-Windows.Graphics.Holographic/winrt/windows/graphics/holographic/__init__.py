@@ -72,13 +72,6 @@ class HolographicViewConfigurationKind(enum.IntEnum):
     DISPLAY = 0
     PHOTO_VIDEO_CAMERA = 1
 
-_ns_module._register_HolographicDepthReprojectionMethod(HolographicDepthReprojectionMethod)
-_ns_module._register_HolographicFramePresentResult(HolographicFramePresentResult)
-_ns_module._register_HolographicFramePresentWaitBehavior(HolographicFramePresentWaitBehavior)
-_ns_module._register_HolographicReprojectionMode(HolographicReprojectionMode)
-_ns_module._register_HolographicSpaceUserPresence(HolographicSpaceUserPresence)
-_ns_module._register_HolographicViewConfigurationKind(HolographicViewConfigurationKind)
-
 HolographicAdapterId = _ns_module.HolographicAdapterId
 HolographicFrameId = _ns_module.HolographicFrameId
 HolographicStereoTransform = _ns_module.HolographicStereoTransform

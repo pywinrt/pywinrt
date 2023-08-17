@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 InputActivationListenerPreview = _ns_module.InputActivationListenerPreview

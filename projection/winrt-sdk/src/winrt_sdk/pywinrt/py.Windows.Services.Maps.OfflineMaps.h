@@ -50,19 +50,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
+        static constexpr const char* type_name = "OfflineMapPackageQueryStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
+        static constexpr const char* type_name = "OfflineMapPackageStartDownloadStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
+        static constexpr const char* type_name = "OfflineMapPackageStatus";
     };
 
     template<>

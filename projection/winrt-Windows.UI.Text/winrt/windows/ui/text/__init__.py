@@ -349,35 +349,6 @@ class VerticalCharacterAlignment(enum.IntEnum):
     BASELINE = 1
     BOTTOM = 2
 
-_ns_module._register_CaretType(CaretType)
-_ns_module._register_FindOptions(FindOptions)
-_ns_module._register_FontStretch(FontStretch)
-_ns_module._register_FontStyle(FontStyle)
-_ns_module._register_FormatEffect(FormatEffect)
-_ns_module._register_HorizontalCharacterAlignment(HorizontalCharacterAlignment)
-_ns_module._register_LetterCase(LetterCase)
-_ns_module._register_LineSpacingRule(LineSpacingRule)
-_ns_module._register_LinkType(LinkType)
-_ns_module._register_MarkerAlignment(MarkerAlignment)
-_ns_module._register_MarkerStyle(MarkerStyle)
-_ns_module._register_MarkerType(MarkerType)
-_ns_module._register_ParagraphAlignment(ParagraphAlignment)
-_ns_module._register_ParagraphStyle(ParagraphStyle)
-_ns_module._register_PointOptions(PointOptions)
-_ns_module._register_RangeGravity(RangeGravity)
-_ns_module._register_RichEditMathMode(RichEditMathMode)
-_ns_module._register_SelectionOptions(SelectionOptions)
-_ns_module._register_SelectionType(SelectionType)
-_ns_module._register_TabAlignment(TabAlignment)
-_ns_module._register_TabLeader(TabLeader)
-_ns_module._register_TextDecorations(TextDecorations)
-_ns_module._register_TextGetOptions(TextGetOptions)
-_ns_module._register_TextRangeUnit(TextRangeUnit)
-_ns_module._register_TextScript(TextScript)
-_ns_module._register_TextSetOptions(TextSetOptions)
-_ns_module._register_UnderlineType(UnderlineType)
-_ns_module._register_VerticalCharacterAlignment(VerticalCharacterAlignment)
-
 FontWeight = _ns_module.FontWeight
 ContentLinkInfo = _ns_module.ContentLinkInfo
 FontWeights = _ns_module.FontWeights

@@ -52,7 +52,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticRequestInitiator>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
+        static constexpr const char* type_name = "HttpDiagnosticRequestInitiator";
     };
 
     template<>

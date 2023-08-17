@@ -66,7 +66,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::Core::FrameFlashMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameFlashMode";
     };
 
     template<>

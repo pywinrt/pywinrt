@@ -26,9 +26,6 @@ class JsonValueType(enum.IntEnum):
     ARRAY = 4
     OBJECT = 5
 
-_ns_module._register_JsonErrorStatus(JsonErrorStatus)
-_ns_module._register_JsonValueType(JsonValueType)
-
 JsonArray = _ns_module.JsonArray
 winrt.system._mixin_mutable_sequence(JsonArray)
 JsonError = _ns_module.JsonError

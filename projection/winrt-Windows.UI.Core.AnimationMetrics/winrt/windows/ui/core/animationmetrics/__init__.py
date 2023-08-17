@@ -81,10 +81,6 @@ class PropertyAnimationType(enum.IntEnum):
     TRANSLATION = 1
     OPACITY = 2
 
-_ns_module._register_AnimationEffect(AnimationEffect)
-_ns_module._register_AnimationEffectTarget(AnimationEffectTarget)
-_ns_module._register_PropertyAnimationType(PropertyAnimationType)
-
 AnimationDescription = _ns_module.AnimationDescription
 OpacityAnimation = _ns_module.OpacityAnimation
 PropertyAnimation = _ns_module.PropertyAnimation

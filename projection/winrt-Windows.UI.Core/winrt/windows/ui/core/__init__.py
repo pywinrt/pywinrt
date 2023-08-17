@@ -125,19 +125,6 @@ class CoreWindowFlowDirection(enum.IntEnum):
     LEFT_TO_RIGHT = 0
     RIGHT_TO_LEFT = 1
 
-_ns_module._register_AppViewBackButtonVisibility(AppViewBackButtonVisibility)
-_ns_module._register_CoreAcceleratorKeyEventType(CoreAcceleratorKeyEventType)
-_ns_module._register_CoreCursorType(CoreCursorType)
-_ns_module._register_CoreDispatcherPriority(CoreDispatcherPriority)
-_ns_module._register_CoreIndependentInputFilters(CoreIndependentInputFilters)
-_ns_module._register_CoreInputDeviceTypes(CoreInputDeviceTypes)
-_ns_module._register_CoreProcessEventsOption(CoreProcessEventsOption)
-_ns_module._register_CoreProximityEvaluationScore(CoreProximityEvaluationScore)
-_ns_module._register_CoreVirtualKeyStates(CoreVirtualKeyStates)
-_ns_module._register_CoreWindowActivationMode(CoreWindowActivationMode)
-_ns_module._register_CoreWindowActivationState(CoreWindowActivationState)
-_ns_module._register_CoreWindowFlowDirection(CoreWindowFlowDirection)
-
 CorePhysicalKeyStatus = _ns_module.CorePhysicalKeyStatus
 CoreProximityEvaluation = _ns_module.CoreProximityEvaluation
 AcceleratorKeyEventArgs = _ns_module.AcceleratorKeyEventArgs

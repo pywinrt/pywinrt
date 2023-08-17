@@ -139,8 +139,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
             write_namespace_module_state_struct(w, members);
 
-            settings.filter.bind_each<write_py_type_registration_method>(members.enums)(
-                w);
             settings.filter.bind_each<write_inspectable_type>(members.classes)(w);
             settings.filter.bind_each<write_inspectable_type>(members.interfaces)(w);
             settings.filter.bind_each<write_struct>(members.structs)(w);
@@ -150,7 +148,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
         write_namespace_module_init_function(w, ns, members);
 
-        settings.filter.bind_each<write_get_py_type_definition>(members.enums)(w);
         settings.filter.bind_each<write_get_python_type_definition>(members.classes)(w);
         settings.filter.bind_each<write_get_python_type_definition>(members.interfaces)(
             w);
@@ -184,8 +181,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
         w.write_each<write_python_try_import_namespace>(needed_namespaces);
         settings.filter.bind_each<write_python_enum>(members.enums)(w);
-        w.write("\n");
-        settings.filter.bind_each<write_py_type_registration>(members.enums)(w);
         w.write("\n");
         settings.filter.bind_each<write_python_import_type>(members.structs)(w);
         settings.filter.bind_each<write_python_import_type>(members.classes)(w);

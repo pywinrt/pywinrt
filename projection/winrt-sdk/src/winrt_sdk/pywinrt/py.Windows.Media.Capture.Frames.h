@@ -125,37 +125,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameReaderAcquisitionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReaderStartStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameReaderStartStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameSourceGetPropertyStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameSourceKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameSourceSetPropertyStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MultiSourceMediaFrameReaderStartStatus";
     };
 
     template<>

@@ -8,61 +8,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 {
     struct module_state
     {
-        PyObject* type_ProviderSpiMode;
-        PyObject* type_ProviderSpiSharingMode;
         PyTypeObject* type_ProviderSpiConnectionSettings;
         PyTypeObject* type_ISpiControllerProvider;
         PyTypeObject* type_ISpiDeviceProvider;
         PyTypeObject* type_ISpiProvider;
     };
-
-    static PyObject* register_ProviderSpiMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProviderSpiMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProviderSpiMode = type;
-        Py_INCREF(state->type_ProviderSpiMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ProviderSpiSharingMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ProviderSpiSharingMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ProviderSpiSharingMode = type;
-        Py_INCREF(state->type_ProviderSpiSharingMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ProviderSpiConnectionSettings class --------------------
     static constexpr const char* const type_name_ProviderSpiConnectionSettings = "ProviderSpiConnectionSettings";
@@ -921,11 +871,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     // ----- Windows.Devices.Spi.Provider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Spi::Provider");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ProviderSpiMode", register_ProviderSpiMode, METH_O, "registers type"},
-        {"_register_ProviderSpiSharingMode", register_ProviderSpiSharingMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -936,8 +881,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
             return 0;
         }
 
-        Py_VISIT(state->type_ProviderSpiMode);
-        Py_VISIT(state->type_ProviderSpiSharingMode);
         Py_VISIT(state->type_ProviderSpiConnectionSettings);
         Py_VISIT(state->type_ISpiControllerProvider);
         Py_VISIT(state->type_ISpiDeviceProvider);
@@ -955,8 +898,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
             return 0;
         }
 
-        Py_CLEAR(state->type_ProviderSpiMode);
-        Py_CLEAR(state->type_ProviderSpiSharingMode);
         Py_CLEAR(state->type_ProviderSpiConnectionSettings);
         Py_CLEAR(state->type_ISpiControllerProvider);
         Py_CLEAR(state->type_ISpiDeviceProvider);
@@ -971,7 +912,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
            "_winrt_Windows_Devices_Spi_Provider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1032,52 +973,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Spi_Provider(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProviderSpiMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::Provider::ProviderSpiMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiSharingMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProviderSpiSharingMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::Provider::ProviderSpiSharingMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings>::get_python_type() noexcept {

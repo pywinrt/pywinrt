@@ -48,49 +48,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::AttributeTargets>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.metadata";
+        static constexpr const char* type_name = "AttributeTargets";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::CompositionType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.metadata";
+        static constexpr const char* type_name = "CompositionType";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::DeprecationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.metadata";
+        static constexpr const char* type_name = "DeprecationType";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::FeatureStage>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.metadata";
+        static constexpr const char* type_name = "FeatureStage";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::GCPressureAmount>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.metadata";
+        static constexpr const char* type_name = "GCPressureAmount";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::MarshalingType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.metadata";
+        static constexpr const char* type_name = "MarshalingType";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::Platform>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.metadata";
+        static constexpr const char* type_name = "Platform";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::ThreadingModel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.metadata";
+        static constexpr const char* type_name = "ThreadingModel";
     };
 
     template<>

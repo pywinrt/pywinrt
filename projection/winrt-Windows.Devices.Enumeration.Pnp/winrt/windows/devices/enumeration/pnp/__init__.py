@@ -32,8 +32,6 @@ class PnpObjectType(enum.IntEnum):
     ASSOCIATION_ENDPOINT_SERVICE = 7
     DEVICE_PANEL = 8
 
-_ns_module._register_PnpObjectType(PnpObjectType)
-
 PnpObject = _ns_module.PnpObject
 PnpObjectCollection = _ns_module.PnpObjectCollection
 winrt.system._mixin_sequence(PnpObjectCollection)

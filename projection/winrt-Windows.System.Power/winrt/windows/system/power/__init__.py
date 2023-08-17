@@ -27,10 +27,6 @@ class PowerSupplyStatus(enum.IntEnum):
     INADEQUATE = 1
     ADEQUATE = 2
 
-_ns_module._register_BatteryStatus(BatteryStatus)
-_ns_module._register_EnergySaverStatus(EnergySaverStatus)
-_ns_module._register_PowerSupplyStatus(PowerSupplyStatus)
-
 BackgroundEnergyManager = _ns_module.BackgroundEnergyManager
 ForegroundEnergyManager = _ns_module.ForegroundEnergyManager
 PowerManager = _ns_module.PowerManager

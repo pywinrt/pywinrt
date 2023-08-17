@@ -69,37 +69,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioChangePolarity>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioChangePolarity";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioOpenStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioOpenStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioPinDriveMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioPinDriveMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioPinEdge>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioPinEdge";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioPinValue>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioPinValue";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioSharingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioSharingMode";
     };
 
     template<>

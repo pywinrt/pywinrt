@@ -33,9 +33,6 @@ class RoundingAlgorithm(enum.IntEnum):
     ROUND_HALF_TO_EVEN = 9
     ROUND_HALF_TO_ODD = 10
 
-_ns_module._register_CurrencyFormatterMode(CurrencyFormatterMode)
-_ns_module._register_RoundingAlgorithm(RoundingAlgorithm)
-
 CurrencyFormatter = _ns_module.CurrencyFormatter
 DecimalFormatter = _ns_module.DecimalFormatter
 IncrementNumberRounder = _ns_module.IncrementNumberRounder

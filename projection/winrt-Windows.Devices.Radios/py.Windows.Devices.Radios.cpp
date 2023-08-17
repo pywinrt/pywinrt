@@ -8,83 +8,8 @@ namespace py::cpp::Windows::Devices::Radios
 {
     struct module_state
     {
-        PyObject* type_RadioAccessStatus;
-        PyObject* type_RadioKind;
-        PyObject* type_RadioState;
         PyTypeObject* type_Radio;
     };
-
-    static PyObject* register_RadioAccessStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_RadioAccessStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_RadioAccessStatus = type;
-        Py_INCREF(state->type_RadioAccessStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_RadioKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_RadioKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_RadioKind = type;
-        Py_INCREF(state->type_RadioKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_RadioState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_RadioState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_RadioState = type;
-        Py_INCREF(state->type_RadioState);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Radio class --------------------
     static constexpr const char* const type_name_Radio = "Radio";
@@ -423,12 +348,6 @@ namespace py::cpp::Windows::Devices::Radios
     // ----- Windows.Devices.Radios Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Radios");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_RadioAccessStatus", register_RadioAccessStatus, METH_O, "registers type"},
-        {"_register_RadioKind", register_RadioKind, METH_O, "registers type"},
-        {"_register_RadioState", register_RadioState, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -439,9 +358,6 @@ namespace py::cpp::Windows::Devices::Radios
             return 0;
         }
 
-        Py_VISIT(state->type_RadioAccessStatus);
-        Py_VISIT(state->type_RadioKind);
-        Py_VISIT(state->type_RadioState);
         Py_VISIT(state->type_Radio);
 
         return 0;
@@ -456,9 +372,6 @@ namespace py::cpp::Windows::Devices::Radios
             return 0;
         }
 
-        Py_CLEAR(state->type_RadioAccessStatus);
-        Py_CLEAR(state->type_RadioKind);
-        Py_CLEAR(state->type_RadioState);
         Py_CLEAR(state->type_Radio);
 
         return 0;
@@ -470,7 +383,7 @@ namespace py::cpp::Windows::Devices::Radios
            "_winrt_Windows_Devices_Radios",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -513,75 +426,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Radios(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Radios::RadioAccessStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Radios;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Radios");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadioAccessStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Radios::RadioAccessStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Radios::RadioKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Radios;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Radios");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadioKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Radios::RadioKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Radios::RadioState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Radios;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Radios");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadioState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Radios::RadioState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Radios::Radio>::get_python_type() noexcept {

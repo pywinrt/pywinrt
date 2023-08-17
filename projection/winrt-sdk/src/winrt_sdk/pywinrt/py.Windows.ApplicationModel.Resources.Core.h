@@ -72,13 +72,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceCandidateKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceQualifierPersistence";
     };
 
     template<>

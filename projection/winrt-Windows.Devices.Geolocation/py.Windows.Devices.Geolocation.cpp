@@ -8,14 +8,6 @@ namespace py::cpp::Windows::Devices::Geolocation
 {
     struct module_state
     {
-        PyObject* type_AltitudeReferenceSystem;
-        PyObject* type_GeolocationAccessStatus;
-        PyObject* type_GeoshapeType;
-        PyObject* type_PositionAccuracy;
-        PyObject* type_PositionSource;
-        PyObject* type_PositionStatus;
-        PyObject* type_VisitMonitoringScope;
-        PyObject* type_VisitStateChange;
         PyTypeObject* type_CivicAddress;
         PyTypeObject* type_GeoboundingBox;
         PyTypeObject* type_Geocircle;
@@ -35,198 +27,6 @@ namespace py::cpp::Windows::Devices::Geolocation
         PyTypeObject* type_IGeoshape;
         PyTypeObject* type_BasicGeoposition;
     };
-
-    static PyObject* register_AltitudeReferenceSystem(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AltitudeReferenceSystem)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AltitudeReferenceSystem = type;
-        Py_INCREF(state->type_AltitudeReferenceSystem);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GeolocationAccessStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GeolocationAccessStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GeolocationAccessStatus = type;
-        Py_INCREF(state->type_GeolocationAccessStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_GeoshapeType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_GeoshapeType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_GeoshapeType = type;
-        Py_INCREF(state->type_GeoshapeType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PositionAccuracy(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PositionAccuracy)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PositionAccuracy = type;
-        Py_INCREF(state->type_PositionAccuracy);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PositionSource(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PositionSource)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PositionSource = type;
-        Py_INCREF(state->type_PositionSource);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PositionStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PositionStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PositionStatus = type;
-        Py_INCREF(state->type_PositionStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_VisitMonitoringScope(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_VisitMonitoringScope)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_VisitMonitoringScope = type;
-        Py_INCREF(state->type_VisitMonitoringScope);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_VisitStateChange(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_VisitStateChange)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_VisitStateChange = type;
-        Py_INCREF(state->type_VisitStateChange);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CivicAddress class --------------------
     static constexpr const char* const type_name_CivicAddress = "CivicAddress";
@@ -3933,17 +3733,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     // ----- Windows.Devices.Geolocation Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Geolocation");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AltitudeReferenceSystem", register_AltitudeReferenceSystem, METH_O, "registers type"},
-        {"_register_GeolocationAccessStatus", register_GeolocationAccessStatus, METH_O, "registers type"},
-        {"_register_GeoshapeType", register_GeoshapeType, METH_O, "registers type"},
-        {"_register_PositionAccuracy", register_PositionAccuracy, METH_O, "registers type"},
-        {"_register_PositionSource", register_PositionSource, METH_O, "registers type"},
-        {"_register_PositionStatus", register_PositionStatus, METH_O, "registers type"},
-        {"_register_VisitMonitoringScope", register_VisitMonitoringScope, METH_O, "registers type"},
-        {"_register_VisitStateChange", register_VisitStateChange, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3954,14 +3743,6 @@ namespace py::cpp::Windows::Devices::Geolocation
             return 0;
         }
 
-        Py_VISIT(state->type_AltitudeReferenceSystem);
-        Py_VISIT(state->type_GeolocationAccessStatus);
-        Py_VISIT(state->type_GeoshapeType);
-        Py_VISIT(state->type_PositionAccuracy);
-        Py_VISIT(state->type_PositionSource);
-        Py_VISIT(state->type_PositionStatus);
-        Py_VISIT(state->type_VisitMonitoringScope);
-        Py_VISIT(state->type_VisitStateChange);
         Py_VISIT(state->type_CivicAddress);
         Py_VISIT(state->type_GeoboundingBox);
         Py_VISIT(state->type_Geocircle);
@@ -3993,14 +3774,6 @@ namespace py::cpp::Windows::Devices::Geolocation
             return 0;
         }
 
-        Py_CLEAR(state->type_AltitudeReferenceSystem);
-        Py_CLEAR(state->type_GeolocationAccessStatus);
-        Py_CLEAR(state->type_GeoshapeType);
-        Py_CLEAR(state->type_PositionAccuracy);
-        Py_CLEAR(state->type_PositionSource);
-        Py_CLEAR(state->type_PositionStatus);
-        Py_CLEAR(state->type_VisitMonitoringScope);
-        Py_CLEAR(state->type_VisitStateChange);
         Py_CLEAR(state->type_CivicAddress);
         Py_CLEAR(state->type_GeoboundingBox);
         Py_CLEAR(state->type_Geocircle);
@@ -4029,7 +3802,7 @@ namespace py::cpp::Windows::Devices::Geolocation
            "_winrt_Windows_Devices_Geolocation",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4180,190 +3953,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Geolocation(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AltitudeReferenceSystem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::GeolocationAccessStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeolocationAccessStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::GeolocationAccessStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::GeoshapeType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeoshapeType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::GeoshapeType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::PositionAccuracy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PositionAccuracy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::PositionAccuracy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::PositionSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PositionSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::PositionSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::PositionStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PositionStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::PositionStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::VisitMonitoringScope>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisitMonitoringScope;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::VisitMonitoringScope is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Geolocation::VisitStateChange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisitStateChange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::VisitStateChange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::CivicAddress>::get_python_type() noexcept {

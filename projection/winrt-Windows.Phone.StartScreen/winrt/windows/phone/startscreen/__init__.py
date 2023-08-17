@@ -14,6 +14,5 @@ try:
 except ImportError:
     pass
 
-
 DualSimTile = _ns_module.DualSimTile
 IToastNotificationManagerStatics3 = _ns_module.IToastNotificationManagerStatics3

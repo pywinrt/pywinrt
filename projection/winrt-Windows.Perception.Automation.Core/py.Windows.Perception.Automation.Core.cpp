@@ -81,9 +81,6 @@ namespace py::cpp::Windows::Perception::Automation::Core
     // ----- Windows.Perception.Automation.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Perception::Automation::Core");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -119,7 +116,7 @@ namespace py::cpp::Windows::Perception::Automation::Core
            "_winrt_Windows_Perception_Automation_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

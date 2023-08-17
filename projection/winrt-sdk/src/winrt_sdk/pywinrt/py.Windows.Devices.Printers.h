@@ -67,25 +67,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppAttributeErrorReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppAttributeErrorReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppAttributeValueKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppAttributeValueKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppResolutionUnit>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppResolutionUnit";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Printers::PageConfigurationSource>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "PageConfigurationSource";
     };
 
     template<>

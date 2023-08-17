@@ -84,14 +84,6 @@ class ProtectionPolicyRequestAccessBehavior(enum.IntEnum):
     DECRYPT = 0
     TREAT_OVERRIDE_POLICY_AS_BLOCK = 1
 
-_ns_module._register_DataProtectionStatus(DataProtectionStatus)
-_ns_module._register_EnforcementLevel(EnforcementLevel)
-_ns_module._register_FileProtectionStatus(FileProtectionStatus)
-_ns_module._register_ProtectedImportExportStatus(ProtectedImportExportStatus)
-_ns_module._register_ProtectionPolicyAuditAction(ProtectionPolicyAuditAction)
-_ns_module._register_ProtectionPolicyEvaluationResult(ProtectionPolicyEvaluationResult)
-_ns_module._register_ProtectionPolicyRequestAccessBehavior(ProtectionPolicyRequestAccessBehavior)
-
 BufferProtectUnprotectResult = _ns_module.BufferProtectUnprotectResult
 DataProtectionInfo = _ns_module.DataProtectionInfo
 DataProtectionManager = _ns_module.DataProtectionManager

@@ -14,7 +14,6 @@ try:
 except ImportError:
     pass
 
-
 ContactDataProviderConnection = _ns_module.ContactDataProviderConnection
 ContactDataProviderTriggerDetails = _ns_module.ContactDataProviderTriggerDetails
 ContactListCreateOrUpdateContactRequest = _ns_module.ContactListCreateOrUpdateContactRequest

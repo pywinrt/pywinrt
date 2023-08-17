@@ -75,37 +75,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::FileProperties::PhotoOrientation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "PhotoOrientation";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::FileProperties::PropertyPrefetchOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "PropertyPrefetchOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::FileProperties::ThumbnailMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "ThumbnailMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::FileProperties::ThumbnailOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "ThumbnailOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::FileProperties::ThumbnailType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "ThumbnailType";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::FileProperties::VideoOrientation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "VideoOrientation";
     };
 
     template<>

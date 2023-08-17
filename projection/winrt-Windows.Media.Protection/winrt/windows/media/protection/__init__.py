@@ -69,13 +69,6 @@ class RevocationAndRenewalReasons(enum.IntFlag):
     COMPONENT_SIGNED_WITH_TEST_CERTIFICATE = 0x1000000
     ENCRYPTION_FAILURE = 0x10000000
 
-_ns_module._register_GraphicsTrustStatus(GraphicsTrustStatus)
-_ns_module._register_HdcpProtection(HdcpProtection)
-_ns_module._register_HdcpSetProtectionResult(HdcpSetProtectionResult)
-_ns_module._register_ProtectionCapabilityResult(ProtectionCapabilityResult)
-_ns_module._register_RenewalStatus(RenewalStatus)
-_ns_module._register_RevocationAndRenewalReasons(RevocationAndRenewalReasons)
-
 ComponentLoadFailedEventArgs = _ns_module.ComponentLoadFailedEventArgs
 ComponentRenewal = _ns_module.ComponentRenewal
 HdcpSession = _ns_module.HdcpSession

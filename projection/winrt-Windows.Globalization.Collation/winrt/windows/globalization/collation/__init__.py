@@ -9,7 +9,6 @@ try:
 except ImportError:
     pass
 
-
 CharacterGrouping = _ns_module.CharacterGrouping
 CharacterGroupings = _ns_module.CharacterGroupings
 winrt.system._mixin_sequence(CharacterGroupings)

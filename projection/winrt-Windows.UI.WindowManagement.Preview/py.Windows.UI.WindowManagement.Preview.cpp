@@ -123,9 +123,6 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
     // ----- Windows.UI.WindowManagement.Preview Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::WindowManagement::Preview");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -161,7 +158,7 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
            "_winrt_Windows_UI_WindowManagement_Preview",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

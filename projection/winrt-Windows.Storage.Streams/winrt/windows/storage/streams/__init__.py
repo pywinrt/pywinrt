@@ -47,11 +47,6 @@ class UnicodeEncoding(enum.IntEnum):
     UTF16_L_E = 1
     UTF16_B_E = 2
 
-_ns_module._register_ByteOrder(ByteOrder)
-_ns_module._register_FileOpenDisposition(FileOpenDisposition)
-_ns_module._register_InputStreamOptions(InputStreamOptions)
-_ns_module._register_UnicodeEncoding(UnicodeEncoding)
-
 Buffer = _ns_module.Buffer
 DataReader = _ns_module.DataReader
 DataReaderLoadOperation = _ns_module.DataReaderLoadOperation

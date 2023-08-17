@@ -99,25 +99,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientViewType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountClientViewType";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderOperationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountProviderOperationKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountScope";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountSelectionOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountSelectionOptions";
     };
 
     template<>

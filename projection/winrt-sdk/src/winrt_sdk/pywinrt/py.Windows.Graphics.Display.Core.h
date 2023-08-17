@@ -48,19 +48,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayColorSpace>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
+        static constexpr const char* type_name = "HdmiDisplayColorSpace";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
+        static constexpr const char* type_name = "HdmiDisplayHdrOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayPixelEncoding>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
+        static constexpr const char* type_name = "HdmiDisplayPixelEncoding";
     };
 
     template<>

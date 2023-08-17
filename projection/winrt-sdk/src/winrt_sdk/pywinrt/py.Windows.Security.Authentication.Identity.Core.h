@@ -50,25 +50,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.core";
+        static constexpr const char* type_name = "MicrosoftAccountMultiFactorAuthenticationType";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.core";
+        static constexpr const char* type_name = "MicrosoftAccountMultiFactorServiceResponse";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionApprovalStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.core";
+        static constexpr const char* type_name = "MicrosoftAccountMultiFactorSessionApprovalStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.core";
+        static constexpr const char* type_name = "MicrosoftAccountMultiFactorSessionAuthenticationStatus";
     };
 
     template<>

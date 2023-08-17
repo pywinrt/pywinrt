@@ -26,6 +26,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop";
+        static constexpr const char* type_name = "DragDropModifiers";
     };
 }

@@ -24,9 +24,5 @@ class ExtendedExecutionRevokedReason(enum.IntEnum):
     RESUMED = 0
     SYSTEM_POLICY = 1
 
-_ns_module._register_ExtendedExecutionReason(ExtendedExecutionReason)
-_ns_module._register_ExtendedExecutionResult(ExtendedExecutionResult)
-_ns_module._register_ExtendedExecutionRevokedReason(ExtendedExecutionRevokedReason)
-
 ExtendedExecutionRevokedEventArgs = _ns_module.ExtendedExecutionRevokedEventArgs
 ExtendedExecutionSession = _ns_module.ExtendedExecutionSession

@@ -171,29 +171,6 @@ class SweepDirection(enum.IntEnum):
     COUNTERCLOCKWISE = 0
     CLOCKWISE = 1
 
-_ns_module._register_AcrylicBackgroundSource(AcrylicBackgroundSource)
-_ns_module._register_AlignmentX(AlignmentX)
-_ns_module._register_AlignmentY(AlignmentY)
-_ns_module._register_AudioCategory(AudioCategory)
-_ns_module._register_AudioDeviceType(AudioDeviceType)
-_ns_module._register_BrushMappingMode(BrushMappingMode)
-_ns_module._register_ColorInterpolationMode(ColorInterpolationMode)
-_ns_module._register_ElementCompositeMode(ElementCompositeMode)
-_ns_module._register_FastPlayFallbackBehaviour(FastPlayFallbackBehaviour)
-_ns_module._register_FillRule(FillRule)
-_ns_module._register_GradientSpreadMethod(GradientSpreadMethod)
-_ns_module._register_LoadedImageSourceLoadStatus(LoadedImageSourceLoadStatus)
-_ns_module._register_MediaCanPlayResponse(MediaCanPlayResponse)
-_ns_module._register_MediaElementState(MediaElementState)
-_ns_module._register_PenLineCap(PenLineCap)
-_ns_module._register_PenLineJoin(PenLineJoin)
-_ns_module._register_RevealBrushState(RevealBrushState)
-_ns_module._register_Stereo3DVideoPackingMode(Stereo3DVideoPackingMode)
-_ns_module._register_Stereo3DVideoRenderMode(Stereo3DVideoRenderMode)
-_ns_module._register_Stretch(Stretch)
-_ns_module._register_StyleSimulations(StyleSimulations)
-_ns_module._register_SweepDirection(SweepDirection)
-
 Matrix = _ns_module.Matrix
 AcrylicBrush = _ns_module.AcrylicBrush
 ArcSegment = _ns_module.ArcSegment

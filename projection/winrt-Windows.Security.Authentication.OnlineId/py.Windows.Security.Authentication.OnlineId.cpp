@@ -8,8 +8,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 {
     struct module_state
     {
-        PyObject* type_CredentialPromptType;
-        PyObject* type_OnlineIdSystemTicketStatus;
         PyTypeObject* type_OnlineIdAuthenticator;
         PyTypeObject* type_OnlineIdServiceTicket;
         PyTypeObject* type_OnlineIdServiceTicketRequest;
@@ -21,54 +19,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         PyTypeObject* type_UserAuthenticationOperation;
         PyTypeObject* type_UserIdentity;
     };
-
-    static PyObject* register_CredentialPromptType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CredentialPromptType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CredentialPromptType = type;
-        Py_INCREF(state->type_CredentialPromptType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_OnlineIdSystemTicketStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_OnlineIdSystemTicketStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_OnlineIdSystemTicketStatus = type;
-        Py_INCREF(state->type_OnlineIdSystemTicketStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- OnlineIdAuthenticator class --------------------
     static constexpr const char* const type_name_OnlineIdAuthenticator = "OnlineIdAuthenticator";
@@ -1962,11 +1912,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     // ----- Windows.Security.Authentication.OnlineId Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::OnlineId");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_CredentialPromptType", register_CredentialPromptType, METH_O, "registers type"},
-        {"_register_OnlineIdSystemTicketStatus", register_OnlineIdSystemTicketStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1977,8 +1922,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
             return 0;
         }
 
-        Py_VISIT(state->type_CredentialPromptType);
-        Py_VISIT(state->type_OnlineIdSystemTicketStatus);
         Py_VISIT(state->type_OnlineIdAuthenticator);
         Py_VISIT(state->type_OnlineIdServiceTicket);
         Py_VISIT(state->type_OnlineIdServiceTicketRequest);
@@ -2002,8 +1945,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
             return 0;
         }
 
-        Py_CLEAR(state->type_CredentialPromptType);
-        Py_CLEAR(state->type_OnlineIdSystemTicketStatus);
         Py_CLEAR(state->type_OnlineIdAuthenticator);
         Py_CLEAR(state->type_OnlineIdServiceTicket);
         Py_CLEAR(state->type_OnlineIdServiceTicketRequest);
@@ -2024,7 +1965,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
            "_winrt_Windows_Security_Authentication_OnlineId",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2127,52 +2068,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_OnlineId(void) noex
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::OnlineId::CredentialPromptType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CredentialPromptType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::CredentialPromptType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OnlineIdSystemTicketStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator>::get_python_type() noexcept {

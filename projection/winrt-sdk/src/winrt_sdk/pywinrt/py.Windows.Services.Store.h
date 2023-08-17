@@ -113,61 +113,71 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreCanLicenseStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.store";
+        static constexpr const char* type_name = "StoreCanLicenseStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreConsumableStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.store";
+        static constexpr const char* type_name = "StoreConsumableStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreDurationUnit>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.store";
+        static constexpr const char* type_name = "StoreDurationUnit";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePackageUpdateState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.store";
+        static constexpr const char* type_name = "StorePackageUpdateState";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePurchaseStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.store";
+        static constexpr const char* type_name = "StorePurchaseStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreQueueItemExtendedState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.store";
+        static constexpr const char* type_name = "StoreQueueItemExtendedState";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreQueueItemKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.store";
+        static constexpr const char* type_name = "StoreQueueItemKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreQueueItemState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.store";
+        static constexpr const char* type_name = "StoreQueueItemState";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreRateAndReviewStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.store";
+        static constexpr const char* type_name = "StoreRateAndReviewStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreUninstallStorePackageStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.store";
+        static constexpr const char* type_name = "StoreUninstallStorePackageStatus";
     };
 
     template<>

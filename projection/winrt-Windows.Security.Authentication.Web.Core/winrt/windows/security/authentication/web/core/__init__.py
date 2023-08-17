@@ -44,10 +44,6 @@ class WebTokenRequestStatus(enum.IntEnum):
     ACCOUNT_PROVIDER_NOT_AVAILABLE = 4
     PROVIDER_ERROR = 5
 
-_ns_module._register_FindAllWebAccountsStatus(FindAllWebAccountsStatus)
-_ns_module._register_WebTokenRequestPromptType(WebTokenRequestPromptType)
-_ns_module._register_WebTokenRequestStatus(WebTokenRequestStatus)
-
 FindAllAccountsResult = _ns_module.FindAllAccountsResult
 WebAccountEventArgs = _ns_module.WebAccountEventArgs
 WebAccountMonitor = _ns_module.WebAccountMonitor

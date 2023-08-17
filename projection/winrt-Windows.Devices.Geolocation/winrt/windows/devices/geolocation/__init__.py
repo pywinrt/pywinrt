@@ -65,15 +65,6 @@ class VisitStateChange(enum.IntEnum):
     DEPARTED = 2
     OTHER_MOVEMENT = 3
 
-_ns_module._register_AltitudeReferenceSystem(AltitudeReferenceSystem)
-_ns_module._register_GeolocationAccessStatus(GeolocationAccessStatus)
-_ns_module._register_GeoshapeType(GeoshapeType)
-_ns_module._register_PositionAccuracy(PositionAccuracy)
-_ns_module._register_PositionSource(PositionSource)
-_ns_module._register_PositionStatus(PositionStatus)
-_ns_module._register_VisitMonitoringScope(VisitMonitoringScope)
-_ns_module._register_VisitStateChange(VisitStateChange)
-
 BasicGeoposition = _ns_module.BasicGeoposition
 CivicAddress = _ns_module.CivicAddress
 GeoboundingBox = _ns_module.GeoboundingBox

@@ -39,10 +39,6 @@ class OfflineMapPackageStatus(enum.IntEnum):
     DOWNLOADED = 2
     DELETING = 3
 
-_ns_module._register_OfflineMapPackageQueryStatus(OfflineMapPackageQueryStatus)
-_ns_module._register_OfflineMapPackageStartDownloadStatus(OfflineMapPackageStartDownloadStatus)
-_ns_module._register_OfflineMapPackageStatus(OfflineMapPackageStatus)
-
 OfflineMapPackage = _ns_module.OfflineMapPackage
 OfflineMapPackageQueryResult = _ns_module.OfflineMapPackageQueryResult
 OfflineMapPackageStartDownloadResult = _ns_module.OfflineMapPackageStartDownloadResult

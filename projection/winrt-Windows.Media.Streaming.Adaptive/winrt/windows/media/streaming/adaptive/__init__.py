@@ -63,11 +63,6 @@ class AdaptiveMediaSourceResourceType(enum.IntEnum):
     INITIALIZATION_VECTOR = 4
     MEDIA_SEGMENT_INDEX = 5
 
-_ns_module._register_AdaptiveMediaSourceCreationStatus(AdaptiveMediaSourceCreationStatus)
-_ns_module._register_AdaptiveMediaSourceDiagnosticType(AdaptiveMediaSourceDiagnosticType)
-_ns_module._register_AdaptiveMediaSourceDownloadBitrateChangedReason(AdaptiveMediaSourceDownloadBitrateChangedReason)
-_ns_module._register_AdaptiveMediaSourceResourceType(AdaptiveMediaSourceResourceType)
-
 AdaptiveMediaSource = _ns_module.AdaptiveMediaSource
 AdaptiveMediaSourceAdvancedSettings = _ns_module.AdaptiveMediaSourceAdvancedSettings
 AdaptiveMediaSourceCorrelatedTimes = _ns_module.AdaptiveMediaSourceCorrelatedTimes

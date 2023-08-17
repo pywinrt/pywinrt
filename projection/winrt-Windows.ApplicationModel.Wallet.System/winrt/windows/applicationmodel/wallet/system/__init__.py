@@ -31,7 +31,5 @@ class WalletItemAppAssociation(enum.IntEnum):
     APP_INSTALLED = 1
     APP_NOT_INSTALLED = 2
 
-_ns_module._register_WalletItemAppAssociation(WalletItemAppAssociation)
-
 WalletItemSystemStore = _ns_module.WalletItemSystemStore
 WalletManagerSystem = _ns_module.WalletManagerSystem

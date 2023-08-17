@@ -8,112 +8,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 {
     struct module_state
     {
-        PyObject* type_MicrosoftAccountMultiFactorAuthenticationType;
-        PyObject* type_MicrosoftAccountMultiFactorServiceResponse;
-        PyObject* type_MicrosoftAccountMultiFactorSessionApprovalStatus;
-        PyObject* type_MicrosoftAccountMultiFactorSessionAuthenticationStatus;
         PyTypeObject* type_MicrosoftAccountMultiFactorAuthenticationManager;
         PyTypeObject* type_MicrosoftAccountMultiFactorGetSessionsResult;
         PyTypeObject* type_MicrosoftAccountMultiFactorOneTimeCodedInfo;
         PyTypeObject* type_MicrosoftAccountMultiFactorSessionInfo;
         PyTypeObject* type_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
     };
-
-    static PyObject* register_MicrosoftAccountMultiFactorAuthenticationType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MicrosoftAccountMultiFactorAuthenticationType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MicrosoftAccountMultiFactorAuthenticationType = type;
-        Py_INCREF(state->type_MicrosoftAccountMultiFactorAuthenticationType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MicrosoftAccountMultiFactorServiceResponse(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MicrosoftAccountMultiFactorServiceResponse)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MicrosoftAccountMultiFactorServiceResponse = type;
-        Py_INCREF(state->type_MicrosoftAccountMultiFactorServiceResponse);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MicrosoftAccountMultiFactorSessionApprovalStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MicrosoftAccountMultiFactorSessionApprovalStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MicrosoftAccountMultiFactorSessionApprovalStatus = type;
-        Py_INCREF(state->type_MicrosoftAccountMultiFactorSessionApprovalStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MicrosoftAccountMultiFactorSessionAuthenticationStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MicrosoftAccountMultiFactorSessionAuthenticationStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MicrosoftAccountMultiFactorSessionAuthenticationStatus = type;
-        Py_INCREF(state->type_MicrosoftAccountMultiFactorSessionAuthenticationStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- MicrosoftAccountMultiFactorAuthenticationManager class --------------------
     static constexpr const char* const type_name_MicrosoftAccountMultiFactorAuthenticationManager = "MicrosoftAccountMultiFactorAuthenticationManager";
@@ -1159,13 +1059,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     // ----- Windows.Security.Authentication.Identity.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::Identity::Core");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_MicrosoftAccountMultiFactorAuthenticationType", register_MicrosoftAccountMultiFactorAuthenticationType, METH_O, "registers type"},
-        {"_register_MicrosoftAccountMultiFactorServiceResponse", register_MicrosoftAccountMultiFactorServiceResponse, METH_O, "registers type"},
-        {"_register_MicrosoftAccountMultiFactorSessionApprovalStatus", register_MicrosoftAccountMultiFactorSessionApprovalStatus, METH_O, "registers type"},
-        {"_register_MicrosoftAccountMultiFactorSessionAuthenticationStatus", register_MicrosoftAccountMultiFactorSessionAuthenticationStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1176,10 +1069,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
             return 0;
         }
 
-        Py_VISIT(state->type_MicrosoftAccountMultiFactorAuthenticationType);
-        Py_VISIT(state->type_MicrosoftAccountMultiFactorServiceResponse);
-        Py_VISIT(state->type_MicrosoftAccountMultiFactorSessionApprovalStatus);
-        Py_VISIT(state->type_MicrosoftAccountMultiFactorSessionAuthenticationStatus);
         Py_VISIT(state->type_MicrosoftAccountMultiFactorAuthenticationManager);
         Py_VISIT(state->type_MicrosoftAccountMultiFactorGetSessionsResult);
         Py_VISIT(state->type_MicrosoftAccountMultiFactorOneTimeCodedInfo);
@@ -1198,10 +1087,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
             return 0;
         }
 
-        Py_CLEAR(state->type_MicrosoftAccountMultiFactorAuthenticationType);
-        Py_CLEAR(state->type_MicrosoftAccountMultiFactorServiceResponse);
-        Py_CLEAR(state->type_MicrosoftAccountMultiFactorSessionApprovalStatus);
-        Py_CLEAR(state->type_MicrosoftAccountMultiFactorSessionAuthenticationStatus);
         Py_CLEAR(state->type_MicrosoftAccountMultiFactorAuthenticationManager);
         Py_CLEAR(state->type_MicrosoftAccountMultiFactorGetSessionsResult);
         Py_CLEAR(state->type_MicrosoftAccountMultiFactorOneTimeCodedInfo);
@@ -1217,7 +1102,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
            "_winrt_Windows_Security_Authentication_Identity_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1290,98 +1175,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Identity_Core(void)
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MicrosoftAccountMultiFactorAuthenticationType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MicrosoftAccountMultiFactorServiceResponse;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionApprovalStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MicrosoftAccountMultiFactorSessionApprovalStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionApprovalStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MicrosoftAccountMultiFactorSessionAuthenticationStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager>::get_python_type() noexcept {

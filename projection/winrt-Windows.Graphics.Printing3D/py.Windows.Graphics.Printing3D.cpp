@@ -8,14 +8,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 {
     struct module_state
     {
-        PyObject* type_Print3DTaskCompletion;
-        PyObject* type_Print3DTaskDetail;
-        PyObject* type_Printing3DBufferFormat;
-        PyObject* type_Printing3DMeshVerificationMode;
-        PyObject* type_Printing3DModelUnit;
-        PyObject* type_Printing3DObjectType;
-        PyObject* type_Printing3DPackageCompression;
-        PyObject* type_Printing3DTextureEdgeBehavior;
         PyTypeObject* type_Print3DManager;
         PyTypeObject* type_Print3DTask;
         PyTypeObject* type_Print3DTaskCompletedEventArgs;
@@ -45,198 +37,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
         PyTypeObject* type_Printing3DTextureResource;
         PyTypeObject* type_Printing3DBufferDescription;
     };
-
-    static PyObject* register_Print3DTaskCompletion(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Print3DTaskCompletion)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Print3DTaskCompletion = type;
-        Py_INCREF(state->type_Print3DTaskCompletion);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_Print3DTaskDetail(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Print3DTaskDetail)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Print3DTaskDetail = type;
-        Py_INCREF(state->type_Print3DTaskDetail);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_Printing3DBufferFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Printing3DBufferFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Printing3DBufferFormat = type;
-        Py_INCREF(state->type_Printing3DBufferFormat);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_Printing3DMeshVerificationMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Printing3DMeshVerificationMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Printing3DMeshVerificationMode = type;
-        Py_INCREF(state->type_Printing3DMeshVerificationMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_Printing3DModelUnit(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Printing3DModelUnit)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Printing3DModelUnit = type;
-        Py_INCREF(state->type_Printing3DModelUnit);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_Printing3DObjectType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Printing3DObjectType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Printing3DObjectType = type;
-        Py_INCREF(state->type_Printing3DObjectType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_Printing3DPackageCompression(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Printing3DPackageCompression)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Printing3DPackageCompression = type;
-        Py_INCREF(state->type_Printing3DPackageCompression);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_Printing3DTextureEdgeBehavior(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_Printing3DTextureEdgeBehavior)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_Printing3DTextureEdgeBehavior = type;
-        Py_INCREF(state->type_Printing3DTextureEdgeBehavior);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Print3DManager class --------------------
     static constexpr const char* const type_name_Print3DManager = "Print3DManager";
@@ -6380,17 +6180,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     // ----- Windows.Graphics.Printing3D Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing3D");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_Print3DTaskCompletion", register_Print3DTaskCompletion, METH_O, "registers type"},
-        {"_register_Print3DTaskDetail", register_Print3DTaskDetail, METH_O, "registers type"},
-        {"_register_Printing3DBufferFormat", register_Printing3DBufferFormat, METH_O, "registers type"},
-        {"_register_Printing3DMeshVerificationMode", register_Printing3DMeshVerificationMode, METH_O, "registers type"},
-        {"_register_Printing3DModelUnit", register_Printing3DModelUnit, METH_O, "registers type"},
-        {"_register_Printing3DObjectType", register_Printing3DObjectType, METH_O, "registers type"},
-        {"_register_Printing3DPackageCompression", register_Printing3DPackageCompression, METH_O, "registers type"},
-        {"_register_Printing3DTextureEdgeBehavior", register_Printing3DTextureEdgeBehavior, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -6401,14 +6190,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return 0;
         }
 
-        Py_VISIT(state->type_Print3DTaskCompletion);
-        Py_VISIT(state->type_Print3DTaskDetail);
-        Py_VISIT(state->type_Printing3DBufferFormat);
-        Py_VISIT(state->type_Printing3DMeshVerificationMode);
-        Py_VISIT(state->type_Printing3DModelUnit);
-        Py_VISIT(state->type_Printing3DObjectType);
-        Py_VISIT(state->type_Printing3DPackageCompression);
-        Py_VISIT(state->type_Printing3DTextureEdgeBehavior);
         Py_VISIT(state->type_Print3DManager);
         Py_VISIT(state->type_Print3DTask);
         Py_VISIT(state->type_Print3DTaskCompletedEventArgs);
@@ -6450,14 +6231,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return 0;
         }
 
-        Py_CLEAR(state->type_Print3DTaskCompletion);
-        Py_CLEAR(state->type_Print3DTaskDetail);
-        Py_CLEAR(state->type_Printing3DBufferFormat);
-        Py_CLEAR(state->type_Printing3DMeshVerificationMode);
-        Py_CLEAR(state->type_Printing3DModelUnit);
-        Py_CLEAR(state->type_Printing3DObjectType);
-        Py_CLEAR(state->type_Printing3DPackageCompression);
-        Py_CLEAR(state->type_Printing3DTextureEdgeBehavior);
         Py_CLEAR(state->type_Print3DManager);
         Py_CLEAR(state->type_Print3DTask);
         Py_CLEAR(state->type_Print3DTaskCompletedEventArgs);
@@ -6496,7 +6269,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
            "_winrt_Windows_Graphics_Printing3D",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -6707,190 +6480,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing3D(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DTaskCompletion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Print3DTaskCompletion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskDetail>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DTaskDetail;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Print3DTaskDetail is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DBufferFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DMeshVerificationMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing3D::Printing3DModelUnit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DModelUnit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DModelUnit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing3D::Printing3DObjectType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DObjectType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DObjectType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing3D::Printing3DPackageCompression>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DPackageCompression;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DPackageCompression is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing3D::Printing3DTextureEdgeBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DTextureEdgeBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DTextureEdgeBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Print3DManager>::get_python_type() noexcept {

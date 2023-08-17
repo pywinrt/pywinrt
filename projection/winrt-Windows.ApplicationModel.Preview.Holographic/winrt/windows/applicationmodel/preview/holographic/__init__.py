@@ -19,6 +19,5 @@ try:
 except ImportError:
     pass
 
-
 HolographicApplicationPreview = _ns_module.HolographicApplicationPreview
 HolographicKeyboardPlacementOverridePreview = _ns_module.HolographicKeyboardPlacementOverridePreview

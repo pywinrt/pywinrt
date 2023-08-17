@@ -24,5 +24,4 @@ try:
 except ImportError:
     pass
 
-
 RadialControllerIndependentInputSource = _ns_module.RadialControllerIndependentInputSource

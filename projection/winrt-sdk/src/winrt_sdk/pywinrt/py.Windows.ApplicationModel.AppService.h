@@ -69,25 +69,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceClosedStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceClosedStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceConnectionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceConnectionStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceResponseStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceResponseStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponseStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "StatelessAppServiceResponseStatus";
     };
 
     template<>

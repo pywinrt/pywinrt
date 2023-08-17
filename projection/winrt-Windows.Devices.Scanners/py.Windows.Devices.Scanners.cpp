@@ -8,10 +8,6 @@ namespace py::cpp::Windows::Devices::Scanners
 {
     struct module_state
     {
-        PyObject* type_ImageScannerAutoCroppingMode;
-        PyObject* type_ImageScannerColorMode;
-        PyObject* type_ImageScannerFormat;
-        PyObject* type_ImageScannerScanSource;
         PyTypeObject* type_ImageScanner;
         PyTypeObject* type_ImageScannerAutoConfiguration;
         PyTypeObject* type_ImageScannerFeederConfiguration;
@@ -22,102 +18,6 @@ namespace py::cpp::Windows::Devices::Scanners
         PyTypeObject* type_IImageScannerSourceConfiguration;
         PyTypeObject* type_ImageScannerResolution;
     };
-
-    static PyObject* register_ImageScannerAutoCroppingMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ImageScannerAutoCroppingMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ImageScannerAutoCroppingMode = type;
-        Py_INCREF(state->type_ImageScannerAutoCroppingMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ImageScannerColorMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ImageScannerColorMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ImageScannerColorMode = type;
-        Py_INCREF(state->type_ImageScannerColorMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ImageScannerFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ImageScannerFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ImageScannerFormat = type;
-        Py_INCREF(state->type_ImageScannerFormat);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ImageScannerScanSource(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ImageScannerScanSource)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ImageScannerScanSource = type;
-        Py_INCREF(state->type_ImageScannerScanSource);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ImageScanner class --------------------
     static constexpr const char* const type_name_ImageScanner = "ImageScanner";
@@ -4066,13 +3966,6 @@ namespace py::cpp::Windows::Devices::Scanners
     // ----- Windows.Devices.Scanners Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Scanners");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ImageScannerAutoCroppingMode", register_ImageScannerAutoCroppingMode, METH_O, "registers type"},
-        {"_register_ImageScannerColorMode", register_ImageScannerColorMode, METH_O, "registers type"},
-        {"_register_ImageScannerFormat", register_ImageScannerFormat, METH_O, "registers type"},
-        {"_register_ImageScannerScanSource", register_ImageScannerScanSource, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4083,10 +3976,6 @@ namespace py::cpp::Windows::Devices::Scanners
             return 0;
         }
 
-        Py_VISIT(state->type_ImageScannerAutoCroppingMode);
-        Py_VISIT(state->type_ImageScannerColorMode);
-        Py_VISIT(state->type_ImageScannerFormat);
-        Py_VISIT(state->type_ImageScannerScanSource);
         Py_VISIT(state->type_ImageScanner);
         Py_VISIT(state->type_ImageScannerAutoConfiguration);
         Py_VISIT(state->type_ImageScannerFeederConfiguration);
@@ -4109,10 +3998,6 @@ namespace py::cpp::Windows::Devices::Scanners
             return 0;
         }
 
-        Py_CLEAR(state->type_ImageScannerAutoCroppingMode);
-        Py_CLEAR(state->type_ImageScannerColorMode);
-        Py_CLEAR(state->type_ImageScannerFormat);
-        Py_CLEAR(state->type_ImageScannerScanSource);
         Py_CLEAR(state->type_ImageScanner);
         Py_CLEAR(state->type_ImageScannerAutoConfiguration);
         Py_CLEAR(state->type_ImageScannerFeederConfiguration);
@@ -4132,7 +4017,7 @@ namespace py::cpp::Windows::Devices::Scanners
            "_winrt_Windows_Devices_Scanners",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4223,98 +4108,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Scanners(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScannerAutoCroppingMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Scanners::ImageScannerColorMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScannerColorMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScannerColorMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Scanners::ImageScannerFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScannerFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScannerFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Scanners::ImageScannerScanSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScannerScanSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScannerScanSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Scanners::ImageScanner>::get_python_type() noexcept {

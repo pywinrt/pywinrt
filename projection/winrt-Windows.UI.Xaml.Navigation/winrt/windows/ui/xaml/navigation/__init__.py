@@ -37,9 +37,6 @@ class NavigationMode(enum.IntEnum):
     FORWARD = 2
     REFRESH = 3
 
-_ns_module._register_NavigationCacheMode(NavigationCacheMode)
-_ns_module._register_NavigationMode(NavigationMode)
-
 FrameNavigationOptions = _ns_module.FrameNavigationOptions
 NavigatingCancelEventArgs = _ns_module.NavigatingCancelEventArgs
 NavigationEventArgs = _ns_module.NavigationEventArgs

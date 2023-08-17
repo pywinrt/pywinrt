@@ -8,8 +8,6 @@ namespace py::cpp::Windows::Perception::People
 {
     struct module_state
     {
-        PyObject* type_HandJointKind;
-        PyObject* type_JointPoseAccuracy;
         PyTypeObject* type_EyesPose;
         PyTypeObject* type_HandMeshObserver;
         PyTypeObject* type_HandMeshVertexState;
@@ -18,54 +16,6 @@ namespace py::cpp::Windows::Perception::People
         PyTypeObject* type_HandMeshVertex;
         PyTypeObject* type_JointPose;
     };
-
-    static PyObject* register_HandJointKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HandJointKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HandJointKind = type;
-        Py_INCREF(state->type_HandJointKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_JointPoseAccuracy(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_JointPoseAccuracy)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_JointPoseAccuracy = type;
-        Py_INCREF(state->type_JointPoseAccuracy);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- EyesPose class --------------------
     static constexpr const char* const type_name_EyesPose = "EyesPose";
@@ -1371,11 +1321,6 @@ namespace py::cpp::Windows::Perception::People
     // ----- Windows.Perception.People Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Perception::People");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_HandJointKind", register_HandJointKind, METH_O, "registers type"},
-        {"_register_JointPoseAccuracy", register_JointPoseAccuracy, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1386,8 +1331,6 @@ namespace py::cpp::Windows::Perception::People
             return 0;
         }
 
-        Py_VISIT(state->type_HandJointKind);
-        Py_VISIT(state->type_JointPoseAccuracy);
         Py_VISIT(state->type_EyesPose);
         Py_VISIT(state->type_HandMeshObserver);
         Py_VISIT(state->type_HandMeshVertexState);
@@ -1408,8 +1351,6 @@ namespace py::cpp::Windows::Perception::People
             return 0;
         }
 
-        Py_CLEAR(state->type_HandJointKind);
-        Py_CLEAR(state->type_JointPoseAccuracy);
         Py_CLEAR(state->type_EyesPose);
         Py_CLEAR(state->type_HandMeshObserver);
         Py_CLEAR(state->type_HandMeshVertexState);
@@ -1427,7 +1368,7 @@ namespace py::cpp::Windows::Perception::People
            "_winrt_Windows_Perception_People",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1506,52 +1447,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_People(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Perception::People::HandJointKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::People;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::People");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HandJointKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::People::HandJointKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Perception::People::JointPoseAccuracy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::People;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::People");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JointPoseAccuracy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::People::JointPoseAccuracy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Perception::People::EyesPose>::get_python_type() noexcept {

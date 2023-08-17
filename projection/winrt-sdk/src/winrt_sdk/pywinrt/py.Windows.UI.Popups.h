@@ -74,13 +74,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Popups::MessageDialogOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.popups";
+        static constexpr const char* type_name = "MessageDialogOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Popups::Placement>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.popups";
+        static constexpr const char* type_name = "Placement";
     };
 
     template<>

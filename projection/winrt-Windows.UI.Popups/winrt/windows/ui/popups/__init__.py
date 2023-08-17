@@ -27,9 +27,6 @@ class Placement(enum.IntEnum):
     LEFT = 3
     RIGHT = 4
 
-_ns_module._register_MessageDialogOptions(MessageDialogOptions)
-_ns_module._register_Placement(Placement)
-
 MessageDialog = _ns_module.MessageDialog
 PopupMenu = _ns_module.PopupMenu
 UICommand = _ns_module.UICommand

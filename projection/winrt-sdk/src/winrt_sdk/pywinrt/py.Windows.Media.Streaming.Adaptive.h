@@ -69,25 +69,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceCreationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDiagnosticType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadBitrateChangedReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceResourceType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceResourceType";
     };
 
     template<>

@@ -32,7 +32,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.effects";
+        static constexpr const char* type_name = "SceneLightingEffectReflectanceModel";
     };
 
     template<>

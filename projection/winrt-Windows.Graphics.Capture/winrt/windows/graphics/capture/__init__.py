@@ -50,8 +50,6 @@ class GraphicsCaptureAccessKind(enum.IntEnum):
     BORDERLESS = 0
     PROGRAMMATIC = 1
 
-_ns_module._register_GraphicsCaptureAccessKind(GraphicsCaptureAccessKind)
-
 Direct3D11CaptureFrame = _ns_module.Direct3D11CaptureFrame
 Direct3D11CaptureFramePool = _ns_module.Direct3D11CaptureFramePool
 GraphicsCaptureAccess = _ns_module.GraphicsCaptureAccess

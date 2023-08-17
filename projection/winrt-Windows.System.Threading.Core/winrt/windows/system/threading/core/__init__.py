@@ -14,6 +14,5 @@ try:
 except ImportError:
     pass
 
-
 PreallocatedWorkItem = _ns_module.PreallocatedWorkItem
 SignalNotifier = _ns_module.SignalNotifier

@@ -42,9 +42,6 @@ class PickerViewMode(enum.IntEnum):
     LIST = 0
     THUMBNAIL = 1
 
-_ns_module._register_PickerLocationId(PickerLocationId)
-_ns_module._register_PickerViewMode(PickerViewMode)
-
 FileExtensionVector = _ns_module.FileExtensionVector
 winrt.system._mixin_mutable_sequence(FileExtensionVector)
 FileOpenPicker = _ns_module.FileOpenPicker

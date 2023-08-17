@@ -58,55 +58,64 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasDisallowConvenienceLogonResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasDisallowConvenienceLogonResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasEncryptionProviderType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasEncryptionProviderType";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasMaxInactivityTimeLockResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasMaxInactivityTimeLockResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasMaxPasswordFailedAttemptsResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasMaxPasswordFailedAttemptsResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordComplexCharactersResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasMinPasswordComplexCharactersResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordLengthResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasMinPasswordLengthResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordExpirationResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasPasswordExpirationResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordHistoryResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasPasswordHistoryResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasRequireEncryptionResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasRequireEncryptionResult";
     };
 
     template<>

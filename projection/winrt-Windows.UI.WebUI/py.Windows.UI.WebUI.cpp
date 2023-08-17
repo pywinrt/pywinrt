@@ -8,7 +8,6 @@ namespace py::cpp::Windows::UI::WebUI
 {
     struct module_state
     {
-        PyObject* type_PrintContent;
         PyTypeObject* type_ActivatedDeferral;
         PyTypeObject* type_ActivatedOperation;
         PyTypeObject* type_BackgroundActivatedEventArgs;
@@ -75,30 +74,6 @@ namespace py::cpp::Windows::UI::WebUI
         PyTypeObject* type_IWebUIBackgroundTaskInstance;
         PyTypeObject* type_IWebUINavigatedEventArgs;
     };
-
-    static PyObject* register_PrintContent(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PrintContent)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PrintContent = type;
-        Py_INCREF(state->type_PrintContent);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ActivatedDeferral class --------------------
     static constexpr const char* const type_name_ActivatedDeferral = "ActivatedDeferral";
@@ -14522,10 +14497,6 @@ namespace py::cpp::Windows::UI::WebUI
     // ----- Windows.UI.WebUI Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::WebUI");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PrintContent", register_PrintContent, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -14536,7 +14507,6 @@ namespace py::cpp::Windows::UI::WebUI
             return 0;
         }
 
-        Py_VISIT(state->type_PrintContent);
         Py_VISIT(state->type_ActivatedDeferral);
         Py_VISIT(state->type_ActivatedOperation);
         Py_VISIT(state->type_BackgroundActivatedEventArgs);
@@ -14615,7 +14585,6 @@ namespace py::cpp::Windows::UI::WebUI
             return 0;
         }
 
-        Py_CLEAR(state->type_PrintContent);
         Py_CLEAR(state->type_ActivatedDeferral);
         Py_CLEAR(state->type_ActivatedOperation);
         Py_CLEAR(state->type_BackgroundActivatedEventArgs);
@@ -14691,7 +14660,7 @@ namespace py::cpp::Windows::UI::WebUI
            "_winrt_Windows_UI_WebUI",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -15124,29 +15093,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_WebUI(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::WebUI::PrintContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::PrintContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::ActivatedDeferral>::get_python_type() noexcept {

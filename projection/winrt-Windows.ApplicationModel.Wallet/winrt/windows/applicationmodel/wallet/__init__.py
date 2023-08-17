@@ -83,12 +83,6 @@ class WalletSummaryViewPosition(enum.IntEnum):
     FIELD1 = 1
     FIELD2 = 2
 
-_ns_module._register_WalletActionKind(WalletActionKind)
-_ns_module._register_WalletBarcodeSymbology(WalletBarcodeSymbology)
-_ns_module._register_WalletDetailViewPosition(WalletDetailViewPosition)
-_ns_module._register_WalletItemKind(WalletItemKind)
-_ns_module._register_WalletSummaryViewPosition(WalletSummaryViewPosition)
-
 WalletBarcode = _ns_module.WalletBarcode
 WalletItem = _ns_module.WalletItem
 WalletItemCustomProperty = _ns_module.WalletItemCustomProperty

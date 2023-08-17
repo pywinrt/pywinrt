@@ -14,7 +14,6 @@ try:
 except ImportError:
     pass
 
-
 CoreAppWindowPreview = _ns_module.CoreAppWindowPreview
 SystemNavigationCloseRequestedPreviewEventArgs = _ns_module.SystemNavigationCloseRequestedPreviewEventArgs
 SystemNavigationManagerPreview = _ns_module.SystemNavigationManagerPreview

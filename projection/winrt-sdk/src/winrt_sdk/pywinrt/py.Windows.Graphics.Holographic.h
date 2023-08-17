@@ -111,37 +111,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicDepthReprojectionMethod>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicDepthReprojectionMethod";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicFramePresentResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentWaitBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicFramePresentWaitBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicReprojectionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicReprojectionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceUserPresence>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicSpaceUserPresence";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicViewConfigurationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicViewConfigurationKind";
     };
 
     template<>

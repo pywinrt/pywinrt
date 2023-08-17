@@ -78,49 +78,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation";
+        static constexpr const char* type_name = "AltitudeReferenceSystem";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::GeolocationAccessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation";
+        static constexpr const char* type_name = "GeolocationAccessStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::GeoshapeType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation";
+        static constexpr const char* type_name = "GeoshapeType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::PositionAccuracy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation";
+        static constexpr const char* type_name = "PositionAccuracy";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::PositionSource>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation";
+        static constexpr const char* type_name = "PositionSource";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::PositionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation";
+        static constexpr const char* type_name = "PositionStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::VisitMonitoringScope>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation";
+        static constexpr const char* type_name = "VisitMonitoringScope";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::VisitStateChange>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation";
+        static constexpr const char* type_name = "VisitStateChange";
     };
 
     template<>

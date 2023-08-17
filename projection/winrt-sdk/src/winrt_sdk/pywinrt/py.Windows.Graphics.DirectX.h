@@ -35,24 +35,28 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::DirectXAlphaMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.directx";
+        static constexpr const char* type_name = "DirectXAlphaMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::DirectXColorSpace>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.directx";
+        static constexpr const char* type_name = "DirectXColorSpace";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.directx";
+        static constexpr const char* type_name = "DirectXPixelFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::DirectXPrimitiveTopology>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.directx";
+        static constexpr const char* type_name = "DirectXPrimitiveTopology";
     };
 }

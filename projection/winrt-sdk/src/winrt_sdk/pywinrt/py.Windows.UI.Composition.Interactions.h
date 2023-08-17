@@ -88,43 +88,50 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionBindingAxisModes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionBindingAxisModes";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionChainingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionChainingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionSourceMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionSourceMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionSourceRedirectionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerClampingOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerClampingOption";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerPositionUpdateOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerPositionUpdateOption";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "VisualInteractionSourceRedirectionMode";
     };
 
     template<>

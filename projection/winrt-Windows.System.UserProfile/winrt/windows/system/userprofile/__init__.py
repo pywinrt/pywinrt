@@ -54,10 +54,6 @@ class SetImageFeedResult(enum.IntEnum):
     CHANGE_DISABLED = 1
     USER_CANCELED = 2
 
-_ns_module._register_AccountPictureKind(AccountPictureKind)
-_ns_module._register_SetAccountPictureResult(SetAccountPictureResult)
-_ns_module._register_SetImageFeedResult(SetImageFeedResult)
-
 AdvertisingManager = _ns_module.AdvertisingManager
 AdvertisingManagerForUser = _ns_module.AdvertisingManagerForUser
 AssignedAccessSettings = _ns_module.AssignedAccessSettings

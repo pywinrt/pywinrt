@@ -31,9 +31,6 @@ class SpiSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED = 1
 
-_ns_module._register_SpiMode(SpiMode)
-_ns_module._register_SpiSharingMode(SpiSharingMode)
-
 SpiBusInfo = _ns_module.SpiBusInfo
 SpiConnectionSettings = _ns_module.SpiConnectionSettings
 SpiController = _ns_module.SpiController

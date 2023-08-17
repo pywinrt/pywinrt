@@ -63,31 +63,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactChangeType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "ContactChangeType";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactQueryResultOrdering>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "ContactQueryResultOrdering";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactStoreApplicationAccessMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "ContactStoreApplicationAccessMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactStoreSystemAccessMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "ContactStoreSystemAccessMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::VCardFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "VCardFormat";
     };
 
     template<>

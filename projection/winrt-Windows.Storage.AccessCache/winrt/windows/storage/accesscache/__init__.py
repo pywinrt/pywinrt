@@ -37,9 +37,6 @@ class RecentStorageItemVisibility(enum.IntEnum):
     APP_ONLY = 0
     APP_AND_SYSTEM = 1
 
-_ns_module._register_AccessCacheOptions(AccessCacheOptions)
-_ns_module._register_RecentStorageItemVisibility(RecentStorageItemVisibility)
-
 AccessListEntry = _ns_module.AccessListEntry
 AccessListEntryView = _ns_module.AccessListEntryView
 winrt.system._mixin_sequence(AccessListEntryView)

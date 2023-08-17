@@ -8,14 +8,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 {
     struct module_state
     {
-        PyObject* type_CausalityRelation;
-        PyObject* type_CausalitySource;
-        PyObject* type_CausalitySynchronousWork;
-        PyObject* type_CausalityTraceLevel;
-        PyObject* type_ErrorOptions;
-        PyObject* type_LoggingFieldFormat;
-        PyObject* type_LoggingLevel;
-        PyObject* type_LoggingOpcode;
         PyTypeObject* type_AsyncCausalityTracer;
         PyTypeObject* type_ErrorDetails;
         PyTypeObject* type_FileLoggingSession;
@@ -34,198 +26,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         PyTypeObject* type_ILoggingSession;
         PyTypeObject* type_ILoggingTarget;
     };
-
-    static PyObject* register_CausalityRelation(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CausalityRelation)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CausalityRelation = type;
-        Py_INCREF(state->type_CausalityRelation);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CausalitySource(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CausalitySource)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CausalitySource = type;
-        Py_INCREF(state->type_CausalitySource);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CausalitySynchronousWork(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CausalitySynchronousWork)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CausalitySynchronousWork = type;
-        Py_INCREF(state->type_CausalitySynchronousWork);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CausalityTraceLevel(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CausalityTraceLevel)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CausalityTraceLevel = type;
-        Py_INCREF(state->type_CausalityTraceLevel);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ErrorOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ErrorOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ErrorOptions = type;
-        Py_INCREF(state->type_ErrorOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_LoggingFieldFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LoggingFieldFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LoggingFieldFormat = type;
-        Py_INCREF(state->type_LoggingFieldFormat);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_LoggingLevel(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LoggingLevel)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LoggingLevel = type;
-        Py_INCREF(state->type_LoggingLevel);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_LoggingOpcode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LoggingOpcode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LoggingOpcode = type;
-        Py_INCREF(state->type_LoggingOpcode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AsyncCausalityTracer class --------------------
     static constexpr const char* const type_name_AsyncCausalityTracer = "AsyncCausalityTracer";
@@ -8115,17 +7915,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     // ----- Windows.Foundation.Diagnostics Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Foundation::Diagnostics");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_CausalityRelation", register_CausalityRelation, METH_O, "registers type"},
-        {"_register_CausalitySource", register_CausalitySource, METH_O, "registers type"},
-        {"_register_CausalitySynchronousWork", register_CausalitySynchronousWork, METH_O, "registers type"},
-        {"_register_CausalityTraceLevel", register_CausalityTraceLevel, METH_O, "registers type"},
-        {"_register_ErrorOptions", register_ErrorOptions, METH_O, "registers type"},
-        {"_register_LoggingFieldFormat", register_LoggingFieldFormat, METH_O, "registers type"},
-        {"_register_LoggingLevel", register_LoggingLevel, METH_O, "registers type"},
-        {"_register_LoggingOpcode", register_LoggingOpcode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -8136,14 +7925,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             return 0;
         }
 
-        Py_VISIT(state->type_CausalityRelation);
-        Py_VISIT(state->type_CausalitySource);
-        Py_VISIT(state->type_CausalitySynchronousWork);
-        Py_VISIT(state->type_CausalityTraceLevel);
-        Py_VISIT(state->type_ErrorOptions);
-        Py_VISIT(state->type_LoggingFieldFormat);
-        Py_VISIT(state->type_LoggingLevel);
-        Py_VISIT(state->type_LoggingOpcode);
         Py_VISIT(state->type_AsyncCausalityTracer);
         Py_VISIT(state->type_ErrorDetails);
         Py_VISIT(state->type_FileLoggingSession);
@@ -8174,14 +7955,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             return 0;
         }
 
-        Py_CLEAR(state->type_CausalityRelation);
-        Py_CLEAR(state->type_CausalitySource);
-        Py_CLEAR(state->type_CausalitySynchronousWork);
-        Py_CLEAR(state->type_CausalityTraceLevel);
-        Py_CLEAR(state->type_ErrorOptions);
-        Py_CLEAR(state->type_LoggingFieldFormat);
-        Py_CLEAR(state->type_LoggingLevel);
-        Py_CLEAR(state->type_LoggingOpcode);
         Py_CLEAR(state->type_AsyncCausalityTracer);
         Py_CLEAR(state->type_ErrorDetails);
         Py_CLEAR(state->type_FileLoggingSession);
@@ -8209,7 +7982,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
            "_winrt_Windows_Foundation_Diagnostics",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -8348,190 +8121,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation_Diagnostics(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::Diagnostics::CausalityRelation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CausalityRelation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::CausalityRelation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::Diagnostics::CausalitySource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CausalitySource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::CausalitySource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::Diagnostics::CausalitySynchronousWork>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CausalitySynchronousWork;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::CausalitySynchronousWork is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::Diagnostics::CausalityTraceLevel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CausalityTraceLevel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::CausalityTraceLevel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::Diagnostics::ErrorOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ErrorOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::ErrorOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoggingFieldFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::Diagnostics::LoggingLevel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoggingLevel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::LoggingLevel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::Diagnostics::LoggingOpcode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoggingOpcode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::LoggingOpcode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer>::get_python_type() noexcept {

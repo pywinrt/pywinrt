@@ -8,9 +8,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 {
     struct module_state
     {
-        PyObject* type_BitmapCreateOptions;
-        PyObject* type_DecodePixelType;
-        PyObject* type_SvgImageSourceLoadStatus;
         PyTypeObject* type_BitmapImage;
         PyTypeObject* type_BitmapSource;
         PyTypeObject* type_DownloadProgressEventArgs;
@@ -24,78 +21,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         PyTypeObject* type_WriteableBitmap;
         PyTypeObject* type_XamlRenderingBackgroundTask;
     };
-
-    static PyObject* register_BitmapCreateOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BitmapCreateOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BitmapCreateOptions = type;
-        Py_INCREF(state->type_BitmapCreateOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DecodePixelType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DecodePixelType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DecodePixelType = type;
-        Py_INCREF(state->type_DecodePixelType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SvgImageSourceLoadStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SvgImageSourceLoadStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SvgImageSourceLoadStatus = type;
-        Py_INCREF(state->type_SvgImageSourceLoadStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- BitmapImage class --------------------
     static constexpr const char* const type_name_BitmapImage = "BitmapImage";
@@ -2871,12 +2796,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     // ----- Windows.UI.Xaml.Media.Imaging Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Media::Imaging");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_BitmapCreateOptions", register_BitmapCreateOptions, METH_O, "registers type"},
-        {"_register_DecodePixelType", register_DecodePixelType, METH_O, "registers type"},
-        {"_register_SvgImageSourceLoadStatus", register_SvgImageSourceLoadStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2887,9 +2806,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             return 0;
         }
 
-        Py_VISIT(state->type_BitmapCreateOptions);
-        Py_VISIT(state->type_DecodePixelType);
-        Py_VISIT(state->type_SvgImageSourceLoadStatus);
         Py_VISIT(state->type_BitmapImage);
         Py_VISIT(state->type_BitmapSource);
         Py_VISIT(state->type_DownloadProgressEventArgs);
@@ -2915,9 +2831,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             return 0;
         }
 
-        Py_CLEAR(state->type_BitmapCreateOptions);
-        Py_CLEAR(state->type_DecodePixelType);
-        Py_CLEAR(state->type_SvgImageSourceLoadStatus);
         Py_CLEAR(state->type_BitmapImage);
         Py_CLEAR(state->type_BitmapSource);
         Py_CLEAR(state->type_DownloadProgressEventArgs);
@@ -2940,7 +2853,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
            "_winrt_Windows_UI_Xaml_Media_Imaging",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3073,75 +2986,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Imaging(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapCreateOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapCreateOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::BitmapCreateOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::DecodePixelType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DecodePixelType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::DecodePixelType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SvgImageSourceLoadStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage>::get_python_type() noexcept {

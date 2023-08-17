@@ -104,67 +104,78 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapAlphaMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapBufferAccessMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapBufferAccessMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapFlip>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapFlip";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapInterpolationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapInterpolationMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapPixelFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapRotation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapRotation";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::ColorManagementMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "ColorManagementMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::ExifOrientationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "ExifOrientationMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::JpegSubsamplingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "JpegSubsamplingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::PngFilterMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "PngFilterMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::TiffCompressionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "TiffCompressionMode";
     };
 
     template<>

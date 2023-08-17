@@ -24,7 +24,6 @@ try:
 except ImportError:
     pass
 
-
 AppExtension = _ns_module.AppExtension
 AppExtensionCatalog = _ns_module.AppExtensionCatalog
 AppExtensionPackageInstalledEventArgs = _ns_module.AppExtensionPackageInstalledEventArgs

@@ -815,9 +815,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     // ----- Windows.ApplicationModel.Payments.Provider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Payments::Provider");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -859,7 +856,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
            "_winrt_Windows_ApplicationModel_Payments_Provider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

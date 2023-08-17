@@ -26,8 +26,6 @@ class PointerDeviceType(enum.IntEnum):
     PEN = 1
     MOUSE = 2
 
-_ns_module._register_PointerDeviceType(PointerDeviceType)
-
 MouseDelta = _ns_module.MouseDelta
 PointerDeviceUsage = _ns_module.PointerDeviceUsage
 KeyboardCapabilities = _ns_module.KeyboardCapabilities

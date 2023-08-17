@@ -59,19 +59,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
+        static constexpr const char* type_name = "XamlEventIndex";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
+        static constexpr const char* type_name = "XamlPropertyIndex";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
+        static constexpr const char* type_name = "XamlTypeIndex";
     };
 
     template<>

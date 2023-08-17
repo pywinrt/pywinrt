@@ -166,97 +166,113 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentActivator>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentActivator";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentAllowedClipboardFormats";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentAvailablePrinters";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentClipboardCopyPasteDirections>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentClipboardCopyPasteDirections";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentCreateStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentCreationPriority";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHostError>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentHostError";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentLaunchFileStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentOwnerRegistrationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentPostMessageStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcessState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentProcessState";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentProgressState";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentShareFileStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentShareFolderStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentSignInProgress>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentSignInProgress";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.isolation";
+        static constexpr const char* type_name = "IsolatedWindowsEnvironmentStartProcessStatus";
     };
 
     template<>

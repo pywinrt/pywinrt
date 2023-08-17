@@ -44,19 +44,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::TokenBindingKeyType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web";
+        static constexpr const char* type_name = "TokenBindingKeyType";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web";
+        static constexpr const char* type_name = "WebAuthenticationOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web";
+        static constexpr const char* type_name = "WebAuthenticationStatus";
     };
 
     template<>

@@ -8,10 +8,6 @@ namespace py::cpp::Windows::Devices::Printers
 {
     struct module_state
     {
-        PyObject* type_IppAttributeErrorReason;
-        PyObject* type_IppAttributeValueKind;
-        PyObject* type_IppResolutionUnit;
-        PyObject* type_PageConfigurationSource;
         PyTypeObject* type_IppAttributeError;
         PyTypeObject* type_IppAttributeValue;
         PyTypeObject* type_IppIntegerRange;
@@ -25,102 +21,6 @@ namespace py::cpp::Windows::Devices::Printers
         PyTypeObject* type_Print3DDevice;
         PyTypeObject* type_PrintSchema;
     };
-
-    static PyObject* register_IppAttributeErrorReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_IppAttributeErrorReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_IppAttributeErrorReason = type;
-        Py_INCREF(state->type_IppAttributeErrorReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_IppAttributeValueKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_IppAttributeValueKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_IppAttributeValueKind = type;
-        Py_INCREF(state->type_IppAttributeValueKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_IppResolutionUnit(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_IppResolutionUnit)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_IppResolutionUnit = type;
-        Py_INCREF(state->type_IppResolutionUnit);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PageConfigurationSource(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PageConfigurationSource)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PageConfigurationSource = type;
-        Py_INCREF(state->type_PageConfigurationSource);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- IppAttributeError class --------------------
     static constexpr const char* const type_name_IppAttributeError = "IppAttributeError";
@@ -4091,13 +3991,6 @@ namespace py::cpp::Windows::Devices::Printers
     // ----- Windows.Devices.Printers Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Printers");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_IppAttributeErrorReason", register_IppAttributeErrorReason, METH_O, "registers type"},
-        {"_register_IppAttributeValueKind", register_IppAttributeValueKind, METH_O, "registers type"},
-        {"_register_IppResolutionUnit", register_IppResolutionUnit, METH_O, "registers type"},
-        {"_register_PageConfigurationSource", register_PageConfigurationSource, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4108,10 +4001,6 @@ namespace py::cpp::Windows::Devices::Printers
             return 0;
         }
 
-        Py_VISIT(state->type_IppAttributeErrorReason);
-        Py_VISIT(state->type_IppAttributeValueKind);
-        Py_VISIT(state->type_IppResolutionUnit);
-        Py_VISIT(state->type_PageConfigurationSource);
         Py_VISIT(state->type_IppAttributeError);
         Py_VISIT(state->type_IppAttributeValue);
         Py_VISIT(state->type_IppIntegerRange);
@@ -4137,10 +4026,6 @@ namespace py::cpp::Windows::Devices::Printers
             return 0;
         }
 
-        Py_CLEAR(state->type_IppAttributeErrorReason);
-        Py_CLEAR(state->type_IppAttributeValueKind);
-        Py_CLEAR(state->type_IppResolutionUnit);
-        Py_CLEAR(state->type_PageConfigurationSource);
         Py_CLEAR(state->type_IppAttributeError);
         Py_CLEAR(state->type_IppAttributeValue);
         Py_CLEAR(state->type_IppIntegerRange);
@@ -4163,7 +4048,7 @@ namespace py::cpp::Windows::Devices::Printers
            "_winrt_Windows_Devices_Printers",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4272,98 +4157,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Printers(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Printers::IppAttributeErrorReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IppAttributeErrorReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::IppAttributeErrorReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Printers::IppAttributeValueKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IppAttributeValueKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::IppAttributeValueKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Printers::IppResolutionUnit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IppResolutionUnit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::IppResolutionUnit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Printers::PageConfigurationSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PageConfigurationSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::PageConfigurationSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::IppAttributeError>::get_python_type() noexcept {

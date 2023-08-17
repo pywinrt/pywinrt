@@ -8,59 +8,9 @@ namespace py::cpp::Windows::Media::Transcoding
 {
     struct module_state
     {
-        PyObject* type_MediaVideoProcessingAlgorithm;
-        PyObject* type_TranscodeFailureReason;
         PyTypeObject* type_MediaTranscoder;
         PyTypeObject* type_PrepareTranscodeResult;
     };
-
-    static PyObject* register_MediaVideoProcessingAlgorithm(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaVideoProcessingAlgorithm)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaVideoProcessingAlgorithm = type;
-        Py_INCREF(state->type_MediaVideoProcessingAlgorithm);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_TranscodeFailureReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_TranscodeFailureReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_TranscodeFailureReason = type;
-        Py_INCREF(state->type_TranscodeFailureReason);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- MediaTranscoder class --------------------
     static constexpr const char* const type_name_MediaTranscoder = "MediaTranscoder";
@@ -793,11 +743,6 @@ namespace py::cpp::Windows::Media::Transcoding
     // ----- Windows.Media.Transcoding Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::Transcoding");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_MediaVideoProcessingAlgorithm", register_MediaVideoProcessingAlgorithm, METH_O, "registers type"},
-        {"_register_TranscodeFailureReason", register_TranscodeFailureReason, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -808,8 +753,6 @@ namespace py::cpp::Windows::Media::Transcoding
             return 0;
         }
 
-        Py_VISIT(state->type_MediaVideoProcessingAlgorithm);
-        Py_VISIT(state->type_TranscodeFailureReason);
         Py_VISIT(state->type_MediaTranscoder);
         Py_VISIT(state->type_PrepareTranscodeResult);
 
@@ -825,8 +768,6 @@ namespace py::cpp::Windows::Media::Transcoding
             return 0;
         }
 
-        Py_CLEAR(state->type_MediaVideoProcessingAlgorithm);
-        Py_CLEAR(state->type_TranscodeFailureReason);
         Py_CLEAR(state->type_MediaTranscoder);
         Py_CLEAR(state->type_PrepareTranscodeResult);
 
@@ -839,7 +780,7 @@ namespace py::cpp::Windows::Media::Transcoding
            "_winrt_Windows_Media_Transcoding",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -888,52 +829,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Transcoding(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Transcoding;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Transcoding");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaVideoProcessingAlgorithm;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Transcoding::TranscodeFailureReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Transcoding;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Transcoding");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TranscodeFailureReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Transcoding::TranscodeFailureReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::Transcoding::MediaTranscoder>::get_python_type() noexcept {

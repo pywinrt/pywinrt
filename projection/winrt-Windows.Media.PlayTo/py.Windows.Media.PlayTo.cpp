@@ -8,8 +8,6 @@ namespace py::cpp::Windows::Media::PlayTo
 {
     struct module_state
     {
-        PyObject* type_PlayToConnectionError;
-        PyObject* type_PlayToConnectionState;
         PyTypeObject* type_CurrentTimeChangeRequestedEventArgs;
         PyTypeObject* type_MuteChangeRequestedEventArgs;
         PyTypeObject* type_PlayToConnection;
@@ -27,54 +25,6 @@ namespace py::cpp::Windows::Media::PlayTo
         PyTypeObject* type_SourceChangeRequestedEventArgs;
         PyTypeObject* type_VolumeChangeRequestedEventArgs;
     };
-
-    static PyObject* register_PlayToConnectionError(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PlayToConnectionError)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PlayToConnectionError = type;
-        Py_INCREF(state->type_PlayToConnectionError);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PlayToConnectionState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PlayToConnectionState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PlayToConnectionState = type;
-        Py_INCREF(state->type_PlayToConnectionState);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CurrentTimeChangeRequestedEventArgs class --------------------
     static constexpr const char* const type_name_CurrentTimeChangeRequestedEventArgs = "CurrentTimeChangeRequestedEventArgs";
@@ -3528,11 +3478,6 @@ namespace py::cpp::Windows::Media::PlayTo
     // ----- Windows.Media.PlayTo Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::PlayTo");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PlayToConnectionError", register_PlayToConnectionError, METH_O, "registers type"},
-        {"_register_PlayToConnectionState", register_PlayToConnectionState, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3543,8 +3488,6 @@ namespace py::cpp::Windows::Media::PlayTo
             return 0;
         }
 
-        Py_VISIT(state->type_PlayToConnectionError);
-        Py_VISIT(state->type_PlayToConnectionState);
         Py_VISIT(state->type_CurrentTimeChangeRequestedEventArgs);
         Py_VISIT(state->type_MuteChangeRequestedEventArgs);
         Py_VISIT(state->type_PlayToConnection);
@@ -3574,8 +3517,6 @@ namespace py::cpp::Windows::Media::PlayTo
             return 0;
         }
 
-        Py_CLEAR(state->type_PlayToConnectionError);
-        Py_CLEAR(state->type_PlayToConnectionState);
         Py_CLEAR(state->type_CurrentTimeChangeRequestedEventArgs);
         Py_CLEAR(state->type_MuteChangeRequestedEventArgs);
         Py_CLEAR(state->type_PlayToConnection);
@@ -3602,7 +3543,7 @@ namespace py::cpp::Windows::Media::PlayTo
            "_winrt_Windows_Media_PlayTo",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3735,52 +3676,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_PlayTo(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::PlayTo::PlayToConnectionError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToConnectionError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToConnectionError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::PlayTo::PlayToConnectionState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToConnectionState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToConnectionState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs>::get_python_type() noexcept {

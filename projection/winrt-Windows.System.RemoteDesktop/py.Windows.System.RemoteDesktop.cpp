@@ -88,9 +88,6 @@ namespace py::cpp::Windows::System::RemoteDesktop
     // ----- Windows.System.RemoteDesktop Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::System::RemoteDesktop");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -126,7 +123,7 @@ namespace py::cpp::Windows::System::RemoteDesktop
            "_winrt_Windows_System_RemoteDesktop",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

@@ -2096,9 +2096,6 @@ namespace py::cpp::Windows::Web::AtomPub
     // ----- Windows.Web.AtomPub Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Web::AtomPub");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2140,7 +2137,7 @@ namespace py::cpp::Windows::Web::AtomPub
            "_winrt_Windows_Web_AtomPub",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

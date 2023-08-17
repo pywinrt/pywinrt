@@ -8,134 +8,9 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 {
     struct module_state
     {
-        PyObject* type_DeviceAccountAuthenticationType;
-        PyObject* type_DeviceAccountIconId;
-        PyObject* type_DeviceAccountMailAgeFilter;
-        PyObject* type_DeviceAccountServerType;
-        PyObject* type_DeviceAccountSyncScheduleKind;
         PyTypeObject* type_DeviceAccountConfiguration;
         PyTypeObject* type_UserDataAccountSystemAccessManager;
     };
-
-    static PyObject* register_DeviceAccountAuthenticationType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DeviceAccountAuthenticationType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DeviceAccountAuthenticationType = type;
-        Py_INCREF(state->type_DeviceAccountAuthenticationType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DeviceAccountIconId(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DeviceAccountIconId)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DeviceAccountIconId = type;
-        Py_INCREF(state->type_DeviceAccountIconId);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DeviceAccountMailAgeFilter(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DeviceAccountMailAgeFilter)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DeviceAccountMailAgeFilter = type;
-        Py_INCREF(state->type_DeviceAccountMailAgeFilter);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DeviceAccountServerType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DeviceAccountServerType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DeviceAccountServerType = type;
-        Py_INCREF(state->type_DeviceAccountServerType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DeviceAccountSyncScheduleKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DeviceAccountSyncScheduleKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DeviceAccountSyncScheduleKind = type;
-        Py_INCREF(state->type_DeviceAccountSyncScheduleKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- DeviceAccountConfiguration class --------------------
     static constexpr const char* const type_name_DeviceAccountConfiguration = "DeviceAccountConfiguration";
@@ -2536,14 +2411,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     // ----- Windows.ApplicationModel.UserDataAccounts.SystemAccess Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserDataAccounts::SystemAccess");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_DeviceAccountAuthenticationType", register_DeviceAccountAuthenticationType, METH_O, "registers type"},
-        {"_register_DeviceAccountIconId", register_DeviceAccountIconId, METH_O, "registers type"},
-        {"_register_DeviceAccountMailAgeFilter", register_DeviceAccountMailAgeFilter, METH_O, "registers type"},
-        {"_register_DeviceAccountServerType", register_DeviceAccountServerType, METH_O, "registers type"},
-        {"_register_DeviceAccountSyncScheduleKind", register_DeviceAccountSyncScheduleKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2554,11 +2421,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
             return 0;
         }
 
-        Py_VISIT(state->type_DeviceAccountAuthenticationType);
-        Py_VISIT(state->type_DeviceAccountIconId);
-        Py_VISIT(state->type_DeviceAccountMailAgeFilter);
-        Py_VISIT(state->type_DeviceAccountServerType);
-        Py_VISIT(state->type_DeviceAccountSyncScheduleKind);
         Py_VISIT(state->type_DeviceAccountConfiguration);
         Py_VISIT(state->type_UserDataAccountSystemAccessManager);
 
@@ -2574,11 +2436,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
             return 0;
         }
 
-        Py_CLEAR(state->type_DeviceAccountAuthenticationType);
-        Py_CLEAR(state->type_DeviceAccountIconId);
-        Py_CLEAR(state->type_DeviceAccountMailAgeFilter);
-        Py_CLEAR(state->type_DeviceAccountServerType);
-        Py_CLEAR(state->type_DeviceAccountSyncScheduleKind);
         Py_CLEAR(state->type_DeviceAccountConfiguration);
         Py_CLEAR(state->type_UserDataAccountSystemAccessManager);
 
@@ -2591,7 +2448,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
            "_winrt_Windows_ApplicationModel_UserDataAccounts_SystemAccess",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2640,121 +2497,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataAccounts_SystemAcc
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::SystemAccess");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceAccountAuthenticationType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::SystemAccess");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceAccountIconId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::SystemAccess");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceAccountMailAgeFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::SystemAccess");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceAccountServerType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::SystemAccess");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceAccountSyncScheduleKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>::get_python_type() noexcept {

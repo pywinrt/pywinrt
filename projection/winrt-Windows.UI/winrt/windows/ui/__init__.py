@@ -4,7 +4,6 @@ import winrt.system
 
 _ns_module = winrt.system._import_ns_module("Windows.UI")
 
-
 Color = _ns_module.Color
 WindowId = _ns_module.WindowId
 ColorHelper = _ns_module.ColorHelper

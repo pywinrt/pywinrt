@@ -27,9 +27,6 @@ class Print3DWorkflowStatus(enum.IntEnum):
     SLICING = 3
     SUBMITTED = 4
 
-_ns_module._register_Print3DWorkflowDetail(Print3DWorkflowDetail)
-_ns_module._register_Print3DWorkflowStatus(Print3DWorkflowStatus)
-
 Print3DWorkflow = _ns_module.Print3DWorkflow
 Print3DWorkflowPrintRequestedEventArgs = _ns_module.Print3DWorkflowPrintRequestedEventArgs
 Print3DWorkflowPrinterChangedEventArgs = _ns_module.Print3DWorkflowPrinterChangedEventArgs

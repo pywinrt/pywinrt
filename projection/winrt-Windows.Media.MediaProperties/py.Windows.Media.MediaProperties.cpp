@@ -8,14 +8,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 {
     struct module_state
     {
-        PyObject* type_AudioEncodingQuality;
-        PyObject* type_MediaMirroringOptions;
-        PyObject* type_MediaPixelFormat;
-        PyObject* type_MediaRotation;
-        PyObject* type_MediaThumbnailFormat;
-        PyObject* type_SphericalVideoFrameFormat;
-        PyObject* type_StereoscopicVideoPackingMode;
-        PyObject* type_VideoEncodingQuality;
         PyTypeObject* type_AudioEncodingProperties;
         PyTypeObject* type_ContainerEncodingProperties;
         PyTypeObject* type_H264ProfileIds;
@@ -29,198 +21,6 @@ namespace py::cpp::Windows::Media::MediaProperties
         PyTypeObject* type_VideoEncodingProperties;
         PyTypeObject* type_IMediaEncodingProperties;
     };
-
-    static PyObject* register_AudioEncodingQuality(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AudioEncodingQuality)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AudioEncodingQuality = type;
-        Py_INCREF(state->type_AudioEncodingQuality);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MediaMirroringOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaMirroringOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaMirroringOptions = type;
-        Py_INCREF(state->type_MediaMirroringOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MediaPixelFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaPixelFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaPixelFormat = type;
-        Py_INCREF(state->type_MediaPixelFormat);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MediaRotation(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaRotation)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaRotation = type;
-        Py_INCREF(state->type_MediaRotation);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MediaThumbnailFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaThumbnailFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaThumbnailFormat = type;
-        Py_INCREF(state->type_MediaThumbnailFormat);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SphericalVideoFrameFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SphericalVideoFrameFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SphericalVideoFrameFormat = type;
-        Py_INCREF(state->type_SphericalVideoFrameFormat);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_StereoscopicVideoPackingMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_StereoscopicVideoPackingMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_StereoscopicVideoPackingMode = type;
-        Py_INCREF(state->type_StereoscopicVideoPackingMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_VideoEncodingQuality(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_VideoEncodingQuality)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_VideoEncodingQuality = type;
-        Py_INCREF(state->type_VideoEncodingQuality);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AudioEncodingProperties class --------------------
     static constexpr const char* const type_name_AudioEncodingProperties = "AudioEncodingProperties";
@@ -5850,17 +5650,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     // ----- Windows.Media.MediaProperties Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::MediaProperties");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AudioEncodingQuality", register_AudioEncodingQuality, METH_O, "registers type"},
-        {"_register_MediaMirroringOptions", register_MediaMirroringOptions, METH_O, "registers type"},
-        {"_register_MediaPixelFormat", register_MediaPixelFormat, METH_O, "registers type"},
-        {"_register_MediaRotation", register_MediaRotation, METH_O, "registers type"},
-        {"_register_MediaThumbnailFormat", register_MediaThumbnailFormat, METH_O, "registers type"},
-        {"_register_SphericalVideoFrameFormat", register_SphericalVideoFrameFormat, METH_O, "registers type"},
-        {"_register_StereoscopicVideoPackingMode", register_StereoscopicVideoPackingMode, METH_O, "registers type"},
-        {"_register_VideoEncodingQuality", register_VideoEncodingQuality, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -5871,14 +5660,6 @@ namespace py::cpp::Windows::Media::MediaProperties
             return 0;
         }
 
-        Py_VISIT(state->type_AudioEncodingQuality);
-        Py_VISIT(state->type_MediaMirroringOptions);
-        Py_VISIT(state->type_MediaPixelFormat);
-        Py_VISIT(state->type_MediaRotation);
-        Py_VISIT(state->type_MediaThumbnailFormat);
-        Py_VISIT(state->type_SphericalVideoFrameFormat);
-        Py_VISIT(state->type_StereoscopicVideoPackingMode);
-        Py_VISIT(state->type_VideoEncodingQuality);
         Py_VISIT(state->type_AudioEncodingProperties);
         Py_VISIT(state->type_ContainerEncodingProperties);
         Py_VISIT(state->type_H264ProfileIds);
@@ -5904,14 +5685,6 @@ namespace py::cpp::Windows::Media::MediaProperties
             return 0;
         }
 
-        Py_CLEAR(state->type_AudioEncodingQuality);
-        Py_CLEAR(state->type_MediaMirroringOptions);
-        Py_CLEAR(state->type_MediaPixelFormat);
-        Py_CLEAR(state->type_MediaRotation);
-        Py_CLEAR(state->type_MediaThumbnailFormat);
-        Py_CLEAR(state->type_SphericalVideoFrameFormat);
-        Py_CLEAR(state->type_StereoscopicVideoPackingMode);
-        Py_CLEAR(state->type_VideoEncodingQuality);
         Py_CLEAR(state->type_AudioEncodingProperties);
         Py_CLEAR(state->type_ContainerEncodingProperties);
         Py_CLEAR(state->type_H264ProfileIds);
@@ -5934,7 +5707,7 @@ namespace py::cpp::Windows::Media::MediaProperties
            "_winrt_Windows_Media_MediaProperties",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -6061,190 +5834,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_MediaProperties(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioEncodingQuality;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::AudioEncodingQuality is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::MediaProperties::MediaMirroringOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaMirroringOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::MediaMirroringOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::MediaProperties::MediaPixelFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaPixelFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::MediaPixelFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::MediaProperties::MediaRotation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaRotation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::MediaRotation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::MediaProperties::MediaThumbnailFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaThumbnailFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::MediaThumbnailFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::MediaProperties::SphericalVideoFrameFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SphericalVideoFrameFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::SphericalVideoFrameFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::MediaProperties::StereoscopicVideoPackingMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StereoscopicVideoPackingMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::StereoscopicVideoPackingMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoEncodingQuality;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::VideoEncodingQuality is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>::get_python_type() noexcept {

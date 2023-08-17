@@ -8,84 +8,9 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 {
     struct module_state
     {
-        PyObject* type_ExtendedExecutionReason;
-        PyObject* type_ExtendedExecutionResult;
-        PyObject* type_ExtendedExecutionRevokedReason;
         PyTypeObject* type_ExtendedExecutionRevokedEventArgs;
         PyTypeObject* type_ExtendedExecutionSession;
     };
-
-    static PyObject* register_ExtendedExecutionReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ExtendedExecutionReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ExtendedExecutionReason = type;
-        Py_INCREF(state->type_ExtendedExecutionReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ExtendedExecutionResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ExtendedExecutionResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ExtendedExecutionResult = type;
-        Py_INCREF(state->type_ExtendedExecutionResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ExtendedExecutionRevokedReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ExtendedExecutionRevokedReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ExtendedExecutionRevokedReason = type;
-        Py_INCREF(state->type_ExtendedExecutionRevokedReason);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ExtendedExecutionRevokedEventArgs class --------------------
     static constexpr const char* const type_name_ExtendedExecutionRevokedEventArgs = "ExtendedExecutionRevokedEventArgs";
@@ -555,12 +480,6 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
     // ----- Windows.ApplicationModel.ExtendedExecution Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::ExtendedExecution");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ExtendedExecutionReason", register_ExtendedExecutionReason, METH_O, "registers type"},
-        {"_register_ExtendedExecutionResult", register_ExtendedExecutionResult, METH_O, "registers type"},
-        {"_register_ExtendedExecutionRevokedReason", register_ExtendedExecutionRevokedReason, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -571,9 +490,6 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
             return 0;
         }
 
-        Py_VISIT(state->type_ExtendedExecutionReason);
-        Py_VISIT(state->type_ExtendedExecutionResult);
-        Py_VISIT(state->type_ExtendedExecutionRevokedReason);
         Py_VISIT(state->type_ExtendedExecutionRevokedEventArgs);
         Py_VISIT(state->type_ExtendedExecutionSession);
 
@@ -589,9 +505,6 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
             return 0;
         }
 
-        Py_CLEAR(state->type_ExtendedExecutionReason);
-        Py_CLEAR(state->type_ExtendedExecutionResult);
-        Py_CLEAR(state->type_ExtendedExecutionRevokedReason);
         Py_CLEAR(state->type_ExtendedExecutionRevokedEventArgs);
         Py_CLEAR(state->type_ExtendedExecutionSession);
 
@@ -604,7 +517,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
            "_winrt_Windows_ApplicationModel_ExtendedExecution",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -653,75 +566,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_ExtendedExecution(void) no
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ExtendedExecution;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ExtendedExecution");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExtendedExecutionReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ExtendedExecution;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ExtendedExecution");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExtendedExecutionResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ExtendedExecution;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ExtendedExecution");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExtendedExecutionRevokedReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs>::get_python_type() noexcept {

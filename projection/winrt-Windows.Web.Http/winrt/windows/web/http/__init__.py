@@ -128,12 +128,6 @@ class HttpVersion(enum.IntEnum):
     HTTP11 = 2
     HTTP20 = 3
 
-_ns_module._register_HttpCompletionOption(HttpCompletionOption)
-_ns_module._register_HttpProgressStage(HttpProgressStage)
-_ns_module._register_HttpResponseMessageSource(HttpResponseMessageSource)
-_ns_module._register_HttpStatusCode(HttpStatusCode)
-_ns_module._register_HttpVersion(HttpVersion)
-
 HttpProgress = _ns_module.HttpProgress
 HttpBufferContent = _ns_module.HttpBufferContent
 HttpClient = _ns_module.HttpClient

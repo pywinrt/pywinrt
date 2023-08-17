@@ -116,79 +116,92 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewBoundsMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewBoundsMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewOrientation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewOrientation";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewSwitchingOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewSwitchingOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewWindowingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewWindowingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::FullScreenSystemOverlayMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "FullScreenSystemOverlayMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::HandPreference>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "HandPreference";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ScreenCaptureDisabledBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UIColorType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "UIColorType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UIElementType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "UIElementType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UserInteractionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "UserInteractionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ViewSizePreference>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ViewSizePreference";
     };
 
     template<>

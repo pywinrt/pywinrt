@@ -44,13 +44,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DBindings>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
+        static constexpr const char* type_name = "Direct3DBindings";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DUsage>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
+        static constexpr const char* type_name = "Direct3DUsage";
     };
 
     template<>

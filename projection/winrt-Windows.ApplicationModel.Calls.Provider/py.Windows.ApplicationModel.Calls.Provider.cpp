@@ -542,9 +542,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
     // ----- Windows.ApplicationModel.Calls.Provider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Calls::Provider");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -582,7 +579,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
            "_winrt_Windows_ApplicationModel_Calls_Provider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

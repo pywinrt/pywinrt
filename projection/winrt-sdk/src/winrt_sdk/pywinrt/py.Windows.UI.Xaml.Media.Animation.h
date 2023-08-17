@@ -171,37 +171,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ClockState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ClockState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationComponent>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ConnectedAnimationComponent";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "EasingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::FillBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "FillBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "RepeatBehaviorType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionEffect>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SlideNavigationTransitionEffect";
     };
 
     template<>

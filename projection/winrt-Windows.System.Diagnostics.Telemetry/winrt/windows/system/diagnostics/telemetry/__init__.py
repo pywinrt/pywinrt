@@ -11,8 +11,6 @@ class PlatformTelemetryRegistrationStatus(enum.IntEnum):
     SETTINGS_OUT_OF_RANGE = 1
     UNKNOWN_FAILURE = 2
 
-_ns_module._register_PlatformTelemetryRegistrationStatus(PlatformTelemetryRegistrationStatus)
-
 PlatformTelemetryClient = _ns_module.PlatformTelemetryClient
 PlatformTelemetryRegistrationResult = _ns_module.PlatformTelemetryRegistrationResult
 PlatformTelemetryRegistrationSettings = _ns_module.PlatformTelemetryRegistrationSettings

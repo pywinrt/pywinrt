@@ -70,10 +70,6 @@ class WebViewControlProcessCapabilityState(enum.IntEnum):
     DISABLED = 1
     ENABLED = 2
 
-_ns_module._register_WebViewControlAcceleratorKeyRoutingStage(WebViewControlAcceleratorKeyRoutingStage)
-_ns_module._register_WebViewControlMoveFocusReason(WebViewControlMoveFocusReason)
-_ns_module._register_WebViewControlProcessCapabilityState(WebViewControlProcessCapabilityState)
-
 WebViewControl = _ns_module.WebViewControl
 WebViewControlAcceleratorKeyPressedEventArgs = _ns_module.WebViewControlAcceleratorKeyPressedEventArgs
 WebViewControlMoveFocusRequestedEventArgs = _ns_module.WebViewControlMoveFocusRequestedEventArgs

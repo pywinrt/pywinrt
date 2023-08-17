@@ -167,163 +167,190 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::CellularDtmfMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "CellularDtmfMode";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::DtmfKey>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "DtmfKey";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::DtmfToneAudioPlayback>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "DtmfToneAudioPlayback";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneAudioRoutingEndpoint>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneAudioRoutingEndpoint";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallAudioDevice>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallAudioDevice";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallDirection";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryMedia>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallHistoryEntryMedia";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryOtherAppReadAccess>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallHistoryEntryOtherAppReadAccess";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryDesiredMedia>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallHistoryEntryQueryDesiredMedia";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryRawAddressKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallHistoryEntryRawAddressKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistorySourceIdKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallHistorySourceIdKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStoreAccessType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallHistoryStoreAccessType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallMedia>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallMedia";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallOperationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallOperationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneCallStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineNetworkOperatorDisplayTextLocation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneLineNetworkOperatorDisplayTextLocation";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineOperationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneLineOperationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineTransport>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneLineTransport";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneLineWatcherStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneNetworkState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneNetworkState";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneSimState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneSimState";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneVoicemailType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "PhoneVoicemailType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::TransportDeviceAudioRoutingStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "TransportDeviceAudioRoutingStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "VoipPhoneCallMedia";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallRejectReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "VoipPhoneCallRejectReason";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallResourceReservationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "VoipPhoneCallResourceReservationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "VoipPhoneCallState";
     };
 
     template<>

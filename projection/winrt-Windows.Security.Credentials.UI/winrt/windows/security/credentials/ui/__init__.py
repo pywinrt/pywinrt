@@ -46,11 +46,6 @@ class UserConsentVerifierAvailability(enum.IntEnum):
     DISABLED_BY_POLICY = 3
     DEVICE_BUSY = 4
 
-_ns_module._register_AuthenticationProtocol(AuthenticationProtocol)
-_ns_module._register_CredentialSaveOption(CredentialSaveOption)
-_ns_module._register_UserConsentVerificationResult(UserConsentVerificationResult)
-_ns_module._register_UserConsentVerifierAvailability(UserConsentVerifierAvailability)
-
 CredentialPicker = _ns_module.CredentialPicker
 CredentialPickerOptions = _ns_module.CredentialPickerOptions
 CredentialPickerResults = _ns_module.CredentialPickerResults

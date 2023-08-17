@@ -8,11 +8,6 @@ namespace py::cpp::Windows::UI::WindowManagement
 {
     struct module_state
     {
-        PyObject* type_AppWindowClosedReason;
-        PyObject* type_AppWindowFrameStyle;
-        PyObject* type_AppWindowPresentationKind;
-        PyObject* type_AppWindowTitleBarVisibility;
-        PyObject* type_WindowingEnvironmentKind;
         PyTypeObject* type_AppWindow;
         PyTypeObject* type_AppWindowChangedEventArgs;
         PyTypeObject* type_AppWindowCloseRequestedEventArgs;
@@ -33,126 +28,6 @@ namespace py::cpp::Windows::UI::WindowManagement
         PyTypeObject* type_WindowingEnvironmentChangedEventArgs;
         PyTypeObject* type_WindowingEnvironmentRemovedEventArgs;
     };
-
-    static PyObject* register_AppWindowClosedReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AppWindowClosedReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AppWindowClosedReason = type;
-        Py_INCREF(state->type_AppWindowClosedReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AppWindowFrameStyle(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AppWindowFrameStyle)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AppWindowFrameStyle = type;
-        Py_INCREF(state->type_AppWindowFrameStyle);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AppWindowPresentationKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AppWindowPresentationKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AppWindowPresentationKind = type;
-        Py_INCREF(state->type_AppWindowPresentationKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AppWindowTitleBarVisibility(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AppWindowTitleBarVisibility)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AppWindowTitleBarVisibility = type;
-        Py_INCREF(state->type_AppWindowTitleBarVisibility);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WindowingEnvironmentKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WindowingEnvironmentKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WindowingEnvironmentKind = type;
-        Py_INCREF(state->type_WindowingEnvironmentKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AppWindow class --------------------
     static constexpr const char* const type_name_AppWindow = "AppWindow";
@@ -4146,14 +4021,6 @@ namespace py::cpp::Windows::UI::WindowManagement
     // ----- Windows.UI.WindowManagement Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::WindowManagement");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AppWindowClosedReason", register_AppWindowClosedReason, METH_O, "registers type"},
-        {"_register_AppWindowFrameStyle", register_AppWindowFrameStyle, METH_O, "registers type"},
-        {"_register_AppWindowPresentationKind", register_AppWindowPresentationKind, METH_O, "registers type"},
-        {"_register_AppWindowTitleBarVisibility", register_AppWindowTitleBarVisibility, METH_O, "registers type"},
-        {"_register_WindowingEnvironmentKind", register_WindowingEnvironmentKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4164,11 +4031,6 @@ namespace py::cpp::Windows::UI::WindowManagement
             return 0;
         }
 
-        Py_VISIT(state->type_AppWindowClosedReason);
-        Py_VISIT(state->type_AppWindowFrameStyle);
-        Py_VISIT(state->type_AppWindowPresentationKind);
-        Py_VISIT(state->type_AppWindowTitleBarVisibility);
-        Py_VISIT(state->type_WindowingEnvironmentKind);
         Py_VISIT(state->type_AppWindow);
         Py_VISIT(state->type_AppWindowChangedEventArgs);
         Py_VISIT(state->type_AppWindowCloseRequestedEventArgs);
@@ -4201,11 +4063,6 @@ namespace py::cpp::Windows::UI::WindowManagement
             return 0;
         }
 
-        Py_CLEAR(state->type_AppWindowClosedReason);
-        Py_CLEAR(state->type_AppWindowFrameStyle);
-        Py_CLEAR(state->type_AppWindowPresentationKind);
-        Py_CLEAR(state->type_AppWindowTitleBarVisibility);
-        Py_CLEAR(state->type_WindowingEnvironmentKind);
         Py_CLEAR(state->type_AppWindow);
         Py_CLEAR(state->type_AppWindowChangedEventArgs);
         Py_CLEAR(state->type_AppWindowCloseRequestedEventArgs);
@@ -4235,7 +4092,7 @@ namespace py::cpp::Windows::UI::WindowManagement
            "_winrt_Windows_UI_WindowManagement",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4386,121 +4243,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_WindowManagement(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::WindowManagement::AppWindowClosedReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowClosedReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowClosedReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::WindowManagement::AppWindowFrameStyle>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowFrameStyle;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowFrameStyle is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowPresentationKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowPresentationKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarVisibility>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowTitleBarVisibility;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowTitleBarVisibility is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowingEnvironmentKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::WindowingEnvironmentKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindow>::get_python_type() noexcept {

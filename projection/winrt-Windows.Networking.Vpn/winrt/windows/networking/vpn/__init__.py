@@ -138,20 +138,6 @@ class VpnRoutingPolicyType(enum.IntEnum):
     SPLIT_ROUTING = 0
     FORCE_ALL_TRAFFIC_OVER_VPN = 1
 
-_ns_module._register_VpnAppIdType(VpnAppIdType)
-_ns_module._register_VpnAuthenticationMethod(VpnAuthenticationMethod)
-_ns_module._register_VpnChannelActivityEventType(VpnChannelActivityEventType)
-_ns_module._register_VpnChannelRequestCredentialsOptions(VpnChannelRequestCredentialsOptions)
-_ns_module._register_VpnCredentialType(VpnCredentialType)
-_ns_module._register_VpnDataPathType(VpnDataPathType)
-_ns_module._register_VpnDomainNameType(VpnDomainNameType)
-_ns_module._register_VpnIPProtocol(VpnIPProtocol)
-_ns_module._register_VpnManagementConnectionStatus(VpnManagementConnectionStatus)
-_ns_module._register_VpnManagementErrorStatus(VpnManagementErrorStatus)
-_ns_module._register_VpnNativeProtocolType(VpnNativeProtocolType)
-_ns_module._register_VpnPacketBufferStatus(VpnPacketBufferStatus)
-_ns_module._register_VpnRoutingPolicyType(VpnRoutingPolicyType)
-
 VpnAppId = _ns_module.VpnAppId
 VpnChannel = _ns_module.VpnChannel
 VpnChannelActivityEventArgs = _ns_module.VpnChannelActivityEventArgs

@@ -8,108 +8,8 @@ namespace py::cpp::Windows::Devices::Display
 {
     struct module_state
     {
-        PyObject* type_DisplayMonitorConnectionKind;
-        PyObject* type_DisplayMonitorDescriptorKind;
-        PyObject* type_DisplayMonitorPhysicalConnectorKind;
-        PyObject* type_DisplayMonitorUsageKind;
         PyTypeObject* type_DisplayMonitor;
     };
-
-    static PyObject* register_DisplayMonitorConnectionKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DisplayMonitorConnectionKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DisplayMonitorConnectionKind = type;
-        Py_INCREF(state->type_DisplayMonitorConnectionKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DisplayMonitorDescriptorKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DisplayMonitorDescriptorKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DisplayMonitorDescriptorKind = type;
-        Py_INCREF(state->type_DisplayMonitorDescriptorKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DisplayMonitorPhysicalConnectorKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DisplayMonitorPhysicalConnectorKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DisplayMonitorPhysicalConnectorKind = type;
-        Py_INCREF(state->type_DisplayMonitorPhysicalConnectorKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DisplayMonitorUsageKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DisplayMonitorUsageKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DisplayMonitorUsageKind = type;
-        Py_INCREF(state->type_DisplayMonitorUsageKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- DisplayMonitor class --------------------
     static constexpr const char* const type_name_DisplayMonitor = "DisplayMonitor";
@@ -715,13 +615,6 @@ namespace py::cpp::Windows::Devices::Display
     // ----- Windows.Devices.Display Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Display");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_DisplayMonitorConnectionKind", register_DisplayMonitorConnectionKind, METH_O, "registers type"},
-        {"_register_DisplayMonitorDescriptorKind", register_DisplayMonitorDescriptorKind, METH_O, "registers type"},
-        {"_register_DisplayMonitorPhysicalConnectorKind", register_DisplayMonitorPhysicalConnectorKind, METH_O, "registers type"},
-        {"_register_DisplayMonitorUsageKind", register_DisplayMonitorUsageKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -732,10 +625,6 @@ namespace py::cpp::Windows::Devices::Display
             return 0;
         }
 
-        Py_VISIT(state->type_DisplayMonitorConnectionKind);
-        Py_VISIT(state->type_DisplayMonitorDescriptorKind);
-        Py_VISIT(state->type_DisplayMonitorPhysicalConnectorKind);
-        Py_VISIT(state->type_DisplayMonitorUsageKind);
         Py_VISIT(state->type_DisplayMonitor);
 
         return 0;
@@ -750,10 +639,6 @@ namespace py::cpp::Windows::Devices::Display
             return 0;
         }
 
-        Py_CLEAR(state->type_DisplayMonitorConnectionKind);
-        Py_CLEAR(state->type_DisplayMonitorDescriptorKind);
-        Py_CLEAR(state->type_DisplayMonitorPhysicalConnectorKind);
-        Py_CLEAR(state->type_DisplayMonitorUsageKind);
         Py_CLEAR(state->type_DisplayMonitor);
 
         return 0;
@@ -765,7 +650,7 @@ namespace py::cpp::Windows::Devices::Display
            "_winrt_Windows_Devices_Display",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -808,98 +693,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Display(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Display::DisplayMonitorConnectionKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayMonitorConnectionKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::DisplayMonitorConnectionKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Display::DisplayMonitorDescriptorKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayMonitorDescriptorKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::DisplayMonitorDescriptorKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayMonitorPhysicalConnectorKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Display::DisplayMonitorUsageKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayMonitorUsageKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::DisplayMonitorUsageKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::DisplayMonitor>::get_python_type() noexcept {

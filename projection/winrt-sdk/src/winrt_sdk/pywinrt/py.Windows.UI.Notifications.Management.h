@@ -42,7 +42,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::Management::UserNotificationListenerAccessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications.management";
+        static constexpr const char* type_name = "UserNotificationListenerAccessStatus";
     };
 
     template<>

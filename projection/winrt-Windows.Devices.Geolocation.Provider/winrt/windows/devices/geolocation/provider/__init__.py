@@ -22,6 +22,4 @@ class LocationOverrideStatus(enum.IntEnum):
     ALREADY_STARTED = 2
     OTHER = 3
 
-_ns_module._register_LocationOverrideStatus(LocationOverrideStatus)
-
 GeolocationProvider = _ns_module.GeolocationProvider

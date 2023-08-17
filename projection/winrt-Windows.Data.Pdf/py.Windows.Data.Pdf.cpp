@@ -8,36 +8,11 @@ namespace py::cpp::Windows::Data::Pdf
 {
     struct module_state
     {
-        PyObject* type_PdfPageRotation;
         PyTypeObject* type_PdfDocument;
         PyTypeObject* type_PdfPage;
         PyTypeObject* type_PdfPageDimensions;
         PyTypeObject* type_PdfPageRenderOptions;
     };
-
-    static PyObject* register_PdfPageRotation(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PdfPageRotation)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PdfPageRotation = type;
-        Py_INCREF(state->type_PdfPageRotation);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PdfDocument class --------------------
     static constexpr const char* const type_name_PdfDocument = "PdfDocument";
@@ -1167,10 +1142,6 @@ namespace py::cpp::Windows::Data::Pdf
     // ----- Windows.Data.Pdf Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Data::Pdf");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PdfPageRotation", register_PdfPageRotation, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1181,7 +1152,6 @@ namespace py::cpp::Windows::Data::Pdf
             return 0;
         }
 
-        Py_VISIT(state->type_PdfPageRotation);
         Py_VISIT(state->type_PdfDocument);
         Py_VISIT(state->type_PdfPage);
         Py_VISIT(state->type_PdfPageDimensions);
@@ -1199,7 +1169,6 @@ namespace py::cpp::Windows::Data::Pdf
             return 0;
         }
 
-        Py_CLEAR(state->type_PdfPageRotation);
         Py_CLEAR(state->type_PdfDocument);
         Py_CLEAR(state->type_PdfPage);
         Py_CLEAR(state->type_PdfPageDimensions);
@@ -1214,7 +1183,7 @@ namespace py::cpp::Windows::Data::Pdf
            "_winrt_Windows_Data_Pdf",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1275,29 +1244,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Data_Pdf(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Data::Pdf::PdfPageRotation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Pdf;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Pdf");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PdfPageRotation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Pdf::PdfPageRotation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Data::Pdf::PdfDocument>::get_python_type() noexcept {

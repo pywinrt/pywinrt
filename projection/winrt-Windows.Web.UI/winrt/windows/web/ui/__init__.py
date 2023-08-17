@@ -56,9 +56,6 @@ class WebViewControlPermissionType(enum.IntEnum):
     SCREEN = 5
     IMMERSIVE_VIEW = 6
 
-_ns_module._register_WebViewControlPermissionState(WebViewControlPermissionState)
-_ns_module._register_WebViewControlPermissionType(WebViewControlPermissionType)
-
 WebViewControlContentLoadingEventArgs = _ns_module.WebViewControlContentLoadingEventArgs
 WebViewControlDOMContentLoadedEventArgs = _ns_module.WebViewControlDOMContentLoadedEventArgs
 WebViewControlDeferredPermissionRequest = _ns_module.WebViewControlDeferredPermissionRequest

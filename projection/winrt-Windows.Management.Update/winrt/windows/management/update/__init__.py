@@ -62,10 +62,6 @@ class WindowsUpdateAttentionRequiredReason(enum.IntEnum):
     DEFERRED_DURING_OOBE = 31
     DEFERRED_FOR_SUSTAINABLE_TIME = 32
 
-_ns_module._register_WindowsUpdateAdministratorOptions(WindowsUpdateAdministratorOptions)
-_ns_module._register_WindowsUpdateAdministratorStatus(WindowsUpdateAdministratorStatus)
-_ns_module._register_WindowsUpdateAttentionRequiredReason(WindowsUpdateAttentionRequiredReason)
-
 PreviewBuildsManager = _ns_module.PreviewBuildsManager
 PreviewBuildsState = _ns_module.PreviewBuildsState
 WindowsUpdate = _ns_module.WindowsUpdate

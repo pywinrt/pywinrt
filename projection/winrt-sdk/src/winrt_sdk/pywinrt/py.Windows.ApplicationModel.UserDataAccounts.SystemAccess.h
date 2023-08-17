@@ -55,31 +55,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
+        static constexpr const char* type_name = "DeviceAccountAuthenticationType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
+        static constexpr const char* type_name = "DeviceAccountIconId";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
+        static constexpr const char* type_name = "DeviceAccountMailAgeFilter";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
+        static constexpr const char* type_name = "DeviceAccountServerType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
+        static constexpr const char* type_name = "DeviceAccountSyncScheduleKind";
     };
 
     template<>

@@ -26,7 +26,5 @@ class AddContactResult(enum.IntEnum):
     ALREADY_ADDED = 1
     UNAVAILABLE = 2
 
-_ns_module._register_AddContactResult(AddContactResult)
-
 ContactPickerUI = _ns_module.ContactPickerUI
 ContactRemovedEventArgs = _ns_module.ContactRemovedEventArgs

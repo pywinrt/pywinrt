@@ -138,19 +138,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::BindingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
+        static constexpr const char* type_name = "BindingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::RelativeSourceMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
+        static constexpr const char* type_name = "RelativeSourceMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::UpdateSourceTrigger>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
+        static constexpr const char* type_name = "UpdateSourceTrigger";
     };
 
     template<>

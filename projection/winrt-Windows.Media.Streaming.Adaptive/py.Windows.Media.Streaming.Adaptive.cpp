@@ -8,10 +8,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 {
     struct module_state
     {
-        PyObject* type_AdaptiveMediaSourceCreationStatus;
-        PyObject* type_AdaptiveMediaSourceDiagnosticType;
-        PyObject* type_AdaptiveMediaSourceDownloadBitrateChangedReason;
-        PyObject* type_AdaptiveMediaSourceResourceType;
         PyTypeObject* type_AdaptiveMediaSource;
         PyTypeObject* type_AdaptiveMediaSourceAdvancedSettings;
         PyTypeObject* type_AdaptiveMediaSourceCorrelatedTimes;
@@ -27,102 +23,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         PyTypeObject* type_AdaptiveMediaSourceDownloadStatistics;
         PyTypeObject* type_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs;
     };
-
-    static PyObject* register_AdaptiveMediaSourceCreationStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AdaptiveMediaSourceCreationStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AdaptiveMediaSourceCreationStatus = type;
-        Py_INCREF(state->type_AdaptiveMediaSourceCreationStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AdaptiveMediaSourceDiagnosticType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AdaptiveMediaSourceDiagnosticType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AdaptiveMediaSourceDiagnosticType = type;
-        Py_INCREF(state->type_AdaptiveMediaSourceDiagnosticType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AdaptiveMediaSourceDownloadBitrateChangedReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AdaptiveMediaSourceDownloadBitrateChangedReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AdaptiveMediaSourceDownloadBitrateChangedReason = type;
-        Py_INCREF(state->type_AdaptiveMediaSourceDownloadBitrateChangedReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_AdaptiveMediaSourceResourceType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AdaptiveMediaSourceResourceType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AdaptiveMediaSourceResourceType = type;
-        Py_INCREF(state->type_AdaptiveMediaSourceResourceType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AdaptiveMediaSource class --------------------
     static constexpr const char* const type_name_AdaptiveMediaSource = "AdaptiveMediaSource";
@@ -3881,13 +3781,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     // ----- Windows.Media.Streaming.Adaptive Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::Streaming::Adaptive");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AdaptiveMediaSourceCreationStatus", register_AdaptiveMediaSourceCreationStatus, METH_O, "registers type"},
-        {"_register_AdaptiveMediaSourceDiagnosticType", register_AdaptiveMediaSourceDiagnosticType, METH_O, "registers type"},
-        {"_register_AdaptiveMediaSourceDownloadBitrateChangedReason", register_AdaptiveMediaSourceDownloadBitrateChangedReason, METH_O, "registers type"},
-        {"_register_AdaptiveMediaSourceResourceType", register_AdaptiveMediaSourceResourceType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3898,10 +3791,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
             return 0;
         }
 
-        Py_VISIT(state->type_AdaptiveMediaSourceCreationStatus);
-        Py_VISIT(state->type_AdaptiveMediaSourceDiagnosticType);
-        Py_VISIT(state->type_AdaptiveMediaSourceDownloadBitrateChangedReason);
-        Py_VISIT(state->type_AdaptiveMediaSourceResourceType);
         Py_VISIT(state->type_AdaptiveMediaSource);
         Py_VISIT(state->type_AdaptiveMediaSourceAdvancedSettings);
         Py_VISIT(state->type_AdaptiveMediaSourceCorrelatedTimes);
@@ -3929,10 +3818,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
             return 0;
         }
 
-        Py_CLEAR(state->type_AdaptiveMediaSourceCreationStatus);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDiagnosticType);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDownloadBitrateChangedReason);
-        Py_CLEAR(state->type_AdaptiveMediaSourceResourceType);
         Py_CLEAR(state->type_AdaptiveMediaSource);
         Py_CLEAR(state->type_AdaptiveMediaSourceAdvancedSettings);
         Py_CLEAR(state->type_AdaptiveMediaSourceCorrelatedTimes);
@@ -3957,7 +3842,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
            "_winrt_Windows_Media_Streaming_Adaptive",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4078,98 +3963,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Streaming_Adaptive(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceCreationStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDiagnosticType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDownloadBitrateChangedReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceResourceType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceResourceType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceResourceType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>::get_python_type() noexcept {

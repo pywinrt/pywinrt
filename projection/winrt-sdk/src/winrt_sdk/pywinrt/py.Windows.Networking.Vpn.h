@@ -151,79 +151,92 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnAppIdType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnAppIdType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnAuthenticationMethod>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnAuthenticationMethod";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnChannelActivityEventType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnChannelActivityEventType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnChannelRequestCredentialsOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnChannelRequestCredentialsOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnCredentialType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCredentialType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnDataPathType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnDataPathType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnDomainNameType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnDomainNameType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnIPProtocol>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnIPProtocol";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnManagementConnectionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnManagementConnectionStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnManagementErrorStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnManagementErrorStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnNativeProtocolType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnNativeProtocolType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnPacketBufferStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnPacketBufferStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::VpnRoutingPolicyType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnRoutingPolicyType";
     };
 
     template<>

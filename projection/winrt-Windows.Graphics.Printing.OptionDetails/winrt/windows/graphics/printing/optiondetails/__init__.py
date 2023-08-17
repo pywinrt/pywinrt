@@ -38,9 +38,6 @@ class PrintOptionType(enum.IntEnum):
     ITEM_LIST = 3
     TOGGLE = 4
 
-_ns_module._register_PrintOptionStates(PrintOptionStates)
-_ns_module._register_PrintOptionType(PrintOptionType)
-
 PrintBindingOptionDetails = _ns_module.PrintBindingOptionDetails
 PrintBorderingOptionDetails = _ns_module.PrintBorderingOptionDetails
 PrintCollationOptionDetails = _ns_module.PrintCollationOptionDetails

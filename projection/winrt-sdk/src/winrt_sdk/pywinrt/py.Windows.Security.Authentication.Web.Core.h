@@ -60,19 +60,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Core::FindAllWebAccountsStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "FindAllWebAccountsStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestPromptType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebTokenRequestPromptType";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebTokenRequestStatus";
     };
 
     template<>

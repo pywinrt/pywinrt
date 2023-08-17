@@ -8,7 +8,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 {
     struct module_state
     {
-        PyObject* type_WebUICommandBarClosedDisplayMode;
         PyTypeObject* type_WebUICommandBar;
         PyTypeObject* type_WebUICommandBarBitmapIcon;
         PyTypeObject* type_WebUICommandBarConfirmationButton;
@@ -19,30 +18,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
         PyTypeObject* type_IWebUICommandBarElement;
         PyTypeObject* type_IWebUICommandBarIcon;
     };
-
-    static PyObject* register_WebUICommandBarClosedDisplayMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WebUICommandBarClosedDisplayMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WebUICommandBarClosedDisplayMode = type;
-        Py_INCREF(state->type_WebUICommandBarClosedDisplayMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- WebUICommandBar class --------------------
     static constexpr const char* const type_name_WebUICommandBar = "WebUICommandBar";
@@ -1871,10 +1846,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     // ----- Windows.UI.WebUI.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::WebUI::Core");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_WebUICommandBarClosedDisplayMode", register_WebUICommandBarClosedDisplayMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1885,7 +1856,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
             return 0;
         }
 
-        Py_VISIT(state->type_WebUICommandBarClosedDisplayMode);
         Py_VISIT(state->type_WebUICommandBar);
         Py_VISIT(state->type_WebUICommandBarBitmapIcon);
         Py_VISIT(state->type_WebUICommandBarConfirmationButton);
@@ -1908,7 +1878,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
             return 0;
         }
 
-        Py_CLEAR(state->type_WebUICommandBarClosedDisplayMode);
         Py_CLEAR(state->type_WebUICommandBar);
         Py_CLEAR(state->type_WebUICommandBarBitmapIcon);
         Py_CLEAR(state->type_WebUICommandBarConfirmationButton);
@@ -1928,7 +1897,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
            "_winrt_Windows_UI_WebUI_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2019,29 +1988,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_WebUI_Core(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICommandBarClosedDisplayMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBar>::get_python_type() noexcept {

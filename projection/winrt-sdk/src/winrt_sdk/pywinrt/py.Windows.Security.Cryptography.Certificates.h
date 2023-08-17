@@ -90,49 +90,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateChainPolicy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
+        static constexpr const char* type_name = "CertificateChainPolicy";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::ChainValidationResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
+        static constexpr const char* type_name = "ChainValidationResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::EnrollKeyUsages>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
+        static constexpr const char* type_name = "EnrollKeyUsages";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::ExportOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
+        static constexpr const char* type_name = "ExportOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
+        static constexpr const char* type_name = "InstallOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::KeyProtectionLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
+        static constexpr const char* type_name = "KeyProtectionLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::KeySize>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
+        static constexpr const char* type_name = "KeySize";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::SignatureValidationResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
+        static constexpr const char* type_name = "SignatureValidationResult";
     };
 
     template<>

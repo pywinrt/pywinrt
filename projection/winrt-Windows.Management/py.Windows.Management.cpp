@@ -8,85 +8,10 @@ namespace py::cpp::Windows::Management
 {
     struct module_state
     {
-        PyObject* type_MdmAlertDataType;
-        PyObject* type_MdmAlertMark;
-        PyObject* type_MdmSessionState;
         PyTypeObject* type_MdmAlert;
         PyTypeObject* type_MdmSession;
         PyTypeObject* type_MdmSessionManager;
     };
-
-    static PyObject* register_MdmAlertDataType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MdmAlertDataType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MdmAlertDataType = type;
-        Py_INCREF(state->type_MdmAlertDataType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MdmAlertMark(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MdmAlertMark)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MdmAlertMark = type;
-        Py_INCREF(state->type_MdmAlertMark);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MdmSessionState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MdmSessionState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MdmSessionState = type;
-        Py_INCREF(state->type_MdmSessionState);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- MdmAlert class --------------------
     static constexpr const char* const type_name_MdmAlert = "MdmAlert";
@@ -932,12 +857,6 @@ namespace py::cpp::Windows::Management
     // ----- Windows.Management Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Management");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_MdmAlertDataType", register_MdmAlertDataType, METH_O, "registers type"},
-        {"_register_MdmAlertMark", register_MdmAlertMark, METH_O, "registers type"},
-        {"_register_MdmSessionState", register_MdmSessionState, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -948,9 +867,6 @@ namespace py::cpp::Windows::Management
             return 0;
         }
 
-        Py_VISIT(state->type_MdmAlertDataType);
-        Py_VISIT(state->type_MdmAlertMark);
-        Py_VISIT(state->type_MdmSessionState);
         Py_VISIT(state->type_MdmAlert);
         Py_VISIT(state->type_MdmSession);
         Py_VISIT(state->type_MdmSessionManager);
@@ -967,9 +883,6 @@ namespace py::cpp::Windows::Management
             return 0;
         }
 
-        Py_CLEAR(state->type_MdmAlertDataType);
-        Py_CLEAR(state->type_MdmAlertMark);
-        Py_CLEAR(state->type_MdmSessionState);
         Py_CLEAR(state->type_MdmAlert);
         Py_CLEAR(state->type_MdmSession);
         Py_CLEAR(state->type_MdmSessionManager);
@@ -983,7 +896,7 @@ namespace py::cpp::Windows::Management
            "_winrt_Windows_Management",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1044,75 +957,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Management::MdmAlertDataType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MdmAlertDataType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::MdmAlertDataType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Management::MdmAlertMark>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MdmAlertMark;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::MdmAlertMark is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Management::MdmSessionState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MdmSessionState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::MdmSessionState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Management::MdmAlert>::get_python_type() noexcept {

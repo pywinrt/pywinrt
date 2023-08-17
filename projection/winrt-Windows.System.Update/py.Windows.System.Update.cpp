@@ -8,110 +8,10 @@ namespace py::cpp::Windows::System::Update
 {
     struct module_state
     {
-        PyObject* type_SystemUpdateAttentionRequiredReason;
-        PyObject* type_SystemUpdateItemState;
-        PyObject* type_SystemUpdateManagerState;
-        PyObject* type_SystemUpdateStartInstallAction;
         PyTypeObject* type_SystemUpdateItem;
         PyTypeObject* type_SystemUpdateLastErrorInfo;
         PyTypeObject* type_SystemUpdateManager;
     };
-
-    static PyObject* register_SystemUpdateAttentionRequiredReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SystemUpdateAttentionRequiredReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SystemUpdateAttentionRequiredReason = type;
-        Py_INCREF(state->type_SystemUpdateAttentionRequiredReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SystemUpdateItemState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SystemUpdateItemState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SystemUpdateItemState = type;
-        Py_INCREF(state->type_SystemUpdateItemState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SystemUpdateManagerState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SystemUpdateManagerState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SystemUpdateManagerState = type;
-        Py_INCREF(state->type_SystemUpdateManagerState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SystemUpdateStartInstallAction(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SystemUpdateStartInstallAction)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SystemUpdateStartInstallAction = type;
-        Py_INCREF(state->type_SystemUpdateStartInstallAction);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- SystemUpdateItem class --------------------
     static constexpr const char* const type_name_SystemUpdateItem = "SystemUpdateItem";
@@ -1149,13 +1049,6 @@ namespace py::cpp::Windows::System::Update
     // ----- Windows.System.Update Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::System::Update");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SystemUpdateAttentionRequiredReason", register_SystemUpdateAttentionRequiredReason, METH_O, "registers type"},
-        {"_register_SystemUpdateItemState", register_SystemUpdateItemState, METH_O, "registers type"},
-        {"_register_SystemUpdateManagerState", register_SystemUpdateManagerState, METH_O, "registers type"},
-        {"_register_SystemUpdateStartInstallAction", register_SystemUpdateStartInstallAction, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1166,10 +1059,6 @@ namespace py::cpp::Windows::System::Update
             return 0;
         }
 
-        Py_VISIT(state->type_SystemUpdateAttentionRequiredReason);
-        Py_VISIT(state->type_SystemUpdateItemState);
-        Py_VISIT(state->type_SystemUpdateManagerState);
-        Py_VISIT(state->type_SystemUpdateStartInstallAction);
         Py_VISIT(state->type_SystemUpdateItem);
         Py_VISIT(state->type_SystemUpdateLastErrorInfo);
         Py_VISIT(state->type_SystemUpdateManager);
@@ -1186,10 +1075,6 @@ namespace py::cpp::Windows::System::Update
             return 0;
         }
 
-        Py_CLEAR(state->type_SystemUpdateAttentionRequiredReason);
-        Py_CLEAR(state->type_SystemUpdateItemState);
-        Py_CLEAR(state->type_SystemUpdateManagerState);
-        Py_CLEAR(state->type_SystemUpdateStartInstallAction);
         Py_CLEAR(state->type_SystemUpdateItem);
         Py_CLEAR(state->type_SystemUpdateLastErrorInfo);
         Py_CLEAR(state->type_SystemUpdateManager);
@@ -1203,7 +1088,7 @@ namespace py::cpp::Windows::System::Update
            "_winrt_Windows_System_Update",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1264,98 +1149,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Update(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::System::Update::SystemUpdateAttentionRequiredReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemUpdateAttentionRequiredReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Update::SystemUpdateAttentionRequiredReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Update::SystemUpdateItemState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemUpdateItemState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Update::SystemUpdateItemState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Update::SystemUpdateManagerState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemUpdateManagerState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Update::SystemUpdateManagerState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Update::SystemUpdateStartInstallAction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemUpdateStartInstallAction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Update::SystemUpdateStartInstallAction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::System::Update::SystemUpdateItem>::get_python_type() noexcept {

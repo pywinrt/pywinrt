@@ -216,19 +216,6 @@ class PatternInterface(enum.IntEnum):
     TEXT_EDIT = 32
     CUSTOM_NAVIGATION = 33
 
-_ns_module._register_AccessibilityView(AccessibilityView)
-_ns_module._register_AutomationControlType(AutomationControlType)
-_ns_module._register_AutomationEvents(AutomationEvents)
-_ns_module._register_AutomationHeadingLevel(AutomationHeadingLevel)
-_ns_module._register_AutomationLandmarkType(AutomationLandmarkType)
-_ns_module._register_AutomationLiveSetting(AutomationLiveSetting)
-_ns_module._register_AutomationNavigationDirection(AutomationNavigationDirection)
-_ns_module._register_AutomationNotificationKind(AutomationNotificationKind)
-_ns_module._register_AutomationNotificationProcessing(AutomationNotificationProcessing)
-_ns_module._register_AutomationOrientation(AutomationOrientation)
-_ns_module._register_AutomationStructureChangeType(AutomationStructureChangeType)
-_ns_module._register_PatternInterface(PatternInterface)
-
 RawElementProviderRuntimeId = _ns_module.RawElementProviderRuntimeId
 AppBarAutomationPeer = _ns_module.AppBarAutomationPeer
 AppBarButtonAutomationPeer = _ns_module.AppBarButtonAutomationPeer

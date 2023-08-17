@@ -8,86 +8,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 {
     struct module_state
     {
-        PyObject* type_HttpCacheReadBehavior;
-        PyObject* type_HttpCacheWriteBehavior;
-        PyObject* type_HttpCookieUsageBehavior;
         PyTypeObject* type_HttpBaseProtocolFilter;
         PyTypeObject* type_HttpCacheControl;
         PyTypeObject* type_HttpServerCustomValidationRequestedEventArgs;
         PyTypeObject* type_IHttpFilter;
     };
-
-    static PyObject* register_HttpCacheReadBehavior(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HttpCacheReadBehavior)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HttpCacheReadBehavior = type;
-        Py_INCREF(state->type_HttpCacheReadBehavior);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HttpCacheWriteBehavior(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HttpCacheWriteBehavior)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HttpCacheWriteBehavior = type;
-        Py_INCREF(state->type_HttpCacheWriteBehavior);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_HttpCookieUsageBehavior(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_HttpCookieUsageBehavior)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_HttpCookieUsageBehavior = type;
-        Py_INCREF(state->type_HttpCookieUsageBehavior);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- HttpBaseProtocolFilter class --------------------
     static constexpr const char* const type_name_HttpBaseProtocolFilter = "HttpBaseProtocolFilter";
@@ -1510,12 +1435,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     // ----- Windows.Web.Http.Filters Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Web::Http::Filters");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_HttpCacheReadBehavior", register_HttpCacheReadBehavior, METH_O, "registers type"},
-        {"_register_HttpCacheWriteBehavior", register_HttpCacheWriteBehavior, METH_O, "registers type"},
-        {"_register_HttpCookieUsageBehavior", register_HttpCookieUsageBehavior, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1526,9 +1445,6 @@ namespace py::cpp::Windows::Web::Http::Filters
             return 0;
         }
 
-        Py_VISIT(state->type_HttpCacheReadBehavior);
-        Py_VISIT(state->type_HttpCacheWriteBehavior);
-        Py_VISIT(state->type_HttpCookieUsageBehavior);
         Py_VISIT(state->type_HttpBaseProtocolFilter);
         Py_VISIT(state->type_HttpCacheControl);
         Py_VISIT(state->type_HttpServerCustomValidationRequestedEventArgs);
@@ -1546,9 +1462,6 @@ namespace py::cpp::Windows::Web::Http::Filters
             return 0;
         }
 
-        Py_CLEAR(state->type_HttpCacheReadBehavior);
-        Py_CLEAR(state->type_HttpCacheWriteBehavior);
-        Py_CLEAR(state->type_HttpCookieUsageBehavior);
         Py_CLEAR(state->type_HttpBaseProtocolFilter);
         Py_CLEAR(state->type_HttpCacheControl);
         Py_CLEAR(state->type_HttpServerCustomValidationRequestedEventArgs);
@@ -1563,7 +1476,7 @@ namespace py::cpp::Windows::Web::Http::Filters
            "_winrt_Windows_Web_Http_Filters",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1624,75 +1537,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http_Filters(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Http::Filters::HttpCacheReadBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Filters;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Filters");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCacheReadBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Filters::HttpCacheReadBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Http::Filters::HttpCacheWriteBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Filters;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Filters");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCacheWriteBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Filters::HttpCacheWriteBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Http::Filters::HttpCookieUsageBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Filters;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Filters");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCookieUsageBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Filters::HttpCookieUsageBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter>::get_python_type() noexcept {

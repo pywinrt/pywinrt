@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 WindowManagementPreview = _ns_module.WindowManagementPreview

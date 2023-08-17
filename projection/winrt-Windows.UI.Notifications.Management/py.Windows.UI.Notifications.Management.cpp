@@ -8,33 +8,8 @@ namespace py::cpp::Windows::UI::Notifications::Management
 {
     struct module_state
     {
-        PyObject* type_UserNotificationListenerAccessStatus;
         PyTypeObject* type_UserNotificationListener;
     };
-
-    static PyObject* register_UserNotificationListenerAccessStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserNotificationListenerAccessStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserNotificationListenerAccessStatus = type;
-        Py_INCREF(state->type_UserNotificationListenerAccessStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- UserNotificationListener class --------------------
     static constexpr const char* const type_name_UserNotificationListener = "UserNotificationListener";
@@ -387,10 +362,6 @@ namespace py::cpp::Windows::UI::Notifications::Management
     // ----- Windows.UI.Notifications.Management Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Notifications::Management");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_UserNotificationListenerAccessStatus", register_UserNotificationListenerAccessStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -401,7 +372,6 @@ namespace py::cpp::Windows::UI::Notifications::Management
             return 0;
         }
 
-        Py_VISIT(state->type_UserNotificationListenerAccessStatus);
         Py_VISIT(state->type_UserNotificationListener);
 
         return 0;
@@ -416,7 +386,6 @@ namespace py::cpp::Windows::UI::Notifications::Management
             return 0;
         }
 
-        Py_CLEAR(state->type_UserNotificationListenerAccessStatus);
         Py_CLEAR(state->type_UserNotificationListener);
 
         return 0;
@@ -428,7 +397,7 @@ namespace py::cpp::Windows::UI::Notifications::Management
            "_winrt_Windows_UI_Notifications_Management",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -477,29 +446,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Notifications_Management(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Notifications::Management::UserNotificationListenerAccessStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserNotificationListenerAccessStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::Management::UserNotificationListenerAccessStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::Management::UserNotificationListener>::get_python_type() noexcept {

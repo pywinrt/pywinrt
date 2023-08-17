@@ -48,12 +48,6 @@ class SerialStopBitCount(enum.IntEnum):
     ONE_POINT_FIVE = 1
     TWO = 2
 
-_ns_module._register_SerialError(SerialError)
-_ns_module._register_SerialHandshake(SerialHandshake)
-_ns_module._register_SerialParity(SerialParity)
-_ns_module._register_SerialPinChange(SerialPinChange)
-_ns_module._register_SerialStopBitCount(SerialStopBitCount)
-
 ErrorReceivedEventArgs = _ns_module.ErrorReceivedEventArgs
 PinChangedEventArgs = _ns_module.PinChangedEventArgs
 SerialDevice = _ns_module.SerialDevice

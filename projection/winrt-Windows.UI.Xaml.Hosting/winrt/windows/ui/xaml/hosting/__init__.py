@@ -50,9 +50,6 @@ class XamlSourceFocusNavigationReason(enum.IntEnum):
     RIGHT = 9
     DOWN = 10
 
-_ns_module._register_DesignerAppViewState(DesignerAppViewState)
-_ns_module._register_XamlSourceFocusNavigationReason(XamlSourceFocusNavigationReason)
-
 DesignerAppExitedEventArgs = _ns_module.DesignerAppExitedEventArgs
 DesignerAppManager = _ns_module.DesignerAppManager
 DesignerAppView = _ns_module.DesignerAppView

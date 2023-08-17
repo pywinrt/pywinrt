@@ -40,8 +40,6 @@ class UserActivityState(enum.IntEnum):
     NEW = 0
     PUBLISHED = 1
 
-_ns_module._register_UserActivityState(UserActivityState)
-
 UserActivity = _ns_module.UserActivity
 UserActivityAttribution = _ns_module.UserActivityAttribution
 UserActivityChannel = _ns_module.UserActivityChannel

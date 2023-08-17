@@ -29,7 +29,6 @@ try:
 except ImportError:
     pass
 
-
 IRawElementProviderSimple = _ns_module.IRawElementProviderSimple
 IAnnotationProvider = _ns_module.IAnnotationProvider
 ICustomNavigationProvider = _ns_module.ICustomNavigationProvider

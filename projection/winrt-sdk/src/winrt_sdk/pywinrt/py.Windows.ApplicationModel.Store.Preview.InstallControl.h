@@ -65,31 +65,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "AppInstallState";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "AppInstallType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "AppInstallationToastNotificationMode";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AutoUpdateSetting>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "AutoUpdateSetting";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "GetEntitlementStatus";
     };
 
     template<>

@@ -127,25 +127,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Text::AlternateNormalizationFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "AlternateNormalizationFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::Data::Text::TextPredictionOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "TextPredictionOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Data::Text::UnicodeGeneralCategory>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "UnicodeGeneralCategory";
     };
 
     template<>
     struct py_type<winrt::Windows::Data::Text::UnicodeNumericType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "UnicodeNumericType";
     };
 
     template<>

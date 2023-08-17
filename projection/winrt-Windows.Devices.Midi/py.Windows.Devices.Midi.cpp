@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Devices::Midi
 {
     struct module_state
     {
-        PyObject* type_MidiMessageType;
         PyTypeObject* type_MidiActiveSensingMessage;
         PyTypeObject* type_MidiChannelPressureMessage;
         PyTypeObject* type_MidiContinueMessage;
@@ -34,30 +33,6 @@ namespace py::cpp::Windows::Devices::Midi
         PyTypeObject* type_IMidiMessage;
         PyTypeObject* type_IMidiOutPort;
     };
-
-    static PyObject* register_MidiMessageType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MidiMessageType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MidiMessageType = type;
-        Py_INCREF(state->type_MidiMessageType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- MidiActiveSensingMessage class --------------------
     static constexpr const char* const type_name_MidiActiveSensingMessage = "MidiActiveSensingMessage";
@@ -4719,10 +4694,6 @@ namespace py::cpp::Windows::Devices::Midi
     // ----- Windows.Devices.Midi Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Midi");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_MidiMessageType", register_MidiMessageType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4733,7 +4704,6 @@ namespace py::cpp::Windows::Devices::Midi
             return 0;
         }
 
-        Py_VISIT(state->type_MidiMessageType);
         Py_VISIT(state->type_MidiActiveSensingMessage);
         Py_VISIT(state->type_MidiChannelPressureMessage);
         Py_VISIT(state->type_MidiContinueMessage);
@@ -4771,7 +4741,6 @@ namespace py::cpp::Windows::Devices::Midi
             return 0;
         }
 
-        Py_CLEAR(state->type_MidiMessageType);
         Py_CLEAR(state->type_MidiActiveSensingMessage);
         Py_CLEAR(state->type_MidiChannelPressureMessage);
         Py_CLEAR(state->type_MidiContinueMessage);
@@ -4806,7 +4775,7 @@ namespace py::cpp::Windows::Devices::Midi
            "_winrt_Windows_Devices_Midi",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4987,29 +4956,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Midi(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Midi::MidiMessageType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiMessageType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiMessageType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiActiveSensingMessage>::get_python_type() noexcept {

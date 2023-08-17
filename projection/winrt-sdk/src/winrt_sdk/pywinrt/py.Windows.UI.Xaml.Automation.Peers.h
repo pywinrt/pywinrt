@@ -188,73 +188,85 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AccessibilityView>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AccessibilityView";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationControlType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationControlType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationEvents>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationEvents";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationHeadingLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationHeadingLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationLandmarkType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationLandmarkType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationLiveSetting>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationLiveSetting";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationNavigationDirection";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationNotificationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationNotificationKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationNotificationProcessing>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationNotificationProcessing";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationOrientation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationOrientation";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationStructureChangeType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationStructureChangeType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::PatternInterface>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "PatternInterface";
     };
 
     template<>

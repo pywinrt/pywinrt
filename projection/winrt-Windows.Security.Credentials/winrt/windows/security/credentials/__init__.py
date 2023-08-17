@@ -61,12 +61,6 @@ class WebAccountState(enum.IntEnum):
     CONNECTED = 1
     ERROR = 2
 
-_ns_module._register_KeyCredentialAttestationStatus(KeyCredentialAttestationStatus)
-_ns_module._register_KeyCredentialCreationOption(KeyCredentialCreationOption)
-_ns_module._register_KeyCredentialStatus(KeyCredentialStatus)
-_ns_module._register_WebAccountPictureSize(WebAccountPictureSize)
-_ns_module._register_WebAccountState(WebAccountState)
-
 KeyCredential = _ns_module.KeyCredential
 KeyCredentialAttestationResult = _ns_module.KeyCredentialAttestationResult
 KeyCredentialManager = _ns_module.KeyCredentialManager

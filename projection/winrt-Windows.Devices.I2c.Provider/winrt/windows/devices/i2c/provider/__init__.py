@@ -29,10 +29,6 @@ class ProviderI2cTransferStatus(enum.IntEnum):
     PARTIAL_TRANSFER = 1
     SLAVE_ADDRESS_NOT_ACKNOWLEDGED = 2
 
-_ns_module._register_ProviderI2cBusSpeed(ProviderI2cBusSpeed)
-_ns_module._register_ProviderI2cSharingMode(ProviderI2cSharingMode)
-_ns_module._register_ProviderI2cTransferStatus(ProviderI2cTransferStatus)
-
 ProviderI2cTransferResult = _ns_module.ProviderI2cTransferResult
 ProviderI2cConnectionSettings = _ns_module.ProviderI2cConnectionSettings
 II2cControllerProvider = _ns_module.II2cControllerProvider

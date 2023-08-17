@@ -60,9 +60,6 @@ class PropertyType(enum.IntEnum):
     RECT_ARRAY = 1043
     OTHER_TYPE_ARRAY = 1044
 
-_ns_module._register_AsyncStatus(AsyncStatus)
-_ns_module._register_PropertyType(PropertyType)
-
 EventRegistrationToken = _ns_module.EventRegistrationToken
 HResult = _ns_module.HResult
 Point = _ns_module.Point

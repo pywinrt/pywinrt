@@ -57,11 +57,6 @@ class ShareUITheme(enum.IntEnum):
     LIGHT = 1
     DARK = 2
 
-_ns_module._register_ClipboardHistoryItemsResultStatus(ClipboardHistoryItemsResultStatus)
-_ns_module._register_DataPackageOperation(DataPackageOperation)
-_ns_module._register_SetHistoryItemAsContentStatus(SetHistoryItemAsContentStatus)
-_ns_module._register_ShareUITheme(ShareUITheme)
-
 Clipboard = _ns_module.Clipboard
 ClipboardContentOptions = _ns_module.ClipboardContentOptions
 ClipboardHistoryChangedEventArgs = _ns_module.ClipboardHistoryChangedEventArgs

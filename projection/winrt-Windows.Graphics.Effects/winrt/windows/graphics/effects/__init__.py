@@ -4,6 +4,5 @@ import winrt.system
 
 _ns_module = winrt.system._import_ns_module("Windows.Graphics.Effects")
 
-
 IGraphicsEffect = _ns_module.IGraphicsEffect
 IGraphicsEffectSource = _ns_module.IGraphicsEffectSource

@@ -119,9 +119,6 @@ namespace py::cpp::Windows::Phone::System
     // ----- Windows.Phone.System Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Phone::System");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -157,7 +154,7 @@ namespace py::cpp::Windows::Phone::System
            "_winrt_Windows_Phone_System",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

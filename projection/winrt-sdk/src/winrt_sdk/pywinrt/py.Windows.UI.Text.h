@@ -136,169 +136,197 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::CaretType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "CaretType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::FindOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "FindOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::FontStretch>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "FontStretch";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::FontStyle>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "FontStyle";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::FormatEffect>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "FormatEffect";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::HorizontalCharacterAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "HorizontalCharacterAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::LetterCase>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "LetterCase";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::LineSpacingRule>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "LineSpacingRule";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::LinkType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "LinkType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::MarkerAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "MarkerAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::MarkerStyle>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "MarkerStyle";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::MarkerType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "MarkerType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::ParagraphAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "ParagraphAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::ParagraphStyle>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "ParagraphStyle";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::PointOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "PointOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::RangeGravity>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "RangeGravity";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::RichEditMathMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "RichEditMathMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::SelectionOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "SelectionOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::SelectionType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "SelectionType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::TabAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "TabAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::TabLeader>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "TabLeader";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::TextDecorations>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "TextDecorations";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::TextGetOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "TextGetOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::TextRangeUnit>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "TextRangeUnit";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::TextScript>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "TextScript";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::TextSetOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "TextSetOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::UnderlineType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "UnderlineType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Text::VerticalCharacterAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "VerticalCharacterAlignment";
     };
 
     template<>

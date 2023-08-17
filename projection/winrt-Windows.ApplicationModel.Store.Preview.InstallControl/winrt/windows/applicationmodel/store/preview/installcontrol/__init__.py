@@ -65,12 +65,6 @@ class GetEntitlementStatus(enum.IntEnum):
     NETWORK_ERROR = 2
     SERVER_ERROR = 3
 
-_ns_module._register_AppInstallState(AppInstallState)
-_ns_module._register_AppInstallType(AppInstallType)
-_ns_module._register_AppInstallationToastNotificationMode(AppInstallationToastNotificationMode)
-_ns_module._register_AutoUpdateSetting(AutoUpdateSetting)
-_ns_module._register_GetEntitlementStatus(GetEntitlementStatus)
-
 AppInstallItem = _ns_module.AppInstallItem
 AppInstallManager = _ns_module.AppInstallManager
 AppInstallManagerItemEventArgs = _ns_module.AppInstallManagerItemEventArgs

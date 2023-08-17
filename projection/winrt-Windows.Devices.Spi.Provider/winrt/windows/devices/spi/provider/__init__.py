@@ -26,9 +26,6 @@ class ProviderSpiSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED = 1
 
-_ns_module._register_ProviderSpiMode(ProviderSpiMode)
-_ns_module._register_ProviderSpiSharingMode(ProviderSpiSharingMode)
-
 ProviderSpiConnectionSettings = _ns_module.ProviderSpiConnectionSettings
 ISpiControllerProvider = _ns_module.ISpiControllerProvider
 ISpiDeviceProvider = _ns_module.ISpiDeviceProvider

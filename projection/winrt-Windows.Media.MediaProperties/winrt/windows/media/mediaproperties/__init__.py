@@ -79,15 +79,6 @@ class VideoEncodingQuality(enum.IntEnum):
     UHD2160P = 8
     UHD4320P = 9
 
-_ns_module._register_AudioEncodingQuality(AudioEncodingQuality)
-_ns_module._register_MediaMirroringOptions(MediaMirroringOptions)
-_ns_module._register_MediaPixelFormat(MediaPixelFormat)
-_ns_module._register_MediaRotation(MediaRotation)
-_ns_module._register_MediaThumbnailFormat(MediaThumbnailFormat)
-_ns_module._register_SphericalVideoFrameFormat(SphericalVideoFrameFormat)
-_ns_module._register_StereoscopicVideoPackingMode(StereoscopicVideoPackingMode)
-_ns_module._register_VideoEncodingQuality(VideoEncodingQuality)
-
 AudioEncodingProperties = _ns_module.AudioEncodingProperties
 ContainerEncodingProperties = _ns_module.ContainerEncodingProperties
 H264ProfileIds = _ns_module.H264ProfileIds

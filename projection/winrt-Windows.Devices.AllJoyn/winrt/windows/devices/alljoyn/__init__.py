@@ -70,11 +70,6 @@ class AllJoynTrafficType(enum.IntEnum):
     RAW_UNRELIABLE = 2
     RAW_RELIABLE = 4
 
-_ns_module._register_AllJoynAuthenticationMechanism(AllJoynAuthenticationMechanism)
-_ns_module._register_AllJoynBusAttachmentState(AllJoynBusAttachmentState)
-_ns_module._register_AllJoynSessionLostReason(AllJoynSessionLostReason)
-_ns_module._register_AllJoynTrafficType(AllJoynTrafficType)
-
 AllJoynAboutData = _ns_module.AllJoynAboutData
 AllJoynAboutDataView = _ns_module.AllJoynAboutDataView
 AllJoynAcceptSessionJoinerEventArgs = _ns_module.AllJoynAcceptSessionJoinerEventArgs

@@ -109,9 +109,6 @@ namespace py::cpp::Windows::UI::Composition::Desktop
     // ----- Windows.UI.Composition.Desktop Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Composition::Desktop");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -147,7 +144,7 @@ namespace py::cpp::Windows::UI::Composition::Desktop
            "_winrt_Windows_UI_Composition_Desktop",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

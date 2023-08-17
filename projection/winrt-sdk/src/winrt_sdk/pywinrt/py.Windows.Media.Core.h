@@ -312,193 +312,225 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::AudioDecoderDegradation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "AudioDecoderDegradation";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::AudioDecoderDegradationReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "AudioDecoderDegradationReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::CodecCategory>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "CodecCategory";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::CodecKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "CodecKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::FaceDetectionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "FaceDetectionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaDecoderStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "MediaDecoderStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaSourceState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "MediaSourceState";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaSourceStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "MediaSourceStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "MediaStreamSourceClosedReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceErrorStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "MediaStreamSourceErrorStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaTrackKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "MediaTrackKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::MseAppendMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "MseAppendMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::MseEndOfStreamStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "MseEndOfStreamStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::MseReadyState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "MseReadyState";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::SceneAnalysisRecommendation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "SceneAnalysisRecommendation";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedMetadataKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedMetadataKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedMetadataTrackErrorCode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedMetadataTrackErrorCode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextBoutenPosition>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextBoutenPosition";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextBoutenType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextBoutenType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextDisplayAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextDisplayAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextFlowDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextFlowDirection";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextFontStyle>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextFontStyle";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextLineAlignment>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextLineAlignment";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextRubyAlign>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextRubyAlign";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextRubyPosition>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextRubyPosition";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextRubyReserve>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextRubyReserve";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextScrollMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextScrollMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextUnit>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextUnit";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextWeight>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextWeight";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextWrapping>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextWrapping";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextWritingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "TimedTextWritingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.core";
+        static constexpr const char* type_name = "VideoStabilizationEffectEnabledChangedReason";
     };
 
     template<>

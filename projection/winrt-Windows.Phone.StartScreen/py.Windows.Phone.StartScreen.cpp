@@ -620,9 +620,6 @@ namespace py::cpp::Windows::Phone::StartScreen
     // ----- Windows.Phone.StartScreen Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Phone::StartScreen");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -660,7 +657,7 @@ namespace py::cpp::Windows::Phone::StartScreen
            "_winrt_Windows_Phone_StartScreen",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

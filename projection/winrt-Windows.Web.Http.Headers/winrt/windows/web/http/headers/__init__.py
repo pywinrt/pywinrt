@@ -34,7 +34,6 @@ try:
 except ImportError:
     pass
 
-
 HttpCacheDirectiveHeaderValueCollection = _ns_module.HttpCacheDirectiveHeaderValueCollection
 winrt.system._mixin_mutable_sequence(HttpCacheDirectiveHeaderValueCollection)
 HttpChallengeHeaderValue = _ns_module.HttpChallengeHeaderValue

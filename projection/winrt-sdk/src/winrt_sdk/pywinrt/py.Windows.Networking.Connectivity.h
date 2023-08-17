@@ -147,91 +147,106 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::CellularApnAuthenticationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "CellularApnAuthenticationType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::ConnectionProfileDeleteStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "ConnectionProfileDeleteStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::DataUsageGranularity>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "DataUsageGranularity";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::DomainAuthenticationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "DomainAuthenticationKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::DomainConnectivityLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "DomainConnectivityLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkAuthenticationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "NetworkAuthenticationType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkConnectivityLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "NetworkConnectivityLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkCostType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "NetworkCostType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkEncryptionType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "NetworkEncryptionType";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkTypes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "NetworkTypes";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::RoamingStates>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "RoamingStates";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::TriStates>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "TriStates";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::WwanDataClass>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "WwanDataClass";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::WwanNetworkIPKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "WwanNetworkIPKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::WwanNetworkRegistrationState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.connectivity";
+        static constexpr const char* type_name = "WwanNetworkRegistrationState";
     };
 
     template<>

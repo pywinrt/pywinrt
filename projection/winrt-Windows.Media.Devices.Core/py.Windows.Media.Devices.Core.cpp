@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Media::Devices::Core
 {
     struct module_state
     {
-        PyObject* type_FrameFlashMode;
         PyTypeObject* type_CameraIntrinsics;
         PyTypeObject* type_DepthCorrelatedCoordinateMapper;
         PyTypeObject* type_FrameControlCapabilities;
@@ -25,30 +24,6 @@ namespace py::cpp::Windows::Media::Devices::Core
         PyTypeObject* type_FrameIsoSpeedControl;
         PyTypeObject* type_VariablePhotoSequenceController;
     };
-
-    static PyObject* register_FrameFlashMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_FrameFlashMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_FrameFlashMode = type;
-        Py_INCREF(state->type_FrameFlashMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CameraIntrinsics class --------------------
     static constexpr const char* const type_name_CameraIntrinsics = "CameraIntrinsics";
@@ -3144,10 +3119,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     // ----- Windows.Media.Devices.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::Devices::Core");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_FrameFlashMode", register_FrameFlashMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3158,7 +3129,6 @@ namespace py::cpp::Windows::Media::Devices::Core
             return 0;
         }
 
-        Py_VISIT(state->type_FrameFlashMode);
         Py_VISIT(state->type_CameraIntrinsics);
         Py_VISIT(state->type_DepthCorrelatedCoordinateMapper);
         Py_VISIT(state->type_FrameControlCapabilities);
@@ -3187,7 +3157,6 @@ namespace py::cpp::Windows::Media::Devices::Core
             return 0;
         }
 
-        Py_CLEAR(state->type_FrameFlashMode);
         Py_CLEAR(state->type_CameraIntrinsics);
         Py_CLEAR(state->type_DepthCorrelatedCoordinateMapper);
         Py_CLEAR(state->type_FrameControlCapabilities);
@@ -3213,7 +3182,7 @@ namespace py::cpp::Windows::Media::Devices::Core
            "_winrt_Windows_Media_Devices_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3340,29 +3309,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Devices_Core(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Devices::Core::FrameFlashMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameFlashMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameFlashMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::CameraIntrinsics>::get_python_type() noexcept {

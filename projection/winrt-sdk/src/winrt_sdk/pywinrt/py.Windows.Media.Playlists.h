@@ -42,7 +42,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playlists::PlaylistFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playlists";
+        static constexpr const char* type_name = "PlaylistFormat";
     };
 
     template<>

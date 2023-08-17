@@ -100,19 +100,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapCreateOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "BitmapCreateOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::DecodePixelType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "DecodePixelType";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "SvgImageSourceLoadStatus";
     };
 
     template<>

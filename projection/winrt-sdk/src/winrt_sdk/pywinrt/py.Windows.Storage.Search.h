@@ -89,37 +89,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::CommonFileQuery>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "CommonFileQuery";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Search::CommonFolderQuery>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "CommonFolderQuery";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Search::DateStackOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "DateStackOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Search::FolderDepth>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "FolderDepth";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Search::IndexedState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "IndexedState";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Search::IndexerOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "IndexerOption";
     };
 
     template<>

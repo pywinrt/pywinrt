@@ -8,9 +8,6 @@ namespace py::cpp::Windows::Media::Effects
 {
     struct module_state
     {
-        PyObject* type_AudioEffectType;
-        PyObject* type_MediaEffectClosedReason;
-        PyObject* type_MediaMemoryTypes;
         PyTypeObject* type_AudioCaptureEffectsManager;
         PyTypeObject* type_AudioEffect;
         PyTypeObject* type_AudioEffectDefinition;
@@ -31,78 +28,6 @@ namespace py::cpp::Windows::Media::Effects
         PyTypeObject* type_IVideoCompositorDefinition;
         PyTypeObject* type_IVideoEffectDefinition;
     };
-
-    static PyObject* register_AudioEffectType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AudioEffectType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AudioEffectType = type;
-        Py_INCREF(state->type_AudioEffectType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MediaEffectClosedReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaEffectClosedReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaEffectClosedReason = type;
-        Py_INCREF(state->type_MediaEffectClosedReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_MediaMemoryTypes(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_MediaMemoryTypes)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_MediaMemoryTypes = type;
-        Py_INCREF(state->type_MediaMemoryTypes);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- AudioCaptureEffectsManager class --------------------
     static constexpr const char* const type_name_AudioCaptureEffectsManager = "AudioCaptureEffectsManager";
@@ -3730,12 +3655,6 @@ namespace py::cpp::Windows::Media::Effects
     // ----- Windows.Media.Effects Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::Effects");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AudioEffectType", register_AudioEffectType, METH_O, "registers type"},
-        {"_register_MediaEffectClosedReason", register_MediaEffectClosedReason, METH_O, "registers type"},
-        {"_register_MediaMemoryTypes", register_MediaMemoryTypes, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3746,9 +3665,6 @@ namespace py::cpp::Windows::Media::Effects
             return 0;
         }
 
-        Py_VISIT(state->type_AudioEffectType);
-        Py_VISIT(state->type_MediaEffectClosedReason);
-        Py_VISIT(state->type_MediaMemoryTypes);
         Py_VISIT(state->type_AudioCaptureEffectsManager);
         Py_VISIT(state->type_AudioEffect);
         Py_VISIT(state->type_AudioEffectDefinition);
@@ -3781,9 +3697,6 @@ namespace py::cpp::Windows::Media::Effects
             return 0;
         }
 
-        Py_CLEAR(state->type_AudioEffectType);
-        Py_CLEAR(state->type_MediaEffectClosedReason);
-        Py_CLEAR(state->type_MediaMemoryTypes);
         Py_CLEAR(state->type_AudioCaptureEffectsManager);
         Py_CLEAR(state->type_AudioEffect);
         Py_CLEAR(state->type_AudioEffectDefinition);
@@ -3813,7 +3726,7 @@ namespace py::cpp::Windows::Media::Effects
            "_winrt_Windows_Media_Effects",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3964,75 +3877,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Effects(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Effects::AudioEffectType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioEffectType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::AudioEffectType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Effects::MediaEffectClosedReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaEffectClosedReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::MediaEffectClosedReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::Effects::MediaMemoryTypes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaMemoryTypes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::MediaMemoryTypes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>::get_python_type() noexcept {

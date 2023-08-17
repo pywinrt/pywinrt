@@ -164,23 +164,6 @@ class TickPlacement(enum.IntEnum):
     OUTSIDE = 3
     INLINE = 4
 
-_ns_module._register_AnimationDirection(AnimationDirection)
-_ns_module._register_ComponentResourceLocation(ComponentResourceLocation)
-_ns_module._register_EdgeTransitionLocation(EdgeTransitionLocation)
-_ns_module._register_FlyoutPlacementMode(FlyoutPlacementMode)
-_ns_module._register_FlyoutShowMode(FlyoutShowMode)
-_ns_module._register_GeneratorDirection(GeneratorDirection)
-_ns_module._register_GroupHeaderPlacement(GroupHeaderPlacement)
-_ns_module._register_ListViewItemPresenterCheckMode(ListViewItemPresenterCheckMode)
-_ns_module._register_ListViewItemPresenterSelectionIndicatorMode(ListViewItemPresenterSelectionIndicatorMode)
-_ns_module._register_PlacementMode(PlacementMode)
-_ns_module._register_PopupPlacementMode(PopupPlacementMode)
-_ns_module._register_ScrollEventType(ScrollEventType)
-_ns_module._register_ScrollingIndicatorMode(ScrollingIndicatorMode)
-_ns_module._register_SliderSnapsTo(SliderSnapsTo)
-_ns_module._register_SnapPointsAlignment(SnapPointsAlignment)
-_ns_module._register_TickPlacement(TickPlacement)
-
 GeneratorPosition = _ns_module.GeneratorPosition
 AppBarButtonTemplateSettings = _ns_module.AppBarButtonTemplateSettings
 AppBarTemplateSettings = _ns_module.AppBarTemplateSettings

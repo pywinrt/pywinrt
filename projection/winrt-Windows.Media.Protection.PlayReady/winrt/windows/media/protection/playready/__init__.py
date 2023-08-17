@@ -113,19 +113,6 @@ class PlayReadyITADataFormat(enum.IntEnum):
     SERIALIZED_PROPERTIES = 0
     SERIALIZED_PROPERTIES_WITH_CONTENT_PROTECTION_WRAPPER = 1
 
-_ns_module._register_NDCertificateFeature(NDCertificateFeature)
-_ns_module._register_NDCertificatePlatformID(NDCertificatePlatformID)
-_ns_module._register_NDCertificateType(NDCertificateType)
-_ns_module._register_NDClosedCaptionFormat(NDClosedCaptionFormat)
-_ns_module._register_NDContentIDType(NDContentIDType)
-_ns_module._register_NDMediaStreamType(NDMediaStreamType)
-_ns_module._register_NDProximityDetectionType(NDProximityDetectionType)
-_ns_module._register_NDStartAsyncOptions(NDStartAsyncOptions)
-_ns_module._register_PlayReadyDecryptorSetup(PlayReadyDecryptorSetup)
-_ns_module._register_PlayReadyEncryptionAlgorithm(PlayReadyEncryptionAlgorithm)
-_ns_module._register_PlayReadyHardwareDRMFeatures(PlayReadyHardwareDRMFeatures)
-_ns_module._register_PlayReadyITADataFormat(PlayReadyITADataFormat)
-
 NDClient = _ns_module.NDClient
 NDCustomData = _ns_module.NDCustomData
 NDDownloadEngineNotifier = _ns_module.NDDownloadEngineNotifier

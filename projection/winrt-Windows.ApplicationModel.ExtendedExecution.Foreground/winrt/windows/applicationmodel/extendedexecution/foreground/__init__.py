@@ -25,9 +25,5 @@ class ExtendedExecutionForegroundRevokedReason(enum.IntEnum):
     RESUMED = 0
     SYSTEM_POLICY = 1
 
-_ns_module._register_ExtendedExecutionForegroundReason(ExtendedExecutionForegroundReason)
-_ns_module._register_ExtendedExecutionForegroundResult(ExtendedExecutionForegroundResult)
-_ns_module._register_ExtendedExecutionForegroundRevokedReason(ExtendedExecutionForegroundRevokedReason)
-
 ExtendedExecutionForegroundRevokedEventArgs = _ns_module.ExtendedExecutionForegroundRevokedEventArgs
 ExtendedExecutionForegroundSession = _ns_module.ExtendedExecutionForegroundSession

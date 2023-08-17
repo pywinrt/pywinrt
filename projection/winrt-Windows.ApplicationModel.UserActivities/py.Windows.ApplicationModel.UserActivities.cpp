@@ -8,7 +8,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 {
     struct module_state
     {
-        PyObject* type_UserActivityState;
         PyTypeObject* type_UserActivity;
         PyTypeObject* type_UserActivityAttribution;
         PyTypeObject* type_UserActivityChannel;
@@ -21,30 +20,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         PyTypeObject* type_UserActivityVisualElements;
         PyTypeObject* type_IUserActivityContentInfo;
     };
-
-    static PyObject* register_UserActivityState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_UserActivityState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_UserActivityState = type;
-        Py_INCREF(state->type_UserActivityState);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- UserActivity class --------------------
     static constexpr const char* const type_name_UserActivity = "UserActivity";
@@ -2570,10 +2545,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     // ----- Windows.ApplicationModel.UserActivities Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserActivities");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_UserActivityState", register_UserActivityState, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2584,7 +2555,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
             return 0;
         }
 
-        Py_VISIT(state->type_UserActivityState);
         Py_VISIT(state->type_UserActivity);
         Py_VISIT(state->type_UserActivityAttribution);
         Py_VISIT(state->type_UserActivityChannel);
@@ -2609,7 +2579,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
             return 0;
         }
 
-        Py_CLEAR(state->type_UserActivityState);
         Py_CLEAR(state->type_UserActivity);
         Py_CLEAR(state->type_UserActivityAttribution);
         Py_CLEAR(state->type_UserActivityChannel);
@@ -2631,7 +2600,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
            "_winrt_Windows_ApplicationModel_UserActivities",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2734,29 +2703,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserActivities(void) noexc
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivityState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivityState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivity>::get_python_type() noexcept {

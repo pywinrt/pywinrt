@@ -8,13 +8,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 {
     struct module_state
     {
-        PyObject* type_WiFiDirectAdvertisementListenStateDiscoverability;
-        PyObject* type_WiFiDirectAdvertisementPublisherStatus;
-        PyObject* type_WiFiDirectConfigurationMethod;
-        PyObject* type_WiFiDirectConnectionStatus;
-        PyObject* type_WiFiDirectDeviceSelectorType;
-        PyObject* type_WiFiDirectError;
-        PyObject* type_WiFiDirectPairingProcedure;
         PyTypeObject* type_WiFiDirectAdvertisement;
         PyTypeObject* type_WiFiDirectAdvertisementPublisher;
         PyTypeObject* type_WiFiDirectAdvertisementPublisherStatusChangedEventArgs;
@@ -26,174 +19,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         PyTypeObject* type_WiFiDirectInformationElement;
         PyTypeObject* type_WiFiDirectLegacySettings;
     };
-
-    static PyObject* register_WiFiDirectAdvertisementListenStateDiscoverability(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WiFiDirectAdvertisementListenStateDiscoverability)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WiFiDirectAdvertisementListenStateDiscoverability = type;
-        Py_INCREF(state->type_WiFiDirectAdvertisementListenStateDiscoverability);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WiFiDirectAdvertisementPublisherStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WiFiDirectAdvertisementPublisherStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WiFiDirectAdvertisementPublisherStatus = type;
-        Py_INCREF(state->type_WiFiDirectAdvertisementPublisherStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WiFiDirectConfigurationMethod(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WiFiDirectConfigurationMethod)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WiFiDirectConfigurationMethod = type;
-        Py_INCREF(state->type_WiFiDirectConfigurationMethod);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WiFiDirectConnectionStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WiFiDirectConnectionStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WiFiDirectConnectionStatus = type;
-        Py_INCREF(state->type_WiFiDirectConnectionStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WiFiDirectDeviceSelectorType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WiFiDirectDeviceSelectorType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WiFiDirectDeviceSelectorType = type;
-        Py_INCREF(state->type_WiFiDirectDeviceSelectorType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WiFiDirectError(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WiFiDirectError)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WiFiDirectError = type;
-        Py_INCREF(state->type_WiFiDirectError);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WiFiDirectPairingProcedure(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WiFiDirectPairingProcedure)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WiFiDirectPairingProcedure = type;
-        Py_INCREF(state->type_WiFiDirectPairingProcedure);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- WiFiDirectAdvertisement class --------------------
     static constexpr const char* const type_name_WiFiDirectAdvertisement = "WiFiDirectAdvertisement";
@@ -2330,16 +2155,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     // ----- Windows.Devices.WiFiDirect Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::WiFiDirect");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_WiFiDirectAdvertisementListenStateDiscoverability", register_WiFiDirectAdvertisementListenStateDiscoverability, METH_O, "registers type"},
-        {"_register_WiFiDirectAdvertisementPublisherStatus", register_WiFiDirectAdvertisementPublisherStatus, METH_O, "registers type"},
-        {"_register_WiFiDirectConfigurationMethod", register_WiFiDirectConfigurationMethod, METH_O, "registers type"},
-        {"_register_WiFiDirectConnectionStatus", register_WiFiDirectConnectionStatus, METH_O, "registers type"},
-        {"_register_WiFiDirectDeviceSelectorType", register_WiFiDirectDeviceSelectorType, METH_O, "registers type"},
-        {"_register_WiFiDirectError", register_WiFiDirectError, METH_O, "registers type"},
-        {"_register_WiFiDirectPairingProcedure", register_WiFiDirectPairingProcedure, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2350,13 +2165,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
             return 0;
         }
 
-        Py_VISIT(state->type_WiFiDirectAdvertisementListenStateDiscoverability);
-        Py_VISIT(state->type_WiFiDirectAdvertisementPublisherStatus);
-        Py_VISIT(state->type_WiFiDirectConfigurationMethod);
-        Py_VISIT(state->type_WiFiDirectConnectionStatus);
-        Py_VISIT(state->type_WiFiDirectDeviceSelectorType);
-        Py_VISIT(state->type_WiFiDirectError);
-        Py_VISIT(state->type_WiFiDirectPairingProcedure);
         Py_VISIT(state->type_WiFiDirectAdvertisement);
         Py_VISIT(state->type_WiFiDirectAdvertisementPublisher);
         Py_VISIT(state->type_WiFiDirectAdvertisementPublisherStatusChangedEventArgs);
@@ -2380,13 +2188,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
             return 0;
         }
 
-        Py_CLEAR(state->type_WiFiDirectAdvertisementListenStateDiscoverability);
-        Py_CLEAR(state->type_WiFiDirectAdvertisementPublisherStatus);
-        Py_CLEAR(state->type_WiFiDirectConfigurationMethod);
-        Py_CLEAR(state->type_WiFiDirectConnectionStatus);
-        Py_CLEAR(state->type_WiFiDirectDeviceSelectorType);
-        Py_CLEAR(state->type_WiFiDirectError);
-        Py_CLEAR(state->type_WiFiDirectPairingProcedure);
         Py_CLEAR(state->type_WiFiDirectAdvertisement);
         Py_CLEAR(state->type_WiFiDirectAdvertisementPublisher);
         Py_CLEAR(state->type_WiFiDirectAdvertisementPublisherStatusChangedEventArgs);
@@ -2407,7 +2208,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
            "_winrt_Windows_Devices_WiFiDirect",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2504,167 +2305,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_WiFiDirect(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectAdvertisementListenStateDiscoverability;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectAdvertisementPublisherStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectConfigurationMethod;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectConnectionStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectDeviceSelectorType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::WiFiDirectError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectPairingProcedure;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>::get_python_type() noexcept {

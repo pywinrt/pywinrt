@@ -672,9 +672,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
     // ----- Windows.ApplicationModel.DataTransfer.ShareTarget Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::DataTransfer::ShareTarget");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -712,7 +709,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
            "_winrt_Windows_ApplicationModel_DataTransfer_ShareTarget",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

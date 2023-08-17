@@ -8,9 +8,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 {
     struct module_state
     {
-        PyObject* type_FeatureElementKindPreview;
-        PyObject* type_LearningModelDeviceKindPreview;
-        PyObject* type_LearningModelFeatureKindPreview;
         PyTypeObject* type_ImageVariableDescriptorPreview;
         PyTypeObject* type_InferencingOptionsPreview;
         PyTypeObject* type_LearningModelBindingPreview;
@@ -23,78 +20,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         PyTypeObject* type_TensorVariableDescriptorPreview;
         PyTypeObject* type_ILearningModelVariableDescriptorPreview;
     };
-
-    static PyObject* register_FeatureElementKindPreview(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_FeatureElementKindPreview)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_FeatureElementKindPreview = type;
-        Py_INCREF(state->type_FeatureElementKindPreview);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_LearningModelDeviceKindPreview(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LearningModelDeviceKindPreview)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LearningModelDeviceKindPreview = type;
-        Py_INCREF(state->type_LearningModelDeviceKindPreview);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_LearningModelFeatureKindPreview(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LearningModelFeatureKindPreview)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LearningModelFeatureKindPreview = type;
-        Py_INCREF(state->type_LearningModelFeatureKindPreview);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ImageVariableDescriptorPreview class --------------------
     static constexpr const char* const type_name_ImageVariableDescriptorPreview = "ImageVariableDescriptorPreview";
@@ -2578,12 +2503,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     // ----- Windows.AI.MachineLearning.Preview Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::AI::MachineLearning::Preview");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_FeatureElementKindPreview", register_FeatureElementKindPreview, METH_O, "registers type"},
-        {"_register_LearningModelDeviceKindPreview", register_LearningModelDeviceKindPreview, METH_O, "registers type"},
-        {"_register_LearningModelFeatureKindPreview", register_LearningModelFeatureKindPreview, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2594,9 +2513,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
             return 0;
         }
 
-        Py_VISIT(state->type_FeatureElementKindPreview);
-        Py_VISIT(state->type_LearningModelDeviceKindPreview);
-        Py_VISIT(state->type_LearningModelFeatureKindPreview);
         Py_VISIT(state->type_ImageVariableDescriptorPreview);
         Py_VISIT(state->type_InferencingOptionsPreview);
         Py_VISIT(state->type_LearningModelBindingPreview);
@@ -2621,9 +2537,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
             return 0;
         }
 
-        Py_CLEAR(state->type_FeatureElementKindPreview);
-        Py_CLEAR(state->type_LearningModelDeviceKindPreview);
-        Py_CLEAR(state->type_LearningModelFeatureKindPreview);
         Py_CLEAR(state->type_ImageVariableDescriptorPreview);
         Py_CLEAR(state->type_InferencingOptionsPreview);
         Py_CLEAR(state->type_LearningModelBindingPreview);
@@ -2645,7 +2558,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
            "_winrt_Windows_AI_MachineLearning_Preview",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2748,75 +2661,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_AI_MachineLearning_Preview(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::AI::MachineLearning::Preview::FeatureElementKindPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FeatureElementKindPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::FeatureElementKindPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDeviceKindPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelDeviceKindPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::LearningModelDeviceKindPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelFeatureKindPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelFeatureKindPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::LearningModelFeatureKindPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>::get_python_type() noexcept {

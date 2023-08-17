@@ -8,60 +8,10 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 {
     struct module_state
     {
-        PyObject* type_ContentAccessRestrictionLevel;
-        PyObject* type_RatedContentCategory;
         PyTypeObject* type_ContentRestrictionsBrowsePolicy;
         PyTypeObject* type_RatedContentDescription;
         PyTypeObject* type_RatedContentRestrictions;
     };
-
-    static PyObject* register_ContentAccessRestrictionLevel(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ContentAccessRestrictionLevel)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ContentAccessRestrictionLevel = type;
-        Py_INCREF(state->type_ContentAccessRestrictionLevel);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_RatedContentCategory(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_RatedContentCategory)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_RatedContentCategory = type;
-        Py_INCREF(state->type_RatedContentCategory);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ContentRestrictionsBrowsePolicy class --------------------
     static constexpr const char* const type_name_ContentRestrictionsBrowsePolicy = "ContentRestrictionsBrowsePolicy";
@@ -795,11 +745,6 @@ namespace py::cpp::Windows::Media::ContentRestrictions
     // ----- Windows.Media.ContentRestrictions Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Media::ContentRestrictions");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ContentAccessRestrictionLevel", register_ContentAccessRestrictionLevel, METH_O, "registers type"},
-        {"_register_RatedContentCategory", register_RatedContentCategory, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -810,8 +755,6 @@ namespace py::cpp::Windows::Media::ContentRestrictions
             return 0;
         }
 
-        Py_VISIT(state->type_ContentAccessRestrictionLevel);
-        Py_VISIT(state->type_RatedContentCategory);
         Py_VISIT(state->type_ContentRestrictionsBrowsePolicy);
         Py_VISIT(state->type_RatedContentDescription);
         Py_VISIT(state->type_RatedContentRestrictions);
@@ -828,8 +771,6 @@ namespace py::cpp::Windows::Media::ContentRestrictions
             return 0;
         }
 
-        Py_CLEAR(state->type_ContentAccessRestrictionLevel);
-        Py_CLEAR(state->type_RatedContentCategory);
         Py_CLEAR(state->type_ContentRestrictionsBrowsePolicy);
         Py_CLEAR(state->type_RatedContentDescription);
         Py_CLEAR(state->type_RatedContentRestrictions);
@@ -843,7 +784,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
            "_winrt_Windows_Media_ContentRestrictions",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -898,52 +839,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_ContentRestrictions(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Media::ContentRestrictions::ContentAccessRestrictionLevel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::ContentRestrictions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::ContentRestrictions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentAccessRestrictionLevel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::ContentRestrictions::ContentAccessRestrictionLevel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Media::ContentRestrictions::RatedContentCategory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::ContentRestrictions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::ContentRestrictions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RatedContentCategory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::ContentRestrictions::RatedContentCategory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>::get_python_type() noexcept {

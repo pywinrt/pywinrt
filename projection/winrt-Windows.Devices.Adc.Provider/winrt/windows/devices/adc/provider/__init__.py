@@ -15,7 +15,5 @@ class ProviderAdcChannelMode(enum.IntEnum):
     SINGLE_ENDED = 0
     DIFFERENTIAL = 1
 
-_ns_module._register_ProviderAdcChannelMode(ProviderAdcChannelMode)
-
 IAdcControllerProvider = _ns_module.IAdcControllerProvider
 IAdcProvider = _ns_module.IAdcProvider

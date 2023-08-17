@@ -213,9 +213,6 @@ namespace py::cpp::Windows::Graphics::Effects
     // ----- Windows.Graphics.Effects Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Effects");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -253,7 +250,7 @@ namespace py::cpp::Windows::Graphics::Effects
            "_winrt_Windows_Graphics_Effects",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

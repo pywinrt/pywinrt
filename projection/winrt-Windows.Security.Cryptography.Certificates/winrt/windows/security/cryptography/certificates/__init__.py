@@ -81,15 +81,6 @@ class SignatureValidationResult(enum.IntEnum):
     INVALID_SIGNATURE = 3
     OTHER_ERRORS = 4
 
-_ns_module._register_CertificateChainPolicy(CertificateChainPolicy)
-_ns_module._register_ChainValidationResult(ChainValidationResult)
-_ns_module._register_EnrollKeyUsages(EnrollKeyUsages)
-_ns_module._register_ExportOption(ExportOption)
-_ns_module._register_InstallOptions(InstallOptions)
-_ns_module._register_KeyProtectionLevel(KeyProtectionLevel)
-_ns_module._register_KeySize(KeySize)
-_ns_module._register_SignatureValidationResult(SignatureValidationResult)
-
 Certificate = _ns_module.Certificate
 CertificateChain = _ns_module.CertificateChain
 CertificateEnrollmentManager = _ns_module.CertificateEnrollmentManager

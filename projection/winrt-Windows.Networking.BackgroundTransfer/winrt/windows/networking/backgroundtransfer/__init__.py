@@ -72,11 +72,6 @@ class BackgroundTransferStatus(enum.IntEnum):
     PAUSED_RECOVERABLE_WEB_ERROR_STATUS = 8
     PAUSED_SYSTEM_POLICY = 32
 
-_ns_module._register_BackgroundTransferBehavior(BackgroundTransferBehavior)
-_ns_module._register_BackgroundTransferCostPolicy(BackgroundTransferCostPolicy)
-_ns_module._register_BackgroundTransferPriority(BackgroundTransferPriority)
-_ns_module._register_BackgroundTransferStatus(BackgroundTransferStatus)
-
 BackgroundDownloadProgress = _ns_module.BackgroundDownloadProgress
 BackgroundTransferFileRange = _ns_module.BackgroundTransferFileRange
 BackgroundUploadProgress = _ns_module.BackgroundUploadProgress

@@ -22,6 +22,4 @@ class RemoteDesktopConnectionStatus(enum.IntEnum):
     USER_INPUT_NEEDED = 2
     DISCONNECTED = 3
 
-_ns_module._register_RemoteDesktopConnectionStatus(RemoteDesktopConnectionStatus)
-
 RemoteDesktopConnectionInfo = _ns_module.RemoteDesktopConnectionInfo

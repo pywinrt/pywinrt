@@ -4,7 +4,6 @@ import winrt.system
 
 _ns_module = winrt.system._import_ns_module("Windows.Foundation.Numerics")
 
-
 Matrix3x2 = _ns_module.Matrix3x2
 Matrix4x4 = _ns_module.Matrix4x4
 Plane = _ns_module.Plane

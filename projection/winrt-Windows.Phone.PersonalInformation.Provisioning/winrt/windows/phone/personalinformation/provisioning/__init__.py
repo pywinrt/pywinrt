@@ -24,6 +24,5 @@ try:
 except ImportError:
     pass
 
-
 ContactPartnerProvisioningManager = _ns_module.ContactPartnerProvisioningManager
 MessagePartnerProvisioningManager = _ns_module.MessagePartnerProvisioningManager

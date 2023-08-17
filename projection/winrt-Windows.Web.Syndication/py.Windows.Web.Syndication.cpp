@@ -8,9 +8,6 @@ namespace py::cpp::Windows::Web::Syndication
 {
     struct module_state
     {
-        PyObject* type_SyndicationErrorStatus;
-        PyObject* type_SyndicationFormat;
-        PyObject* type_SyndicationTextType;
         PyTypeObject* type_SyndicationAttribute;
         PyTypeObject* type_SyndicationCategory;
         PyTypeObject* type_SyndicationClient;
@@ -29,78 +26,6 @@ namespace py::cpp::Windows::Web::Syndication
         PyTypeObject* type_RetrievalProgress;
         PyTypeObject* type_TransferProgress;
     };
-
-    static PyObject* register_SyndicationErrorStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SyndicationErrorStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SyndicationErrorStatus = type;
-        Py_INCREF(state->type_SyndicationErrorStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SyndicationFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SyndicationFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SyndicationFormat = type;
-        Py_INCREF(state->type_SyndicationFormat);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SyndicationTextType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SyndicationTextType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SyndicationTextType = type;
-        Py_INCREF(state->type_SyndicationTextType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- SyndicationAttribute class --------------------
     static constexpr const char* const type_name_SyndicationAttribute = "SyndicationAttribute";
@@ -8768,12 +8693,6 @@ namespace py::cpp::Windows::Web::Syndication
     // ----- Windows.Web.Syndication Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Web::Syndication");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SyndicationErrorStatus", register_SyndicationErrorStatus, METH_O, "registers type"},
-        {"_register_SyndicationFormat", register_SyndicationFormat, METH_O, "registers type"},
-        {"_register_SyndicationTextType", register_SyndicationTextType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -8784,9 +8703,6 @@ namespace py::cpp::Windows::Web::Syndication
             return 0;
         }
 
-        Py_VISIT(state->type_SyndicationErrorStatus);
-        Py_VISIT(state->type_SyndicationFormat);
-        Py_VISIT(state->type_SyndicationTextType);
         Py_VISIT(state->type_SyndicationAttribute);
         Py_VISIT(state->type_SyndicationCategory);
         Py_VISIT(state->type_SyndicationClient);
@@ -8817,9 +8733,6 @@ namespace py::cpp::Windows::Web::Syndication
             return 0;
         }
 
-        Py_CLEAR(state->type_SyndicationErrorStatus);
-        Py_CLEAR(state->type_SyndicationFormat);
-        Py_CLEAR(state->type_SyndicationTextType);
         Py_CLEAR(state->type_SyndicationAttribute);
         Py_CLEAR(state->type_SyndicationCategory);
         Py_CLEAR(state->type_SyndicationClient);
@@ -8847,7 +8760,7 @@ namespace py::cpp::Windows::Web::Syndication
            "_winrt_Windows_Web_Syndication",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -8986,75 +8899,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Syndication(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Syndication::SyndicationErrorStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Syndication;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Syndication");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SyndicationErrorStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Syndication::SyndicationErrorStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Syndication::SyndicationFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Syndication;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Syndication");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SyndicationFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Syndication::SyndicationFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Web::Syndication::SyndicationTextType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Syndication;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Syndication");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SyndicationTextType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Syndication::SyndicationTextType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Web::Syndication::SyndicationAttribute>::get_python_type() noexcept {

@@ -37,11 +37,6 @@ class IOControlBufferingMethod(enum.IntEnum):
     DIRECT_OUTPUT = 2
     NEITHER = 3
 
-_ns_module._register_DeviceAccessMode(DeviceAccessMode)
-_ns_module._register_DeviceSharingMode(DeviceSharingMode)
-_ns_module._register_IOControlAccessMode(IOControlAccessMode)
-_ns_module._register_IOControlBufferingMethod(IOControlBufferingMethod)
-
 CustomDevice = _ns_module.CustomDevice
 IOControlCode = _ns_module.IOControlCode
 KnownDeviceTypes = _ns_module.KnownDeviceTypes

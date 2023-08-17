@@ -120,55 +120,64 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AudioBufferAccessMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "AudioBufferAccessMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::AudioProcessing>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "AudioProcessing";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaPlaybackAutoRepeatMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaPlaybackAutoRepeatMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaPlaybackStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaPlaybackStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaPlaybackType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaPlaybackType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::MediaTimelineControllerState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaTimelineControllerState";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SoundLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "SoundLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SystemMediaTransportControlsButton>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "SystemMediaTransportControlsButton";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::SystemMediaTransportControlsProperty>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "SystemMediaTransportControlsProperty";
     };
 
     template<>

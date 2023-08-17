@@ -49,37 +49,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
+        static constexpr const char* type_name = "PlatformDiagnosticActionState";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
+        static constexpr const char* type_name = "PlatformDiagnosticEscalationType";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
+        static constexpr const char* type_name = "PlatformDiagnosticEventBufferLatencies";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTracePriority>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
+        static constexpr const char* type_name = "PlatformDiagnosticTracePriority";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
+        static constexpr const char* type_name = "PlatformDiagnosticTraceSlotState";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
+        static constexpr const char* type_name = "PlatformDiagnosticTraceSlotType";
     };
 
     template<>

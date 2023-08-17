@@ -95,17 +95,6 @@ class GattWriteOption(enum.IntEnum):
     WRITE_WITH_RESPONSE = 0
     WRITE_WITHOUT_RESPONSE = 1
 
-_ns_module._register_GattCharacteristicProperties(GattCharacteristicProperties)
-_ns_module._register_GattClientCharacteristicConfigurationDescriptorValue(GattClientCharacteristicConfigurationDescriptorValue)
-_ns_module._register_GattCommunicationStatus(GattCommunicationStatus)
-_ns_module._register_GattOpenStatus(GattOpenStatus)
-_ns_module._register_GattProtectionLevel(GattProtectionLevel)
-_ns_module._register_GattRequestState(GattRequestState)
-_ns_module._register_GattServiceProviderAdvertisementStatus(GattServiceProviderAdvertisementStatus)
-_ns_module._register_GattSessionStatus(GattSessionStatus)
-_ns_module._register_GattSharingMode(GattSharingMode)
-_ns_module._register_GattWriteOption(GattWriteOption)
-
 GattCharacteristic = _ns_module.GattCharacteristic
 GattCharacteristicUuids = _ns_module.GattCharacteristicUuids
 GattCharacteristicsResult = _ns_module.GattCharacteristicsResult

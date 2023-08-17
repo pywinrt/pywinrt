@@ -73,7 +73,5 @@ class WebErrorStatus(enum.IntEnum):
     GATEWAY_TIMEOUT = 504
     HTTP_VERSION_NOT_SUPPORTED = 505
 
-_ns_module._register_WebErrorStatus(WebErrorStatus)
-
 WebError = _ns_module.WebError
 IUriToStreamResolver = _ns_module.IUriToStreamResolver

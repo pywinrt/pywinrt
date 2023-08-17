@@ -57,7 +57,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveErrorStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveErrorStatus";
     };
 
     template<>

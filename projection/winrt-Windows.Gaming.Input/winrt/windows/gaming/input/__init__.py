@@ -215,16 +215,6 @@ class RequiredUINavigationButtons(enum.IntFlag):
     LEFT = 0x40
     RIGHT = 0x80
 
-_ns_module._register_ArcadeStickButtons(ArcadeStickButtons)
-_ns_module._register_FlightStickButtons(FlightStickButtons)
-_ns_module._register_GameControllerButtonLabel(GameControllerButtonLabel)
-_ns_module._register_GameControllerSwitchKind(GameControllerSwitchKind)
-_ns_module._register_GameControllerSwitchPosition(GameControllerSwitchPosition)
-_ns_module._register_GamepadButtons(GamepadButtons)
-_ns_module._register_OptionalUINavigationButtons(OptionalUINavigationButtons)
-_ns_module._register_RacingWheelButtons(RacingWheelButtons)
-_ns_module._register_RequiredUINavigationButtons(RequiredUINavigationButtons)
-
 ArcadeStickReading = _ns_module.ArcadeStickReading
 FlightStickReading = _ns_module.FlightStickReading
 GamepadReading = _ns_module.GamepadReading

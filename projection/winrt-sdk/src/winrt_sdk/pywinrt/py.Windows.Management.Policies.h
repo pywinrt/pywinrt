@@ -43,7 +43,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Policies::NamedPolicyKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.policies";
+        static constexpr const char* type_name = "NamedPolicyKind";
     };
 
     template<>

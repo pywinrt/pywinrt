@@ -74,7 +74,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothEventTriggeringMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
+        static constexpr const char* type_name = "BluetoothEventTriggeringMode";
     };
 
     template<>

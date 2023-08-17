@@ -13,5 +13,3 @@ class SpeechRecognitionUIStatus(enum.IntEnum):
     PREEMPTED = 3
     PRIVACY_POLICY_DECLINED = 4
 
-_ns_module._register_SpeechRecognitionUIStatus(SpeechRecognitionUIStatus)
-

@@ -57,11 +57,6 @@ class TriggeredConnectState(enum.IntEnum):
     CANCELED = 4
     FAILED = 5
 
-_ns_module._register_PeerDiscoveryTypes(PeerDiscoveryTypes)
-_ns_module._register_PeerRole(PeerRole)
-_ns_module._register_PeerWatcherStatus(PeerWatcherStatus)
-_ns_module._register_TriggeredConnectState(TriggeredConnectState)
-
 ConnectionRequestedEventArgs = _ns_module.ConnectionRequestedEventArgs
 PeerFinder = _ns_module.PeerFinder
 PeerInformation = _ns_module.PeerInformation

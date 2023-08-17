@@ -8,11 +8,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 {
     struct module_state
     {
-        PyObject* type_ContactChangeType;
-        PyObject* type_ContactQueryResultOrdering;
-        PyObject* type_ContactStoreApplicationAccessMode;
-        PyObject* type_ContactStoreSystemAccessMode;
-        PyObject* type_VCardFormat;
         PyTypeObject* type_ContactAddress;
         PyTypeObject* type_ContactChangeRecord;
         PyTypeObject* type_ContactInformation;
@@ -24,126 +19,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         PyTypeObject* type_IContactInformation;
         PyTypeObject* type_IContactInformation2;
     };
-
-    static PyObject* register_ContactChangeType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ContactChangeType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ContactChangeType = type;
-        Py_INCREF(state->type_ContactChangeType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ContactQueryResultOrdering(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ContactQueryResultOrdering)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ContactQueryResultOrdering = type;
-        Py_INCREF(state->type_ContactQueryResultOrdering);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ContactStoreApplicationAccessMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ContactStoreApplicationAccessMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ContactStoreApplicationAccessMode = type;
-        Py_INCREF(state->type_ContactStoreApplicationAccessMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ContactStoreSystemAccessMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ContactStoreSystemAccessMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ContactStoreSystemAccessMode = type;
-        Py_INCREF(state->type_ContactStoreSystemAccessMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_VCardFormat(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_VCardFormat)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_VCardFormat = type;
-        Py_INCREF(state->type_VCardFormat);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ContactAddress class --------------------
     static constexpr const char* const type_name_ContactAddress = "ContactAddress";
@@ -4073,14 +3948,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     // ----- Windows.Phone.PersonalInformation Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Phone::PersonalInformation");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ContactChangeType", register_ContactChangeType, METH_O, "registers type"},
-        {"_register_ContactQueryResultOrdering", register_ContactQueryResultOrdering, METH_O, "registers type"},
-        {"_register_ContactStoreApplicationAccessMode", register_ContactStoreApplicationAccessMode, METH_O, "registers type"},
-        {"_register_ContactStoreSystemAccessMode", register_ContactStoreSystemAccessMode, METH_O, "registers type"},
-        {"_register_VCardFormat", register_VCardFormat, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4091,11 +3958,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
             return 0;
         }
 
-        Py_VISIT(state->type_ContactChangeType);
-        Py_VISIT(state->type_ContactQueryResultOrdering);
-        Py_VISIT(state->type_ContactStoreApplicationAccessMode);
-        Py_VISIT(state->type_ContactStoreSystemAccessMode);
-        Py_VISIT(state->type_VCardFormat);
         Py_VISIT(state->type_ContactAddress);
         Py_VISIT(state->type_ContactChangeRecord);
         Py_VISIT(state->type_ContactInformation);
@@ -4119,11 +3981,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
             return 0;
         }
 
-        Py_CLEAR(state->type_ContactChangeType);
-        Py_CLEAR(state->type_ContactQueryResultOrdering);
-        Py_CLEAR(state->type_ContactStoreApplicationAccessMode);
-        Py_CLEAR(state->type_ContactStoreSystemAccessMode);
-        Py_CLEAR(state->type_VCardFormat);
         Py_CLEAR(state->type_ContactAddress);
         Py_CLEAR(state->type_ContactChangeRecord);
         Py_CLEAR(state->type_ContactInformation);
@@ -4144,7 +4001,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
            "_winrt_Windows_Phone_PersonalInformation",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4247,121 +4104,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_PersonalInformation(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::PersonalInformation::ContactChangeType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactChangeType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::ContactChangeType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::PersonalInformation::ContactQueryResultOrdering>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactQueryResultOrdering;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::ContactQueryResultOrdering is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::PersonalInformation::ContactStoreApplicationAccessMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactStoreApplicationAccessMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::ContactStoreApplicationAccessMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::PersonalInformation::ContactStoreSystemAccessMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactStoreSystemAccessMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::ContactStoreSystemAccessMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::PersonalInformation::VCardFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VCardFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::VCardFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::ContactAddress>::get_python_type() noexcept {

@@ -4,7 +4,6 @@ import winrt.system
 
 _ns_module = winrt.system._import_ns_module("Windows.Graphics")
 
-
 DisplayAdapterId = _ns_module.DisplayAdapterId
 DisplayId = _ns_module.DisplayId
 PointInt32 = _ns_module.PointInt32

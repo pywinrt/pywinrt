@@ -55,10 +55,6 @@ class HttpCookieUsageBehavior(enum.IntEnum):
     DEFAULT = 0
     NO_COOKIES = 1
 
-_ns_module._register_HttpCacheReadBehavior(HttpCacheReadBehavior)
-_ns_module._register_HttpCacheWriteBehavior(HttpCacheWriteBehavior)
-_ns_module._register_HttpCookieUsageBehavior(HttpCookieUsageBehavior)
-
 HttpBaseProtocolFilter = _ns_module.HttpBaseProtocolFilter
 HttpCacheControl = _ns_module.HttpCacheControl
 HttpServerCustomValidationRequestedEventArgs = _ns_module.HttpServerCustomValidationRequestedEventArgs

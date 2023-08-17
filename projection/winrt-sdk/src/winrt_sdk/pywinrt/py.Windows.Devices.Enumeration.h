@@ -113,67 +113,78 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceAccessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DeviceAccessStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceClass>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DeviceClass";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceInformationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DeviceInformationKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePairingKinds>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DevicePairingKinds";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DevicePairingProtectionLevel";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePairingResultStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DevicePairingResultStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePickerDisplayStatusOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DevicePickerDisplayStatusOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceUnpairingResultStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DeviceUnpairingResultStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceWatcherEventKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DeviceWatcherEventKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceWatcherStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DeviceWatcherStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::Panel>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "Panel";
     };
 
     template<>

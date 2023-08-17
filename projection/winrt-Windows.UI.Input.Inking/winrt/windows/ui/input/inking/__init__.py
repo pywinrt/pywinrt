@@ -95,19 +95,6 @@ class PenTipShape(enum.IntEnum):
     CIRCLE = 0
     RECTANGLE = 1
 
-_ns_module._register_HandwritingLineHeight(HandwritingLineHeight)
-_ns_module._register_InkDrawingAttributesKind(InkDrawingAttributesKind)
-_ns_module._register_InkHighContrastAdjustment(InkHighContrastAdjustment)
-_ns_module._register_InkInputProcessingMode(InkInputProcessingMode)
-_ns_module._register_InkInputRightDragAction(InkInputRightDragAction)
-_ns_module._register_InkManipulationMode(InkManipulationMode)
-_ns_module._register_InkPersistenceFormat(InkPersistenceFormat)
-_ns_module._register_InkPresenterPredefinedConfiguration(InkPresenterPredefinedConfiguration)
-_ns_module._register_InkPresenterStencilKind(InkPresenterStencilKind)
-_ns_module._register_InkRecognitionTarget(InkRecognitionTarget)
-_ns_module._register_PenHandedness(PenHandedness)
-_ns_module._register_PenTipShape(PenTipShape)
-
 InkDrawingAttributes = _ns_module.InkDrawingAttributes
 InkDrawingAttributesPencilProperties = _ns_module.InkDrawingAttributesPencilProperties
 InkInputConfiguration = _ns_module.InkInputConfiguration

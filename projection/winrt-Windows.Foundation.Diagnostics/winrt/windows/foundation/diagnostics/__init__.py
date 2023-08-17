@@ -82,15 +82,6 @@ class LoggingOpcode(enum.IntEnum):
     SUSPEND = 8
     SEND = 9
 
-_ns_module._register_CausalityRelation(CausalityRelation)
-_ns_module._register_CausalitySource(CausalitySource)
-_ns_module._register_CausalitySynchronousWork(CausalitySynchronousWork)
-_ns_module._register_CausalityTraceLevel(CausalityTraceLevel)
-_ns_module._register_ErrorOptions(ErrorOptions)
-_ns_module._register_LoggingFieldFormat(LoggingFieldFormat)
-_ns_module._register_LoggingLevel(LoggingLevel)
-_ns_module._register_LoggingOpcode(LoggingOpcode)
-
 AsyncCausalityTracer = _ns_module.AsyncCausalityTracer
 ErrorDetails = _ns_module.ErrorDetails
 FileLoggingSession = _ns_module.FileLoggingSession

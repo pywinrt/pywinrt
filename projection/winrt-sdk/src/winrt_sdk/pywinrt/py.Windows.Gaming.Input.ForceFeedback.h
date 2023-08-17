@@ -54,31 +54,36 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
+        static constexpr const char* type_name = "ConditionForceEffectKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectAxes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
+        static constexpr const char* type_name = "ForceFeedbackEffectAxes";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
+        static constexpr const char* type_name = "ForceFeedbackEffectState";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
+        static constexpr const char* type_name = "ForceFeedbackLoadEffectResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffectKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
+        static constexpr const char* type_name = "PeriodicForceEffectKind";
     };
 
     template<>

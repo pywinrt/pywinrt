@@ -958,9 +958,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
     // ----- Windows.ApplicationModel.Appointments.AppointmentsProvider Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Appointments::AppointmentsProvider");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1002,7 +999,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
            "_winrt_Windows_ApplicationModel_Appointments_AppointmentsProvider",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

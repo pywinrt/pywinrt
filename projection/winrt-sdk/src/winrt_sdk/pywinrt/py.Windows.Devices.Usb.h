@@ -78,37 +78,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbControlRecipient>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbControlRecipient";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbControlTransferType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbControlTransferType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbEndpointType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbEndpointType";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbReadOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbReadOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbTransferDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbTransferDirection";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbWriteOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbWriteOptions";
     };
 
     template<>

@@ -8,160 +8,10 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 {
     struct module_state
     {
-        PyObject* type_PlatformDiagnosticActionState;
-        PyObject* type_PlatformDiagnosticEscalationType;
-        PyObject* type_PlatformDiagnosticEventBufferLatencies;
-        PyObject* type_PlatformDiagnosticTracePriority;
-        PyObject* type_PlatformDiagnosticTraceSlotState;
-        PyObject* type_PlatformDiagnosticTraceSlotType;
         PyTypeObject* type_PlatformDiagnosticActions;
         PyTypeObject* type_PlatformDiagnosticTraceInfo;
         PyTypeObject* type_PlatformDiagnosticTraceRuntimeInfo;
     };
-
-    static PyObject* register_PlatformDiagnosticActionState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PlatformDiagnosticActionState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PlatformDiagnosticActionState = type;
-        Py_INCREF(state->type_PlatformDiagnosticActionState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PlatformDiagnosticEscalationType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PlatformDiagnosticEscalationType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PlatformDiagnosticEscalationType = type;
-        Py_INCREF(state->type_PlatformDiagnosticEscalationType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PlatformDiagnosticEventBufferLatencies(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PlatformDiagnosticEventBufferLatencies)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PlatformDiagnosticEventBufferLatencies = type;
-        Py_INCREF(state->type_PlatformDiagnosticEventBufferLatencies);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PlatformDiagnosticTracePriority(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PlatformDiagnosticTracePriority)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PlatformDiagnosticTracePriority = type;
-        Py_INCREF(state->type_PlatformDiagnosticTracePriority);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PlatformDiagnosticTraceSlotState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PlatformDiagnosticTraceSlotState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PlatformDiagnosticTraceSlotState = type;
-        Py_INCREF(state->type_PlatformDiagnosticTraceSlotState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PlatformDiagnosticTraceSlotType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PlatformDiagnosticTraceSlotType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PlatformDiagnosticTraceSlotType = type;
-        Py_INCREF(state->type_PlatformDiagnosticTraceSlotType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PlatformDiagnosticActions class --------------------
     static constexpr const char* const type_name_PlatformDiagnosticActions = "PlatformDiagnosticActions";
@@ -777,15 +627,6 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     // ----- Windows.System.Diagnostics.TraceReporting Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::System::Diagnostics::TraceReporting");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PlatformDiagnosticActionState", register_PlatformDiagnosticActionState, METH_O, "registers type"},
-        {"_register_PlatformDiagnosticEscalationType", register_PlatformDiagnosticEscalationType, METH_O, "registers type"},
-        {"_register_PlatformDiagnosticEventBufferLatencies", register_PlatformDiagnosticEventBufferLatencies, METH_O, "registers type"},
-        {"_register_PlatformDiagnosticTracePriority", register_PlatformDiagnosticTracePriority, METH_O, "registers type"},
-        {"_register_PlatformDiagnosticTraceSlotState", register_PlatformDiagnosticTraceSlotState, METH_O, "registers type"},
-        {"_register_PlatformDiagnosticTraceSlotType", register_PlatformDiagnosticTraceSlotType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -796,12 +637,6 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
             return 0;
         }
 
-        Py_VISIT(state->type_PlatformDiagnosticActionState);
-        Py_VISIT(state->type_PlatformDiagnosticEscalationType);
-        Py_VISIT(state->type_PlatformDiagnosticEventBufferLatencies);
-        Py_VISIT(state->type_PlatformDiagnosticTracePriority);
-        Py_VISIT(state->type_PlatformDiagnosticTraceSlotState);
-        Py_VISIT(state->type_PlatformDiagnosticTraceSlotType);
         Py_VISIT(state->type_PlatformDiagnosticActions);
         Py_VISIT(state->type_PlatformDiagnosticTraceInfo);
         Py_VISIT(state->type_PlatformDiagnosticTraceRuntimeInfo);
@@ -818,12 +653,6 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
             return 0;
         }
 
-        Py_CLEAR(state->type_PlatformDiagnosticActionState);
-        Py_CLEAR(state->type_PlatformDiagnosticEscalationType);
-        Py_CLEAR(state->type_PlatformDiagnosticEventBufferLatencies);
-        Py_CLEAR(state->type_PlatformDiagnosticTracePriority);
-        Py_CLEAR(state->type_PlatformDiagnosticTraceSlotState);
-        Py_CLEAR(state->type_PlatformDiagnosticTraceSlotType);
         Py_CLEAR(state->type_PlatformDiagnosticActions);
         Py_CLEAR(state->type_PlatformDiagnosticTraceInfo);
         Py_CLEAR(state->type_PlatformDiagnosticTraceRuntimeInfo);
@@ -837,7 +666,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
            "_winrt_Windows_System_Diagnostics_TraceReporting",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -892,144 +721,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Diagnostics_TraceReporting(void) noe
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics::TraceReporting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics::TraceReporting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlatformDiagnosticActionState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics::TraceReporting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics::TraceReporting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlatformDiagnosticEscalationType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics::TraceReporting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics::TraceReporting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlatformDiagnosticEventBufferLatencies;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTracePriority>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics::TraceReporting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics::TraceReporting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlatformDiagnosticTracePriority;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTracePriority is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics::TraceReporting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics::TraceReporting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlatformDiagnosticTraceSlotState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics::TraceReporting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics::TraceReporting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlatformDiagnosticTraceSlotType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions>::get_python_type() noexcept {

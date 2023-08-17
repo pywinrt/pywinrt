@@ -183,91 +183,106 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::AutoLoadedDisplayPropertyKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "AutoLoadedDisplayPropertyKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::FailedMediaStreamKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "FailedMediaStreamKind";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaBreakInsertionMethod>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaBreakInsertionMethod";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaCommandEnablingRule>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaCommandEnablingRule";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItemChangedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackItemChangedReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItemErrorCode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackItemErrorCode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionVideoConstrictionReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackSessionVideoConstrictionReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackState";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerAudioCategory>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlayerAudioCategory";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerAudioDeviceType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlayerAudioDeviceType";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerError>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlayerError";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlayerState";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::SphericalVideoProjectionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "SphericalVideoProjectionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::StereoscopicVideoRenderMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "StereoscopicVideoRenderMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::TimedMetadataTrackPresentationMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "TimedMetadataTrackPresentationMode";
     };
 
     template<>

@@ -116,49 +116,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PdlConversionHostBasedProcessingOperations>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PdlConversionHostBasedProcessingOperations";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowAttributesMergePolicy>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowAttributesMergePolicy";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobAbortReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowJobAbortReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConversionType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowPdlConversionType";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJobStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowPrinterJobStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSessionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowSessionStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowSubmittedStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUICompletionStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowUICompletionStatus";
     };
 
     template<>

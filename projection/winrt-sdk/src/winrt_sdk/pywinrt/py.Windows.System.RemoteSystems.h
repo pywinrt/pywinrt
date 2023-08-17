@@ -133,79 +133,92 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAccessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemAccessStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemAuthorizationKind";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemDiscoveryType";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemPlatform>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemPlatform";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemSessionCreationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemSessionDisconnectedReason";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemSessionJoinStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannelReliability>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemSessionMessageChannelReliability";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcherStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemSessionParticipantWatcherStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemSessionWatcherStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemStatusType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemStatusType";
     };
 
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemWatcherError>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotesystems";
+        static constexpr const char* type_name = "RemoteSystemWatcherError";
     };
 
     template<>

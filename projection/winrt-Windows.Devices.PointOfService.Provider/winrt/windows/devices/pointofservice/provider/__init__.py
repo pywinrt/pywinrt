@@ -35,8 +35,6 @@ class BarcodeScannerTriggerState(enum.IntEnum):
     RELEASED = 0
     PRESSED = 1
 
-_ns_module._register_BarcodeScannerTriggerState(BarcodeScannerTriggerState)
-
 BarcodeScannerDisableScannerRequest = _ns_module.BarcodeScannerDisableScannerRequest
 BarcodeScannerDisableScannerRequestEventArgs = _ns_module.BarcodeScannerDisableScannerRequestEventArgs
 BarcodeScannerEnableScannerRequest = _ns_module.BarcodeScannerEnableScannerRequest

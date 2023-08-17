@@ -68,9 +68,6 @@ class JointPoseAccuracy(enum.IntEnum):
     HIGH = 0
     APPROXIMATE = 1
 
-_ns_module._register_HandJointKind(HandJointKind)
-_ns_module._register_JointPoseAccuracy(JointPoseAccuracy)
-
 HandMeshVertex = _ns_module.HandMeshVertex
 JointPose = _ns_module.JointPose
 EyesPose = _ns_module.EyesPose

@@ -58,19 +58,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreInputViewKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreInputViewOcclusionKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreInputViewXYFocusTransferDirection";
     };
 
     template<>

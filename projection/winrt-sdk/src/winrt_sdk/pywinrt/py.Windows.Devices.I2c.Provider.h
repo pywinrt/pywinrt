@@ -50,19 +50,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cBusSpeed>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
+        static constexpr const char* type_name = "ProviderI2cBusSpeed";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cSharingMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
+        static constexpr const char* type_name = "ProviderI2cSharingMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
+        static constexpr const char* type_name = "ProviderI2cTransferStatus";
     };
 
     template<>

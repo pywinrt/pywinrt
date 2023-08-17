@@ -111,85 +111,99 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::AccessoryNotificationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "AccessoryNotificationType";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::CalendarChangedEvent>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "CalendarChangedEvent";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "PhoneCallAudioEndpoint";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneCallDirection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "PhoneCallDirection";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneCallState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "PhoneCallState";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneCallTransport>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "PhoneCallTransport";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneLineRegistrationState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "PhoneLineRegistrationState";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneMediaType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "PhoneMediaType";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneNotificationType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "PhoneNotificationType";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PlaybackCapability>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "PlaybackCapability";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PlaybackCommand>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "PlaybackCommand";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PlaybackStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "PlaybackStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::ReminderState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "ReminderState";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::VibrateState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.notification.management";
+        static constexpr const char* type_name = "VibrateState";
     };
 
     template<>

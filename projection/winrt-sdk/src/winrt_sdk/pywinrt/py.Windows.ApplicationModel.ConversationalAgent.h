@@ -102,97 +102,113 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ActivationSignalDetectionConfigurationCreationStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationRemovalResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ActivationSignalDetectionConfigurationRemovalResult";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationSetModelDataResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ActivationSignalDetectionConfigurationSetModelDataResult";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationStateChangeResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ActivationSignalDetectionConfigurationStateChangeResult";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ActivationSignalDetectionTrainingDataFormat";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ActivationSignalDetectorKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorPowerState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ActivationSignalDetectorPowerState";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentActivationKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationResult>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentActivationResult";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentSessionUpdateResponse";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentState";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentSystemStateChangeType";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentVoiceActivationPrerequisiteKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentVoiceActivationPrerequisiteKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangeKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "DetectionConfigurationAvailabilityChangeKind";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "DetectionConfigurationTrainingStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::SignalDetectorResourceKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "SignalDetectorResourceKind";
     };
 
     template<>

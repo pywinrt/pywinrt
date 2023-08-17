@@ -53,9 +53,6 @@ class LampPurposes(enum.IntFlag):
     ILLUMINATION = 0x10
     PRESENTATION = 0x20
 
-_ns_module._register_LampArrayKind(LampArrayKind)
-_ns_module._register_LampPurposes(LampPurposes)
-
 Lamp = _ns_module.Lamp
 LampArray = _ns_module.LampArray
 LampAvailabilityChangedEventArgs = _ns_module.LampAvailabilityChangedEventArgs

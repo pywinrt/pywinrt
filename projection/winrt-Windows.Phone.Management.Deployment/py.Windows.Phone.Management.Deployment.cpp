@@ -8,62 +8,12 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 {
     struct module_state
     {
-        PyObject* type_EnterpriseEnrollmentStatus;
-        PyObject* type_EnterpriseStatus;
         PyTypeObject* type_Enterprise;
         PyTypeObject* type_EnterpriseEnrollmentManager;
         PyTypeObject* type_EnterpriseEnrollmentResult;
         PyTypeObject* type_InstallationManager;
         PyTypeObject* type_PackageInstallResult;
     };
-
-    static PyObject* register_EnterpriseEnrollmentStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_EnterpriseEnrollmentStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_EnterpriseEnrollmentStatus = type;
-        Py_INCREF(state->type_EnterpriseEnrollmentStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_EnterpriseStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_EnterpriseStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_EnterpriseStatus = type;
-        Py_INCREF(state->type_EnterpriseStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Enterprise class --------------------
     static constexpr const char* const type_name_Enterprise = "Enterprise";
@@ -970,11 +920,6 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     // ----- Windows.Phone.Management.Deployment Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Phone::Management::Deployment");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_EnterpriseEnrollmentStatus", register_EnterpriseEnrollmentStatus, METH_O, "registers type"},
-        {"_register_EnterpriseStatus", register_EnterpriseStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -985,8 +930,6 @@ namespace py::cpp::Windows::Phone::Management::Deployment
             return 0;
         }
 
-        Py_VISIT(state->type_EnterpriseEnrollmentStatus);
-        Py_VISIT(state->type_EnterpriseStatus);
         Py_VISIT(state->type_Enterprise);
         Py_VISIT(state->type_EnterpriseEnrollmentManager);
         Py_VISIT(state->type_EnterpriseEnrollmentResult);
@@ -1005,8 +948,6 @@ namespace py::cpp::Windows::Phone::Management::Deployment
             return 0;
         }
 
-        Py_CLEAR(state->type_EnterpriseEnrollmentStatus);
-        Py_CLEAR(state->type_EnterpriseStatus);
         Py_CLEAR(state->type_Enterprise);
         Py_CLEAR(state->type_EnterpriseEnrollmentManager);
         Py_CLEAR(state->type_EnterpriseEnrollmentResult);
@@ -1022,7 +963,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
            "_winrt_Windows_Phone_Management_Deployment",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1095,52 +1036,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_Management_Deployment(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EnterpriseEnrollmentStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EnterpriseStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Management::Deployment::EnterpriseStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Phone::Management::Deployment::Enterprise>::get_python_type() noexcept {

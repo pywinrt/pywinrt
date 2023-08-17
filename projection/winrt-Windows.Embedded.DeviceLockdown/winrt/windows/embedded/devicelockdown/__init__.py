@@ -14,6 +14,5 @@ try:
 except ImportError:
     pass
 
-
 DeviceLockdownProfile = _ns_module.DeviceLockdownProfile
 DeviceLockdownProfileInformation = _ns_module.DeviceLockdownProfileInformation

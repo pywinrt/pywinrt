@@ -168,85 +168,99 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapAnimationKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapAnimationKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCameraChangeReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapCameraChangeReason";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapColorScheme>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapColorScheme";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementCollisionBehavior>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElementCollisionBehavior";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapInteractionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapInteractionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapLoadingStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapLoadingStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3DShadingOption>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapModel3DShadingOption";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapPanInteractionMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapPanInteractionMode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapProjection>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapProjection";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyle>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapStyle";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileAnimationState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTileAnimationState";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileLayer>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTileLayer";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapVisibleRegionKind>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapVisibleRegionKind";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapWatermarkMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapWatermarkMode";
     };
 
     template<>

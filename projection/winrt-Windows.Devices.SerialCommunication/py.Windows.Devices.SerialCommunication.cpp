@@ -8,135 +8,10 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 {
     struct module_state
     {
-        PyObject* type_SerialError;
-        PyObject* type_SerialHandshake;
-        PyObject* type_SerialParity;
-        PyObject* type_SerialPinChange;
-        PyObject* type_SerialStopBitCount;
         PyTypeObject* type_ErrorReceivedEventArgs;
         PyTypeObject* type_PinChangedEventArgs;
         PyTypeObject* type_SerialDevice;
     };
-
-    static PyObject* register_SerialError(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SerialError)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SerialError = type;
-        Py_INCREF(state->type_SerialError);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SerialHandshake(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SerialHandshake)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SerialHandshake = type;
-        Py_INCREF(state->type_SerialHandshake);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SerialParity(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SerialParity)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SerialParity = type;
-        Py_INCREF(state->type_SerialParity);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SerialPinChange(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SerialPinChange)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SerialPinChange = type;
-        Py_INCREF(state->type_SerialPinChange);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SerialStopBitCount(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SerialStopBitCount)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SerialStopBitCount = type;
-        Py_INCREF(state->type_SerialStopBitCount);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ErrorReceivedEventArgs class --------------------
     static constexpr const char* const type_name_ErrorReceivedEventArgs = "ErrorReceivedEventArgs";
@@ -1324,14 +1199,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     // ----- Windows.Devices.SerialCommunication Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::SerialCommunication");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SerialError", register_SerialError, METH_O, "registers type"},
-        {"_register_SerialHandshake", register_SerialHandshake, METH_O, "registers type"},
-        {"_register_SerialParity", register_SerialParity, METH_O, "registers type"},
-        {"_register_SerialPinChange", register_SerialPinChange, METH_O, "registers type"},
-        {"_register_SerialStopBitCount", register_SerialStopBitCount, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1342,11 +1209,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
             return 0;
         }
 
-        Py_VISIT(state->type_SerialError);
-        Py_VISIT(state->type_SerialHandshake);
-        Py_VISIT(state->type_SerialParity);
-        Py_VISIT(state->type_SerialPinChange);
-        Py_VISIT(state->type_SerialStopBitCount);
         Py_VISIT(state->type_ErrorReceivedEventArgs);
         Py_VISIT(state->type_PinChangedEventArgs);
         Py_VISIT(state->type_SerialDevice);
@@ -1363,11 +1225,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
             return 0;
         }
 
-        Py_CLEAR(state->type_SerialError);
-        Py_CLEAR(state->type_SerialHandshake);
-        Py_CLEAR(state->type_SerialParity);
-        Py_CLEAR(state->type_SerialPinChange);
-        Py_CLEAR(state->type_SerialStopBitCount);
         Py_CLEAR(state->type_ErrorReceivedEventArgs);
         Py_CLEAR(state->type_PinChangedEventArgs);
         Py_CLEAR(state->type_SerialDevice);
@@ -1381,7 +1238,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
            "_winrt_Windows_Devices_SerialCommunication",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1436,121 +1293,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_SerialCommunication(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::SerialCommunication::SerialError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SerialCommunication;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SerialCommunication");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SerialError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SerialCommunication::SerialError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::SerialCommunication::SerialHandshake>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SerialCommunication;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SerialCommunication");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SerialHandshake;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SerialCommunication::SerialHandshake is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::SerialCommunication::SerialParity>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SerialCommunication;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SerialCommunication");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SerialParity;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SerialCommunication::SerialParity is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::SerialCommunication::SerialPinChange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SerialCommunication;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SerialCommunication");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SerialPinChange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SerialCommunication::SerialPinChange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::SerialCommunication::SerialStopBitCount>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SerialCommunication;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SerialCommunication");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SerialStopBitCount;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SerialCommunication::SerialStopBitCount is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>::get_python_type() noexcept {

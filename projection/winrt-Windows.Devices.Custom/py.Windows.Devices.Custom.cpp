@@ -8,111 +8,11 @@ namespace py::cpp::Windows::Devices::Custom
 {
     struct module_state
     {
-        PyObject* type_DeviceAccessMode;
-        PyObject* type_DeviceSharingMode;
-        PyObject* type_IOControlAccessMode;
-        PyObject* type_IOControlBufferingMethod;
         PyTypeObject* type_CustomDevice;
         PyTypeObject* type_IOControlCode;
         PyTypeObject* type_KnownDeviceTypes;
         PyTypeObject* type_IIOControlCode;
     };
-
-    static PyObject* register_DeviceAccessMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DeviceAccessMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DeviceAccessMode = type;
-        Py_INCREF(state->type_DeviceAccessMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DeviceSharingMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DeviceSharingMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DeviceSharingMode = type;
-        Py_INCREF(state->type_DeviceSharingMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_IOControlAccessMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_IOControlAccessMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_IOControlAccessMode = type;
-        Py_INCREF(state->type_IOControlAccessMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_IOControlBufferingMethod(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_IOControlBufferingMethod)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_IOControlBufferingMethod = type;
-        Py_INCREF(state->type_IOControlBufferingMethod);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CustomDevice class --------------------
     static constexpr const char* const type_name_CustomDevice = "CustomDevice";
@@ -818,13 +718,6 @@ namespace py::cpp::Windows::Devices::Custom
     // ----- Windows.Devices.Custom Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Custom");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_DeviceAccessMode", register_DeviceAccessMode, METH_O, "registers type"},
-        {"_register_DeviceSharingMode", register_DeviceSharingMode, METH_O, "registers type"},
-        {"_register_IOControlAccessMode", register_IOControlAccessMode, METH_O, "registers type"},
-        {"_register_IOControlBufferingMethod", register_IOControlBufferingMethod, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -835,10 +728,6 @@ namespace py::cpp::Windows::Devices::Custom
             return 0;
         }
 
-        Py_VISIT(state->type_DeviceAccessMode);
-        Py_VISIT(state->type_DeviceSharingMode);
-        Py_VISIT(state->type_IOControlAccessMode);
-        Py_VISIT(state->type_IOControlBufferingMethod);
         Py_VISIT(state->type_CustomDevice);
         Py_VISIT(state->type_IOControlCode);
         Py_VISIT(state->type_KnownDeviceTypes);
@@ -856,10 +745,6 @@ namespace py::cpp::Windows::Devices::Custom
             return 0;
         }
 
-        Py_CLEAR(state->type_DeviceAccessMode);
-        Py_CLEAR(state->type_DeviceSharingMode);
-        Py_CLEAR(state->type_IOControlAccessMode);
-        Py_CLEAR(state->type_IOControlBufferingMethod);
         Py_CLEAR(state->type_CustomDevice);
         Py_CLEAR(state->type_IOControlCode);
         Py_CLEAR(state->type_KnownDeviceTypes);
@@ -874,7 +759,7 @@ namespace py::cpp::Windows::Devices::Custom
            "_winrt_Windows_Devices_Custom",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -941,98 +826,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Custom(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Custom::DeviceAccessMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceAccessMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Custom::DeviceAccessMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Custom::DeviceSharingMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceSharingMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Custom::DeviceSharingMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Custom::IOControlAccessMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IOControlAccessMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Custom::IOControlAccessMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Custom::IOControlBufferingMethod>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IOControlBufferingMethod;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Custom::IOControlBufferingMethod is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Custom::CustomDevice>::get_python_type() noexcept {

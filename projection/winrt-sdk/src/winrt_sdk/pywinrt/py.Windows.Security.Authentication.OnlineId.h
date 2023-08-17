@@ -54,13 +54,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::CredentialPromptType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "CredentialPromptType";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "OnlineIdSystemTicketStatus";
     };
 
     template<>

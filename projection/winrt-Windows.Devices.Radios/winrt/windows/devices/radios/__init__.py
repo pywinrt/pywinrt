@@ -35,8 +35,4 @@ class RadioState(enum.IntEnum):
     OFF = 2
     DISABLED = 3
 
-_ns_module._register_RadioAccessStatus(RadioAccessStatus)
-_ns_module._register_RadioKind(RadioKind)
-_ns_module._register_RadioState(RadioState)
-
 Radio = _ns_module.Radio

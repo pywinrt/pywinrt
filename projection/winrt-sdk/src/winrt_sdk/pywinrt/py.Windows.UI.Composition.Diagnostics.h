@@ -33,7 +33,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.diagnostics";
+        static constexpr const char* type_name = "CompositionDebugOverdrawContentKinds";
     };
 
     template<>

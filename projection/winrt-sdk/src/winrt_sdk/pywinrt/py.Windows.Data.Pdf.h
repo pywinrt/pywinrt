@@ -50,7 +50,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Pdf::PdfPageRotation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.pdf";
+        static constexpr const char* type_name = "PdfPageRotation";
     };
 
     template<>

@@ -30,8 +30,6 @@ class CoreDragUIContentMode(enum.IntFlag):
     AUTO = 0
     DEFERRED = 0x1
 
-_ns_module._register_CoreDragUIContentMode(CoreDragUIContentMode)
-
 CoreDragDropManager = _ns_module.CoreDragDropManager
 CoreDragInfo = _ns_module.CoreDragInfo
 CoreDragOperation = _ns_module.CoreDragOperation

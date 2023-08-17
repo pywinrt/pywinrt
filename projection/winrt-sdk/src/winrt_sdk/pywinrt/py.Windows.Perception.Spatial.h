@@ -112,37 +112,43 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExportPurpose>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialAnchorExportPurpose";
     };
 
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityWatcherStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialEntityWatcherStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialLocatability>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialLocatability";
     };
 
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialLookDirectionRange>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialLookDirectionRange";
     };
 
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialMovementRange>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialMovementRange";
     };
 
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialPerceptionAccessStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialPerceptionAccessStatus";
     };
 
     template<>

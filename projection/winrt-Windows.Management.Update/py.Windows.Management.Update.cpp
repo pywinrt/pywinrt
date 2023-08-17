@@ -8,9 +8,6 @@ namespace py::cpp::Windows::Management::Update
 {
     struct module_state
     {
-        PyObject* type_WindowsUpdateAdministratorOptions;
-        PyObject* type_WindowsUpdateAdministratorStatus;
-        PyObject* type_WindowsUpdateAttentionRequiredReason;
         PyTypeObject* type_PreviewBuildsManager;
         PyTypeObject* type_PreviewBuildsState;
         PyTypeObject* type_WindowsUpdate;
@@ -28,78 +25,6 @@ namespace py::cpp::Windows::Management::Update
         PyTypeObject* type_WindowsUpdateRestartRequestOptions;
         PyTypeObject* type_WindowsUpdateScanCompletedEventArgs;
     };
-
-    static PyObject* register_WindowsUpdateAdministratorOptions(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WindowsUpdateAdministratorOptions)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WindowsUpdateAdministratorOptions = type;
-        Py_INCREF(state->type_WindowsUpdateAdministratorOptions);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WindowsUpdateAdministratorStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WindowsUpdateAdministratorStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WindowsUpdateAdministratorStatus = type;
-        Py_INCREF(state->type_WindowsUpdateAdministratorStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_WindowsUpdateAttentionRequiredReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_WindowsUpdateAttentionRequiredReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_WindowsUpdateAttentionRequiredReason = type;
-        Py_INCREF(state->type_WindowsUpdateAttentionRequiredReason);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PreviewBuildsManager class --------------------
     static constexpr const char* const type_name_PreviewBuildsManager = "PreviewBuildsManager";
@@ -4106,12 +4031,6 @@ namespace py::cpp::Windows::Management::Update
     // ----- Windows.Management.Update Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Management::Update");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_WindowsUpdateAdministratorOptions", register_WindowsUpdateAdministratorOptions, METH_O, "registers type"},
-        {"_register_WindowsUpdateAdministratorStatus", register_WindowsUpdateAdministratorStatus, METH_O, "registers type"},
-        {"_register_WindowsUpdateAttentionRequiredReason", register_WindowsUpdateAttentionRequiredReason, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4122,9 +4041,6 @@ namespace py::cpp::Windows::Management::Update
             return 0;
         }
 
-        Py_VISIT(state->type_WindowsUpdateAdministratorOptions);
-        Py_VISIT(state->type_WindowsUpdateAdministratorStatus);
-        Py_VISIT(state->type_WindowsUpdateAttentionRequiredReason);
         Py_VISIT(state->type_PreviewBuildsManager);
         Py_VISIT(state->type_PreviewBuildsState);
         Py_VISIT(state->type_WindowsUpdate);
@@ -4154,9 +4070,6 @@ namespace py::cpp::Windows::Management::Update
             return 0;
         }
 
-        Py_CLEAR(state->type_WindowsUpdateAdministratorOptions);
-        Py_CLEAR(state->type_WindowsUpdateAdministratorStatus);
-        Py_CLEAR(state->type_WindowsUpdateAttentionRequiredReason);
         Py_CLEAR(state->type_PreviewBuildsManager);
         Py_CLEAR(state->type_PreviewBuildsState);
         Py_CLEAR(state->type_WindowsUpdate);
@@ -4183,7 +4096,7 @@ namespace py::cpp::Windows::Management::Update
            "_winrt_Windows_Management_Update",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -4316,75 +4229,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Update(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Management::Update::WindowsUpdateAdministratorOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateAdministratorOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateAdministratorOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateAdministratorStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateAttentionRequiredReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::PreviewBuildsManager>::get_python_type() noexcept {

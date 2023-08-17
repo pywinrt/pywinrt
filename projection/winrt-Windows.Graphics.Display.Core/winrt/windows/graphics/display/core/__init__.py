@@ -34,10 +34,6 @@ class HdmiDisplayPixelEncoding(enum.IntEnum):
     YCC422 = 2
     YCC420 = 3
 
-_ns_module._register_HdmiDisplayColorSpace(HdmiDisplayColorSpace)
-_ns_module._register_HdmiDisplayHdrOption(HdmiDisplayHdrOption)
-_ns_module._register_HdmiDisplayPixelEncoding(HdmiDisplayPixelEncoding)
-
 HdmiDisplayHdr2086Metadata = _ns_module.HdmiDisplayHdr2086Metadata
 HdmiDisplayInformation = _ns_module.HdmiDisplayInformation
 HdmiDisplayMode = _ns_module.HdmiDisplayMode

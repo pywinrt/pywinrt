@@ -8,14 +8,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 {
     struct module_state
     {
-        PyObject* type_PdlConversionHostBasedProcessingOperations;
-        PyObject* type_PrintWorkflowAttributesMergePolicy;
-        PyObject* type_PrintWorkflowJobAbortReason;
-        PyObject* type_PrintWorkflowPdlConversionType;
-        PyObject* type_PrintWorkflowPrinterJobStatus;
-        PyObject* type_PrintWorkflowSessionStatus;
-        PyObject* type_PrintWorkflowSubmittedStatus;
-        PyObject* type_PrintWorkflowUICompletionStatus;
         PyTypeObject* type_PrintWorkflowBackgroundSession;
         PyTypeObject* type_PrintWorkflowBackgroundSetupRequestedEventArgs;
         PyTypeObject* type_PrintWorkflowConfiguration;
@@ -46,198 +38,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         PyTypeObject* type_PrintWorkflowUILauncher;
         PyTypeObject* type_PrintWorkflowXpsDataAvailableEventArgs;
     };
-
-    static PyObject* register_PdlConversionHostBasedProcessingOperations(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PdlConversionHostBasedProcessingOperations)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PdlConversionHostBasedProcessingOperations = type;
-        Py_INCREF(state->type_PdlConversionHostBasedProcessingOperations);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PrintWorkflowAttributesMergePolicy(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PrintWorkflowAttributesMergePolicy)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PrintWorkflowAttributesMergePolicy = type;
-        Py_INCREF(state->type_PrintWorkflowAttributesMergePolicy);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PrintWorkflowJobAbortReason(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PrintWorkflowJobAbortReason)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PrintWorkflowJobAbortReason = type;
-        Py_INCREF(state->type_PrintWorkflowJobAbortReason);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PrintWorkflowPdlConversionType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PrintWorkflowPdlConversionType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PrintWorkflowPdlConversionType = type;
-        Py_INCREF(state->type_PrintWorkflowPdlConversionType);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PrintWorkflowPrinterJobStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PrintWorkflowPrinterJobStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PrintWorkflowPrinterJobStatus = type;
-        Py_INCREF(state->type_PrintWorkflowPrinterJobStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PrintWorkflowSessionStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PrintWorkflowSessionStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PrintWorkflowSessionStatus = type;
-        Py_INCREF(state->type_PrintWorkflowSessionStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PrintWorkflowSubmittedStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PrintWorkflowSubmittedStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PrintWorkflowSubmittedStatus = type;
-        Py_INCREF(state->type_PrintWorkflowSubmittedStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PrintWorkflowUICompletionStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PrintWorkflowUICompletionStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PrintWorkflowUICompletionStatus = type;
-        Py_INCREF(state->type_PrintWorkflowUICompletionStatus);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- PrintWorkflowBackgroundSession class --------------------
     static constexpr const char* const type_name_PrintWorkflowBackgroundSession = "PrintWorkflowBackgroundSession";
@@ -4962,17 +4762,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     // ----- Windows.Graphics.Printing.Workflow Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing::Workflow");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_PdlConversionHostBasedProcessingOperations", register_PdlConversionHostBasedProcessingOperations, METH_O, "registers type"},
-        {"_register_PrintWorkflowAttributesMergePolicy", register_PrintWorkflowAttributesMergePolicy, METH_O, "registers type"},
-        {"_register_PrintWorkflowJobAbortReason", register_PrintWorkflowJobAbortReason, METH_O, "registers type"},
-        {"_register_PrintWorkflowPdlConversionType", register_PrintWorkflowPdlConversionType, METH_O, "registers type"},
-        {"_register_PrintWorkflowPrinterJobStatus", register_PrintWorkflowPrinterJobStatus, METH_O, "registers type"},
-        {"_register_PrintWorkflowSessionStatus", register_PrintWorkflowSessionStatus, METH_O, "registers type"},
-        {"_register_PrintWorkflowSubmittedStatus", register_PrintWorkflowSubmittedStatus, METH_O, "registers type"},
-        {"_register_PrintWorkflowUICompletionStatus", register_PrintWorkflowUICompletionStatus, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -4983,14 +4772,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
             return 0;
         }
 
-        Py_VISIT(state->type_PdlConversionHostBasedProcessingOperations);
-        Py_VISIT(state->type_PrintWorkflowAttributesMergePolicy);
-        Py_VISIT(state->type_PrintWorkflowJobAbortReason);
-        Py_VISIT(state->type_PrintWorkflowPdlConversionType);
-        Py_VISIT(state->type_PrintWorkflowPrinterJobStatus);
-        Py_VISIT(state->type_PrintWorkflowSessionStatus);
-        Py_VISIT(state->type_PrintWorkflowSubmittedStatus);
-        Py_VISIT(state->type_PrintWorkflowUICompletionStatus);
         Py_VISIT(state->type_PrintWorkflowBackgroundSession);
         Py_VISIT(state->type_PrintWorkflowBackgroundSetupRequestedEventArgs);
         Py_VISIT(state->type_PrintWorkflowConfiguration);
@@ -5033,14 +4814,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
             return 0;
         }
 
-        Py_CLEAR(state->type_PdlConversionHostBasedProcessingOperations);
-        Py_CLEAR(state->type_PrintWorkflowAttributesMergePolicy);
-        Py_CLEAR(state->type_PrintWorkflowJobAbortReason);
-        Py_CLEAR(state->type_PrintWorkflowPdlConversionType);
-        Py_CLEAR(state->type_PrintWorkflowPrinterJobStatus);
-        Py_CLEAR(state->type_PrintWorkflowSessionStatus);
-        Py_CLEAR(state->type_PrintWorkflowSubmittedStatus);
-        Py_CLEAR(state->type_PrintWorkflowUICompletionStatus);
         Py_CLEAR(state->type_PrintWorkflowBackgroundSession);
         Py_CLEAR(state->type_PrintWorkflowBackgroundSetupRequestedEventArgs);
         Py_CLEAR(state->type_PrintWorkflowConfiguration);
@@ -5080,7 +4853,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
            "_winrt_Windows_Graphics_Printing_Workflow",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -5291,190 +5064,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_Workflow(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::Workflow::PdlConversionHostBasedProcessingOperations>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::Workflow;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::Workflow");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PdlConversionHostBasedProcessingOperations;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::Workflow::PdlConversionHostBasedProcessingOperations is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowAttributesMergePolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::Workflow;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::Workflow");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintWorkflowAttributesMergePolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowAttributesMergePolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobAbortReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::Workflow;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::Workflow");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintWorkflowJobAbortReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobAbortReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConversionType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::Workflow;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::Workflow");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintWorkflowPdlConversionType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConversionType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJobStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::Workflow;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::Workflow");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintWorkflowPrinterJobStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJobStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSessionStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::Workflow;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::Workflow");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintWorkflowSessionStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSessionStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::Workflow;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::Workflow");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintWorkflowSubmittedStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUICompletionStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::Workflow;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::Workflow");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintWorkflowUICompletionStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUICompletionStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession>::get_python_type() noexcept {

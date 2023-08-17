@@ -15,6 +15,4 @@ class SceneLightingEffectReflectanceModel(enum.IntEnum):
     BLINN_PHONG = 0
     PHYSICALLY_BASED_BLINN_PHONG = 1
 
-_ns_module._register_SceneLightingEffectReflectanceModel(SceneLightingEffectReflectanceModel)
-
 SceneLightingEffect = _ns_module.SceneLightingEffect

@@ -28,7 +28,5 @@ class AppCapabilityAccessStatus(enum.IntEnum):
     USER_PROMPT_REQUIRED = 3
     ALLOWED = 4
 
-_ns_module._register_AppCapabilityAccessStatus(AppCapabilityAccessStatus)
-
 AppCapability = _ns_module.AppCapability
 AppCapabilityAccessChangedEventArgs = _ns_module.AppCapabilityAccessChangedEventArgs

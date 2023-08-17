@@ -139,21 +139,6 @@ class StreamedFileFailureMode(enum.IntEnum):
     CURRENTLY_UNAVAILABLE = 1
     INCOMPLETE = 2
 
-_ns_module._register_ApplicationDataCreateDisposition(ApplicationDataCreateDisposition)
-_ns_module._register_ApplicationDataLocality(ApplicationDataLocality)
-_ns_module._register_CreationCollisionOption(CreationCollisionOption)
-_ns_module._register_FileAccessMode(FileAccessMode)
-_ns_module._register_FileAttributes(FileAttributes)
-_ns_module._register_KnownFolderId(KnownFolderId)
-_ns_module._register_KnownFoldersAccessStatus(KnownFoldersAccessStatus)
-_ns_module._register_KnownLibraryId(KnownLibraryId)
-_ns_module._register_NameCollisionOption(NameCollisionOption)
-_ns_module._register_StorageDeleteOption(StorageDeleteOption)
-_ns_module._register_StorageItemTypes(StorageItemTypes)
-_ns_module._register_StorageLibraryChangeType(StorageLibraryChangeType)
-_ns_module._register_StorageOpenOptions(StorageOpenOptions)
-_ns_module._register_StreamedFileFailureMode(StreamedFileFailureMode)
-
 AppDataPaths = _ns_module.AppDataPaths
 ApplicationData = _ns_module.ApplicationData
 ApplicationDataCompositeValue = _ns_module.ApplicationDataCompositeValue

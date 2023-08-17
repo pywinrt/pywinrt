@@ -137,21 +137,6 @@ class VibrateState(enum.IntEnum):
     RINGER_ON_VIBRATE_OFF = 2
     RINGER_ON_VIBRATE_ON = 3
 
-_ns_module._register_AccessoryNotificationType(AccessoryNotificationType)
-_ns_module._register_CalendarChangedEvent(CalendarChangedEvent)
-_ns_module._register_PhoneCallAudioEndpoint(PhoneCallAudioEndpoint)
-_ns_module._register_PhoneCallDirection(PhoneCallDirection)
-_ns_module._register_PhoneCallState(PhoneCallState)
-_ns_module._register_PhoneCallTransport(PhoneCallTransport)
-_ns_module._register_PhoneLineRegistrationState(PhoneLineRegistrationState)
-_ns_module._register_PhoneMediaType(PhoneMediaType)
-_ns_module._register_PhoneNotificationType(PhoneNotificationType)
-_ns_module._register_PlaybackCapability(PlaybackCapability)
-_ns_module._register_PlaybackCommand(PlaybackCommand)
-_ns_module._register_PlaybackStatus(PlaybackStatus)
-_ns_module._register_ReminderState(ReminderState)
-_ns_module._register_VibrateState(VibrateState)
-
 AccessoryManager = _ns_module.AccessoryManager
 AlarmNotificationTriggerDetails = _ns_module.AlarmNotificationTriggerDetails
 AppNotificationInfo = _ns_module.AppNotificationInfo

@@ -8,11 +8,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
 {
     struct module_state
     {
-        PyObject* type_SpatialGestureSettings;
-        PyObject* type_SpatialInteractionPressKind;
-        PyObject* type_SpatialInteractionSourceHandedness;
-        PyObject* type_SpatialInteractionSourceKind;
-        PyObject* type_SpatialInteractionSourcePositionAccuracy;
         PyTypeObject* type_SpatialGestureRecognizer;
         PyTypeObject* type_SpatialHoldCanceledEventArgs;
         PyTypeObject* type_SpatialHoldCompletedEventArgs;
@@ -42,126 +37,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
         PyTypeObject* type_SpatialRecognitionStartedEventArgs;
         PyTypeObject* type_SpatialTappedEventArgs;
     };
-
-    static PyObject* register_SpatialGestureSettings(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialGestureSettings)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialGestureSettings = type;
-        Py_INCREF(state->type_SpatialGestureSettings);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpatialInteractionPressKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialInteractionPressKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialInteractionPressKind = type;
-        Py_INCREF(state->type_SpatialInteractionPressKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpatialInteractionSourceHandedness(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialInteractionSourceHandedness)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialInteractionSourceHandedness = type;
-        Py_INCREF(state->type_SpatialInteractionSourceHandedness);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpatialInteractionSourceKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialInteractionSourceKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialInteractionSourceKind = type;
-        Py_INCREF(state->type_SpatialInteractionSourceKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SpatialInteractionSourcePositionAccuracy(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SpatialInteractionSourcePositionAccuracy)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SpatialInteractionSourcePositionAccuracy = type;
-        Py_INCREF(state->type_SpatialInteractionSourcePositionAccuracy);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- SpatialGestureRecognizer class --------------------
     static constexpr const char* const type_name_SpatialGestureRecognizer = "SpatialGestureRecognizer";
@@ -5472,14 +5347,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     // ----- Windows.UI.Input.Spatial Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Input::Spatial");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_SpatialGestureSettings", register_SpatialGestureSettings, METH_O, "registers type"},
-        {"_register_SpatialInteractionPressKind", register_SpatialInteractionPressKind, METH_O, "registers type"},
-        {"_register_SpatialInteractionSourceHandedness", register_SpatialInteractionSourceHandedness, METH_O, "registers type"},
-        {"_register_SpatialInteractionSourceKind", register_SpatialInteractionSourceKind, METH_O, "registers type"},
-        {"_register_SpatialInteractionSourcePositionAccuracy", register_SpatialInteractionSourcePositionAccuracy, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -5490,11 +5357,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
             return 0;
         }
 
-        Py_VISIT(state->type_SpatialGestureSettings);
-        Py_VISIT(state->type_SpatialInteractionPressKind);
-        Py_VISIT(state->type_SpatialInteractionSourceHandedness);
-        Py_VISIT(state->type_SpatialInteractionSourceKind);
-        Py_VISIT(state->type_SpatialInteractionSourcePositionAccuracy);
         Py_VISIT(state->type_SpatialGestureRecognizer);
         Py_VISIT(state->type_SpatialHoldCanceledEventArgs);
         Py_VISIT(state->type_SpatialHoldCompletedEventArgs);
@@ -5536,11 +5398,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
             return 0;
         }
 
-        Py_CLEAR(state->type_SpatialGestureSettings);
-        Py_CLEAR(state->type_SpatialInteractionPressKind);
-        Py_CLEAR(state->type_SpatialInteractionSourceHandedness);
-        Py_CLEAR(state->type_SpatialInteractionSourceKind);
-        Py_CLEAR(state->type_SpatialInteractionSourcePositionAccuracy);
         Py_CLEAR(state->type_SpatialGestureRecognizer);
         Py_CLEAR(state->type_SpatialHoldCanceledEventArgs);
         Py_CLEAR(state->type_SpatialHoldCompletedEventArgs);
@@ -5579,7 +5436,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
            "_winrt_Windows_UI_Input_Spatial",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -5784,121 +5641,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Spatial(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Input::Spatial::SpatialGestureSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialGestureSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialGestureSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionPressKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionPressKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionPressKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionSourceHandedness;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionSourceKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourcePositionAccuracy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionSourcePositionAccuracy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionSourcePositionAccuracy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer>::get_python_type() noexcept {

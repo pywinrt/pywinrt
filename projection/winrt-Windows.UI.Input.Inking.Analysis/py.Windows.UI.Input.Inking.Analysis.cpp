@@ -8,10 +8,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 {
     struct module_state
     {
-        PyObject* type_InkAnalysisDrawingKind;
-        PyObject* type_InkAnalysisNodeKind;
-        PyObject* type_InkAnalysisStatus;
-        PyObject* type_InkAnalysisStrokeKind;
         PyTypeObject* type_InkAnalysisInkBullet;
         PyTypeObject* type_InkAnalysisInkDrawing;
         PyTypeObject* type_InkAnalysisInkWord;
@@ -26,102 +22,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         PyTypeObject* type_IInkAnalysisNode;
         PyTypeObject* type_IInkAnalyzerFactory;
     };
-
-    static PyObject* register_InkAnalysisDrawingKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InkAnalysisDrawingKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InkAnalysisDrawingKind = type;
-        Py_INCREF(state->type_InkAnalysisDrawingKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_InkAnalysisNodeKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InkAnalysisNodeKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InkAnalysisNodeKind = type;
-        Py_INCREF(state->type_InkAnalysisNodeKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_InkAnalysisStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InkAnalysisStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InkAnalysisStatus = type;
-        Py_INCREF(state->type_InkAnalysisStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_InkAnalysisStrokeKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_InkAnalysisStrokeKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_InkAnalysisStrokeKind = type;
-        Py_INCREF(state->type_InkAnalysisStrokeKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- InkAnalysisInkBullet class --------------------
     static constexpr const char* const type_name_InkAnalysisInkBullet = "InkAnalysisInkBullet";
@@ -3246,13 +3146,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     // ----- Windows.UI.Input.Inking.Analysis Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Input::Inking::Analysis");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_InkAnalysisDrawingKind", register_InkAnalysisDrawingKind, METH_O, "registers type"},
-        {"_register_InkAnalysisNodeKind", register_InkAnalysisNodeKind, METH_O, "registers type"},
-        {"_register_InkAnalysisStatus", register_InkAnalysisStatus, METH_O, "registers type"},
-        {"_register_InkAnalysisStrokeKind", register_InkAnalysisStrokeKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3263,10 +3156,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
             return 0;
         }
 
-        Py_VISIT(state->type_InkAnalysisDrawingKind);
-        Py_VISIT(state->type_InkAnalysisNodeKind);
-        Py_VISIT(state->type_InkAnalysisStatus);
-        Py_VISIT(state->type_InkAnalysisStrokeKind);
         Py_VISIT(state->type_InkAnalysisInkBullet);
         Py_VISIT(state->type_InkAnalysisInkDrawing);
         Py_VISIT(state->type_InkAnalysisInkWord);
@@ -3293,10 +3182,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
             return 0;
         }
 
-        Py_CLEAR(state->type_InkAnalysisDrawingKind);
-        Py_CLEAR(state->type_InkAnalysisNodeKind);
-        Py_CLEAR(state->type_InkAnalysisStatus);
-        Py_CLEAR(state->type_InkAnalysisStrokeKind);
         Py_CLEAR(state->type_InkAnalysisInkBullet);
         Py_CLEAR(state->type_InkAnalysisInkDrawing);
         Py_CLEAR(state->type_InkAnalysisInkWord);
@@ -3320,7 +3205,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
            "_winrt_Windows_UI_Input_Inking_Analysis",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3435,98 +3320,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Inking_Analysis(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisDrawingKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisNodeKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisStrokeKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet>::get_python_type() noexcept {

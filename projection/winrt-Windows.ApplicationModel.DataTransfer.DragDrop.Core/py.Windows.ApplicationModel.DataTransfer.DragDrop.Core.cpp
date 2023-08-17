@@ -8,7 +8,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 {
     struct module_state
     {
-        PyObject* type_CoreDragUIContentMode;
         PyTypeObject* type_CoreDragDropManager;
         PyTypeObject* type_CoreDragInfo;
         PyTypeObject* type_CoreDragOperation;
@@ -16,30 +15,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         PyTypeObject* type_CoreDropOperationTargetRequestedEventArgs;
         PyTypeObject* type_ICoreDropOperationTarget;
     };
-
-    static PyObject* register_CoreDragUIContentMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CoreDragUIContentMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CoreDragUIContentMode = type;
-        Py_INCREF(state->type_CoreDragUIContentMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- CoreDragDropManager class --------------------
     static constexpr const char* const type_name_CoreDragDropManager = "CoreDragDropManager";
@@ -1395,10 +1370,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     // ----- Windows.ApplicationModel.DataTransfer.DragDrop.Core Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::DataTransfer::DragDrop::Core");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_CoreDragUIContentMode", register_CoreDragUIContentMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1409,7 +1380,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
             return 0;
         }
 
-        Py_VISIT(state->type_CoreDragUIContentMode);
         Py_VISIT(state->type_CoreDragDropManager);
         Py_VISIT(state->type_CoreDragInfo);
         Py_VISIT(state->type_CoreDragOperation);
@@ -1429,7 +1399,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
             return 0;
         }
 
-        Py_CLEAR(state->type_CoreDragUIContentMode);
         Py_CLEAR(state->type_CoreDragDropManager);
         Py_CLEAR(state->type_CoreDragInfo);
         Py_CLEAR(state->type_CoreDragOperation);
@@ -1446,7 +1415,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
            "_winrt_Windows_ApplicationModel_DataTransfer_DragDrop_Core",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1519,29 +1488,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer_DragDrop_Core
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIContentMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer::DragDrop::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreDragUIContentMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIContentMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager>::get_python_type() noexcept {

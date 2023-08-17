@@ -51,8 +51,6 @@ class BluetoothEventTriggeringMode(enum.IntEnum):
     BATCH = 1
     KEEP_LATEST = 2
 
-_ns_module._register_BluetoothEventTriggeringMode(BluetoothEventTriggeringMode)
-
 BluetoothLEAdvertisementPublisherTriggerDetails = _ns_module.BluetoothLEAdvertisementPublisherTriggerDetails
 BluetoothLEAdvertisementWatcherTriggerDetails = _ns_module.BluetoothLEAdvertisementWatcherTriggerDetails
 GattCharacteristicNotificationTriggerDetails = _ns_module.GattCharacteristicNotificationTriggerDetails

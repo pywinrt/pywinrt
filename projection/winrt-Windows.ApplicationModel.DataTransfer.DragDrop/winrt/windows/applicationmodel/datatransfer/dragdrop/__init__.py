@@ -15,5 +15,3 @@ class DragDropModifiers(enum.IntFlag):
     MIDDLE_BUTTON = 0x10
     RIGHT_BUTTON = 0x20
 
-_ns_module._register_DragDropModifiers(DragDropModifiers)
-

@@ -49,9 +49,6 @@ class CortanaPermissionsChangeResult(enum.IntEnum):
     UNAVAILABLE = 1
     DISABLED_BY_POLICY = 2
 
-_ns_module._register_CortanaPermission(CortanaPermission)
-_ns_module._register_CortanaPermissionsChangeResult(CortanaPermissionsChangeResult)
-
 CortanaActionableInsights = _ns_module.CortanaActionableInsights
 CortanaActionableInsightsOptions = _ns_module.CortanaActionableInsightsOptions
 CortanaPermissionsManager = _ns_module.CortanaPermissionsManager

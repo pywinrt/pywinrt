@@ -35,9 +35,6 @@ class RatedContentCategory(enum.IntEnum):
     TELEVISION = 4
     MUSIC = 5
 
-_ns_module._register_ContentAccessRestrictionLevel(ContentAccessRestrictionLevel)
-_ns_module._register_RatedContentCategory(RatedContentCategory)
-
 ContentRestrictionsBrowsePolicy = _ns_module.ContentRestrictionsBrowsePolicy
 RatedContentDescription = _ns_module.RatedContentDescription
 RatedContentRestrictions = _ns_module.RatedContentRestrictions

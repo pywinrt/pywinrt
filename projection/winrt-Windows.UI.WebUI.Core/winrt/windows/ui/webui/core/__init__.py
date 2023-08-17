@@ -26,8 +26,6 @@ class WebUICommandBarClosedDisplayMode(enum.IntEnum):
     MINIMAL = 1
     COMPACT = 2
 
-_ns_module._register_WebUICommandBarClosedDisplayMode(WebUICommandBarClosedDisplayMode)
-
 WebUICommandBar = _ns_module.WebUICommandBar
 WebUICommandBarBitmapIcon = _ns_module.WebUICommandBarBitmapIcon
 WebUICommandBarConfirmationButton = _ns_module.WebUICommandBarConfirmationButton

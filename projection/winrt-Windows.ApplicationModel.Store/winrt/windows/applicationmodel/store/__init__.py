@@ -39,10 +39,6 @@ class ProductType(enum.IntEnum):
     DURABLE = 1
     CONSUMABLE = 2
 
-_ns_module._register_FulfillmentResult(FulfillmentResult)
-_ns_module._register_ProductPurchaseStatus(ProductPurchaseStatus)
-_ns_module._register_ProductType(ProductType)
-
 CurrentApp = _ns_module.CurrentApp
 CurrentAppSimulator = _ns_module.CurrentAppSimulator
 LicenseInformation = _ns_module.LicenseInformation

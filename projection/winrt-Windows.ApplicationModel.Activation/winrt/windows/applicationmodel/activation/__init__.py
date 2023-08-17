@@ -174,9 +174,6 @@ class ApplicationExecutionState(enum.IntEnum):
     TERMINATED = 3
     CLOSED_BY_USER = 4
 
-_ns_module._register_ActivationKind(ActivationKind)
-_ns_module._register_ApplicationExecutionState(ApplicationExecutionState)
-
 AppointmentsProviderAddAppointmentActivatedEventArgs = _ns_module.AppointmentsProviderAddAppointmentActivatedEventArgs
 AppointmentsProviderRemoveAppointmentActivatedEventArgs = _ns_module.AppointmentsProviderRemoveAppointmentActivatedEventArgs
 AppointmentsProviderReplaceAppointmentActivatedEventArgs = _ns_module.AppointmentsProviderReplaceAppointmentActivatedEventArgs

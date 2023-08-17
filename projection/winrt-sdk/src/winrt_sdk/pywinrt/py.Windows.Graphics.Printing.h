@@ -131,73 +131,85 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintBinding>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintBinding";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintBordering>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintBordering";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintCollation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintCollation";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintColorMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintColorMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintDuplex>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintDuplex";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintHolePunch>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintHolePunch";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintMediaSize>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintMediaSize";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintMediaType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintMediaType";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintOrientation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintOrientation";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintQuality>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintQuality";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintStaple>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintStaple";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTaskCompletion>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing";
+        static constexpr const char* type_name = "PrintTaskCompletion";
     };
 
     template<>

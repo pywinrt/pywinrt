@@ -8,7 +8,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 {
     struct module_state
     {
-        PyObject* type_BluetoothEventTriggeringMode;
         PyTypeObject* type_BluetoothLEAdvertisementPublisherTriggerDetails;
         PyTypeObject* type_BluetoothLEAdvertisementWatcherTriggerDetails;
         PyTypeObject* type_GattCharacteristicNotificationTriggerDetails;
@@ -18,30 +17,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         PyTypeObject* type_RfcommInboundConnectionInformation;
         PyTypeObject* type_RfcommOutboundConnectionInformation;
     };
-
-    static PyObject* register_BluetoothEventTriggeringMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_BluetoothEventTriggeringMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_BluetoothEventTriggeringMode = type;
-        Py_INCREF(state->type_BluetoothEventTriggeringMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- BluetoothLEAdvertisementPublisherTriggerDetails class --------------------
     static constexpr const char* const type_name_BluetoothLEAdvertisementPublisherTriggerDetails = "BluetoothLEAdvertisementPublisherTriggerDetails";
@@ -1249,10 +1224,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     // ----- Windows.Devices.Bluetooth.Background Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Bluetooth::Background");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_BluetoothEventTriggeringMode", register_BluetoothEventTriggeringMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -1263,7 +1234,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
             return 0;
         }
 
-        Py_VISIT(state->type_BluetoothEventTriggeringMode);
         Py_VISIT(state->type_BluetoothLEAdvertisementPublisherTriggerDetails);
         Py_VISIT(state->type_BluetoothLEAdvertisementWatcherTriggerDetails);
         Py_VISIT(state->type_GattCharacteristicNotificationTriggerDetails);
@@ -1285,7 +1255,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
             return 0;
         }
 
-        Py_CLEAR(state->type_BluetoothEventTriggeringMode);
         Py_CLEAR(state->type_BluetoothLEAdvertisementPublisherTriggerDetails);
         Py_CLEAR(state->type_BluetoothLEAdvertisementWatcherTriggerDetails);
         Py_CLEAR(state->type_GattCharacteristicNotificationTriggerDetails);
@@ -1304,7 +1273,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
            "_winrt_Windows_Devices_Bluetooth_Background",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -1395,29 +1364,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_Background(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothEventTriggeringMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BluetoothEventTriggeringMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Background::BluetoothEventTriggeringMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails>::get_python_type() noexcept {

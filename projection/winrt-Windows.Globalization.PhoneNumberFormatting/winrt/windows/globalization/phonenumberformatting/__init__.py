@@ -39,10 +39,5 @@ class PredictedPhoneNumberKind(enum.IntEnum):
     VOICEMAIL = 10
     UNKNOWN = 11
 
-_ns_module._register_PhoneNumberFormat(PhoneNumberFormat)
-_ns_module._register_PhoneNumberMatchResult(PhoneNumberMatchResult)
-_ns_module._register_PhoneNumberParseResult(PhoneNumberParseResult)
-_ns_module._register_PredictedPhoneNumberKind(PredictedPhoneNumberKind)
-
 PhoneNumberFormatter = _ns_module.PhoneNumberFormatter
 PhoneNumberInfo = _ns_module.PhoneNumberInfo

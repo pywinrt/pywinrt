@@ -29,9 +29,6 @@ class Direct3DUsage(enum.IntEnum):
     DYNAMIC = 2
     STAGING = 3
 
-_ns_module._register_Direct3DBindings(Direct3DBindings)
-_ns_module._register_Direct3DUsage(Direct3DUsage)
-
 Direct3DMultisampleDescription = _ns_module.Direct3DMultisampleDescription
 Direct3DSurfaceDescription = _ns_module.Direct3DSurfaceDescription
 IDirect3DDevice = _ns_module.IDirect3DDevice

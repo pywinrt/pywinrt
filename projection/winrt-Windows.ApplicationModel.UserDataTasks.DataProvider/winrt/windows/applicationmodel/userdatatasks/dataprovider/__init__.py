@@ -14,7 +14,6 @@ try:
 except ImportError:
     pass
 
-
 UserDataTaskDataProviderConnection = _ns_module.UserDataTaskDataProviderConnection
 UserDataTaskDataProviderTriggerDetails = _ns_module.UserDataTaskDataProviderTriggerDetails
 UserDataTaskListCompleteTaskRequest = _ns_module.UserDataTaskListCompleteTaskRequest

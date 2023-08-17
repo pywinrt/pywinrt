@@ -548,9 +548,6 @@ namespace py::cpp::Windows::Globalization::Collation
     // ----- Windows.Globalization.Collation Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Globalization::Collation");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -588,7 +585,7 @@ namespace py::cpp::Windows::Globalization::Collation
            "_winrt_Windows_Globalization_Collation",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

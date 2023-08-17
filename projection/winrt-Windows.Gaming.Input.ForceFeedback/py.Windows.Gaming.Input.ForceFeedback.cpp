@@ -8,11 +8,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 {
     struct module_state
     {
-        PyObject* type_ConditionForceEffectKind;
-        PyObject* type_ForceFeedbackEffectAxes;
-        PyObject* type_ForceFeedbackEffectState;
-        PyObject* type_ForceFeedbackLoadEffectResult;
-        PyObject* type_PeriodicForceEffectKind;
         PyTypeObject* type_ConditionForceEffect;
         PyTypeObject* type_ConstantForceEffect;
         PyTypeObject* type_ForceFeedbackMotor;
@@ -20,126 +15,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         PyTypeObject* type_RampForceEffect;
         PyTypeObject* type_IForceFeedbackEffect;
     };
-
-    static PyObject* register_ConditionForceEffectKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ConditionForceEffectKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ConditionForceEffectKind = type;
-        Py_INCREF(state->type_ConditionForceEffectKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ForceFeedbackEffectAxes(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ForceFeedbackEffectAxes)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ForceFeedbackEffectAxes = type;
-        Py_INCREF(state->type_ForceFeedbackEffectAxes);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ForceFeedbackEffectState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ForceFeedbackEffectState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ForceFeedbackEffectState = type;
-        Py_INCREF(state->type_ForceFeedbackEffectState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ForceFeedbackLoadEffectResult(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ForceFeedbackLoadEffectResult)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ForceFeedbackLoadEffectResult = type;
-        Py_INCREF(state->type_ForceFeedbackLoadEffectResult);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PeriodicForceEffectKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PeriodicForceEffectKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PeriodicForceEffectKind = type;
-        Py_INCREF(state->type_PeriodicForceEffectKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ConditionForceEffect class --------------------
     static constexpr const char* const type_name_ConditionForceEffect = "ConditionForceEffect";
@@ -2007,14 +1882,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     // ----- Windows.Gaming.Input.ForceFeedback Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Gaming::Input::ForceFeedback");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ConditionForceEffectKind", register_ConditionForceEffectKind, METH_O, "registers type"},
-        {"_register_ForceFeedbackEffectAxes", register_ForceFeedbackEffectAxes, METH_O, "registers type"},
-        {"_register_ForceFeedbackEffectState", register_ForceFeedbackEffectState, METH_O, "registers type"},
-        {"_register_ForceFeedbackLoadEffectResult", register_ForceFeedbackLoadEffectResult, METH_O, "registers type"},
-        {"_register_PeriodicForceEffectKind", register_PeriodicForceEffectKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2025,11 +1892,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
             return 0;
         }
 
-        Py_VISIT(state->type_ConditionForceEffectKind);
-        Py_VISIT(state->type_ForceFeedbackEffectAxes);
-        Py_VISIT(state->type_ForceFeedbackEffectState);
-        Py_VISIT(state->type_ForceFeedbackLoadEffectResult);
-        Py_VISIT(state->type_PeriodicForceEffectKind);
         Py_VISIT(state->type_ConditionForceEffect);
         Py_VISIT(state->type_ConstantForceEffect);
         Py_VISIT(state->type_ForceFeedbackMotor);
@@ -2049,11 +1911,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
             return 0;
         }
 
-        Py_CLEAR(state->type_ConditionForceEffectKind);
-        Py_CLEAR(state->type_ForceFeedbackEffectAxes);
-        Py_CLEAR(state->type_ForceFeedbackEffectState);
-        Py_CLEAR(state->type_ForceFeedbackLoadEffectResult);
-        Py_CLEAR(state->type_PeriodicForceEffectKind);
         Py_CLEAR(state->type_ConditionForceEffect);
         Py_CLEAR(state->type_ConstantForceEffect);
         Py_CLEAR(state->type_ForceFeedbackMotor);
@@ -2070,7 +1927,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
            "_winrt_Windows_Gaming_Input_ForceFeedback",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -2143,121 +2000,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input_ForceFeedback(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::ForceFeedback;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::ForceFeedback");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConditionForceEffectKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectAxes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::ForceFeedback;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::ForceFeedback");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ForceFeedbackEffectAxes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectAxes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::ForceFeedback;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::ForceFeedback");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ForceFeedbackEffectState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::ForceFeedback;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::ForceFeedback");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ForceFeedbackLoadEffectResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffectKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::ForceFeedback;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::ForceFeedback");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PeriodicForceEffectKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffectKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect>::get_python_type() noexcept {

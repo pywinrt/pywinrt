@@ -80,25 +80,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::ByteOrder>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "ByteOrder";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::FileOpenDisposition>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "FileOpenDisposition";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::InputStreamOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "InputStreamOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::UnicodeEncoding>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "UnicodeEncoding";
     };
 
     template<>

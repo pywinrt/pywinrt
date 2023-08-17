@@ -122,13 +122,6 @@ class GuidanceMode(enum.IntEnum):
     NAVIGATION = 2
     TRACKING = 3
 
-_ns_module._register_GuidanceAudioMeasurementSystem(GuidanceAudioMeasurementSystem)
-_ns_module._register_GuidanceAudioNotificationKind(GuidanceAudioNotificationKind)
-_ns_module._register_GuidanceAudioNotifications(GuidanceAudioNotifications)
-_ns_module._register_GuidanceLaneMarkers(GuidanceLaneMarkers)
-_ns_module._register_GuidanceManeuverKind(GuidanceManeuverKind)
-_ns_module._register_GuidanceMode(GuidanceMode)
-
 GuidanceAudioNotificationRequestedEventArgs = _ns_module.GuidanceAudioNotificationRequestedEventArgs
 GuidanceLaneInfo = _ns_module.GuidanceLaneInfo
 GuidanceManeuver = _ns_module.GuidanceManeuver

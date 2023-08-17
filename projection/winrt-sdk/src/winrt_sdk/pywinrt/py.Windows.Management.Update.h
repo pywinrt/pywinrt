@@ -58,19 +58,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateAdministratorOptions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateAdministratorOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateAdministratorStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateAttentionRequiredReason";
     };
 
     template<>

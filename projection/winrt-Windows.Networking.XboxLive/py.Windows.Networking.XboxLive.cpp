@@ -8,13 +8,6 @@ namespace py::cpp::Windows::Networking::XboxLive
 {
     struct module_state
     {
-        PyObject* type_XboxLiveEndpointPairCreationBehaviors;
-        PyObject* type_XboxLiveEndpointPairCreationStatus;
-        PyObject* type_XboxLiveEndpointPairState;
-        PyObject* type_XboxLiveNetworkAccessKind;
-        PyObject* type_XboxLiveQualityOfServiceMeasurementStatus;
-        PyObject* type_XboxLiveQualityOfServiceMetric;
-        PyObject* type_XboxLiveSocketKind;
         PyTypeObject* type_XboxLiveDeviceAddress;
         PyTypeObject* type_XboxLiveEndpointPair;
         PyTypeObject* type_XboxLiveEndpointPairCreationResult;
@@ -25,174 +18,6 @@ namespace py::cpp::Windows::Networking::XboxLive
         PyTypeObject* type_XboxLiveQualityOfServiceMetricResult;
         PyTypeObject* type_XboxLiveQualityOfServicePrivatePayloadResult;
     };
-
-    static PyObject* register_XboxLiveEndpointPairCreationBehaviors(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XboxLiveEndpointPairCreationBehaviors)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XboxLiveEndpointPairCreationBehaviors = type;
-        Py_INCREF(state->type_XboxLiveEndpointPairCreationBehaviors);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_XboxLiveEndpointPairCreationStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XboxLiveEndpointPairCreationStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XboxLiveEndpointPairCreationStatus = type;
-        Py_INCREF(state->type_XboxLiveEndpointPairCreationStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_XboxLiveEndpointPairState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XboxLiveEndpointPairState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XboxLiveEndpointPairState = type;
-        Py_INCREF(state->type_XboxLiveEndpointPairState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_XboxLiveNetworkAccessKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XboxLiveNetworkAccessKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XboxLiveNetworkAccessKind = type;
-        Py_INCREF(state->type_XboxLiveNetworkAccessKind);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_XboxLiveQualityOfServiceMeasurementStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XboxLiveQualityOfServiceMeasurementStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XboxLiveQualityOfServiceMeasurementStatus = type;
-        Py_INCREF(state->type_XboxLiveQualityOfServiceMeasurementStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_XboxLiveQualityOfServiceMetric(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XboxLiveQualityOfServiceMetric)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XboxLiveQualityOfServiceMetric = type;
-        Py_INCREF(state->type_XboxLiveQualityOfServiceMetric);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_XboxLiveSocketKind(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_XboxLiveSocketKind)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_XboxLiveSocketKind = type;
-        Py_INCREF(state->type_XboxLiveSocketKind);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- XboxLiveDeviceAddress class --------------------
     static constexpr const char* const type_name_XboxLiveDeviceAddress = "XboxLiveDeviceAddress";
@@ -2969,16 +2794,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     // ----- Windows.Networking.XboxLive Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Networking::XboxLive");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_XboxLiveEndpointPairCreationBehaviors", register_XboxLiveEndpointPairCreationBehaviors, METH_O, "registers type"},
-        {"_register_XboxLiveEndpointPairCreationStatus", register_XboxLiveEndpointPairCreationStatus, METH_O, "registers type"},
-        {"_register_XboxLiveEndpointPairState", register_XboxLiveEndpointPairState, METH_O, "registers type"},
-        {"_register_XboxLiveNetworkAccessKind", register_XboxLiveNetworkAccessKind, METH_O, "registers type"},
-        {"_register_XboxLiveQualityOfServiceMeasurementStatus", register_XboxLiveQualityOfServiceMeasurementStatus, METH_O, "registers type"},
-        {"_register_XboxLiveQualityOfServiceMetric", register_XboxLiveQualityOfServiceMetric, METH_O, "registers type"},
-        {"_register_XboxLiveSocketKind", register_XboxLiveSocketKind, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -2989,13 +2804,6 @@ namespace py::cpp::Windows::Networking::XboxLive
             return 0;
         }
 
-        Py_VISIT(state->type_XboxLiveEndpointPairCreationBehaviors);
-        Py_VISIT(state->type_XboxLiveEndpointPairCreationStatus);
-        Py_VISIT(state->type_XboxLiveEndpointPairState);
-        Py_VISIT(state->type_XboxLiveNetworkAccessKind);
-        Py_VISIT(state->type_XboxLiveQualityOfServiceMeasurementStatus);
-        Py_VISIT(state->type_XboxLiveQualityOfServiceMetric);
-        Py_VISIT(state->type_XboxLiveSocketKind);
         Py_VISIT(state->type_XboxLiveDeviceAddress);
         Py_VISIT(state->type_XboxLiveEndpointPair);
         Py_VISIT(state->type_XboxLiveEndpointPairCreationResult);
@@ -3018,13 +2826,6 @@ namespace py::cpp::Windows::Networking::XboxLive
             return 0;
         }
 
-        Py_CLEAR(state->type_XboxLiveEndpointPairCreationBehaviors);
-        Py_CLEAR(state->type_XboxLiveEndpointPairCreationStatus);
-        Py_CLEAR(state->type_XboxLiveEndpointPairState);
-        Py_CLEAR(state->type_XboxLiveNetworkAccessKind);
-        Py_CLEAR(state->type_XboxLiveQualityOfServiceMeasurementStatus);
-        Py_CLEAR(state->type_XboxLiveQualityOfServiceMetric);
-        Py_CLEAR(state->type_XboxLiveSocketKind);
         Py_CLEAR(state->type_XboxLiveDeviceAddress);
         Py_CLEAR(state->type_XboxLiveEndpointPair);
         Py_CLEAR(state->type_XboxLiveEndpointPairCreationResult);
@@ -3044,7 +2845,7 @@ namespace py::cpp::Windows::Networking::XboxLive
            "_winrt_Windows_Networking_XboxLive",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3153,167 +2954,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_XboxLive(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveEndpointPairCreationBehaviors;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveEndpointPairCreationStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveEndpointPairState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveNetworkAccessKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveNetworkAccessKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveNetworkAccessKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurementStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveQualityOfServiceMeasurementStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurementStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveQualityOfServiceMetric;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveSocketKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveSocketKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveSocketKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>::get_python_type() noexcept {

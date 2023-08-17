@@ -8,9 +8,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 {
     struct module_state
     {
-        PyObject* type_LampArrayEffectCompletionBehavior;
-        PyObject* type_LampArrayEffectStartMode;
-        PyObject* type_LampArrayRepetitionMode;
         PyTypeObject* type_LampArrayBitmapEffect;
         PyTypeObject* type_LampArrayBitmapRequestedEventArgs;
         PyTypeObject* type_LampArrayBlinkEffect;
@@ -21,78 +18,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         PyTypeObject* type_LampArrayUpdateRequestedEventArgs;
         PyTypeObject* type_ILampArrayEffect;
     };
-
-    static PyObject* register_LampArrayEffectCompletionBehavior(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LampArrayEffectCompletionBehavior)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LampArrayEffectCompletionBehavior = type;
-        Py_INCREF(state->type_LampArrayEffectCompletionBehavior);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_LampArrayEffectStartMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LampArrayEffectStartMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LampArrayEffectStartMode = type;
-        Py_INCREF(state->type_LampArrayEffectStartMode);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_LampArrayRepetitionMode(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_LampArrayRepetitionMode)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_LampArrayRepetitionMode = type;
-        Py_INCREF(state->type_LampArrayRepetitionMode);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- LampArrayBitmapEffect class --------------------
     static constexpr const char* const type_name_LampArrayBitmapEffect = "LampArrayBitmapEffect";
@@ -3214,12 +3139,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     // ----- Windows.Devices.Lights.Effects Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Devices::Lights::Effects");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_LampArrayEffectCompletionBehavior", register_LampArrayEffectCompletionBehavior, METH_O, "registers type"},
-        {"_register_LampArrayEffectStartMode", register_LampArrayEffectStartMode, METH_O, "registers type"},
-        {"_register_LampArrayRepetitionMode", register_LampArrayRepetitionMode, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -3230,9 +3149,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
             return 0;
         }
 
-        Py_VISIT(state->type_LampArrayEffectCompletionBehavior);
-        Py_VISIT(state->type_LampArrayEffectStartMode);
-        Py_VISIT(state->type_LampArrayRepetitionMode);
         Py_VISIT(state->type_LampArrayBitmapEffect);
         Py_VISIT(state->type_LampArrayBitmapRequestedEventArgs);
         Py_VISIT(state->type_LampArrayBlinkEffect);
@@ -3255,9 +3171,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
             return 0;
         }
 
-        Py_CLEAR(state->type_LampArrayEffectCompletionBehavior);
-        Py_CLEAR(state->type_LampArrayEffectStartMode);
-        Py_CLEAR(state->type_LampArrayRepetitionMode);
         Py_CLEAR(state->type_LampArrayBitmapEffect);
         Py_CLEAR(state->type_LampArrayBitmapRequestedEventArgs);
         Py_CLEAR(state->type_LampArrayBlinkEffect);
@@ -3277,7 +3190,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
            "_winrt_Windows_Devices_Lights_Effects",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -3368,75 +3281,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Lights_Effects(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArrayEffectCompletionBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectStartMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArrayEffectStartMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArrayEffectStartMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayRepetitionMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArrayRepetitionMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArrayRepetitionMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect>::get_python_type() noexcept {

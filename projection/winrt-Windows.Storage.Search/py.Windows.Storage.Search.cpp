@@ -8,12 +8,6 @@ namespace py::cpp::Windows::Storage::Search
 {
     struct module_state
     {
-        PyObject* type_CommonFileQuery;
-        PyObject* type_CommonFolderQuery;
-        PyObject* type_DateStackOption;
-        PyObject* type_FolderDepth;
-        PyObject* type_IndexedState;
-        PyObject* type_IndexerOption;
         PyTypeObject* type_ContentIndexer;
         PyTypeObject* type_ContentIndexerQuery;
         PyTypeObject* type_IndexableContent;
@@ -30,150 +24,6 @@ namespace py::cpp::Windows::Storage::Search
         PyTypeObject* type_IStorageQueryResultBase;
         PyTypeObject* type_SortEntry;
     };
-
-    static PyObject* register_CommonFileQuery(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CommonFileQuery)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CommonFileQuery = type;
-        Py_INCREF(state->type_CommonFileQuery);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_CommonFolderQuery(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_CommonFolderQuery)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_CommonFolderQuery = type;
-        Py_INCREF(state->type_CommonFolderQuery);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DateStackOption(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DateStackOption)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DateStackOption = type;
-        Py_INCREF(state->type_DateStackOption);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_FolderDepth(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_FolderDepth)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_FolderDepth = type;
-        Py_INCREF(state->type_FolderDepth);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_IndexedState(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_IndexedState)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_IndexedState = type;
-        Py_INCREF(state->type_IndexedState);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_IndexerOption(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_IndexerOption)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_IndexerOption = type;
-        Py_INCREF(state->type_IndexerOption);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- ContentIndexer class --------------------
     static constexpr const char* const type_name_ContentIndexer = "ContentIndexer";
@@ -5108,15 +4958,6 @@ namespace py::cpp::Windows::Storage::Search
     // ----- Windows.Storage.Search Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Storage::Search");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_CommonFileQuery", register_CommonFileQuery, METH_O, "registers type"},
-        {"_register_CommonFolderQuery", register_CommonFolderQuery, METH_O, "registers type"},
-        {"_register_DateStackOption", register_DateStackOption, METH_O, "registers type"},
-        {"_register_FolderDepth", register_FolderDepth, METH_O, "registers type"},
-        {"_register_IndexedState", register_IndexedState, METH_O, "registers type"},
-        {"_register_IndexerOption", register_IndexerOption, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -5127,12 +4968,6 @@ namespace py::cpp::Windows::Storage::Search
             return 0;
         }
 
-        Py_VISIT(state->type_CommonFileQuery);
-        Py_VISIT(state->type_CommonFolderQuery);
-        Py_VISIT(state->type_DateStackOption);
-        Py_VISIT(state->type_FolderDepth);
-        Py_VISIT(state->type_IndexedState);
-        Py_VISIT(state->type_IndexerOption);
         Py_VISIT(state->type_ContentIndexer);
         Py_VISIT(state->type_ContentIndexerQuery);
         Py_VISIT(state->type_IndexableContent);
@@ -5161,12 +4996,6 @@ namespace py::cpp::Windows::Storage::Search
             return 0;
         }
 
-        Py_CLEAR(state->type_CommonFileQuery);
-        Py_CLEAR(state->type_CommonFolderQuery);
-        Py_CLEAR(state->type_DateStackOption);
-        Py_CLEAR(state->type_FolderDepth);
-        Py_CLEAR(state->type_IndexedState);
-        Py_CLEAR(state->type_IndexerOption);
         Py_CLEAR(state->type_ContentIndexer);
         Py_CLEAR(state->type_ContentIndexerQuery);
         Py_CLEAR(state->type_IndexableContent);
@@ -5192,7 +5021,7 @@ namespace py::cpp::Windows::Storage::Search
            "_winrt_Windows_Storage_Search",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -5319,144 +5148,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Search(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Search::CommonFileQuery>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommonFileQuery;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::CommonFileQuery is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Search::CommonFolderQuery>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommonFolderQuery;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::CommonFolderQuery is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Search::DateStackOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DateStackOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::DateStackOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Search::FolderDepth>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FolderDepth;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::FolderDepth is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Search::IndexedState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IndexedState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::IndexedState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Storage::Search::IndexerOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IndexerOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::IndexerOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::ContentIndexer>::get_python_type() noexcept {

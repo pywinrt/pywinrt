@@ -36,9 +36,6 @@ class LanguageLayoutDirection(enum.IntEnum):
     TTB_LTR = 2
     TTB_RTL = 3
 
-_ns_module._register_DayOfWeek(DayOfWeek)
-_ns_module._register_LanguageLayoutDirection(LanguageLayoutDirection)
-
 ApplicationLanguages = _ns_module.ApplicationLanguages
 Calendar = _ns_module.Calendar
 CalendarIdentifiers = _ns_module.CalendarIdentifiers

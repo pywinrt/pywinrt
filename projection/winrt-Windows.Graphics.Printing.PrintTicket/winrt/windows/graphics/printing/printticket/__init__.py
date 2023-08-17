@@ -35,10 +35,6 @@ class PrintTicketValueType(enum.IntEnum):
     STRING = 1
     UNKNOWN = 2
 
-_ns_module._register_PrintTicketFeatureSelectionType(PrintTicketFeatureSelectionType)
-_ns_module._register_PrintTicketParameterDataType(PrintTicketParameterDataType)
-_ns_module._register_PrintTicketValueType(PrintTicketValueType)
-
 PrintTicketCapabilities = _ns_module.PrintTicketCapabilities
 PrintTicketFeature = _ns_module.PrintTicketFeature
 PrintTicketOption = _ns_module.PrintTicketOption

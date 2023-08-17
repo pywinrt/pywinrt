@@ -128,17 +128,6 @@ class RadialControllerSystemMenuItemKind(enum.IntEnum):
     VOLUME = 3
     NEXT_PREVIOUS_TRACK = 4
 
-_ns_module._register_CrossSlidingState(CrossSlidingState)
-_ns_module._register_DraggingState(DraggingState)
-_ns_module._register_EdgeGestureKind(EdgeGestureKind)
-_ns_module._register_GazeInputAccessStatus(GazeInputAccessStatus)
-_ns_module._register_GestureSettings(GestureSettings)
-_ns_module._register_HoldingState(HoldingState)
-_ns_module._register_InputActivationState(InputActivationState)
-_ns_module._register_PointerUpdateKind(PointerUpdateKind)
-_ns_module._register_RadialControllerMenuKnownIcon(RadialControllerMenuKnownIcon)
-_ns_module._register_RadialControllerSystemMenuItemKind(RadialControllerSystemMenuItemKind)
-
 CrossSlideThresholds = _ns_module.CrossSlideThresholds
 ManipulationDelta = _ns_module.ManipulationDelta
 ManipulationVelocities = _ns_module.ManipulationVelocities

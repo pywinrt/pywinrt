@@ -72,25 +72,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "Capi1KdfTargetAlgorithm";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicPadding>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "CryptographicPadding";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "CryptographicPrivateKeyBlobType";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "CryptographicPublicKeyBlobType";
     };
 
     template<>

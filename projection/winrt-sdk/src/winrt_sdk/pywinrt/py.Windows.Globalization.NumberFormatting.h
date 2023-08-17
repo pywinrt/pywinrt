@@ -54,13 +54,15 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatterMode>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "CurrencyFormatterMode";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "RoundingAlgorithm";
     };
 
     template<>

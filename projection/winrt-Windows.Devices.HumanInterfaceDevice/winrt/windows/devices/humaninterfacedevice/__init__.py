@@ -41,9 +41,6 @@ class HidReportType(enum.IntEnum):
     OUTPUT = 1
     FEATURE = 2
 
-_ns_module._register_HidCollectionType(HidCollectionType)
-_ns_module._register_HidReportType(HidReportType)
-
 HidBooleanControl = _ns_module.HidBooleanControl
 HidBooleanControlDescription = _ns_module.HidBooleanControlDescription
 HidCollection = _ns_module.HidCollection

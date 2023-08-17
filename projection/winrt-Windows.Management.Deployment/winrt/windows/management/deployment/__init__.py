@@ -101,19 +101,6 @@ class StubPackageOption(enum.IntEnum):
     INSTALL_STUB = 2
     USE_PREFERENCE = 3
 
-_ns_module._register_AddPackageByAppInstallerOptions(AddPackageByAppInstallerOptions)
-_ns_module._register_DeploymentOptions(DeploymentOptions)
-_ns_module._register_DeploymentProgressState(DeploymentProgressState)
-_ns_module._register_PackageInstallState(PackageInstallState)
-_ns_module._register_PackageState(PackageState)
-_ns_module._register_PackageStatus(PackageStatus)
-_ns_module._register_PackageStubPreference(PackageStubPreference)
-_ns_module._register_PackageTypes(PackageTypes)
-_ns_module._register_RemovalOptions(RemovalOptions)
-_ns_module._register_SharedPackageContainerCreationCollisionOptions(SharedPackageContainerCreationCollisionOptions)
-_ns_module._register_SharedPackageContainerOperationStatus(SharedPackageContainerOperationStatus)
-_ns_module._register_StubPackageOption(StubPackageOption)
-
 DeploymentProgress = _ns_module.DeploymentProgress
 AddPackageOptions = _ns_module.AddPackageOptions
 AppInstallerManager = _ns_module.AppInstallerManager

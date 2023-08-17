@@ -159,19 +159,22 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::SettingsEdgeLocation>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "SettingsEdgeLocation";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::SupportedWebAccountActions>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "SupportedWebAccountActions";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::WebAccountAction>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "WebAccountAction";
     };
 
     template<>

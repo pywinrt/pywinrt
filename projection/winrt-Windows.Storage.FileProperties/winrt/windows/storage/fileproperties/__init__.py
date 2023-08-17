@@ -74,13 +74,6 @@ class VideoOrientation(enum.IntEnum):
     ROTATE180 = 180
     ROTATE270 = 270
 
-_ns_module._register_PhotoOrientation(PhotoOrientation)
-_ns_module._register_PropertyPrefetchOptions(PropertyPrefetchOptions)
-_ns_module._register_ThumbnailMode(ThumbnailMode)
-_ns_module._register_ThumbnailOptions(ThumbnailOptions)
-_ns_module._register_ThumbnailType(ThumbnailType)
-_ns_module._register_VideoOrientation(VideoOrientation)
-
 BasicProperties = _ns_module.BasicProperties
 DocumentProperties = _ns_module.DocumentProperties
 GeotagHelper = _ns_module.GeotagHelper

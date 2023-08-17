@@ -189,25 +189,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::PeerDiscoveryTypes>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "PeerDiscoveryTypes";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::PeerRole>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "PeerRole";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::PeerWatcherStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "PeerWatcherStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::TriggeredConnectState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "TriggeredConnectState";
     };
 
     template<>

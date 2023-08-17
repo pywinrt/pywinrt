@@ -510,9 +510,6 @@ namespace py::cpp::Windows::Globalization::Fonts
     // ----- Windows.Globalization.Fonts Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Globalization::Fonts");
 
-    static PyMethodDef module_methods[] = {
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -550,7 +547,7 @@ namespace py::cpp::Windows::Globalization::Fonts
            "_winrt_Windows_Globalization_Fonts",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,

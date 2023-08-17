@@ -53,25 +53,29 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
+        static constexpr const char* type_name = "GeofenceMonitorStatus";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
+        static constexpr const char* type_name = "GeofenceRemovalReason";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceState>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
+        static constexpr const char* type_name = "GeofenceState";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates>
     {
-        static PyObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
+        static constexpr const char* type_name = "MonitoredGeofenceStates";
     };
 
     template<>

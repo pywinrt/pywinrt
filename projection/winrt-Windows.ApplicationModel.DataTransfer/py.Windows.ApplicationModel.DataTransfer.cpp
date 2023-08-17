@@ -8,10 +8,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 {
     struct module_state
     {
-        PyObject* type_ClipboardHistoryItemsResultStatus;
-        PyObject* type_DataPackageOperation;
-        PyObject* type_SetHistoryItemAsContentStatus;
-        PyObject* type_ShareUITheme;
         PyTypeObject* type_Clipboard;
         PyTypeObject* type_ClipboardContentOptions;
         PyTypeObject* type_ClipboardHistoryChangedEventArgs;
@@ -39,102 +35,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         PyTypeObject* type_StandardDataFormats;
         PyTypeObject* type_TargetApplicationChosenEventArgs;
     };
-
-    static PyObject* register_ClipboardHistoryItemsResultStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ClipboardHistoryItemsResultStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ClipboardHistoryItemsResultStatus = type;
-        Py_INCREF(state->type_ClipboardHistoryItemsResultStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_DataPackageOperation(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_DataPackageOperation)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_DataPackageOperation = type;
-        Py_INCREF(state->type_DataPackageOperation);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_SetHistoryItemAsContentStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_SetHistoryItemAsContentStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_SetHistoryItemAsContentStatus = type;
-        Py_INCREF(state->type_SetHistoryItemAsContentStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_ShareUITheme(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_ShareUITheme)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_ShareUITheme = type;
-        Py_INCREF(state->type_ShareUITheme);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Clipboard class --------------------
     static constexpr const char* const type_name_Clipboard = "Clipboard";
@@ -6812,13 +6712,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     // ----- Windows.ApplicationModel.DataTransfer Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::DataTransfer");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_ClipboardHistoryItemsResultStatus", register_ClipboardHistoryItemsResultStatus, METH_O, "registers type"},
-        {"_register_DataPackageOperation", register_DataPackageOperation, METH_O, "registers type"},
-        {"_register_SetHistoryItemAsContentStatus", register_SetHistoryItemAsContentStatus, METH_O, "registers type"},
-        {"_register_ShareUITheme", register_ShareUITheme, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -6829,10 +6722,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             return 0;
         }
 
-        Py_VISIT(state->type_ClipboardHistoryItemsResultStatus);
-        Py_VISIT(state->type_DataPackageOperation);
-        Py_VISIT(state->type_SetHistoryItemAsContentStatus);
-        Py_VISIT(state->type_ShareUITheme);
         Py_VISIT(state->type_Clipboard);
         Py_VISIT(state->type_ClipboardContentOptions);
         Py_VISIT(state->type_ClipboardHistoryChangedEventArgs);
@@ -6872,10 +6761,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             return 0;
         }
 
-        Py_CLEAR(state->type_ClipboardHistoryItemsResultStatus);
-        Py_CLEAR(state->type_DataPackageOperation);
-        Py_CLEAR(state->type_SetHistoryItemAsContentStatus);
-        Py_CLEAR(state->type_ShareUITheme);
         Py_CLEAR(state->type_Clipboard);
         Py_CLEAR(state->type_ClipboardContentOptions);
         Py_CLEAR(state->type_ClipboardHistoryChangedEventArgs);
@@ -6912,7 +6797,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
            "_winrt_Windows_ApplicationModel_DataTransfer",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -7111,98 +6996,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer(void) noexcep
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResultStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClipboardHistoryItemsResultStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResultStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataPackageOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::DataTransfer::SetHistoryItemAsContentStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SetHistoryItemAsContentStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::SetHistoryItemAsContentStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareUITheme>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareUITheme;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ShareUITheme is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::Clipboard>::get_python_type() noexcept {

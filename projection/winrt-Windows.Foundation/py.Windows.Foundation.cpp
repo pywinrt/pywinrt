@@ -28,8 +28,6 @@ namespace py::cpp::Windows::Foundation
 {
     struct module_state
     {
-        PyObject* type_AsyncStatus;
-        PyObject* type_PropertyType;
         PyTypeObject* type_Deferral;
         PyTypeObject* type_GuidHelper;
         PyTypeObject* type_MemoryBuffer;
@@ -57,54 +55,6 @@ namespace py::cpp::Windows::Foundation
         PyTypeObject* type_Rect;
         PyTypeObject* type_Size;
     };
-
-    static PyObject* register_AsyncStatus(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_AsyncStatus)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_AsyncStatus = type;
-        Py_INCREF(state->type_AsyncStatus);
-
-
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* register_PropertyType(PyObject* module, PyObject* type) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        if (state->type_PropertyType)
-        {
-            PyErr_SetString(PyExc_RuntimeError, "type has already been registered");
-            return nullptr;
-        }
-
-        if (!PyType_Check(type))
-        {
-            PyErr_SetString(PyExc_TypeError, "argument is not a type");
-            return nullptr;
-        }
-
-        state->type_PropertyType = type;
-        Py_INCREF(state->type_PropertyType);
-
-
-        Py_RETURN_NONE;
-    }
 
     // ----- Deferral class --------------------
     static constexpr const char* const type_name_Deferral = "Deferral";
@@ -7505,11 +7455,6 @@ namespace py::cpp::Windows::Foundation
     // ----- Windows.Foundation Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::Foundation");
 
-    static PyMethodDef module_methods[] = {
-        {"_register_AsyncStatus", register_AsyncStatus, METH_O, "registers type"},
-        {"_register_PropertyType", register_PropertyType, METH_O, "registers type"},
-        {}};
-
 
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
@@ -7520,8 +7465,6 @@ namespace py::cpp::Windows::Foundation
             return 0;
         }
 
-        Py_VISIT(state->type_AsyncStatus);
-        Py_VISIT(state->type_PropertyType);
         Py_VISIT(state->type_Deferral);
         Py_VISIT(state->type_GuidHelper);
         Py_VISIT(state->type_MemoryBuffer);
@@ -7561,8 +7504,6 @@ namespace py::cpp::Windows::Foundation
             return 0;
         }
 
-        Py_CLEAR(state->type_AsyncStatus);
-        Py_CLEAR(state->type_PropertyType);
         Py_CLEAR(state->type_Deferral);
         Py_CLEAR(state->type_GuidHelper);
         Py_CLEAR(state->type_MemoryBuffer);
@@ -7599,7 +7540,7 @@ namespace py::cpp::Windows::Foundation
            "_winrt_Windows_Foundation",
            module_doc,
            sizeof(module_state),
-           module_methods,
+           nullptr,
            nullptr,
            module_traverse,
            module_clear,
@@ -7802,52 +7743,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation(void) noexcept
 
 
     return module.detach();
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::AsyncStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AsyncStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::AsyncStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyObject* py::py_type<winrt::Windows::Foundation::PropertyType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PropertyType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::PropertyType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }
 
 PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Deferral>::get_python_type() noexcept {

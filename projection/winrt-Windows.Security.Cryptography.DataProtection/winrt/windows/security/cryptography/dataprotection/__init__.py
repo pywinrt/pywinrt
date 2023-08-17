@@ -14,5 +14,4 @@ try:
 except ImportError:
     pass
 
-
 DataProtectionProvider = _ns_module.DataProtectionProvider
