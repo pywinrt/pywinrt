@@ -14,6 +14,7 @@
 - Fixed single byte struct field arg format.
 - Fixed importing `enum` when not needed.
 - Fixed compiler warning about converting `Py_ssize_t` in `ComArray`.
+- Fixed `NotImplementedError` for delegates with `array_view`.
 
 ### Removed
 - Removed generation of base/core files.

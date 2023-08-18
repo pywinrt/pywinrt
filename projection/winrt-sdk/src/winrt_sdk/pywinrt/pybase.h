@@ -1726,6 +1726,35 @@ namespace py
     struct ComArray;
 
     template<typename T>
+    struct converter<winrt::array_view<T>>
+    {
+        static PyObject* convert(winrt::array_view<T> const& instance) noexcept
+        {
+            // there is no way to know the scope of the lifetime of the
+            // underlying data of the array_view so we need to make a copy
+            // before sending to Python to ensure we don't introduce use after
+            // free memory bugs
+
+            using copy_t = std::remove_const_t<T>;
+            auto copy = std::make_unique<ComArray<copy_t>>();
+            copy->array = winrt::com_array<copy_t>(instance.begin(), instance.end());
+
+            return cpp::_winrt::Array_New(std::move(copy));
+        }
+
+        static winrt::array_view<T> convert_to(PyObject* obj)
+        {
+            throw_if_pyobj_null(obj);
+
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::converter<%s>::convert_to() is not implemented",
+                typeid(T).name());
+            throw python_exception();
+        }
+    };
+
+    template<typename T>
     struct converter<winrt::com_array<T>>
     {
         static PyObject* convert(winrt::com_array<T> const& instance) noexcept
